@@ -54,16 +54,18 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-# https://docs.getpelican.com/en/stable/tips.html#copy-static-files-to-the-root-of-your-site
+
 STATIC_PATHS = ['images',
                 'extra',
                 'html',
                 'extra/CNAME',]
 
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+
 
 # https://stackoverflow.com/a/61572517
+# https://docs.getpelican.com/en/stable/tips.html#copy-static-files-to-the-root-of-your-site
 EXTRA_PATH_METADATA = {
+'extra/CNAME': {'path': 'CNAME'},
 'html/map.html': {'path': 'html/map.html'},
 'html/m.html': {'path': 'html/m.html'},
 'html/m_files/leaflet-1.3.1/leaflet.js': {'path': 'html/m_files/leaflet-1.3.1/leaflet.js'},
