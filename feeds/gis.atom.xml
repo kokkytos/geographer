@@ -546,7 +546,189 @@ layer που επιθυμεί. Ωστόσο, στην σχετική &lt;a href=
 &lt;p&gt;Επίσης, κατόπιν δοκιμών, παρατήρησα ότι το sql ερώτημα δεν πρέπει να
 τελειώνει με ερωτηματικό (;) αλλά ούτε πρέπει να οριστεί κάτι στο schema
 του QgsDataSourceURI (όπως φαίνεται και στην γραμμή 4, η πρώτη
-παράμετρος στο setDataSource είναι ““).&lt;/p&gt;</content><category term="GIS"></category><category term="postgis"></category><category term="pyqgis"></category><category term="python"></category><category term="qgis"></category><category term="sql"></category></entry><entry><title>Οπτική βελτίωση σκιασμένου αναγλύφου εδάφους</title><link href="https://geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/" rel="alternate"></link><published>2013-02-13T00:10:00+02:00</published><updated>2013-02-13T00:10:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2013-02-13:/optike-beltiose-skiasmenou-anagluphou-edaphous/</id><summary type="html">&lt;p&gt;Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την
+παράμετρος στο setDataSource είναι ““).&lt;/p&gt;</content><category term="GIS"></category><category term="postgis"></category><category term="pyqgis"></category><category term="python"></category><category term="qgis"></category><category term="sql"></category></entry><entry><title>Υπολογισμός δεικτών χωρικής κεντρικότητας με την R</title><link href="https://geographer.gr/%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE-%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1/" rel="alternate"></link><published>2013-09-22T10:20:00+03:00</published><updated>2013-09-22T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2013-09-22:/χωρική-κεντρικότητα/</id><summary type="html">&lt;p&gt;Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές
+περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός
+δείκτης μιας κατανομής είναι ο &lt;strong&gt;χωρικός μέσος (mean
+center)&lt;/strong&gt;. Ουσιαστικά πρόκειται για τον μέσο όρο των
+συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και
+κεντροειδές.&lt;/p&gt;
+&lt;p&gt;Δίνεται από τον τύπο:&lt;/p&gt;
+&lt;p&gt;όπου,&lt;/p&gt;
+&lt;p&gt;&lt;span class="math inline"&gt;\(x,y\)&lt;/span&gt; οι …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές
+περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός
+δείκτης μιας κατανομής είναι ο &lt;strong&gt;χωρικός μέσος (mean
+center)&lt;/strong&gt;. Ουσιαστικά πρόκειται για τον μέσο όρο των
+συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και
+κεντροειδές.&lt;/p&gt;
+&lt;p&gt;Δίνεται από τον τύπο:&lt;/p&gt;
+&lt;p&gt;όπου,&lt;/p&gt;
+&lt;p&gt;&lt;span class="math inline"&gt;\(x,y\)&lt;/span&gt; οι συντεταγμένες του χωρικού
+μέσου δηλαδή ο μέσος όρος των συντεταγμένων &lt;span class="math inline"&gt;\(x_i,y_i\)&lt;/span&gt; του πλήθους &lt;span class="math inline"&gt;\(N\)&lt;/span&gt; των σημείων της κατανομής. Ταυτόχρονα
+με τον αριθμητικό χωρικό μέσο, μπορεί να υπολογιστεί ο
+&lt;strong&gt;σταθμισμένος χωρικός μέσος (Weighted Mean Center)&lt;/strong&gt; όπου
+ο υπολογισμός γίνεται με το στάθμισμα κάθε συντεταγμένης με μία
+μεταβλητή π.χ. εισόδημα, εγκληματικότητα, πληθυσμός κτλ.&lt;/p&gt;
+&lt;p&gt;Δίνεται από τον τύπο:&lt;/p&gt;
+&lt;p&gt;όπου, &lt;span class="math inline"&gt;\(x_w,y_w\)&lt;/span&gt; οι συντεταγμένες
+του σταθμισμένου χωρικού μέσου δηλαδή ο μέσος όρος των διακριτών
+συντεταγμένων &lt;span class="math inline"&gt;\(x_i,y_i\)&lt;/span&gt; του πλήθους
+&lt;span class="math inline"&gt;\(N\)&lt;/span&gt; των σημείων της κατανομής
+σταθμισμένες με το βάρος &lt;span class="math inline"&gt;\(W_i\)&lt;/span&gt; του
+κάθε σημείου.&lt;/p&gt;
+&lt;p&gt;Παράλληλα με τον χωρικό μέσο ή τον σταθμισμένο χωρικό μέσο,
+υπολογίζεται και &lt;strong&gt;η τυπική απόσταση (Standard Distance)&lt;/strong&gt;
+ως δείκτης μέτρησης του βαθμού συγκέντρωσης ή διασποράς των σημείων γύρω
+από τον χωρικό (ή σταθμισμένο) μέσο. Αποτέλει ότι και η τυπική απόσταση
+σε μια μη χωρική κατανομή. Δίνεται από τον τύπο:&lt;/p&gt;
+&lt;p&gt;όπου, &lt;span class="math inline"&gt;\(S_D\)&lt;/span&gt; , η τυπική απόσταση,
+&lt;span class="math inline"&gt;\(x,y\)&lt;/span&gt; οι συντεταγμένες του χωρικού
+μέσου και &lt;span class="math inline"&gt;\(x_i,y_i\)&lt;/span&gt; οι συντεταγμένες
+του κάθε διακριτού σημείου της σημειακής κατανομής.&lt;/p&gt;
+&lt;p&gt;Κατ’ αντιστοιχία, υπολογίζεται και &lt;strong&gt;η σταθμισμένη τυπική
+απόσταση (weighted standard distance)&lt;/strong&gt; σε περιπτώσεις που
+μελετάται η διασπορά σε σχέση με τον σταθμισμένο μέσο όρο.&lt;/p&gt;
+&lt;p&gt;Δίνεται από τον τύπο:&lt;/p&gt;
+&lt;p&gt;όπου, &lt;span class="math inline"&gt;\(S_{WD}\)&lt;/span&gt; , η σταθμισμένη
+τυπική απόσταση, &lt;span class="math inline"&gt;\(x,y\)&lt;/span&gt; οι
+συντεταγμένες του χωρικού μέσου, &lt;span class="math inline"&gt;\(x_i,y_i\)&lt;/span&gt; οι συντεταγμένες του κάθε
+διακριτού σημείου της σημειακής κατανομής και &lt;span class="math inline"&gt;\(W_i\)&lt;/span&gt; τ το αντίστοιχο βάρος τους.&lt;/p&gt;
+&lt;p&gt;Οι ανωτέρω δείκτες αποκτούν ιδιαίτερη αξία όταν συγκριθούν
+διαχρονικά.&lt;/p&gt;
+&lt;p&gt;Ας περιγράψουμε ένα παράδειγμα υπολογισμού των παραπάνω δεικτών με το
+&lt;a href="http://cran.r-project.org/"&gt;R&lt;/a&gt;. Η σημειακή κατανομή θα
+αποτελείται από τους οικισμούς του Ν. Θεσπρωτίας και από τον πραγματικό
+πληθυσμό τους κατά τα έτη 1991 και 2001 για περιπτώσεις υπολογισμού
+σταθμισμένων δεικτών.&lt;/p&gt;
+&lt;p&gt;Ο υπολογισμός των δεικτών χωρικής κεντρικότητας στο R γίνεται με την
+χρήση του πακέτου &lt;a href="http://cran.r-project.org/web/packages/aspace/aspace.pdf"&gt;aspace&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Πριν λοιπόν ξεκινήσουμε πρέπει να εγκαταστήσουμε τα απαραίτητα πακέτα
+στο R: &lt;a href="http://cran.r-project.org/web/packages/aspace/aspace.pdf"&gt;aspace&lt;/a&gt;,
+&lt;a href="http://cran.r-project.org/web/packages/maptools/maptools.pdf"&gt;maptools&lt;/a&gt;,
+&lt;a href="http://cran.r-project.org/web/packages/shapefiles/shapefiles.pdf"&gt;shapefiles&lt;/a&gt;,
+&lt;a href="http://cran.r-project.org/web/packages/rgdal/rgdal.pdf"&gt;rgdal&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ξεκινήστε το R ως υπερχρήστης (αλλιώς η εγκατάσταση των πακέτων θα
+αποτύχει) και δώστε τις παρακάτω εντολές&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;install.packages("aspace")
+install.packages("maptools")
+install.packages("shapefiles")
+install.packages("rgdal")&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Στην συνέχεια θα σας ζητηθεί να επιλέξετε έναν mirror. Επιλέξτε
+Greece και συνεχίστε. Επανεκκινήστε το R ως κανονικός πλέον χρήστης και
+δοκιμάστε να φορτώσετε τα παραπάνω πακέτα με τις εξής εντολές:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library("aspace")
+library("maptools")
+library("shapefiles")
+library("rgdal")&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;την συνέχεια ακολουθεί ο υπολογισμός τον δεικτών (ανατρέξτε στα
+σχόλια για λεπτομέρειες):&lt;/p&gt;
+&lt;h3 id="υπολογισμός-του-χωρικού-μέσου-των-οικισμών-του-ν.-θεσπρωτίας"&gt;Υπολογισμός
+του Χωρικού Μέσου των οικισμών του Ν. Θεσπρωτίας:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;#ανάγνωση του αρχείου shapefile OIKISMOI
+oikismoi &amp;lt;- readShapePoints("OIKISMOI")
+ 
+#Υπολογισμός του χωρικού μέσου mean_center
+mean_centre(id=1, filename="mean.txt", weighted=FALSE, weights=NULL, points=coordinates(oikismoi))
+#εξαγωγή σε shapefile 
+shp &amp;lt;- convert.to.shapefile (data.frame(meanloc), data.frame(meanatt),"id",1)
+write.shapefile(shp, "Mean", arcgis=T)
+#εγγραφή αρχείου prj για το ΕΓΣΑ '87
+cat(yt(proj4string&amp;lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="Mean.prj")&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ο Χωρικός Μέσος των οικισμών του Ν. Θεσπρωτίας εντοπίζεται στο σημείο
+Χ=191482.2, Υ=4381093.&lt;/p&gt;
+&lt;h3 id="υπολογισμός-του-σταθμισμένου-χωρικού-μέσου-για-τον-πραγματικό-πληθυσμό-του-1991-των-οικισμών-του-ν.-θεσπρωτίας"&gt;Υπολογισμός
+του Σταθμισμένου Χωρικού Μέσου για τον πραγματικό πληθυσμό του 1991 των
+οικισμών του Ν. Θεσπρωτίας:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;mean_centre(id=1, filename="mean_PRAG91.txt", weighted=TRUE, weights=oikismoi$POPPRAG199, points=coordinates(oikismoi))
+#εξαγωγή σε shapefile
+shp &amp;lt;- convert.to.shapefile (data.frame(meanloc), data.frame(meanatt),"id",1)
+write.shapefile(shp, "Mean_PRAG1991", arcgis=T)
+#εγγραφή αρχείου prj για το ΕΓΣΑ '87
+cat(showWKT(proj4string&amp;lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="Mean_PRAG1991.prj")&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ο Σταθμισμένος Χωρικός Μέσος των οικισμών του Ν. Θεσπρωτίας για το
+2001 εντοπίζεται στο σημείο Χ=187644.1, Υ=4378180.&lt;/p&gt;
+&lt;h3 id="υπολογισμός-της-σταθμισμένης-τυπικής-απόστασης-για-τον-πραγματικό-πληθυσμό-του-1991-των-οικισμών-του-ν.-θεσπρωτίας"&gt;Υπολογισμός
+της Σταθμισμένης Τυπικής Απόστασης για τον πραγματικό πληθυσμό του 1991
+των οικισμών του Ν. Θεσπρωτίας:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## SDD 1991
+calc_sdd(id=1, filename="SDD_PRAG91.txt", centre.xy=NULL, calccentre=TRUE,weighted=TRUE, weights=oikismoi$POPPRAG199,points=coordinates(oikismoi),verbose=TRUE)
+shp &amp;lt;- convert.to.shapefile(sddloc,sddatt,"id",5)
+write.shapefile(shp, "SDD_1991", arcgis=T)
+cat(showWKT(proj4string&amp;lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="SDD_1991.prj")&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Η Σταθμισμένη Τυπική Απόσταση για τον πραγματικό πληθυσμό του 1991
+των οικισμών του Ν. Θεσπρωτίας έχει ακτίνα 14563.64μ.&lt;/p&gt;
+&lt;p&gt;To R δίνει την δυνατότητα στον χρήστη να αποδόσει σε γράφημα τους
+δείκτες του πακέτου aspace. Στην περίπτωση της Σταθμισμένης Τυπικής
+Απόστασης η απόδοση γίνεται με την χρήσης της εντολής plot_sdd. Η εντολή
+plot_sdd αποδίδει την τυπική απόσταση σαν ένα κύκλο με κέντρο τον χωρικό
+μέσο.&lt;/p&gt;
+&lt;p&gt;Παρατίθεται η σύνταξη της σχετικής εντολής:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; plot_sdd(centre.col='red', titletxt="Σταθμισμένη Τυπική Απόσταση n για τον πραγματικό πληθυσμό του 1991 των οικισμών του Ν. Θεσπρωτίας", jpeg=TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Το αποτέλεσμα είναι το παρακάτω γράφημα:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://geographer.gr/images/SDD1.jpg"/&gt;&lt;/p&gt;
+&lt;h3 id="υπολογισμός-του-σταθμισμένου-χωρικού-μέσου-για-τον-πραγματικό-πληθυσμό-του-2001-των-οικισμών-του-ν.-θεσπρωτίας"&gt;Υπολογισμός
+του Σταθμισμένου Χωρικού Μέσου για τον πραγματικό πληθυσμό του 2001 των
+οικισμών του Ν. Θεσπρωτίας:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;mean_centre(id=1, filename="mean_PRAG2001.txt", weighted=TRUE, weights=oikismoi$POPPRAG200, points=coordinates(oikismoi))
+#εξαγωγή σε shapefile
+shp &amp;lt;- convert.to.shapefile (data.frame(meanloc), data.frame(meanatt),"id",1)
+write.shapefile(shp, "Mean_PRAG2001", arcgis=T)
+#εγγραφή αρχείου prj για το ΕΓΣΑ '87
+cat(showWKT(proj4string&amp;lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="Mean_PRAG2001.prj")&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ο Σταθμισμένος Χωρικός Μέσος των οικισμών του Ν. Θεσπρωτίας για το
+2001 εντοπίζεται στο σημείο Χ=186711.3, Υ=4377762.&lt;/p&gt;
+&lt;h3 id="υπολογισμός-της-σταθμισμένης-τυπικής-απόστασης-για-τον-πραγματικό-πληθυσμό-του-2001-των-οικισμών-του-ν.-θεσπρωτίας"&gt;Υπολογισμός
+της Σταθμισμένης Τυπικής Απόστασης για τον πραγματικό πληθυσμό του 2001
+των οικισμών του Ν. Θεσπρωτίας:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## SDD 2001
+calc_sdd(id=1, filename="SDD_2001.txt", centre.xy=NULL, calccentre=TRUE,weighted=TRUE, weights=oikismoi$POPPRAG200,points=coordinates(oikismoi),verbose=TRUE)
+write.shapefile(shp, "SDD_2001", arcgis=T)
+cat(showWKT(proj4string&amp;lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="SDD_2001.prj")&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Η Σταθμισμένη Τυπική Απόσταση για τον πραγματικό πληθυσμό του 2001
+των οικισμών του Ν. Θεσπρωτίας έχει ακτίνα 14019.97μ.&lt;/p&gt;
+&lt;p&gt;Οι δείκτες είναι πιο αποκαλυπτικοί αν αποδοθούν σε έναν χάρτη.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://geographer.gr/images/xorikos.mesos_.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;Το πρώτο βασικό συμπέρασμα που διεξάγεται από τον χάρτη είναι ότι οι
+σταθμισμένοι χωρικοί μέσοι εντοπίζονται ΝΔ από τον χωρικό μέσο προφανώς
+ως απόρροια της επιρροής του πληθυσμού αστικών κέντρων όπως η
+Ηγουμενίτσα, η Πέρδικα, το Μαργαρίτι, το Γαρδίκι και η Παραμυθιά.&lt;/p&gt;
+&lt;p&gt;Όσον αφορά τον σταθμισμένο χωρικό μέσο του πραγματικού πληθυσμού
+αυτός κινείται διαχρονικά, από το 1991 στο 2001, προς τα Δ-ΝΔ ως
+αποτέλεσμα της σημαντικής αύξησης του πραγματικού πληθυσμού της
+Ηγουμενίτσας (+28,00%) και της μείωσης του πληθυσμού των Φιλιατών
+(-13,00%).&lt;/p&gt;
+&lt;p&gt;Η σταθμισμένη τυπική απόσταση δεν σημειώνει αξιόλογη μεταβολή παρά
+μόνο μια μικρή συσπείρωση των τιμών γύρω από τον σταθμισμένο χωρικό μέσο
+το 2001 σε σχέση με το 1991.&lt;/p&gt;
+&lt;p&gt;Ανάλογα με τα δεδομένα μας και τον τρόπο προσπέλασης τους ο
+υπολογισμός των δεικτών μπορεί να γίνει με κλίση του R μέσω python με το
+πακέτο &lt;a href="http://rpy.sourceforge.net/"&gt;rpy/rpy2&lt;/a&gt; ή μέσω Grass
+GIS με το πακέτο &lt;a href="http://cran.r-project.org/web/packages/spgrass6/spgrass6.pdf"&gt;spgrass6&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Για παράδειγμα ο υπολογισμός του χωρικού μέσου μπορεί να υπολογιστεί
+μέσω Python και rpy2 με το παρακάτω script:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import rpy2.robjects as robjects
+from rpy2.robjects.packages import importr
+r=robjects.r
+aspace = importr("aspace")
+maptools = importr("maptools")
+shapefiles = importr("shapefiles")
+rgdal = importr("rgdal")
+sp = importr("sp")
+shp=maptools.readShapePoints("OIKISMOI")
+mean=aspace.mean_centre(id=1, filename="mean.txt", weighted="FALSE", weights="NULL",points=sp.coordinates(shp))
+myshp = shapefiles.convert_to_shapefile(r('data.frame(meanatt)'), r('data.frame(meanloc)'), "id",1)
+shapefiles.write_shapefile(myshp, "Mean", arcgis="T")
+proj4string="+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs"
+r.cat(rgdal.showWKT(proj4string, file="Mean.prj"))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Η αντίστοιχη διαδικασία μπορεί να εκτελεστεί και μέσω GRASS με την
+χρήστου του πακέτου
+[spgrass6](http://cran.r-project.org/web/packages/spgrass6/spgrass6.pdf
+όπως φαίνεται στο παράδειγμα:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library("aspace")
+library("spgrass6")
+oikismoi &amp;lt;- readVECT6("OIKISMOI")
+mean_centre(id=1, filename="mean.txt", weighted=FALSE, weights=NULL, points=coordinates(oikismoi))
+mean_centre &amp;lt;- SpatialPointsDataFrame(coords=data.frame(meanloc[2],meanloc[3]), data=meanatt)
+writeVECT6(mean_centre,v.in.ogr_flags=c("o", "overwrite"), "mean_centre")&lt;/code&gt;&lt;/pre&gt;</content><category term="GIS"></category><category term="aspace"></category><category term="maptools"></category><category term="R"></category><category term="rgdal"></category><category term="rpy"></category><category term="shapefiles"></category><category term="spgrass6"></category></entry><entry><title>Οπτική βελτίωση σκιασμένου αναγλύφου εδάφους</title><link href="https://geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/" rel="alternate"></link><published>2013-02-13T00:10:00+02:00</published><updated>2013-02-13T00:10:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2013-02-13:/optike-beltiose-skiasmenou-anagluphou-edaphous/</id><summary type="html">&lt;p&gt;Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την
 οπτική βελτίωση μιας σκίασης αναγλύφου εδάφους.&lt;/p&gt;
 &lt;p&gt;Το λογισμικό που απαιτείται είναι το &lt;a href="http://www.gdal.org/gdaldem.html"&gt;gdaldem&lt;/a&gt;, &lt;a href="http://www.gdal.org/gdalwarp.html"&gt;gdalwrap&lt;/a&gt; και το &lt;a href="https://www.gimp.org/"&gt;GIMP&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Τα κλασσικά προγράμματα ΣΓΠ αναπαριστούν την σκίαση αναγλύφου με
