@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 645.65626 645.65626" version="1.1" id="svg4508" inkscape:version="0.48.2 r9819" width="100%" height="100%" sodipodi:docname="coordgr.svg">
+  <metadata id="metadata5991">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs5989">
+    <linearGradient id="linearGradient10560" osb:paint="solid">
+      <stop style="stop-color:#008080;stop-opacity:1;" offset="0" id="stop10562"/>
+    </linearGradient>
+    <filter id="filter10961" inkscape:label="Drop shadow" width="1.5" height="1.5" x="-0.25" y="-0.25" color-interpolation-filters="sRGB">
+      <feGaussianBlur id="feGaussianBlur10963" in="SourceAlpha" stdDeviation="8.6" result="blur"/>
+      <feColorMatrix id="feColorMatrix10965" result="bluralpha" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.64 0 "/>
+      <feOffset id="feOffset10967" in="bluralpha" dx="3.7" dy="4.4" result="offsetBlur"/>
+      <feMerge id="feMerge10969" result="fbSourceGraphic">
+        <feMergeNode id="feMergeNode10971" in="offsetBlur"/>
+        <feMergeNode id="feMergeNode10973" in="SourceGraphic"/>
+      </feMerge>
+      <feColorMatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0" id="feColorMatrix10975"/>
+      <feGaussianBlur id="feGaussianBlur10977" in="fbSourceGraphicAlpha" stdDeviation="8.6" result="blur"/>
+      <feColorMatrix id="feColorMatrix10979" result="bluralpha" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.64 0 "/>
+      <feOffset id="feOffset10981" in="bluralpha" dx="3.7" dy="4.4" result="offsetBlur"/>
+      <feMerge id="feMerge10983">
+        <feMergeNode id="feMergeNode10985" in="offsetBlur"/>
+        <feMergeNode id="feMergeNode10987" in="fbSourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter11865" inkscape:label="Drop shadow" width="1.5" height="1.5" x="-0.25" y="-0.25" color-interpolation-filters="sRGB">
+      <feGaussianBlur id="feGaussianBlur11867" in="SourceAlpha" stdDeviation="11.7" result="blur"/>
+      <feColorMatrix id="feColorMatrix11869" result="bluralpha" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.64 0 "/>
+      <feOffset id="feOffset11871" in="bluralpha" dx="4.3" dy="8.8" result="offsetBlur"/>
+      <feMerge id="feMerge11873" result="fbSourceGraphic">
+        <feMergeNode id="feMergeNode11875" in="offsetBlur"/>
+        <feMergeNode id="feMergeNode11877" in="SourceGraphic"/>
+      </feMerge>
+      <feColorMatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0" id="feColorMatrix11879"/>
+      <feGaussianBlur id="feGaussianBlur11881" in="fbSourceGraphicAlpha" stdDeviation="11.7" result="blur"/>
+      <feColorMatrix id="feColorMatrix11883" result="bluralpha" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.64 0 "/>
+      <feOffset id="feOffset11885" in="bluralpha" dx="4.3" dy="8.8" result="offsetBlur"/>
+      <feMerge id="feMerge11887">
+        <feMergeNode id="feMergeNode11889" in="offsetBlur"/>
+        <feMergeNode id="feMergeNode11891" in="fbSourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1279" inkscape:window-height="717" id="namedview5987" showgrid="false" inkscape:zoom="0.45779817" inkscape:cx="21.070435" inkscape:cy="240.6438" inkscape:window-x="1" inkscape:window-y="30" inkscape:window-maximized="1" inkscape:current-layer="layer1" height="744.09px" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" showguides="true" inkscape:guide-bbox="true" inkscape:object-paths="true"/>
+  <!-- svg generated using QGIS www.qgis.org -->
+  <!-- QGIS extent for clipping, eg in Inkscape -->
+  <g id="qgisviewbox" inkscape:groupmode="layer" inkscape:label="qgisviewbox" style="fill:none;stroke:#ff0000;stroke-width:1;display:none" transform="translate(-137.71625,41.786887)">
+    <path d="M 0,543 975,543 975,0 0,0 0,543" id="path5985" inkscape:connector-curvature="0"/>
+  </g>
+  <g inkscape:groupmode="layer" id="layer1" inkscape:label="Καμβας" style="display:inline" transform="translate(-137.71625,41.786887)">
+    <path sodipodi:type="arc" style="opacity:0.98999999000000005;fill:#3480b1;fill-opacity:1;stroke:#000000;stroke-width:10.65292071999999912;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" id="path3782" sodipodi:cx="631.28253" sodipodi:cy="553.37915" sodipodi:rx="338.57715" sodipodi:ry="338.57715" d="m 969.85968,553.37915 c 0,186.991 -151.58615,338.57715 -338.57715,338.57715 -186.99099,0 -338.57715,-151.58615 -338.57715,-338.57715 0,-186.991 151.58616,-338.57715 338.57715,-338.57715 186.991,0 338.57715,151.58615 338.57715,338.57715 z" transform="matrix(0.93870968,0,0,0.93870968,-132.04544,-238.41723)"/>
+  </g>
+  <g id="nomoi_okxe" inkscape:groupmode="layer" inkscape:label="nomoi_okxe" style="display:inline" transform="translate(-137.71625,41.786887)">
+    <g id="g4511" style="fill:#ffff00;stroke:#96964a;stroke-width:0.25999999;stroke-linejoin:round">
+      <g id="nomoi_okxe_1" style="fill:#ffff00">
+        <path d="m 366,103 1,0 1,0 1,0 1,0 0,1 1,0 0,1 0,1 1,0 0,1 1,0 1,0 -1,0 0,1 0,1 0,-1 -1,0 -1,0 1,0 -1,0 0,-1 0,1 -1,0 -1,0 0,1 1,1 0,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 -1,1 0,1 -1,1 0,1 0,1 -1,0 0,1 0,1 0,1 0,1 -1,1 0,1 -1,0 0,1 0,1 0,1 0,1 0,1 1,1 0,1 0,1 0,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 1,0 1,0 0,1 1,0 1,1 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,1 -1,1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 -1,-1 -1,0 -1,-1 -1,0 0,-1 -1,0 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 1,0 -1,0 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 -1,0 -1,0 -1,1 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 -1,1 -1,0 -1,0 -1,0 0,-1 -1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,-1 0,1 1,0 0,-1 1,0 0,-1 1,0 0,1 0,1 1,0 0,-1 0,-1 -1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 0,1" id="path4514" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_2" style="fill:#ffff00">
+        <path d="m 412,295 0,-1 0,1" id="path4517" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 414,273 0,1 0,1 -1,0 0,1 1,0 0,1 1,0 1,0 1,0 1,0 0,1 0,1 0,1 1,1 1,0 1,0 0,1 1,0 1,0 1,0 1,-1 1,0 0,-1 1,0 1,0 0,-1 -1,-1 1,0 0,-1 1,0 1,0 0,1 1,0 0,1 0,1 1,0 0,1 -1,0 1,0 0,1 1,0 0,1 1,0 0,1 -1,0 0,1 0,1 0,1 0,1 0,-1 -1,0 0,1 -1,0 0,-1 0,1 -1,0 -1,1 0,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 0,1 -1,0 -1,0 0,1 -1,-1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 1,0 1,0 0,1 0,-1 -1,1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,1 -1,1 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 1,-1 0,-1 -1,0 -1,0 -1,0 0,-1 0,-1 0,1 1,0 0,-1 1,0 1,0 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 1,0 1,-1 1,0 1,0 1,0 0,-1 1,0 1,0 0,1 0,-1 1,0 0,1 1,0 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0 0,1" id="path4519" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_3" style="fill:#ffff00">
+        <path d="m 272,116 0,1 1,0 0,1 1,0 0,1 1,1 0,1 0,1 1,0 0,1 1,0 0,1 0,1 1,0 0,1 0,1 1,0 -1,0 0,1 0,1 1,0 0,1 -1,0 -1,0 0,1 -1,0 1,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 1,0 1,0 0,-1 1,0 1,1 0,1 0,1 0,1 -1,0 0,1 0,1 -1,0 0,-1 -1,0 -1,0 1,1 1,0 0,1 0,1 1,0 0,1 1,1 0,1 0,1 0,1 0,1 1,0 0,1 1,0 1,0 1,1 0,-1 1,0 0,-1 1,0 1,0 1,0 1,0 0,1 1,0 0,-1 0,1 1,0 0,1 1,0 -1,0 -1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 1,0 0,1 0,1 0,1 -1,0 1,0 0,1 1,0 0,1 0,1 -1,0 -1,-1 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,1 1,0 1,0 0,1 0,1 0,1 0,1 0,1 1,1 -1,0 1,1 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 0,1 -1,1 -1,1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,1 0,-1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,1 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 0,-1 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 0,-1 0,-1 0,-1 0,-1 0,-1 0,1 -1,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 1,0 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 1,-1 0,-1 0,-1 0,-1 -1,-1 0,-1 -1,-1 1,0 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 1,0 1,0 0,1 0,-1 1,0 1,0 0,-1 0,-1 1,-1 0,-1 0,-1 1,0 1,0 0,-1 1,0 0,1 1,0 1,0 0,-1 1,0 1,0 0,1 1,0 1,0 1,0 1,0 0,-1 1,0 1,0 0,-1 0,1 1,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 0,-1 1,0 1,0 0,-1 1,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 -1,0 0,-1 1,0 1,0 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 0,1 0,1" id="path4522" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_4" style="fill:#ffff00">
+        <path d="m 350,56 0,1 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 1,0 0,-1 0,1 1,1 -1,0 1,1 0,1 0,1 -1,0 1,0 0,1 -1,0 0,1 0,1 1,0 -1,0 0,1 -1,0 0,1 0,1 -1,-1 0,1 0,-1 -1,0 0,1 -1,0 0,1 0,1 0,1 0,1 1,0 0,-1 1,0 1,0 1,1 1,0 1,0 0,1 0,1 0,1 0,1 1,0 1,1 1,1 1,0 0,1 0,1 1,0 0,-1 0,-1 1,0 0,-1 0,1 1,0 1,0 0,1 1,0 1,0 1,0 0,1 1,0 1,0 1,0 0,1 1,0 1,0 0,1 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 0,1 1,0 0,1 1,0 -1,0 0,1 0,-1 -1,0 1,0 -1,1 0,-1 -1,0 -1,0 0,-1 0,1 0,1 -1,0 1,0 1,0 1,0 0,1 0,1 1,1 0,1 1,0 -1,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,-2 0,1 -1,2 -1,0 -1,0 0,1 -1,1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,1 1,0 0,1 -1,0 -1,0 -1,0 -1,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 -1,1 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 1,0 -1,0 0,1 1,0 0,-1 1,0 1,0 1,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,1 0,-1 0,-1 1,0 1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 1,0 1,-1 1,0 0,-1 1,0 0,-1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 1,0 0,-1 0,-1 1,0 1,0 1,0 0,-1 1,0" id="path4525" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_5" style="fill:#ffff00">
+        <path d="m 314,198 1,0 1,0 0,1 1,0 0,1 -1,0 0,1 0,1 0,1 1,0 1,0 1,0 0,1 -1,0 0,1 0,1 0,1 0,1 1,0 1,0 0,1 1,0 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,-1 1,0 1,0 0,1 0,1 1,0 -1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 -1,1 -1,1 1,0 1,0 0,1 1,0 0,1 1,0 0,1 -1,0 0,1 1,0 -1,0 0,1 0,1 1,0 0,1 0,1 1,0 0,1 1,0 1,0 0,1 0,1 0,1 0,1 0,1 0,1 -1,0 -1,1 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 -1,0 0,1 0,1 0,1 -1,1 -1,0 -1,0 0,1 0,-1 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,1 0,-1 0,1 1,0 0,-1 0,1 1,0 0,-1 0,1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 1,0 -1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 1,0 -1,0 1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 0,1 1,0 1,0 0,-1 1,-1 1,0 1,0 0,-1 1,0 0,1 1,0" id="path4528" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_6" style="fill:#ffff00">
+        <path d="m 369,268 0,1 0,-1" id="path4531" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 342,266 0,-1 0,1" id="path4533" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 338,265 0,-1 0,1" id="path4535" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 337,264 1,0 0,1 -1,0 0,-1 -1,0 0,-1 1,0 0,1" id="path4537" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 357,263 0,-1 0,1" id="path4539" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 356,263 0,-1 0,1" id="path4541" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 351,232 0,1 1,0 -1,0 0,1 0,1 0,1 -1,0 0,1 1,0 0,1 1,0 1,0 1,0 0,-1 1,0 1,0 0,1 0,-1 1,0 1,0 0,1 1,1 0,1 1,0 1,0 0,1 1,0 0,1 0,1 1,0 1,0 0,-1 1,0 0,1 0,1 0,1 1,0 0,1 0,1 0,1 0,1 0,1 1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 0,1 -1,1 1,0 0,1 1,0 0,1 0,1 0,1 0,1 1,0 0,1 1,0 0,1 -1,1 1,0 0,1 1,1 1,0 0,-1 1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 -1,-1 0,1 0,1 0,1 1,0 0,1 -1,0 0,1 -1,0 0,1 1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,1 0,1 1,1 -1,0 -1,0 0,1 -1,0 0,1 1,0 0,1 0,-1 1,0 0,1 0,1 -1,0 0,1 0,-1 0,1 1,0 -1,0 0,1 -1,0 -1,-1 1,0 -1,0 -1,0 -1,0 -1,-1 0,1 -1,0 1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,-1 -1,0 1,0 0,-1 -1,0 0,-1 -1,0 0,1 -1,-1 1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 -1,0 -1,0 0,-1 0,1 0,-1 -1,0 0,-1 1,0 1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 -1,0 1,-1 0,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,-1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,-1 1,0 0,1 0,-1 1,0 0,-1 0,-1 1,0 1,0 0,-1 1,0 1,0 0,-1 0,1 0,-1 1,-1 1,0 0,-1 1,0 0,1" id="path4543" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_7" style="fill:#ffff00">
+        <path d="m 302,267 -1,0 1,0" id="path4546" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 289,267 1,0 -1,0 1,0 -1,0" id="path4548" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,267 1,0 -1,0 -1,0 1,0" id="path4550" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 292,267 0,1 0,-1 -1,0 1,0 1,0 -1,0" id="path4552" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 287,267 1,0 -1,0" id="path4554" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,267 -1,0 1,0" id="path4556" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 289,266 0,1 0,-1" id="path4558" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 288,267 0,-1 0,1" id="path4560" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,267 -1,0 0,-1 1,0 0,1" id="path4562" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 294,266 1,0 -1,0" id="path4564" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 291,266 1,0 -1,0" id="path4566" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 299,266 1,0 -1,0" id="path4568" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,266 -1,0 1,0" id="path4570" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 293,266 0,-1 0,1" id="path4572" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 297,266 0,-1 0,1" id="path4574" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 297,266 0,-1 0,1" id="path4576" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,266 0,-1 0,1" id="path4578" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 302,266 0,-1 0,1" id="path4580" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 289,265 0,1 0,-1" id="path4582" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 291,266 0,-1 0,1" id="path4584" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,266 0,-1 0,1" id="path4586" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 289,266 0,-1 1,0 -1,1" id="path4588" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 291,266 0,-1 0,1" id="path4590" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 302,265 -1,0 1,0" id="path4592" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,265 1,0 -1,0" id="path4594" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 300,266 0,-1 1,0 -1,1" id="path4596" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 297,265 -1,0 1,0" id="path4598" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 302,265 0,1 0,2 0,-1 -1,0 -1,-1 -1,0 -1,0 1,0 0,-1 0,1 0,-1 0,1 1,0 1,0 0,1 1,0 -1,0 1,0 0,1 0,-1 0,-1 0,-1" id="path4600" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,265 1,0 -1,0" id="path4602" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 291,265 -1,0 1,0 0,-1 0,1" id="path4604" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 292,265 0,-1 0,1" id="path4606" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,265 0,-1 0,1" id="path4608" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 300,264 -1,0 1,0" id="path4610" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 291,265 0,-1 0,1" id="path4612" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 290,264 1,0 -1,0" id="path4614" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 300,263 0,1 0,-1" id="path4616" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 300,264 0,-1 0,1" id="path4618" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 297,263 0,-1 0,1" id="path4620" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 292,262 0,1 1,0 0,-1 0,1 -1,0 0,-1" id="path4622" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 292,262 1,0 -1,0" id="path4624" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 297,262 0,-1 0,1" id="path4626" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 298,262 0,-1 0,1" id="path4628" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 282,260 -1,0 1,0" id="path4630" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 295,260 0,-1 0,1" id="path4632" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 295,259 0,1 1,1 0,1 1,0 1,1 0,1 1,0 -1,1 0,1 0,-2 0,-1 -1,-1 -1,0 0,-1 -1,-1 0,-1" id="path4634" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 280,259 0,-1 0,1" id="path4636" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 281,258 0,1 0,-1" id="path4638" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 260,226 0,-1 1,0 -1,0 0,1 -1,0 1,0 -1,0 1,0 0,-1 0,-1 1,0 -1,0 0,1 0,1" id="path4640" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 270,221 0,-1 0,1" id="path4642" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 298,204 1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 1,0 -1,0 0,1 -1,0 0,1 1,0 1,0 1,0 0,1 0,1 1,0 1,0 1,0 0,1 1,0 1,0 0,1 0,1 -1,0 0,1 0,1 0,1 1,0 -1,0 0,1 1,0 1,0 1,0 1,0 0,1 1,0 1,0 1,0 0,1 1,0 0,1 0,1 -1,0 0,-1 0,1 -1,0 0,-1 0,1 -1,0 0,-1 0,1 0,-1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 1,0 0,1 0,1 0,1 0,1 1,0 0,1 1,0 1,0 1,0 0,1 1,0 0,-1 1,0 0,1 1,0 0,1 0,-1 1,0 1,0 1,0 1,0 1,0 0,1 0,1 0,1 0,-1 1,0 1,0 1,-1 0,-1 0,-1 0,-1 1,0 1,0 0,1 0,-1 1,0 0,1 1,0 1,0 1,-1 1,0 0,-1 0,-1 0,-1 1,0 0,1 1,0 1,0 1,1 0,1 1,0 0,1 -1,0 0,1 -1,0 0,1 -1,1 1,0 0,1 -1,0 0,1 0,1 1,0 0,1 0,1 -1,0 -1,0 0,1 1,0 0,1 0,-1 0,1 1,0 1,0 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 0,1 0,1 0,1 0,1 -1,0 0,1 -1,0 0,1 0,-1 -1,0 -1,0 0,1 0,-1 0,1 -1,0 -1,0 0,1 -1,0 0,1 0,1 0,1 0,-1 -1,0 -1,0 -1,-1 -1,0 -1,0 -1,0 0,-1 0,1 -1,-1 0,1 0,-1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,-1 0,1 -1,0 0,1 -1,0 0,-1 0,1 0,1 0,-1 0,1 0,-1 -1,0 -1,0 1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 -1,0 -1,0 0,-1 0,1 0,1 1,0 -1,0 0,-1 0,-1 -1,0 -1,0 0,1 0,1 0,-1 0,-1 -1,0 0,1 1,0 0,1 0,-1 -1,0 0,-1 1,0 0,-1 -1,-1 0,1 0,1 0,-1 0,-1 0,1 0,1 -1,-1 -1,-1 1,1 1,1 0,-1 0,-1 -1,0 1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 1,0 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 0,1 1,0 0,1 1,0 0,1 0,1 1,0 0,-1 0,1 0,1 -1,0 0,-1 0,1 0,1 0,1 0,1 0,-1 -1,0 0,1 -1,0 1,0 -1,0 -1,0 0,1 -1,0 0,1 1,0 -1,0 -1,-1 1,0 -1,0 0,1 0,-1 0,1 1,0 0,1 -1,0 -1,1 -1,0 1,0 -1,0 -1,1 1,0 1,0 1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 0,1 -1,0 0,-1 1,0 0,-1 0,1 1,0 0,-1 0,1 0,-1 1,0 0,-1 -1,0 0,-1 1,0 1,0 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,1 0,-1 1,0 -1,0 0,-1 1,0 -1,0 1,0 -1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,-1 -1,0 0,1 -1,0 0,-1 -1,1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,-1 -1,0 -1,1 0,-1 0,1 -1,0 0,-1 0,-1 0,-1 -1,0 -1,0 1,0 0,-1 -1,0 0,-1 0,1 1,0 -1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 1,0 0,-1 0,1 1,0 0,-1 -1,0 -1,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,1 1,0 0,1 0,1 1,0 1,0 1,0 0,-1 1,0 -1,0 1,0 0,-1 0,1 0,-1 1,-1 0,1 0,1 0,1 1,0 -1,0 -1,0 1,0 1,0 1,0 0,-1 1,0 0,-1 0,1 1,0 1,0 1,0 0,-1 0,1 1,0 0,1 1,0 1,0 0,1 -1,1 1,0 1,0 0,1 1,0 0,1 1,0 0,1 0,-1 1,0 0,-1 0,-1 -1,0 1,-1 1,0 0,1 1,0 0,1 1,0 0,-1 0,1 0,1 1,0 0,1 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 -1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 1,0 1,0 0,1 0,-1 1,0 1,0 1,1 1,0 1,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,1" id="path4644" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_8" style="fill:#ffff00">
+        <path d="m 346,128 1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,-1 1,0 1,0 0,-1 0,1 1,0 0,1 1,0 0,1 -1,0 0,1 1,0 1,0 -1,0 0,1 0,1 0,1 0,1 -1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,-1 0,1 1,0 1,0 0,1 1,0 1,1 1,0 1,1 -1,0 0,1 1,0 0,1 0,1 1,0 0,1 1,0 1,0 1,0 1,0 1,-1 1,-1 0,1 1,0 1,0 0,1 1,0 0,-1 -1,-1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,1 0,1 1,1 0,1 1,0 0,1 1,0 1,1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 0,1 0,1 0,1 0,1 0,1 1,0 0,1 0,1 1,1 0,1 0,1 0,1 1,0 0,1 -1,0 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,1 0,1 0,-1 -1,0 -1,0 0,-1 0,1 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 -1,0 0,1 -1,0 -1,1 0,1 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 -1,0 -1,1 0,1 1,0 0,1 0,1 1,0 1,0 1,0 -1,1 0,1 0,1 0,1 -1,1 -1,0 -1,0 0,1 0,1 -1,0 -1,-1 -1,0 0,1 -1,0 0,1 0,1 0,1 1,0 0,1 0,1 0,1 -1,0 1,0 0,1 0,1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,-1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 1,0 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 1,0 0,-1 -1,0 0,-1 1,0 1,0 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 1,0 0,-1 0,-1 1,0 -1,0 0,-1 0,-1 -1,0 0,1 -1,0 -1,1 -1,-1 0,-1 0,-1 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,-1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 -1,0 0,-1 -1,0 1,0 0,-1 1,-1 0,-1 1,0 0,-1 1,0 1,0 1,0 0,1 0,-1 1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 1,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,-1 0,-1 0,-1 1,0 1,0 0,-1 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,-1 0,-1 -1,0 1,0 0,-1 0,-1 0,1 1,0 0,1 1,0 0,-1 0,-1 -1,0 1,0 1,0 1,0 1,-1" id="path4647" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_9" style="fill:#ffff00">
+        <path d="m 385,406 0,-1 0,1" id="path4650" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 399,405 0,-1 0,1" id="path4652" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 386,404 0,-1 0,1" id="path4654" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 388,403 1,0 0,1 0,1 -1,0 1,0 0,1 0,1 -1,-1 1,0 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,-1 1,-1 0,-1 1,0 1,0 0,-1 0,1" id="path4656" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 386,399 0,-1 0,1" id="path4658" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 383,396 1,0 -1,0" id="path4660" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 392,395 1,0 -1,0" id="path4662" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 395,382 -1,0 1,0" id="path4664" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 366,382 0,-1 0,1" id="path4666" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 391,369 0,-1 0,1" id="path4668" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 357,342 0,-1 1,0 0,1 1,0 0,1 1,0 0,-1 1,0 1,0 0,1 1,0 0,1 1,1 1,-1 1,0 1,0 0,1 0,1 0,1 0,1 0,1 0,1 1,0 0,1 0,1 1,0 -1,0 1,1 -1,0 0,1 1,0 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 1,0 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 0,1 1,-1 0,-1 1,0 1,0 0,1 1,0 1,1 0,1 1,0 0,1 1,0 1,0 0,1 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 -1,0 1,0 0,1 0,1 0,1 0,1 0,1 0,-1 0,1 -1,0 1,1 0,-1 0,1 1,1 0,1 0,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 -1,0 1,0 -1,0 1,1 1,1 0,1 1,0 0,1 0,1 -1,0 1,0 1,0 0,1 0,1 -1,0 0,1 0,1 -1,0 -1,-1 1,0 -1,0 -1,0 0,1 1,0 -1,0 -1,0 0,1 0,1 1,0 0,1 0,1 0,-1 1,0 0,1 -1,0 0,-1 0,1 0,1 -1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 -1,0 1,0 0,1 1,0 -1,0 0,1 0,1 -1,0 0,1 1,0 0,1 0,-1 1,0 0,1 0,-1 0,1 1,0 -1,0 0,1 1,0 1,0 0,1 1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 1,0 -1,0 0,-1 -1,0 -1,-1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 -1,0 0,1 0,1 0,1 0,-1 -1,0 0,-1 0,-1 0,-1 1,0 0,1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,1 -1,0 0,1 0,1 0,1 0,1 -1,0 -1,0 0,1 -1,0 0,1 1,0 -1,1 0,1 1,0 1,0 0,1 -1,0 1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 0,1 1,1 0,1 0,1 -1,0 0,-1 -1,0 -1,0 0,1 0,1 0,1 0,1 1,0 -1,0 1,0 0,1 -1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,1 0,1 0,1 -1,0 1,1 -1,0 0,1 0,-1 0,1 -1,0 1,0 0,1 0,1 0,1 0,-1 0,1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 0,1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 1,0 -1,0 0,-1 1,0 0,1 1,0 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 -1,-1 0,-1 0,-1 0,-1 0,1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,1 0,-1 1,0 0,-1 -1,0 0,1 -1,-1 0,-1 -1,0 0,-1 0,-1 1,0 1,0 0,-1 0,-1 1,0 -1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 -1,0 0,-1 0,1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 1,1 0,-1 1,0 1,0 0,1 0,1 1,0 1,1 1,0 0,1 0,1 1,0 1,0 0,-1 1,0 0,-1 0,1 0,1 1,0 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,1 1,0" id="path4670" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_10" style="fill:#ffff00">
+        <path d="m 498,521 0,-1 0,1" id="path4673" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 500,520 0,-1 0,1" id="path4675" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 510,484 0,-1 1,0 0,1 0,-1 0,1 0,1 1,0 1,0 0,1 -1,0 0,1 1,0 0,1 0,1 1,0 1,1 1,0 1,-1 1,0 1,0 1,-1 -1,1 -1,0 1,0 1,0 1,0 1,0 0,1 1,0 1,0 1,0 1,0 1,0 1,0 1,0 0,-1 0,1 1,0 1,-1 1,0 1,0 1,0 0,1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 1,0 0,-1 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 1,0 0,1 1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 1,0 0,1 -1,0 0,1 0,1 1,0 -1,0 1,1 -1,0 1,0 0,1 0,1 1,0 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 -1,0 0,1 1,1 1,0 1,1 0,1 0,1 -1,0 -1,0 -1,0 0,1 0,-1 -1,0 0,1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,-1 0,1 -1,0 -1,0 -1,1 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,1 0,-1 -1,0 -1,0 -1,0 -1,1 0,-1 0,1 -1,0 -1,0 -1,0 -1,0 1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,-1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,1 0,-1 -1,0 0,1 0,-1 -1,0 0,1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 -1,0 0,1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 -1,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 1,0 1,0 0,-1 1,1 1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,1 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 1,0 -1,-1 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 1,0 0,-1 0,-1 -1,0 1,-1 -1,0 0,-1 1,0 0,-1 0,1 1,0 1,0 0,-1 0,-1 1,-1 0,1 1,0 0,-1 0,-1 1,0 0,1 1,0" id="path4677" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 523,480 1,0 0,1 1,0 0,1 0,1 -1,0 0,-1 0,1 0,-1 -1,0 1,0 -1,0 -1,0 -1,0 0,-1 1,0 1,0 0,-1" id="path4679" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_11" style="fill:#ffff00">
+        <path d="m 540,106 1,0 1,0 1,0 1,1 1,0 0,1 1,0 0,1 0,1 0,1 0,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 1,0 0,1 1,0" id="path4682" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 564,87 0,-1 0,-1 0,1 0,1" id="path4684" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 562,84 1,0 -1,0" id="path4686" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 564,84 0,1 0,-1 -1,0 1,0" id="path4688" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 562,82 0,1 0,-1" id="path4690" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 574,14 1,0 1,1 1,0 1,0 1,0 1,0 1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 1,1 1,0 0,1 1,0 0,1 1,0 1,0 1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 1,0 0,1 0,1 0,1 0,1 1,1 -1,0 0,1 1,1 0,1 1,0 0,1 0,1 0,1 0,1 0,1 -1,0 -1,1 -1,0 0,1 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 0,-1 -1,0 0,1 -1,0 0,1 0,1 -1,0 -1,1 0,1 -1,0 -1,1 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 0,1 -1,0 -1,0 0,1 1,1 0,1 0,1 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 -1,0 0,1 0,1 -1,0 0,1 1,0 1,0 -1,1 -1,1 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 0,1 0,1 -1,0 -1,0 0,1 1,0 1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 1,1 0,1 -1,0 -1,-1 0,-1 0,1 -1,0 0,1 0,1 -1,-1 0,1 0,-1 0,1 0,1 -1,0 0,1 0,1 1,0 -1,0 1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 0,1 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 1,0 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,-1 0,1 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 1,0 0,1 1,0 0,1 1,0 0,-1 0,-1 -1,0 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0 1,0 1,0 1,0 0,-1 0,-1 0,-1 1,0 1,0 0,-1 0,-1 1,-1 0,-1 0,-1 1,-1 1,0 0,1 1,0 0,-1 1,0 1,1 0,-1 -1,0 -1,-1 -1,-1 0,-1 0,-1 -1,-1 0,-1 0,-1 1,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 0,1 0,-1 1,0 -1,0 1,0 1,0 1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 1,-1 1,0 0,-1 0,1 0,-1 -1,-1 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 -1,0 0,-1 0,-1 0,1 -1,0 0,-1 0,-1 -1,0 1,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 0,1 1,0 1,0 0,1 1,0 0,-1 0,-1 1,1 0,1" id="path4692" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_12" style="fill:#ffff00">
+        <path d="m 597,327 -1,0 1,0" id="path4695" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 597,327 0,-1 0,1" id="path4697" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 597,326 -1,0 1,0" id="path4699" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 600,326 0,1 0,-1 -1,0 1,0" id="path4701" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 592,325 1,0 -1,0" id="path4703" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 595,322 0,1 0,-1 0,-1 0,1" id="path4705" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 593,320 1,0 0,1 0,1 1,0 0,-1 0,1 -1,0 0,1 -1,0 0,-1 1,0 -1,0 -1,0 -1,0 1,-1 1,0 0,-1" id="path4707" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 601,319 0,1 -1,0 0,1 -1,0 0,-1 1,0 0,1 0,-1 0,-1 1,0" id="path4709" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 615,318 -1,0 0,-1 1,0 0,1" id="path4711" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 598,316 0,1 0,-1 1,1 0,1 0,1 0,-1 0,1 1,-1 0,1 -1,0 0,1 0,1 -1,0 -1,0 0,1 0,1 0,-1 0,1 1,0 0,1 0,1 0,1 0,-1 -1,0 0,1 0,-1 0,-1 0,1 0,-1 -1,0 1,0 -1,0 0,-1 1,0 -1,0 0,-1 -1,0 1,0 0,-1 0,-1 0,1 1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,0" id="path4713" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 589,314 0,1 -1,0 0,1 -1,0 1,0 -1,1 0,1 -1,0 -1,1 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 0,-1 -1,0 0,1 -1,0 -1,0 -1,0 -1,1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 0,1 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,-1 1,0 0,-1 1,0 1,0 1,0 1,0 1,0 1,0 1,1 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 1,0" id="path4715" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 627,312 0,-1 0,1" id="path4717" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 629,309 0,-1 0,1" id="path4719" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 624,305 1,0 -1,0" id="path4721" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 612,304 1,0 1,0 1,0 1,0 1,0 1,0 0,1 1,1 1,0 1,1 1,0 1,0 1,1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,1 1,0 0,-1 1,0 -1,0 0,1 1,0 1,0 1,0 1,0 1,0 -1,0 0,1 -1,0 0,1 1,0 0,1 -1,0 0,1 1,0 1,-1 0,1 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 0,-1 0,1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,-1 -1,-1 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 1,-1 1,0 0,-1 1,0 1,0 1,-1 1,0 1,0" id="path4723" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_13" style="fill:#ffff00">
+        <path d="m 407,449 1,0 0,1 0,1 1,0 0,1 0,1 0,1 -1,-1 0,-1 -1,0 -1,-1 1,0 -1,0 0,-1 0,-1 -1,-1 1,0 0,1 1,0" id="path4726" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 404,443 0,-1 0,1" id="path4728" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 384,428 0,-1 0,1" id="path4730" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 394,421 0,-1 0,1" id="path4732" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 387,412 0,1 0,1 1,0 0,1 0,1 1,1 0,1 1,0 1,0 0,1 1,0 1,0 0,1 0,1 1,0 1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,1 0,1 0,1 0,1 0,1 1,0 0,1 -1,0 0,1 -1,-1 -1,0 -1,0 1,0 -1,0 0,1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 0,1 0,-1 0,1 0,-1 -1,0 1,0 -1,-1 0,1 0,-1 -1,-1 0,-1 0,-1 -1,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 1,0 -1,-1 1,0 -1,0 0,-1 0,-1 -1,0 0,-1 1,-1 0,-1 1,-1 0,-1 1,0 1,0" id="path4734" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 443,379 -1,0 0,-1 1,0 0,1" id="path4736" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 418,373 -1,0 0,-1 0,-1 0,1 1,0 0,1" id="path4738" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 402,350 -1,0 1,0" id="path4740" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 401,350 -1,0 -1,0 0,-1 1,0 0,1 1,0" id="path4742" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 417,348 -1,0 1,0" id="path4744" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 411,347 0,-1 0,1" id="path4746" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 412,346 -1,0 1,0" id="path4748" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 407,346 0,1 -1,0 1,0 0,-1" id="path4750" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 398,346 1,0 0,1 1,0 0,1 -1,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,1 1,0 0,-1 0,1 1,0" id="path4752" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 412,345 0,1 0,-1" id="path4754" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 413,345 0,-1 0,1" id="path4756" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 411,344 1,0 -1,0" id="path4758" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 412,343 1,0 -1,0" id="path4760" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 412,341 -1,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 1,0 1,0 0,1 0,-1 1,0 0,-1 0,1 1,0" id="path4762" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 423,339 1,0 1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 0,1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,1 0,-1 -1,0 0,1 -1,-1 0,1 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 1,-1 1,0 1,0 0,-1 1,0 1,0 0,1 0,-1 1,0" id="path4764" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 422,334 -1,0 1,0" id="path4766" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 423,334 -1,0 1,0" id="path4768" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 422,329 -1,0 1,0 0,-1 0,1" id="path4770" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 419,326 0,-1 0,1" id="path4772" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 419,325 0,1 0,1 1,0 0,1 0,-1 1,0 0,1 0,1 -1,0 -1,0 -1,0 -1,0 1,0 0,1 -1,0 0,-1 0,1 0,-1 0,-1 -1,0 -1,0 1,0 -1,-1 1,0 0,1 1,-1 1,0 0,-1 0,-1 1,0" id="path4774" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 414,319 0,1 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 1,0 1,0 0,1 1,0 0,1 -1,0 -1,0 0,1 1,0 1,0 1,0 1,1 1,0 0,1 0,-1 1,0 0,1 -1,0 1,0 1,0 0,1 1,0 0,1 0,1 0,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 -1,0 -1,0 -1,1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 -1,0 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,-1 1,0 0,-1 -1,-1 1,0 -1,-1 -1,0 0,-1 0,-1 -1,0 -1,0 1,0 0,-1 0,1 0,-1 1,0 0,-1 1,0 1,0 1,0 1,0" id="path4776" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 410,316 -1,0 1,0" id="path4778" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 416,315 1,0 -1,0 0,1 -1,0 1,-1" id="path4780" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 404,314 1,0 -1,0" id="path4782" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 406,315 0,-1 0,1" id="path4784" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 411,313 0,1 1,0 0,1 1,0 -1,0 -1,0 0,1 -1,0 -1,0 1,-1 0,-1 1,0 0,-1" id="path4786" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 420,309 1,0 1,0 1,0 1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 1,0" id="path4788" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 407,306 1,0 -1,0" id="path4790" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 418,306 1,0 -1,0" id="path4792" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 405,306 1,0 -1,0 0,1 0,-1 -1,0 1,0" id="path4794" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 406,306 -1,-1 1,0 1,0 -1,0 0,1" id="path4796" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 418,302 -1,-1 1,0 0,1" id="path4798" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 425,296 1,0 0,1 -1,0 0,-1" id="path4800" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 415,295 -1,0 1,0" id="path4802" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 415,295 1,0 -1,0" id="path4804" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 429,293 1,1 1,0 0,1 -1,1 0,1 -1,0 -1,1 -1,-1 1,0 0,-1 0,1 0,-1 0,1 -1,0 0,-1 -1,0 1,0 0,-1 -1,0 0,1 -1,0 0,-1 0,1 0,-1 -1,0 -1,0 0,-1 1,-1 1,0 1,0 1,0 1,-1 1,0 0,1" id="path4806" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 424,292 -1,0 1,0" id="path4808" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 419,292 1,0 1,0 0,1 1,0 1,0 -1,0 0,1 0,1 1,0 -1,0 1,1 -1,0 1,0 1,0 -1,1 -1,0 0,1 1,-1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 0,1 -1,0 0,1 -1,0 -1,0 0,1 0,-1 -1,0 1,0 -1,0 0,-1 -1,0 -1,0 1,0 0,-1 -1,0 1,-1 -1,0 1,0 -1,-1 1,0 0,1 1,0 0,-1 0,1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 0,1 -1,0 0,-1 1,0 1,0 0,-1 -1,0 -1,0 0,-1 1,0 1,0 0,1 1,0 1,0 0,-1 -1,0 1,0 0,-1" id="path4810" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_14" style="fill:#ffff00">
+        <path d="m 439,144 0,-1 0,1" id="path4813" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 440,143 -1,0 1,0" id="path4815" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 438,142 1,0 -1,0" id="path4817" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 451,142 0,-1 0,1" id="path4819" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 434,139 0,1 0,-1 -1,1 0,-1 1,0" id="path4821" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 431,130 1,0 -1,0" id="path4823" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 415,133 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 1,0 1,1 0,1 0,1 1,0 0,1 1,0 1,0 1,0 0,1 -1,0 -1,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 1,0 -1,0 0,-1 -1,0 -1,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,-1 0,1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 -1,-1 0,-1 -1,-1 0,-1 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,1 0,1 1,1 0,1 1,0 1,0" id="path4825" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 438,127 -1,0 1,0" id="path4827" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 437,127 0,1 0,1 1,0 -1,0 -1,0 0,-1 1,0 -1,0 0,-1 1,0 0,1 0,-1" id="path4829" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 437,127 -1,0 1,0" id="path4831" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 435,127 0,-1 0,1" id="path4833" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 447,121 1,0 -1,0" id="path4835" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 445,119 0,1 1,0 0,1 1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 1,0 1,-1 0,1" id="path4837" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 445,104 1,0 0,1 -1,0 0,-1" id="path4839" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 439,98 -1,0 1,0" id="path4841" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 431,97 1,0 1,0 1,0 1,0 1,0 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,-1 1,0 1,0 0,1 1,0 0,-1 0,1 1,0 -1,0 1,1 1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 0,1 0,1 1,1 0,1 1,0 0,1 1,1 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,-1 0,1 1,0 0,-1 0,1 1,0 1,0 0,-1 1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,-1 -1,0 -1,0 0,-1 -1,-1 -1,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,1 -1,0 -1,0 0,1 -1,0 0,1 -1,-1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 0,1 0,1 1,0 0,1 1,0 0,1 0,1 1,0 0,-1 0,1 1,0 0,1 0,1 1,1 1,0 0,-1 1,1 1,1 1,0 1,0 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 0,1 -1,0 0,1 1,0 1,0 0,1 -1,0 1,0 0,1 -1,0 1,0 -1,0 0,1 -1,0 0,1 0,-1 0,1 0,1 -1,0 0,1 1,0 0,1 -1,0 -1,0 -1,0 -1,0 1,0 -1,0 0,-1 0,-1 0,1 -1,0 0,-1 0,-1 -1,-1 -1,0 0,-1 -1,0 -1,-1 0,1 -1,0 0,-1 0,-1 -1,-1 -1,-1 0,-1 1,0 0,-1 -1,0 -1,0 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,1 -1,1 0,1 -1,0 0,1 0,1 -1,0 0,1 1,0 -1,0 0,-1 -1,-1 0,-1 -1,0 -1,0 -1,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 1,0 0,-1 1,-1 0,-1 1,0 0,-1 1,0 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,0 1,0 1,-1 1,0 0,1 1,0 1,0 0,1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 1,0 -1,0 0,-1 1,0 1,0 0,-1 1,0 0,1 0,1 0,-1 1,0 1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 1,0 1,0 0,1 1,0 0,-1 1,0 0,1 0,1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 1,0 1,0 0,-1 1,0 0,-1 -1,0 1,0 0,-1 1,0 0,1" id="path4843" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_15" style="fill:#ffff00">
+        <path d="m 419,40 1,0 1,0 1,0 0,-1 1,0 0,1 1,0 0,1 1,0 1,0 1,0 0,1 0,-1 1,0 0,1 1,0 0,1 -1,0 1,1 0,1 0,1 1,0 1,0 1,0 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 0,1 -1,0 1,0 0,1 0,1 1,0 0,1 0,1 0,1 1,0 0,-1 1,0 0,1 1,1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 -1,0 0,1 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 1,0 0,1 -1,1 0,1 0,1 -1,0 0,-1 -1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 0,1 -1,0 1,0 -1,0 0,-1 0,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,1 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,1 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,-1 0,-1 -1,0 -1,0 0,-1 0,-1 1,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 0,-1 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 1,0 0,-1 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 1,0 1,0 1,0 1,0 0,1 0,-1 1,0 0,1 1,0 1,0 1,0 1,0 1,0 0,1 1,0 1,0 1,0 1,0 0,-1 1,0 0,1 0,-1 0,1 1,0 0,-1 1,0 1,0 0,-1 0,-1 0,-1 0,-1 1,0 1,0 1,-1 1,0 1,0 1,0 0,1 0,1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,1" id="path4846" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_16" style="fill:#ffff00">
+        <path d="m 328,91 1,0 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 0,1 0,1 0,1 0,1 1,0 0,1 0,1 -1,0 0,1 1,1 0,1 1,0 0,1 0,1 0,1 1,0 1,0 1,0 1,1 1,0 0,1 1,0 0,1 -1,0 1,0 1,0 1,0 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 0,1 1,0 1,1 1,0 1,0 0,1 -1,0 -1,0 0,1 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 1,0 0,1 1,0 0,1 0,1 -1,0 0,-1 -1,0 0,-1 0,1 0,1 -1,0 1,0 0,1 -1,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 -1,0 0,1 0,1 -1,0 -1,0 0,1 0,1 -1,1 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,-1 1,0 1,0 0,-1 1,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 1,0 -1,0 0,-1 1,0 -1,0 0,-1 -1,0 -1,1 -1,0 -1,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 0,1 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,1 0,-1 0,-1 -1,0 1,0 -1,-1 0,1 0,-1 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 0,1 0,1 -1,0 -1,0 0,-1 -1,0 0,1 0,1 0,1 -1,0 0,-1 -1,0 0,1 0,1 -1,0 0,-1 0,1 -1,0 1,0 -1,0 0,1 -1,0 1,0 0,-1 -1,0 0,1 -1,0 0,-1 0,-1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,-1 0,-1 0,-1 0,-1 1,0 -1,-1 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 1,0 1,0 0,-1 1,0 1,0 1,1 1,0 1,0 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 1,0 0,1 1,0 0,1 1,1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,1 -1,0 1,0 -1,0 0,1 1,0 0,1 1,0 1,0 0,-1 1,0 0,-1 0,1 1,0 0,-1 1,0 0,-1 1,-1 0,-1 0,-1 0,-1 1,-1 0,-1 1,0 0,-1 1,0 0,-1 -1,0 1,0 1,-1 0,-1 0,-1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 1,0 0,1 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0 0,1 1,0 0,-1 0,1 1,-1 1,0 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 1,0 1,-1 0,1 0,-1 1,0 0,1" id="path4849" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_17" style="fill:#ffff00">
+        <path d="m 342,89 1,0 0,1 1,0 1,0 0,1 1,0 1,0 1,0 1,0 0,1 1,0 0,-1 0,1 1,0 0,1 0,1 1,0 1,0 0,1 1,0 1,-1 0,-1 1,0 1,0 1,-2 0,-1 1,2 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 0,1 0,1 0,1 1,0 1,0 1,0 1,0 0,1 0,1 1,0 1,1 0,1 1,0 0,1 1,0 0,1 0,1 0,1 0,1 1,0 1,0 0,1 1,0 0,1 -1,0 -1,0 0,1 0,1 0,1 1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 0,1 -1,0 0,1 0,1 1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 1,0 0,1 0,1 -1,0 0,-1 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 0,1 -1,0 0,1 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 1,0 0,-1 -1,0 -1,0 -1,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 1,0 0,-1 -1,0 0,-1 -1,0 -1,-1 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,-1 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 1,0 1,0 0,-1 1,0 1,0 1,0 1,-1 1,0 1,0 1,0 0,-1 -1,0 0,-1 1,0 0,1 1,0" id="path4852" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_18" style="fill:#ffff00">
+        <path d="m 398,245 1,0 -1,0" id="path4855" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 398,244 0,1 -1,0 0,-1 1,0" id="path4857" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 397,243 -1,0 0,-1 1,0 0,-1 0,1 0,1" id="path4859" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 397,241 -1,0 1,0" id="path4861" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 349,197 1,0 0,1 0,1 1,0 -1,0 1,0 0,1 1,0 1,0 1,0 1,0 1,0 1,0 0,1 0,1 0,1 1,0 1,0 0,1 1,0 0,1 0,1 -1,0 1,1 1,0 1,0 0,1 1,0 -1,0 0,1 1,0 0,1 -1,0 1,1 0,-1 0,1 0,1 0,1 -1,0 0,1 1,0 1,0 1,0 0,1 1,-1 0,1 1,0 1,0 1,0 0,-1 1,0 1,0 1,0 0,-1 0,1 1,0 1,0 -1,0 0,1 1,0 0,1 1,0 1,0 0,1 0,-1 1,0 0,1 0,1 1,0 1,0 1,0 1,0 0,-1 0,1 1,0 1,0 0,-1 1,0 0,1 1,1 0,1 1,0 0,-1 1,0 0,1 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 -1,0 0,1 0,1 -1,0 0,1 0,1 -1,0 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 1,0 0,-1 0,1 -1,0 0,1 -1,0 1,0 1,0 1,0 0,-1 0,1 -1,0 0,1 -1,0 0,1 1,0 0,-1 1,0 0,1 1,0 0,-1 0,1 0,1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,1 0,-1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 1,0 1,0 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 1,1 0,1 1,0 1,1 1,0 0,-1 1,0 0,1 1,0 0,-1 1,0 1,0 0,1 0,1 1,0 0,1 0,1 0,1 0,1 1,0 0,1 0,1 1,0 -1,0 1,0 -1,0 0,1 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,1 0,-1 1,0 0,-1 -1,0 0,-1 1,0 1,0 1,0 0,1 1,1 1,0 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 0,1 0,1 0,-1 1,0 1,0 0,1 0,1 1,0 -1,0 1,0 0,1 0,-1 1,0 0,1 0,-1 0,1 1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 0,1 -1,1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 0,-1 -1,1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 -1,1 0,-1 -1,0 -1,0 0,1 -1,0 0,-1 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,-1 0,-1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 -1,0 0,-1 0,-1 -1,0 0,1 -1,0 -1,1 0,1 0,-1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 0,1 -1,0 0,1 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 1,-1 1,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 0,1 1,0 0,1 1,0 0,-1 1,0 1,0 0,1 0,-1 1,0 0,-1 0,1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1" id="path4863" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_19" style="fill:#ffff00">
+        <path d="m 559,274 0,-1 0,1" id="path4866" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 564,268 1,0 -1,0" id="path4868" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 563,268 0,-1 0,1" id="path4870" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 564,267 0,-1 0,1" id="path4872" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 583,255 0,-1 -1,0 1,0 0,1" id="path4874" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 582,254 -1,0 1,-1 0,1" id="path4876" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 538,253 0,-1 0,1" id="path4878" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 583,253 0,1 -1,0 1,0 0,-1 -1,0 0,-1 1,0 0,1" id="path4880" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 538,251 1,0 -1,0 0,1 -1,0 0,-1 1,0" id="path4882" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 577,251 1,0 1,0 1,0 0,1 1,0 1,0 0,1 -1,0 -1,0 1,0 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 0,-1 -1,0 0,-1 0,1" id="path4884" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 576,250 -1,0 1,0" id="path4886" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 540,250 0,-1 0,1" id="path4888" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 573,249 0,1 0,-1" id="path4890" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 574,249 1,0 -1,0" id="path4892" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 541,247 0,-1 0,1 1,0 0,-1 0,1 1,0 0,1 0,-1 1,0 0,1 0,1 0,1 -1,0 0,1 0,1 -1,0 0,-1 -1,0 0,1 -1,-1 1,0 0,-1 -1,-1 -1,0 0,-1 0,-1 1,0 1,0 0,-1 0,1" id="path4894" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 567,247 1,0 1,0 1,0 0,1 0,1 1,0 0,1 1,-1 0,1 0,1 1,0 0,-1 1,1 0,-1 -1,0 1,0 0,-1 1,1 0,1 1,0 -1,0 0,1 0,1 0,1 0,1 -1,0 -1,0 0,1 1,0 0,-1 1,0 0,1 -1,0 1,0 -1,0 0,1 0,-1 1,0 0,1 0,-1 0,1 0,1 -1,1 1,0 -1,0 0,1 0,1 0,1 0,1 1,0 -1,0 0,1 1,0 0,1 0,1 1,0 0,1 -1,0 1,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 1,0 0,1 0,1 0,1 0,1 -1,0 0,1 0,-1 0,1 -1,0 -1,0 -1,0 0,1 -1,1 0,1 0,1 -1,0 0,-1 0,1 -1,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 0,-1 1,0 1,0 1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,1 1,0 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 1,0 1,0 1,0 0,-1 1,1 1,0 0,-1 0,1 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0 0,1" id="path4896" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_20" style="fill:#ffff00">
+        <path d="m 297,274 0,1 -1,-1 1,0" id="path4899" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 317,272 -1,0 1,0 0,-1 0,1" id="path4901" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 324,266 1,0 0,1 1,0 1,0 1,0 1,0 1,0 1,0 0,1 1,0 1,0 1,0 0,1 0,1 1,0 0,1 0,-1 1,1 1,0 0,1 1,0 1,0 0,-1 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 1,0 1,1 1,0 0,-1 1,0 0,1 1,0 0,-1 1,0 0,1 0,1 1,0 1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 0,1 0,-1 -1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 0,1 0,1 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,1 0,1 -1,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 0,1 -1,1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 0,-1 -1,0 0,1 0,1 -1,0 -1,0 -1,1 0,1 -1,0 0,1 -1,1 -1,0 0,1 -1,1 1,0 -1,0 0,1 -1,0 0,-1 0,-1 -1,-1 0,1 0,-1 0,-1 -1,-1 0,1 0,-1 -1,0 0,1 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 -1,0 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 1,0 0,-1 0,-1 -1,0 1,0 0,-1 -1,0 1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,-1 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,-1 -1,0 0,-1 1,0 0,1 1,0 0,1 -1,0 1,0 0,1 1,0 -1,0 1,-1 -1,0 1,0 1,0 1,0 1,0 1,1 1,0 0,1 1,0 0,1 1,0 1,0 1,0 1,0 0,1 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 1,-1 0,-1 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0" id="path4903" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_21" style="fill:#ffff00">
+        <path d="m 320,72 1,0 0,1 1,0 1,0 0,1 0,-1 1,0 1,0 0,1 1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 -1,1 -1,0 -1,0 0,1 -1,0 0,-1 1,0 -1,0 -1,0 0,1 1,0 0,1 0,1 1,0 0,1 0,1 0,1 -1,0 1,0 0,1 1,0 0,-1 1,0 0,1 1,0 0,1 -1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,1 -1,0 0,1 0,1 -1,0 0,1 1,0 0,1 -1,0 0,1 0,1 -1,0 -1,1 0,-1 0,1 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 0,1 -1,1 -1,0 -1,0 1,-1 -1,0 1,0 0,-1 -1,0 0,-1 1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,1 -1,0 -1,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 -1,0 -1,-1 0,-1 -1,0 0,-1 -1,0 0,1 0,1 -1,0 -1,-1 0,-1 0,-1 1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,-1 -1,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 2,1 1,0 1,0 1,0 1,0 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 1,0 0,1 1,0 0,1 0,-1 1,0 1,0 1,0 1,0 1,0 0,-1 1,0 1,-1 1,0 0,-1 1,0 1,0 1,0 1,0 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,1 0,1 1,0 0,-1 1,0 0,1 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,-1 1,0" id="path4906" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_22" style="fill:#ffff00">
+        <path d="m 271,216 0,-1 0,1" id="path4909" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 243,191 1,0 1,0 0,1 -1,0 1,0 0,1 0,1 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 1,-1 1,0 1,-1 0,1 1,0 0,1 1,0 -1,0 1,0 0,1 0,1 1,0" id="path4911" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 276,185 0,1 0,1 -1,0 0,1 0,1 1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 1,0 0,1 0,1 1,0 0,1 0,1 0,1 0,1 -1,0 0,-1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 0,1 0,1 -1,0 0,1 -1,0 -1,0 0,1 0,1 0,1 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 0,1 1,0 1,0 1,1 0,1 1,0 1,0 0,1 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 1,-1 -1,0 0,1 0,1 1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,1 1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 -1,-1 0,-1 -1,0 -1,-1 0,1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 -1,-1 1,0 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 1,0 0,-1 1,0 1,1 0,-1 0,1 0,-1 0,-1 1,0 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,1 1,0 0,1 1,1 0,1 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 0,1 1,0 1,0 1,0 0,1 0,1 1,0 1,0 1,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 0,1 0,-1 1,0 0,-1 1,0 1,0" id="path4913" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_23" style="fill:#ffff00">
+        <path d="m 473,293 0,-1 0,1" id="path4916" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 465,291 1,0 0,1 0,1 0,1 -1,0 -1,0 -1,0 0,-1 0,-1 1,0 0,-1 1,0" id="path4918" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 465,290 1,0 -1,0" id="path4920" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 466,290 0,-1 0,1 1,0 0,1 0,1 -1,-1 0,-1 0,-1 0,1" id="path4922" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 466,289 -1,0 1,0" id="path4924" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 459,286 -1,0 1,0" id="path4926" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 459,281 0,-1 0,1" id="path4928" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 458,280 0,-1 0,1" id="path4930" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 460,279 0,1 -1,0 0,1 0,-1 -1,-1 1,0 1,0" id="path4932" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 459,279 0,-1 0,1" id="path4934" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 455,277 0,-1 0,-1 1,0 0,1 -1,0 0,1" id="path4936" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 420,255 1,1 -1,0 0,-1" id="path4938" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 413,255 1,0 0,-1 1,0 0,1 1,0 1,0 1,0 1,1 1,0 1,0 0,1 1,-1 0,-1 1,-1 0,1 1,0 0,1 1,0 0,1 1,0 0,1 -1,0 -1,0 0,1 1,0 1,0 0,1 0,1 1,0 0,1 1,0 0,1 0,1 0,1 0,-1 0,1 1,0 0,1 -1,0 -1,0 -1,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,-1 -1,0 0,-1 -1,-1 1,0 0,-1 1,0 0,-1 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 -1,1 -1,0 0,1 0,1 -1,0 -1,0 0,1 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,-1 1,0 1,0 0,-1 1,0 0,1" id="path4940" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 458,244 0,-1 0,1" id="path4942" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 432,236 0,-1 0,1" id="path4944" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 485,235 0,1 1,0 0,1 -1,0 0,-1 0,1 -1,0 0,-1 0,-1 1,0" id="path4946" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 484,235 0,1 0,-1 -1,0 1,0" id="path4948" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 381,231 -1,0 0,-1 1,0 0,1" id="path4950" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 381,230 -1,0 1,0" id="path4952" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 475,231 -1,0 1,-1 0,1" id="path4954" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 479,231 -1,1 0,1 -1,-1 1,0 0,-1 0,-1 1,0 0,1" id="path4956" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 470,229 1,1 0,1 0,-1 -1,1 -1,0 0,-1 1,0 0,-1" id="path4958" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 483,228 0,-1 0,1" id="path4960" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 475,228 0,-1 0,1" id="path4962" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 483,224 1,0 -1,0" id="path4964" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 484,224 0,-1 0,1" id="path4966" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 478,220 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 0,1 0,1 0,1 -1,0 1,0 0,1 0,-1 0,1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 0,1 1,0 0,1 0,1 0,1 -1,0 -1,0 -1,0 1,0 -1,0 0,1 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 1,0 0,1 -1,0 0,-1 -1,0 1,0 0,-1 -1,0 -1,0 0,-1 1,0 0,-1 0,1 1,0 0,-1 1,0 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 0,1 0,-1 1,0 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 1,0 0,-1 1,0 0,-1 1,-1 -1,0 0,-1 0,-1 0,-1 1,-1 1,0 0,-1 0,1" id="path4968" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 477,219 1,0 -1,0" id="path4970" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 477,219 0,-1 0,1" id="path4972" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 477,218 1,0 -1,0" id="path4974" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 478,218 -1,0 1,0" id="path4976" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 414,217 1,0 -1,0 0,1 0,-1" id="path4978" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 477,217 -1,0 0,-1 1,1" id="path4980" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 409,215 1,0 1,1 0,1 1,0 1,0 0,1 0,1 0,1 1,1 1,0 1,0 0,1 1,0 0,1 -1,0 0,1 0,1 0,1 1,0 0,1 0,1 1,1 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 0,-1 1,0 -1,1 1,0 0,1 0,-1 1,0 0,1 1,0 1,0 1,0 0,1 0,-1 1,0 1,0 0,-1 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 1,0 1,0 1,1 1,0 0,1 1,-1 0,1 1,0 1,0 1,0 1,0 1,0 0,1 1,0 1,0 1,0 0,-1 1,0 1,0 1,0 1,0 0,-1 0,1 1,0 0,-1 0,1 1,0 1,0 0,1 1,0 1,0 1,0 0,1 1,0 -1,0 -1,1 0,1 -1,0 0,1 1,0 -1,0 1,1 0,1 1,0 0,1 1,0 0,1 1,0 1,1 1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 1,0 0,1 -1,0 1,0 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 -1,0 -1,0 0,1 1,0 -1,0 1,0 0,1 1,0 0,1 0,1 0,1 -1,0 1,0 0,1 1,0 0,1 0,1 1,0 -1,0 1,1 0,-1 0,1 1,1 -1,0 0,1 0,1 1,0 -1,0 0,1 0,1 1,0 0,1 0,1 1,0 0,-1 0,1 1,0 0,1 1,0 1,-1 0,1 0,1 0,1 1,0 0,-1 0,1 1,0 0,-1 1,0 1,0 0,1 1,0 0,1 1,-1 0,1 0,-1 1,0 0,1 1,0 1,0 0,-1 1,0 1,1 1,0 1,0 1,-1 1,0 0,-1 0,1 0,1 0,1 -1,0 1,0 0,1 -1,0 0,1 1,0 0,1 -1,0 0,1 1,0 0,1 0,1 0,1 -1,0 0,1 0,-1 1,0 -1,1 0,1 0,1 -1,0 0,1 -1,0 0,1 0,-1 0,1 -1,0 1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 1,0 0,1 -1,-1 0,1 0,1 1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 -1,-1 1,0 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,1 1,0 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 0,-1 -1,0 -1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 -1,0 -1,0 0,1 0,-1 -1,0 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 -1,0 1,0 -1,0 0,-1 0,1 -1,0 0,1 -1,0 0,1 0,-1 -1,0 1,0 -1,-1 1,0 -1,0 0,-1 1,0 0,-1 1,0 -1,0 0,-1 -1,0 0,-1 -1,0 1,0 -1,1 0,-1 0,1 0,-1 -1,0 -1,0 -1,0 0,-1 1,0 1,0 0,-1 -1,-1 1,0 0,-1 -1,0 0,-1 1,0 -1,0 -1,0 -1,0 -1,0 0,-1 0,1 -1,0 -1,0 0,1 -1,0 0,-1 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,-1 -1,0 -1,1 0,1 0,-1 -1,0 0,1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 0,1 -1,-1 0,-1 0,-1 -1,0 0,1 0,-1 0,-1 -1,0 -1,0 1,0 0,-1 -1,0 1,0 0,-1 1,0 1,0 0,-1 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 -1,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 -1,-1 -1,0 -1,1 1,0 1,0 1,0 0,1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 1,-1 0,-1 0,-1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 1,0 0,-1 0,1 0,-1 1,0 0,1 0,-1 1,0 0,-1 1,0 -1,0 1,-1 1,0 1,0 1,0 0,-1 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 0,1 1,0 1,0 0,-1 1,-1 1,0 1,0 0,-1 1,0 1,0" id="path4982" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 411,215 0,-1 0,1" id="path4984" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_24" style="fill:#ffff00">
+        <path d="m 303,124 1,0 1,0 1,0 0,1 1,0 0,-1 0,1 1,0 0,1 0,-1 1,1 -1,0 1,0 0,1 0,1 0,-1 0,1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,-1 0,-1 1,0 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 0,1 0,1 -1,0 0,1 1,0 1,1 1,0 1,-1 1,0 0,1 1,0 -1,0 0,1 1,0 -1,0 0,1 0,1 0,1 1,0 0,1 0,1 1,0 -1,1 0,1 -1,0 -1,0 1,1 0,1 1,0 1,0 1,0 0,1 0,-1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 -1,1 1,0 0,1 0,1 0,1 0,1 -1,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,1 -1,0 -1,0 0,-1 -1,0 0,-1 0,1 -1,-1 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 0,-1 0,1 -1,0 0,1 -1,0 1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,-1 0,-1 0,-1 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,-1 0,-1 -1,0 0,-1 0,-1 -1,0 -1,-1 1,0 1,0 0,1 1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 -1,-1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,-1 1,0 0,-1 1,0 1,0 1,0 1,0 1,-1 -1,0 0,-1 1,0 1,0 1,1 0,1 1,0 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 0,1 0,1 1,0 0,-1 1,0 0,1 -1,0 1,0 0,-1 1,0 -1,0 1,0 0,-1 0,1 1,0 0,-1 0,-1 1,0 0,1 1,0 0,-1 0,-1 0,-1 1,0 0,1 1,0 1,0 0,-1 0,-1 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 0,1" id="path4987" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_25" style="fill:#ffff00">
+        <path d="m 441,284 -1,1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 1,0 -1,0 0,1 0,-1 0,1 0,1 -1,0 0,1 0,1 0,1 -1,1 0,1 0,1 0,1 0,1 -1,0 0,1 0,1 -1,0 -1,0 -1,0 1,0 -1,0 0,-1 -1,0 0,-1 0,1 1,0 -1,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 0,-1 -1,0 0,-1 1,-1 0,-1 -1,0 -1,-1 0,-1 -1,0 -1,1 -1,0 -1,0 -1,0 0,-1 1,0 0,1 0,-1 1,0 -1,-1 1,0 1,0 1,0 0,-1 1,0 0,-1 1,-1 1,0 0,-1 0,1 1,0 0,-1 1,0 0,1 1,0 0,1 0,-1 1,0 0,-1 1,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 1,0 0,-1 0,1" id="path4990" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_26" style="fill:#ffff00">
+        <path d="m 445,331 1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 1,0 0,1 1,0" id="path4993" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 447,318 0,1 -1,0 0,-1 1,0" id="path4995" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 444,314 -1,0 1,0" id="path4997" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 443,310 1,0 -1,0" id="path4999" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 436,310 -1,0 1,0" id="path5001" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 436,309 0,1 -1,0 0,-1 1,0" id="path5003" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 434,305 0,-1 0,1" id="path5005" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 434,304 1,0 0,1 -1,0 0,-1" id="path5007" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 452,302 -1,0 1,0" id="path5009" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 451,301 1,0 -1,0" id="path5011" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 452,299 0,-1 0,1" id="path5013" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 450,298 0,-1 0,1" id="path5015" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 452,293 -1,0 1,0" id="path5017" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 456,279 -1,0 1,0" id="path5019" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 455,279 0,-1 0,1" id="path5021" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 434,267 0,1 0,-1 1,0 1,0 0,1 1,0 1,0 1,0 0,1 1,0 1,0 0,1 0,-1 1,0 0,1 1,0 0,1 0,-1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 -1,0 0,1 0,1 1,0 -1,0 0,1 0,1 0,1 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 0,1 0,1 1,0 -1,1 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 0,1 0,1 0,1 0,1 1,0 1,1 0,1 -1,0 -1,0 0,1 1,0 -1,0 0,1 1,0 1,0 -1,0 1,0 0,1 1,0 0,1 -1,0 0,1 1,0 -1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,1 0,1 -1,0 0,1 1,0 -1,0 0,1 0,1 0,1 1,1 -1,0 -1,0 0,1 1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 1,0 0,-1 -1,-1 0,-1 -1,0 0,1 0,-1 1,0 1,0 1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 1,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,1 0,-1 1,0 -1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 1,0 0,1 1,0 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 1,-1 0,-1 0,1 -1,0 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,1 0,1 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 1,0 1,0" id="path5023" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_27" style="fill:#ffff00">
+        <path d="m 244,279 -1,0 1,0" id="path5026" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 240,278 -1,0 1,0" id="path5028" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 240,278 -1,0 1,0" id="path5030" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 281,266 0,1 0,1 -1,0 0,1 0,-1 -1,0 0,-1 1,0 0,-1 1,0" id="path5032" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 277,264 0,-1 0,1" id="path5034" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 276,262 0,1 1,0 0,1 0,-1 -1,0 0,-1" id="path5036" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 274,263 0,-1 0,-1 0,1 0,1" id="path5038" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 257,261 -1,0 1,0" id="path5040" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 276,258 -1,0 1,0" id="path5042" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 276,258 0,-1 0,1" id="path5044" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 280,259 0,1 -1,0 1,0 -1,0 0,-1 0,-1 0,-1 0,1 1,0 0,1" id="path5046" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 278,255 0,1 1,0 -1,0 0,-1" id="path5048" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 276,255 1,0 -1,0" id="path5050" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 277,256 0,-1 0,1" id="path5052" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 275,255 0,-1 0,1" id="path5054" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 275,255 -1,0 0,-1 1,0 0,1" id="path5056" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 277,254 0,1 0,-1" id="path5058" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 275,254 -1,0 1,0" id="path5060" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 249,253 0,1 1,0 0,1 0,1 0,1 1,0 0,1 0,1 1,0 0,1 -1,0 1,0 0,1 -1,0 1,0 0,1 0,1 0,1 0,1 0,1 -1,0 -1,0 1,0 0,1 0,1 1,1 0,1 1,0 1,0 0,-1 0,-1 1,0 0,1 0,1 0,-1 1,0 0,1 0,1 1,0 0,1 0,1 1,0 0,1 1,1 0,1 1,0 0,1 0,1 1,0 0,1 1,1 0,-1 0,1 1,0 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 -1,-1 -1,0 -1,0 -1,0 -1,0 -1,-1 0,-1 -1,0 -1,0 0,-1 -1,0 1,0 -1,0 0,-1 -1,0 -1,0 -1,1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,-1 1,0 0,-1 -1,-1 0,-1 0,-1 -1,-1 1,0 1,1 0,1 1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,1 -1,0 0,1 1,0 -1,1 0,1 1,0 0,1 0,1 0,1 0,1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,1 1,0 0,-1 1,0 0,1 0,1 1,0 0,1 0,-1 1,0 0,1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 1,0 -1,0 1,0 0,1 1,-1 0,-1 -1,0 0,-1 1,0 -1,0 1,0 -1,0 0,-1 1,0 -1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 1,0 1,0" id="path5062" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 276,253 0,1 0,1 0,-1 -1,0 0,-1 0,1 0,-1 1,0" id="path5064" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 264,253 0,1 -1,0 0,-1 0,-1 1,0 0,1" id="path5066" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 254,251 0,1 1,0 1,0 0,1 -1,0 0,1 0,1 1,0 1,0 -1,1 0,-1 0,1 1,0 0,1 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 1,0 0,-1 1,0 0,1 1,0 0,-1 -1,0 0,-1 0,1 1,0 0,-1 -1,0 1,0 1,0 0,1 1,1 -1,0 0,1 0,1 0,1 1,0 0,1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,1 1,0 0,-1 0,-1 0,-1" id="path5068" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 258,249 -1,0 0,-1 0,-1 1,0 0,1 0,1" id="path5070" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_28" style="fill:#ffff00">
+        <path d="m 514,71 0,-1 0,1" id="path5073" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 514,70 0,-1 0,1" id="path5075" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 552,43 1,0 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 0,1 0,1 0,1 -1,0 0,1 0,1 1,0 -1,1 0,1 0,1 1,1 0,1 0,1 1,1 1,1 1,0 0,1 -1,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,1 0,1 0,1 -1,1 0,1 0,1 -1,0 -1,0 0,1 0,1 0,1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 1,0 0,1 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,-1 -1,0 1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,-1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 -1,-1 -1,0 -1,0 0,-1 0,-1 1,0 0,-1 -1,0 1,0 0,1 1,-1 -1,0 1,0 0,-1 0,-1 -1,0 0,-1 -1,-1 -1,0 0,-1 0,-1 0,-1 -1,0 -1,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,1 1,0 -1,0 1,0 0,1 1,0 0,1 0,1 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,1 1,0 -1,1 1,0 1,0 1,0 0,1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 1,0 1,0 0,-1 0,1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 0,1 1,0 0,-1 0,1 1,0 1,0 0,-1 1,0 0,-1 0,-1 1,0 1,0 0,1 1,0 1,0 1,0 1,-1 0,1 1,0 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 0,1 1,0 0,-1 1,0 1,0 0,-1 0,1 0,-1 1,0" id="path5077" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_29" style="fill:#ffff00">
+        <path d="m 399,303 0,-1 0,1" id="path5080" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 391,287 -1,0 1,0" id="path5082" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 389,286 1,1 0,-1 0,1 1,0 0,1 1,0 1,-1 0,1 1,0 1,0 1,0 1,0 1,0 0,1 0,1 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 1,0 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,-1 -1,-1 -1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 1,0 -1,0 -1,0 1,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0" id="path5084" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 390,284 -1,0 1,0" id="path5086" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 389,284 0,-1 0,1" id="path5088" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 391,284 -1,0 0,-1 1,0 0,1" id="path5090" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 355,281 1,0 0,1 1,0 0,-1 1,0 0,1 1,0 1,0 1,0 1,0 0,1 1,0 1,1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 1,1 1,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 1,0 1,0 1,0 0,-1 1,0 1,0 1,0 0,1 1,0 1,1 0,1 1,0 -1,1 -1,0 0,1 0,1 1,0 -1,0 1,0 0,1 0,1 1,0 0,-1 1,0 0,1 0,-1 1,1 1,0 1,0 0,-1 1,1 0,-1 0,1 1,0 1,0 -1,0 0,1 1,0 0,-1 0,1 1,1 0,1 1,-1 0,1 0,1 0,1 -1,0 0,1 -1,0 1,0 -1,0 -1,0 0,-1 0,1 -1,0 0,1 1,0 0,1 -1,0 1,0 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,1 0,1 -1,0 -1,0 0,-1 0,1 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,-1 1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 0,1 -1,0 -1,-1 -1,0 -1,0 0,1 -1,0 0,-1 0,-1 0,-1 1,0 0,-1 1,0 0,-1 -1,0 -1,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 1,0 1,0 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,1 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0" id="path5092" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_30" style="fill:#ffff00">
+        <path d="m 455,525 1,0 1,0 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,-1 -1,0 0,-1 0,-1 0,1 1,-1 0,1 0,-1 1,0 -1,0 0,-1 1,0 0,1 1,0" id="path5095" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 449,520 1,0 0,1 -1,-1 0,-1 0,1" id="path5097" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 429,499 0,-1 0,1" id="path5099" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 459,479 0,-1 0,1" id="path5101" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 423,478 0,-1 0,1" id="path5103" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 445,476 0,-1 1,0 -1,0 0,1" id="path5105" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 418,472 0,-1 0,1" id="path5107" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 424,470 0,-1 0,1" id="path5109" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 424,467 1,0 0,1 -1,0 0,-1" id="path5111" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 434,464 1,1 1,0 0,1 -1,0 0,1 0,1 1,0 -1,0 1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 1,0 1,0 1,0 1,1 1,0 1,0 1,0 1,0 1,0 1,0 0,1 1,0 1,0 1,0 1,0 0,-1 0,1 1,0 1,0 0,-1 0,-1 1,0 0,-1 1,0 1,0 0,-1 -1,0 0,-1 0,-1 1,0 1,0 0,-1 1,0 1,1 1,0 1,0 0,1 1,0 0,1 0,1 0,1 1,0 -1,0 0,1 0,1 -1,1 0,-1 0,1 -1,0 1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,1 1,0 0,-1 -1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 1,0 0,1 1,0 1,1 0,-1 0,1 1,0 0,-1 1,0 0,-1 1,0 1,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 1,0 1,1 1,0 1,0 0,1 0,1 1,1 0,1 -1,1 -1,0 0,1 0,-1 0,1 -1,0 -1,0 0,1 0,1 1,0 1,0 0,1 -1,1 0,1 0,1 0,1 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,-1 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 -1,1 0,-1 -1,0 -1,0 -1,1 -1,0 -1,0 0,-1 0,1 -1,0 0,-1 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 1,0 0,-1 -1,-1 0,1 0,-1 0,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 0,-1 0,-1 -1,-1 1,0 -1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 -1,0 1,0 -1,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,1 1,0 -1,0 1,0 0,-1 0,-1 0,-1 0,-1 0,1 1,0 0,1 0,1 -1,0 0,1 1,0 -1,1 1,0 0,1 0,1 0,1 0,1 1,0 0,-1 1,0 0,1 -1,0 1,0 0,1 1,0 1,0 1,0 1,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,-1 0,1" id="path5113" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_31" style="fill:#ffff00">
+        <path d="m 596,205 0,-1 0,1" id="path5116" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 556,201 0,1 -1,-1 1,0 0,-1 0,1" id="path5118" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 559,196 0,-1 0,1" id="path5120" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 566,195 0,-1 0,1" id="path5122" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 590,195 0,-1 0,1" id="path5124" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 590,194 -1,0 1,0" id="path5126" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 590,194 0,-1 0,1" id="path5128" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 590,193 1,0 -1,0" id="path5130" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 585,188 1,0 0,1 -1,0 0,1 0,1 1,0 0,-1 0,1 1,0 1,0 1,0 0,1 -1,0 0,1 1,0 -1,0 0,1 -1,0 0,1 0,1 0,1 1,0 1,0 0,1 0,-1 1,1 1,0 0,1 1,0 0,1 1,0 -1,0 1,0 0,1 0,-1 0,1 0,1 1,0 0,1 1,0 1,0 0,1 0,-1 0,1 0,1 0,1 1,0 0,1 0,1 1,0 -1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,-1 0,1 1,0 -1,1 1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,-1 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 -1,0 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 0,-1 1,-1 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 0,-1 -1,0 1,0 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 1,0 -1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 0,1 0,1 0,1 -1,0 0,-1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 -1,-1 1,0 0,1 1,0 0,-1 -1,0 1,0 -1,0 0,-1 1,0 -1,-1 1,0 0,-1 -1,0 0,-1 0,1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,1 0,-1 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 0,-1 1,0 1,0 1,0 0,-1 1,0 0,1 1,0 0,-1 1,0 -1,0 1,0 1,0 0,-1 1,0 1,0 0,-1 -1,0 1,0 0,1 1,0 0,-1 1,0 1,0 1,0 0,-1 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 1,0 0,1 1,0 0,-1 1,0 1,0 1,0 0,1 1,0 0,-1 0,1 1,0 1,0 0,-1 1,0 0,-1 0,1 1,0 -1,0 1,0" id="path5132" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 511,178 -1,0 1,0" id="path5134" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 510,178 0,1 0,1 -1,0 -1,1 -1,0 0,1 0,1 -1,0 0,1 0,-1 -1,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,1 1,0 0,1 1,0" id="path5136" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 519,154 0,-1 0,1" id="path5138" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 529,150 -1,0 1,0" id="path5140" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 523,147 0,-1 0,1" id="path5142" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 515,144 0,-1 0,1" id="path5144" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 516,144 0,-1 0,1" id="path5146" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 528,142 -1,0 1,0" id="path5148" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 514,141 0,1 1,0 -1,0 0,-1" id="path5150" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 532,142 0,1 0,1 0,1 -1,0 -1,0 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 -1,0 0,1 1,0 0,1 -1,0 -1,0 0,1 1,0 0,1 -1,0 0,1 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 0,-1 1,0 1,0 0,-1 0,-1 1,-1 -1,0 0,-1 -1,0 -1,0 -1,1 -1,0 0,1 1,0 1,0 0,1 -1,0 0,-1 -1,0 0,1 0,1 -1,0 0,1 1,0 1,0 0,1 -1,0 1,0 0,1 0,1 1,0 0,1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 -1,0 -1,0 0,1 0,1 -1,0 0,-1 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,1 -1,0 0,-1 1,0 1,-1 -1,0 -1,0 1,0 0,-1 0,1 0,-1 0,-1 0,1 0,-1 0,-1 1,0 -1,0 0,-1 1,0 0,-1 -1,0 -1,-1 1,0 -1,-1 0,-1 0,-1 0,-1 0,1 1,0 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0 0,1 1,0 1,0 1,0 0,-1 0,1 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 0,1 0,1 1,0 -1,0 0,1 1,0 1,0 0,-1 0,-1 1,0 1,0 -1,0 1,0 1,0 0,-1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 1,0 0,-1 0,-1 1,0 1,0 0,-1 0,1 0,1 -1,0 1,0" id="path5152" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_32" style="fill:#ffff00">
+        <path d="m 325,301 1,0 0,1 -1,0 0,1 1,0 1,0 0,1 1,0 0,1 0,-1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 1,0 1,-1 0,-1 1,0 1,0 0,-1 1,0 0,1 1,0 0,1 1,0 1,1 0,-1 1,-1 0,-1 1,0 1,0 0,-1 1,0 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,-1 1,0 1,0 0,1 0,1 1,0 0,1 -1,0 0,1 1,0 0,1 -1,0 0,1 0,1 0,1 0,1 1,0 0,1 0,-1 1,0 0,-1 1,0 0,-1 0,1 0,1 1,0 0,1 0,1 1,0 0,1 0,1 0,1 1,0 1,0 0,1 -1,0 0,1 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 0,1 0,1 0,1 1,0 0,1 1,0 1,0 1,0 0,1 0,1 1,0 1,0 0,1 0,-1 1,0 1,0 0,-1 1,0 1,1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,1 0,1 -1,0 0,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,-1 0,1 -1,0 0,1 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 0,1 1,0 0,1 -1,0 1,0 0,1 1,0 0,1 -1,0 1,0 0,1 1,0 0,1 -1,0 1,0 0,1 1,0 0,1 0,1 1,0 0,1 0,1 1,0 -1,0 0,1 0,1 0,1 0,1 0,1 0,1 1,0 1,0 0,-1 0,1 1,0 0,-1 1,1 -1,0 0,1 1,0 0,1 1,0 0,1 -1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,-1 -1,0 0,-1 -1,0 -1,0 0,1 -1,1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 -1,-1 1,0 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 -1,0 -1,1 -1,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 0,1 0,1 0,1 0,1 1,0 0,1 0,1 0,1 0,1 0,1 -1,0 -1,0 0,-1 0,-1 0,1 -1,0 0,1 -1,0 -1,0 0,-1 0,-1 -1,0 -1,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,1 -1,-1 -1,0 0,1 0,1 0,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 -1,0 -1,0 0,1 0,-1 -1,0 0,1 0,1 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 -1,-1 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 1,0 -1,0 0,-1 0,1 0,-1 0,-1 -1,0 0,1 0,-1 -1,0 1,0 -1,0 0,-1 1,0 0,-1 1,0 1,-1 -1,-1 -1,0 0,-1 -1,-1 -1,0 0,-1 -1,0 0,-1 -1,0 1,0 -1,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 0,-1 -1,1 -1,0 0,1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 1,-1 0,-1 1,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0" id="path5155" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_33" style="fill:#ffff00">
+        <path d="m 296,89 0,1 1,1 1,0 0,-1 0,-1 1,0 0,1 1,0 0,1 1,1 1,0 0,1 0,1 -1,0 0,1 0,1 0,1 1,1 1,0 0,-1 1,0 1,0 0,1 0,1 1,0 0,1 1,0 1,0 -1,0 0,1 1,0 0,1 -1,0 1,0 -1,1 1,0 1,0 0,1 -1,0 0,1 -1,0 0,1 -1,1 0,1 0,1 0,1 -1,1 0,1 -1,0 0,1 -1,0 0,-1 0,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 -1,0 1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,-1 0,-1 -1,0 0,-1 -1,0 0,1 -1,0 1,0 0,1 0,1 0,1 -1,0 -1,0 -1,-1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 1,0 0,1 0,1 1,1 -1,0 0,1 0,1 0,1 -1,0 -1,0 0,1 1,0 -1,1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 1,1 1,0 0,-1 1,0 0,1 0,-1 1,1 1,0 1,0 0,-1 1,0 0,-1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 -1,0 1,0 0,-1 1,0 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,1 1,0 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,1 1,0 0,1 1,0 -1,0 0,1" id="path5158" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_34" style="fill:#ffff00">
+        <path d="m 272,345 1,0 -1,1 -1,-1 1,0" id="path5161" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 272,344 0,1 0,-1" id="path5163" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 269,312 0,-1 1,0 0,1 -1,0" id="path5165" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 256,310 1,0 -1,0" id="path5167" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 250,302 1,0 -1,0" id="path5169" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 256,294 0,1 0,1 0,1 1,1 0,1 1,0 0,1 1,0 0,1 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 1,1 0,1 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,1 0,1 1,1 0,1 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 0,1 0,-1 -1,0 0,-1 -1,0 1,0 0,-1 -1,0 1,0 -1,0 0,-1 -1,0 1,0 -1,0 0,-1 1,0 -1,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 -1,0 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0" id="path5171" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_35" style="fill:#ffff00">
+        <path d="m 464,27 1,0 0,1 1,1 0,1 0,1 0,1 1,0 0,-1 1,0 0,-1 1,0 0,1 1,0 0,-1 1,0 1,-1 0,1 1,0 1,0 0,1 1,0 0,-1 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,1 1,0 0,1 0,1 1,0 -1,0 0,1 1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,1 0,1 0,1 1,0 1,-1 0,1 0,-1 1,0 1,0 0,1 -1,0 0,1 0,-1 1,0 1,0 1,0 1,0 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,1 0,1 -1,0 0,1 0,-1 0,1 -1,-1 -1,0 0,1 0,1 -1,0 0,-1 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 -1,0 -1,1 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 0,1 0,1 -1,0 0,-1 -1,0 -1,0 1,1 0,1 1,0 0,1 0,1 0,1 -1,0 1,0 0,1 0,1 -1,0 -1,0 1,0 0,1 -1,0 -1,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,1 0,-1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 1,0 1,0 -1,1 0,1 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 0,1 -1,0 -1,0 -1,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 0,-1 -1,0 0,1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 1,0 0,-1 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 0,-1 -1,-1 1,0 0,-1 -1,0 1,0 1,-1 0,-1 1,0 0,-1 1,1 1,0 1,-1 1,0 0,1 1,0 1,0 0,-1 1,0 0,-1 0,-1 1,0 1,0 1,0 0,-1 1,0 1,0 1,0 0,-1 0,-1 1,0 1,1 0,1 1,0 0,1 1,0 1,-1 1,0 0,-1 1,0 0,1 1,0 1,-1 1,0 -1,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,0 1,0 0,1 0,-1 1,0 0,1 1,0 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 1,-1 0,-1 1,0" id="path5174" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_36" style="fill:#ffff00">
+        <path d="m 522,423 1,0 -1,0" id="path5177" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 522,422 -1,0 1,0 0,-1 0,1" id="path5179" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 563,419 0,1 -1,0 0,-1 1,0 0,1 0,-1" id="path5181" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 560,420 -1,0 0,-1 1,0 0,1" id="path5183" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 558,417 -1,0 1,0" id="path5185" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 530,412 1,0 -1,0" id="path5187" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 533,411 -1,0 0,-1 0,1 1,0" id="path5189" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 561,413 -1,1 -1,-1 -3,1 -2,0 -1,-1 2,-3 1,1 1,0 1,1 1,0 0,1 2,0" id="path5191" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 533,410 1,0 0,1 -1,0 0,-1 0,-1 0,1" id="path5193" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 530,407 1,0 0,1 -1,0 0,1 1,0 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,1" id="path5195" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 535,406 1,0 0,1 1,0 0,1 0,1 1,0 1,0 -1,0 0,1 1,0 0,1 0,1 -1,0 0,1 1,0 -1,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 1,0 1,0 1,0 1,0 0,-1 0,-1 1,0 -1,0 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 -1,-1 -1,0 -1,0 -1,0 0,-1 1,0 1,-1 0,1 1,0 1,0 0,1" id="path5197" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 506,397 0,-1 0,1" id="path5199" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 508,395 1,0 -1,0" id="path5201" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 468,394 1,0 -1,0" id="path5203" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 513,393 0,1 -1,-1 1,0" id="path5205" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 511,393 0,1 -1,0 0,-1 1,0" id="path5207" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 550,393 1,0 0,1 -1,0 0,-1 -1,0 1,0" id="path5209" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 532,391 -1,0 1,0" id="path5211" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 501,391 1,1 1,0 0,1 1,0 0,1 1,0 0,-1 0,1 1,0 0,1 0,1 1,0 -1,0 0,1 0,-1 -1,0 -1,0 -1,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 1,0" id="path5213" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 528,390 0,-1 0,1" id="path5215" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 519,387 1,0 0,1 0,1 0,-1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,-1 -1,1 -1,0 0,1 -1,0 -1,0 0,-1 1,0 0,-1 0,-1 1,0 -1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0" id="path5217" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 477,385 -1,0 1,0" id="path5219" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 531,385 0,-1 0,1" id="path5221" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 484,384 0,1 0,-1" id="path5223" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 479,384 -1,0 1,0" id="path5225" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 474,383 0,1 0,-1" id="path5227" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 475,384 1,1 1,0 0,1 1,0 0,-1 1,0 1,0 0,-1 1,0 1,1 0,-1 0,1 -1,0 0,1 1,0 -1,1 1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,-1 -1,0 -1,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,-1 1,-2 0,-1 1,-1 -1,0 1,-1 -1,0 1,-1 1,-1 1,1 1,0 0,1 0,1 1,1 -1,0 2,0 0,1 1,-1 0,1 1,-1 1,1 -1,-1 1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,1" id="path5229" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 478,387 0,1 1,0 1,1 1,0 -1,0 -1,-1 -1,0 0,-1" id="path5231" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 473,383 0,-1 1,1 -1,0" id="path5233" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 485,382 -1,0 1,0" id="path5235" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 487,382 1,0 0,1 1,0 0,1 0,1 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 1,0" id="path5237" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 485,382 0,-1 0,1" id="path5239" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 485,382 0,-1 0,1" id="path5241" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 528,382 1,1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 -1,1 0,1 0,1 1,0 0,1 0,-1 -1,0 0,1 1,0 -1,0 0,1 0,-1 -1,0 0,1 0,1 -1,-1 -1,-1 1,0 -1,0 0,-1 0,1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 1,0 0,-1 -1,0 0,1 -1,0 1,0 -1,-1 0,1 0,-1 0,1 0,-1 1,0 -1,0 1,0 0,-1 0,-1 0,-1 0,-1 0,1 0,-1 1,0 1,0 0,-1 1,1" id="path5243" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 485,381 0,1 0,-1" id="path5245" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 464,381 1,0 0,1 0,1 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 1,0" id="path5247" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 554,380 -1,0 1,-1 0,1" id="path5249" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 563,379 1,0 -1,0" id="path5251" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 556,379 1,0 -1,0" id="path5253" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 533,379 1,0 -1,0" id="path5255" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 540,378 1,0 -1,0" id="path5257" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 483,378 1,0 0,1 1,0 1,0 -1,1 0,-1 0,1 0,1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 1,0 -1,-1 1,0 0,-1 1,0 0,-1 1,0" id="path5259" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 549,378 -1,-1 1,0 0,1" id="path5261" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 550,377 -1,0 1,0" id="path5263" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 540,377 1,0 0,1 -1,0 0,-1" id="path5265" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 538,377 0,-1 0,1" id="path5267" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 542,377 0,-1 0,1" id="path5269" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 537,376 0,1 1,0 0,1 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,1" id="path5271" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 546,375 1,0 -1,0" id="path5273" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 562,375 0,-1 0,1" id="path5275" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 541,374 0,1 0,1 1,0 -1,0 0,1 0,-1 -1,0 0,1 0,-1 -1,0 1,0 0,-1 -1,0 0,1 0,-1 0,-1 1,0 -1,0 1,0 1,0" id="path5277" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 563,374 1,0 1,0 -1,0 -1,0 -1,0 1,0" id="path5279" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 493,373 0,1 -1,0 0,-1 1,0" id="path5281" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 548,373 1,0 0,1 1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 0,1 -1,0 0,-1 1,0 0,-1 0,1 1,0 0,-1 1,-1 0,1" id="path5283" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 544,372 0,1 -1,0 0,1 0,-1 -1,0 1,0 0,-1 1,0 0,-1 1,0 0,1 -1,0" id="path5285" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 569,370 1,0 0,1 1,0 0,1 1,0 1,0 1,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,1 0,1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,1 -1,1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 1,0 1,0 0,-1 1,0 0,-1 0,1 0,-1 1,0 0,1 0,-1 1,1 0,-1 0,1 1,0 0,-1 0,1 1,0 0,-1 0,-1 1,0 -1,0 -1,0 0,-1 1,-1 0,1 0,-1 1,0 1,0 1,-1 1,0 1,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 1,0 1,0 1,-1 0,1 0,-1" id="path5287" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 514,370 -1,0 1,0" id="path5289" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 507,370 0,1 -1,0 0,-1 1,0 0,-1 0,1" id="path5291" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 546,369 0,1 0,1 0,-1 0,1 -1,0 -1,0 0,-1 1,-1 1,0" id="path5293" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 516,368 0,1 0,-1" id="path5295" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 508,368 1,0 0,1 1,-1 0,1 1,0 -1,0 0,1 -1,0 -1,0 0,-1 0,-1" id="path5297" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 516,368 -1,0 0,-1 0,1 1,0" id="path5299" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 515,367 0,-1 0,1" id="path5301" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 523,367 0,-1 1,0 0,1 -1,0" id="path5303" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 487,363 1,0 0,1 1,0 1,0 0,1 1,-1 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 1,0 0,1 -1,1 0,1 -1,0 0,-1 0,1 0,1 -1,0 0,1 -1,0 1,0 -1,0 0,-1 1,0 -1,0 0,-1 -1,0 1,0 0,-1 -1,0 0,1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 -1,0 -1,0 1,-1 -1,0 0,-1 -1,-1 1,0 -1,0 0,-1" id="path5305" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 514,363 0,1 0,1 -1,0 0,1 1,0 -1,0 0,1 0,1 0,1 0,1 0,-1 0,1 1,0 -1,1 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 1,0 -1,0 0,-1 1,0 -1,0 0,-1 1,0 1,0 0,-1 0,-1 1,0 1,0 0,-1 0,1" id="path5307" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 530,363 0,-1 0,1" id="path5309" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 514,362 0,-1 0,1" id="path5311" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 515,361 -1,0 1,0" id="path5313" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 551,361 0,-1 0,1" id="path5315" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 551,360 0,-1 0,1" id="path5317" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 530,360 0,-1 0,1" id="path5319" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 550,359 1,0 0,1 -1,0 0,-1 -1,0 1,0" id="path5321" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 544,359 0,-1 0,1" id="path5323" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 523,356 1,0 -1,0" id="path5325" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 558,356 1,0 -1,0" id="path5327" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 557,356 1,0 0,1 1,0 0,1 -1,1 -1,0 0,-1 0,1 -1,0 0,-1 0,-1 -1,0 0,-1 0,1 1,0 1,0 0,-1" id="path5329" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 525,355 -1,0 1,0" id="path5331" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 526,355 1,0 -1,0" id="path5333" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 522,355 1,0 0,1 0,-1 -1,0 0,1 0,1 0,-1 0,1 -1,0 1,0 1,0 1,0 1,0 0,-1 0,1 -1,0 0,-1 1,0 -1,0 0,-1 1,0 1,0 0,1 0,-1 0,1 -1,0 0,1 1,0 -1,0 0,1 0,1 0,1 -1,0 0,1 1,0 0,1 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 1,-1 0,1 0,-1 1,0 0,-1 -1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 0,1 1,-1" id="path5335" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 525,355 0,-1 0,1" id="path5337" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 479,351 0,1 0,-1 1,0 0,1 1,0 0,1 0,1 0,1 0,1 1,0 -1,0 0,1 0,-1 0,1 0,-1 -1,0 0,1 0,1 -1,0 -1,0 1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 0,1 -1,0 -1,0 1,0 -1,0 0,1 0,-1 0,-1 1,0 0,-1 -1,0 1,0 0,-1 0,1 0,-1 1,0 0,-1 0,-1 1,0 1,0 0,-1 -1,0 1,0 1,0" id="path5339" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 541,351 0,1 1,0 0,1 0,-1 0,1 1,0 0,1 0,1 1,0 0,1 0,-1 0,1 0,1 0,1 0,1 0,1 1,0 0,-1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 -1,0 -1,0 0,1 0,-1 0,1 -1,0 0,1 -1,0 -1,1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 0,1 1,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,1 0,-1 1,-1 0,-1 1,-1 1,0 0,-1 1,0 1,0" id="path5341" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 486,348 -1,0 -1,0 0,-1 1,0 1,1" id="path5343" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 481,344 -1,0 1,0" id="path5345" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 501,338 0,1 0,-1" id="path5347" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 524,339 0,-1 0,1" id="path5349" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 477,338 -1,0 1,0" id="path5351" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 500,338 1,0 -1,0" id="path5353" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 524,337 0,-1 0,1" id="path5355" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 473,337 -1,0 1,-1 0,1" id="path5357" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 525,336 0,1 0,1 -1,0 1,-1 -1,0 0,-1 1,0 0,-1 0,1 0,-1 0,1" id="path5359" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 543,335 -1,0 1,0 -1,0 1,0" id="path5361" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 507,335 1,0 -1,0 0,-1 0,1" id="path5363" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 522,334 0,1 1,0 0,1 -1,0 1,1 1,-1 0,1 0,1 -1,0 0,-1 0,1 -1,0 0,1 0,-1 0,-1 1,0 -1,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,1 1,0 0,-1 0,-1 0,1" id="path5365" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 502,332 1,0 -1,0" id="path5367" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 538,332 -1,0 0,1 1,0 -1,0 0,-1 1,0" id="path5369" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 531,332 0,-1 0,1" id="path5371" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 537,332 0,-1 0,1 1,0 -1,0" id="path5373" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 475,331 0,1 0,1 0,1 1,0 -1,1 1,0 1,0 1,0 0,1 0,1 -1,1 0,-1 -1,0 0,1 1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 0,-1 0,1 -1,0 0,1 -1,0 -1,0 0,-1 1,0 -1,0 0,-1 1,0 -1,0 1,0 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 1,0 -1,0 1,0 0,-1 0,1 0,-1 0,-1 -1,0 1,0 -1,0 -1,0 1,0 0,-1 -1,1 0,-1 1,0 -1,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0" id="path5375" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 530,329 0,1 0,-1" id="path5377" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 530,330 0,-1 0,1" id="path5379" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 529,329 1,0 0,1 0,1 1,0 0,1 0,-1 0,-1 0,-1 1,0 1,0 0,1 1,0 0,1 1,0 1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 1,0 -1,0 -1,0 0,1 -1,0 -1,0 1,0 0,1 -1,0 -1,0 0,-1 0,1 -1,-1 -1,0 1,0 -1,1 0,-1 -1,-1 1,0 0,-1 0,1 1,0 0,-1 0,-1 0,-1 0,1 0,-1 0,1 0,-1 -1,0 0,-1 0,-1 1,0 1,0" id="path5381" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 502,328 0,1 1,0 1,0 1,1 0,1 1,0 0,1 0,1 -1,0 0,1 0,-1 0,1 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 -1,0 0,-1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 1,0 0,-1 -1,0 1,0 0,-1 -1,0 -1,0 0,-1 0,-1 1,0 -1,0 1,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 1,0 -1,0 0,-1 1,0 -1,0 0,-1 -1,-1 1,0" id="path5383" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 493,319 0,1 0,1 0,1 0,1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 0,-1 0,1 1,-1" id="path5385" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 518,319 0,-1 0,1" id="path5387" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 512,317 1,0 -1,0" id="path5389" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 507,317 0,-1 0,1" id="path5391" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 506,316 1,0 -1,0" id="path5393" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 510,316 0,1 1,-1 1,0 0,1 0,1 1,0 0,1 0,-1 1,0 1,0 1,0 0,1 0,-1 1,0 0,1 0,-1 0,1 1,0 1,0 1,0 1,0 0,1 1,0 1,0 -1,0 0,1 1,0 0,1 1,0 -1,0 0,1 0,1 -1,0 0,1 0,1 -1,1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 -1,0 0,1 1,0 0,-1 0,1 0,-1 1,0 1,0" id="path5395" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 471,316 1,0 -1,0" id="path5397" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 470,316 1,0 1,0 1,0 0,1 0,1 0,-1 0,1 1,0 0,1 -1,0 0,-1 0,1 0,1 0,1 -1,0 0,1 -1,1 0,1 -1,0 0,1 -1,0 -1,1 0,1 -1,0 0,1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,1 0,-1 -1,0 0,-1 1,0 -1,0 0,-1 1,0 -1,0 1,0 0,-1 0,-1 1,0 -1,0 1,0 0,-1 0,-1 1,0 0,1 0,-1 1,0 -1,0 1,-1 1,0 0,-1 0,1" id="path5399" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 458,312 1,0 -1,0 1,0 -1,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 0,1 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,1 0,1" id="path5401" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 494,304 -1,0 1,-1 0,1" id="path5403" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 496,292 0,1 0,1 0,1 1,0 0,-1 0,1 1,0 0,1 0,1 1,1 -1,0 1,0 0,1 1,0 1,0 1,0 1,0 1,0 1,0 0,1 0,-1 1,1 -1,0 1,0 0,1 0,1 -1,0 0,1 -1,1 1,0 1,0 -1,0 1,0 0,1 0,-1 0,1 1,0 0,1 -1,1 1,0 0,1 -1,0 0,1 -1,0 1,0 1,0 1,0 0,1 0,1 -1,0 1,0 -1,0 0,1 0,1 -1,0 0,1 0,1 0,1 -1,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,1 0,-1 0,1 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,1 0,-1 1,0 -1,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,1 0,-1 -1,0 0,-1 -1,0 0,1 0,1 -1,0 0,-1 0,-1 0,1 0,-1 -1,-1 1,0 -1,0 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 1,-1 1,0 0,-1 1,0 1,0 1,-1 1,0" id="path5405" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_37" style="fill:#ffff00">
+        <path d="m 266,248 0,-1 0,1" id="path5408" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 266,248 0,-1 0,1" id="path5410" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 263,246 -1,0 0,-1 0,1 1,0 0,-1 0,1" id="path5412" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 271,245 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,-1 1,-1 0,-1 1,0 0,-1 1,0 0,-1 0,1" id="path5414" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 272,241 1,0 0,1 -1,0 -1,0 0,1 -1,1 -1,0 -1,0 0,1 0,1 -1,0 0,-1 1,-1 -1,0 1,-1 0,-1 1,0 0,-1 1,0 1,0 1,0" id="path5416" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 262,239 1,0 -1,0 1,0 0,1 0,-1 1,0 -1,0 0,1 1,-1 0,1 -1,0 1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 -1,0 -1,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,1 1,0 0,-1 1,0 0,1 0,-1" id="path5418" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 260,238 -1,0 0,-1 1,0 0,1" id="path5420" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 260,238 0,-1 1,0 -1,1 0,-1 0,1" id="path5422" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 259,237 0,-1 0,1" id="path5424" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 260,236 -1,0 1,0 0,-1 0,1" id="path5426" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 258,227 -1,0 1,-1 0,1" id="path5428" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 259,228 0,-1 0,-1 0,1 0,1" id="path5430" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 258,226 1,0 0,1 -1,0 1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 -1,0 0,1 -1,1 0,1 1,0 0,-1 0,-1 1,0 0,1 0,1 -1,0 0,1 1,1 0,1 -1,1 0,-1 -1,0 0,-1 0,1 0,1 -1,-1 0,1 1,0 -1,0 0,1 -1,0 0,-1 0,1 -1,0 0,1 0,1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,1 -1,0 0,1 -1,1 1,0 -1,0 0,1 -1,0 0,1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 1,-1 0,-1 0,-1 1,0 1,0 1,0 0,-1 1,0" id="path5432" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 257,226 0,1 1,0 1,0 0,-1 -1,0 -1,0" id="path5434" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_38" style="fill:#ffff00">
+        <path d="m 389,279 -1,0 1,0" id="path5437" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 384,279 0,-1 0,1" id="path5439" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 391,278 1,1 -1,0 -1,0 0,-1 1,0" id="path5441" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 390,278 0,1 0,-1" id="path5443" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 372,270 1,0 -1,0" id="path5445" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 414,254 0,-1 0,1" id="path5447" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 381,249 1,-1 1,0 0,1 0,1 1,0 0,1 1,0 1,-1 0,1 1,0 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 1,0 1,-1 0,-1 0,-1 1,0 1,0 1,0 1,0 0,1 0,1 1,0 1,0 0,1 1,0 1,0 0,1 0,1 0,1 1,0 1,0 1,0 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 1,0 0,1 -1,0 -1,0 -1,0 0,1 1,0 -1,0 -1,1 0,1 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 0,1 0,-1 1,0 1,0 0,-1 0,-1 1,0 1,-1 1,0 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 0,-1 1,0 0,1 -1,0 0,1 -1,0 1,1 0,1 1,0 1,1 1,0 0,1 1,0 0,1 1,0 1,0 1,0 1,0 1,0 1,1 1,0 1,0 1,0 0,1 1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 -1,0 1,1 0,1 -1,0 -1,0 0,1 -1,0 -1,1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,-1 0,-1 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 0,1 0,1 0,1 0,1 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,1 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 -1,1 0,1 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 -1,0 -1,0 1,0 -1,-1 -1,0 -1,0 -1,0 -1,0 0,-1 0,1 -1,0 -1,0 0,1 1,0 1,0 1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 1,0 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 -1,0 -1,0 -1,-1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 0,1 -1,0 1,0 0,1 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 -1,-1 0,-1 -1,0 1,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 1,-1 0,-1 0,1 1,0 1,0 0,1 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 0,1 1,0 0,-1 1,0 1,0 0,1" id="path5449" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_39" style="fill:#ffff00">
+        <path d="m 555,523 0,1 0,-1 0,1 -1,0 -1,0 -1,0 0,-1 1,0 1,0 1,0" id="path5452" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 580,520 0,-1 0,1" id="path5454" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 580,518 1,0 0,1 -1,0 -1,0 0,-1 1,-1 0,1" id="path5456" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 579,518 0,-1 0,1" id="path5458" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 579,517 1,0 -1,0" id="path5460" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 580,517 0,-1 0,1" id="path5462" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 566,500 -1,0 1,0" id="path5464" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 563,500 -1,0 1,0 0,-1 0,1" id="path5466" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 555,500 0,-1 0,1" id="path5468" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 589,499 0,-1 0,1" id="path5470" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 589,498 1,0 -1,0" id="path5472" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 557,494 0,1 -1,0 1,-1" id="path5474" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 592,493 -1,0 0,-1 1,0 0,1 1,0 -1,0" id="path5476" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 582,489 0,1 -1,0 0,-1 -1,0 1,0 1,0 1,0 -1,0" id="path5478" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 551,489 1,0 1,0 1,0 1,0 1,0 1,0 -1,0 1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 1,0 0,1 -1,0 0,1 0,1 1,0 0,-1 0,-1 0,-1 1,0 0,1 0,1 0,-1 0,1 0,1 1,0 -1,0 -1,0 0,1 0,1 -1,1 0,1 0,1 0,1 0,1 0,1 1,0 0,1 0,1 0,-1 1,0 0,1 0,-1 0,1 1,-1 0,1 1,0 0,1 1,0 0,-1 0,1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 1,0 0,-1 1,1 0,-1 1,0 0,-1 1,0 1,0 1,0 0,-1 -1,0 1,0 0,-1 1,0 1,0 1,0 -1,0 1,-1 0,1 1,0 1,0 1,0 0,1 0,1 1,0 1,0 1,0 1,0 0,-1 1,0 0,-1 -1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 -1,0 1,0 0,-1 0,1 1,0 1,0 0,-1 1,0 -1,0 0,-1 1,0 -1,0 0,-1 1,0 1,0 0,1 -1,0 1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 0,1 1,0 0,1 0,1 0,1 0,1 1,0 1,0 1,0 0,1 -1,0 0,1 -1,0 0,-1 0,1 -1,0 0,1 0,1 1,0 0,1 -1,0 1,1 -1,0 0,1 -1,0 1,0 0,1 -1,1 0,1 -1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,-1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,1 -1,0 -1,0 0,1 -1,-1 0,1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,1 0,-1 0,-1 -1,-1 -1,0 -1,-1 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 1,0 -1,-1 1,0 -1,0 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,1 1,-1 1,0 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 0,1" id="path5480" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 582,487 0,1 1,0 -1,0 0,1 -1,0 0,-1 0,-1 1,0" id="path5482" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 582,486 -1,0 1,0 0,-1 0,1" id="path5484" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 545,469 0,1 0,-1" id="path5486" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_40" style="fill:#ffff00">
+        <path d="m 486,514 -1,0 0,1 -1,0 0,-1 1,0 1,0" id="path5489" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 493,483 1,0 0,1 1,0 1,0 1,0 0,1 1,0 0,-1 1,0 0,1 0,-1 1,0 0,1 1,0 0,-1 1,0 1,0 0,-1 1,1 1,0 0,1 1,-1 0,1 0,1 0,1 -1,0 -1,0 0,-1 0,1 -1,0 0,1 1,0 -1,1 1,0 0,1 0,1 -1,0 0,1 1,0 1,0 0,1 1,0 0,1 -1,0 0,1 1,1 -1,0 0,1 0,1 -1,0 0,1 0,1 1,0 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,-1 0,1 0,1 0,1 0,1 0,1 0,1 -1,0 0,1 1,0 0,1 -1,0 -1,-1 0,1 -1,0 -1,0 0,1 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 1,0 0,-1 -1,0 0,-1 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 0,-1 0,-1 1,-1 0,-1 -1,0 -1,0 0,-1 0,-1 1,0 1,0 0,-1 0,1 0,-1 1,0 1,-1 0,-1 -1,-1 0,-1 0,-1 1,0 1,0 1,0 0,-1 1,0 1,0 1,0 0,-1 0,1 1,0 0,-1 1,0 0,1 0,-1 0,1 1,0 0,-1 0,1 1,0 1,0 1,-1 1,0 1,0 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0" id="path5491" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_41" style="fill:#ffff00">
+        <path d="m 396,217 -1,0 1,0" id="path5494" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 453,216 0,-1 0,1" id="path5496" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 454,215 0,-1 0,1" id="path5498" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 447,213 0,-1 0,1" id="path5500" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 454,212 1,0 -1,0" id="path5502" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 455,211 0,-1 0,1" id="path5504" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 456,212 0,1 1,0 -1,0 1,0 0,1 -1,0 -1,0 1,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,1 0,1" id="path5506" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 428,209 1,0 0,1 -1,0 0,-1" id="path5508" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 448,209 0,1 0,-1 1,0 -1,0" id="path5510" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 420,209 -1,0 1,0" id="path5512" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 449,209 -1,0 1,0 0,-1 0,1" id="path5514" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 421,208 0,1 0,1 -1,-1 0,-1 1,0" id="path5516" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 427,208 1,0 -1,0" id="path5518" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 438,208 0,-1 1,0 -1,1" id="path5520" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 421,207 -1,0 1,0" id="path5522" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 422,207 -1,0 1,0" id="path5524" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 396,206 0,-1 1,0 0,1 -1,0 0,1 -1,0 0,-1 1,0 -1,0 1,0 0,-1 0,1" id="path5526" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 403,206 0,1 0,-1 1,0 0,-1 0,1 -1,0" id="path5528" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 422,205 0,1 0,-1" id="path5530" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 422,205 -1,0 1,0" id="path5532" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 428,205 1,0 -1,0" id="path5534" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 395,205 -1,0 0,-1 1,0 0,1" id="path5536" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 441,203 1,0 -1,0" id="path5538" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 427,203 1,0 0,1 1,1 1,1 1,0 1,0 0,1 1,0 0,1 1,0 -1,0 0,1 1,0 1,0 0,-1 1,1 1,-1 0,1 0,1 -1,1 0,1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,-1 0,-1 0,-1 1,0 0,1" id="path5540" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 419,203 1,0 0,1 1,0 0,1 0,1 0,-1 -1,1 -1,0 0,1 -1,0 0,1 1,0 -1,0 0,1 0,-1 -1,0 0,-1 0,1 -1,0 -1,-1 -1,0 0,1 0,-1 0,-1 1,0 0,-1 1,0 1,0 0,-1 0,-1 1,0 0,-1 0,1 1,0" id="path5542" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 450,201 -1,0 1,0" id="path5544" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 448,201 0,1 0,1 1,-1 0,1 0,1 -1,0 1,0 0,1 -1,0 0,1 0,-1 -1,0 0,1 0,-1 -1,0 0,-1 1,0 1,0 0,-1 0,-1 -1,0 1,0 0,-1 0,-1 0,1" id="path5546" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 447,197 0,1 -1,0 1,0 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 -1,0 0,1 0,-1 0,1 -1,0 -1,0 0,1 1,0 -1,0 0,1 -1,0 -1,0 0,-1 0,-1 1,0 0,1 0,-1 0,-1 0,1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 1,-1 1,0 0,-1 -1,0 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 0,1" id="path5548" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 452,195 -1,0 1,0" id="path5550" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 468,194 0,-1 0,1" id="path5552" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 468,194 0,-1 0,1" id="path5554" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 468,194 0,-1 0,1" id="path5556" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 457,192 1,0 0,1 -1,0 0,-1" id="path5558" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 456,192 1,0 -1,0" id="path5560" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 469,192 0,-1 0,1" id="path5562" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 454,192 0,-1 0,1" id="path5564" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 454,191 0,1 -1,0 0,1 1,0 -1,0 0,-1 1,0 0,1 0,-1 1,0 0,1 0,1 0,1 0,1 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 1,-1 1,0" id="path5566" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 468,193 -1,0 1,0 0,-1 0,-1 1,0 0,1 -1,0 0,1" id="path5568" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 460,188 0,1 0,1 -1,0 0,1 -1,0 -1,0 1,-1 1,0 0,-1 -1,0 1,0 0,-1 0,-1 1,-1 0,1 0,1" id="path5570" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 460,181 0,1 0,-1" id="path5572" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 388,175 1,0 0,1 1,0 1,0 0,1 1,0 1,1 0,1 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,1 0,1 1,1 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,-1 0,1 1,0 0,1 1,0 0,1 0,1 1,0 1,0 0,1 1,1 0,1 0,1 0,1 1,0 0,1 1,0 0,1 0,1 0,-1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 0,1 -1,0 0,1 0,-1 -1,1 0,-1 -1,0 0,1 0,-1 0,1 -1,0 1,0 1,1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,-1 -1,0 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 1,0 -1,0 0,-1 1,0 -1,0 1,0 0,-1 1,0 1,-1 0,1 0,1 1,0 -1,0 0,1 -1,0 0,1 0,1 1,-1 1,0 0,-1 1,0 1,0 -1,0 0,-1 1,0 0,1 1,0 0,-1 0,-1 0,-1 0,1 1,-1 0,1 1,0 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 1,0 1,0 -1,1 0,1 -1,0 1,0 0,1 1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,1 -1,0 -1,0 0,1 0,1 0,1 0,1 0,1 1,1 0,1 0,1 1,0 0,1 1,0 0,-1 1,0 -1,0 0,-1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,1 0,1 1,0 0,-1 0,-1 0,1 1,0 1,0 0,1 1,0 0,1 -1,0 1,1 0,1 0,1 0,1 -1,0 0,1 0,-1 -1,0 0,1 1,0 -1,0 0,1 1,0 1,0 1,-1 1,0 0,-1 1,0 1,0 0,1 -1,0 -1,1 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,-1 0,-1 -1,0 0,1 -1,0 -1,0 0,-1 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 -1,0 -1,0 0,-1 0,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,1 0,-1 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,1 -1,-1 1,0 0,-1 -1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 1,0 0,-1 1,0 1,1 1,0 0,-1 0,-1 1,0 1,0 1,-1 0,-1 0,-1 0,-1 1,-1 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 1,-1 1,0 1,0 0,-1 1,0 0,1 0,1 0,1 0,-1 1,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,1 1,0 1,0 0,1 0,-1 1,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 1,0 0,1" id="path5574" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_42" style="fill:#ffff00">
+        <path d="m 398,344 1,0 -1,0" id="path5577" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 394,340 0,-1 0,1" id="path5579" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 397,335 1,0 -1,0" id="path5581" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 389,334 0,-1 0,1 1,0 -1,0 -1,0 1,0 0,-1 0,1" id="path5583" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 385,329 1,0 0,1 1,0 -1,0 -1,0 0,-1" id="path5585" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 383,328 0,1 -1,0 0,-1 0,1 0,-1 1,0" id="path5587" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 362,304 1,0 1,-1 1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 0,1 1,0 0,-1 1,0 1,0 1,1 1,0 0,-1 0,1 1,0 1,0 0,1 1,0 1,0 1,0 0,-1 1,0 0,1 1,0 0,-1 1,0 0,1 -1,0 1,0 0,1 0,1 1,0 1,0 0,1 1,0 0,-1 0,1 1,0 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 0,1 0,-1 1,0 0,1 1,0 1,0 0,1 -1,0 1,1 0,1 1,0 0,-1 1,0 0,1 1,0 1,0 0,-1 0,1 1,0 1,0 0,-1 0,-1 1,0 0,1 1,0 1,0 0,-1 1,0 1,0 0,1 1,0 1,0 0,1 -1,0 1,0 -1,0 0,1 0,1 -1,0 0,1 1,0 0,1 0,1 0,1 0,1 1,0 1,1 0,1 -1,0 1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 1,0 0,1 0,1 1,0 0,-1 1,0 0,1 1,0 1,0 1,0 0,1 1,-1 1,0 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,1 0,1 -1,0 0,-1 0,1 1,0 -1,0 -1,0 0,1 1,0 0,1 1,0 1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 0,1 1,0 0,1 0,1 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 1,0 1,0 -1,-1 0,1 -1,0 -1,0 0,-1 0,-1 0,1 1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 1,0 0,-1 -1,0 1,0 0,-1 -1,0 0,-1 1,0 0,1 0,-1 1,0 1,0 -1,0 1,0 0,-1 0,-1 1,0 0,1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,1 0,-1 -1,0 -1,0 0,-1 -1,1 -1,0 -1,0 0,-1 1,0 -1,-1 -1,0 -1,0 0,1 -1,0 1,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 1,0 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 1,1 1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 0,1 0,-1 -1,0 -1,0 1,0 0,-1 -1,0 0,-1 0,-1 -1,0 1,0 -1,-1 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 0,1 0,1 0,1 1,0 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 -1,-1 -1,0 0,1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,1 -1,0 0,1 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 1,0 0,1" id="path5589" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_43" style="fill:#ffff00">
+        <path d="m 485,102 -1,0 1,0" id="path5592" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 494,95 -1,0 1,0 0,-1 0,1" id="path5594" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 486,84 0,1 1,0 0,1 0,-1 1,0 0,1 1,0 1,0 0,-1 0,1 1,0 -1,0 0,1 1,0 0,1 1,0 1,0 1,1 -1,0 -1,0 0,1 0,1 1,0 1,0 -1,1 1,0 0,1 -1,0 0,1 0,1 0,1 0,1 1,0 -1,1 0,1 0,-1 -1,0 0,1 -1,0 -1,0 0,1 -1,-1 0,1 -1,0 -1,0 0,1 -1,0 0,1 0,-1 0,-1 -1,0 0,1 0,-1 -1,0 1,0 -1,0 0,-1 0,1 0,-1 0,-1 -1,0 -1,-1 -1,0 -1,1 -1,0 0,-1 -1,0 0,-1 1,0 -1,0 0,-1 1,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,-1 0,-1 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1" id="path5596" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 489,82 1,0 0,1 0,-1 -1,0" id="path5598" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 469,80 0,-1 0,1" id="path5600" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 487,54 1,0 0,1 1,0 0,1 0,1 -1,0 -1,0 0,1 1,0 0,1 0,1 0,1 1,0 1,0 0,1 1,0 -1,0 1,0 1,0 0,1 1,0 -1,1 0,1 0,1 -1,0 0,1 0,1 0,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 0,1 1,1 0,1 0,1 1,0 0,1 0,1 0,1 0,-1 -1,0 1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 0,1 -1,-1 -1,0 1,0 0,-1 0,1 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 -1,-1 -1,-1 0,-1 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 1,0 -1,0 0,1 0,-1 -1,0 0,1 -1,0 1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 -1,0 0,1 0,1 1,0 0,-1 1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,1 -1,1 -1,0 0,1 -1,0 -1,0 -1,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,1 1,0 0,-1 0,-1 1,-1 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 1,1 1,0 1,0 0,-1 0,1 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,-1 0,-1 1,-1 -1,0 -1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,1 1,-1 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,-1 1,0 0,-1 -1,0 1,0 1,0 0,-1 0,-1 -1,0 1,0 0,-1 0,-1 1,0 1,0 1,-1 0,1 1,0 1,0 1,0 1,0 1,0 0,-1 1,0 1,0" id="path5602" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_44" style="fill:#ffff00">
+        <path d="m 296,286 1,0 0,1 1,0 0,1 1,0 1,0 0,1 -1,0 1,0 0,1 -1,0 1,0 0,1 0,1 -1,0 1,0 0,1 0,1 1,0 1,0 0,1 0,1 1,0 1,0 0,1 1,0 0,-1 0,1 1,0 1,0 0,-1 0,1 1,0 0,1 1,0 0,1 0,-1 1,0 0,1 0,-1 1,1 0,1 0,1 0,-1 1,1 0,1 0,1 1,0 0,-1 1,0 -1,0 1,-1 0,-1 1,0 1,-1 0,-1 1,0 0,-1 1,-1 1,0 1,0 0,-1 0,-1 1,0 0,1 1,1 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,1 0,1 -1,1 1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 0,1 0,1 1,0 0,-1 1,0 1,-1 0,1 0,-1 1,0 1,0 0,1 1,0 0,1 1,1 -1,0 1,0 0,1 1,0 0,1 1,0 1,1 0,1 1,0 1,1 -1,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,-1 0,1 -1,0 0,1 -1,0 0,-1 0,1 0,1 1,0 0,1 0,1 -1,0 -1,1 -1,0 -1,0 -1,0 -1,0 -1,-1 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,-1 0,-1 -1,0 0,-1 -1,-1 0,-1 -1,0 0,-1 -1,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,-1 0,-1 0,-1 0,1 0,1 -1,0 0,-1 -1,-1 -1,0 0,-1 -1,0 -1,-1 -1,0 -1,0 -1,0 0,1 0,1 1,-1 0,1 -1,0 -1,0 0,-1 1,0 0,-1 -1,0 0,-1 1,0 -1,0 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 -1,-1 -1,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,-1 -1,0 -1,0 -1,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 1,0 -1,-1 1,0 1,0 0,1 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,-1 0,-1 1,0 0,-1 1,-1 1,-1 0,-1 1,-1 0,-1 0,-1 1,0 0,-1 0,1 1,0 0,1 0,1 1,1" id="path5605" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_45" style="fill:#ffff00">
+        <path d="m 337,177 1,0 1,0 0,-1 1,0 1,0 1,0 0,1 1,0 0,-1 1,0 1,0 0,1 0,1 0,1 0,1 1,0 1,0 0,-1 1,0 0,1 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 1,0 1,0 0,1 -1,0 0,1 1,0 0,1 0,1 -1,0 -1,0 0,1 1,0 0,1 -1,0 -1,0 0,1 0,1 1,0 0,1 0,1 1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 -1,0 0,1 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,1 0,1 -1,0 -1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 0,-1 0,1 -1,0 0,1 0,-1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 1,0 -1,0 0,-1 0,-1 -1,0 -1,0 0,1 -1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 -1,1 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,-1 0,-1 -1,0 0,1 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 0,-1 0,1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,1 1,0 0,1 1,0 0,1 0,-1 1,0 0,-1 0,1 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 -1,0 1,0 0,1 0,1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 0,1 -1,0 1,0 0,1 1,0 1,0 0,-1 -1,0 0,-1 0,-1 0,1 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 1,0 0,1 1,0" id="path5608" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_46" style="fill:#ffff00">
+        <path d="m 271,215 0,-1 0,1 0,-1 0,1" id="path5611" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 272,214 -1,0 1,0" id="path5613" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 271,214 -1,-1 1,0 0,1" id="path5615" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 274,214 0,-1 0,1" id="path5617" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 272,214 0,-1 0,1" id="path5619" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 269,212 1,0 0,1 -1,0 0,-1 0,1 0,-1" id="path5621" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 266,212 1,0 -1,0" id="path5623" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 271,212 0,-1 0,1" id="path5625" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 266,211 0,1 1,0 0,1 -1,-1 0,-1" id="path5627" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 272,212 0,-1 0,1" id="path5629" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 265,210 0,1 1,0 -1,0 0,-1 -1,0 -1,1 1,-1 1,0" id="path5631" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 263,207 0,1 0,-1 0,1 1,0 -1,0 0,1 1,0 -1,0 1,0 1,0 -1,0 0,1 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 0,-1 1,0" id="path5633" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 264,207 1,0 -1,0 0,1 -1,0 0,-1 1,0" id="path5635" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 286,176 0,1 1,0 0,1 0,1 1,0 1,0 0,1 -1,0 0,1 1,0 0,1 0,1 1,0 0,1 0,-1 1,0 0,1 1,0 0,1 0,1 1,0 0,1 -1,0 1,0 -1,0 0,1 1,0 1,0 0,1 -1,0 1,0 1,0 1,0 1,0 1,0 1,0 0,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 0,1 -1,0 0,1 1,0 0,1 0,1 0,-1 1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,1 -1,0 -1,-1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 1,0 0,1 -1,0 0,1 0,1 1,0 0,1 -1,0 -1,0 1,0 1,0 -1,0 0,-1 0,1 -1,0 0,1 0,1 0,-1 0,-1 0,1 0,-1 -1,0 0,1 -1,0 0,1 1,0 -1,0 0,1 0,-1 0,1 0,-1 0,1 -1,0 0,-1 -1,0 -1,0 0,1 0,-1 0,1 0,-1 1,0 -1,0 -1,0 1,-1 -1,0 0,1 0,-1 0,-1 -1,0 0,1 0,-1 0,1 -1,0 1,0 0,-1 -1,0 1,0 -1,0 1,0 -1,0 0,-1 -1,-1 0,1 0,-1 0,1 0,-1 -1,0 0,-1 -1,0 0,1 1,0 -1,0 1,1 -1,0 0,-1 0,1 0,-1 0,1 -1,0 0,1 0,1 0,-1 -1,0 1,0 -1,0 1,0 0,-1 -1,0 1,0 0,-1 -1,0 0,1 0,-1 -1,0 0,-1 1,0 -1,0 -1,1 1,0 -1,0 0,-1 1,0 0,-1 1,0 -1,0 0,-1 -1,-1 0,1 0,-1 0,-1 0,-1 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,1 1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,1 1,0 0,1 0,1 1,0 1,-1 1,-1 0,-1 0,-1 0,1 1,0" id="path5637" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_47" style="fill:#ffff00">
+        <path d="m 450,110 0,1 1,1 0,1 0,1 1,0 0,1 1,0 0,1 0,1 1,0 1,0 1,0 1,0 0,1 1,0 0,-1 1,0 0,1 1,0 0,1 0,1 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,1 1,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,1 0,1 0,1 0,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 -1,-1 0,-1 0,-1 -1,-1 -1,0 0,-1 -1,-1 0,-1 -1,0 -1,0 -1,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 1,0 -1,0 1,-1" id="path5640" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_48" style="fill:#ffff00">
+        <path d="m 379,104 0,-1 0,1" id="path5643" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 379,103 0,-1 0,1" id="path5645" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 389,97 -1,0 1,0" id="path5647" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 408,70 0,1 0,1 0,1 1,0 0,1 0,-1 1,0 1,0 0,1 1,0 0,1 0,1 0,-1 1,0 0,1 0,1 0,1 0,1 1,0 0,1 1,0 1,0 1,0 1,0 0,1 0,1 1,0 1,0 0,-1 1,0 1,0 0,1 1,0 0,1 0,1 1,0 0,1 1,0 1,0 1,0 1,0 1,1 1,0 1,0 1,0 1,0 1,0 1,0 1,0 0,1 0,1 -1,0 -1,0 0,1 -1,1 0,1 0,1 -1,0 0,1 0,1 1,0 0,1 1,0 1,0 0,1 1,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 -1,0 0,1 0,-1 0,-1 -1,0 0,1 -1,0 -1,0 0,1 1,0 -1,0 0,1 1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,1 -1,0 -1,0 0,1 -1,0 0,1 0,1 0,1 0,1 1,0 -1,0 0,1 -1,0 0,1 -1,1 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 -1,0 -1,0 0,1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 1,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 1,0 1,0 1,0 1,0 1,0 1,0 1,0 0,-1 1,0 1,-1 1,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 0,-1 -1,-1 -1,0 1,0 -1,0 -1,0 -1,0 -1,1 -1,0 -1,0 0,1 1,0 1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 -1,1 0,-1 -1,0 -1,0 0,1 -1,0 0,1 1,0 0,1 0,-1 -1,0 0,1 1,1 -1,0 1,0 -1,0 0,-1 0,1 0,1 -1,-1 0,1 -1,0 0,-1 0,-1 0,1 -1,0 0,-1 1,0 -1,0 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 -1,0 0,-1 0,-1 0,-1 1,0 0,-1 1,0 1,0 1,0 1,-1 -1,0 0,-1 -1,-1 0,-1 0,-1 -1,0 -1,0 -1,0 1,0 0,-1 0,-1 0,1 1,0 1,0 0,1 1,-1 -1,0 1,0 0,1 0,-1 1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 1,0 1,0 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 1,0 0,1 1,-1 0,1 1,0 -1,0 0,1 0,1 1,0 0,1 0,1 1,0 1,0 0,1 0,-1 1,0 1,0 0,-1 0,-1 1,0 1,0 1,0 0,1 1,0 1,0 0,-1 1,0 0,1 0,-1 1,1 0,-1 1,1 1,0 1,0 -1,0 0,-1 1,0 1,0 0,-1 0,-1 -1,0 1,0 1,0 0,-1 1,0 1,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,0 1,0 1,0 0,-1 1,0 0,1 1,0 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,1 1,0" id="path5649" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_49" style="fill:#ffff00">
+        <path d="m 514,69 -1,0 1,0" id="path5652" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 514,69 -1,0 1,0" id="path5654" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 501,39 0,1 1,0 0,1 1,0 1,0 1,0 0,1 1,0 1,0 1,0 1,0 0,1 1,1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 1,0 -1,1 1,0 1,0 0,1 1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 0,-1 0,-1 -1,0 0,-1 -1,0 1,0 -1,0 0,-1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 0,1 1,0 0,1 0,1 1,0 1,1 1,0 0,1 0,1 0,1 1,0 1,1 0,1 1,0 0,1 -1,0 0,1 0,-1 -1,0 1,0 0,-1 -1,0 0,1 -1,0 1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,1 0,1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,-1 -1,0 0,-1 -1,0 -1,0 1,0 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,-1 -1,1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,-1 1,0 1,0 0,1 1,0 0,-1 0,-1 0,-1 1,0 1,0 0,1 1,0 1,0 0,1 0,-1 1,-1 1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 1,0 0,1 1,0 0,-1 0,-1 1,0 1,1 0,-1 0,1 0,-1 1,0 0,-1 0,-1 1,0 0,1 1,0 1,0 0,-1 1,0 1,0 0,1 1,0 0,-1 0,-1 0,-1 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0 1,0" id="path5656" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_50" style="fill:#ffff00">
+        <path d="m 621,486 1,0 -1,0" id="path5659" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 622,486 0,-1 0,1" id="path5661" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 621,481 0,-1 0,1" id="path5663" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 622,481 -1,0 1,0 0,-1 0,1" id="path5665" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 632,480 1,0 -1,0 0,1 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 0,1 0,-1 -1,0 1,-1 0,-1 1,0 0,-1 1,0 0,-1 1,-1 1,0 1,0 1,0 1,0 0,-1 1,0 1,0" id="path5667" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 632,480 1,0 -1,0" id="path5669" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 623,479 1,1 0,1 -1,0 0,-1 -1,0 1,0 0,-1" id="path5671" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 642,479 -1,0 1,0" id="path5673" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 625,479 1,-1 0,1 -1,0" id="path5675" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 643,478 -1,0 1,0" id="path5677" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 598,452 1,0 -1,0 1,0 -1,0" id="path5679" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 644,450 1,0 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 1,0 1,0 0,1 1,1 1,0 0,1 0,1 0,-1 0,1 1,0 0,1 -1,0 0,1 -1,0 1,0 0,1 1,0 1,0 0,1 0,1 0,1 -1,0 0,-1 -1,0 -1,1 0,1 0,-1 -1,0 0,1 0,1 -1,0 0,1 0,1 0,-1 1,0 0,1 -1,0 0,1 -1,0 0,1 0,-1 1,0 -1,-1 0,-1 -1,0 0,1 -1,0 0,-1 -1,-1 -1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 -1,-1 0,-1 1,0 0,-1 1,0 0,-1 0,1 0,-1 1,0 0,-1 1,0 -1,0 1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 -1,0 1,0 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,1 0,-1 1,0 1,0 -1,0 1,0 0,-1 1,0 -1,0 0,-1 1,0" id="path5681" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 585,449 -1,0 0,1 0,-1 1,0" id="path5683" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 620,448 0,-1 0,1" id="path5685" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 620,447 -1,0 0,-1 1,0 0,1 0,-1 0,1" id="path5687" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 619,446 1,0 -1,0" id="path5689" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 676,445 1,0 0,1 -1,0 0,-1" id="path5691" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 644,445 1,0 0,1 0,1 0,1 0,1 0,1 0,-1 -1,1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1" id="path5693" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 595,436 0,-1 0,1" id="path5695" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 594,433 0,1 1,0 -1,0 0,-1 -1,0 1,0" id="path5697" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 789,423 -1,0 1,-1 0,1" id="path5699" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 670,421 1,0 -1,0" id="path5701" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 668,421 -1,0 0,-1 1,0 0,1" id="path5703" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 672,420 1,0 -1,0" id="path5705" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 781,420 1,0 -1,0" id="path5707" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 787,420 0,-1 0,1" id="path5709" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 780,420 1,0 -1,0 0,-1 0,1" id="path5711" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 786,419 1,0 -1,0 0,1 1,0 -1,0 1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 1,0 0,-1 0,-1 1,0" id="path5713" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 666,418 0,1 1,0 0,1 0,1 -1,0 0,-1 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 0,-1 0,-1 1,0 1,0 1,0 1,0 0,-1 1,0" id="path5715" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 670,418 0,-1 0,1" id="path5717" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 669,417 0,1 0,-1" id="path5719" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 615,417 -1,0 1,0" id="path5721" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 670,417 1,0 -1,0" id="path5723" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 676,418 -1,0 1,-1 0,1" id="path5725" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 614,417 0,-1 0,1" id="path5727" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 673,416 0,1 0,1 -1,-1 0,1 0,-1 0,1 0,-1 0,-1 0,1 -1,0 0,-1 1,0 0,-1 0,1 0,-1 1,0 0,1" id="path5729" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 610,412 1,0 0,1 0,1 -1,0 -1,0 0,-1 1,0 -1,0 0,-1 1,0" id="path5731" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 657,410 0,-1 1,0 -1,0 0,1" id="path5733" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 605,408 0,-1 1,0 0,1 -1,0" id="path5735" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 607,407 -1,0 1,0" id="path5737" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 653,405 0,-1 0,1" id="path5739" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 647,402 -1,0 0,-1 1,0 0,1" id="path5741" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 650,402 1,0 0,-1 0,1 0,1 1,0 0,1 1,0 -1,0 1,1 0,1 0,1 1,0 0,-1 0,1 1,0 0,-1 1,0 0,1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 0,-1 0,1 -1,0 0,-1 0,-1 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,1 -1,0 1,0 1,0 1,0 0,-1 0,-1 0,1" id="path5743" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 703,402 1,0 0,1 -1,0 0,1 0,1 0,1 1,0 0,1 0,1 -1,0 -1,1 0,1 0,1 1,0 -1,0 1,0 -1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 0,1 0,1 0,-1 0,1 1,0 -1,0 0,1 -1,0 0,1 0,1 -1,0 1,0 0,1 -1,0 1,0 -1,0 0,1 -1,0 -1,0 0,1 0,1 -1,0 0,1 0,1 0,1 -1,0 0,1 1,0 1,0 0,1 0,1 0,-1 -1,1 0,1 1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 -1,1 -1,0 0,1 -1,0 0,1 -1,1 0,1 -1,0 0,1 0,1 -1,1 0,1 -1,0 0,1 0,1 -1,0 0,-1 0,1 -1,0 0,1 1,0 -1,0 0,-1 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 -1,1 -1,0 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 0,1 1,-1 0,1 0,-1 1,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 1,-1 1,0 0,-1 1,0 1,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 1,0 1,0 1,0 1,0 0,-1 1,0 0,-1 0,-1 1,0 0,1" id="path5745" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 628,400 0,1 -1,0 0,-1 1,0" id="path5747" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 597,398 0,1 1,0 -1,0 1,0 0,1 -1,0 0,-1 0,-1" id="path5749" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 594,399 0,-1 0,1" id="path5751" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 593,398 1,0 -1,1 0,-1" id="path5753" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 596,398 -1,0 1,0" id="path5755" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 578,398 0,1 0,1 0,-1 0,-1 0,1 -1,0 0,-1 1,0" id="path5757" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 583,398 -1,0 1,0 -1,0 0,-1 1,0 0,1" id="path5759" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 593,397 1,0 -1,0" id="path5761" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 681,397 1,0 -1,0 0,1 -1,0 0,-1 1,0" id="path5763" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 593,397 0,1 0,-1 -1,0 1,0" id="path5765" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 584,396 1,0 -1,0" id="path5767" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 634,395 0,1 -1,0 0,-1 1,0" id="path5769" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 591,395 -1,-1 1,0 0,1" id="path5771" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 593,394 -1,0 1,0" id="path5773" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 631,394 1,0 -1,0 1,0 0,1 -1,0 0,-1" id="path5775" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 590,394 -1,0 0,-1 1,0 0,1" id="path5777" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 675,393 -1,0 1,0" id="path5779" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 640,392 1,0 0,1 0,1 1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 1,0 1,0 1,0" id="path5781" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 592,391 1,0 0,1 0,-1 0,1 1,0 1,1 1,1 1,0 0,1 1,1 -1,0 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 0,1 0,1 0,-1 -1,0 0,1 0,-1 -1,0 0,1 0,-1 -1,0 0,1 -1,0 0,1 1,0 -1,0 1,0 0,1 -1,0 0,1 1,0 0,1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 1,0 -1,0 1,0 0,-1 -1,0 1,0 -1,0 0,-1 0,-1 1,0 0,1 0,-1 1,0 1,0 0,1 1,0 1,0 0,1 -1,0 1,0 1,0 0,-1 0,-1 0,1 1,-1 1,0 0,1 0,-1 0,-1 0,-1 1,0 -1,0 -1,0 0,1 0,-1 0,-1 -1,0 1,0 0,-1" id="path5783" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 676,390 0,-1 0,1" id="path5785" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 678,389 0,1 1,0 0,1 0,-1 1,0 1,-1 0,1 -1,0 0,1 1,-1 1,0 0,1 0,1 -1,0 1,0 -1,1 -1,0 1,0 1,0 0,1 -1,0 0,1 1,0 -1,0 0,1 -1,0 -1,0 0,-1 1,0 0,1 0,-1 0,-1 -1,0 -1,0 -1,0 0,-1 1,0 0,-1 -1,0 0,1 -1,0 -1,0 0,-1 0,-1 0,1 1,0 0,-1 1,0 0,-1 -1,0 1,0 0,-1 1,0 1,-1 0,1 -1,0" id="path5787" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 637,389 0,-1 0,1" id="path5789" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 637,387 0,1 -1,0 0,1 0,1 -1,0 0,-1 0,-1 1,0 1,-1" id="path5791" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 639,387 1,0 -1,0" id="path5793" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 680,387 1,0 0,1 -1,0 -1,0 -1,0 1,-1 1,0" id="path5795" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 579,373 0,-1 0,1" id="path5797" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 578,372 1,0 -1,0" id="path5799" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 624,373 0,-1 -1,0 1,0 0,1" id="path5801" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 579,372 -1,0 1,0" id="path5803" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 624,371 0,-1 1,0 -1,0 0,1" id="path5805" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 638,370 0,-1 0,1" id="path5807" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 646,371 1,0 0,1 1,0 0,-1 1,0 0,1 0,1 1,0 -1,1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 -1,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,1 0,1 1,0 0,1 -1,0 0,1 0,1 0,1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 1,0 1,0 -1,0 1,0 1,0 1,-1 0,-1 1,0 0,-1 1,-1 0,-1 1,0 0,-1 1,0 1,-1 1,0 1,-1 1,0 0,-1 1,0 1,0 1,0 1,-1 1,0 1,0 1,-1 1,0 0,-1 0,1 0,1 1,0" id="path5809" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 624,369 1,0 -1,0" id="path5811" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 634,367 0,1 0,-1" id="path5813" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 632,367 -1,0 1,0" id="path5815" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 636,367 1,0 1,0 0,1 -1,0 0,1 1,0 1,0 -1,0 -1,0 -1,0 0,-1 0,1 0,-1 -1,0 1,0 -1,0 0,-1 1,0 0,-1 0,1" id="path5817" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 587,366 0,1 -1,0 -1,0 0,-1 1,0 1,0" id="path5819" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 595,365 1,0 -1,0" id="path5821" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 590,365 1,0 -1,0" id="path5823" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 621,364 0,-1 0,1" id="path5825" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 596,364 1,0 1,0 0,1 -1,0 -1,0 1,0 -1,0 -1,0 -1,0 -1,0 1,0 1,0 -1,0 0,-1 1,0 1,0 0,-1 0,1" id="path5827" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 596,363 -1,0 1,0" id="path5829" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 623,363 1,1 -1,0 0,1 0,-1 -1,0 -1,-1 1,0 1,0" id="path5831" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 624,362 -1,0 1,0 0,-1 0,1" id="path5833" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 633,359 1,0 -1,0 -1,0 1,0" id="path5835" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 622,358 0,1 0,-1 0,1 1,0 1,0 1,0 0,1 0,-1 1,0 -1,0 1,1 1,0 0,1 1,0 -1,0 -1,0 1,0 0,1 1,0 0,1 0,-1 0,1 0,1 1,-1 -1,0 1,0 1,0 1,0 0,1 0,1 -1,0 1,0 -1,1 0,-1 0,1 1,0 -1,0 0,1 1,0 1,0 -1,1 -1,-1 -1,1 0,-1 0,1 -1,-1 -1,0 0,1 1,0 -1,0 1,1 -1,0 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 1,-1 0,-1 0,-1 0,-1 1,0 -1,0 0,-1 1,0 0,1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,1 1,0 -1,0 0,-1 0,1 0,-1 -1,0 0,-1 -1,0 0,-1 1,0" id="path5837" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 621,358 0,-1 0,1" id="path5839" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 632,358 0,-1 0,1" id="path5841" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 622,357 -1,0 1,0" id="path5843" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 622,356 0,-1 0,1" id="path5845" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 613,350 1,0 -1,0" id="path5847" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 616,350 1,0 1,0 1,0 0,1 -1,1 1,0 1,0 0,1 -1,0 1,1 1,0 0,1 0,1 0,1 0,-1 -1,0 0,1 -1,0 -1,0 0,-1 1,0 0,-1 0,-1 0,1 -1,0 -1,0 0,1 1,0 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 0,1 1,-1 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 0,-1 1,0 1,0 -1,-1 1,0 0,1" id="path5849" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 615,349 1,0 -1,0" id="path5851" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 617,349 0,-1 0,1" id="path5853" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 615,349 -1,0 0,1 0,-1 0,-1 1,0 0,1" id="path5855" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 617,348 -1,0 1,0" id="path5857" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 610,348 -1,0 1,0" id="path5859" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 613,345 0,-1 0,1" id="path5861" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 612,344 1,0 -1,0" id="path5863" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 612,344 -1,0 1,0" id="path5865" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 616,343 -1,0 1,0" id="path5867" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 614,344 0,-1 0,1" id="path5869" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 615,343 1,0 -1,0" id="path5871" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 602,343 0,-1 0,1" id="path5873" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 604,342 0,-1 0,1" id="path5875" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 615,341 1,0 -1,0" id="path5877" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 633,341 0,1 0,-1 0,1 0,1 1,0 -1,0 -1,0 0,-1 0,-1 1,0" id="path5879" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 603,341 0,-1 1,0 0,1 -1,0" id="path5881" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 616,341 0,-1 0,1" id="path5883" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 612,341 0,-1 0,1 1,0 0,1 1,0 0,-1 1,0 0,1 0,1 0,1 -1,0 0,-1 0,1 -1,-1 0,-1 0,1 1,0 0,-1 -1,0 0,1 -1,0 0,-1 -1,0 -1,-1 0,-1 0,1 1,0 0,-1 1,0 0,1" id="path5885" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 610,340 0,-1 0,1" id="path5887" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 601,339 1,0 -1,0" id="path5889" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 613,338 1,0 -1,0" id="path5891" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 612,338 0,-1 0,1" id="path5893" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 603,337 1,0 -1,0" id="path5895" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 612,337 1,0 0,1 0,-1 -1,0" id="path5897" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 610,337 0,1 -1,0 0,-1 1,0 -1,0 1,0" id="path5899" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 611,337 0,-1 0,1" id="path5901" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 610,337 0,-1 1,1 -1,0" id="path5903" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 602,336 0,1 1,0 0,1 1,1 0,1 0,-1 -1,0 -1,0 0,-1 -1,1 1,0 -1,0 0,1 0,1 -1,-1 0,1 1,0 1,1 -1,0 0,1 1,0 0,1 -1,0 -1,0 0,-1 1,0 -1,0 -1,0 1,0 0,-1 -1,0 1,0 -1,-1 1,0 0,-1 -1,0 1,0 0,-1 0,1 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 0,1 1,0 1,0 0,-1 -1,0 1,0" id="path5905" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 610,334 1,0 0,1 1,0 0,1 0,-1 0,1 1,0 0,1 0,-1 -1,1 0,-1 0,1 -1,0 0,-1 1,0 -1,0 0,-1 -1,0 0,-1 1,0 -1,0" id="path5907" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 627,329 1,0 -1,0" id="path5909" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 626,329 1,0 0,1 -1,-1 0,1 0,1 -1,0 0,-1 0,1 -1,0 0,-1 0,-1 -1,0 1,0 -1,0 0,-1 1,0 0,1 1,0 1,0 -1,0 0,-1 0,1 1,0" id="path5911" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 626,329 0,-1 1,0 0,1 -1,0" id="path5913" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_51" style="fill:#ffff00">
+        <path d="m 383,44 1,0 1,0 1,0 1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 -1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,-1 0,1 1,0 1,0 0,-1 1,0 1,0 0,-1 1,0 0,1 0,1 1,0 0,1 1,0 1,0 0,1 0,1 1,0 1,0 1,0 0,1 -1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,-1 0,1 0,-1 1,0 0,1 1,0 0,1 1,0 0,1 -1,1 0,1 0,1 1,0 1,0 0,1 1,1 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 0,1 0,1 0,1 -1,1 -1,0 0,1 -1,0 -1,0 1,0 0,1 0,1 -1,0 -1,0 0,1 1,0 -1,0 -1,0 -1,-1 0,1 -1,-1 0,1 0,-1 -1,0 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 0,1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 -1,0 0,-1 -1,1 0,-1 -1,0 -1,0 0,1 1,0 0,1 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 0,-1 0,1 -1,0 0,1 0,1 -1,0 0,-1 0,-1 -1,0 -1,-1 -1,-1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 -1,0 -1,-1 -1,0 -1,0 0,1 -1,0 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 1,0 0,1 0,-1 1,1 0,-1 0,-1 1,0 0,-1 1,0 -1,0 0,-1 0,-1 1,0 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 1,0 1,0 1,0 1,0 0,1 1,0 1,0 1,0 1,0 1,0 1,0 0,-1 1,0 1,0 1,0 0,1 1,0 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 1,0 1,-1 0,1 0,1 1,0 0,1 1,0 0,1 0,-1 1,0 1,0 0,-1 0,-1 0,-1 1,-3 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 1,0 0,-1 1,0" id="path5916" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_52" style="fill:#ffff00">
+        <path d="m 324,390 0,-1 0,1" id="path5919" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 323,388 0,-1 0,1 1,0 -1,0" id="path5921" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 312,385 0,-1 0,1" id="path5923" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 316,384 1,0 0,1 0,1 -1,0 0,1 1,0 -1,0 0,-1 -1,0 0,-1 0,-1 1,-1 0,1" id="path5925" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 312,383 1,0 -1,0" id="path5927" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 315,384 -1,0 0,-1 1,0 0,1" id="path5929" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 313,381 1,0 -1,0 0,1 0,1 -1,0 0,1 0,-1 0,1 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 1,0 0,1" id="path5931" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 344,375 0,-1 0,1" id="path5933" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 311,372 -1,0 0,-1 0,-1 0,-1 1,1 0,1 0,1" id="path5935" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 304,361 0,1 0,-1 -1,0 0,-1 1,0 0,1" id="path5937" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 328,331 1,0 -1,0 1,0 0,1 0,-1 1,0 0,1 0,1 0,-1 0,1 1,0 -1,0 0,1 1,0 0,1 -1,0 0,1 0,1 -1,0 -1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 1,0 0,1 0,1 0,1 0,1 1,0 0,1 1,0 1,0 0,1 0,1 1,0 1,0 0,1 1,1 0,1 1,0 0,1 0,1 1,0 1,0 0,1 0,1 1,0 1,0 0,-1 0,-1 1,0 0,1 0,-1 1,0 1,0 0,1 0,1 1,0 0,1 0,1 1,0 0,1 0,-1 0,1 1,0 -1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 1,0 1,0 1,0 0,1 1,0 0,1 0,1 1,0 0,1 0,1 0,1 0,1 0,1 0,1 1,0 0,1 0,1 0,1 -1,0 1,0 0,1 0,1 1,0 0,1 0,1 1,0 0,1 0,1 0,1 -1,0 0,1 -1,0 0,1 1,0 -1,0 0,1 0,1 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 -1,-1 1,0 -1,0 0,-1 1,0 -1,0 0,-1 -1,0 1,0 -1,0 0,-1 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 1,0 0,-1 0,-1 -1,0 -1,0 -1,0 1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 -1,0 0,1 0,1 1,0 -1,0 0,1 0,1 0,1 0,1 0,1 0,1 0,1 -1,0 1,1 0,1 0,1 0,1 0,1 1,0 1,0 0,1 -1,0 -1,0 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,-1 0,-1 -1,-1 0,-1 -1,1 0,-1 0,-1 -1,0 0,-1 1,0 -1,0 0,-1 -1,0 0,1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 0,-1 0,1 -1,0 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 1,-1 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 -1,0 1,0 0,-1 -1,0 0,1 0,1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 -1,0 0,-1 1,-1 -1,0 0,-1 1,0 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 0,-1 1,-1 0,-1 1,0 0,-1 1,0 1,0 0,-1 1,0 0,-1 1,0 1,-1 0,-1 0,-1 1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 0,-1 0,-1 1,0 1,0 1,0 1,0 1,0 1,0 0,-1 1,1 1,0 1,0 1,0 1,0 1,-1 1,0 0,-1 0,-1 -1,0 0,-1 0,-1 0,1 1,0 0,-1 1,0 0,-1 0,1 1,0 0,-1 1,0 0,-1 1,0 0,1 -1,0 0,1" id="path5939" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_53" style="fill:#ffff00">
+        <path d="m 232,184 1,0 -1,0" id="path5942" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 232,183 0,1 0,-1 0,1 -1,0 0,-1 1,0" id="path5944" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 232,184 0,-1 0,1" id="path5946" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 232,177 -1,0 1,0" id="path5948" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 228,176 0,-1 0,1" id="path5950" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 228,172 0,-1 0,1" id="path5952" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 239,154 1,0 1,0 0,1 1,0 0,1 0,-1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 1,0 0,1 0,1 0,1 -1,0 1,0 0,1 1,0 0,1 0,1 0,1 1,0 0,1 0,1 -1,0 0,1 -1,0 1,0 0,1 0,1 0,1 0,1 0,1 -1,0 0,1 1,0 1,0 1,0 -1,0 0,1 1,0 1,0 1,0 0,1 1,0 0,-1 1,0 0,1 0,1 0,1 0,1 0,1 0,1 1,0 0,1 0,1 0,1 1,0 -1,0 0,1 1,0 0,1 0,1 0,1 0,1 0,1 1,1 0,-1 0,1 0,1 0,1 0,1 -1,-1 0,-1 -1,0 0,-1 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 0,1 0,1 0,-1 0,1 -1,-1 -1,0 0,1 -1,0 -1,0 0,1 0,-1 -1,0 0,1 0,-1 0,-1 -1,0 1,0 0,-1 -1,0 -1,0 -1,0 0,-1 0,-1 -1,0 1,0 -1,0 0,-1 -1,0 0,-1 -1,1 -1,0 -1,1 0,1 -1,0 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 1,0 -1,0 0,-1 -1,0 -1,0 1,-1 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 0,1 1,0 0,-1 0,1 1,0 0,-1 0,1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 0,-1 -1,0 0,-1 1,0 1,1 0,-1 0,-1 0,-1 -1,0 -1,0 0,1 0,-1 -1,0 -1,0 -1,0 -1,0 1,0 1,0 0,-1 0,1 0,-1 -1,0 -1,0 -1,0 1,-1 0,-1 1,0 0,-1 0,-1 -1,0 0,-1 1,0 1,0 0,-1 0,-1 0,-1 -1,0 -1,0 -1,-1 -1,0 0,-1 0,1 -1,0 0,-1 1,0 -1,0 0,-1 -1,0 -1,-1 -1,0 0,1 -1,0 0,-1 -1,0 1,0 0,-1 1,0 0,1 1,0 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 1,0 1,0 1,0 0,1 1,0 0,-1 0,1 1,0 0,-1 -1,-1 1,0 0,-1 1,0 1,0 0,1 0,-1 0,-1 1,0 0,-1 1,0 1,-1 1,0 0,-1 -1,0 0,-1 -1,0 0,-1 1,-1 0,-1 -1,0 0,-1 1,0 0,-1 0,1 1,0" id="path5954" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_54" style="fill:#ffff00">
+        <path d="m 305,149 0,1 1,0 1,0 1,-1 0,1 1,0 1,0 1,0 1,0 0,1 1,0 0,1 1,0 0,-1 1,1 0,-1 0,1 1,0 0,1 1,0 1,0 1,-1 1,0 0,1 1,0 1,0 1,0 0,1 1,-1 1,0 1,0 1,0 1,0 1,0 1,1 0,-1 1,0 0,1 1,0 1,0 1,0 1,0 0,1 1,0 1,0 -1,0 0,1 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,1 0,1 -1,0 1,0 0,1 1,0 0,1 -1,0 1,0 0,1 0,1 0,1 1,0 0,1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 0,1 1,0 0,-1 1,0 1,0 1,0 0,1 0,1 0,1 1,1 1,-1 1,0 0,-1 1,0 0,1 0,1 1,0 -1,0 0,1 0,1 -1,0 -1,0 0,1 0,1 -1,0 -1,0 0,1 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 -1,0 0,-1 -1,0 -1,0 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,-1 0,1 0,1 1,0 0,1 -1,0 -1,0 0,-1 -1,0 1,0 0,-1 -1,0 0,1 -1,0 -1,0 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,1 -1,0 0,-1 0,-1 -1,0 1,0 -1,0 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,0 0,1 0,-1 0,1 -1,0 0,1 0,-1 -1,0 0,-1 -1,0 0,-1 0,1 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 -1,0 0,-1 0,1 0,-1 -1,0 0,-1 -1,0 -1,0 0,-1 -1,0 0,1 -1,0 0,1 -1,0 0,1 -1,0 1,0 0,1 -1,0 -1,0 -1,0 -1,0 -1,0 -1,0 1,0 0,-1 -1,0 -1,0 0,-1 1,0 -1,0 1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 -1,0 -1,0 0,-1 1,0 0,-1 1,0 -1,-1 1,0 -1,-1 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 -1,0 0,-1 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,1 0,-1 1,0 0,1 1,0 1,1 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 1,0 0,-1 0,-1 0,-1 -1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 0,-1 0,-1 1,0 1,0 1,0 0,-1 0,1 0,1 1,1 1,0 1,0 1,0 0,-1 1,0 1,0 0,-1 0,-1 -1,0 1,0 0,-1 1,0 0,-1 0,1 0,-1 1,0 1,0" id="path5957" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <g id="nomoi_okxe_55" style="fill:#ffff00">
+        <path d="m 232,202 0,1 1,0 -1,0 -1,0 0,-1 -1,0 1,0 0,-1 0,1 1,0" id="path5960" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 231,200 -1,0 1,0" id="path5962" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 229,199 0,-1 0,1" id="path5964" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 230,198 -1,0 1,0" id="path5966" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 226,196 1,0 1,0 0,1 0,1 1,0 0,1 1,0 0,1 -1,0 -1,0 1,0 -1,0 0,-1 -1,0 0,-1 0,1 -1,-1 1,0 -1,0 0,-1 0,-1 0,-1 0,1" id="path5968" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 216,165 -1,0 1,0" id="path5970" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 213,165 0,-1 0,1" id="path5972" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 199,158 0,-1 0,1" id="path5974" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 193,154 0,1 1,0 -1,0 0,1 0,-1 -1,0 0,-1 0,-1 1,1" id="path5976" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 212,152 1,0 0,1 1,0 0,1 1,0 1,0 -1,0 1,0 0,1 1,0 0,-1 0,1 1,0 0,1 -1,0 0,1 0,1 -1,0 0,1 -1,0 -1,0 -1,0 -1,1 -1,0 0,1 0,1 0,1 1,0 -1,0 0,1 0,-1 0,1 0,1 0,-1 1,0 -1,0 1,0 0,1 1,1 0,-1 0,1 1,0 1,0 1,0 0,1 -1,0 0,1 0,1 0,-1 -1,0 0,1 1,0 0,1 -1,0 0,1 0,1 1,1 0,1 0,1 0,1 0,1 1,0 0,1 1,0 0,1 1,0 1,0 0,1 1,0 0,1 1,0 1,0 0,-1 1,0 0,-1 0,1 1,0 0,1 0,1 1,0 0,1 0,1 0,1 1,0 0,1 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 -1,0 -1,-1 -1,0 -1,0 0,-1 -1,-1 -1,0 0,-1 -1,0 -1,0 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 -1,0 1,0 -1,0 0,-1 0,-1 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 0,-1 -1,0 0,-1 -1,0 0,-1 -1,-1 -1,0 0,-1 -1,0 0,-1 -1,0 0,-1 0,-1 -1,0 0,-1 0,-1 -1,0 1,0 -1,0 0,1 0,-1 -1,0 -1,0 0,-1 0,-1 1,0 0,-1 -1,0 0,-1 0,1 -1,0 0,-1 0,-1 0,-1 -1,0 1,0 0,-1 0,-1 1,0 0,-1 1,0 1,0 1,0 0,1 1,-1 1,0 1,0 1,0 0,1 1,0 0,-1 1,0 1,0 0,-1 1,0" id="path5978" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 186,147 1,0 1,0 -1,1 0,1 -1,0 -1,0 0,-1 0,-1 1,0" id="path5980" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+        <path d="m 198,146 -1,1 -1,0 0,-1 0,-1 1,0 0,1 1,0" id="path5982" inkscape:connector-curvature="0" style="fill:#ffff00"/>
+      </g>
+      <text xml:space="preserve" style="font-size:118.34897614px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;filter:url(#filter10961);font-family:Sans" x="226.30173" y="245.85487" id="text10604" sodipodi:linespacing="125%" transform="matrix(0.95558468,0,0,1.4084878,-40.534714,75.934683)"><tspan sodipodi:role="line" id="tspan10606" x="226.30173" y="245.85487" style="font-weight:bold;-inkscape-font-specification:Sans Bold">CoordGR</tspan></text>
+    </g>
+  </g>
+</svg>
