@@ -1,7 +1,7 @@
 AUTHOR = 'Leonidas Liakos'
 SITENAME = 'Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer'
-#SITEURL = 'https://www.geographer.gr'
-SITEURL = ''
+SITEURL = 'https://geographer.gr'
+#SITEURL = ''
 BANNER = '../extra/header_left_bg.png'
 BANNER_SUBTITLE = 'This is my subtitle'
 BANNER_ALL_PAGES = True
@@ -54,10 +54,13 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-
+# https://docs.getpelican.com/en/stable/tips.html#copy-static-files-to-the-root-of-your-site
 STATIC_PATHS = ['images',
                 'extra',
-                'html',]
+                'html',
+                'extra/CNAME',]
+
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 # https://stackoverflow.com/a/61572517
 EXTRA_PATH_METADATA = {
