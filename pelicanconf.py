@@ -6,7 +6,7 @@ BANNER = '../extra/header_left_bg.png'
 BANNER_SUBTITLE = 'This is my subtitle'
 BANNER_ALL_PAGES = True
 DISQUS_SITENAME = 'geographer'
-GOOGLE_ANALYTICS = "UA-116514702-1"
+GOOGLE_ANALYTICS = "G-JBQR7NZ4PE"
 
 
 PATH = 'content'
