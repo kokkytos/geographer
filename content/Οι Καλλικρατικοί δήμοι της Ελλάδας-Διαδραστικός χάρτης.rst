@@ -22,7 +22,7 @@
 
 .. raw:: html
 
-    <iframe src="html/m.html" frameborder="0" style="overflow:hidden;height:600px;width:70%" height="600px" width="100%"></iframe>
+    <iframe src="{static}html/m.html" frameborder="0" style="overflow:hidden;height:600px;width:70%" height="600px" width="100%"></iframe>
     
     
 Πηγές δεδομένων:

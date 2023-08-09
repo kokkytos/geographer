@@ -91,6 +91,9 @@ PANDOC_ARGS = [
     "--mathjax",
 ]
 
+
+
+
 # Non-Pandoc Extensions that are not enabled by default in pandoc
 #   https://pandoc.org/MANUAL.html#non-pandoc-extensions
 PANDOC_EXTENSIONS = [
@@ -106,10 +109,12 @@ THEME = "/home/leonidas/Documents/Documents/Diafora/pelican-themes/pelican-boots
 
 
 PLUGIN_PATHS = ['/home/leonidas/Documents/Documents/Diafora/pelican-plugins', ]
-PLUGINS = ['i18n_subsites','tag_cloud', 'share_post',"render_math",]
+PLUGINS = ['i18n_subsites','tag_cloud', 'share_post',]
 JINJA_ENVIRONMENT = {
     'extensions': ['jinja2.ext.i18n'],
 }
+
+
 
 ARTICLE_EXCLUDES = ['html']
 
@@ -127,7 +132,7 @@ ARTICLE_EXCLUDES = ['html']
 #SHARIFF_THEME = "gray"
 
 #https://stackoverflow.com/questions/67141040/pelican-how-to-remove-html-extension-on-local-host
-#ARTICLE_URL = '{slug}/'
+ARTICLE_URL = '{slug}/'
 #ARTICLE_SAVE_AS = '{slug}/index.html'
 
 
