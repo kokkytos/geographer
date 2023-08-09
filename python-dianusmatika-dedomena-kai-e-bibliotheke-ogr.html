@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="ogr,osr,python,vector" />
+        <meta name="description" content="Λιάκος Λ., 2011, Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr, 1η Συνάντηση Ελλήνων Χρηστών GRASS and GFOSS, HellasGI, ΕΛ/ΛΑΚ, ΤΜΧΠΑ-Πανεπιστήμιο Θεσσαλίας,ΤΕΙ Σερρών, ελληνικό παράρτημα του OSGeo, Αργαλαστή Πηλίου, 17-19/6/2011 Περιγραφή παρουσίασης: Tο τρέχον εκπαιδευτικό βοήθημα έχει σαν στόχο να εξοικειωθούν οι ενδιαφερόμενοι με ένα εναλλακτικό μοντέλο …" />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr"/>
+        <meta property="og:url" content="https://geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html"/>
+        <meta property="og:description" content="Λιάκος Λ., 2011, Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr, 1η Συνάντηση Ελλήνων Χρηστών GRASS and GFOSS, HellasGI, ΕΛ/ΛΑΚ, ΤΜΧΠΑ-Πανεπιστήμιο Θεσσαλίας,ΤΕΙ Σερρών, ελληνικό παράρτημα του OSGeo, Αργαλαστή Πηλίου, 17-19/6/2011 Περιγραφή παρουσίασης: Tο τρέχον εκπαιδευτικό βοήθημα έχει σαν στόχο να εξοικειωθούν οι ενδιαφερόμενοι με ένα εναλλακτικό μοντέλο …"/>
+        <meta property="article:published_time" content="2011-06-22" />
+            <meta property="article:section" content="GIS" />
+            <meta property="article:tag" content="ogr" />
+            <meta property="article:tag" content="osr" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="vector" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/gis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer GIS ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116514702-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', UA-116514702-1);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                        <li >
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+                        </li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/gis.html" title="GIS">GIS</a></li>
+                <li class="active">Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr&url=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr&url=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html&hashtags=ogr,osr,python,vector" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html&title=Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr&summary=%CE%9B%CE%B9%CE%AC%CE%BA%CE%BF%CF%82%20%CE%9B.%2C%202011%2C%20Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr%2C%0A1%CE%B7%20%CE%A3%CF%85%CE%BD%CE%AC%CE%BD%CF%84%CE%B7%CF%83%CE%B7%20%CE%95%CE%BB%CE%BB%CE%AE%CE%BD%CF%89%CE%BD%20%CE%A7%CF%81%CE%B7%CF%83%CF%84%CF%8E%CE%BD%20GRASS%20and%20GFOSS%2C%20HellasGI%2C%20%CE%95%CE%9B/%CE%9B%CE%91%CE%9A%2C%0A%CE%A4%CE%9C%CE%A7%CE%A0%CE%91-%CE%A0%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%AF%CE%B1%CF%82%2C%CE%A4%CE%95%CE%99%20%CE%A3%CE%B5%CF%81%CF%81%CF%8E%CE%BD%2C%20%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C%20%CF%80%CE%B1%CF%81%CE%AC%CF%81%CF%84%CE%B7%CE%BC%CE%B1%20%CF%84%CE%BF%CF%85%20OSGeo%2C%0A%CE%91%CF%81%CE%B3%CE%B1%CE%BB%CE%B1%CF%83%CF%84%CE%AE%20%CE%A0%CE%B7%CE%BB%CE%AF%CE%BF%CF%85%2C%2017-19/6/2011%0A%CE%A0%CE%B5%CF%81%CE%B9%CE%B3%CF%81%CE%B1%CF%86%CE%AE%20%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%AF%CE%B1%CF%83%CE%B7%CF%82%3A%0AT%CE%BF%20%CF%84%CF%81%CE%AD%CF%87%CE%BF%CE%BD%20%CE%B5%CE%BA%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CF%85%CF%84%CE%B9%CE%BA%CF%8C%20%CE%B2%CE%BF%CE%AE%CE%B8%CE%B7%CE%BC%CE%B1%20%CE%AD%CF%87%CE%B5%CE%B9%20%CF%83%CE%B1%CE%BD%20%CF%83%CF%84%CF%8C%CF%87%CE%BF%20%CE%BD%CE%B1%20%CE%B5%CE%BE%CE%BF%CE%B9%CE%BA%CE%B5%CE%B9%CF%89%CE%B8%CE%BF%CF%8D%CE%BD%20%CE%BF%CE%B9%0A%CE%B5%CE%BD%CE%B4%CE%B9%CE%B1%CF%86%CE%B5%CF%81%CF%8C%CE%BC%CE%B5%CE%BD%CE%BF%CE%B9%20%CE%BC%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CE%B5%CE%BD%CE%B1%CE%BB%CE%BB%CE%B1%CE%BA%CF%84%CE%B9%CE%BA%CF%8C%20%CE%BC%CE%BF%CE%BD%CF%84%CE%AD%CE%BB%CE%BF%20%E2%80%A6&source=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr&u=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr&amp;body=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html&title=Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html"
+                       rel="bookmark"
+                       title="Permalink to Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr">
+                        Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2011-06-22T00:10:00+03:00"> Τετ 22 Ιουνίου 2011</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/gis.html">GIS</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/ogr.html">ogr</a>
+        /
+	<a href="https://geographer.gr/tag/osr.html">osr</a>
+        /
+	<a href="https://geographer.gr/tag/python.html">python</a>
+        /
+	<a href="https://geographer.gr/tag/vector.html">vector</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><img src="https://geographer.gr/images/extent1.png"/></p>
+<p>Λιάκος Λ., 2011, Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr,
+1η Συνάντηση Ελλήνων Χρηστών GRASS and GFOSS, HellasGI, ΕΛ/ΛΑΚ,
+ΤΜΧΠΑ-Πανεπιστήμιο Θεσσαλίας,ΤΕΙ Σερρών, ελληνικό παράρτημα του OSGeo,
+Αργαλαστή Πηλίου, 17-19/6/2011</p>
+<p>Περιγραφή παρουσίασης:</p>
+<p>Tο τρέχον εκπαιδευτικό βοήθημα έχει σαν στόχο να εξοικειωθούν οι
+ενδιαφερόμενοι με ένα εναλλακτικό μοντέλο προγραμματισμού όσον αφορά την
+προσπέλαση και επεξεργασία γεωχωρικών δεδομένων. Εναλλακτικό γιατί
+στηρίζεται στις δυναμικές και συνεχώς εξελισσόμενες, αλλά πολλές φορές
+παρεξηγημένες και απρόσιτες για τον κοινό χρήστη, τεχνολογίες του
+ελεύθερου και ανοικτού λογισμικού. Για τον προγραμματισμό του εν λόγω
+βοηθήματος επελέγει η διερμηνευόμενη και αντικειμενοστραφής γλώσσα
+Python καθώς ο διερμηνευτής της είναι διαθέσιμος σε διάφορα λειτουργικά
+συστήματα αλλά και για την ευκολία και απλότητα της σύνταξή της. Σε
+συνάρτηση με την γλώσσα προγραμματισμού λειτουργούν και οι σχετικές
+βιβλιοθήκες για την προσπέλαση των γεωχωρικών δεδομένων.</p>
+<p>Η βιβλιοθήκη gdal χρησιμοποιείται για την προσπέλαση ψηφιδωτών
+γεωχωρικών δεδομένων και η βιβλιοθήκη ogr για την προσπέλαση
+διανυσματικών δεδομένων. Το βοήθημα επικεντρώνεται στην ανάγνωση και
+εγγραφή διανυσματικών δεδομένων, την δημιουργία γεωμετριών και τον
+χειρισμό και μετατροπή προβολικών συστημάτων, το φιλτράρισμα και την
+παρουσίαση των λειτουργιών ανάλυσης που παρέχει η βιβλιοθήκη ogr. Για
+την παρακολούθηση των διαδικασιών του βοηθήματος θεωρείται απαραίτητη η
+γνώση βασικών αρχών προγραμματισμού και η σύνταξη στην γλώσσα Python. Τα
+παραδείγματα που θα παρουσιαστούν εκτελούνται σε περιβάλλον Linux ωστόσο
+οι χρήστες Windows με την εγκατάσταση του απαραίτητου λογισμικού μπορούν
+με ευκολία να ακολουθήσουν.</p>
+<pre><code>#!/usr/bin/python
+# -*- coding: utf-8 -*-
+ 
+#http://www.gdal.org/ogr/ogr_arch.html
+#Για help από το documentation του Python binding: pydoc -g osgeo
+ 
+#********************** - ΕΙΣΑΓΩΓΗ ΑΠΑΡΑΙΤΗΤΩΝ ΒΙΒΛΙΟΘΗΚΩΝ - ********************** 
+import sys, os
+ 
+# Εισάγουμε την βιβλιοθήκη για πρόσβαση στα διανυσματικά δεδομένα (ogr) και 
+#την βιβλιοθήκη  για την διαχείριση των προβολικών συστημάτων αναφοράς (osr)
+try:
+    #Σε περίπτωση που χρησιμοποιούμε κάποια διανομή OSGeo
+    from osgeo import ogr , osr    
+except:
+    #Σε περίπτωση που χρησιμοποιούμε FWTools
+    import ogr,  osr
+ 
+# ********************** - ΑΝΑΓΝΩΣΗ ΔΙΑΝΥΣΜΑΤΙΚΩΝ ΔΕΔΟΜΕΝΩΝ - **********************************
+#*************************************************************************************************************
+ 
+#Ορίζουμε τη διαδρομή για τον τρέχοντα κατάλογο εργασίας και ονόμα αρχείου shapefile
+scriptdir= os.path.dirname( os.path.realpath( __file__ ) )# η διαδρομή του φακέλου που βρίσκεται το τρέχον αρχείο
+os.chdir(scriptdir+os.sep+'shps')#αλλαγή του τρέχοντος καταλόγου εργασίας
+ 
+shapefile= 'oikismoi.shp'
+ 
+# O driver είναι ένα αντικείμενο που μας βοηθά να αλληλεπιδρούμε (διαβάζουμε - γράφουμε) με έναν τύπο αρχείου
+#http://www.gdal.org/ogr/ogr_formats.html
+driver =  ogr.GetDriverByName('ESRI Shapefile') # Το όνομα παρέχεται από το documentation
+ 
+# Με την μέθοδο Open() του driver επιστρεφεται ένα αντικείμενο datasource
+dataSource = driver.Open(shapefile,  0) #0=readonly, 1=write
+ 
+if dataSource is None: # Αν δεν υπάρχει τιμή στην dataSource
+    print u'Η πηγή δεδομένων δεν αναγνώστηκε:' ,   shapefile
+    sys.exit(1) #έξοδος με έναν κωδικό σφάλματος
+ 
+layer = dataSource.GetLayer() 
+#1.μπορούμε να χρησιμοποιήσουμε και index π.χ dataSource.GetLayer(1) αλλά για τα shapefiles είναι 0
+#2.ή να περάσουμε το όνομα σαν string (π.χ. 'oikismoi')
+print u'Το όνομα του layer:' , layer.GetName()
+ 
+#Ο αριθμός των features στο layer
+numFeatures = layer.GetFeatureCount()
+print u'Αριθμός Features :', numFeatures
+ 
+# επιστρέφει τα ακραία σημεία του layer
+extent = layer.GetExtent() 
+print u'Ακραία σημεία:', extent
+ 
+# εφόσον γνωρίζουμε το FID ενος feature μπορούμε να το πάρουμε σαν αντικείμενο
+feature = layer.GetFeature(2) #FID=2
+ 
+CODE_OIK = feature.GetField('CODE_OIK') #GetField(&amp;lt;όνομα πεδίου&amp;gt;) μία μέθοδος του feature που μας επιστρέφει την τιμή του πεδίου 
+#fields= layer.GetLayerDefn().GetFieldCount() # παίρνουμε τον αριθμό των πεδίων σε ένα layer
+ 
+NAME_OIK = feature.GetField('NAME_OIK')
+# Παραλλαγή:
+#GetFieldAsString(&amp;lt;όνομα πεδίου&amp;gt;) και GetFieldAsInteger(&amp;lt;όνομα πεδίου&amp;gt;)
+print u'CODE_OIK για το feature με id = 2:',  CODE_OIK
+NAME_OIK = NAME_OIK.decode('iso-8859-7')
+print u'NAME_OIK για το feature με id = 2:',  NAME_OIK
+ 
+#μπορούμε να βάλουμε όλα τα features του layer σε έναν βρόγχο
+feature = layer.GetNextFeature() # επιστρέφει το πρώτο Feature στην σειρά και κάθε φορά που το καλούμε πηγαίνει στο επόμενο
+while feature:
+    CODE_OIK = feature.GetField('CODE_OIK')
+    print 'FID:%s,CODE_OIK:%s' % (feature.GetFID(), CODE_OIK)
+    feature = layer.GetNextFeature()
+ 
+layer.ResetReading() #επιστρέφει την ανάγνωση των features στην αρχή της λίστας των features
+ 
+# ας ξανα πάμε στο πρώτο Feature
+feature = layer.GetNextFeature() 
+#ας πάρουμε την γεωμετρία του
+geometry = feature.GetGeometryRef() #GetGeometryRef() μία μέθοδος του feature που επιστρέφει την γεωμετρία σαν αντικείμενο 
+print "Geometry name: ", geometry.GetGeometryName() # as WKT
+#Ειδικά τα σημειακά layers έχουν μια μέθοδο στο αντικείμενο της γεωμετρίας που τους επιστρέφει το X και το Y
+x = geometry.GetX()
+y = geometry.GetY()
+print "X Y:",  x,  y
+ 
+#********************************** - Φίλτρα στα περιγραφικά δεδομένα - **********************************
+#************************************************************************************************************
+# 1: .SetAttributeFilter
+# 2: .ExecuteSQL
+ 
+# ------1: layer.SetAttributeFilter
+allFeatures = layer.GetFeatureCount()
+print u'Όλα τα Features :', allFeatures
+ 
+layer.SetAttributeFilter("CODE_NOM = '32'") # με την μέθοδο SetAttributeFilter ορίζουμε τα κριτήρια ενός φίλτρου π.χ. εδώ ζητήσαμε από τους οικισμούς να μας φέρει αυτούς που έχουν ("CODE_NOM = '32'") 
+thesprotia = layer.GetFeatureCount() # πλέον η μέθοδος GetFeatureCount() του layer μας επιστρέφει μόνο τα Features με CODE_NOM = '32'
+print u'Tα Features της Θεσπρωτίας :', thesprotia
+ 
+feature = layer.GetNextFeature() # επιστρέφει το πρώτο Feature στην σειρά από την λίστα των φιλτραρισμένων και κάθε φορά που το καλούμε πηγαίνει στο επόμενο
+ 
+layer.SetAttributeFilter(None) # κάνουμε reset του φίλτρου
+ 
+# -------2: dataSource.ExecuteSQL
+#Μπορούμε να κάνουμε και πιο προχωρημένα ερωτήματα με ExecuteSQL() στο datasource αντικείμενο
+#http://www.gdal.org/ogr/ogr_sql.html
+resultlayer = dataSource.ExecuteSQL("SELECT * from oikismoi  WHERE OBJECTID &amp;gt; 13000 ORDER BY CODE_OIK DESC")
+sqlFeatures = resultlayer.GetFeatureCount() # πλέον η μέθοδος GetFeatureCount() του layer μας επιστρέφει μόνο τα Features με CODE_NOM = '32'
+print u'Tα Features με OBJECTID &amp;gt; 13000 :', sqlFeatures
+dataSource.ReleaseResultSet(resultlayer)# κάνουμε reset του φίλτρου
+ 
+#********************************** - Φίλτρα στα χωρικά δεδομένα - **********************************
+#************************************************************************************************************
+ 
+#1.  .SetSpatialFilter()
+#2.  .SetSpatialFilterRect(, ,, )
+ 
+#Eπιλέγουμε το πολύγωνο της Θεσπρωτίας από τους νομούς για να το χρησιμοποιήσουμε σαν παράμετρο στο SetSpatialFilter
+nomoishp= 'nomoi_okxe.shp'
+dataSource2 = driver.Open(nomoishp,  0) #0=readonly, 1=write
+layer2= dataSource2.GetLayer()
+feature52 = layer2.GetFeature(52) #52 το fid του Ν. Θεσπρωτίας
+polyThesprotia = feature52.GetGeometryRef()# πήραμε το γεωμετρικό αντικείμενο του feature52 (του Ν. Θεσπρωτίας)
+ 
+#1.  .SetSpatialFilter()
+layer.SetSpatialFilter(polyThesprotia) 
+oikismoiThesprotias = layer.GetFeatureCount()
+print u'Οι οικισμοί της Θεσπρωτίας από χωρικό φίλτρο :', oikismoiThesprotias
+layer.SetSpatialFilter(None) # κάνουμε reset του φίλτρου
+ 
+#SLIDE 9
+ 
+#2. .SetSpatialFilterRect(, ,, )
+layer.SetSpatialFilterRect(170000, 4270000,300000, 4500000)
+numfromRect = layer.GetFeatureCount()
+print u'Αριθμός από χωρικό φίλτρο :', numfromRect
+ 
+#SLIDE 10
+ 
+layer.SetSpatialFilter(None) # κάνουμε reset του φίλτρου
+ 
+AllFeatures = layer.GetFeatureCount()
+print u'Όλα τα Features ξανά :', AllFeatures
+ 
+#************************************* - Simple analysis - Geoprocessing ***************************************************
+#************************************************************************************************************
+ 
+#Είναι μέθοδοι του geometry object όπου  επιστρέφουν boolean ή geometry objects ή αριθμός
+#http://www.gdal.org/ogr/classOGRGeometry.html
+#Within, Overlaps, Contains, Convexhull, Buffer, Union, Difference κ.α.
+ 
+# Μερικά απαράιτητα δεδομένα:
+ 
+# Η Παραμυθιά Θεσπρωτίας (point)
+featParamythia= layer.GetFeature(3005) #feature object
+ptParamythia= featParamythia.GetGeometryRef()#geometry object
+print ptParamythia #σαν WKT
+ 
+# Η Αργαλαστή (point)
+featArgalasti= layer.GetFeature(11651) 
+ptArgalasti = featArgalasti.GetGeometryRef()
+print ptArgalasti
+ 
+#Ποιά η  απόσταση από Παραμυθιά σε Αργαλαστή;
+dist = ptParamythia.Distance(ptArgalasti) 
+print u'Απόσταση Παραμυθιά-Αργαλαστή σε χλμ.:', dist/1000
+ 
+#buffer 1000μ. για την Παραμυθιά
+ptBuffer = ptParamythia.Buffer(1000) # geometry object
+print ptBuffer #polygon
+ 
+# Η Θεσπρωτία περιέχει την Παραμυθιά;
+print polyThesprotia.Contains(ptParamythia)
+ 
+# Η Παραμυθιά περιέχεται στην Θεσπρωτία;
+print ptParamythia.Within(polyThesprotia)
+ 
+#Το κεντροειδές της Θεσπρωτίας
+centroid_obj = polyThesprotia.Centroid()
+print  u'Το κεντροειδές της Θεσπρωτίας σαν WKT:' , centroid_obj
+centroid = ogr.CreateGeometryFromWkt(str(centroid_obj))#Δημιουργία geometry object (σημείου) από  WKT
+x = centroid.GetX()
+y = centroid.GetY()
+print u'Το κεντροειδές της Θεσπρωτίας: ',  x,  y
+ 
+# Η γεωγραφική έκταση της Θεσπρωτίας (minx,maxx, miny, maxy):
+print u'minx,maxx, miny, maxy για την Θεσπρωτία:', polyThesprotia.GetEnvelope()[0],  polyThesprotia.GetEnvelope()[1],  polyThesprotia.GetEnvelope()[2], polyThesprotia.GetEnvelope()[2]
+ 
+#********************************* - ΕΓΓΡΑΦΗ ΔΕΔΟΜΕΝΩΝ -  ΠΡΟΒΟΛΙΚΑ ΣΥΣΤΗΜΑΤΑ*********************************************
+#************************************************************************************************************
+ 
+if os.path.exists('mypoints.shp'):# έλεγχος αν υπάρχει το path
+    driver.DeleteDataSource('mypoints.shp')
+ 
+ds = driver.CreateDataSource('mypoints.shp')
+ 
+#Αναγκαία η εισαγωγή της βιβλιοθήκης: from osgeo import osr
+ 
+#Ορίζουμε ένα αντικείμενο για το γεωγραφικό σύστημα αναφοράς
+SpatialReference = osr.SpatialReference() #αρχικοποίηση αντικειμένου γεωγραφικού σύστηματος αναφοράς
+#Πολλοί τρόποι σύνταξης/ορισμού ενός συστήματος αναφοράς,Well Known Text (WKT), Proj4, EPSG, ESRI .prj, JSON, GML, XML
+#Σημαντικό: για το τρόπο σύνταξης και λεπτομέρειες ανά σύστημα αναφοράς μπορείτε να δείτε στο http://spatialreference.org/
+ 
+#Περισσότεροι τρόποι:
+#ImportFromWkt()
+#ImportFromEPSG()
+#ImportFromProj4()
+#ImportFromESRI(&amp;lt;proj_lines&amp;gt;)
+#ImportFromPCI(, ,
+#ImportFromUSGS(&amp;lt;proj_code&amp;gt;, )
+#ImportFromXML()
+ 
+SpatialReference.ImportFromEPSG(2100)
+#SpatialReference.SetFromUserInput('EPSG:2100')
+#Μπορούμε να το ορίσουμε και με άλλο τρόπο μέσω του EPSG code:
+#SpatialReference.ImportFromProj4("+proj=tmerc +lon_0=24 +k=.9996 +x_0=500000 +towgs84=-199.72,74.03,246.02+ellps=GRS80")
+ 
+#------------Δημιουργία νέου layer--------------
+newlayer = ds.CreateLayer('mypoints',geom_type=ogr.wkbPoint,  srs = SpatialReference)
+#Τύπου γεωμετρίας: wkbPoint, wkbLineString, wkbPolygon, wkbGeometryCollection, wkbMultiPolygon, wkbMultiPoint, wkbMultiLineString.
+ 
+# Αν θέλουμε να ανακτήσουμε το προβολικό σύστημα ενός layer σαν αντικείμενο:
+SR = newlayer.GetSpatialRef()
+print SR
+# Μπορεί να ανακτηθεί και από ένα αντικείμενο γεωμετρίας: spatialRef = geom.GetSpatialReference()
+print SR.ExportToXML() #εξαγωγή σαν GML
+ 
+#Δημιουργία ενός FieldDefn
+fieldDefn = ogr.FieldDefn('greekname', ogr.OFTString) #Constructor of Definition of an attribute of an OGRFieldDefn. , http://www.gdal.org/ogr/classOGRFieldDefn.html#fc375f038b548b5a86b854c214fee114
+fieldDefn.SetWidth(15)
+ 
+newlayer.CreateField(fieldDefn)#αποθήκευση του FieldDefn στο layer
+ 
+#ορίζουμε ένα νέο γεωμετρικό αντικείμενο τύπου σημείου
+geom = ogr.Geometry(type=ogr.wkbPoint)
+geom.AddPoint(23.726683, 37.971505) #δεδομενα σε WGS84 , προαρετικά τρίτη παράμετρος το z  (default=0)
+# για αλλαγή των Χ, Υ: geom.SetPoint(0, 23.0, 37.0), όπου για σημεία υποστηρίζεται μόνο το 0
+#για αντικείμενα τύπου γραμμής προσθέτουμε νέα σημεία της γραμμής με το AddPoint
+ 
+#------------Reprojection του geom από WGS84 σε Greek Grid
+#Ορίζουμε τα προβολικά συστήματα ως objects και τους δίνουμε παραμέτρους:
+ 
+#WGS84
+wgs84SR= osr.SpatialReference()
+wgs84SR.ImportFromEPSG(4326) #  WGS84
+#Greek_Grid
+greekGridSR= osr.SpatialReference()
+greekGridSR.ImportFromEPSG(2100) # Greek Grid
+ 
+#Απαιτείται ένα CoordinateTransformation αντικείμενο
+coordTrans = osr.CoordinateTransformation(wgs84SR, greekGridSR)
+ 
+#Καλούμε την function Transform του geometry αντικειμένου
+geom.Transform(coordTrans)
+ 
+xEgsa = geom.GetX()
+yEgsa  = geom.GetY()
+print "X, Y ΕΓΣΑ-87:",  xEgsa ,  yEgsa 
+ 
+#Δημιουργία του Feature object
+featureDefn = newlayer.GetLayerDefn() # ανάκτηση τους σχήματος του layer (σχήμα πεδίων και ιδιοτήτων τους των features του layer.Επιστρέφει: feature definition. 
+feature = ogr.Feature(featureDefn) #Constructor για νέο feature object με το field definition του layer 
+feature.SetGeometry(geom)#Του ορίζουμε σαν γεωμετρία το geom object
+ 
+feature.SetField('greekname', u"Ακρόπολη".encode('iso-8859-7'))
+ 
+newlayer.CreateFeature(feature)#αποθήκευση του feature στο layer
+ 
+# Cleanup, απελευθερώνουμε πόρους
+#Δεν καλούμε το Destroy() σε geometry objects που προέρχονται από features (Segmentation fault στην Python ) π.χ. polyThesprotia, ptArgalasti, ptParamythia
+ 
+#Destroy geometries
+centroid_obj.Destroy()
+geom.Destroy()
+ 
+#Destroy features
+feature.Destroy()
+feature52.Destroy()
+featParamythia.Destroy()
+featArgalasti.Destroy()
+ 
+#Destroy datasources
+dataSource.Destroy()
+dataSource2.Destroy()
+ds.Destroy() # Κλείσιμο και αποθήκευση του datasource για να αποθηκευτεί
+ 
+print u'Δημιουργία εικόνας png με το Mapnik!'
+ 
+import mapnik
+ 
+#symbolizers
+symbolizer = mapnik.PolygonSymbolizer(mapnik.Color("#fdf9e5"))
+symbolizer1= mapnik.LineSymbolizer(mapnik.Color('black'),0.5)
+symbolizer2= mapnik.ShieldSymbolizer('greekname','DejaVu Sans Bold',12,mapnik.Color('#000000'),'icon.png','png',32,32)
+ 
+#
+rule = mapnik.Rule()
+rule.symbols.append(symbolizer)
+rule.symbols.append(symbolizer1)
+ 
+rule2 = mapnik.Rule()
+rule2.symbols.append(symbolizer2)
+ 
+#styles
+style = mapnik.Style()
+style.rules.append(rule)
+ 
+style2 = mapnik.Style()
+style2.rules.append(rule2)
+ 
+#layers
+layer = mapnik.Layer("nomoi")
+layer.datasource = mapnik.Shapefile(file="nomoi_okxe.shp")
+ 
+layer2= mapnik.Layer("oikismoi")
+layer2.datasource = mapnik.Shapefile(file="mypoints.shp",  encoding='ISO-8859-7')
+ 
+layer.styles.append("mapStyle")
+layer2.styles.append("mapStyle2")
+ 
+map = mapnik.Map(800, 400)
+map.background = mapnik.Color("#c5edff")
+ 
+map.append_style("mapStyle", style)
+map.append_style("mapStyle2", style2)
+ 
+map.layers.append(layer)
+map.layers.append(layer2)
+ 
+map.zoom_all()
+ 
+mapnik.render_to_file(map, "map.png", "png")
+ 
+print u'Η εκτέλεση του script ολοκληρώθηκε!'
+ 
+#Παραδείγματα:
+#//www.geographer.gr/gis/64-gefyria.html</code></pre>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2011-06-22-python-dianusmatika-dedomena-kai-e-bibliotheke-ogr';
+                        this.page.url = 'https://geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr.html';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/diaphora.html"><i class="fa fa-folder-open fa-lg"></i>Διάφορα</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2022 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>

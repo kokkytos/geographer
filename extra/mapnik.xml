@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Map srs="+init=epsg:2100">
+<Style name="aster_GGRS-color2">
+<Rule>
+<RasterSymbolizer opacity="0.5" scaling="bilinear" comp-op="src-over"/>
+</Rule>
+</Style>
+<Style name="final.GGRS">
+<Rule>
+<RasterSymbolizer scaling="bilinear"/>
+</Rule>
+ </Style>
+<Layer name="final.GGRS" srs="+init=epsg:2100">
+<StyleName>final.GGRS</StyleName>
+<Datasource>
+<Parameter name="file">final.GGRS.tif</Parameter>
+<Parameter name="type">gdal</Parameter>
+</Datasource>
+</Layer>
+<Layer name="ASTER_DEM" srs="+init=epsg:2100">
+<StyleName>aster_GGRS-color2</StyleName>
+<Datasource>
+<Parameter name="file">aster_GGRS-color2.tif</Parameter>
+<Parameter name="type">gdal</Parameter>
+</Datasource>
+</Layer>
+</Map>
+<!-- nik2img.py mapnik.xml out.png -d 3273 4144 -e 153409.664 4320757.413 243762.891 4435155.143-->
+
+

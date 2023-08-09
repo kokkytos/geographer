@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Challenges in the Geo-Processing of Big Soil Spatial Data - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="big data,data sharing,ESDAC,European soil observatory,soil policy" />
+        <meta name="description" content="Liakos, L.; Panagos, P. Challenges in the Geo-Processing of Big Soil Spatial Data. Land 2022, 11, 2287. https://doi.org/10.3390/land11122287 European Commission, Joint Research Centre (JRC), IT-21027 Ispra, Italy This study addressed a critical resource—soil—through the prism of processing big data at the continental scale …" />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Challenges in the Geo-Processing of Big Soil Spatial Data"/>
+        <meta property="og:url" content="https://geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html"/>
+        <meta property="og:description" content="Liakos, L.; Panagos, P. Challenges in the Geo-Processing of Big Soil Spatial Data. Land 2022, 11, 2287. https://doi.org/10.3390/land11122287 European Commission, Joint Research Centre (JRC), IT-21027 Ispra, Italy This study addressed a critical resource—soil—through the prism of processing big data at the continental scale …"/>
+        <meta property="article:published_time" content="2022-12-14" />
+            <meta property="article:section" content="Δημοσιεύσεις" />
+            <meta property="article:tag" content="big data" />
+            <meta property="article:tag" content="data sharing" />
+            <meta property="article:tag" content="ESDAC" />
+            <meta property="article:tag" content="European soil observatory" />
+            <meta property="article:tag" content="soil policy" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/demosieuseis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer Δημοσιεύσεις ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116514702-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', UA-116514702-1);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/demosieuseis.html" title="Δημοσιεύσεις">Δημοσιεύσεις</a></li>
+                <li class="active">Challenges in the Geo-Processing of Big Soil Spatial Data</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=Challenges%20in%20the%20Geo-Processing%20of%20Big%20Soil%20Spatial%20Data&url=https%3A//geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=Challenges%20in%20the%20Geo-Processing%20of%20Big%20Soil%20Spatial%20Data&url=https%3A//geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html&hashtags=big-data,data-sharing,esdac,european-soil-observatory,soil-policy" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html&title=Challenges%20in%20the%20Geo-Processing%20of%20Big%20Soil%20Spatial%20Data&summary=Liakos%2C%20L.%3B%20Panagos%2C%20P.%20Challenges%20in%20the%20Geo-Processing%20of%20Big%20Soil%0ASpatial%20Data.%20Land%202022%2C%2011%2C%202287.%20https%3A//doi.org/10.3390/land11122287%0AEuropean%20Commission%2C%20Joint%20Research%20Centre%20%28JRC%29%2C%20IT-21027%20Ispra%2C%0AItaly%0AThis%20study%20addressed%20a%20critical%20resource%E2%80%94soil%E2%80%94through%20the%20prism%20of%0Aprocessing%20big%20data%20at%20the%20continental%20scale%20%E2%80%A6&source=https%3A//geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=Challenges%20in%20the%20Geo-Processing%20of%20Big%20Soil%20Spatial%20Data&u=https%3A//geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=Challenges%20in%20the%20Geo-Processing%20of%20Big%20Soil%20Spatial%20Data&amp;body=https%3A//geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html&title=Challenges%20in%20the%20Geo-Processing%20of%20Big%20Soil%20Spatial%20Data" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html"
+                       rel="bookmark"
+                       title="Permalink to Challenges in the Geo-Processing of Big Soil Spatial Data">
+                        Challenges in the Geo-Processing of Big Soil Spatial Data
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2022-12-14T10:20:00+02:00"> Τετ 14 Δεκεμβρίου 2022</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/big-data.html">big data</a>
+        /
+	<a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
+        /
+	<a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
+        /
+	<a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
+        /
+	<a href="https://geographer.gr/tag/soil-policy.html">soil policy</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Liakos, L.; Panagos, P. Challenges in the Geo-Processing of Big Soil
+Spatial Data. Land 2022, 11, 2287. <a href="https://doi.org/10.3390/land11122287">https://doi.org/10.3390/land11122287</a></p>
+<p><em>European Commission, Joint Research Centre (JRC), IT-21027 Ispra,
+Italy</em></p>
+<p>This study addressed a critical resource—soil—through the prism of
+processing big data at the continental scale. Rapid progress in
+technology and remote sensing has majorly improved data processing on
+extensive spatial and temporal scales. Here, the manuscript presents the
+results of a systematic effort to geo-process and analyze soil-relevant
+data. In addition, the main highlights include the difficulties
+associated with using data infrastructures, managing big geospatial
+data, decentralizing operations through remote access, mass processing,
+and automating the data-processing workflow using advanced programming
+languages. Challenges to this study included the reproducibility of the
+results, their presentation in a communicative way, and the
+harmonization of complex heterogeneous data in space and time based on
+high standards of accuracy. Accuracy was especially important as the
+results needed to be identical at all spatial scales (from point counts
+to aggregated countrywide data). The geospatial modeling of soil
+requires analysis at multiple spatial scales, from the pixel level,
+through multiple territorial units (national or regional), and river
+catchments, to the global scale. Advanced mapping methods (e.g., zonal
+statistics, map algebra, choropleth maps, and proportional symbols) were
+used to convey comprehensive and substantial information that would be
+of use to policymakers. More specifically, a variety of cartographic
+practices were employed, including vector and raster visualization and
+hexagon grid maps at the global or European scale and in several
+cartographic projections. The information was rendered in both grid
+format and as aggregated statistics per polygon (zonal statistics),
+combined with diagrams and an advanced graphical interface. The
+uncertainty was estimated and the results were validated in order to
+present the outputs in the most robust way. The study was also
+interdisciplinary in nature, requiring large-scale datasets to be
+integrated from different scientific domains, such as soil science,
+geography, hydrology, chemistry, climate change, and agriculture.</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2022-12-14-challenges-in-the-geo-processing-of-big-soil-spatial-data';
+                        this.page.url = 'https://geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/diaphora.html"><i class="fa fa-folder-open fa-lg"></i>Διάφορα</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2022 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="lawstat,R,καμπύλη Lorenz" />
+        <meta name="description" content="Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της …" />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R"/>
+        <meta property="og:url" content="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html"/>
+        <meta property="og:description" content="Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της …"/>
+        <meta property="article:published_time" content="2013-10-09" />
+            <meta property="article:section" content="Διάφορα" />
+            <meta property="article:tag" content="lawstat" />
+            <meta property="article:tag" content="R" />
+            <meta property="article:tag" content="καμπύλη Lorenz" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/diaphora.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer Διάφορα ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116514702-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', UA-116514702-1);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                        <li >
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/diaphora.html" title="Διάφορα">Διάφορα</a></li>
+                <li class="active">Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%CE%BC%CE%B5%20%CF%84%CE%BF%20open%20source%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20R&url=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%CE%BC%CE%B5%20%CF%84%CE%BF%20open%20source%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20R&url=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html&hashtags=lawstat,r,kampule-lorenz" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html&title=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%CE%BC%CE%B5%20%CF%84%CE%BF%20open%20source%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20R&summary=%CE%88%CE%BD%CE%B1%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B1%20%CE%BC%CE%AD%CF%84%CF%81%CE%B1%20%CF%83%CF%85%CE%B3%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CF%89%CF%83%CE%B7%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B5%CE%BA%CF%84%CE%AF%CE%BC%CE%B7%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CF%86%CE%B5%CF%81%CE%B5%CE%B9%CE%B1%CE%BA%CF%8E%CE%BD%0A%CE%B1%CE%BD%CE%B9%CF%83%CE%BF%CF%84%CE%AE%CF%84%CF%89%CE%BD%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B7%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%20Lorenz.%20%CE%93%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B5%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%0A%28%CE%A0%CE%B1%CF%80%CE%B1%CE%B4%CE%B1%CF%83%CE%BA%CE%B1%CE%BB%CF%8C%CF%80%CE%BF%CF%85%CE%BB%CE%BF%CF%82%2C%202000%29%2C%20%CE%BF%CE%B9%20%CE%B5%CF%80%CE%B9%CE%BC%CE%AD%CF%81%CE%BF%CF%85%CF%82%20%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AD%CF%82%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AD%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%0A%CE%AD%CE%BA%CF%84%CE%B1%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%CE%BD%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%BF%CE%B9%CF%87%CE%BF%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CF%8C%20%CF%84%CE%BF%CF%85%CF%82%2C%20%CF%84%CE%B1%CE%BE%CE%B9%CE%BD%CE%BF%CE%BC%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CE%BA%CE%B1%CF%84%CE%AC%20%CF%86%CE%B8%CE%AF%CE%BD%CE%BF%CF%85%CF%83%CE%B1%0A%CF%83%CE%B5%CE%B9%CF%81%CE%AC%20%CF%84%CE%B7%CF%82%20%CF%80%CF%85%CE%BA%CE%BD%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CE%B1%CF%85%CF%84%CF%8E%CE%BD%2C%20%CE%BA%CE%B1%CE%B9%20%CE%BA%CE%AC%CE%B8%CE%B5%20%CE%BC%CE%B9%CE%B1%CF%82%20%CF%84%CF%89%CE%BD%20%CE%B4%CF%85%CE%BF%20%CF%84%CE%BF%CF%8D%CF%84%CF%89%CE%BD%20%CF%83%CF%84%CE%B7%CE%BB%CF%8E%CE%BD%2C%20%CF%84%CE%B7%CF%82%20%E2%80%A6&source=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%CE%BC%CE%B5%20%CF%84%CE%BF%20open%20source%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20R&u=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%CE%BC%CE%B5%20%CF%84%CE%BF%20open%20source%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20R&amp;body=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html&title=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%CE%BC%CE%B5%20%CF%84%CE%BF%20open%20source%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20R" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html"
+                       rel="bookmark"
+                       title="Permalink to Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R">
+                        Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2013-10-09T00:10:00+03:00"> Τετ 09 Οκτωβρίου 2013</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
+        /
+	<a href="https://geographer.gr/tag/r.html">R</a>
+        /
+	<a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών
+ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz
+(Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την
+έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα
+σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της
+εκτάσεως και του πληθυσμού, υπολογίζεται η ποσοστιαία κατανομή, καθώς
+και η αθροιστική σειρά των ποσοστιαίων τούτων αναλογιών. Στη συνέχεια σε
+σύστημα ορθογώνιων συντεταγμένων χαράσσεται η γραφική παράσταση της
+καμπύλης Lorenz, στην οποία ο μεν άξονας των τετμημένων μετρά την
+αθροιστική σειρά της ποσοστιαίας κατανομής του πληθυσμού, ο δε άξονας
+των τεταγμένων της αθροιστική σειρά της ποσοστιαίας κατανομής της
+εκτάσεως και εντοπίζονται τα σημεία της αντιστοιχίας των αθροιστικών
+σειρών (%) εκτάσεως και πληθυσμού, τα οποία σχηματίζουν πολυγωνική
+γραμμή ο (καλούμενη καμπύλη Lorenz), φέρεται δε και η διαγώνιος (45ο),
+καλούμενη διαγώνιος ισοκατανομής.</p>
+<p><img src="https://geographer.gr/images/Economics_Gini_coefficient2.png"/></p>
+<p>Στην απεικόνιση αυτή παρατηρούνται τα εξής:</p>
+<ol type="1">
+<li>αν ο πληθυσμός ήταν ομοιομόρφως κατανεμημένος σε όλες τις επιμέρους
+περιοχές (γεωγραφικά διαμερίσματα), η αθροιστική καμπύλη του πληθυσμού
+θα ακολουθούσε τη διαγώνιο γραμμή της αθροιστικής σειράς των περιοχών
+(διαγώνιος ισοκατανομής).</li>
+<li>εάν, αντιθέτως ο πληθυσμός ήταν κατανεμημένος με την μέγιστη δυνατή
+ανισότητα, τότε η αθροιστική καμπύλη του πληθυσμού θα συνέπιπτε με τον
+άξονα των τετμημένων.</li>
+<li>ο βαθμός συγκεντρώσεως αντιπροσωπεύεται κατ’ ακολουθία από την
+απόκλιση της καμπύλης μεταξύ των δύο αυτών άκρων.</li>
+</ol>
+<p>Στα πλαίσια του τρέχοντος άρθρου και για εκπαιδευτικούς λόγους θα
+υπολογιστεί η καμπύλη Lorenz για τον νομό Θεσπρωτίας το 2001 με την
+βοήθεια του στατιστικού πακέτου R.</p>
+<p>To R (<a class="uri" href="http://www.r-project.org/">http://www.r-project.org/</a>) είναι ένα υπολογιστικό πακέτο
+που προσφέρει δυνατότητες διαχείρισης και στατιστικής ανάλυσης δεδομένων
+καθώς και δυνατότητες κατασκευής γραφημάτων. Βασίζεται στην γλώσσα
+προγραμματισμού S (που χρησιμοποιεί και το στατιστικό πακέτο S plus) και
+πρόκειται για λογισμικό ανοικτού κώδικα (open source) που διατίθεται
+ελεύθερα. <a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f">Δείτε
+περισσότερα σχετικά με το R</a> Φυσικά ο υπολογισμός της καμπύλης αποκτά
+μεγαλύτερη αξία όταν εκτιμηθεί διαχρονικά και συγκριθεί με αντίστοιχες
+καμπύλες άλλων περιφερειών ή της χώρας. Τα σχετικά δεδομένα για τον Ν.
+Θεσπρωτίας το έτος 2001 είναι αποθηκευμένα σε ένα αρχείο CSV στην
+ακόλουθη μορφή:</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>ID</strong></th>
+<th><strong>Name</strong></th>
+<th><strong>Population</strong></th>
+<th><strong>Area</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>320100</td>
+<td>ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΗΣ</td>
+<td>14710</td>
+<td>111.752</td>
+</tr>
+<tr class="even">
+<td>326100</td>
+<td>ΚΟΙΝΟΤΗΤΑ ΠΕΡΔΙΚΑΣ</td>
+<td>2272</td>
+<td>34.605</td>
+</tr>
+<tr class="odd">
+<td>320700</td>
+<td>ΔΗΜΟΣ ΣΥΒΟΤΩΝ</td>
+<td>3010</td>
+<td>72.439</td>
+</tr>
+<tr class="even">
+<td>320200</td>
+<td>ΔΗΜΟΣ ΑΧΕΡΟΝΤΑ</td>
+<td>2344</td>
+<td>67.343</td>
+</tr>
+<tr class="odd">
+<td>320500</td>
+<td>ΔΗΜΟΣ ΠΑΡΑΠΟΤΑΜΟΥ</td>
+<td>1668</td>
+<td>60.334</td>
+</tr>
+<tr class="even">
+<td>320600</td>
+<td>ΔΗΜΟΣ ΣΑΓΙΑΔΑΣ</td>
+<td>2160</td>
+<td>87.803</td>
+</tr>
+<tr class="odd">
+<td>320400</td>
+<td>ΔΗΜΟΣ ΠΑΡΑΜΥΘΙΑΣ</td>
+<td>7859</td>
+<td>342.197</td>
+</tr>
+<tr class="even">
+<td>320300</td>
+<td>ΔΗΜΟΣ ΜΑΡΓΑΡΙΤΙΟΥ</td>
+<td>3032</td>
+<td>149.223</td>
+</tr>
+<tr class="odd">
+<td>320800</td>
+<td>ΔΗΜΟΣ ΦΙΛΙΑΤΩΝ</td>
+<td>8288</td>
+<td>495.727</td>
+</tr>
+<tr class="even">
+<td>326200</td>
+<td>ΚΟΙΝΟΤΗΤΑ ΣΟΥΛΙΟΥ</td>
+<td>748</td>
+<td>93.23</td>
+</tr>
+</tbody>
+</table>
+<p>Εγκαθιστούμε το R με:</p>
+<pre><code>sudo apt-get install r-base-core</code></pre>
+<p>Εκκινούμε το R πληκτρολογώντας στο τερματικό R (αν θέλουμε γραφικό
+περιβάλλον πληκτρολογούμε R –gui=Tk) Κατεβάζουμε και εγκαθιστούμε το
+πακέτο lawstat:</p>
+<pre><code>install.packages("lawstat")</code></pre>
+<p>Φορτώνουμε το απαραίτητο πακέτο lawstat με:</p>
+<pre><code>library(lawstat)</code></pre>
+<p>Διαβάζουμε τα δεδομένα με την εντολή:</p>
+<pre><code>Data&lt;-read.table('data.csv', header=TRUE)</code></pre>
+<p>Στην συνέχεια υπολογίζουμε και αποθηκεύουμε το γράφημα της καμπύλης
+Lorenz με τις παρακάτω εντολές:</p>
+<pre><code>png("myplot.png",width=700,height=500)
+lorenz.curve(Data[,"Population"], Data[,"Area"])
+dev.off()</code></pre>
+<p>Το αποτέλεσμα των παραπάνω εντολών είναι η καμπύλη Lorenz:</p>
+<p><img src="https://geographer.gr/images/myplot.png"/></p>
+<p>Η σχετική εντολή στο R (lorenz.curve), δεν υπολογίζει μόνο την
+καμπύλη Lorenz αλλά υπολογίζει και διάφορους συντελεστές, (oπως ο
+συντελεστής Gini), που αναγράφονται στο αριστερό τμήμα εντός του
+γραφήματος.</p>
+<p>Βιβλιογραφία:</p>
+<ul>
+<li>Παπαδασκαλόπουλος, Αθ. (2000) Μέθοδοι Περιφερειακής Ανάλυσης,
+Παπαζήσης: Αθήνα.</li>
+<li>R-project, Documentation of Lorenz Curve,
+http://rss.acs.unt.edu/Rdoc/library/lawstat/html/lorenz.curve.html,
+[Πρόσβαση: 3/09/2010].</li>
+<li>Εθνική Στατιστική Υπηρεσία (ΕΣΥΕ), Απογραφή πληθυσμού 2001.
+Διαθέσιμο στο: http://www.statistics.gr [Πρόσβαση:10/11/2009]</li>
+</ul>
+<p>(<em>Ο υπολογισμός της καμπύλης Lorenz έγινε στην διανομή Ubuntu
+10.04 LTS-Lucid Lynx με την έκδοση R 2.10.1</em>)</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2013-10-09-upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r';
+                        this.page.url = 'https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/diaphora.html"><i class="fa fa-folder-open fa-lg"></i>Διάφορα</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2022 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>PyQgis tips. QgsVectorLayer από postgis sql ερώτημα - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="postgis,pyqgis,python,qgis,sql" />
+        <meta name="description" content="Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo pyqgis είναι να “φορτώνουμε” vector layer που προέρχεται από ερώτημα sql στην postgis. Έτσι ο χρήστης μπορεί να συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το layer που επιθυμεί. Ωστόσο, στην σχετική τεκμηρίωση για το τρόπο που …" />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="PyQgis tips. QgsVectorLayer από postgis sql ερώτημα"/>
+        <meta property="og:url" content="https://geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html"/>
+        <meta property="og:description" content="Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo pyqgis είναι να “φορτώνουμε” vector layer που προέρχεται από ερώτημα sql στην postgis. Έτσι ο χρήστης μπορεί να συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το layer που επιθυμεί. Ωστόσο, στην σχετική τεκμηρίωση για το τρόπο που …"/>
+        <meta property="article:published_time" content="2014-09-23" />
+            <meta property="article:section" content="GIS" />
+            <meta property="article:tag" content="postgis" />
+            <meta property="article:tag" content="pyqgis" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="qgis" />
+            <meta property="article:tag" content="sql" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/gis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer GIS ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116514702-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', UA-116514702-1);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                        <li >
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+                        </li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/gis.html" title="GIS">GIS</a></li>
+                <li class="active">PyQgis tips. QgsVectorLayer από postgis sql ερώτημα</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=PyQgis%20tips.%20QgsVectorLayer%20%CE%B1%CF%80%CF%8C%20postgis%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1&url=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=PyQgis%20tips.%20QgsVectorLayer%20%CE%B1%CF%80%CF%8C%20postgis%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1&url=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html&hashtags=postgis,pyqgis,python,qgis,sql" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html&title=PyQgis%20tips.%20QgsVectorLayer%20%CE%B1%CF%80%CF%8C%20postgis%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1&summary=%CE%9C%CE%AF%CE%B1%20%CF%80%CE%BF%CE%BB%CF%8D%20%CF%87%CF%81%CE%AE%CF%83%CE%B9%CE%BC%CE%B7%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CF%80%CE%BF%CF%85%20%CE%BC%CE%B1%CF%82%20%CF%80%CF%81%CE%BF%CF%83%CF%86%CE%AD%CF%81%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%84o%20pyqgis%0A%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%BD%CE%B1%20%E2%80%9C%CF%86%CE%BF%CF%81%CF%84%CF%8E%CE%BD%CE%BF%CF%85%CE%BC%CE%B5%E2%80%9D%20vector%20layer%20%CF%80%CE%BF%CF%85%20%CF%80%CF%81%CE%BF%CE%AD%CF%81%CF%87%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1%20sql%20%CF%83%CF%84%CE%B7%CE%BD%0Apostgis.%20%CE%88%CF%84%CF%83%CE%B9%20%CE%BF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%CF%82%20%CE%BC%CF%80%CE%BF%CF%81%CE%B5%CE%AF%20%CE%BD%CE%B1%0A%CF%83%CF%85%CE%BD%CE%B4%CF%85%CE%AC%CF%83%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1%20%CF%80%CE%BF%CF%85%20%CE%B8%CE%AD%CE%BB%CE%B5%CE%B9%20%CE%BC%CE%B5%20%CE%B5%CE%BD%CF%84%CE%BF%CE%BB%CE%AD%CF%82%20join%20%CE%BA%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CF%86%CF%84%CE%B9%CE%AC%CE%BE%CE%B5%CE%B9%20%CF%84%CE%BF%0Alayer%20%CF%80%CE%BF%CF%85%20%CE%B5%CF%80%CE%B9%CE%B8%CF%85%CE%BC%CE%B5%CE%AF.%20%CE%A9%CF%83%CF%84%CF%8C%CF%83%CE%BF%2C%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AE%20%CF%84%CE%B5%CE%BA%CE%BC%CE%B7%CF%81%CE%AF%CF%89%CF%83%CE%B7%0A%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%84%CF%81%CF%8C%CF%80%CE%BF%20%CF%80%CE%BF%CF%85%20%E2%80%A6&source=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=PyQgis%20tips.%20QgsVectorLayer%20%CE%B1%CF%80%CF%8C%20postgis%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1&u=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=PyQgis%20tips.%20QgsVectorLayer%20%CE%B1%CF%80%CF%8C%20postgis%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1&amp;body=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html&title=PyQgis%20tips.%20QgsVectorLayer%20%CE%B1%CF%80%CF%8C%20postgis%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html"
+                       rel="bookmark"
+                       title="Permalink to PyQgis tips. QgsVectorLayer από postgis sql ερώτημα">
+                        PyQgis tips. QgsVectorLayer από postgis sql ερώτημα
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-09-23T00:10:00+03:00"> Τρι 23 Σεπτεμβρίου 2014</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/gis.html">GIS</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/postgis.html">postgis</a>
+        /
+	<a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
+        /
+	<a href="https://geographer.gr/tag/python.html">python</a>
+        /
+	<a href="https://geographer.gr/tag/qgis.html">qgis</a>
+        /
+	<a href="https://geographer.gr/tag/sql.html">sql</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/index.html">pyqgis</a>
+είναι να “φορτώνουμε” vector layer που προέρχεται από ερώτημα sql στην
+<a href="http://postgis.net/">postgis</a>. Έτσι ο χρήστης μπορεί να
+συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το
+layer που επιθυμεί. Ωστόσο, στην σχετική <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/loadlayer.html">τεκμηρίωση</a>
+για το τρόπο που φορτώνουμε vector layers δεν αναφέρεται η σχετική
+δυνατότητα. Μετά από αρκετό ψάξιμο και δοκιμές κατέληξα σε μερικά tips
+για το πως γίνεται. Αναγκαίες προϋποθέσεις για το sql ερώτημα είναι:</p>
+<ul>
+<li>Να υπάρχει πεδίο γεωμετρίας μέσα σε αυτό</li>
+<li>να υπάρχει μοναδικό πεδίο τύπου integer</li>
+<li>ο κώδικας sql πρέπει να περικλείεται σε παρενθέσεις ώστε να είναι
+διακρίνεται ότι πρόκειται για sql ερώτημα και όχι για όνομα πίνακα.</li>
+</ul>
+<p>Τα υπόλοιπα συντάσσονται με το ίδιο τρόπο που “φορτώνεται” ένας
+πίνακας postgis:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a>sql <span class="op">=</span><span class="st">"(select the_geom, id, name from mytable)"</span></span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>uri <span class="op">=</span> QgsDataSourceURI()</span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>uri.setConnection(<span class="st">"localhost"</span>,<span class="st">"5432"</span>,<span class="st">"mydb"</span>,<span class="st">"postgres"</span>,<span class="st">"xxxxx"</span>)</span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>uri.setDataSource(<span class="st">""</span>,sql,<span class="st">"the_geom"</span>,<span class="st">""</span>,<span class="st">"id"</span>)</span>
+<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>vlayer <span class="op">=</span> QgsVectorLayer(uri.uri(),<span class="st">"LayerName"</span>,<span class="st">"postgres"</span>)</span>
+<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>QgsMapLayerRegistry.instance().addMapLayer(vlayer)</span></code></pre></div>
+<p>Επίσης, κατόπιν δοκιμών, παρατήρησα ότι το sql ερώτημα δεν πρέπει να
+τελειώνει με ερωτηματικό (;) αλλά ούτε πρέπει να οριστεί κάτι στο schema
+του QgsDataSourceURI (όπως φαίνεται και στην γραμμή 4, η πρώτη
+παράμετρος στο setDataSource είναι ““).</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2014-09-23-pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema';
+                        this.page.url = 'https://geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema.html';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/diaphora.html"><i class="fa fa-folder-open fa-lg"></i>Διάφορα</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2022 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>

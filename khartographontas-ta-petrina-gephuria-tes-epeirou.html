@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Χαρτογραφόντας τα πέτρινα γεφύρια της Ηπείρου… - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="fTools,inkscape,ogr,python,qgis,scraper,urllib2,γεφύρια,Ήπειρος" />
+        <meta name="description" content="H διαθεσιμότητα δεδομένων από το Πανεπιστήμιο Ιωαννίνων, μεταξύ αυτών και γεωγραφικών, για τα πέτρινα γεφύρια της Ηπείρου στο διαδίκτυο (http://www.petrinagefiria.uoi.gr/) δίνει την δυνατότητα χαρτογράφησης αυτής της πληροφορίας με λογισμικό ανοικτού κώδικα αλλά και τον περαιτέρω έλεγχο της εγκυρότητας των δεδομένων. Με την βοήθεια της γλώσσας Το …" />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Χαρτογραφόντας τα πέτρινα γεφύρια της Ηπείρου…"/>
+        <meta property="og:url" content="https://geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html"/>
+        <meta property="og:description" content="H διαθεσιμότητα δεδομένων από το Πανεπιστήμιο Ιωαννίνων, μεταξύ αυτών και γεωγραφικών, για τα πέτρινα γεφύρια της Ηπείρου στο διαδίκτυο (http://www.petrinagefiria.uoi.gr/) δίνει την δυνατότητα χαρτογράφησης αυτής της πληροφορίας με λογισμικό ανοικτού κώδικα αλλά και τον περαιτέρω έλεγχο της εγκυρότητας των δεδομένων. Με την βοήθεια της γλώσσας Το …"/>
+        <meta property="article:published_time" content="2009-08-31" />
+            <meta property="article:section" content="GIS" />
+            <meta property="article:tag" content="fTools" />
+            <meta property="article:tag" content="inkscape" />
+            <meta property="article:tag" content="ogr" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="qgis" />
+            <meta property="article:tag" content="scraper" />
+            <meta property="article:tag" content="urllib2" />
+            <meta property="article:tag" content="γεφύρια" />
+            <meta property="article:tag" content="Ήπειρος" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/gis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer GIS ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116514702-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', UA-116514702-1);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                        <li >
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+                        </li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/gis.html" title="GIS">GIS</a></li>
+                <li class="active">Χαρτογραφόντας τα πέτρινα γεφύρια της Ηπείρου…</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=%CE%A7%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CF%8C%CE%BD%CF%84%CE%B1%CF%82%20%CF%84%CE%B1%20%CF%80%CE%AD%CF%84%CF%81%CE%B9%CE%BD%CE%B1%20%CE%B3%CE%B5%CF%86%CF%8D%CF%81%CE%B9%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%97%CF%80%CE%B5%CE%AF%CF%81%CE%BF%CF%85%E2%80%A6&url=https%3A//geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=%CE%A7%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CF%8C%CE%BD%CF%84%CE%B1%CF%82%20%CF%84%CE%B1%20%CF%80%CE%AD%CF%84%CF%81%CE%B9%CE%BD%CE%B1%20%CE%B3%CE%B5%CF%86%CF%8D%CF%81%CE%B9%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%97%CF%80%CE%B5%CE%AF%CF%81%CE%BF%CF%85%E2%80%A6&url=https%3A//geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html&hashtags=ftools,inkscape,ogr,python,qgis,scraper,urllib2,gephuria,epeiros" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html&title=%CE%A7%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CF%8C%CE%BD%CF%84%CE%B1%CF%82%20%CF%84%CE%B1%20%CF%80%CE%AD%CF%84%CF%81%CE%B9%CE%BD%CE%B1%20%CE%B3%CE%B5%CF%86%CF%8D%CF%81%CE%B9%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%97%CF%80%CE%B5%CE%AF%CF%81%CE%BF%CF%85%E2%80%A6&summary=H%20%CE%B4%CE%B9%CE%B1%CE%B8%CE%B5%CF%83%CE%B9%CE%BC%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20%CE%A0%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF%20%CE%99%CF%89%CE%B1%CE%BD%CE%BD%CE%AF%CE%BD%CF%89%CE%BD%2C%20%CE%BC%CE%B5%CF%84%CE%B1%CE%BE%CF%8D%20%CE%B1%CF%85%CF%84%CF%8E%CE%BD%0A%CE%BA%CE%B1%CE%B9%20%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD%2C%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CF%80%CE%AD%CF%84%CF%81%CE%B9%CE%BD%CE%B1%20%CE%B3%CE%B5%CF%86%CF%8D%CF%81%CE%B9%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%97%CF%80%CE%B5%CE%AF%CF%81%CE%BF%CF%85%20%CF%83%CF%84%CE%BF%20%CE%B4%CE%B9%CE%B1%CE%B4%CE%AF%CE%BA%CF%84%CF%85%CE%BF%20%28http%3A//www.petrinagefiria.uoi.gr/%29%20%CE%B4%CE%AF%CE%BD%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%0A%CF%87%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%AC%CF%86%CE%B7%CF%83%CE%B7%CF%82%20%CE%B1%CF%85%CF%84%CE%AE%CF%82%20%CF%84%CE%B7%CF%82%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1%CF%82%20%CE%BC%CE%B5%20%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CF%8C%20%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D%20%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%20%CE%B1%CE%BB%CE%BB%CE%AC%0A%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%CE%BD%20%CF%80%CE%B5%CF%81%CE%B1%CE%B9%CF%84%CE%AD%CF%81%CF%89%20%CE%AD%CE%BB%CE%B5%CE%B3%CF%87%CE%BF%20%CF%84%CE%B7%CF%82%20%CE%B5%CE%B3%CE%BA%CF%85%CF%81%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CF%84%CF%89%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD.%20%CE%9C%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%B2%CE%BF%CE%AE%CE%B8%CE%B5%CE%B9%CE%B1%0A%CF%84%CE%B7%CF%82%20%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1%CF%82%20%CE%A4%CE%BF%20%E2%80%A6&source=https%3A//geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=%CE%A7%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CF%8C%CE%BD%CF%84%CE%B1%CF%82%20%CF%84%CE%B1%20%CF%80%CE%AD%CF%84%CF%81%CE%B9%CE%BD%CE%B1%20%CE%B3%CE%B5%CF%86%CF%8D%CF%81%CE%B9%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%97%CF%80%CE%B5%CE%AF%CF%81%CE%BF%CF%85%E2%80%A6&u=https%3A//geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=%CE%A7%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CF%8C%CE%BD%CF%84%CE%B1%CF%82%20%CF%84%CE%B1%20%CF%80%CE%AD%CF%84%CF%81%CE%B9%CE%BD%CE%B1%20%CE%B3%CE%B5%CF%86%CF%8D%CF%81%CE%B9%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%97%CF%80%CE%B5%CE%AF%CF%81%CE%BF%CF%85%E2%80%A6&amp;body=https%3A//geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html&title=%CE%A7%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CF%8C%CE%BD%CF%84%CE%B1%CF%82%20%CF%84%CE%B1%20%CF%80%CE%AD%CF%84%CF%81%CE%B9%CE%BD%CE%B1%20%CE%B3%CE%B5%CF%86%CF%8D%CF%81%CE%B9%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%97%CF%80%CE%B5%CE%AF%CF%81%CE%BF%CF%85%E2%80%A6" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html"
+                       rel="bookmark"
+                       title="Permalink to Χαρτογραφόντας τα πέτρινα γεφύρια της Ηπείρου…">
+                        Χαρτογραφόντας τα πέτρινα γεφύρια της Ηπείρου…
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2009-08-31T00:10:00+03:00"> Δευ 31 Αυγούστου 2009</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/gis.html">GIS</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/ftools.html">fTools</a>
+        /
+	<a href="https://geographer.gr/tag/inkscape.html">inkscape</a>
+        /
+	<a href="https://geographer.gr/tag/ogr.html">ogr</a>
+        /
+	<a href="https://geographer.gr/tag/python.html">python</a>
+        /
+	<a href="https://geographer.gr/tag/qgis.html">qgis</a>
+        /
+	<a href="https://geographer.gr/tag/scraper.html">scraper</a>
+        /
+	<a href="https://geographer.gr/tag/urllib2.html">urllib2</a>
+        /
+	<a href="https://geographer.gr/tag/gephuria.html">γεφύρια</a>
+        /
+	<a href="https://geographer.gr/tag/epeiros.html">Ήπειρος</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><img src="https://geographer.gr/images/m1.jpg"/></p>
+<p>H διαθεσιμότητα δεδομένων από το Πανεπιστήμιο Ιωαννίνων, μεταξύ αυτών
+και γεωγραφικών, για τα πέτρινα γεφύρια της Ηπείρου στο διαδίκτυο (<a class="uri" href="http://www.petrinagefiria.uoi.gr/">http://www.petrinagefiria.uoi.gr/</a>) δίνει την δυνατότητα
+χαρτογράφησης αυτής της πληροφορίας με λογισμικό ανοικτού κώδικα αλλά
+και τον περαιτέρω έλεγχο της εγκυρότητας των δεδομένων. Με την βοήθεια
+της γλώσσας Το γεφύρι της Άρταςπρογραμματισμού <a href="http://www.petrinagefiria.uoi.gr/">Python</a> και με δεδομένο ότι
+οι σχετικές ιστοσελίδες για τα γεφύρια δημιουργούνται δυναμικά μέσω της
+γλώσσας PHP και κατά συνέπεια διατηρούν μια κοινή δομή, είναι δυνατή η
+προσπέλαση τους και η απόσπαση συγκεκριμένων πληροφοριών με την
+βιβλιοθήκη <a href="https://docs.python.org/library/urllib2.html">urllib2</a>. Στην
+συνέχεια με την χρήση της βιβλιοθήκης <a href="http://www.osgeo.org/">OSGeo</a> μετατρέψαμε τις απαραίτητες
+πληροφορίες σε αρχείο <a href="https://en.wikipedia.org/wiki/Shapefile">shapefile</a> όπου
+αποθηκεύτηκαν τα απαραίτητα χωρικά και περιγραφικά δεδομένα.</p>
+<p>Παρακάτω διατίθεται ο κώδικας:</p>
+<pre><code># -*- coding: utf-8 -*-
+import html5lib
+from html5lib import treebuilders
+import urllib2,  re
+from osgeo import ogr
+from osgeo import osr
+import os
+def writeshp(path,  SRS,  gefiria):
+    outShapeFile = path
+    drv = ogr.GetDriverByName('ESRI Shapefile')    
+    errors=[]
+    if os.path.exists(str(outShapeFile)):
+        drv.DeleteDataSource(str(outShapeFile))
+        print "Deleting shapefile that already exists: " + outShapeFile
+ 
+    # Create SpatialReference
+    t_srs = osr.SpatialReference()
+ 
+    if SRS=='Greek Grid':
+        print "Greek Grid is the GRS for the shapefile"
+        t_srs.ImportFromProj4("+proj=tmerc +lon_0=24 +k=.9996 +x_0=500000 +towgs84=-199.72,74.03,246.02+ellps=GRS80")#Greek Grid  
+    else:
+        t_srs.SetFromUserInput('WGS84')
+        print "WGS84 is the GRS for the shapefile"
+ 
+    ds = drv.CreateDataSource(outShapeFile)
+    print "Creating shapefile: " + outShapeFile
+    layer = ds.CreateLayer(ds.GetName(), geom_type = ogr.wkbPoint, srs = t_srs)
+ 
+#Τα πεδία με το όνομα τους και τις ιδιότητές τους    
+    fields=[['NAME',  ogr.OFTString, 255],
+           ['GEFYRIID',  ogr.OFTInteger] ,  
+           ['lamda',  ogr.OFTReal] ,  
+           ['phi',  ogr.OFTReal] ,  
+           ['RIVERCODE',  ogr.OFTString, 20],  
+           ['NOMOS',  ogr.OFTString, 25],  
+           ['KOINOTHTA',  ogr.OFTString, 100],  
+           ['PLACE',  ogr.OFTString, 255],  
+           ['RIVER',  ogr.OFTString, 100],  
+           ['HEIGHT',  ogr.OFTInteger],  
+           ['ODIKO',  ogr.OFTString, 255],
+           ['PARAKEIM',  ogr.OFTString, 255],
+           ['DATE',  ogr.OFTString, 15],
+           ['BUILDERS',  ogr.OFTString, 255],
+           ['XORIGOS',  ogr.OFTString, 255],
+           ['DAPANI',  ogr.OFTString, 255],
+           ['SINTIRISI',  ogr.OFTString, 255],
+           ['ALLA',  ogr.OFTString, 255],
+           ['MORFI',  ogr.OFTString, 255],
+           ['MEGETHOS',  ogr.OFTString, 255],
+           ['YLIKA',  ogr.OFTString, 255],
+           ['KATASTASH',  ogr.OFTString, 255],
+           ['EPIGRAFH',  ogr.OFTString, 255],
+           ['ISTOR_LAO',  ogr.OFTString, 500],
+           ['BIBLIOG',  ogr.OFTString, 500],
+           ['MARTIRIES',  ogr.OFTString, 255]
+            ]
+#Δύο ειδικά πεδία για τις συντεταγμένες στο ΕΓΣΑ '87 
+    if SRS=='Greek Grid':
+        print "Creating Field X..."
+        layer.CreateField(ogr.FieldDefn('X', ogr.OFTReal))
+        print "Creating Field Y..."
+        layer.CreateField(ogr.FieldDefn('Y', ogr.OFTReal))
+ 
+#Δημιουργία πεδίων
+    for field in fields:
+#        print field[0]
+        fieldname=field[0]
+        fieldproperty=field[1]
+        print "Creating Field "  + fieldname
+        ofield  = ogr.FieldDefn(fieldname, fieldproperty)
+        if fieldproperty ==4:#Ειδικό property αν είναι string
+            print "string is"
+            fieldlen=field[2]
+            ofield.SetWidth(fieldlen)
+        layer.CreateField(ofield)
+ 
+    print "Creating geometry object..."
+    geom = ogr.Geometry(type=ogr.wkbPoint)      
+ 
+    print "Adding shapes to shapefile..."
+    for gefyri in gefyria:
+        #print gefyri[6]
+ 
+        try:
+            coods= converttoDD(gefyri[7])#Get the sixth field, coordinates
+        except:
+            print "Error at coordinates for gefyri:" + str(gefyri[1]) + "with ID:" +  str(gefyri[0])
+            errors.append([gefyri[0] , gefyri[1]] )
+            continue
+        print "Adding point with coordinates " + str(coods[0] )+ "," + str(coods[1])
+        geom.AddPoint(coods[0],coods[1])#Add a point with the Coordinates
+ 
+        #Μετατροπή των συντεταγμένων σε περίπτωση που έχει επιλεγθεί το ΕΓΣΑ '87
+        if SRS=='Greek Grid':
+            sourceSR = osr.SpatialReference()
+            sourceSR.SetFromUserInput('WGS84') #Geo WGS84
+            targetSR = osr.SpatialReference()
+            targetSR.ImportFromProj4("+proj=tmerc +lon_0=24 +k=.9996 +x_0=500000 +towgs84=-199.72,74.03,246.02+ellps=GRS80")
+            #targetSR.SetFromUserInput('EPSG:2100') #Greek Grid
+            coordTrans = osr.CoordinateTransformation(sourceSR, targetSR)
+            print "Converting point coordinates to Greek Grid...."
+            geom.Transform(coordTrans)        
+            print "The coordinates in Greek Grid are " + str(geom.GetX()) +"," + str(geom.GetY())
+ 
+        feat = ogr.Feature(feature_def=layer.GetLayerDefn())
+        print "Importing shape into feature."
+        feat.SetGeometry(geom)
+        print "Importing attributes into feature."
+        if SRS=='Greek Grid':
+            feat.SetField('X',geom.GetX() )
+            feat.SetField('Y',geom.GetY() )
+ 
+        feat.SetField('NAME',gefyri[1] )
+        feat.SetField('GEFYRIID', gefyri[0] )
+        feat.SetField('lamda',coods[0] )
+        feat.SetField('phi',coods[1] )
+        feat.SetField('MORFI',gefyri[16] )
+        feat.SetField('RIVERCODE',checkrivers(gefyri[6]) )
+        feat.SetField('NOMOS',gefyri[3])
+        feat.SetField('KOINOTHTA',gefyri[4])
+        feat.SetField('PLACE',gefyri[5] )
+        feat.SetField('RIVER',gefyri[6])
+        feat.SetField('HEIGHT',gefyri[8] )     
+        feat.SetField('PARAKEIM',gefyri[9] )     
+        feat.SetField('DATE',gefyri[10] )           
+        feat.SetField('BUILDERS',gefyri[11] )           
+        feat.SetField('XORIGOS',gefyri[12] )          
+        feat.SetField('DAPANI',gefyri[13] )  
+        feat.SetField('SINTIRISI',gefyri[14] )     
+        feat.SetField('ALLA',gefyri[15] )    
+        feat.SetField('MORFI',gefyri[16] )     
+        feat.SetField('MEGETHOS',gefyri[17] )     
+        feat.SetField('YLIKA',gefyri[18] ) 
+        feat.SetField('KATASTASH',gefyri[19] )     
+        feat.SetField('EPIGRAFH',gefyri[20] )     
+        feat.SetField('ISTOR_LAO',gefyri[21] )      
+        feat.SetField('BIBLIOG',gefyri[22] )     
+        feat.SetField('MARTIRIES',gefyri[23] )
+        feat.SetField('ODIKO',gefyri[24] )
+ 
+        layer.CreateFeature(feat)
+ 
+    #Clean up objects  
+    feat.Destroy()
+    ds.Destroy()
+ 
+    if len(errors)&amp;gt;0:
+        print "There are " + str(len(errors) )+"errors"
+        for gefyri in errors:
+            print "Errors in coordinates for:" +gefyri[1] + " with id:" + gefyri[0]
+ 
+def getdata (www):
+    parser=html5lib.HTMLParser(tree=treebuilders.getTreeBuilder("beautifulsoup"))
+    id = www[47:len(www)]
+ 
+    print  "Parsing data from " + www
+    tree=parser.parse(urllib2.urlopen(www))
+    data=tree.findAll("td")
+    cells=data[0:]#convert to list
+ 
+#    Αν δεν υπάρχουν καθόλου κελιά με φωτογραφίες τότε ο συνολικός αριθμός των κελιών είναι 83
+    if len(cells) == 79 :
+        plus = -4
+    if len(cells) == 80 :
+        plus = -3
+    if len(cells) == 81 :
+        plus = -2
+    if len(cells) == 82 :
+        plus = -1
+    if len(cells) == 83 :
+        plus = 0
+#    Αν δεν υπάρχει ένα κελίμε φωτογραφίες τότε ο συνολικός αριθμός των κελιών είναι 84 κτλ.     
+    if len(cells) == 84 :
+        plus = 1
+ 
+    if len(cells) == 85 :
+        plus = 2
+ 
+    if len(cells) == 86 :
+        plus = 3
+    if len(cells) == 87 :
+        plus = 4
+ 
+    if len(cells) == 88 :
+        plus = 5
+ 
+    if len(cells) == 89 :
+        plus = 6    
+    if len(cells) == 90 :
+        plus = 7
+    if len(cells) == 91 :
+        plus = 8
+#Η εύρεση των απαραίτητων κελιών γίνεται δυναμικά καθώς ο αριθμός των κελιών με τις φωτογραφίες δεν είναι πάντα σταθερός
+    td=[id, cells[16],  cells[18],   cells[25+plus],  cells[27+plus],  cells[29+plus],  cells[31+plus], cells[33+plus], cells[35+plus], cells[39+plus], cells[42+plus], cells[44+plus], cells[46+plus], cells[48+plus],  cells[50+plus],  cells[52+plus], cells[55+plus],  cells[57+plus],   cells[59+plus],   cells[61+plus],   cells[63+plus],   cells[66+plus],   cells[68+plus],   cells[70+plus],  cells[37+plus],]
+    p = re.compile(r'&amp;lt;.*?&amp;gt;')#αφαιρούμε τα html tags και κρατάμε μόνο τα περιεχόμενα του κελιού
+ 
+    data=[]
+ 
+    for i in td:
+        cellcontents = p.sub('', str(i)).strip()#αφαιρούμε περιττά κενά στην αρχή και το τελός των περιεχομένων του κελιού
+        cleancellcontents=cellcontents.replace("n", "") #αφαιρούμε περιττούς χαρακτήρες που ορίζουν νέες γραμμές
+        cleancellcontents=cleancellcontents.replace("t", "") #αφαιρούμε περιττούς χαρακτήρες tab
+        cleancellcontents=cleancellcontents.strip()
+        data.append(cleancellcontents)
+ 
+    return data
+ 
+def converttoDD(coords):
+        #Καθαρίζω τις συντεταγμένες από περιττούς χαρακτήρες και κενά
+        coords= coords.replace(' ', '')
+        coords= coords.replace('N', '')
+        coords= coords.replace('E', '')
+        coords= coords.replace('Ν', '')#Ν με ελληνικούς χαρακτήρες
+        coords= coords.replace('Ε', '')#Ε με ελληνικούς χαρακτήρες
+        coords= coords.replace(',', '')
+        coords= coords.replace('΄', '')
+        coords= coords.replace(';', '')
+        coords= coords.replace('°', '')
+        coords= coords.replace('.', '')
+        coords= coords.replace('`', '')
+ 
+        y= float( coords[0:2]) + (float( coords[2:4])/60)  + ((  float(coords[4:6] ) +  float(coords[6:7])/10)  /3600)
+        x= float( coords[8:10]) + (float( coords[10:12])/60)  + ((  float(coords[12:14] ) +  float(coords[14:15])/10)  /3600)
+ 
+        xy=[x, y]
+ 
+        return xy
+ 
+def checkrivers(river):
+    if river.find("Αχέροντας") &amp;gt;= 0:
+        return "axerontas"
+    if river.find("ραχθος") &amp;gt;= 0:
+        return "araxthos"
+    if river.find("Αώος") &amp;gt;= 0:
+        return "aoos"
+    if river.find("Δρίνος") &amp;gt;= 0:
+        return "drinos"
+    if river.find("Καλαμάς") &amp;gt;= 0:
+        return "kalamas"
+    if river.find("Ξάνθος") &amp;gt;= 0:
+        return "ksanthos"
+ 
+gefiriid=1
+gefyria=[]
+while gefiriid</code></pre>
+<p>Αφού εκτελέστηκε το script εντοπίστηκαν 18 εγγραφές (γεφύρια) με
+λανθασμένες ή ελλειπώς καταγεγγραμένες συντεταγμένες. Στον επόμενο
+πίνακα παρατίθενται τα γεφύρια αυτά μαζί με τα ID τους.</p>
+<p><strong>Πίνακας 1.</strong> Γεφύρια με λανθασμένες συντεταγμένες</p>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th></th>
+<th>Ονομασία γεφυριού</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>15</td>
+<td></td>
+<td>Γεφύρι στο Μεγάλο Λαγκάδι</td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td></td>
+<td>Γεφύρι του Βουρκοπόταμου</td>
+</tr>
+<tr class="odd">
+<td>36</td>
+<td></td>
+<td>Γεφύρι του Στέργιου</td>
+</tr>
+<tr class="even">
+<td>47</td>
+<td></td>
+<td>Γεφύρι της Θεοτόκου</td>
+</tr>
+<tr class="odd">
+<td>82</td>
+<td></td>
+<td>Καλογερικό γεφύρι ή Πλακίδα</td>
+</tr>
+<tr class="even">
+<td>84</td>
+<td></td>
+<td>Γεφύρι στη Βρύση του Δεσπότη</td>
+</tr>
+<tr class="odd">
+<td>85</td>
+<td></td>
+<td>Γεφύρι του Μύλου</td>
+</tr>
+<tr class="even">
+<td>95</td>
+<td></td>
+<td>Γεφύρι στον Λάκκο Ρωμιάς ή Γεφύρι στις Μιάσες</td>
+</tr>
+<tr class="odd">
+<td>105</td>
+<td></td>
+<td>Γεφύρι του Μύλου (Κήπων)</td>
+</tr>
+<tr class="even">
+<td>108</td>
+<td></td>
+<td>Γεφύρι στον Άγιο</td>
+</tr>
+<tr class="odd">
+<td>110</td>
+<td></td>
+<td>Γεφύρι του Πετσώνη</td>
+</tr>
+<tr class="even">
+<td>128</td>
+<td></td>
+<td>Γεφύρι του Κώτη</td>
+</tr>
+<tr class="odd">
+<td>130</td>
+<td></td>
+<td>Γεφύρι της Γκούρας</td>
+</tr>
+<tr class="even">
+<td>136</td>
+<td></td>
+<td>Γεφύρι της Γκάνας</td>
+</tr>
+<tr class="odd">
+<td>141</td>
+<td></td>
+<td>Γεφύρι του Λώλη ή του Λάκκου</td>
+</tr>
+<tr class="even">
+<td>142</td>
+<td></td>
+<td>Γεφύρι στον Άγιο Νικόλαο</td>
+</tr>
+<tr class="odd">
+<td>143</td>
+<td></td>
+<td>Γεφύρι της Πλάκας</td>
+</tr>
+<tr class="even">
+<td>149</td>
+<td></td>
+<td>Γεφύρι της Άρτας</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p>Το shapefile με τις θέσεις των γεφυριών εντάχθηκε σε ένα σύστημα
+γεωγραφικών πληροφοριών με σκοπό την χαρτογράφησή του όπου περιλαμβάνει
+του ψηφιακό μοντέλο εδάφους, το υδρογραφικό δίκτυο, τις λίμνες και τα
+διοικητικά όρια των νομών. Το λογισμικό ΣΓΠ που χρησιμοποιήθηκε είναι το
+<a href="http://www.qgis.org/">QGIS</a> (ανοικτού κώδικα). Τα πεδία που
+περιέχει η σχετική ιστοσελίδα για κάθε γεφύρι μετατρέπονται σε πεδία του
+αρχείου shapefile όπου ο χρήστης μπορεί να αναζητήσει πληροφορίες καθώς
+πλοηγείται στο QGIS (μέσω του εργαλείου Identify) ή να εκτελέσει
+ερωτήματα τύπου SQL (π.χ. αναζήτησε τα γεφύρια που εντοπίζονται στον
+Καλαμά και είναι δίτοξα).</p>
+<figure>
+<img alt="Εικόνα 1. Αναγνώριση γεφυριού στο QGIS με το εργαλείο Identify" src="https://geographer.gr/images/identify.jpg"/>
+<figcaption aria-hidden="true">Εικόνα 1. Αναγνώριση γεφυριού στο QGIS με
+το εργαλείο Identify</figcaption>
+</figure>
+<p><br/></p>
+<figure>
+<img alt="Εικόνα 2. Αναζήτηση δεδομένων με την σύνταξη ερωτημάτων μορφής SQL" src="https://geographer.gr/images/sql.jpg"/>
+<figcaption aria-hidden="true">Εικόνα 2. Αναζήτηση δεδομένων με την
+σύνταξη ερωτημάτων μορφής SQL</figcaption>
+</figure>
+<p><br/></p>
+<p>O παρακάτω χάρτης συντάχθηκε με την χρήση του λογισμικού ανοικτού
+κώδικα Qgis ενώ η περαιτέρω γραφιστική επιμέλεια (υπομνήμα,
+σελιδοποίηση) έγινε με την βοήθεια των λογισμικών <a href="https://www.scribus.net/">Scribus</a> και <a href="https://www.inkscape.org/">Inkscape</a>.</p>
+<p><img src="https://geographer.gr/images/gefyria_sites-copy.jpg"/></p>
+<p>Άμεσα εντοπίστηκαν και τα πρώτα σφάλματα καταγραφής στις θέσεις
+κάποιων γεφυριών. Έτσι το Γεφύρι του Τρίστενου, το οποίο εντοπίζεται
+στον νομό Ιωαννίνων, χαρτογραφήθηκε στην Αλβανία, βόρεια του Βουθρωτού.
+Αλλά και το Γεφύρι της Σκαρβένας που βρίσκεται στο ρέμα Κουίτσας στον Ν.
+Ιωαννίνων χαρτογραφήθηκε στον Αμβρακικό κόλπο! Επιπλέον έλεγχος στον
+χάρτη ενδέχεται να αποκαλύψει και άλλα σφάλματα που οφείλονται στην
+λανθασμένη καταγραφή της γεωγραφικής πληροφορίας.</p>
+<p>Εντάσσοντας στο χαρτογραφικό υπόβαθρο τις λεκάνες απορροής των
+ποταμών (βλέπε Εικόνα 3) εντοπίστηκαν λανθασμένες ή αμφίβολες
+πληροφορίες όσον αφορά την κατάταξη των γεφυριών με βάση τον ποταμό στον
+οποίο εντοπίζονται. Με την χρήση του εργαλείου “Join attributes by
+Location” της εργαλειοθήκης <a href="http://www.ftools.ca/">fTools</a>
+ταυτοποιήθηκε σε ποιά λεκάνη απορροής ανήκει. Στην συνέχεια έγινε
+σύγκριση με τα δεδομένα της ιστοσελίδας όπως αυτά μεταφέρθηκαν και
+παραμετροποιήθηκαν στον πίνακα των περιγραφικών δεδομένων του shapefile.
+Για παράδειγμα το Γεφύρι του Γκούμου στην Αγία Κυριακή (Πόποβο)
+Θεσπρωτίας εμπεριέχεται στην λεκάνη απορροής του ποταμού Καλαμά και όχι
+του ποταμού Αχέροντα όπως αναφέρεται στην σχετική ιστοσελίδα (βλέπε
+Εικόνα 4).</p>
+<p>Εντοπίστηκαν τα εξής σφάλματα:</p>
+<p><strong>Πίνακας 2</strong>. Σφάλματα κατάταξης των γεφυριών ως προς
+τον ποταμό που εντάσσονται.</p>
+<table>
+<colgroup>
+<col style="width: 20%"/>
+<col style="width: 38%"/>
+<col style="width: 41%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ονομασία γεφυριού</th>
+<th>Ποταμός που αναφέρεται στην ιστοσελίδα</th>
+<th>Εντάσσεται στην λεκάνη απορροής του ποταμού</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Γεφύρι στο Κορφίτο</td>
+<td>Άραχθος</td>
+<td>Άλλο</td>
+</tr>
+<tr class="even">
+<td>Γεφύρι του Γκούμου</td>
+<td>Αχέροντας</td>
+<td>Καλαμάς</td>
+</tr>
+<tr class="odd">
+<td>Γεφύρι του Μεζάνη</td>
+<td>Αχέροντας</td>
+<td>Άλλο</td>
+</tr>
+<tr class="even">
+<td>Γεφύρι του Παπά</td>
+<td>Καλαμάς</td>
+<td>Αώος</td>
+</tr>
+<tr class="odd">
+<td>Γεφύρι στην Ποταμιά</td>
+<td>Καλαμάς</td>
+<td>Αώος</td>
+</tr>
+<tr class="even">
+<td>Γεφύρι της Γκούρας</td>
+<td>Ξάνθος</td>
+<td>Καλαμάς</td>
+</tr>
+<tr class="odd">
+<td>Γεφύρι του Κουβαρά</td>
+<td>Ξάνθος</td>
+<td>Αώος</td>
+</tr>
+<tr class="even">
+<td>Γεφύρι της Γκούμανης</td>
+<td>Άραχθος</td>
+<td>Καλαμάς</td>
+</tr>
+</tbody>
+</table>
+<p><br/> <br/> <img alt="Εικόνα 3. Οι λεκάνες απορροής" src="https://geographer.gr/images/river_basins.jpg"/> <br/> <br/></p>
+<p><img alt="Εικόνα 4. Το γεφύρι του Γκούμου σε σχέση με τις λεκάνες απορροής" src="https://geographer.gr/images/river_basins_gkoumou.jpg"/>
+<br/> <br/></p>
+<p>Με την βοήθεια του εργαλείο <a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a> είναι δυνατή η
+μετατροπή του αρχείου shapefile σε kml και η προβολή των δεδομένων στο
+Google Earth. Η σχετική εντολή συντάσσεται ως εξής :</p>
+<pre><code>ogr2ogr -f "KML" -s_srs "EPSG:2100" -t_srs "EPSG:4326" gefyria.kml gf.shp</code></pre>
+<p>Το <code>-f "KML"</code> ορίζει ότι θέλουμε το αρχείο προορισμού να
+είναι kml.</p>
+<p>Με το <code>-s_srs "EPSG:2100"</code> ορίζουμε ότι το προβολικό
+σύστημα του αρχείου προέλευσης είναι το ΕΓΣΑ ’87 (ο κωδικός EPSG του
+ΕΓΣΑ ’87 είναι 2100).</p>
+<p>Με το <code>-t_srs "EPSG:4326"</code> ορίζουμε ότι το προβολικό
+σύστημα του αρχείου προέλευσης είναι το WGS84 (το προβολικό σύστημα
+δηλαδή που χρησιμοποιεί και το Google Earth).</p>
+<p>Τέλος, τα αρχεία <code>gefyria.kml gefyria.shp</code> είναι τα αρχεία
+προορισμού και προέλευσης αντίστοιχα.</p>
+<p>Το αποτέλεσμα φαίνεται στον παρακάτω χάρτη</p>
+<p>Ενδεικτικά αναρτώνται δύο εικόνες με την απεικόνιση του αρχείου kml
+στο Google Earth.</p>
+<figure>
+<img alt="Εικόνα 5. Το γεφύρι της Τύριας." src="https://geographer.gr/images/googleearth2.jpg"/>
+<figcaption aria-hidden="true">Εικόνα 5. Το γεφύρι της
+Τύριας.</figcaption>
+</figure>
+<figure>
+<img alt="Εικόνα 6. Γενική άποψη των γεφυριών στον Ν. Ιωαννίνων" src="https://geographer.gr/images/googleearth1.jpg"/>
+<figcaption aria-hidden="true">Εικόνα 6. Γενική άποψη των γεφυριών στον
+Ν. Ιωαννίνων</figcaption>
+</figure>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2009-08-31-khartographontas-ta-petrina-gephuria-tes-epeirou';
+                        this.page.url = 'https://geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou.html';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/diaphora.html"><i class="fa fa-folder-open fa-lg"></i>Διάφορα</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2022 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>

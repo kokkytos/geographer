@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Hatt σε ΕΓΣΑ 87. Online μετατροπή συντεταγμένων - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="ArcGIS,Greek Grid,HATT,python,ΕΓΣΑ87" />
+        <meta name="description" content="Πολλά από τα χαρτογραφικά δεδομένα που διαθέτουμε στα πλαίσια της καθημερινής μας εργασίας είναι καταγγεγραμένα στο παλιό “ελληνικό” datum (ελλειψοειδές Bessel, προβολή Hatt). Δεδομένου ότι πλέον έχουμε μεταβεί στο νέο γεωδαιτικό συστήμα αναφοράς ΕΓΣΑ ‘87 είναι αναγκαίο ένα εύχρηστο εργαλείο μετατροπής συντεταγμένων. Γι’ αυτό τον σκοπό έχω δημιουργήσει δύο εργαλεία …" />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Hatt σε ΕΓΣΑ 87. Online μετατροπή συντεταγμένων"/>
+        <meta property="og:url" content="https://geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html"/>
+        <meta property="og:description" content="Πολλά από τα χαρτογραφικά δεδομένα που διαθέτουμε στα πλαίσια της καθημερινής μας εργασίας είναι καταγγεγραμένα στο παλιό “ελληνικό” datum (ελλειψοειδές Bessel, προβολή Hatt). Δεδομένου ότι πλέον έχουμε μεταβεί στο νέο γεωδαιτικό συστήμα αναφοράς ΕΓΣΑ ‘87 είναι αναγκαίο ένα εύχρηστο εργαλείο μετατροπής συντεταγμένων. Γι’ αυτό τον σκοπό έχω δημιουργήσει δύο εργαλεία …"/>
+        <meta property="article:published_time" content="2010-11-03" />
+            <meta property="article:section" content="GIS" />
+            <meta property="article:tag" content="ArcGIS" />
+            <meta property="article:tag" content="Greek Grid" />
+            <meta property="article:tag" content="HATT" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="ΕΓΣΑ87" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/gis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer GIS ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116514702-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', UA-116514702-1);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                        <li >
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+                        </li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/gis.html" title="GIS">GIS</a></li>
+                <li class="active">Hatt σε ΕΓΣΑ 87. Online μετατροπή συντεταγμένων</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=Hatt%20%CF%83%CE%B5%20%CE%95%CE%93%CE%A3%CE%91%2087.%20Online%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD&url=https%3A//geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=Hatt%20%CF%83%CE%B5%20%CE%95%CE%93%CE%A3%CE%91%2087.%20Online%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD&url=https%3A//geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html&hashtags=arcgis,greek-grid,hatt,python,egsa87" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html&title=Hatt%20%CF%83%CE%B5%20%CE%95%CE%93%CE%A3%CE%91%2087.%20Online%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD&summary=%CE%A0%CE%BF%CE%BB%CE%BB%CE%AC%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B1%20%CF%87%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CF%80%CE%BF%CF%85%20%CE%B4%CE%B9%CE%B1%CE%B8%CE%AD%CF%84%CE%BF%CF%85%CE%BC%CE%B5%20%CF%83%CF%84%CE%B1%20%CF%80%CE%BB%CE%B1%CE%AF%CF%83%CE%B9%CE%B1%20%CF%84%CE%B7%CF%82%0A%CE%BA%CE%B1%CE%B8%CE%B7%CE%BC%CE%B5%CF%81%CE%B9%CE%BD%CE%AE%CF%82%20%CE%BC%CE%B1%CF%82%20%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%BA%CE%B1%CF%84%CE%B1%CE%B3%CE%B3%CE%B5%CE%B3%CF%81%CE%B1%CE%BC%CE%AD%CE%BD%CE%B1%20%CF%83%CF%84%CE%BF%20%CF%80%CE%B1%CE%BB%CE%B9%CF%8C%20%E2%80%9C%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C%E2%80%9D%20datum%0A%28%CE%B5%CE%BB%CE%BB%CE%B5%CE%B9%CF%88%CE%BF%CE%B5%CE%B9%CE%B4%CE%AD%CF%82%20Bessel%2C%20%CF%80%CF%81%CE%BF%CE%B2%CE%BF%CE%BB%CE%AE%20Hatt%29.%0A%CE%94%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%BF%CF%85%20%CF%8C%CF%84%CE%B9%20%CF%80%CE%BB%CE%AD%CE%BF%CE%BD%20%CE%AD%CF%87%CE%BF%CF%85%CE%BC%CE%B5%20%CE%BC%CE%B5%CF%84%CE%B1%CE%B2%CE%B5%CE%AF%20%CF%83%CF%84%CE%BF%20%CE%BD%CE%AD%CE%BF%20%CE%B3%CE%B5%CF%89%CE%B4%CE%B1%CE%B9%CF%84%CE%B9%CE%BA%CF%8C%20%CF%83%CF%85%CF%83%CF%84%CE%AE%CE%BC%CE%B1%20%CE%B1%CE%BD%CE%B1%CF%86%CE%BF%CF%81%CE%AC%CF%82%0A%CE%95%CE%93%CE%A3%CE%91%20%E2%80%9887%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BA%CE%B1%CE%AF%CE%BF%20%CE%AD%CE%BD%CE%B1%20%CE%B5%CF%8D%CF%87%CF%81%CE%B7%CF%83%CF%84%CE%BF%20%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%BF%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%CF%82%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD.%0A%CE%93%CE%B9%E2%80%99%20%CE%B1%CF%85%CF%84%CF%8C%20%CF%84%CE%BF%CE%BD%20%CF%83%CE%BA%CE%BF%CF%80%CF%8C%20%CE%AD%CF%87%CF%89%20%CE%B4%CE%B7%CE%BC%CE%B9%CE%BF%CF%85%CF%81%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%20%CE%B4%CF%8D%CE%BF%20%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1%20%E2%80%A6&source=https%3A//geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=Hatt%20%CF%83%CE%B5%20%CE%95%CE%93%CE%A3%CE%91%2087.%20Online%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD&u=https%3A//geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=Hatt%20%CF%83%CE%B5%20%CE%95%CE%93%CE%A3%CE%91%2087.%20Online%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD&amp;body=https%3A//geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html&title=Hatt%20%CF%83%CE%B5%20%CE%95%CE%93%CE%A3%CE%91%2087.%20Online%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html"
+                       rel="bookmark"
+                       title="Permalink to Hatt σε ΕΓΣΑ 87. Online μετατροπή συντεταγμένων">
+                        Hatt σε ΕΓΣΑ 87. Online μετατροπή συντεταγμένων
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2010-11-03T10:20:00+02:00"> Τετ 03 Νοεμβρίου 2010</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/gis.html">GIS</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/arcgis.html">ArcGIS</a>
+        /
+	<a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
+        /
+	<a href="https://geographer.gr/tag/hatt.html">HATT</a>
+        /
+	<a href="https://geographer.gr/tag/python.html">python</a>
+        /
+	<a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><img src="https://geographer.gr/images/hatt.jpg"/></p>
+<p>Πολλά από τα χαρτογραφικά δεδομένα που διαθέτουμε στα πλαίσια της
+καθημερινής μας εργασίας είναι καταγγεγραμένα στο παλιό “ελληνικό” datum
+(<strong>ελλειψοειδές Bessel</strong>, <strong>προβολή Hatt</strong>).
+Δεδομένου ότι πλέον έχουμε μεταβεί στο νέο γεωδαιτικό συστήμα αναφοράς
+ΕΓΣΑ ‘87 είναι αναγκαίο ένα εύχρηστο εργαλείο μετατροπής συντεταγμένων.
+Γι’ αυτό τον σκοπό έχω δημιουργήσει δύο εργαλεία:</p>
+<ol type="1">
+<li><p><a href="http://arcscripts.esri.com/details.asp?dbid=15500">Hatt
+to Greek Grid (EGSA ’87)</a>, το συγκεκριμένο εργαλείο χρησιμοποιεί το
+περιβάλλον εργασίας του Arcgis και είναι γραμμένο σε Python. Ορίζετε ένα
+πλήθος σημείων Hatt καταγγεγραμένα σε αρχείο txt και σας επιστρέψει ένα
+αρχείο των ίδιων σημείων σε ΕΓΣΑ ’87. Επίσης, μπορείτε να επιλέξετε αν
+το αποτέλεσμα θα σας επιστραφεί και σαν αρχείο shapefile (σημειακό και
+γραμμικό).</p></li>
+<li><p><a href="http://www.geographer.gr/ci/index.php/hatt/">Online
+εργαλειο μετατροπήs από Hatt σε ΕΓΣΑ ’87</a>. Το εργαλείο αυτό σας δίνει
+την δυνατότητα να μετατρέψετε Online το σημείο σας και να το προβάλλετε
+μάλιστα άμεσα είτε στο <a href="https://maps.google.com/">Google
+Maps</a> είτε στο <a href="https://www.openstreetmap.org/">OpenStreetMap</a>. Παράλληλα,
+μπορείτε να προβάλλετε το Φ.Χ. που επιλέγετε στο Google maps αλλά και να
+δείτε τους συντελεστές μετατροπής του σχετικού πολυωνύμου που
+χρησιμοποιείται για την μετατροπή.</p></li>
+</ol>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2010-11-03-hatt-se-egsa-87-online-metatrope-suntetagmenon';
+                        this.page.url = 'https://geographer.gr/hatt-se-egsa-87-online-metatrope-suntetagmenon.html';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/diaphora.html"><i class="fa fa-folder-open fa-lg"></i>Διάφορα</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2022 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>

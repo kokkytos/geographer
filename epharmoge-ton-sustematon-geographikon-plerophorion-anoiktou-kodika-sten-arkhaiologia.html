@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Εφαρμογή των Συστημάτων Γεωγραφικών Πληροφοριών ανοικτού κώδικα στην αρχαιολογία - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="GIS,Mapwindow,αρχαιολογία" />
+        <meta name="description" content="H χρήση των υπολογιστικών συστημάτων στην αρχαιολογία σηματοδότησε παράλληλα και την έλευση των Συστημάτων Γεωγραφικών Πληροφοριών (G.I.S.). Ιδιαίτερα για την αρχαιολογία, τα δεδομένα της οποίας είναι διάσπαρτα στον χώρο και τον χρόνο τα GIS αποτελούν ένα σύμμαχο στο πλευρό του αρχαιολόγου τόσο γιατί του παρέχει την δυνατότητα ολοκληρωμένης …" />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Εφαρμογή των Συστημάτων Γεωγραφικών Πληροφοριών ανοικτού κώδικα στην αρχαιολογία"/>
+        <meta property="og:url" content="https://geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html"/>
+        <meta property="og:description" content="H χρήση των υπολογιστικών συστημάτων στην αρχαιολογία σηματοδότησε παράλληλα και την έλευση των Συστημάτων Γεωγραφικών Πληροφοριών (G.I.S.). Ιδιαίτερα για την αρχαιολογία, τα δεδομένα της οποίας είναι διάσπαρτα στον χώρο και τον χρόνο τα GIS αποτελούν ένα σύμμαχο στο πλευρό του αρχαιολόγου τόσο γιατί του παρέχει την δυνατότητα ολοκληρωμένης …"/>
+        <meta property="article:published_time" content="2010-05-10" />
+            <meta property="article:section" content="GIS" />
+            <meta property="article:tag" content="GIS" />
+            <meta property="article:tag" content="Mapwindow" />
+            <meta property="article:tag" content="αρχαιολογία" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/gis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer GIS ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116514702-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', UA-116514702-1);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                        <li >
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+                        </li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/gis.html" title="GIS">GIS</a></li>
+                <li class="active">Εφαρμογή των Συστημάτων Γεωγραφικών Πληροφοριών ανοικτού κώδικα στην αρχαιολογία</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=%CE%95%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CF%84%CF%89%CE%BD%20%CE%A3%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD%20%CE%93%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD%20%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D%20%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1&url=https%3A//geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=%CE%95%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CF%84%CF%89%CE%BD%20%CE%A3%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD%20%CE%93%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD%20%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D%20%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1&url=https%3A//geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html&hashtags=gis,mapwindow,arkhaiologia" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html&title=%CE%95%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CF%84%CF%89%CE%BD%20%CE%A3%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD%20%CE%93%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD%20%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D%20%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1&summary=H%20%CF%87%CF%81%CE%AE%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CF%85%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8E%CE%BD%20%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1%20%CF%83%CE%B7%CE%BC%CE%B1%CF%84%CE%BF%CE%B4%CF%8C%CF%84%CE%B7%CF%83%CE%B5%0A%CF%80%CE%B1%CF%81%CE%AC%CE%BB%CE%BB%CE%B7%CE%BB%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%AD%CE%BB%CE%B5%CF%85%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CE%A3%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD%20%CE%93%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD%0A%28G.I.S.%29.%20%CE%99%CE%B4%CE%B9%CE%B1%CE%AF%CF%84%CE%B5%CF%81%CE%B1%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1%2C%20%CF%84%CE%B1%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%BF%CF%80%CE%BF%CE%AF%CE%B1%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%0A%CE%B4%CE%B9%CE%AC%CF%83%CF%80%CE%B1%CF%81%CF%84%CE%B1%20%CF%83%CF%84%CE%BF%CE%BD%20%CF%87%CF%8E%CF%81%CE%BF%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%CE%BD%20%CF%87%CF%81%CF%8C%CE%BD%CE%BF%20%CF%84%CE%B1%20GIS%20%CE%B1%CF%80%CE%BF%CF%84%CE%B5%CE%BB%CE%BF%CF%8D%CE%BD%20%CE%AD%CE%BD%CE%B1%20%CF%83%CF%8D%CE%BC%CE%BC%CE%B1%CF%87%CE%BF%20%CF%83%CF%84%CE%BF%0A%CF%80%CE%BB%CE%B5%CF%85%CF%81%CF%8C%20%CF%84%CE%BF%CF%85%20%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CF%8C%CE%B3%CE%BF%CF%85%20%CF%84%CF%8C%CF%83%CE%BF%20%CE%B3%CE%B9%CE%B1%CF%84%CE%AF%20%CF%84%CE%BF%CF%85%20%CF%80%CE%B1%CF%81%CE%AD%CF%87%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%0A%CE%BF%CE%BB%CE%BF%CE%BA%CE%BB%CE%B7%CF%81%CF%89%CE%BC%CE%AD%CE%BD%CE%B7%CF%82%20%E2%80%A6&source=https%3A//geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=%CE%95%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CF%84%CF%89%CE%BD%20%CE%A3%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD%20%CE%93%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD%20%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D%20%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1&u=https%3A//geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=%CE%95%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CF%84%CF%89%CE%BD%20%CE%A3%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD%20%CE%93%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD%20%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D%20%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1&amp;body=https%3A//geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html&title=%CE%95%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CF%84%CF%89%CE%BD%20%CE%A3%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD%20%CE%93%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD%20%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D%20%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html"
+                       rel="bookmark"
+                       title="Permalink to Εφαρμογή των Συστημάτων Γεωγραφικών Πληροφοριών ανοικτού κώδικα στην αρχαιολογία">
+                        Εφαρμογή των Συστημάτων Γεωγραφικών Πληροφοριών ανοικτού κώδικα στην αρχαιολογία
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2010-05-10T00:00:00+03:00"> Δευ 10 Μαΐου 2010</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/gis.html">GIS</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/gis.html">GIS</a>
+        /
+	<a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
+        /
+	<a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>H χρήση των υπολογιστικών συστημάτων στην αρχαιολογία σηματοδότησε
+παράλληλα και την έλευση των Συστημάτων Γεωγραφικών Πληροφοριών
+(G.I.S.). Ιδιαίτερα για την αρχαιολογία, τα δεδομένα της οποίας είναι
+διάσπαρτα στον χώρο και τον χρόνο τα GIS αποτελούν ένα σύμμαχο στο
+πλευρό του αρχαιολόγου τόσο γιατί του παρέχει την δυνατότητα
+ολοκληρωμένης διαχείρισης των δεδομένων αυτών αλλά όσο και γιατί μπορεί,
+μέσω της πλήρης ενσωμάτωσης γεωφυσικών, χωροταξικών και αρχαιολογικών
+δεδομένων, να αποτελέσει ένα εργαλείο σχεδιασμού, ανάλυσης και
+πρόβλεψης.</p>
+<p>Οι ανάγκες της αρχαιολογικής έρευνας για σύνθετα αναλυτικά μοντέλα
+και διαχείριση των γεωγραφικών και περιγραφικών δεδομένων δύναται να
+καλύφθουν σε ικανοποιmwητικό βαθμό από ελεύθερο λογισμικό ανοικτού
+κώδικα. Πυλώνες της προσπάθειας αυτής αποτελούν λογισμικά ανοικτού
+κώδικα που το κάθε ένα επικεντρώνεται στην κάλυψη διαφορετικών
+απαιτήσεων και τα οποία σε ορισμένο βαθμό συνεργάζονται επιτυχώς με
+εμπορικά λογισμικά κλειστού κώδικα.</p>
+<p>Το MapWindow GIS, ελευθερο λογισμικό ανοικτού κώδικα, χρησιμοποιήθηκε
+επιτυχώς από την ΛΓ’ Εφορεία Προϊστορικών και Κλασικών Αρχαιοτήτων
+προκειμένου να υλοποιηθεί μια εφαρμογή διαχείρισης των αρχαιολογικών
+δεδομένων. Οι δυνατότητες επεκτασιμότητας που προσφέρει συνέβαλαν στην
+δημιουργία εύχρηστων φορμών και εργαλείων με την βοήθεια της VB.NET ώστε
+να καλύπτει τις ανάγκες ενός μέσου χρήστη. Η εφαρμογή που προέκυψε
+αποτελεί ένα λειτουργικό παράδειγμα του “παντρέματος” ανάμεσα σε ΕΛ/ΛΑΚ
+και λογισμικό εμπορικών-ιδιοκτησιακών αδειών χρήσης.</p>
+<p><img src="https://geographer.gr/images/mw.png"/></p>
+<p>Το GRASS GIS, το πλέον αξιόλογο ΕΛ/ΛΑΚ στον τομέα των GIS,
+χρησιμοποιήθηκε στα πλαίσια της εκπόνησης του έργου
+“Αρχαιολογικός-Ιστορικός Άτλας της Ελληνοαλβανικής μεθορίου”. Οι
+αναλυτικές του δυνατότητες και τα σύνθετα μοντέλα που μπορούν να
+εκτελεστούν στο GRASS GIS συνέβαλαν στην διεξαγωγή αξιόλογων
+συμπερασμάτων για τις περιοχές εκμετάλλευσης των αρχαίων
+κέντρων-οικισμών της περιοχής έρευνας αλλά και των πιθανών διαδρομών
+μετακίνησης κατά την αρχαιότητα.</p>
+<p>Τέλος, με την βοήθεια των Open Source βιβλιοθηκών OSGEO, Mapwindow
+GIS συντάχθηκαν διάφορα σενάρια προγραμματισμού (scripts) και λογισμικά
+γενικής και ειδικής χρήσης. Οι μελλοντικές προτάσεις για την χρήση των
+OS GIS προβλέπουν την διαχείριση αρχαιολογικών δεδομένων και διάχυση
+πληροφοριών με πλατφορμες WebMapping που θα στηρίζονται στον Apache Web
+Server, στον Mapserver, το Geomoose και την php. Τα πρώτα βήματα έχουν
+ήδη γίνει και προς αυτήν την κατεύθυνση.</p>
+<p><a href="https://www.scribd.com/fullscreen/31221573?access_key=key-vaqqic52pq6eo5o9z6t">Δείτε
+την παρουσίαση στο συνέδριο του ΕΛ/ΛΑΚ</a></p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2010-05-10-epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia';
+                        this.page.url = 'https://geographer.gr/epharmoge-ton-sustematon-geographikon-plerophorion-anoiktou-kodika-sten-arkhaiologia.html';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/diaphora.html"><i class="fa fa-folder-open fa-lg"></i>Διάφορα</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2022 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>

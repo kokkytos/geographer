@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer - Δημοσιεύσεις</title><link href="https://geographer.gr/" rel="alternate"></link><link href="https://geographer.gr/feeds/demosieuseis.atom.xml" rel="self"></link><id>https://geographer.gr/</id><updated>2022-12-14T10:20:00+02:00</updated><entry><title>Challenges in the Geo-Processing of Big Soil Spatial Data</title><link href="https://geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data.html" rel="alternate"></link><published>2022-12-14T10:20:00+02:00</published><updated>2022-12-14T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-12-14:/challenges-in-the-geo-processing-of-big-soil-spatial-data.html</id><summary type="html">&lt;p&gt;Liakos, L.; Panagos, P. Challenges in the Geo-Processing of Big Soil
+Spatial Data. Land 2022, 11, 2287. &lt;a href="https://doi.org/10.3390/land11122287"&gt;https://doi.org/10.3390/land11122287&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;European Commission, Joint Research Centre (JRC), IT-21027 Ispra,
+Italy&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This study addressed a critical resource—soil—through the prism of
+processing big data at the continental scale …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Liakos, L.; Panagos, P. Challenges in the Geo-Processing of Big Soil
+Spatial Data. Land 2022, 11, 2287. &lt;a href="https://doi.org/10.3390/land11122287"&gt;https://doi.org/10.3390/land11122287&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;European Commission, Joint Research Centre (JRC), IT-21027 Ispra,
+Italy&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This study addressed a critical resource—soil—through the prism of
+processing big data at the continental scale. Rapid progress in
+technology and remote sensing has majorly improved data processing on
+extensive spatial and temporal scales. Here, the manuscript presents the
+results of a systematic effort to geo-process and analyze soil-relevant
+data. In addition, the main highlights include the difficulties
+associated with using data infrastructures, managing big geospatial
+data, decentralizing operations through remote access, mass processing,
+and automating the data-processing workflow using advanced programming
+languages. Challenges to this study included the reproducibility of the
+results, their presentation in a communicative way, and the
+harmonization of complex heterogeneous data in space and time based on
+high standards of accuracy. Accuracy was especially important as the
+results needed to be identical at all spatial scales (from point counts
+to aggregated countrywide data). The geospatial modeling of soil
+requires analysis at multiple spatial scales, from the pixel level,
+through multiple territorial units (national or regional), and river
+catchments, to the global scale. Advanced mapping methods (e.g., zonal
+statistics, map algebra, choropleth maps, and proportional symbols) were
+used to convey comprehensive and substantial information that would be
+of use to policymakers. More specifically, a variety of cartographic
+practices were employed, including vector and raster visualization and
+hexagon grid maps at the global or European scale and in several
+cartographic projections. The information was rendered in both grid
+format and as aggregated statistics per polygon (zonal statistics),
+combined with diagrams and an advanced graphical interface. The
+uncertainty was estimated and the results were validated in order to
+present the outputs in the most robust way. The study was also
+interdisciplinary in nature, requiring large-scale datasets to be
+integrated from different scientific domains, such as soil science,
+geography, hydrology, chemistry, climate change, and agriculture.&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="big data"></category><category term="data sharing"></category><category term="ESDAC"></category><category term="European soil observatory"></category><category term="soil policy"></category></entry><entry><title>European Soil Data Centre 2.0. Soil data and knowledge in support of the EU policies</title><link href="https://geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html" rel="alternate"></link><published>2022-12-14T10:20:00+02:00</published><updated>2022-12-14T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-12-14:/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html</id><summary type="html">&lt;p&gt;Panagos, P.&lt;sup&gt;a&lt;/sup&gt;, Van Liedekerke, M.&lt;sup&gt;a&lt;/sup&gt;, Borrelli,
+P.&lt;sup&gt;b&lt;/sup&gt;, Köninger, J.&lt;sup&gt;a&lt;/sup&gt;, Ballabio, C.&lt;sup&gt;a&lt;/sup&gt;,
+Orgiazzi, A.&lt;sup&gt;a&lt;/sup&gt;, Lugato, E.&lt;sup&gt;a&lt;/sup&gt;, Liakos,
+L.&lt;sup&gt;a&lt;/sup&gt;, Hervas, J.&lt;sup&gt;a&lt;/sup&gt;, Jones, A.&lt;sup&gt;a&lt;/sup&gt;,
+Montanarella, L.&lt;sup&gt;a&lt;/sup&gt;, 2022. European Soil Data Centre 2.0: Soil
+data and knowledge in support of the EU …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Panagos, P.&lt;sup&gt;a&lt;/sup&gt;, Van Liedekerke, M.&lt;sup&gt;a&lt;/sup&gt;, Borrelli,
+P.&lt;sup&gt;b&lt;/sup&gt;, Köninger, J.&lt;sup&gt;a&lt;/sup&gt;, Ballabio, C.&lt;sup&gt;a&lt;/sup&gt;,
+Orgiazzi, A.&lt;sup&gt;a&lt;/sup&gt;, Lugato, E.&lt;sup&gt;a&lt;/sup&gt;, Liakos,
+L.&lt;sup&gt;a&lt;/sup&gt;, Hervas, J.&lt;sup&gt;a&lt;/sup&gt;, Jones, A.&lt;sup&gt;a&lt;/sup&gt;,
+Montanarella, L.&lt;sup&gt;a&lt;/sup&gt;, 2022. European Soil Data Centre 2.0: Soil
+data and knowledge in support of the EU policies. European J Soil
+Science. &lt;a href="https://doi.org/10.1111/ejss.13315"&gt;https://doi.org/10.1111/ejss.13315&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;sup&gt;a&lt;/sup&gt; &lt;em&gt;European Commission, Joint Research Centre (JRC),
+Ispra, Italy&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;sup&gt;b&lt;/sup&gt; &lt;em&gt;Department of Science, Roma Tre University, Rome,
+Italy&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The European Soil Data Centre (ESDAC), hosted by the European
+Commission’s Joint Research Centre (JRC), is the focal point for soil
+data, support to policy making and awareness raising for the European
+Union (EU). Established in 2006 to provide harmonised soil-related
+information for the EU Member States, and ESDAC currently hosts 88
+datasets, 6000 maps, six atlases, 500 scientific publications, and a
+copious amount of soil-related material. Through its data repository
+publishing activity, ESDAC has licensed over 50,000 datasets during the
+past 15 years; 8500 of them in 2021 alone. It has published 140 monthly
+newsletters and is followed by more than 12,000 subscribed users, which
+receive regular updates. This article addresses the use, usability, and
+usefulness of ESDAC. About 75% of the ESDAC users come from academia and
+the research community while the remaining 25% includes public
+administration (at EU, national, regional, and local level) and the
+private sector. In addition, we provide some insights of the datasets
+evaluation and how they have been developed. The general ESDAC vision is
+to provide evidence underlying EU soil-relevant policies and to
+facilitate the access to relevant data for research. ESDAC is an
+integral part of the recently established European Union Soil
+Observatory (EUSO), with a target to have an even stronger role in
+supporting EU and regional policies.&lt;/p&gt;
+&lt;p&gt;Highlights&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ESDAC is a central place from where to find European wide relevant
+soil data.&lt;/li&gt;
+&lt;li&gt;ESDAC is an integral part of the EU Soil Observatory in creating
+data and knowledge for policy support.&lt;/li&gt;
+&lt;li&gt;The ESDAC website shows a high volume of traffic; 10,000 of user
+licenses are granted per year.&lt;/li&gt;
+&lt;li&gt;ESDAC key success: open access data policy, documentation,
+operational helpdesk and regular updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+&lt;img alt="(a) The trend in the ESDAC distributed datasets; (b) the cumulative number of released datasets. For 2022, an estimation is provided" src="https://geographer.gr/images/ejss13315-fig-0005-m.png"/&gt;
+&lt;figcaption aria-hidden="true"&gt;(a) The trend in the ESDAC distributed
+datasets; (b) the cumulative number of released datasets. For 2022, an
+estimation is provided&lt;/figcaption&gt;
+&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="big data"></category><category term="data sharing"></category><category term="ESDAC"></category><category term="European soil observatory"></category><category term="soil policy"></category></entry><entry><title>Improving the phosphorus budget of European agricultural soils</title><link href="https://geographer.gr/improving-the-phosphorus-budget-of-european-agricultural-soils.html" rel="alternate"></link><published>2022-09-17T10:20:00+03:00</published><updated>2022-09-17T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-09-17:/improving-the-phosphorus-budget-of-european-agricultural-soils.html</id><summary type="html">&lt;p&gt;Panagos, P.a, Köningner, J.a, Ballabio, C.a, Liakos, L.a, Muntwyler,
+A.a, Borrelli, P.b , Lugato, E.a, 2022. Improving the phosphorus budget
+of European agricultural soils. Science of The Total Environment 158706.
+https://doi.org/10.1016/j.scitotenv.2022.158706&lt;/p&gt;
+&lt;p&gt;a European Commission, Joint Research …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Panagos, P.a, Köningner, J.a, Ballabio, C.a, Liakos, L.a, Muntwyler,
+A.a, Borrelli, P.b , Lugato, E.a, 2022. Improving the phosphorus budget
+of European agricultural soils. Science of The Total Environment 158706.
+https://doi.org/10.1016/j.scitotenv.2022.158706&lt;/p&gt;
+&lt;p&gt;a European Commission, Joint Research Centre (JRC), Ispra, Italy b
+Department of Science, Roma Tre University, Rome, Italy&lt;/p&gt;
+&lt;p&gt;Despite phosphorus (P) being crucial for plant nutrition and thus
+food security, excessive P fertilization harms soil and aquatic
+ecosystems. Accordingly, the European Green Deal and derived strategies
+aim to reduce P losses and fertilizer consumption in agricultural soils.
+The objective of this study is to calculate a soil P budget, allowing
+the quantification of the P surpluses/deficits in the European Union
+(EU) and the UK, considering the major inputs (inorganic fertilizers,
+manure, atmospheric deposition, and chemical weathering) and outputs
+(crop production, plant residues removal, losses by erosion) for the
+period 2011–2019.&lt;/p&gt;
+&lt;p&gt;The Land Use/Cover Area frame Survey (LUCAS) topsoil data include
+measured values for almost 22,000 samples for both available and total
+P. With advanced machine learning models, we developed maps for both
+attributes at 500 m resolution. We estimated the available P for crops
+at a mean value of 83 kg ha−1 with a clear distinction between North and
+South. The ratio of available P to the total P is about 1:17.&lt;/p&gt;
+&lt;p&gt;The inorganic fertilizers and manure contribute almost equally as P
+inputs (mean 16 ± 2 kg P ha−1 yr−1 at 90 % confidence level) to
+agricultural soils, with high regional variations depending on farming
+practices, livestock density, and cropping systems. The P outputs came
+mainly from the exportation by the harvest of crop products and residues
+(97.5 %) and, secondly, by erosion. Using a sediment distribution model,
+we quantified the P fluxes to river basins and sea outlets.&lt;/p&gt;
+&lt;p&gt;In the EU and UK, we estimated an average surplus of 0.8 kg P ha−1
+yr−1 with high variability between countries with some regional
+variations. The P annual budget at regional scale showed ample
+possibility to improve P management by both reducing inputs in regions
+with high surplus (and P soil available) and rebalancing fertilization
+in those at risk of soil fertility depletion.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Phosphorus budget per each region as kg P ha−1. The vertical bars show the annual sum of P inputs (violet) and outputs (green) per country (expressed in tonnes)." src="https://geographer.gr/images/1-s2.0-S0048969722058053-gr9.jpg"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Phosphorus budget per each region as kg P
+ha−1. The vertical bars show the annual sum of P inputs (violet) and
+outputs (green) per country (expressed in tonnes).&lt;/figcaption&gt;
+&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="Agriculture"></category><category term="Farm to Fork"></category><category term="Fertilizers"></category><category term="Phosphorus budget"></category><category term="Plant uptake"></category></entry><entry><title>Global rainfall erosivity projections for 2050 and 2070</title><link href="https://geographer.gr/global-rainfall-erosivity-projections-for-2050-and-2070.html" rel="alternate"></link><published>2022-05-11T10:20:00+03:00</published><updated>2022-05-11T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-05-11:/global-rainfall-erosivity-projections-for-2050-and-2070.html</id><summary type="html">&lt;p&gt;Panagos, P.a, Borrelli, P.b, Matthews, F.a, Liakos, L.a, Bezak, N.c,
+Diodato, N.d, Ballabio, C.a, 2022. Global rainfall erosivity projections
+for 2050 and 2070. Journal of Hydrology 610, 127865. &lt;a class="uri" href="https://doi.org/10.1016/j.jhydrol.2022.127865"&gt;https://doi.org/10.1016/j.jhydrol.2022.127865&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;aEuropean Commission, Joint Research Centre (JRC …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Panagos, P.a, Borrelli, P.b, Matthews, F.a, Liakos, L.a, Bezak, N.c,
+Diodato, N.d, Ballabio, C.a, 2022. Global rainfall erosivity projections
+for 2050 and 2070. Journal of Hydrology 610, 127865. &lt;a class="uri" href="https://doi.org/10.1016/j.jhydrol.2022.127865"&gt;https://doi.org/10.1016/j.jhydrol.2022.127865&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;aEuropean Commission, Joint Research Centre (JRC), Ispra, Italy
+bDepartment of Earth and Environmental Sciences, University of Pavia,
+27100 Pavia, Italy cUniversity of Ljubljana, Faculty of Civil and
+Geodetic Engineering, Ljubljana, Slovenia dMet European Research
+Observatory – International Affiliates Program of the University
+Corporation for Atmospheric Research, Benevento, Italy&lt;/p&gt;
+&lt;p&gt;The erosive force of rainfall (rainfall erosivity) is a major driver
+of soil, nutrient losses worldwide and an important input for soil
+erosion assessments models. Here, we present a comprehensive set of
+future erosivity projections at a 30 arc-second (∼1 km2) spatial scale
+using 19 downscaled General Circulation Models (GCMs) simulating three
+Representative Concentration Pathways (RCPs) for the periods 2041–2060
+and 2061–2080. The future rainfall erosivity projections were obtained
+based on a Gaussian Process Regression (GPR) approach relating rainfall
+depth to rainfall erosivity through a series of (bio)climatic
+covariates. Compared to the 2010 Global Rainfall erosivity baseline, we
+estimate a potential average increase in global rainfall erosivity
+between 26.2 and 28.8% for 2050 and 27–34.3% for 2070. Therefore,
+climate change and the consequential increase in rainfall erosivity is
+the main driver of the projected + 30–66% increase in soil erosion rates
+by 2070.&lt;/p&gt;
+&lt;p&gt;Our results were successfully compared with 20 regional studies
+addressing the rainfall erosivity projections. We release the whole
+dataset of future rainfall erosivity projections composed of 102
+simulation scenarios, with the aim to support further research
+activities on soil erosion, soil conservation and climate change
+communities. We expect these datasets to address the needs of both the
+Earth system modeling community and policy makers. In addition, we
+introduce a modeling approach to estimate future erosivity and make
+further assessments at global and continental scales.&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="Agriculture"></category><category term="Climate change"></category><category term="Food security"></category><category term="Land use change"></category><category term="Policy"></category><category term="R-factor"></category><category term="Soil health"></category></entry><entry><title>Exploring the possible role of satellite-based rainfall data in estimating inter- and intra-annual global rainfall erosivity</title><link href="https://geographer.gr/exploring-the-possible-role-of-satellite-based-rainfall-data-in-estimating-inter-and-intra-annual-global-rainfall-erosivity.html" rel="alternate"></link><published>2022-04-14T10:20:00+03:00</published><updated>2022-04-14T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-04-14:/exploring-the-possible-role-of-satellite-based-rainfall-data-in-estimating-inter-and-intra-annual-global-rainfall-erosivity.html</id><summary type="html">&lt;p&gt;Bezak, N., Borrelli, P., Panagos, P., 2022. Exploring the possible
+role of satellite-based rainfall data in estimating inter- and
+intra-annual global rainfall erosivity. Hydrol. Earth Syst. Sci. 26,
+1907–1924. &lt;a class="uri" href="https://doi.org/10.5194/hess-26-1907-2022"&gt;https://doi.org/10.5194/hess-26-1907-2022&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1University of Ljubljana, Faculty of Civil and Geodetic Engineering,
+Ljubljana, Slovenia&lt;/p&gt;
+&lt;p&gt;2Department of Earth …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bezak, N., Borrelli, P., Panagos, P., 2022. Exploring the possible
+role of satellite-based rainfall data in estimating inter- and
+intra-annual global rainfall erosivity. Hydrol. Earth Syst. Sci. 26,
+1907–1924. &lt;a class="uri" href="https://doi.org/10.5194/hess-26-1907-2022"&gt;https://doi.org/10.5194/hess-26-1907-2022&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1University of Ljubljana, Faculty of Civil and Geodetic Engineering,
+Ljubljana, Slovenia&lt;/p&gt;
+&lt;p&gt;2Department of Earth and Environmental Sciences, University of Pavia,
+Pavia, Italy&lt;/p&gt;
+&lt;p&gt;3Department of Biological Environment, Kangwon National University,
+Chuncheon 24341, Republic of Korea&lt;/p&gt;
+&lt;p&gt;4European Commission, Joint Research Centre (JRC), Ispra, Italy&lt;/p&gt;
+&lt;p&gt;Despite recent developments in modeling global soil erosion by water,
+to date, no substantial progress has been made towards more dynamic
+inter- and intra-annual assessments. In this regard, the main challenge
+is still represented by the limited availability of high temporal
+resolution rainfall data needed to estimate rainfall erosivity. As the
+availability of high temporal resolution rainfall data will most likely
+not increase in future decades since the monitoring networks have been
+declining since the 1980s, the suitability of alternative approaches to
+estimate global rainfall erosivity using satellite-based rainfall data
+was explored in this study. For this purpose, we used the high spatial
+and temporal resolution global precipitation estimates obtained with the
+National Oceanic and Atmospheric Administration (NOAA) Climate Data
+Record (CDR) Climate Prediction Center MORPHing (CMORPH) technique. Such
+high spatial and temporal (30 min) resolution data have not yet been
+used for the estimation of rainfall erosivity on a global scale.
+Alternatively, the erosivity density (ED) concept was also used to
+estimate global rainfall erosivity. The obtained global estimates of
+rainfall erosivity were validated against the pluviograph data included
+in the Global Rainfall Erosivity Database (GloREDa). Overall, results
+indicated that the CMORPH estimates have a marked tendency to
+underestimate rainfall erosivity when compared to the GloREDa estimates.
+The most substantial underestimations were observed in areas with the
+highest rainfall erosivity values. At the continental level, the best
+agreement between annual CMORPH and interpolated GloREDa rainfall
+erosivity maps was observed in Europe, while the worst agreement was
+detected in Africa and South America. Further analyses conducted at the
+monthly scale for Europe revealed seasonal misalignments, with the
+occurrence of underestimation of the CMORPH estimates in the summer
+period and overestimation in the winter period compared to GloREDa. The
+best agreement between the two approaches to estimate rainfall erosivity
+was found for fall, especially in central and eastern Europe. Conducted
+analysis suggested that satellite-based approaches for estimation of
+rainfall erosivity appear to be more suitable for low-erosivity regions,
+while in high-erosivity regions (&amp;gt; 1000–2000 MJ mm ha−1 h−1 yr−1) and
+seasons (&amp;gt; 150–250 MJ mm ha−1 h−1 month−1), the agreement with
+estimates obtained from pluviographs (GloREDa) is lower. Concerning the
+ED estimates, this second approach to estimate rainfall erosivity
+yielded better agreement with GloREDa estimates compared to CMORPH,
+which could be regarded as an expected result since this approach
+indirectly uses the GloREDa data. The application of a simple-linear
+function correction of the CMORPH data was applied to provide a better
+fit to GloREDa and correct systematic underestimation. This correction
+improved the performance of CMORPH, but in areas with the highest
+rainfall erosivity rates, the underestimation was still observed. A
+preliminary trend analysis of the CMORPH rainfall erosivity estimates
+was also performed for the 1998–2019 period to investigate possible
+changes in the rainfall erosivity at a global scale, which has not yet
+been conducted using high-frequency data such as CMORPH. According to
+this trend analysis, an increasing and statistically significant trend
+was more frequently observed than a decreasing trend.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Mean global rainfall erosivity map for the 1998–2019 period based on the CMORPH product (a) and ED concept using ERA5 (b)." src="https://geographer.gr/images/hess-26-1907-2022-f02-web-1536x471.png"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Mean global rainfall erosivity map for
+the 1998–2019 period based on the CMORPH product (a) and ED concept
+using ERA5 (b).&lt;/figcaption&gt;
+&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="rainfall"></category><category term="erosivity"></category></entry><entry><title>Phosphorus plant removal from European agricultural land</title><link href="https://geographer.gr/phosphorus-plant-removal-from-european-agricultural-land.html" rel="alternate"></link><published>2022-02-07T10:20:00+02:00</published><updated>2022-02-07T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-02-07:/phosphorus-plant-removal-from-european-agricultural-land.html</id><summary type="html">&lt;p&gt;Panagos, Panos&lt;sup&gt;a&lt;/sup&gt;, Anna Muntwyler&lt;sup&gt;a&lt;/sup&gt;, Leonidas
+Liakos&lt;sup&gt;a&lt;/sup&gt;, Pasquale Borrelli&lt;sup&gt;b&lt;/sup&gt;, Irene
+Biavetti&lt;sup&gt;a&lt;/sup&gt;, Mariia Bogonos&lt;sup&gt;c&lt;/sup&gt; , and Emanuele
+Lugato&lt;sup&gt;a&lt;/sup&gt;. 2022. “Phosphorus Plant Removal from European
+Agricultural Land.” Journal of Consumer Protection and Food Safety,
+February. &lt;a class="uri" href="https://doi.org/10.1007/s00003-022-01363-3"&gt;https://doi.org/10.1007/s00003-022-01363-3&lt;/a&gt;.^&lt;/p&gt;
+&lt;p&gt;&lt;sup&gt;a&lt;/sup&gt; European Commission, Joint Research Centre …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Panagos, Panos&lt;sup&gt;a&lt;/sup&gt;, Anna Muntwyler&lt;sup&gt;a&lt;/sup&gt;, Leonidas
+Liakos&lt;sup&gt;a&lt;/sup&gt;, Pasquale Borrelli&lt;sup&gt;b&lt;/sup&gt;, Irene
+Biavetti&lt;sup&gt;a&lt;/sup&gt;, Mariia Bogonos&lt;sup&gt;c&lt;/sup&gt; , and Emanuele
+Lugato&lt;sup&gt;a&lt;/sup&gt;. 2022. “Phosphorus Plant Removal from European
+Agricultural Land.” Journal of Consumer Protection and Food Safety,
+February. &lt;a class="uri" href="https://doi.org/10.1007/s00003-022-01363-3"&gt;https://doi.org/10.1007/s00003-022-01363-3&lt;/a&gt;.^&lt;/p&gt;
+&lt;p&gt;&lt;sup&gt;a&lt;/sup&gt; European Commission, Joint Research Centre (JRC), Ispra,
+Italy&lt;/p&gt;
+&lt;p&gt;&lt;sup&gt;b&lt;/sup&gt; Dipartimento di Scienze della Terra e dell’Ambiente,
+Università degli Studi di Pavia, Pavia, Italy&lt;/p&gt;
+&lt;p&gt;&lt;sup&gt;c&lt;/sup&gt; European Commission, Joint Research Centre (JRC),
+Seville, Spain&lt;/p&gt;
+&lt;p&gt;Phosphorus (P) is an important nutrient for all plant growth and it
+has become a critical and often imbalanced element in modern
+agriculture. A proper crop fertilization is crucial for production,
+farmer profits, and also for ensuring sustainable agriculture. The
+European Commission has published the Farm to Fork (F2F) Strategy in May
+2020, in which the reduction of the use of fertilizers by at least 20%
+is among one of the main objectives. Therefore, it is important to look
+for the optimal use of P in order to reduce its pollution effects but
+also ensure future agricultural production and food security. It is
+essential to estimate the P budget with the best available data at the
+highest possible spatial resolution. In this study, we focused on
+estimating the P removal from soils by crop harvest and removal of crop
+residues. Specifically, we attempted to estimate the P removal by taking
+into account the production area and productivity rates of 37 crops for
+220 regions in the European Union (EU) and the UK. To estimate the P
+removal by crops, we included the P concentrations in plant tissues (%),
+the crop humidity rates, the crop residues production, and the removal
+rates of the crop residues. The total P removal was about 2.55 million
+tonnes (Mt) (± 0.23 Mt), with crop harvesting having the larger
+contribution (ca. 94%) compared to the crop residues removal. A
+Monte-Carlo analysis estimated a ± 9% uncertainty. In addition, we
+performed a projection of P removal from agricultural fields in 2030. By
+providing this picture, we aim to improve the current P balances in the
+EU and explore the feasibility of F2F objectives.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Total phosphorus removal per country and region. Green bars aggregate P crop removal per country and brown ones are the aggregated P removal with residues." src="https://geographer.gr/images/3_2022_1363_Fig7_HTML.png"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Total phosphorus removal per country and
+region. Green bars aggregate P crop removal per country and brown ones
+are the aggregated P removal with residues.&lt;/figcaption&gt;
+&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="Crop production"></category><category term="Farm to Fork"></category><category term="Food security"></category><category term="Nutrients"></category><category term="Phosphorus budget"></category><category term="Phosphorus removal"></category><category term="Plant uptake"></category></entry><entry><title>Μοντέλα αστικής εξάπλωσης και παρακολούθηση με τηλεπισκόπηση νυκτερινών φώτων.</title><link href="https://geographer.gr/montela-astikes-exaploses-kai-parakolouthese-me-telepiskopese-nukterinon-photon.html" rel="alternate"></link><published>2021-11-24T10:20:00+02:00</published><updated>2021-11-24T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2021-11-24:/montela-astikes-exaploses-kai-parakolouthese-me-telepiskopese-nukterinon-photon.html</id><summary type="html">&lt;p&gt;Στα πλαίσια της δημοσιοποίησης των αποτελεσμάτων της διδακτορικής μου
+διατριβής με θέμα &lt;strong&gt;“Μοντέλα αστικής εξάπλωσης και παρακολούθηση
+με τηλεπισκόπηση νυκτερινών φώτων”&lt;/strong&gt; έχει αναρτηθεί ειδική
+ενότητα στην διεύθυνση &lt;a class="uri" href="https://phd.geographer.gr/"&gt;https://phd.geographer.gr/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Η διατριβή είναι διαθέσιμη στο &lt;a href="https://www.didaktorika.gr/eadd/handle/10442/50223"&gt;Εθνικό Αρχείο
+Διδακτορικών Διατριβών&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Η διατριβή στοχεύει στην παρακολούθηση και ανάλυση της λειτουργίας
+των …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Στα πλαίσια της δημοσιοποίησης των αποτελεσμάτων της διδακτορικής μου
+διατριβής με θέμα &lt;strong&gt;“Μοντέλα αστικής εξάπλωσης και παρακολούθηση
+με τηλεπισκόπηση νυκτερινών φώτων”&lt;/strong&gt; έχει αναρτηθεί ειδική
+ενότητα στην διεύθυνση &lt;a class="uri" href="https://phd.geographer.gr/"&gt;https://phd.geographer.gr/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Η διατριβή είναι διαθέσιμη στο &lt;a href="https://www.didaktorika.gr/eadd/handle/10442/50223"&gt;Εθνικό Αρχείο
+Διδακτορικών Διατριβών&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Η διατριβή στοχεύει στην παρακολούθηση και ανάλυση της λειτουργίας
+των ελληνικών αστικών περιοχών μέσω της εκμετάλλευσης μιας ιδιαίτερης
+κατηγορίας δεδομένων τηλεπισκόπησης, των νυκτερινών φώτων. Τα νυκτερινά
+φώτα έχει παρατηρηθεί ότι αντικατοπτρίζουν σε σημαντικό βαθμό τα επίπεδα
+αστικής και οικονομικής ανάπτυξης και είναι άρρηκτα συνδεδεμένα με
+οικονομικά μεγέθη όπως το ΑΕΠ, ο πληθυσμός, η οικοδομική δραστηριότητα
+και η κατανάλωση του ηλεκτρικού ρεύματος.&lt;/p&gt;
+&lt;p&gt;Η διεξαγωγή της διατριβής υποστηρίζεται από τα κυριότερα σύνολα
+δεδομένων νυκτερινών φώτων (DMPS/OLS, snpp-VIIRS, ISS) για την αποτύπωση
+της ελληνικής αστικής «πραγματικότητας». Τα δεδομένα νυχτερινών φώτων
+διατίθενται χωρίς να έχουν υποστεί την απαραίτητη προεπεξεργασία για την
+αφαίρεση παραγόντων που επηρεάζουν την ποιότητά τους και τα
+αποτελέσματατης έρευνας. Σημαντικοί εξωγενείς παράγοντες επιρροής της
+ποιότητας των δεδομένων, όπως η σεληνιακή ακτινοβολία, δεν έχουν
+αφαιρεθεί. Τεχνικά χαρακτηριστικά και περιορισμοί όπως η υπερλάμψη και ο
+κορεσμός των δεδομένων DSMP/OLS συνεχίζουν να απασχολούν την
+επιστημονική κοινότητα.&lt;/p&gt;
+&lt;p&gt;Στα πλαίσια της διατριβής θα προταθούν μεθόδοι για την διόρθωση της
+σεληνιακής ακτινοβολίας από τα δεδομένα snpp-VIIRS και θα επιχειρηθεί η
+βελτίωση των δεδομένων DMSP/OLS με την συνδρομή δεδομένων SAR.&lt;/p&gt;
+&lt;p&gt;Στόχος της διατριβής είναι να εκμεταλλευτεί τα δεδομένα νυχτερινών
+φώτων για να καταγράψει την εποχικότητα των αστικών περιοχών στον
+Ελλαδικό χώρο, να προσομοιώσει την αστική διάχυση που θα λάβει χώρα στο
+μέλλον, να προβλέψει την ένταση της αστικής δραστηριότητας, να εκτιμήσει
+σε λεπτομερή χωρική και χρονική κλίμακα οικονομικές μεταβλητές όπως το
+ΑΕΠ.&lt;/p&gt;
+&lt;p&gt;Τα νυχτερινά φώτα θα χρησιμοποιηθούν για να αποτιμηθούν οι συνέπειες
+έκτακτων συνθηκών στην αστική δραστηριότητα, για να εκτιμηθεί η
+επιβάρυνση από την φωτορύπανση και για να περιγραφούν τα πρότυπα
+μετακίνησης στις σύγχρονες ελληνικές πόλεις.Από τα αποτελέσματα
+προκύπτουν αξιόλογες και καινοτόμες μέθοδοι για την βελτίωση των
+δεδομένων και την ανάλυση, πρόβλεψη και ερμηνεία των αστικών φαινομένων.
+Η χρήση νυχτερινών φώτων αποτελεί ένα σημαντικό εργαλείο στα χέρια του
+ερευνητή αλλά απαιτεί βαθειά επίγνωση των τεχνικών περιορισμών και των
+εξωγενών παράγοντων που επηρεάζουν τις δυνατότητές τους.&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="night time lights"></category><category term="phd"></category></entry><entry><title>Mercury in European topsoils. Anthropogenic sources, stocks and fluxes</title><link href="https://geographer.gr/mercury-in-european-topsoils-anthropogenic-sources-stocks-and-fluxes.html" rel="alternate"></link><published>2021-07-16T10:20:00+03:00</published><updated>2021-07-16T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2021-07-16:/mercury-in-european-topsoils-anthropogenic-sources-stocks-and-fluxes.html</id><summary type="html">&lt;p&gt;Panos Panagosa, Martin Jiskrab, Pasquale Borrellic, Leonidas Liakosa,
+Cristiano Ballabioa. 2021. “Mercury in European Topsoils: Anthropogenic
+Sources, Stocks and Fluxes.” Environmental Research, June, 111556. &lt;a class="uri" href="https://doi.org/10.1016/j.envres.2021.111556"&gt;https://doi.org/10.1016/j.envres.2021.111556&lt;/a&gt;.&lt;/p&gt;
+&lt;ol type="a"&gt;
+&lt;li&gt;European Commission, Joint Research Centre (JRC), Ispra, Italy&lt;/li&gt;
+&lt;li&gt;Environmental Geosciences, University of Basel, Switzerland&lt;/li&gt;
+&lt;li&gt;Department of Earth …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;Panos Panagosa, Martin Jiskrab, Pasquale Borrellic, Leonidas Liakosa,
+Cristiano Ballabioa. 2021. “Mercury in European Topsoils: Anthropogenic
+Sources, Stocks and Fluxes.” Environmental Research, June, 111556. &lt;a class="uri" href="https://doi.org/10.1016/j.envres.2021.111556"&gt;https://doi.org/10.1016/j.envres.2021.111556&lt;/a&gt;.&lt;/p&gt;
+&lt;ol type="a"&gt;
+&lt;li&gt;European Commission, Joint Research Centre (JRC), Ispra, Italy&lt;/li&gt;
+&lt;li&gt;Environmental Geosciences, University of Basel, Switzerland&lt;/li&gt;
+&lt;li&gt;Department of Earth and Environmental Sciences, University of Pavia,
+27100, Pavia, Italy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Mercury (Hg) is one of the most dangerous pollutants worldwide. In
+the European Union (EU), we recently estimated the Hg distribution in
+topsoil using 21,591 samples and a series of geo-physical inputs. In
+this manuscript, we investigate the impact of mining activities,
+chrol-alkali industries and other diffuse pollution sources as primary
+anthropogenic sources of Hg hotspots in the EU. Based on Hg measured
+soil samples, we modelled the Hg pool in EU topsoils, which totals about
+44.8 Gg, with an average density of 103 g ha−1. As a following step, we
+coupled the estimated Hg stocks in topsoil with the pan-European
+assessment of soil loss due to water erosion and sediment distribution.
+In the European Union and UK, we estimated that about 43 Mg Hg yr−1 are
+displaced by water erosion and c. a. 6 Mg Hg yr−1 are transferred with
+sediments to river basins and eventually released to coastal Oceans. The
+Mediterranean Sea receives almost half (2.94 Mg yr−1) of the Hg fluxes
+to coastal oceans and it records the highest quantity of Hg sediments.
+This is the result of elevated soil Hg concentration and high erosion
+rates in the catchments draining into the Mediterranean Sea. This work
+contributes to new knowledge in support of the policy development in the
+EU on the Zero Pollution Action Plan and the Sustainable Development
+Goal (SDGs) 3.9 and 14.1, which both have as an objective to reduce soil
+pollution by 2030.&lt;/p&gt;
+&lt;p&gt;Link to Dataset: &lt;a href="https://esdac.jrc.ec.europa.eu/content/mercury-content-european-union-topsoil"&gt;Mercury
+content in the European Union topsoil&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Map of Hg stock (g ha−1) in European topsoils." src="https://geographer.gr/images/1-s2.0-S0013935121008501-gr4.jpg"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Map of Hg stock (g ha−1) in European
+topsoils.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Estimated Hg losses to river basins and Hg fluxes to sea outlets (Mg yr−1) due to water erosion." src="https://geographer.gr/images/1-s2.0-S0013935121008501-gr8.jpg"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Estimated Hg losses to river basins and
+Hg fluxes to sea outlets (Mg yr−1) due to water erosion.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Estimated Hg displaced with water erosion per catchment. The vertical bars show the annual Hg eroded (green) and deposited (orange) per country." src="https://geographer.gr/images/1-s2.0-S0013935121008501-gr6.jpg"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Estimated Hg displaced with water erosion
+per catchment. The vertical bars show the annual Hg eroded (green) and
+deposited (orange) per country.&lt;/figcaption&gt;
+&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="Heavy metal"></category><category term="Hg"></category><category term="Sediment transport"></category><category term="Soil contamination"></category><category term="Soil erosion"></category></entry><entry><title>An in-depth statistical analysis of the rainstorms erosivity in Europe</title><link href="https://geographer.gr/an-in-depth-statistical-analysis-of-the-rainstorms-erosivity-in-europe.html" rel="alternate"></link><published>2021-07-15T10:20:00+03:00</published><updated>2021-07-15T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2021-07-15:/an-in-depth-statistical-analysis-of-the-rainstorms-erosivity-in-europe.html</id><summary type="html">&lt;p&gt;Nejc Bezaka, Matjaž Mikoša, Pasquale Borrellibc, Leonidas Liakosd,
+Panos Panagosd. 2021. “An In-Depth Statistical Analysis of the
+Rainstorms Erosivity in Europe.” CATENA 206 (November): 105577. &lt;a class="uri" href="https://doi.org/10.1016/j.catena.2021.105577"&gt;https://doi.org/10.1016/j.catena.2021.105577&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;a .University of Ljubljana, Faculty of Civil and Geodetic
+Engineering, Slovenia b. Department of Earth and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Nejc Bezaka, Matjaž Mikoša, Pasquale Borrellibc, Leonidas Liakosd,
+Panos Panagosd. 2021. “An In-Depth Statistical Analysis of the
+Rainstorms Erosivity in Europe.” CATENA 206 (November): 105577. &lt;a class="uri" href="https://doi.org/10.1016/j.catena.2021.105577"&gt;https://doi.org/10.1016/j.catena.2021.105577&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;a .University of Ljubljana, Faculty of Civil and Geodetic
+Engineering, Slovenia b. Department of Earth and Environmental Sciences,
+University of Pavia, Italy c. Department of Biological Environment,
+Kangwon National University, Chuncheon 24341, Republic of Korea
+d. European Commission, Joint Research Centre (JRC), Ispra, Italy&lt;/p&gt;
+&lt;p&gt;Heavy rainstorms play a central role in the water-driving soil
+erosion processes. An in-depth knowledge about temporal and spatial
+erosivity of rainfall events is required to gain a better understanding
+of soil erosion processes and optimize soil protection measures
+efficiency. In this study, the spatiotemporal distribution of more than
+300,000 erosive events measured at 1181 locations, part of the Rainfall
+Erosivity Database at European Scale (REDES) database, is studied to
+shed some new light on the rainfall erosivity in Europe. Rainfall
+erosive events are statistically investigated through the Lorenz curve
+and derived coefficients such as the Gini coefficient (G). Additionally,
+seasonal characteristics of the most and the less erosive events are
+compared to investigate seasonal characteristics of rainstorms across
+Europe. The G shows largest values of inequality of the inter-annual
+temporal distribution of the rainfall erosive events in the Alpine
+region, mostly due to the large number of rainfall events with smaller
+rainfall erosivity. While for other parts of Europe, the inequality
+described by the G is mostly due to a small number of high erosive
+events. The G slightly decreases from south to north while no clear
+regional patterns can be detected. Additionally, in Europe, on average
+11% (ranging from 1 to 24%) of all erosive events contribute to form 50%
+of the total rainfall erosivity. Furthermore, higher erosive rainfall
+events tend to occur later in the year compared to less erosive events
+that take place earlier. To our knowledge, this study is the first one
+addressing event scale rainfall erosivity distribution using more than
+300,000 rainfall erosivity events and covering almost a whole continent.
+Scientifically our findings represent a major step towards large-scale
+process-based erosion modelling while, practically, they provide new
+elements that can support national and local soil erosion monitoring
+programs.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Percentage of rainfall erosive events by number that contribute to the 50% of the total erosivity (D50). Rainfall erosivity map of Europe is shown as background (Panagos et al., 2015a)." src="https://geographer.gr/images/1-s2.0-S0341816221004355-gr7.jpg"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Percentage of rainfall erosive events by
+number that contribute to the 50% of the total erosivity (D50). Rainfall
+erosivity map of Europe is shown as background (Panagos et al.,
+2015a).&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Gini coefficients (G) for the 1181 stations across Europe using all rainfall erosive events included in the REDES database. As a background map, the six K-means clusters as defined by Ballabio et al. (2017) are shown." src="https://geographer.gr/images/1-s2.0-S0341816221004355-gr2.jpg"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Gini coefficients (G) for the 1181
+stations across Europe using all rainfall erosive events included in the
+REDES database. As a background map, the six K-means clusters as defined
+by Ballabio et al. (2017) are shown.&lt;/figcaption&gt;
+&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="Rainfall erosivity"></category><category term="REDES"></category><category term="Lorenz curve"></category><category term="Gini coefficient"></category><category term="Seasonality"></category><category term="Threshold values"></category><category term="R-factor"></category><category term="Europe"></category></entry><entry><title>Median Shift Lunar Correction for VIIRS</title><link href="https://geographer.gr/median-shift-lunar-correction-for-viirs.html" rel="alternate"></link><published>2021-06-08T10:30:00+03:00</published><updated>2021-06-08T10:30:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2021-06-08:/median-shift-lunar-correction-for-viirs.html</id><summary type="html">&lt;p&gt;Stathakis, Demetris&lt;em&gt;, and Leonidas Liakos&lt;/em&gt;. 2020. “Median
+Shift Lunar Correction for VIIRS.” IEEE Geoscience and Remote Sensing
+Letters, 1–5. &lt;a class="uri" href="https://doi.org/10.1109/LGRS.2020.3007965"&gt;https://doi.org/10.1109/LGRS.2020.3007965&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;University of Thessaly, Spatial Analysis/GIS and Thematic Mapping
+Laboratory, Department of Planning and Regional Development, Sekeri
+&amp;amp; Alamanas, Volos, Greece&lt;/p&gt;
+&lt;p&gt;Visible Infrared …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Stathakis, Demetris&lt;em&gt;, and Leonidas Liakos&lt;/em&gt;. 2020. “Median
+Shift Lunar Correction for VIIRS.” IEEE Geoscience and Remote Sensing
+Letters, 1–5. &lt;a class="uri" href="https://doi.org/10.1109/LGRS.2020.3007965"&gt;https://doi.org/10.1109/LGRS.2020.3007965&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;University of Thessaly, Spatial Analysis/GIS and Thematic Mapping
+Laboratory, Department of Planning and Regional Development, Sekeri
+&amp;amp; Alamanas, Volos, Greece&lt;/p&gt;
+&lt;p&gt;Visible Infrared Imaging Radiometer Suite (VIIRS) 24-h data are
+substantially affected by lunar illumination. A new method is proposed
+to correct this distortion and be able to form a consistent time series.
+The method has the advantage of being relatively simple in its
+deployment while at the same time effective. The results show that the
+proposed method removes periodical illumination noise due to the lunar
+circle while preserving meaningful information, in the test sites
+applied.&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="Night time lights"></category><category term="DMSP/OLS"></category><category term="VIIRS"></category><category term="Lunar Correction"></category></entry><entry><title>Further adjustment of the Defense Meteorological Satellite Program-Operational Linescan System using radar data</title><link href="https://geographer.gr/further-adjustment-of-the-defense-meteorological-satellite-program-operational-linescan-system-using-radar-data.html" rel="alternate"></link><published>2021-06-08T10:20:00+03:00</published><updated>2021-06-08T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2021-06-08:/further-adjustment-of-the-defense-meteorological-satellite-program-operational-linescan-system-using-radar-data.html</id><summary type="html">&lt;p&gt;Stathakis, Demetris, and Leonidas Liakos. 2019. “Further Adjustment
+of the Defense Meteorological Satellite Program-Operational Linescan
+System Using Radar Data.” Journal of Applied Remote Sensing 13 (03):
+034507/1-9. &lt;a class="uri" href="https://doi.org/10.1117/1.JRS.13.034507"&gt;https://doi.org/10.1117/1.JRS.13.034507&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;University of Thessaly, Spatial Analysis/GIS and Thematic Mapping
+Laboratory, Department of Planning …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Stathakis, Demetris, and Leonidas Liakos. 2019. “Further Adjustment
+of the Defense Meteorological Satellite Program-Operational Linescan
+System Using Radar Data.” Journal of Applied Remote Sensing 13 (03):
+034507/1-9. &lt;a class="uri" href="https://doi.org/10.1117/1.JRS.13.034507"&gt;https://doi.org/10.1117/1.JRS.13.034507&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;University of Thessaly, Spatial Analysis/GIS and Thematic Mapping
+Laboratory, Department of Planning and Regional Development, Sekeri
+&amp;amp; Alamanas, Volos, Greece&lt;/p&gt;
+&lt;p&gt;In the past, the Defense Meteorological Satellite Program—Operational
+Linescan System (DSMP/OLS) data have been successfully adjusted based on
+the presence of vegetation in each pixel. We propose a further
+adjustment based on radar data obtained by the SeaWinds scatterometer.
+It is shown that the adjustment results in substantial accuracy gains,
+measured as increased correlation with the more accurate Visible
+Infrared Imaging Radiometer Suite data as well as with the existing
+instances of radiance calibrated DSMP/OLS data. The proposed adjust-
+ment is easy to implement. The improvement of the proposed method is
+particularly significant in arid regions where vegetation is relatively
+sparse.&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="Night time lights"></category><category term="DMSP/OLS"></category><category term="SAR"></category></entry></feed>
