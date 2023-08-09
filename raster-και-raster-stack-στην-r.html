@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href="https://geographer.gr/raster-και-raster-stack-στην-r.html">
+<link rel="canonical" href="https://geographer.gr/raster-και-raster-stack-στην-r/">
 
         <meta name="author" content="Leonidas Liakos" />
         <meta name="keywords" content="R,raster,stack,NTL,DMSP-OLS,github" />
@@ -18,7 +18,7 @@
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Raster και Raster Stack στην R"/>
-        <meta property="og:url" content="https://geographer.gr/raster-και-raster-stack-στην-r.html"/>
+        <meta property="og:url" content="https://geographer.gr/raster-και-raster-stack-στην-r/"/>
         <meta property="og:description" content="Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο FOSSCOMM 2019 στην Λαμία. Για περισσότερες λεπτομέρειες ανατρέξτε στο github repository. Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο raster της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων (raster) και επεξεργασίας τους (crop, reclassify, reproject …"/>
         <meta property="article:published_time" content="2019-10-03" />
             <meta property="article:section" content="GIS" />
@@ -132,19 +132,19 @@
 <section>
   <p id="post-share-links">
     <b>Share on:</b>
-    <a href="https://sharetodiaspora.github.io/?title=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share on Diaspora">Diaspora*</a>
+    <a href="https://sharetodiaspora.github.io/?title=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r/" title="Share on Diaspora">Diaspora*</a>
     ❄
-    <a href="https://twitter.com/intent/tweet?text=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html&hashtags=r,raster,stack,ntl,dmsp-ols,github" title="Share on Twitter">Twitter</a>
+    <a href="https://twitter.com/intent/tweet?text=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r/&hashtags=r,raster,stack,ntl,dmsp-ols,github" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r/" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html&title=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&summary=%CE%97%20%CE%B1%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7%20%CE%B1%CF%85%CF%84%CE%AE%20%CF%80%CE%B5%CF%81%CE%B9%CE%BB%CE%B1%CE%BC%CE%B2%CE%AC%CE%BD%CE%B5%CE%B9%20%CF%84%CE%BF%20%CF%80%CE%B5%CF%81%CE%B9%CE%B5%CF%87%CF%8C%CE%BC%CE%B5%CE%BD%CE%BF%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20workshop%20%CF%83%CF%84%CE%BF%20FOSSCOMM%202019%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%9B%CE%B1%CE%BC%CE%AF%CE%B1.%20%CE%93%CE%B9%CE%B1%0A%CF%80%CE%B5%CF%81%CE%B9%CF%83%CF%83%CF%8C%CF%84%CE%B5%CF%81%CE%B5%CF%82%20%CE%BB%CE%B5%CF%80%CF%84%CE%BF%CE%BC%CE%AD%CF%81%CE%B5%CE%B9%CE%B5%CF%82%20%CE%B1%CE%BD%CE%B1%CF%84%CF%81%CE%AD%CE%BE%CF%84%CE%B5%20%CF%83%CF%84%CE%BF%20github%20repository.%0A%CE%A3%CF%84%CF%8C%CF%87%CE%BF%CF%82%20%CF%84%CE%BF%CF%85%20%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CF%84%CE%B7%CF%81%CE%AF%CE%BF%CF%85%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B7%20%CE%B5%CE%BE%CE%BF%CE%B9%CE%BA%CE%B5%CE%AF%CF%89%CF%83%CE%B7%20%CF%84%CE%BF%CF%85%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%20%CE%BC%CE%B5%20%CF%84%CE%BF%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20raster%0A%CF%84%CE%B7%CF%82%20R%20%CF%84%CE%BF%20%CE%BF%CF%80%CE%BF%CE%AF%CE%BF%20%CF%80%CF%81%CE%BF%CF%83%CF%86%CE%AD%CF%81%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CE%B1%CE%BD%CE%AC%CE%B3%CE%BD%CF%89%CF%83%CE%B7%CF%82%20%CF%88%CE%B7%CF%86%CE%B9%CE%B4%CF%89%CF%84%CF%8E%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%0A%28raster%29%20%CE%BA%CE%B1%CE%B9%20%CE%B5%CF%80%CE%B5%CE%BE%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82%20%CF%84%CE%BF%CF%85%CF%82%20%28crop%2C%0Areclassify%2C%0Areproject%20%E2%80%A6&source=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r/&title=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&summary=%CE%97%20%CE%B1%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7%20%CE%B1%CF%85%CF%84%CE%AE%20%CF%80%CE%B5%CF%81%CE%B9%CE%BB%CE%B1%CE%BC%CE%B2%CE%AC%CE%BD%CE%B5%CE%B9%20%CF%84%CE%BF%20%CF%80%CE%B5%CF%81%CE%B9%CE%B5%CF%87%CF%8C%CE%BC%CE%B5%CE%BD%CE%BF%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20workshop%20%CF%83%CF%84%CE%BF%20FOSSCOMM%202019%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%9B%CE%B1%CE%BC%CE%AF%CE%B1.%20%CE%93%CE%B9%CE%B1%0A%CF%80%CE%B5%CF%81%CE%B9%CF%83%CF%83%CF%8C%CF%84%CE%B5%CF%81%CE%B5%CF%82%20%CE%BB%CE%B5%CF%80%CF%84%CE%BF%CE%BC%CE%AD%CF%81%CE%B5%CE%B9%CE%B5%CF%82%20%CE%B1%CE%BD%CE%B1%CF%84%CF%81%CE%AD%CE%BE%CF%84%CE%B5%20%CF%83%CF%84%CE%BF%20github%20repository.%0A%CE%A3%CF%84%CF%8C%CF%87%CE%BF%CF%82%20%CF%84%CE%BF%CF%85%20%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CF%84%CE%B7%CF%81%CE%AF%CE%BF%CF%85%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B7%20%CE%B5%CE%BE%CE%BF%CE%B9%CE%BA%CE%B5%CE%AF%CF%89%CF%83%CE%B7%20%CF%84%CE%BF%CF%85%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%20%CE%BC%CE%B5%20%CF%84%CE%BF%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20raster%0A%CF%84%CE%B7%CF%82%20R%20%CF%84%CE%BF%20%CE%BF%CF%80%CE%BF%CE%AF%CE%BF%20%CF%80%CF%81%CE%BF%CF%83%CF%86%CE%AD%CF%81%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CE%B1%CE%BD%CE%AC%CE%B3%CE%BD%CF%89%CF%83%CE%B7%CF%82%20%CF%88%CE%B7%CF%86%CE%B9%CE%B4%CF%89%CF%84%CF%8E%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%0A%28raster%29%20%CE%BA%CE%B1%CE%B9%20%CE%B5%CF%80%CE%B5%CE%BE%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82%20%CF%84%CE%BF%CF%85%CF%82%20%28crop%2C%0Areclassify%2C%0Areproject%20%E2%80%A6&source=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r/" title="Share on LinkedIn">LinkedIn</a>
     ❄
-    <a href="https://news.ycombinator.com/submitlink?t=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&u=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share on HackerNews">HackerNews</a>
+    <a href="https://news.ycombinator.com/submitlink?t=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&u=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r/" title="Share on HackerNews">HackerNews</a>
     ❄
-    <a href="mailto:?subject=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&amp;body=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share via Email">Email</a>
+    <a href="mailto:?subject=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&amp;body=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r/" title="Share via Email">Email</a>
     ❄
-    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html&title=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R" title="Share via Reddit">Reddit</a>
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r/&title=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R" title="Share via Reddit">Reddit</a>
   </p>
 </section>
 
@@ -152,7 +152,7 @@
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://geographer.gr/raster-και-raster-stack-στην-r.html"
+                    <a href="https://geographer.gr/raster-και-raster-stack-στην-r/"
                        rel="bookmark"
                        title="Permalink to Raster και Raster Stack στην R">
                         Raster και Raster Stack στην R
@@ -541,7 +541,7 @@ raster::writeRaster(s_calc, filename=file.path("output",years), bylayer=TRUE,dat
                 this.language = "en";
 
                         this.page.identifier = '2019-10-03-raster-και-raster-stack-στην-r';
-                        this.page.url = 'https://geographer.gr/raster-και-raster-stack-στην-r.html';
+                        this.page.url = 'https://geographer.gr/raster-και-raster-stack-στην-r/';
             };
 
             /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -639,6 +639,9 @@ raster::writeRaster(s_calc, filename=file.path("output",years), bylayer=TRUE,dat
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
     <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
