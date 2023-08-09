@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer - Διάφορα</title><link href="https://geographer.gr/" rel="alternate"></link><link href="https://geographer.gr/feeds/diaphora.atom.xml" rel="self"></link><id>https://geographer.gr/</id><updated>2013-10-09T00:10:00+03:00</updated><entry><title>Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R</title><link href="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html" rel="alternate"></link><published>2013-10-09T00:10:00+03:00</published><updated>2013-10-09T00:10:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2013-10-09:/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html</id><summary type="html">&lt;p&gt;Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer - Διάφορα</title><link href="https://geographer.gr/" rel="alternate"></link><link href="https://geographer.gr/feeds/diaphora.atom.xml" rel="self"></link><id>https://geographer.gr/</id><updated>2019-10-03T10:20:00+03:00</updated><entry><title>Raster και Raster Stack στην R</title><link href="https://geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" rel="alternate"></link><published>2019-10-03T10:20:00+03:00</published><updated>2019-10-03T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2019-10-03:/raster-και-raster-stack-στην-r.html</id><summary type="html">&lt;p&gt;Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο &lt;a href="https://2019.fosscomm.gr/"&gt;FOSSCOMM 2019&lt;/a&gt; στην Λαμία. Για
+περισσότερες λεπτομέρειες ανατρέξτε στο &lt;a href="https://github.com/kokkytos/rworkshop"&gt;github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο &lt;a href="https://cran.r-project.org/web/packages/raster/index.html"&gt;raster&lt;/a&gt;
+της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων
+(raster) και επεξεργασίας τους (&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/crop"&gt;crop&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/reclassify"&gt;reclassify&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/projectRaster"&gt;reproject …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο &lt;a href="https://2019.fosscomm.gr/"&gt;FOSSCOMM 2019&lt;/a&gt; στην Λαμία. Για
+περισσότερες λεπτομέρειες ανατρέξτε στο &lt;a href="https://github.com/kokkytos/rworkshop"&gt;github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο &lt;a href="https://cran.r-project.org/web/packages/raster/index.html"&gt;raster&lt;/a&gt;
+της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων
+(raster) και επεξεργασίας τους (&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/crop"&gt;crop&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/reclassify"&gt;reclassify&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/projectRaster"&gt;reproject&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/resample"&gt;resample&lt;/a&gt;
+κτλ.).&lt;/p&gt;
+&lt;p&gt;Επιπλέον, θα επικεντρωθούμε στην κλάση &lt;a href="https://web.archive.org/web/20211006131229/https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/stack"&gt;raster
+stack&lt;/a&gt; η οποία δημιουργεί συστοιχίες ψηφιδωτών δεδομένων, κατάλληλες
+για χρονοσειρές και πολυκαναλικές εικόνες.&lt;/p&gt;
+&lt;p&gt;Η διεξαγωγή του εργαστηρίου θα γίνει μέσω παραδειγμάτων και με την
+χρήση δεδομένων νυκτερινών φώτων &lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/stack"&gt;DMSP-OLS
+Nighttime Lights Time Series (Stable Lights Version 4)&lt;/a&gt;. Θα προηγηθεί
+μια σύντομη παρουσίαση των βημάτων και της διαδικασίας ώστε οι χρήστες
+να αποκτήσουν μια σύντομη αλλά περιεκτική εικόνα του στόχου του
+εργαστηρίου και των δυνατοτητων που προσφέρει ο προγραμματισμός με την
+R.&lt;/p&gt;</content><category term="Διάφορα"></category><category term="R"></category><category term="raster"></category><category term="stack"></category><category term="NTL"></category><category term="DMSP-OLS"></category><category term="github"></category></entry><entry><title>Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R</title><link href="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html" rel="alternate"></link><published>2013-10-09T00:10:00+03:00</published><updated>2013-10-09T00:10:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2013-10-09:/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r.html</id><summary type="html">&lt;p&gt;Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών
 ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz
 (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την
 έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα
@@ -150,7 +174,7 @@ http://rss.acs.unt.edu/Rdoc/library/lawstat/html/lorenz.curve.html,
 &lt;/ul&gt;
 &lt;p&gt;(&lt;em&gt;Ο υπολογισμός της καμπύλης Lorenz έγινε στην διανομή Ubuntu
 10.04 LTS-Lucid Lynx με την έκδοση R 2.10.1&lt;/em&gt;)&lt;/p&gt;</content><category term="Διάφορα"></category><category term="lawstat"></category><category term="R"></category><category term="καμπύλη Lorenz"></category></entry><entry><title>Ανάβαση στο όρος Γκορίλας</title><link href="https://geographer.gr/anabase-sto-oros-gkorilas.html" rel="alternate"></link><published>2012-02-03T00:10:00+02:00</published><updated>2012-02-03T00:10:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2012-02-03:/anabase-sto-oros-gkorilas.html</id><summary type="html">&lt;p style="text-align: justify;"&gt;
-&lt;iframe frameborder="0" height="694" scrolling="no" src="http://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
+&lt;iframe frameborder="0" height="694" scrolling="no" src="https://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
 &lt;/iframe&gt;
 &lt;/p&gt;
 &lt;p&gt;Στα πλαίσια των δραστηριοτήτων του συλλόγου Μελέτης και Προστασίας
@@ -159,7 +183,7 @@ http://rss.acs.unt.edu/Rdoc/library/lawstat/html/lorenz.curve.html,
 (1658μ.). Σκοπός μας δεν ήταν απλά να φτάσουμε την κορυφή αλλά παράλληλα
 να διανοίξουμε ένα παλιό μονοπάτι που οδηγούσε στην κορυφή. Ίσως το πιο
 δύσκολο μονοπάτι που έχω συναντήσει …&lt;/p&gt;</summary><content type="html">&lt;p style="text-align: justify;"&gt;
-&lt;iframe frameborder="0" height="694" scrolling="no" src="http://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
+&lt;iframe frameborder="0" height="694" scrolling="no" src="https://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
 &lt;/iframe&gt;
 &lt;/p&gt;
 &lt;p&gt;Στα πλαίσια των δραστηριοτήτων του συλλόγου Μελέτης και Προστασίας

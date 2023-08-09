@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>European Soil Data Centre 2.0. Soil data and knowledge in support of the EU policies - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <title>Raster και Raster Stack στην R - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,24 +9,25 @@
 
 
 
-<link rel="canonical" href="https://geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html">
+<link rel="canonical" href="https://geographer.gr/raster-και-raster-stack-στην-r.html">
 
         <meta name="author" content="Leonidas Liakos" />
-        <meta name="keywords" content="big data,data sharing,ESDAC,European soil observatory,soil policy" />
-        <meta name="description" content="Panagos, P.a, Van Liedekerke, M.a, Borrelli, P.b, Köninger, J.a, Ballabio, C.a, Orgiazzi, A.a, Lugato, E.a, Liakos, L.a, Hervas, J.a, Jones, A.a, Montanarella, L.a, 2022. European Soil Data Centre 2.0: Soil data and knowledge in support of the EU …" />
+        <meta name="keywords" content="R,raster,stack,NTL,DMSP-OLS,github" />
+        <meta name="description" content="Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο FOSSCOMM 2019 στην Λαμία. Για περισσότερες λεπτομέρειες ανατρέξτε στο github repository. Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο raster της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων (raster) και επεξεργασίας τους (crop, reclassify, reproject …" />
 
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="European Soil Data Centre 2.0. Soil data and knowledge in support of the EU policies"/>
-        <meta property="og:url" content="https://geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html"/>
-        <meta property="og:description" content="Panagos, P.a, Van Liedekerke, M.a, Borrelli, P.b, Köninger, J.a, Ballabio, C.a, Orgiazzi, A.a, Lugato, E.a, Liakos, L.a, Hervas, J.a, Jones, A.a, Montanarella, L.a, 2022. European Soil Data Centre 2.0: Soil data and knowledge in support of the EU …"/>
-        <meta property="article:published_time" content="2022-12-14" />
-            <meta property="article:section" content="Δημοσιεύσεις" />
-            <meta property="article:tag" content="big data" />
-            <meta property="article:tag" content="data sharing" />
-            <meta property="article:tag" content="ESDAC" />
-            <meta property="article:tag" content="European soil observatory" />
-            <meta property="article:tag" content="soil policy" />
+        <meta property="og:title" content="Raster και Raster Stack στην R"/>
+        <meta property="og:url" content="https://geographer.gr/raster-και-raster-stack-στην-r.html"/>
+        <meta property="og:description" content="Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο FOSSCOMM 2019 στην Λαμία. Για περισσότερες λεπτομέρειες ανατρέξτε στο github repository. Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο raster της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων (raster) και επεξεργασίας τους (crop, reclassify, reproject …"/>
+        <meta property="article:published_time" content="2019-10-03" />
+            <meta property="article:section" content="Διάφορα" />
+            <meta property="article:tag" content="R" />
+            <meta property="article:tag" content="raster" />
+            <meta property="article:tag" content="stack" />
+            <meta property="article:tag" content="NTL" />
+            <meta property="article:tag" content="DMSP-OLS" />
+            <meta property="article:tag" content="github" />
             <meta property="article:author" content="Leonidas Liakos" />
 
 
@@ -41,8 +42,8 @@
         <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
 
-        <link href="https://geographer.gr/feeds/demosieuseis.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer Δημοσιεύσεις ATOM Feed"/>
+        <link href="https://geographer.gr/feeds/diaphora.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer Διάφορα ATOM Feed"/>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116514702-1"></script>
     <script>
@@ -84,10 +85,10 @@
                          <li><a href="https://geographer.gr/pages/contact-greek.html">
                              Επικοινωνία
                           </a></li>
-                        <li class="active">
+                        <li >
                             <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
                         </li>
                         <li >
@@ -123,27 +124,27 @@
         <div class="col-sm-9">
             <ol class="breadcrumb">
                 <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
-                <li><a href="https://geographer.gr/category/demosieuseis.html" title="Δημοσιεύσεις">Δημοσιεύσεις</a></li>
-                <li class="active">European Soil Data Centre 2.0. Soil data and knowledge in support of the EU policies</li>
+                <li><a href="https://geographer.gr/category/diaphora.html" title="Διάφορα">Διάφορα</a></li>
+                <li class="active">Raster και Raster Stack στην R</li>
             </ol>
 
 
 <section>
   <p id="post-share-links">
     <b>Share on:</b>
-    <a href="https://sharetodiaspora.github.io/?title=European%20Soil%20Data%20Centre%202.0.%20Soil%20data%20and%20knowledge%20in%20support%20of%20the%20EU%20policies&url=https%3A//geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html" title="Share on Diaspora">Diaspora*</a>
+    <a href="https://sharetodiaspora.github.io/?title=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share on Diaspora">Diaspora*</a>
     ❄
-    <a href="https://twitter.com/intent/tweet?text=European%20Soil%20Data%20Centre%202.0.%20Soil%20data%20and%20knowledge%20in%20support%20of%20the%20EU%20policies&url=https%3A//geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html&hashtags=big-data,data-sharing,esdac,european-soil-observatory,soil-policy" title="Share on Twitter">Twitter</a>
+    <a href="https://twitter.com/intent/tweet?text=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html&hashtags=r,raster,stack,ntl,dmsp-ols,github" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html&title=European%20Soil%20Data%20Centre%202.0.%20Soil%20data%20and%20knowledge%20in%20support%20of%20the%20EU%20policies&summary=Panagos%2C%20P.a%2C%20Van%20Liedekerke%2C%20M.a%2C%20Borrelli%2C%0AP.b%2C%20K%C3%B6ninger%2C%20J.a%2C%20Ballabio%2C%20C.a%2C%0AOrgiazzi%2C%20A.a%2C%20Lugato%2C%20E.a%2C%20Liakos%2C%0AL.a%2C%20Hervas%2C%20J.a%2C%20Jones%2C%20A.a%2C%0AMontanarella%2C%20L.a%2C%202022.%20European%20Soil%20Data%20Centre%202.0%3A%20Soil%0Adata%20and%20knowledge%20in%20support%20of%20the%20EU%20%E2%80%A6&source=https%3A//geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html&title=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&summary=%CE%97%20%CE%B1%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7%20%CE%B1%CF%85%CF%84%CE%AE%20%CF%80%CE%B5%CF%81%CE%B9%CE%BB%CE%B1%CE%BC%CE%B2%CE%AC%CE%BD%CE%B5%CE%B9%20%CF%84%CE%BF%20%CF%80%CE%B5%CF%81%CE%B9%CE%B5%CF%87%CF%8C%CE%BC%CE%B5%CE%BD%CE%BF%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20workshop%20%CF%83%CF%84%CE%BF%20FOSSCOMM%202019%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%9B%CE%B1%CE%BC%CE%AF%CE%B1.%20%CE%93%CE%B9%CE%B1%0A%CF%80%CE%B5%CF%81%CE%B9%CF%83%CF%83%CF%8C%CF%84%CE%B5%CF%81%CE%B5%CF%82%20%CE%BB%CE%B5%CF%80%CF%84%CE%BF%CE%BC%CE%AD%CF%81%CE%B5%CE%B9%CE%B5%CF%82%20%CE%B1%CE%BD%CE%B1%CF%84%CF%81%CE%AD%CE%BE%CF%84%CE%B5%20%CF%83%CF%84%CE%BF%20github%20repository.%0A%CE%A3%CF%84%CF%8C%CF%87%CE%BF%CF%82%20%CF%84%CE%BF%CF%85%20%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CF%84%CE%B7%CF%81%CE%AF%CE%BF%CF%85%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B7%20%CE%B5%CE%BE%CE%BF%CE%B9%CE%BA%CE%B5%CE%AF%CF%89%CF%83%CE%B7%20%CF%84%CE%BF%CF%85%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%20%CE%BC%CE%B5%20%CF%84%CE%BF%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20raster%0A%CF%84%CE%B7%CF%82%20R%20%CF%84%CE%BF%20%CE%BF%CF%80%CE%BF%CE%AF%CE%BF%20%CF%80%CF%81%CE%BF%CF%83%CF%86%CE%AD%CF%81%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CE%B1%CE%BD%CE%AC%CE%B3%CE%BD%CF%89%CF%83%CE%B7%CF%82%20%CF%88%CE%B7%CF%86%CE%B9%CE%B4%CF%89%CF%84%CF%8E%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%0A%28raster%29%20%CE%BA%CE%B1%CE%B9%20%CE%B5%CF%80%CE%B5%CE%BE%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82%20%CF%84%CE%BF%CF%85%CF%82%20%28crop%2C%0Areclassify%2C%0Areproject%20%E2%80%A6&source=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share on LinkedIn">LinkedIn</a>
     ❄
-    <a href="https://news.ycombinator.com/submitlink?t=European%20Soil%20Data%20Centre%202.0.%20Soil%20data%20and%20knowledge%20in%20support%20of%20the%20EU%20policies&u=https%3A//geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html" title="Share on HackerNews">HackerNews</a>
+    <a href="https://news.ycombinator.com/submitlink?t=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&u=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share on HackerNews">HackerNews</a>
     ❄
-    <a href="mailto:?subject=European%20Soil%20Data%20Centre%202.0.%20Soil%20data%20and%20knowledge%20in%20support%20of%20the%20EU%20policies&amp;body=https%3A//geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html" title="Share via Email">Email</a>
+    <a href="mailto:?subject=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R&amp;body=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" title="Share via Email">Email</a>
     ❄
-    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html&title=European%20Soil%20Data%20Centre%202.0.%20Soil%20data%20and%20knowledge%20in%20support%20of%20the%20EU%20policies" title="Share via Reddit">Reddit</a>
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html&title=Raster%20%CE%BA%CE%B1%CE%B9%20Raster%20Stack%20%CF%83%CF%84%CE%B7%CE%BD%20R" title="Share via Reddit">Reddit</a>
   </p>
 </section>
 
@@ -151,10 +152,10 @@
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html"
+                    <a href="https://geographer.gr/raster-και-raster-stack-στην-r.html"
                        rel="bookmark"
-                       title="Permalink to European Soil Data Centre 2.0. Soil data and knowledge in support of the EU policies">
-                        European Soil Data Centre 2.0. Soil data and knowledge in support of the EU policies
+                       title="Permalink to Raster και Raster Stack στην R">
+                        Raster και Raster Stack στην R
                     </a>
                 </h1>
             </header>
@@ -164,77 +165,49 @@
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2022-12-14T10:20:00+02:00"> Τετ 14 Δεκεμβρίου 2022</time>
+        <i class="fa fa-calendar"></i><time datetime="2019-10-03T10:20:00+03:00"> Πεμ 03 Οκτωβρίου 2019</time>
     </span>
 
 
 
         <span class="label label-default">Category</span>
-        <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+        <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="https://geographer.gr/tag/big-data.html">big data</a>
+	<a href="https://geographer.gr/tag/r.html">R</a>
         /
-	<a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
+	<a href="https://geographer.gr/tag/raster.html">raster</a>
         /
-	<a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
+	<a href="https://geographer.gr/tag/stack.html">stack</a>
         /
-	<a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
+	<a href="https://geographer.gr/tag/ntl.html">NTL</a>
         /
-	<a href="https://geographer.gr/tag/soil-policy.html">soil policy</a>
+	<a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
+        /
+	<a href="https://geographer.gr/tag/github.html">github</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Panagos, P.<sup>a</sup>, Van Liedekerke, M.<sup>a</sup>, Borrelli,
-P.<sup>b</sup>, Köninger, J.<sup>a</sup>, Ballabio, C.<sup>a</sup>,
-Orgiazzi, A.<sup>a</sup>, Lugato, E.<sup>a</sup>, Liakos,
-L.<sup>a</sup>, Hervas, J.<sup>a</sup>, Jones, A.<sup>a</sup>,
-Montanarella, L.<sup>a</sup>, 2022. European Soil Data Centre 2.0: Soil
-data and knowledge in support of the EU policies. European J Soil
-Science. <a href="https://doi.org/10.1111/ejss.13315">https://doi.org/10.1111/ejss.13315</a></p>
-<p><sup>a</sup> <em>European Commission, Joint Research Centre (JRC),
-Ispra, Italy</em></p>
-<p><sup>b</sup> <em>Department of Science, Roma Tre University, Rome,
-Italy</em></p>
-<p>The European Soil Data Centre (ESDAC), hosted by the European
-Commission’s Joint Research Centre (JRC), is the focal point for soil
-data, support to policy making and awareness raising for the European
-Union (EU). Established in 2006 to provide harmonised soil-related
-information for the EU Member States, and ESDAC currently hosts 88
-datasets, 6000 maps, six atlases, 500 scientific publications, and a
-copious amount of soil-related material. Through its data repository
-publishing activity, ESDAC has licensed over 50,000 datasets during the
-past 15 years; 8500 of them in 2021 alone. It has published 140 monthly
-newsletters and is followed by more than 12,000 subscribed users, which
-receive regular updates. This article addresses the use, usability, and
-usefulness of ESDAC. About 75% of the ESDAC users come from academia and
-the research community while the remaining 25% includes public
-administration (at EU, national, regional, and local level) and the
-private sector. In addition, we provide some insights of the datasets
-evaluation and how they have been developed. The general ESDAC vision is
-to provide evidence underlying EU soil-relevant policies and to
-facilitate the access to relevant data for research. ESDAC is an
-integral part of the recently established European Union Soil
-Observatory (EUSO), with a target to have an even stronger role in
-supporting EU and regional policies.</p>
-<p>Highlights</p>
-<ul>
-<li>ESDAC is a central place from where to find European wide relevant
-soil data.</li>
-<li>ESDAC is an integral part of the EU Soil Observatory in creating
-data and knowledge for policy support.</li>
-<li>The ESDAC website shows a high volume of traffic; 10,000 of user
-licenses are granted per year.</li>
-<li>ESDAC key success: open access data policy, documentation,
-operational helpdesk and regular updates</li>
-</ul>
-<figure>
-<img alt="(a) The trend in the ESDAC distributed datasets; (b) the cumulative number of released datasets. For 2022, an estimation is provided" src="https://geographer.gr/images/ejss13315-fig-0005-m.png"/>
-<figcaption aria-hidden="true">(a) The trend in the ESDAC distributed
-datasets; (b) the cumulative number of released datasets. For 2022, an
-estimation is provided</figcaption>
-</figure>
+                <p>Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο <a href="https://2019.fosscomm.gr/">FOSSCOMM 2019</a> στην Λαμία. Για
+περισσότερες λεπτομέρειες ανατρέξτε στο <a href="https://github.com/kokkytos/rworkshop">github repository</a>.</p>
+<p>Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο <a href="https://cran.r-project.org/web/packages/raster/index.html">raster</a>
+της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων
+(raster) και επεξεργασίας τους (<a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/crop">crop</a>,
+<a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/reclassify">reclassify</a>,
+<a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/projectRaster">reproject</a>,
+<a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/resample">resample</a>
+κτλ.).</p>
+<p>Επιπλέον, θα επικεντρωθούμε στην κλάση <a href="https://web.archive.org/web/20211006131229/https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/stack">raster
+stack</a> η οποία δημιουργεί συστοιχίες ψηφιδωτών δεδομένων, κατάλληλες
+για χρονοσειρές και πολυκαναλικές εικόνες.</p>
+<p>Η διεξαγωγή του εργαστηρίου θα γίνει μέσω παραδειγμάτων και με την
+χρήση δεδομένων νυκτερινών φώτων <a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/stack">DMSP-OLS
+Nighttime Lights Time Series (Stable Lights Version 4)</a>. Θα προηγηθεί
+μια σύντομη παρουσίαση των βημάτων και της διαδικασίας ώστε οι χρήστες
+να αποκτήσουν μια σύντομη αλλά περιεκτική εικόνα του στόχου του
+εργαστηρίου και των δυνατοτητων που προσφέρει ο προγραμματισμός με την
+R.</p>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -249,8 +222,8 @@ estimation is provided</figcaption>
             var disqus_config = function () {
                 this.language = "en";
 
-                        this.page.identifier = '2022-12-14-european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies';
-                        this.page.url = 'https://geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html';
+                        this.page.identifier = '2019-10-03-raster-και-raster-stack-στην-r';
+                        this.page.url = 'https://geographer.gr/raster-και-raster-stack-στην-r.html';
             };
 
             /* * * DON'T EDIT BELOW THIS LINE * * */

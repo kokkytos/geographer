@@ -38,7 +38,7 @@ uncertainty was estimated and the results were validated in order to
 present the outputs in the most robust way. The study was also
 interdisciplinary in nature, requiring large-scale datasets to be
 integrated from different scientific domains, such as soil science,
-geography, hydrology, chemistry, climate change, and agriculture.&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="big data"></category><category term="data sharing"></category><category term="ESDAC"></category><category term="European soil observatory"></category><category term="soil policy"></category></entry><entry><title>European Soil Data Centre 2.0. Soil data and knowledge in support of the EU policies</title><link href="https://geographer.gr/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html" rel="alternate"></link><published>2022-12-14T10:20:00+02:00</published><updated>2022-12-14T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-12-14:/european-soil-data-centre-20-soil-data-and-knowledge-in-support-of-the-eu-policies.html</id><summary type="html">&lt;p&gt;Panagos, P.&lt;sup&gt;a&lt;/sup&gt;, Van Liedekerke, M.&lt;sup&gt;a&lt;/sup&gt;, Borrelli,
+geography, hydrology, chemistry, climate change, and agriculture.&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="big data"></category><category term="data sharing"></category><category term="ESDAC"></category><category term="European soil observatory"></category><category term="soil policy"></category></entry><entry><title>European Soil Data Centre 2.0. Soil data and knowledge in support of the EU policies</title><link href="https://geographer.gr/european-soil-data-centre-2-0-soil-data-and-knowledge-in-support-of-the-eu-policies.html" rel="alternate"></link><published>2022-12-14T10:20:00+02:00</published><updated>2022-12-14T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-12-14:/european-soil-data-centre-2-0-soil-data-and-knowledge-in-support-of-the-eu-policies.html</id><summary type="html">&lt;p&gt;Panagos, P.&lt;sup&gt;a&lt;/sup&gt;, Van Liedekerke, M.&lt;sup&gt;a&lt;/sup&gt;, Borrelli,
 P.&lt;sup&gt;b&lt;/sup&gt;, Köninger, J.&lt;sup&gt;a&lt;/sup&gt;, Ballabio, C.&lt;sup&gt;a&lt;/sup&gt;,
 Orgiazzi, A.&lt;sup&gt;a&lt;/sup&gt;, Lugato, E.&lt;sup&gt;a&lt;/sup&gt;, Liakos,
 L.&lt;sup&gt;a&lt;/sup&gt;, Hervas, J.&lt;sup&gt;a&lt;/sup&gt;, Jones, A.&lt;sup&gt;a&lt;/sup&gt;,
@@ -488,7 +488,31 @@ Infrared Imaging Radiometer Suite data as well as with the existing
 instances of radiance calibrated DSMP/OLS data. The proposed adjust-
 ment is easy to implement. The improvement of the proposed method is
 particularly significant in arid regions where vegetation is relatively
-sparse.&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="Night time lights"></category><category term="DMSP/OLS"></category><category term="SAR"></category></entry><entry><title>Λήψη δορυφορικών εικόνων στην R μέσω του GIBS API</title><link href="https://geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api.html" rel="alternate"></link><published>2017-11-19T10:20:00+02:00</published><updated>2017-11-19T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2017-11-19:/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api.html</id><summary type="html">&lt;p&gt;Η υπηρεσία &lt;a href="https://wiki.earthdata.nasa.gov/display/GIBS/Global+Imagery+Browse+Services+-+GIBS"&gt;Global
+sparse.&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="Night time lights"></category><category term="DMSP/OLS"></category><category term="SAR"></category></entry><entry><title>Raster και Raster Stack στην R</title><link href="https://geographer.gr/raster-%CE%BA%CE%B1%CE%B9-raster-stack-%CF%83%CF%84%CE%B7%CE%BD-r.html" rel="alternate"></link><published>2019-10-03T10:20:00+03:00</published><updated>2019-10-03T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2019-10-03:/raster-και-raster-stack-στην-r.html</id><summary type="html">&lt;p&gt;Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο &lt;a href="https://2019.fosscomm.gr/"&gt;FOSSCOMM 2019&lt;/a&gt; στην Λαμία. Για
+περισσότερες λεπτομέρειες ανατρέξτε στο &lt;a href="https://github.com/kokkytos/rworkshop"&gt;github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο &lt;a href="https://cran.r-project.org/web/packages/raster/index.html"&gt;raster&lt;/a&gt;
+της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων
+(raster) και επεξεργασίας τους (&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/crop"&gt;crop&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/reclassify"&gt;reclassify&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/projectRaster"&gt;reproject …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο &lt;a href="https://2019.fosscomm.gr/"&gt;FOSSCOMM 2019&lt;/a&gt; στην Λαμία. Για
+περισσότερες λεπτομέρειες ανατρέξτε στο &lt;a href="https://github.com/kokkytos/rworkshop"&gt;github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο &lt;a href="https://cran.r-project.org/web/packages/raster/index.html"&gt;raster&lt;/a&gt;
+της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων
+(raster) και επεξεργασίας τους (&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/crop"&gt;crop&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/reclassify"&gt;reclassify&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/projectRaster"&gt;reproject&lt;/a&gt;,
+&lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/resample"&gt;resample&lt;/a&gt;
+κτλ.).&lt;/p&gt;
+&lt;p&gt;Επιπλέον, θα επικεντρωθούμε στην κλάση &lt;a href="https://web.archive.org/web/20211006131229/https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/stack"&gt;raster
+stack&lt;/a&gt; η οποία δημιουργεί συστοιχίες ψηφιδωτών δεδομένων, κατάλληλες
+για χρονοσειρές και πολυκαναλικές εικόνες.&lt;/p&gt;
+&lt;p&gt;Η διεξαγωγή του εργαστηρίου θα γίνει μέσω παραδειγμάτων και με την
+χρήση δεδομένων νυκτερινών φώτων &lt;a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/stack"&gt;DMSP-OLS
+Nighttime Lights Time Series (Stable Lights Version 4)&lt;/a&gt;. Θα προηγηθεί
+μια σύντομη παρουσίαση των βημάτων και της διαδικασίας ώστε οι χρήστες
+να αποκτήσουν μια σύντομη αλλά περιεκτική εικόνα του στόχου του
+εργαστηρίου και των δυνατοτητων που προσφέρει ο προγραμματισμός με την
+R.&lt;/p&gt;</content><category term="Διάφορα"></category><category term="R"></category><category term="raster"></category><category term="stack"></category><category term="NTL"></category><category term="DMSP-OLS"></category><category term="github"></category></entry><entry><title>Λήψη δορυφορικών εικόνων στην R μέσω του GIBS API</title><link href="https://geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api.html" rel="alternate"></link><published>2017-11-19T10:20:00+02:00</published><updated>2017-11-19T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2017-11-19:/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api.html</id><summary type="html">&lt;p&gt;Η υπηρεσία &lt;a href="https://wiki.earthdata.nasa.gov/display/GIBS/Global+Imagery+Browse+Services+-+GIBS"&gt;Global
 Imagery Browse Services (GIBS)&lt;/a&gt; του παρατηρητηρίου &lt;a href="https://earthdata.nasa.gov/"&gt;Earth Observing System Data and
 Information System (EOSDIS)&lt;/a&gt; παρέχει δορυφορικές εικόνες πλήρους
 ανάλυσης σε παγκόσμιο επίπεδο. Η υπηρεσία παρέχει πρόσβαση σε 600 και
@@ -1044,7 +1068,7 @@ mapnik.xml&lt;/a&gt;&lt;/p&gt;
 πολύτιμους ανθρώπινους πόρους από την διοικητική μηχανή.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://geographer.gr/images/gis_souliou.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;Δείτε το Σύστημα Γεωγραφικών Πληροφοριών &lt;a href="http://worldmap.harvard.edu/maps/536"&gt;εδώ&lt;/a&gt;&lt;/p&gt;</content><category term="GIS"></category><category term="GIS"></category><category term="Δήμος Σουλίου"></category><category term="Σύστημα Γεωγραφικών Πληροφοριών"></category></entry><entry><title>Ανάβαση στο όρος Γκορίλας</title><link href="https://geographer.gr/anabase-sto-oros-gkorilas.html" rel="alternate"></link><published>2012-02-03T00:10:00+02:00</published><updated>2012-02-03T00:10:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2012-02-03:/anabase-sto-oros-gkorilas.html</id><summary type="html">&lt;p style="text-align: justify;"&gt;
-&lt;iframe frameborder="0" height="694" scrolling="no" src="http://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
+&lt;iframe frameborder="0" height="694" scrolling="no" src="https://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
 &lt;/iframe&gt;
 &lt;/p&gt;
 &lt;p&gt;Στα πλαίσια των δραστηριοτήτων του συλλόγου Μελέτης και Προστασίας
@@ -1053,7 +1077,7 @@ mapnik.xml&lt;/a&gt;&lt;/p&gt;
 (1658μ.). Σκοπός μας δεν ήταν απλά να φτάσουμε την κορυφή αλλά παράλληλα
 να διανοίξουμε ένα παλιό μονοπάτι που οδηγούσε στην κορυφή. Ίσως το πιο
 δύσκολο μονοπάτι που έχω συναντήσει …&lt;/p&gt;</summary><content type="html">&lt;p style="text-align: justify;"&gt;
-&lt;iframe frameborder="0" height="694" scrolling="no" src="http://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
+&lt;iframe frameborder="0" height="694" scrolling="no" src="https://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
 &lt;/iframe&gt;
 &lt;/p&gt;
 &lt;p&gt;Στα πλαίσια των δραστηριοτήτων του συλλόγου Μελέτης και Προστασίας
