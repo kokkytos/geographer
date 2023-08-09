@@ -2,6 +2,7 @@
 Title: Mercury in European topsoils. Anthropogenic sources, stocks and fluxes
 Date: 2021-07-16 10:20
 Category: Δημοσιεύσεις
+slug: mercury-in-european-topsoils-anthropogenic-sources-stocks-and-fluxes
 Tags:    Heavy metal, Hg, Sediment transport, Soil contamination, Soil erosion
 ---
 

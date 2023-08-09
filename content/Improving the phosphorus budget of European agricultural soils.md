@@ -2,6 +2,7 @@
 Title: Improving the phosphorus budget of European agricultural soils
 Date: 2022-09-17 10:20
 Category: Δημοσιεύσεις
+slug: improving-the-phosphorus-budget-of-european-agricultural-soils
 Tags:  Agriculture, Farm to Fork, Fertilizers, Phosphorus budget, Plant uptake
 ---
 

@@ -61,7 +61,7 @@ STATIC_PATHS = ['images',
 
 # https://stackoverflow.com/a/61572517
 EXTRA_PATH_METADATA = {
-'html/map.html': {'path': '../html/map.html'},
+'html/map.html': {'path': 'html/map.html'},
 'html/m.html': {'path': 'html/m.html'},
 'html/m_files/leaflet-1.3.1/leaflet.js': {'path': 'html/m_files/leaflet-1.3.1/leaflet.js'},
 'html/m_files/leaflet-1.3.1/leaflet.css': {'path': 'html/m_files/leaflet-1.3.1/leaflet.css'},

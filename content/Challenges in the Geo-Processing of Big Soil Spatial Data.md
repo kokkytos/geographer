@@ -2,6 +2,7 @@
 Title: Challenges in the Geo-Processing of Big Soil Spatial Data
 Date: 2022-12-14 10:20
 Category: Δημοσιεύσεις
+slug: challenges-in-the-geo-processing-of-big-soil-spatial-data
 Tags:  big data , data sharing , ESDAC , European soil observatory , soil policy 
 ---
 

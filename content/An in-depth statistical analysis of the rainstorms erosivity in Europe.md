@@ -2,6 +2,7 @@
 Title: An in-depth statistical analysis of the rainstorms erosivity in Europe
 Date: 2021-07-15 10:20
 Category: Δημοσιεύσεις
+slug: an-in-depth-statistical-analysis-of-the-rainstorms-erosivity-in-europe
 Tags: Rainfall erosivity, REDES, Lorenz curve, Gini coefficient, Seasonality, Threshold values, R-factor,Europe
 ---
 

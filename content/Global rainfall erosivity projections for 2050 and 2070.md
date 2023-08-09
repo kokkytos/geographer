@@ -2,6 +2,7 @@
 Title: Global rainfall erosivity projections for 2050 and 2070
 Date: 2022-05-11 10:20
 Category: Δημοσιεύσεις
+slug: global-rainfall-erosivity-projections-for-2050-and-2070
 Tags:   Agriculture, Climate change, Food security, Land use change, Policy, R-factor, Soil health
 ---
 

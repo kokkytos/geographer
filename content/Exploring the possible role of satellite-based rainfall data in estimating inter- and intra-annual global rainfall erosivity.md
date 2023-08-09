@@ -2,6 +2,7 @@
 Title: Exploring the possible role of satellite-based rainfall data in estimating inter- and intra-annual global rainfall erosivity
 Date: 2022-04-14 10:20
 Category: Δημοσιεύσεις
+slug: exploring-the-possible-role-of-satellite-based-rainfall-data-in-estimating-inter-and-intra-annual-global-rainfall-erosivity
 Tags:   rainfall, erosivity
 ---
 

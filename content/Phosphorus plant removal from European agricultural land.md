@@ -2,6 +2,7 @@
 Title: Phosphorus plant removal from European agricultural land
 Date: 2022-02-07 10:20
 Category: Δημοσιεύσεις
+slug: phosphorus-plant-removal-from-european-agricultural-land
 Tags:   Crop production , Farm to Fork , Food security , Nutrients , Phosphorus budget , Phosphorus removal , Plant uptake
 ---
 

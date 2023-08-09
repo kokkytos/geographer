@@ -2,6 +2,7 @@
 Title: Further adjustment of the Defense Meteorological Satellite Program-Operational Linescan System using radar data
 Date: 2021-06-08 10:20
 Category: Δημοσιεύσεις
+slug: further-adjustment-of-the-defense-meteorological-satellite-program-operational-linescan-system-using-radar-data
 Tags:   Night time lights,DMSP/OLS, SAR
 ---
 

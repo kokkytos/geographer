@@ -2,6 +2,7 @@
 Title: Median Shift Lunar Correction for VIIRS
 Date: 2021-06-08 10:30
 Category: Δημοσιεύσεις
+slug: median-shift-lunar-correction-for-viirs
 Tags:   Night time lights,DMSP/OLS, VIIRS,Lunar Correction
 ---
 

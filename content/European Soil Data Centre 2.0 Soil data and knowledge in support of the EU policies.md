@@ -2,6 +2,7 @@
 Title: European Soil Data Centre 2.0. Soil data and knowledge in support of the EU policies
 Date: 2022-12-14 10:20
 Category: Δημοσιεύσεις
+slug: european-soil-data-centre-2-0-soil-data-and-knowledge-in-support-of-the-eu-policies
 Tags: big data, data sharing, ESDAC, European soil observatory, soil policy
 ---
 
