@@ -4,7 +4,6 @@ Date: 2013-09-22 10:20
 Category: GIS
 Tags: aspace , maptools , R , rgdal , rpy , shapefiles , spgrass6
 status: hidden
-custom_state: todo
 ---
 
 Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές περιγραφικής στατιστικής της χωρικής κατανομής.
