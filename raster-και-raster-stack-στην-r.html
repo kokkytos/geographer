@@ -21,7 +21,7 @@
         <meta property="og:url" content="https://geographer.gr/raster-και-raster-stack-στην-r.html"/>
         <meta property="og:description" content="Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο FOSSCOMM 2019 στην Λαμία. Για περισσότερες λεπτομέρειες ανατρέξτε στο github repository. Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο raster της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων (raster) και επεξεργασίας τους (crop, reclassify, reproject …"/>
         <meta property="article:published_time" content="2019-10-03" />
-            <meta property="article:section" content="Διάφορα" />
+            <meta property="article:section" content="GIS" />
             <meta property="article:tag" content="R" />
             <meta property="article:tag" content="raster" />
             <meta property="article:tag" content="stack" />
@@ -42,8 +42,8 @@
         <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
 
-        <link href="https://geographer.gr/feeds/diaphora.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer Διάφορα ATOM Feed"/>
+        <link href="https://geographer.gr/feeds/gis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer GIS ATOM Feed"/>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116514702-1"></script>
     <script>
@@ -88,10 +88,10 @@
                         <li >
                             <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
                         </li>
-                        <li class="active">
+                        <li >
                             <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="https://geographer.gr/category/gis.html">Gis</a>
                         </li>
             </ul>
@@ -124,7 +124,7 @@
         <div class="col-sm-9">
             <ol class="breadcrumb">
                 <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
-                <li><a href="https://geographer.gr/category/diaphora.html" title="Διάφορα">Διάφορα</a></li>
+                <li><a href="https://geographer.gr/category/gis.html" title="GIS">GIS</a></li>
                 <li class="active">Raster και Raster Stack στην R</li>
             </ol>
 
@@ -171,7 +171,7 @@
 
 
         <span class="label label-default">Category</span>
-        <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+        <a href="https://geographer.gr/category/gis.html">GIS</a>
 
 
 <span class="label label-default">Tags</span>
@@ -208,6 +208,324 @@ Nighttime Lights Time Series (Stable Lights Version 4)</a>. Θα προηγηθ�
 να αποκτήσουν μια σύντομη αλλά περιεκτική εικόνα του στόχου του
 εργαστηρίου και των δυνατοτητων που προσφέρει ο προγραμματισμός με την
 R.</p>
+<h3 id="εγκατάσταση-των-απαραίτητων-βιβλιοθηκών">Εγκατάσταση των
+απαραίτητων βιβλιοθηκών</h3>
+<pre><code>install.packages(c("raster","ggplot2","rasterVis","rgdal","leaflet"),dependencies=T)</code></pre>
+<h3 id="εισαγωγή-των-απαραίτητων-βιβλιοθηκών">Εισαγωγή των απαραίτητων
+βιβλιοθηκών</h3>
+<pre><code>library(raster)
+library(ggplot2)
+library(rasterVis)
+library(rgdal)
+library(leaflet)</code></pre>
+<h3 id="ορισμός-working-directory">Ορισμός Working directory</h3>
+<pre><code>setwd('/home/leonidas/Desktop/rworkshop')</code></pre>
+<h3 id="επιβεβαίωση-ποιο-είναι-το-working-directory">Επιβεβαίωση ποιο
+είναι το working directory</h3>
+<pre><code>getwd()
+
+###### [1] "/home/leonidas/Desktop/rworkshop"</code></pre>
+<h3 id="δημιουργία-rasterstack-object">Δημιουργία rasterStack
+Object</h3>
+<pre><code>myfiles &lt;- list.files(path=file.path("data","dmsp_ols"),  pattern="*.stable_lights.tif$", full.names = TRUE)
+s &lt;- raster::stack(myfiles)</code></pre>
+<h3 id="οπτικοποίηση-raster-stack">Οπτικοποίηση raster stack</h3>
+<pre><code>plot(s)</code></pre>
+<p><img src="https://geographer.gr/images/index.png"/></p>
+<h3 id="μερικές-ιδιότητες-του-rasterstack">Μερικές ιδιότητες του
+rasterStack</h3>
+<pre><code>class(s) # ποιάς κλάσης ειναι object?</code></pre>
+<pre><code>## [1] "RasterStack"
+## attr(,"package")
+## [1] "raster"</code></pre>
+<pre><code>s@ncols  # πλήθος στηλών 
+</code></pre>
+<pre><code>## [1] 1422</code></pre>
+<pre><code>s@nrows  # πλήθος γραμμών</code></pre>
+<pre><code> ## [1] 1122</code></pre>
+<pre><code>s@extent # όρια γεωγραφικής έκτασης</code></pre>
+<pre><code>## class      : Extent 
+## xmin       : 18.50417 
+## xmax       : 30.35417 
+## ymin       : 33.8625 
+## ymax       : 43.2125</code></pre>
+<pre><code>names(s)   # όνομα των επιμέρους raster</code></pre>
+<pre><code>##  [1] "F101992.v4b_web.stable_lights" "F101993.v4b_web.stable_lights"
+##  [3] "F101994.v4b_web.stable_lights" "F121994.v4b_web.stable_lights"
+##  [5] "F121995.v4b_web.stable_lights" "F121996.v4b_web.stable_lights"
+##  [7] "F121997.v4b_web.stable_lights" "F121998.v4b_web.stable_lights"
+##  [9] "F121999.v4b_web.stable_lights" "F141997.v4b_web.stable_lights"
+## [11] "F141998.v4b_web.stable_lights" "F141999.v4b_web.stable_lights"
+## [13] "F142000.v4b_web.stable_lights" "F142001.v4b_web.stable_lights"
+## [15] "F142002.v4b_web.stable_lights" "F142003.v4b_web.stable_lights"
+## [17] "F152000.v4b_web.stable_lights" "F152001.v4b_web.stable_lights"
+## [19] "F152002.v4b_web.stable_lights" "F152003.v4b_web.stable_lights"
+## [21] "F152004.v4b_web.stable_lights" "F152005.v4b_web.stable_lights"
+## [23] "F152006.v4b_web.stable_lights" "F152007.v4b_web.stable_lights"
+## [25] "F162004.v4b_web.stable_lights" "F162005.v4b_web.stable_lights"
+## [27] "F162006.v4b_web.stable_lights" "F162007.v4b_web.stable_lights"
+## [29] "F162008.v4b_web.stable_lights" "F162009.v4b_web.stable_lights"
+## [31] "F182010.v4d_web.stable_lights" "F182011.v4c_web.stable_lights"
+## [33] "F182012.v4c_web.stable_lights" "F182013.v4c_web.stable_lights"</code></pre>
+<pre><code>nlayers(s) # πλήθος raster</code></pre>
+<pre><code>## [1] 34</code></pre>
+<pre><code>res(s) # resolution των raster</code></pre>
+<pre><code>## [1] 0.008333333 0.008333333</code></pre>
+<pre><code>inMemory(s) # επαληθέουμε αν τα δεδομένα είναι στην μνήμη</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre><code>fromDisk(s) # επαληθέουμε αν τα δεδομένα είναι στον δίσκο</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<h3 id="υποσύνολο-από-layers-του-stack">Υποσύνολο από layers του
+stack</h3>
+<pre><code>sub_s &lt;- subset(s, c(1:5))
+plot(sub_s)</code></pre>
+<p><img src="https://geographer.gr/images/index2.png"/></p>
+<pre><code>sub_s</code></pre>
+<pre><code>## class      : RasterStack 
+## dimensions : 1122, 1422, 1595484, 5  (nrow, ncol, ncell, nlayers)
+## resolution : 0.008333333, 0.008333333  (x, y)
+## extent     : 18.50417, 30.35417, 33.8625, 43.2125  (xmin, xmax, ymin, ymax)
+## crs        : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
+## names      : F101992.v4b_web.stable_lights, F101993.v4b_web.stable_lights, F101994.v4b_web.stable_lights, F121994.v4b_web.stable_lights, F121995.v4b_web.stable_lights 
+## min values :                             0,                             0,                             0,                             0,                             0 
+## max values :                            63,                            63,                            63,                            63,                            63</code></pre>
+<pre><code>rm(sub_s) #διαγραφή object από το περιβάλλον
+#sub_s</code></pre>
+<h3 id="αποκοπή-του-rasterstack-στα-όρια-του-ν.-μαγνησίας">Αποκοπή του
+rasterStack στα όρια του Ν. Μαγνησίας</h3>
+<h4 id="ανάγνωση-διανυσματικών-δεδομένων-geopackage">Ανάγνωση
+διανυσματικών δεδομένων geopackage</h4>
+<pre><code>pe &lt;- readOGR(file.path("data","per_enot", "pe.gpkg"), "pe")</code></pre>
+<pre><code>## OGR data source with driver: GPKG 
+## Source: "/home/leonidas/Desktop/rworkshop/data/per_enot/pe.gpkg", layer: "pe"
+## with 75 features
+## It has 5 fields</code></pre>
+<pre><code># ?readOGR
+crs(pe)</code></pre>
+<pre><code>
+## CRS arguments:
+##  +proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0
+## +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m
+## +no_defs
+</code></pre>
+<pre><code>plot(pe)</code></pre>
+<p><img src="https://geographer.gr/images/pe_gpkg.png"/></p>
+<h3 id="reprojection-σε-wgs84-και-επιλογή-του-ν.-μαγνησίας">Reprojection
+σε WGS’84 και επιλογή του Ν. Μαγνησίας</h3>
+<pre><code>pe_wgs &lt;- sp::spTransform(pe, CRS("+init=epsg:4326"))
+crs(pe_wgs)</code></pre>
+<pre><code>## CRS arguments:
+##  +init=epsg:4326 +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84
+## +towgs84=0,0,0</code></pre>
+<pre><code>View(pe_wgs@data)</code></pre>
+<pre><code>magnisia &lt;- subset(pe_wgs, KALCODE==c(24)) #επιλογή του Ν. Μαγνησίας
+plot(magnisia)</code></pre>
+<p><img src="https://geographer.gr/images/magnisia.png"/></p>
+<pre><code>print(magnisia)</code></pre>
+<pre><code>## class       : SpatialPolygonsDataFrame 
+## features    : 1 
+## extent      : 22.49044, 23.35152, 38.96959, 39.60304  (xmin, xmax, ymin, ymax)
+## crs         : +init=epsg:4326 +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
+## variables   : 5
+## names       : OBJECTID, KALCODE,                        LEKTIKO,    SHAPE_Leng,    SHAPE_Area 
+## value       :       24,      24, ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΜΑΓΝΗΣΙΑΣ, 553550.759122, 2364238989.84</code></pre>
+<p>Ορισμός των ορίων της περιοχής μέσω της δημιουργίας ενός extent
+object</p>
+<pre><code>#ext&lt;-extent(22.61,24.34,37.33,38.69) #Attiki
+ext &lt;- raster::extent(magnisia)
+str(ext)</code></pre>
+<pre><code>## Formal class 'Extent' [package "raster"] with 4 slots
+##   ..@ xmin: num 22.5
+##   ..@ xmax: num 23.4
+##   ..@ ymin: num 39
+##   ..@ ymax: num 39.6</code></pre>
+<pre><code>plot(pe_wgs)
+plot(as(ext, 'SpatialPolygons'),col=rgb(1, 0, 0, alpha=0.5), add=T)</code></pre>
+<p><img src="https://geographer.gr/images/greece_magnisia.png"/></p>
+<pre><code>s &lt;-crop(s, ext) # εδώ διατηρεί το αρχικό resolution και προσαρμόζει τα άκρα, επίσης μετατρέπει το stack σε brick
+
+inMemory(s) # επαληθέουμε αν τα δεδομένα είναι στην μνήμη</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre><code>fromDisk(s) # επαληθέουμε αν τα δεδομένα είναι στον δίσκο   </code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>s@extent</code></pre>
+<pre><code>## class      : Extent 
+## xmin       : 22.4875 
+## xmax       : 23.35417 
+## ymin       : 38.97083 
+## ymax       : 39.60417</code></pre>
+<pre><code>names(s)</code></pre>
+<pre><code>##  [1] "F101992.v4b_web.stable_lights" "F101993.v4b_web.stable_lights"
+##  [3] "F101994.v4b_web.stable_lights" "F121994.v4b_web.stable_lights"
+##  [5] "F121995.v4b_web.stable_lights" "F121996.v4b_web.stable_lights"
+##  [7] "F121997.v4b_web.stable_lights" "F121998.v4b_web.stable_lights"
+##  [9] "F121999.v4b_web.stable_lights" "F141997.v4b_web.stable_lights"
+## [11] "F141998.v4b_web.stable_lights" "F141999.v4b_web.stable_lights"
+## [13] "F142000.v4b_web.stable_lights" "F142001.v4b_web.stable_lights"
+## [15] "F142002.v4b_web.stable_lights" "F142003.v4b_web.stable_lights"
+## [17] "F152000.v4b_web.stable_lights" "F152001.v4b_web.stable_lights"
+## [19] "F152002.v4b_web.stable_lights" "F152003.v4b_web.stable_lights"
+## [21] "F152004.v4b_web.stable_lights" "F152005.v4b_web.stable_lights"
+## [23] "F152006.v4b_web.stable_lights" "F152007.v4b_web.stable_lights"
+## [25] "F162004.v4b_web.stable_lights" "F162005.v4b_web.stable_lights"
+## [27] "F162006.v4b_web.stable_lights" "F162007.v4b_web.stable_lights"
+## [29] "F162008.v4b_web.stable_lights" "F162009.v4b_web.stable_lights"
+## [31] "F182010.v4d_web.stable_lights" "F182011.v4c_web.stable_lights"
+## [33] "F182012.v4c_web.stable_lights" "F182013.v4c_web.stable_lights"</code></pre>
+<pre><code>res(s)</code></pre>
+<pre><code>## [1] 0.008333333 0.008333333</code></pre>
+<pre><code>nlayers(s)</code></pre>
+<pre><code>## [1] 34</code></pre>
+<h3 id="προβολή-στο-εγσα-87">Προβολή στο ΕΓΣΑ’ 87</h3>
+<pre><code>greekgrid &lt;- "+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs"
+
+s &lt;- projectRaster(from=s, res=1000, crs=greekgrid, method="ngb") </code></pre>
+<pre><code>plot(s[[1]])</code></pre>
+<p><img src="https://geographer.gr/images/magnisia_ntl.png"/></p>
+<p>Προβολή σε χάρτη leaflet</p>
+<pre><code>leaflet() %&gt;% 
+  addTiles() %&gt;%
+  addRasterImage(s[[1]], opacity = 0.6)</code></pre>
+<h3 id="compare-rasters">Compare rasters</h3>
+<pre><code>
+compareRaster(s[[1]], s[[15]], extent=TRUE )</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>compareRaster(s[[1]], s[[15]], rowcol=TRUE )</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>compareRaster(s[[1]], s[[15]], crs=TRUE)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>compareRaster(s[[1]], s[[15]], res=TRUE)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>compareRaster(s[[1]], s[[15]], orig=TRUE)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>compareRaster(s[[1]], s[[15]], values=T,stopiffalse = F)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<h1 id="resample-rasters">Resample rasters</h1>
+<pre><code>#Δημιουργία νεόυ raster 
+grid &lt;- raster()
+extent(grid) &lt;- extent(s)
+res(grid)=c(2000,2000)
+
+resampled_s &lt;- resample(s, grid, method = "ngb")
+res(s)</code></pre>
+<pre><code>## [1] 1000 1000</code></pre>
+<pre><code>res(resampled_s)</code></pre>
+<pre><code>## [1] 2000 2000</code></pre>
+<h3 id="μέσος-όρος-ανά-έτος-με-την-χρήση-stackapply">Μέσος όρος ανά έτος
+με την χρήση stackApply</h3>
+<pre><code>names(s)</code></pre>
+<pre><code>##  [1] "F101992.v4b_web.stable_lights" "F101993.v4b_web.stable_lights"
+##  [3] "F101994.v4b_web.stable_lights" "F121994.v4b_web.stable_lights"
+##  [5] "F121995.v4b_web.stable_lights" "F121996.v4b_web.stable_lights"
+##  [7] "F121997.v4b_web.stable_lights" "F121998.v4b_web.stable_lights"
+##  [9] "F121999.v4b_web.stable_lights" "F141997.v4b_web.stable_lights"
+## [11] "F141998.v4b_web.stable_lights" "F141999.v4b_web.stable_lights"
+## [13] "F142000.v4b_web.stable_lights" "F142001.v4b_web.stable_lights"
+## [15] "F142002.v4b_web.stable_lights" "F142003.v4b_web.stable_lights"
+## [17] "F152000.v4b_web.stable_lights" "F152001.v4b_web.stable_lights"
+## [19] "F152002.v4b_web.stable_lights" "F152003.v4b_web.stable_lights"
+## [21] "F152004.v4b_web.stable_lights" "F152005.v4b_web.stable_lights"
+## [23] "F152006.v4b_web.stable_lights" "F152007.v4b_web.stable_lights"
+## [25] "F162004.v4b_web.stable_lights" "F162005.v4b_web.stable_lights"
+## [27] "F162006.v4b_web.stable_lights" "F162007.v4b_web.stable_lights"
+## [29] "F162008.v4b_web.stable_lights" "F162009.v4b_web.stable_lights"
+## [31] "F182010.v4d_web.stable_lights" "F182011.v4c_web.stable_lights"
+## [33] "F182012.v4c_web.stable_lights" "F182013.v4c_web.stable_lights"</code></pre>
+<pre><code>years &lt;- substr(names(s),4,7)
+
+
+#Α' τρόπος
+indices &lt;- c(1,2,3,3,4,5,6,7,8,6,7,8,9,10,11,12,9,10,11,12,13,14,15,16,13,14,15,16,17,18,19,20,21,22)
+
+# B' τρόπος
+indices &lt;- factor(years)
+levels(indices) &lt;-1:length(levels(indices))
+
+nlayers(s)</code></pre>
+<pre><code>## [1] 34</code></pre>
+<pre><code>s&lt;-stackApply(s, as.integer(indices), fun = mean, na.rm = TRUE)
+nlayers(s)</code></pre>
+<pre><code>## [1] 22</code></pre>
+<pre><code>names(s) &lt;-unique(years)</code></pre>
+<h3 id="reclassify-τιμών">Reclassify τιμών</h3>
+<p>Ορίζουμε όσες τιμές στο raster είναι μικρότερες/ίσες του 6 στα raster
+layers σε NA</p>
+<h4 id="ος-τρόπος">1<sup>ος</sup> τρόπος</h4>
+<pre><code>rc1 &lt;- s
+
+rc1[rc1&lt;=6] &lt;- NA #δεν ειναι memory safe
+</code></pre>
+<h4 id="ος-τρόπος-1">2<sup>ος</sup> τρόπος</h4>
+<pre><code>s_calc &lt;- raster::calc(s, fun=function(x){x[x&lt;=6]&lt;-NA; return(x)}) </code></pre>
+<h4 id="ος-τρόπος-2">3<sup>ος</sup> τρόπος</h4>
+<p>rc2 &lt;- raster::reclassify(s, c(-Inf,6,NA))</p>
+<p>plot(s[[11]]) # plot ενδέκατο raster από το αρχικό stac</p>
+<p><img src="https://geographer.gr/images/magnisia_ntl2.png"/></p>
+<pre><code>plot(s_calc[[11]]) #plot από το αρχικό stack, από το φιλτραρισμένο, εναλλακτικά plot(s_calc$index_1992)</code></pre>
+<p><img src="https://geographer.gr/images/magnisia_ntl3.png"/></p>
+<pre><code>compareRaster(rc1, rc2, values=T)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>compareRaster(s_calc,rc2, values=T)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>compareRaster(s_calc,s, values=T,stopiffalse = F)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<h3 id="οπτικοποίηση-με-το-levelplot">Οπτικοποίηση με το levelplot</h3>
+<pre><code>rasterVis::levelplot(s_calc) # προσοχή μπορεί να αργήσει αν ειναι πολλά raster</code></pre>
+<p><img src="https://geographer.gr/images/levelplot.png"/></p>
+<pre><code>names(s)</code></pre>
+<pre><code>##  [1] "X1992" "X1993" "X1994" "X1995" "X1996" "X1997" "X1998" "X1999"
+##  [9] "X2000" "X2001" "X2002" "X2003" "X2004" "X2005" "X2006" "X2007"
+## [17] "X2008" "X2009" "X2010" "X2011" "X2012" "X2013"</code></pre>
+<pre><code>(years &lt;- substring(names(s),2))</code></pre>
+<pre><code>##  [1] "1992" "1993" "1994" "1995" "1996" "1997" "1998" "1999" "2000" "2001"
+## [11] "2002" "2003" "2004" "2005" "2006" "2007" "2008" "2009" "2010" "2011"
+## [21] "2012" "2013"</code></pre>
+<pre><code>rasterVis::levelplot(s_calc,main="Raster δεδομενα DMSP/OLS για την Μαγνησία, 1992-2013", 
+
+                     scales=list(y=list(draw=FALSE),
+                                 x=list(draw=FALSE)),  
+                     names.attr=years,
+                     colorkey=NULL)
+</code></pre>
+<p><img src="https://geographer.gr/images/levelplot2.png"/></p>
+<h1 id="υπολογισμός-sol-μέσω-cellstats">Υπολογισμός SoL μέσω
+cellStats</h1>
+<pre><code>SoL &lt;- cellStats(s_calc, stat='sum', na.rm=TRUE)
+
+df&lt;-data.frame(SoL=SoL, Year=as.integer(years) )#δημιουργία dataframe
+write.csv(df,file.path('output','SoL.csv')) # εγγραφή σε csv</code></pre>
+<h3 id="οπτικοποίηση-δεδομένων-sol-σε-γράφημα">Οπτικοποίηση δεδομένων
+SoL σε γράφημα</h3>
+<h4 id="γράφημα-με-τυπικά-εργαλεία-plot-της-r">Γράφημα με τυπικά
+εργαλεία plot της R</h4>
+<pre><code>#jpeg('SoL.jpg')
+#dev.off
+plot(x=df$Year,
+       y=df$SoL, 
+       type='l',
+       xlab="Year", 
+       ylab="Sum of Lights (SoL)",
+       main='SoL for Magnesia',xaxt="n")
+  axis(1, at=df$Year,cex.axis=0.8, las=2)
+points(x=df$Year,y=df$SoL)</code></pre>
+<p><img src="https://geographer.gr/images/sol_magnisia.png"/></p>
+<h4 id="γράφημα-με-ggplot">Γράφημα με ggplot</h4>
+<pre><code>ggplot2::ggplot(data=df, aes(x=Year,y=SoL))+
+  geom_line()+
+  geom_point()+
+  ggtitle("Sum of Lights (SoL) for Magnesia")+ 
+  scale_x_continuous("Years", labels = as.character(df$Year), breaks = df$Year)+
+  theme(plot.title = element_text(hjust = 0.5))+theme(text = element_text(size=14),
+                                                      axis.text.x = element_text(angle=90)) </code></pre>
+<p><img src="https://geographer.gr/images/sol_magnisia2.png"/></p>
+<h3 id="αποθήκευση-γραφήματος">Αποθήκευση γραφήματος</h3>
+<pre><code>ggplot2::ggsave(file.path("output",'SoL.png'), plot = last_plot(), device = "png", 
+       scale = 1, width = 10, height = 5, units = c("in", "cm", "mm"),
+       dpi = 300, limitsize = TRUE)</code></pre>
+<h3 id="αποθήκευση-των-rasterstack-σαν-ξεχωριστά-αρχεία-geotiff">Αποθήκευση
+των rasterStack σαν ξεχωριστά αρχεία geotiff</h3>
+<pre><code># προσοχή στο data(t)ype όχι data(T)ype
+raster::writeRaster(s_calc, filename=file.path("output",years), bylayer=TRUE,datatype="INT1U", options="COMPRESS=LZW", format="GTiff",overwrite=TRUE)</code></pre>
             </div>
             <!-- /.entry-content -->
     <hr/>
