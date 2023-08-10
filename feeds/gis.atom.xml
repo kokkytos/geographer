@@ -553,14 +553,15 @@ center)&lt;/strong&gt;. Ουσιαστικά πρόκειται για τον μ
 συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και
 κεντροειδές.&lt;/p&gt;
 &lt;p&gt;Δίνεται από τον τύπο:&lt;/p&gt;
-&lt;p&gt;όπου,&lt;/p&gt;
-&lt;p&gt;&lt;span class="math inline"&gt;\(x,y\)&lt;/span&gt; οι …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές
+&lt;p&gt;&lt;span class="math display"&gt;\[{x}=\frac{\sum\limits_ …&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές
 περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός
 δείκτης μιας κατανομής είναι ο &lt;strong&gt;χωρικός μέσος (mean
 center)&lt;/strong&gt;. Ουσιαστικά πρόκειται για τον μέσο όρο των
 συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και
 κεντροειδές.&lt;/p&gt;
 &lt;p&gt;Δίνεται από τον τύπο:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[{x}=\frac{\sum\limits_{i=1}^n{x_i}}{n},
+{y}=\frac{\sum\limits_{i=1}^n{y_i}}{n}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;όπου,&lt;/p&gt;
 &lt;p&gt;&lt;span class="math inline"&gt;\(x,y\)&lt;/span&gt; οι συντεταγμένες του χωρικού
 μέσου δηλαδή ο μέσος όρος των συντεταγμένων &lt;span class="math inline"&gt;\(x_i,y_i\)&lt;/span&gt; του πλήθους &lt;span class="math inline"&gt;\(N\)&lt;/span&gt; των σημείων της κατανομής. Ταυτόχρονα
@@ -569,6 +570,7 @@ center)&lt;/strong&gt;. Ουσιαστικά πρόκειται για τον μ
 ο υπολογισμός γίνεται με το στάθμισμα κάθε συντεταγμένης με μία
 μεταβλητή π.χ. εισόδημα, εγκληματικότητα, πληθυσμός κτλ.&lt;/p&gt;
 &lt;p&gt;Δίνεται από τον τύπο:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[{x}_w=\frac{\sum\limits_{i=1}^n{w_ix_i}}{n},{y}_w=\frac{\sum\limits_{i=1}^n{w_iy_i}}{n}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;όπου, &lt;span class="math inline"&gt;\(x_w,y_w\)&lt;/span&gt; οι συντεταγμένες
 του σταθμισμένου χωρικού μέσου δηλαδή ο μέσος όρος των διακριτών
 συντεταγμένων &lt;span class="math inline"&gt;\(x_i,y_i\)&lt;/span&gt; του πλήθους
@@ -580,6 +582,8 @@ center)&lt;/strong&gt;. Ουσιαστικά πρόκειται για τον μ
 ως δείκτης μέτρησης του βαθμού συγκέντρωσης ή διασποράς των σημείων γύρω
 από τον χωρικό (ή σταθμισμένο) μέσο. Αποτέλει ότι και η τυπική απόσταση
 σε μια μη χωρική κατανομή. Δίνεται από τον τύπο:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[S_D=\sqrt{\frac{\sum\limits_{i=1}^n(x_i-{x})^2 +
+\sum\limits_{i=1}^n(y_i-{y})^2}{n}}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;όπου, &lt;span class="math inline"&gt;\(S_D\)&lt;/span&gt; , η τυπική απόσταση,
 &lt;span class="math inline"&gt;\(x,y\)&lt;/span&gt; οι συντεταγμένες του χωρικού
 μέσου και &lt;span class="math inline"&gt;\(x_i,y_i\)&lt;/span&gt; οι συντεταγμένες
@@ -588,6 +592,8 @@ center)&lt;/strong&gt;. Ουσιαστικά πρόκειται για τον μ
 απόσταση (weighted standard distance)&lt;/strong&gt; σε περιπτώσεις που
 μελετάται η διασπορά σε σχέση με τον σταθμισμένο μέσο όρο.&lt;/p&gt;
 &lt;p&gt;Δίνεται από τον τύπο:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[S_{WD}=\sqrt{\frac{\sum\limits_{i=1}^n
+w_i(x_i-{x})^2 + \sum\limits_{i=1}^n w_i(y_i-{y})^2}{n}}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;όπου, &lt;span class="math inline"&gt;\(S_{WD}\)&lt;/span&gt; , η σταθμισμένη
 τυπική απόσταση, &lt;span class="math inline"&gt;\(x,y\)&lt;/span&gt; οι
 συντεταγμένες του χωρικού μέσου, &lt;span class="math inline"&gt;\(x_i,y_i\)&lt;/span&gt; οι συντεταγμένες του κάθε
