@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer - Δημοσιεύσεις</title><link href="https://geographer.gr/" rel="alternate"></link><link href="https://geographer.gr/feeds/demosieuseis.atom.xml" rel="self"></link><id>https://geographer.gr/</id><updated>2023-08-11T12:50:00+03:00</updated><entry><title>EUSEDcollab, a network of data from European catchments to monitor net soil erosion by water</title><link href="https://geographer.gr/EUSEDcollab/" rel="alternate"></link><published>2023-08-11T12:50:00+03:00</published><updated>2023-08-11T12:50:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2023-08-11:/EUSEDcollab/</id><summary type="html">As a network of researchers we release an open-access database (EUSEDcollab) of water discharge and suspended sediment yield time series records collected in small to medium sized catchments in Europe. EUSEDcollab is compiled to overcome the scarcity of open-access data at relevant spatial scales for studies on runoff, soil loss by water erosion and sediment delivery. Multi-source measurement data from numerous researchers and institutions were harmonised into a common time series and metadata structure.</summary><content type="html">&lt;p&gt;Matthews, F., Verstraeten, G., Borrelli, P., Vanmaercke, M., Poesen,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer - Δημοσιεύσεις</title><link href="https://geographer.gr/" rel="alternate"></link><link href="https://geographer.gr/feeds/demosieuseis.atom.xml" rel="self"></link><id>https://geographer.gr/</id><updated>2023-08-11T16:50:00+03:00</updated><entry><title>Global rainfall erosivity database (GloREDa) and monthly R-factor data at 1 km spatial resolution</title><link href="https://geographer.gr/GloREDa/" rel="alternate"></link><published>2023-08-11T16:50:00+03:00</published><updated>2023-08-11T16:50:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2023-08-11:/GloREDa/</id><summary type="html">Here, we present and release the Global Rainfall Erosivity Database (GloREDa), a multi-source platform containing rainfall erosivity values for almost 4000 stations globally. The database was compiled through a global collaboration between a network of researchers, meteorological services and environmental organisations from 65 countries. GloREDa is the first open access database of rainfall erosivity (R-factor) based on hourly and sub-hourly rainfall records at a global scale. This database is now stored and accessible for download in the long-term European Soil Data Centre (ESDAC) repository of the European Commission’s Joint Research Centre. This will ensure the further development of the database with insertions of new records, maintenance of the data and provision of a helpdesk.</summary><content type="html">&lt;p&gt;Panagos, P., Hengl, T., Wheeler, I., Marcinkowski, P., Rukeza, M.B.,
+Yu, B., Yang, J.E., Miao, C., Chattopadhyay, N., Sadeghi, S.H., Levi,
+Y., Erpul, G., Birkel, C., Hoyos, N., Oliveira, P.T.S., Bonilla, C.A.,
+Nel, W., Dashti, H.A., Bezak, N., Van Oost, K., Petan, S., Fenta, A.A.,
+Haregeweyn, N., Pérez-Bidegain, M., Liakos, L., Ballabio, C., Borrelli,
+P., 2023. Global rainfall erosivity database (GloREDa) and monthly
+R-factor data at 1 km spatial resolution. Data in Brief 109482. &lt;a class="uri" href="https://doi.org/10.1016/j.dib.2023.109482"&gt;https://doi.org/10.1016/j.dib.2023.109482&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here, we present and release the Global Rainfall Erosivity Database
+(GloREDa), a multi-source platform containing rainfall erosivity values
+for almost 4000 stations globally. The database was compiled through a
+global collaboration between a network of researchers, meteorological
+services and environmental organisations from 65 countries. GloREDa is
+the first open access database of rainfall erosivity (R-factor) based on
+hourly and sub-hourly rainfall records at a global scale. This database
+is now stored and accessible for download in the long-term European Soil
+Data Centre (ESDAC) repository of the European Commission’s Joint
+Research Centre. This will ensure the further development of the
+database with insertions of new records, maintenance of the data and
+provision of a helpdesk.&lt;/p&gt;
+&lt;p&gt;In addition to the annual erosivity data, this release also includes
+the mean monthly erosivity data for 94% of the GloREDa stations. Based
+on these mean monthly R-factor values, we predict the global monthly
+erosivity datasets at 1 km resolution using the ensemble machine
+learning approach (ML) as implemented in the mlr package for R. The
+produced monthly raster data (GeoTIFF format) may be useful for soil
+erosion prediction modelling, sediment distribution analysis, climate
+change predictions, flood, and natural disaster assessments and can be
+valuable inputs for Land and Earth Systems modelling.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="The distribution of the rainfall erosivity stations of GloREDa 1.2. Background map: The annual R-factor map." src="https://geographer.gr/images/1-s2.0-S2352340923005826-gr2.jpg"/&gt;
+&lt;figcaption aria-hidden="true"&gt;The distribution of the rainfall
+erosivity stations of GloREDa 1.2. Background map: The annual R-factor
+map.&lt;/figcaption&gt;
+&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="Soil erosion"></category><category term="Hydrology"></category><category term="Risk"></category><category term="Soil health"></category><category term="Open data"></category></entry><entry><title>EUSEDcollab, a network of data from European catchments to monitor net soil erosion by water</title><link href="https://geographer.gr/EUSEDcollab/" rel="alternate"></link><published>2023-08-11T12:50:00+03:00</published><updated>2023-08-11T12:50:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2023-08-11:/EUSEDcollab/</id><summary type="html">As a network of researchers we release an open-access database (EUSEDcollab) of water discharge and suspended sediment yield time series records collected in small to medium sized catchments in Europe. EUSEDcollab is compiled to overcome the scarcity of open-access data at relevant spatial scales for studies on runoff, soil loss by water erosion and sediment delivery. Multi-source measurement data from numerous researchers and institutions were harmonised into a common time series and metadata structure.</summary><content type="html">&lt;p&gt;Matthews, F., Verstraeten, G., Borrelli, P., Vanmaercke, M., Poesen,
 J., Steegen, A., Degré, A., Rodríguez, B.C., Bielders, C., Franke, C.,
 Alary, C., Zumr, D., Patault, E., Nadal-Romero, E., Smolska, E.,
 Licciardello, F., Swerts, G., Thodsen, H., Casalí, J., Eslava, J.,

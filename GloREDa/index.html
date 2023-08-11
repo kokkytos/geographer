@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Global rainfall erosivity database (GloREDa) and monthly R-factor data at 1 km spatial resolution - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/GloREDa/">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="Soil erosion,Hydrology,Risk,Soil health,Open data" />
+        <meta name="description" content="Here, we present and release the Global Rainfall Erosivity Database (GloREDa), a multi-source platform containing rainfall erosivity values for almost 4000 stations globally. The database was compiled through a global collaboration between a network of researchers, meteorological services and environmental organisations from 65 countries. GloREDa is the first open access database of rainfall erosivity (R-factor) based on hourly and sub-hourly rainfall records at a global scale. This database is now stored and accessible for download in the long-term European Soil Data Centre (ESDAC) repository of the European Commission’s Joint Research Centre. This will ensure the further development of the database with insertions of new records, maintenance of the data and provision of a helpdesk." />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Global rainfall erosivity database (GloREDa) and monthly R-factor data at 1 km spatial resolution"/>
+        <meta property="og:url" content="https://geographer.gr/GloREDa/"/>
+        <meta property="og:description" content="Here, we present and release the Global Rainfall Erosivity Database (GloREDa), a multi-source platform containing rainfall erosivity values for almost 4000 stations globally. The database was compiled through a global collaboration between a network of researchers, meteorological services and environmental organisations from 65 countries. GloREDa is the first open access database of rainfall erosivity (R-factor) based on hourly and sub-hourly rainfall records at a global scale. This database is now stored and accessible for download in the long-term European Soil Data Centre (ESDAC) repository of the European Commission’s Joint Research Centre. This will ensure the further development of the database with insertions of new records, maintenance of the data and provision of a helpdesk."/>
+        <meta property="article:published_time" content="2023-08-11" />
+            <meta property="article:section" content="Δημοσιεύσεις" />
+            <meta property="article:tag" content="Soil erosion" />
+            <meta property="article:tag" content="Hydrology" />
+            <meta property="article:tag" content="Risk" />
+            <meta property="article:tag" content="Soil health" />
+            <meta property="article:tag" content="Open data" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/demosieuseis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer Δημοσιεύσεις ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBQR7NZ4PE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', G-JBQR7NZ4PE);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/about-me/">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                         <li><a href="https://geographer.gr/οι-χάρτες-μου/">
+                             Οι χάρτες μου
+                          </a></li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/diaphora.html">Διάφορα</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/demosieuseis.html" title="Δημοσιεύσεις">Δημοσιεύσεις</a></li>
+                <li class="active">Global rainfall erosivity database (GloREDa) and monthly R-factor data at 1 km spatial resolution</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=Global%20rainfall%20erosivity%20database%20%28GloREDa%29%20and%20monthly%20R-factor%20data%20at%201%E2%80%AFkm%20spatial%20resolution&url=https%3A//geographer.gr/GloREDa/" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=Global%20rainfall%20erosivity%20database%20%28GloREDa%29%20and%20monthly%20R-factor%20data%20at%201%E2%80%AFkm%20spatial%20resolution&url=https%3A//geographer.gr/GloREDa/&hashtags=soil-erosion,hydrology,risk,soil-health,open-data" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/GloREDa/" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/GloREDa/&title=Global%20rainfall%20erosivity%20database%20%28GloREDa%29%20and%20monthly%20R-factor%20data%20at%201%E2%80%AFkm%20spatial%20resolution&summary=Here%2C%20we%20present%20and%20release%20the%20Global%20Rainfall%20Erosivity%20Database%20%28GloREDa%29%2C%20a%20multi-source%20platform%20containing%20rainfall%20erosivity%20values%20for%20almost%204000%20stations%20globally.%20The%20database%20was%20compiled%20through%20a%20global%20collaboration%20between%20a%20network%20of%20researchers%2C%20meteorological%20services%20and%20environmental%20organisations%20from%2065%20countries.%20GloREDa%20is%20the%20first%20open%20access%20database%20of%20rainfall%20erosivity%20%28R-factor%29%20based%20on%20hourly%20and%20sub-hourly%20rainfall%20records%20at%20a%20global%20scale.%20This%20database%20is%20now%20stored%20and%20accessible%20for%20download%20in%20the%20long-term%20European%20Soil%20Data%20Centre%20%28ESDAC%29%20repository%20of%20the%20European%20Commission%E2%80%99s%20Joint%20Research%20Centre.%20This%20will%20ensure%20the%20further%20development%20of%20the%20database%20with%20insertions%20of%20new%20records%2C%20maintenance%20of%20the%20data%20and%20provision%20of%20a%20helpdesk.&source=https%3A//geographer.gr/GloREDa/" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=Global%20rainfall%20erosivity%20database%20%28GloREDa%29%20and%20monthly%20R-factor%20data%20at%201%E2%80%AFkm%20spatial%20resolution&u=https%3A//geographer.gr/GloREDa/" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=Global%20rainfall%20erosivity%20database%20%28GloREDa%29%20and%20monthly%20R-factor%20data%20at%201%E2%80%AFkm%20spatial%20resolution&amp;body=https%3A//geographer.gr/GloREDa/" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/GloREDa/&title=Global%20rainfall%20erosivity%20database%20%28GloREDa%29%20and%20monthly%20R-factor%20data%20at%201%E2%80%AFkm%20spatial%20resolution" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/GloREDa/"
+                       rel="bookmark"
+                       title="Permalink to Global rainfall erosivity database (GloREDa) and monthly R-factor data at 1 km spatial resolution">
+                        Global rainfall erosivity database (GloREDa) and monthly R-factor data at 1 km spatial resolution
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2023-08-11T16:50:00+03:00"> Παρ 11 Αυγούστου 2023</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/soil-erosion.html">Soil erosion</a>
+        /
+	<a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
+        /
+	<a href="https://geographer.gr/tag/risk.html">Risk</a>
+        /
+	<a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
+        /
+	<a href="https://geographer.gr/tag/open-data.html">Open data</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Panagos, P., Hengl, T., Wheeler, I., Marcinkowski, P., Rukeza, M.B.,
+Yu, B., Yang, J.E., Miao, C., Chattopadhyay, N., Sadeghi, S.H., Levi,
+Y., Erpul, G., Birkel, C., Hoyos, N., Oliveira, P.T.S., Bonilla, C.A.,
+Nel, W., Dashti, H.A., Bezak, N., Van Oost, K., Petan, S., Fenta, A.A.,
+Haregeweyn, N., Pérez-Bidegain, M., Liakos, L., Ballabio, C., Borrelli,
+P., 2023. Global rainfall erosivity database (GloREDa) and monthly
+R-factor data at 1 km spatial resolution. Data in Brief 109482. <a class="uri" href="https://doi.org/10.1016/j.dib.2023.109482">https://doi.org/10.1016/j.dib.2023.109482</a></p>
+<p>Here, we present and release the Global Rainfall Erosivity Database
+(GloREDa), a multi-source platform containing rainfall erosivity values
+for almost 4000 stations globally. The database was compiled through a
+global collaboration between a network of researchers, meteorological
+services and environmental organisations from 65 countries. GloREDa is
+the first open access database of rainfall erosivity (R-factor) based on
+hourly and sub-hourly rainfall records at a global scale. This database
+is now stored and accessible for download in the long-term European Soil
+Data Centre (ESDAC) repository of the European Commission’s Joint
+Research Centre. This will ensure the further development of the
+database with insertions of new records, maintenance of the data and
+provision of a helpdesk.</p>
+<p>In addition to the annual erosivity data, this release also includes
+the mean monthly erosivity data for 94% of the GloREDa stations. Based
+on these mean monthly R-factor values, we predict the global monthly
+erosivity datasets at 1 km resolution using the ensemble machine
+learning approach (ML) as implemented in the mlr package for R. The
+produced monthly raster data (GeoTIFF format) may be useful for soil
+erosion prediction modelling, sediment distribution analysis, climate
+change predictions, flood, and natural disaster assessments and can be
+valuable inputs for Land and Earth Systems modelling.</p>
+<figure>
+<img alt="The distribution of the rainfall erosivity stations of GloREDa 1.2. Background map: The annual R-factor map." src="https://geographer.gr/images/1-s2.0-S2352340923005826-gr2.jpg"/>
+<figcaption aria-hidden="true">The distribution of the rainfall
+erosivity stations of GloREDa 1.2. Background map: The annual R-factor
+map.</figcaption>
+</figure>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2023-08-11-GloREDa';
+                        this.page.url = 'https://geographer.gr/GloREDa/';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/diaphora.html"><i class="fa fa-folder-open fa-lg"></i>Διάφορα</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2023 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>
