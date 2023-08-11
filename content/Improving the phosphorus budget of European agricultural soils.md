@@ -4,12 +4,14 @@ Date: 2022-09-17 10:20
 Category: Δημοσιεύσεις
 slug: improving-the-phosphorus-budget-of-european-agricultural-soils
 Tags:  Agriculture, Farm to Fork, Fertilizers, Phosphorus budget, Plant uptake
+summary: Despite phosphorus (P) being crucial for plant nutrition and thus food security, excessive P fertilization harms soil and aquatic ecosystems. Accordingly, the European Green Deal and derived strategies aim to reduce P losses and fertilizer consumption in agricultural soils. The objective of this study is to calculate a soil P budget, allowing the quantification of the P surpluses/deficits in the European Union (EU) and the UK, considering the major inputs (inorganic fertilizers, manure, atmospheric deposition, and chemical weathering) and outputs (crop production, plant residues removal, losses by erosion) for the period 2011–2019.
 ---
 
-Panagos, P.a, Köningner, J.a, Ballabio, C.a, Liakos, L.a, Muntwyler, A.a, Borrelli, P.b , Lugato, E.a, 2022. Improving the phosphorus budget of European agricultural soils. Science of The Total Environment 158706. https://doi.org/10.1016/j.scitotenv.2022.158706
+Panagos, P.^a^, Köningner, J.^a^, Ballabio, C.^a^, Liakos, L.^a^, Muntwyler, A.^a^, Borrelli, P.^b^ , Lugato, E.^a^, 2022. Improving the phosphorus budget of European agricultural soils. Science of The Total Environment 158706. https://doi.org/10.1016/j.scitotenv.2022.158706
 
-a European Commission, Joint Research Centre (JRC), Ispra, Italy
-b Department of Science, Roma Tre University, Rome, Italy
+^a^ European Commission, Joint Research Centre (JRC), Ispra, Italy
+
+^b^ Department of Science, Roma Tre University, Rome, Italy
 
 
 

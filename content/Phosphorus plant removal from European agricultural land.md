@@ -4,6 +4,7 @@ Date: 2022-02-07 10:20
 Category: Δημοσιεύσεις
 slug: phosphorus-plant-removal-from-european-agricultural-land
 Tags:   Crop production , Farm to Fork , Food security , Nutrients , Phosphorus budget , Phosphorus removal , Plant uptake
+summary: In this study, we focused on estimating the P removal from soils by crop harvest and removal of crop residues. Specifically, we attempted to estimate the P removal by taking into account the production area and productivity rates of 37 crops for 220 regions in the European Union (EU) and the UK. To estimate the P removal by crops, we included the P concentrations in plant tissues (%), the crop humidity rates, the crop residues production, and the removal rates of the crop residues. 
 ---
 
 Panagos, Panos^a^, Anna Muntwyler^a^, Leonidas Liakos^a^, Pasquale Borrelli^b^, Irene Biavetti^a^, Mariia Bogonos^c^ , and Emanuele Lugato^a^. 2022. “Phosphorus Plant Removal from European Agricultural Land.” Journal of Consumer Protection and Food Safety, February. <https://doi.org/10.1007/s00003-022-01363-3>.^

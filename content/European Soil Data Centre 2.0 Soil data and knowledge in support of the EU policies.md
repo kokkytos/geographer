@@ -4,6 +4,7 @@ Date: 2022-12-14 10:20
 Category: Δημοσιεύσεις
 slug: european-soil-data-centre-2-0-soil-data-and-knowledge-in-support-of-the-eu-policies
 Tags: big data, data sharing, ESDAC, European soil observatory, soil policy
+summary: The European Soil Data Centre (ESDAC), hosted by the European Commission's Joint Research Centre (JRC), is the focal point for soil data, support to policy making and awareness raising for the European Union (EU). Established in 2006 to provide harmonised soil-related information for the EU Member States, and ESDAC currently hosts 88 datasets, 6000 maps, six atlases, 500 scientific publications, and a copious amount of soil-related material.
 ---
 
 Panagos, P.^a^, Van Liedekerke, M.^a^, Borrelli, P.^b^, Köninger, J.^a^, Ballabio, C.^a^, Orgiazzi, A.^a^, Lugato, E.^a^, Liakos, L.^a^, Hervas, J.^a^, Jones, A.^a^, Montanarella, L.^a^, 2022. European Soil Data Centre 2.0: Soil data and knowledge in support of the EU policies. European J Soil Science. [https://doi.org/10.1111/ejss.13315](https://doi.org/10.1111/ejss.13315)

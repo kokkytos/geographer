@@ -4,6 +4,7 @@ Date: 2022-12-14 10:20
 Category: Δημοσιεύσεις
 slug: challenges-in-the-geo-processing-of-big-soil-spatial-data
 Tags:  big data , data sharing , ESDAC , European soil observatory , soil policy 
+summary: This study addressed a critical resource—soil—through the prism of processing big data at the continental scale. Rapid progress in technology and remote sensing has majorly improved data processing on extensive spatial and temporal scales. Here, the manuscript presents the results of a systematic effort to geo-process and analyze soil-relevant data.
 ---
 
 Liakos, L.; Panagos, P. Challenges in the Geo-Processing of Big Soil Spatial Data. Land 2022, 11, 2287. [https://doi.org/10.3390/land11122287](https://doi.org/10.3390/land11122287)
