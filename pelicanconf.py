@@ -37,8 +37,8 @@ DISABLE_SIDEBAR_TITLE_ICONS = False
 
 
 # Blogroll
-LINKS = (('GISlab', 'https://gislab.gr/'),
-        ('European Soil Data Centre', 'https://esdac.jrc.ec.europa.eu/'),
+LINKS = (('European Soil Data Centre', 'https://esdac.jrc.ec.europa.eu/'),
+        ('GISlab', 'https://gislab.gr/'),
         ('Ε.ΓΕΩ', 'https://geographers.gr/'),
          
         )

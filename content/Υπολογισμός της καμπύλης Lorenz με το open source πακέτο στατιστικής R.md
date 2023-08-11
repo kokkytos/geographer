@@ -1,7 +1,7 @@
 ---
 Title: Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R
 Date: 2013-10-09 00:10
-Category: Διάφορα
+Category: GIS
 Tags: lawstat , R , καμπύλη Lorenz
 ---
 
