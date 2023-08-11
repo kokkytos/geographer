@@ -72,7 +72,52 @@ mean annual discharge (m3 yr−1) and the mean annual sediment yield (t
 yr−1) for all high temporal resolution datasets (excluding monthly
 data). The error bars show the variation of the annual sediment yield
 values around the mean annual average.&lt;/figcaption&gt;
-&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="EUSEDcollab"></category><category term="catchments"></category><category term="soil erosion"></category><category term="EUSO"></category><category term="sediments"></category><category term="dataset"></category><category term="ESDAC"></category></entry><entry><title>Challenges in the Geo-Processing of Big Soil Spatial Data</title><link href="https://geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data/" rel="alternate"></link><published>2022-12-14T10:20:00+02:00</published><updated>2022-12-14T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-12-14:/challenges-in-the-geo-processing-of-big-soil-spatial-data/</id><summary type="html">This study addressed a critical resource—soil—through the prism of processing big data at the continental scale. Rapid progress in technology and remote sensing has majorly improved data processing on extensive spatial and temporal scales. Here, the manuscript presents the results of a systematic effort to geo-process and analyze soil-relevant data.</summary><content type="html">&lt;p&gt;Liakos, L.; Panagos, P. Challenges in the Geo-Processing of Big Soil
+&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="EUSEDcollab"></category><category term="catchments"></category><category term="soil erosion"></category><category term="EUSO"></category><category term="sediments"></category><category term="dataset"></category><category term="ESDAC"></category></entry><entry><title>Ecosystem type drives soil eukaryotic diversity and composition in Europe</title><link href="https://geographer.gr/soil-eukaryotic-diversity-composition-Europe/" rel="alternate"></link><published>2023-08-11T08:15:00+03:00</published><updated>2023-08-11T08:15:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2023-08-11:/soil-eukaryotic-diversity-composition-Europe/</id><summary type="html">Soil eukaryotes play a crucial role in maintaining ecosystem functions and services, yet the factors driving their diversity and distribution remain poorly understood. While many studies focus on some eukaryotic groups (mostly fungi), they are limited in their spatial scale. Here, we analyzed an unprecedented amount of observational data of soil eukaryomes at continental scale (787 sites across Europe) to gain further insights into the impact of a wide range of environmental conditions (climatic and edaphic) on their community composition and structure.</summary><content type="html">&lt;p&gt;Köninger, J., Ballabio, C., Panagos, P., Jones, A., Schmid, M.W.,
+Orgiazzi, A., Briones, M.J.I., 2023. Ecosystem type drives soil
+eukaryotic diversity and composition in Europe. Global Change Biology
+gcb.16871. https://doi.org/10.1111/gcb.16871&lt;/p&gt;
+&lt;p&gt;Soil eukaryotes play a crucial role in maintaining ecosystem
+functions and services, yet the factors driving their diversity and
+distribution remain poorly understood. While many studies focus on some
+eukaryotic groups (mostly fungi), they are limited in their spatial
+scale. Here, we analyzed an unprecedented amount of observational data
+of soil eukaryomes at continental scale (787 sites across Europe) to
+gain further insights into the impact of a wide range of environmental
+conditions (climatic and edaphic) on their community composition and
+structure. We found that the diversity of fungi, protists, rotifers,
+tardigrades, nematodes, arthropods, and annelids was predominantly
+shaped by ecosystem type (annual and permanent croplands, managed and
+unmanaged grasslands, coniferous and broadleaved woodlands), and higher
+diversity of fungi, protists, nematodes, arthropods, and annelids was
+observed in croplands than in less intensively managed systems, such as
+coniferous and broadleaved woodlands. Also in croplands, we found more
+specialized eukaryotes, while the composition between croplands was more
+homogeneous compared to the composition of other ecosystems. The
+observed high proportion of overlapping taxa between ecosystems also
+indicates that DNA has accumulated from previous land uses, hence
+mimicking the land transformations occurring in Europe in the last
+decades. This strong ecosystem-type influence was linked to soil
+properties, and particularly, soil pH was driving the richness of fungi,
+rotifers, and annelids, while plant-available phosphorus drove the
+richness of protists, tardigrades, and nematodes. Furthermore, the soil
+organic carbon to total nitrogen ratio crucially explained the richness
+of fungi, protists, nematodes, and arthropods, possibly linked to
+decades of agricultural inputs. Our results highlighted the importance
+of long-term environmental variables rather than variables measured at
+the time of the sampling in shaping soil eukaryotic communities, which
+reinforces the need to include those variables in addition to ecosystem
+type in future monitoring programs and conservation efforts.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Distribution of the sampling sites along ecosystem types and sampling season. (a) Spatio-temporal overview of the sampling campaigns performed at the 787 sites included in this study. (b) Distribution of sampling sites among the different ecosystem types investigated. (c) Distribution of sampling sites according to sampling season. CL1, annual croplands; CL2, permanent croplands; GL1, managed grasslands; GL2, unmanaged grasslands; WL1, broadleaved woodlands; WL2, coniferous woodlands." src="https://geographer.gr/images/gcb16871-fig-0001-m.jpg"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Distribution of the sampling sites along
+ecosystem types and sampling season. (a) Spatio-temporal overview of the
+sampling campaigns performed at the 787 sites included in this study.
+(b) Distribution of sampling sites among the different ecosystem types
+investigated. (c) Distribution of sampling sites according to sampling
+season. CL1, annual croplands; CL2, permanent croplands; GL1, managed
+grasslands; GL2, unmanaged grasslands; WL1, broadleaved woodlands; WL2,
+coniferous woodlands.&lt;/figcaption&gt;
+&lt;/figure&gt;</content><category term="Δημοσιεύσεις"></category><category term="environmental drivers"></category><category term="eukaryotes"></category><category term="LUCAS survey"></category><category term="metabarcoding"></category><category term="soil biodiversity"></category><category term="soil fauna"></category></entry><entry><title>Challenges in the Geo-Processing of Big Soil Spatial Data</title><link href="https://geographer.gr/challenges-in-the-geo-processing-of-big-soil-spatial-data/" rel="alternate"></link><published>2022-12-14T10:20:00+02:00</published><updated>2022-12-14T10:20:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2022-12-14:/challenges-in-the-geo-processing-of-big-soil-spatial-data/</id><summary type="html">This study addressed a critical resource—soil—through the prism of processing big data at the continental scale. Rapid progress in technology and remote sensing has majorly improved data processing on extensive spatial and temporal scales. Here, the manuscript presents the results of a systematic effort to geo-process and analyze soil-relevant data.</summary><content type="html">&lt;p&gt;Liakos, L.; Panagos, P. Challenges in the Geo-Processing of Big Soil
 Spatial Data. Land 2022, 11, 2287. &lt;a href="https://doi.org/10.3390/land11122287"&gt;https://doi.org/10.3390/land11122287&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;European Commission, Joint Research Centre (JRC), IT-21027 Ispra,
 Italy&lt;/em&gt;&lt;/p&gt;
@@ -1220,7 +1265,7 @@ http://rss.acs.unt.edu/Rdoc/library/lawstat/html/lorenz.curve.html,
 Διαθέσιμο στο: http://www.statistics.gr [Πρόσβαση:10/11/2009]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;(&lt;em&gt;Ο υπολογισμός της καμπύλης Lorenz έγινε στην διανομή Ubuntu
-10.04 LTS-Lucid Lynx με την έκδοση R 2.10.1&lt;/em&gt;)&lt;/p&gt;</content><category term="Διάφορα"></category><category term="lawstat"></category><category term="R"></category><category term="καμπύλη Lorenz"></category></entry><entry><title>Υπολογισμός δεικτών χωρικής κεντρικότητας με την R</title><link href="https://geographer.gr/%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE-%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1/" rel="alternate"></link><published>2013-09-22T10:20:00+03:00</published><updated>2013-09-22T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2013-09-22:/χωρική-κεντρικότητα/</id><summary type="html">&lt;p&gt;Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές
+10.04 LTS-Lucid Lynx με την έκδοση R 2.10.1&lt;/em&gt;)&lt;/p&gt;</content><category term="GIS"></category><category term="lawstat"></category><category term="R"></category><category term="καμπύλη Lorenz"></category></entry><entry><title>Υπολογισμός δεικτών χωρικής κεντρικότητας με την R</title><link href="https://geographer.gr/%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE-%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1/" rel="alternate"></link><published>2013-09-22T10:20:00+03:00</published><updated>2013-09-22T10:20:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2013-09-22:/χωρική-κεντρικότητα/</id><summary type="html">&lt;p&gt;Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές
 περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός
 δείκτης μιας κατανομής είναι ο &lt;strong&gt;χωρικός μέσος (mean
 center)&lt;/strong&gt;. Ουσιαστικά πρόκειται για τον μέσο όρο των
@@ -1608,41 +1653,7 @@ mapnik.xml&lt;/a&gt;&lt;/p&gt;
 μεθόδους που πολλές φορές ταλαιπωρούν τον πολίτη και δεσμεύουν
 πολύτιμους ανθρώπινους πόρους από την διοικητική μηχανή.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://geographer.gr/images/gis_souliou.jpg"/&gt;&lt;/p&gt;
-&lt;p&gt;Δείτε το Σύστημα Γεωγραφικών Πληροφοριών &lt;a href="http://worldmap.harvard.edu/maps/536"&gt;εδώ&lt;/a&gt;&lt;/p&gt;</content><category term="GIS"></category><category term="GIS"></category><category term="Δήμος Σουλίου"></category><category term="Σύστημα Γεωγραφικών Πληροφοριών"></category></entry><entry><title>Ανάβαση στο όρος Γκορίλας</title><link href="https://geographer.gr/anabase-sto-oros-gkorilas/" rel="alternate"></link><published>2012-02-03T00:10:00+02:00</published><updated>2012-02-03T00:10:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2012-02-03:/anabase-sto-oros-gkorilas/</id><summary type="html">&lt;p style="text-align: justify;"&gt;
-&lt;iframe frameborder="0" height="694" scrolling="no" src="https://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
-&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;p&gt;Στα πλαίσια των δραστηριοτήτων του συλλόγου Μελέτης και Προστασίας
-Περιβάλλοντος Παραμυθιάς - Δήμου Σουλίου αποφασίσαμε να ανέβουμε στην
-κορυφή του όρους &lt;a href="https://el.wikipedia.org/wiki/%CE%8C%CF%81%CE%B7_%CE%A0%CE%B1%CF%81%CE%B1%CE%BC%CF%85%CE%B8%CE%B9%CE%AC%CF%82"&gt;Γκορίλα&lt;/a&gt;
-(1658μ.). Σκοπός μας δεν ήταν απλά να φτάσουμε την κορυφή αλλά παράλληλα
-να διανοίξουμε ένα παλιό μονοπάτι που οδηγούσε στην κορυφή. Ίσως το πιο
-δύσκολο μονοπάτι που έχω συναντήσει …&lt;/p&gt;</summary><content type="html">&lt;p style="text-align: justify;"&gt;
-&lt;iframe frameborder="0" height="694" scrolling="no" src="https://www.geocontext.org/publ/2010/04/profiler/obj/v2/?sub_v=1&amp;amp;topo_ha=201202304467528&amp;amp;size=medium&amp;amp;storke_color=000000&amp;amp;storke_weight=3&amp;amp;color=008000&amp;amp;units=km" width="580"&gt;
-&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;p&gt;Στα πλαίσια των δραστηριοτήτων του συλλόγου Μελέτης και Προστασίας
-Περιβάλλοντος Παραμυθιάς - Δήμου Σουλίου αποφασίσαμε να ανέβουμε στην
-κορυφή του όρους &lt;a href="https://el.wikipedia.org/wiki/%CE%8C%CF%81%CE%B7_%CE%A0%CE%B1%CF%81%CE%B1%CE%BC%CF%85%CE%B8%CE%B9%CE%AC%CF%82"&gt;Γκορίλα&lt;/a&gt;
-(1658μ.). Σκοπός μας δεν ήταν απλά να φτάσουμε την κορυφή αλλά παράλληλα
-να διανοίξουμε ένα παλιό μονοπάτι που οδηγούσε στην κορυφή. Ίσως το πιο
-δύσκολο μονοπάτι που έχω συναντήσει στο συγκεκριμένο βούνό λόγω της
-άγριας βλάστησης και των κατακόρυφων σχεδόν κλίσεων κατά την ανάβαση και
-κατάβαση.&lt;/p&gt;
-&lt;p&gt;Στο δρόμο μας συναντήσαμε αρκετά ενδιαφέροντα φυτά όπως η
-μπλετσοκουμαριά και το γνωστό από την αρχαιότητα φυτό, &lt;a href="https://el.wikipedia.org/wiki/%CE%9A%CF%8E%CE%BD%CE%B5%CE%B9%CE%BF"&gt;κώνειο&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Ένα από τα πιο χαρακτηριστικά σημεία αυτής της διαδρομής είναι ότι
-διέρχεται από μια σπηλιά, τα γνωστά “Μελίσσια”. Όταν φτάσαμε εκεί
-αντικρύσαμε μια ευχάριστη έκπληξη, ένα ρητό σκαλισμένο στα βράχια: “Ξένε
-διαβάτη τι κοιτάς περίλυπος να μάθεις; Εκεί που είσαι ήμουνα και δώ που
-είμαι θα ρθεις.”&lt;/p&gt;
-&lt;p&gt;Το έργο της διάνοιξης και σήμανσης του παλιού μονοπατιού δεν ήταν
-καθόλου εύκολο αφού έπρεπε να κόψουμε πολλά πουρνάρια που έκλειναν τον
-δρόμο.&lt;/p&gt;
-&lt;p&gt;Οι κλίσεις ανεβαίνοντας προς την κορυφή ήταν πολύ απότομες και
-κουραστικές αλλά στο τέλος η θέα ήταν καταπληκτική.&lt;/p&gt;
-&lt;p&gt;Η κατάβαση βέβαια ήταν εξίσου κουραστική αφού κατεβήκαμε από την
-“σβάρα”, έναν πέτρινο καταρράκτη!!!&lt;/p&gt;</content><category term="Διάφορα"></category><category term="Γκορίλας"></category><category term="ορειβασία"></category></entry><entry><title>Αυτοματοποιημένη χαρτογράφηση της σεισμικής δραστηριότητας με βιβλιοθήκες ΕΛΛΑΚ.</title><link href="https://geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/" rel="alternate"></link><published>2012-01-28T00:10:00+02:00</published><updated>2012-01-28T00:10:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2012-01-28:/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/</id><summary type="html">&lt;p&gt;Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να
+&lt;p&gt;Δείτε το Σύστημα Γεωγραφικών Πληροφοριών &lt;a href="http://worldmap.harvard.edu/maps/536"&gt;εδώ&lt;/a&gt;&lt;/p&gt;</content><category term="GIS"></category><category term="GIS"></category><category term="Δήμος Σουλίου"></category><category term="Σύστημα Γεωγραφικών Πληροφοριών"></category></entry><entry><title>Αυτοματοποιημένη χαρτογράφηση της σεισμικής δραστηριότητας με βιβλιοθήκες ΕΛΛΑΚ.</title><link href="https://geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/" rel="alternate"></link><published>2012-01-28T00:10:00+02:00</published><updated>2012-01-28T00:10:00+02:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2012-01-28:/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/</id><summary type="html">&lt;p&gt;Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να
 χρησιμοποιήσει κάποιος μια γλώσσα προγραμματισμού και να συντάξει ένα
 σενάριο (script), πολύπλοκων αρκετές φορές, εντολών για να παράγει ένα
 χάρτη από την στιγμή που υπάρχει λογισμικό με γραφικό περιβάλλον που με
@@ -2422,7 +2433,7 @@ advantages, their local problems and the composition of population are
 examined in order to realise the extend in which they interpret the
 change of employment. Finally, certain measures are proposed for the
 growth of the problematic prefectures, the obliteration of regional
-inequalities and the increase of employment.&lt;/p&gt;</content><category term="Διάφορα"></category><category term="shift share analysis"></category><category term="thesis"></category></entry><entry><title>Οι Καλλικρατικοί δήμοι της Ελλάδας- Διαδραστικός χάρτης</title><link href="https://geographer.gr/%CE%BA%CE%B1%CE%BB%CE%BB%CE%B9%CE%BA%CF%81%CE%B1%CF%84%CE%B9%CE%BA%CE%BF%CE%AF-%CE%B4%CE%AE%CE%BC%CE%BF%CE%B9-%CE%B5%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1%CF%82/" rel="alternate"></link><published>2010-08-03T00:10:00+03:00</published><updated>2010-08-03T00:10:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2010-08-03:/καλλικρατικοί-δήμοι-ελλάδας/</id><summary type="html">&lt;p class="first last"&gt;Παρακάτω απεικονίζονται οι δήμοι της Ελλάδας σύμφωνα με το σχέδιο &amp;quot;Καλλικράτης&amp;quot;. Κάνοντας κλίκ στο πολύγωνο ενός δήμου μπορείτε να δείτε το όνομά του.&lt;/p&gt;
+inequalities and the increase of employment.&lt;/p&gt;</content><category term="GIS"></category><category term="shift share analysis"></category><category term="thesis"></category></entry><entry><title>Οι Καλλικρατικοί δήμοι της Ελλάδας- Διαδραστικός χάρτης</title><link href="https://geographer.gr/%CE%BA%CE%B1%CE%BB%CE%BB%CE%B9%CE%BA%CF%81%CE%B1%CF%84%CE%B9%CE%BA%CE%BF%CE%AF-%CE%B4%CE%AE%CE%BC%CE%BF%CE%B9-%CE%B5%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1%CF%82/" rel="alternate"></link><published>2010-08-03T00:10:00+03:00</published><updated>2010-08-03T00:10:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2010-08-03:/καλλικρατικοί-δήμοι-ελλάδας/</id><summary type="html">&lt;p class="first last"&gt;Παρακάτω απεικονίζονται οι δήμοι της Ελλάδας σύμφωνα με το σχέδιο &amp;quot;Καλλικράτης&amp;quot;. Κάνοντας κλίκ στο πολύγωνο ενός δήμου μπορείτε να δείτε το όνομά του.&lt;/p&gt;
 </summary><content type="html">&lt;img alt="&amp;quot;Οι δήμοι της Ελλάδας σύμφωνα με το σχέδιο &amp;quot;Καλλικράτης&amp;quot;" src="https://geographer.gr/images/kallikratis.jpeg" style="width: 100px;" /&gt;
 &lt;p&gt;Παρακάτω απεικονίζονται οι δήμοι της Ελλάδας σύμφωνα με το σχέδιο &amp;quot;Καλλικράτης&amp;quot;.&lt;/p&gt;
 &lt;p&gt;Κάνοντας κλίκ στο πολύγωνο ενός δήμου μπορείτε να δείτε το όνομά του.&lt;/p&gt;
@@ -2431,7 +2442,7 @@ inequalities and the increase of employment.&lt;/p&gt;</content><category term="
 &lt;ul class="simple"&gt;
 &lt;li&gt;Ελληνική Στατιστική Αρχή, Ψηφιακά Χαρτογραφικά Υπόβαθρα (Απογραφικά/Διοικητικά όρια), Διαθέσιμο στο &amp;lt;&lt;a class="reference external" href="http://www.statistics.gr/digital-cartographical-data"&gt;http://www.statistics.gr/digital-cartographical-data&lt;/a&gt;&amp;gt; [Πρόσβαση:09/02/2022]&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="Διάφορα"></category><category term="Καλλικράτης"></category><category term="OSM"></category></entry><entry><title>Τρέξτε το CoordGr σε Ubuntu</title><link href="https://geographer.gr/trexte-to-coordgr-se-ubuntu/" rel="alternate"></link><published>2010-08-03T00:00:00+03:00</published><updated>2010-08-03T00:00:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2010-08-03:/trexte-to-coordgr-se-ubuntu/</id><summary type="html">&lt;p&gt;Ένα από τα πλέον χρήσιμα προγράμματα για όσους ασχολούνται με την
+</content><category term="GIS"></category><category term="Καλλικράτης"></category><category term="OSM"></category></entry><entry><title>Τρέξτε το CoordGr σε Ubuntu</title><link href="https://geographer.gr/trexte-to-coordgr-se-ubuntu/" rel="alternate"></link><published>2010-08-03T00:00:00+03:00</published><updated>2010-08-03T00:00:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2010-08-03:/trexte-to-coordgr-se-ubuntu/</id><summary type="html">&lt;p&gt;Ένα από τα πλέον χρήσιμα προγράμματα για όσους ασχολούνται με την
 μετατροπή συντεταγμένων στον ελλαδικό χώρο είναι το &lt;a href="https://dasologoi.gr/%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%B1-downloads/download/7-%CE%B3%CE%B5%CE%BD%CE%B9%CE%BA%CE%AC/127-coord_gr"&gt;CoordGr&lt;/a&gt;
 του Γιάννη Συγγρού. Το εν λόγω λογισμικό δεν θέλει συστάσεις μιας και
 είναι αρκετά διαδεδομένο λόγω της χρησιμότητας και μοναδικότητάς
@@ -2559,23 +2570,14 @@ OS GIS προβλέπουν την διαχείριση αρχαιολογικώ
 Server, στον Mapserver, το Geomoose και την php. Τα πρώτα βήματα έχουν
 ήδη γίνει και προς αυτήν την κατεύθυνση.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.scribd.com/fullscreen/31221573?access_key=key-vaqqic52pq6eo5o9z6t"&gt;Δείτε
-την παρουσίαση στο συνέδριο του ΕΛ/ΛΑΚ&lt;/a&gt;&lt;/p&gt;</content><category term="GIS"></category><category term="GIS"></category><category term="Mapwindow"></category><category term="αρχαιολογία"></category></entry><entry><title>Record – documentation – preservation - promotion. Digital applications of the 33rd EPCA for the management of archaeological data.</title><link href="https://geographer.gr/record-documentation-preservation-promotion-digital-applications-of-the-33rd-epca-for-the-management-of-archaeological-data/" rel="alternate"></link><published>2010-05-09T00:00:00+03:00</published><updated>2010-05-09T00:00:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2010-05-09:/record-documentation-preservation-promotion-digital-applications-of-the-33rd-epca-for-the-management-of-archaeological-data/</id><summary type="html">&lt;p&gt;Riginos G., Archaeologist, Director of 33rd Ephorate of Prehistoric
+την παρουσίαση στο συνέδριο του ΕΛ/ΛΑΚ&lt;/a&gt;&lt;/p&gt;</content><category term="GIS"></category><category term="GIS"></category><category term="Mapwindow"></category><category term="αρχαιολογία"></category></entry><entry><title>Record – documentation – preservation - promotion. Digital applications of the 33rd EPCA for the management of archaeological data.</title><link href="https://geographer.gr/record-documentation-preservation-promotion-digital-applications-of-the-33rd-epca-for-the-management-of-archaeological-data/" rel="alternate"></link><published>2010-05-09T00:00:00+03:00</published><updated>2010-05-09T00:00:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2010-05-09:/record-documentation-preservation-promotion-digital-applications-of-the-33rd-epca-for-the-management-of-archaeological-data/</id><summary type="html">Η ανάγκη προστασίας, καταρχήν, και εν συνεχεία ανάδειξης και προβολής των δεκάδων αρχαιολογικών χώρων και θέσεων στους δύο Νομούς Πρέβεζας και Άρτας κατέστησε επιτακτική την ανάγκη ύπαρξης ενός εργαλείου καταγραφής και διαχείρισης των χωρικών και αρχαιολογικών δεδομένων. Έτσι αναπτύχθηκε μία εφαρμογή με τη χρήση της τεχνολογίας των γεωγραφικών συστημάτων πληροφοριών (GIS), η οποία περιέχει τα από παλιότερα γνωστά στοιχεία, ενώ ενημερώνεται συνεχώς με τα νεώτερα δεδομένα, που προκύπτουν από τις κάθε είδους ενέργειες της ΛΓ΄ Ε.Π.Κ.Α. Παράλληλα, η εκτέλεση δύο ιδιαίτερα απαιτητικών έργων έκθεσης αρχαιοτήτων στα Μουσεία Άρτας και Νικόπολης, ενισχύθηκε από μία ψηφιακή βάση καταγραφής των συλλογών, η παρέχει ευρύ πεδίο δυνατοτήτων αναφορικά με την αρχαιολογική πληροφορία και τη διασύνδεσή της με ποικίλα μέσα (κάθε είδους αρχεία κειμένου, φωτογραφίες, κλπ.).</summary><content type="html">&lt;p&gt;Riginos G., Archaeologist, Director of 33rd Ephorate of Prehistoric
 and Classical Antiquities&lt;/p&gt;
 &lt;p&gt;Drosou D., Archaeologist, 33rd Ephorate of Prehistoric and Classical
 Antiquities&lt;/p&gt;
 &lt;p&gt;Vlachopoulou R., Graphic Designer, 33rd Ephorate of Prehistoric and
 Classical Antiquities&lt;/p&gt;
 &lt;p&gt;Liakos L., Geographer&lt;/p&gt;
-&lt;h2 id="περίληψη"&gt;Περίληψη&lt;/h2&gt;
-&lt;p&gt;Η ανάγκη προστασίας, καταρχήν, και εν συνεχεία ανάδειξης και προβολής
-των δεκάδων αρχαιολογικών …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Riginos G., Archaeologist, Director of 33rd Ephorate of Prehistoric
-and Classical Antiquities&lt;/p&gt;
-&lt;p&gt;Drosou D., Archaeologist, 33rd Ephorate of Prehistoric and Classical
-Antiquities&lt;/p&gt;
-&lt;p&gt;Vlachopoulou R., Graphic Designer, 33rd Ephorate of Prehistoric and
-Classical Antiquities&lt;/p&gt;
-&lt;p&gt;Liakos L., Geographer&lt;/p&gt;
-&lt;h2 id="περίληψη"&gt;Περίληψη&lt;/h2&gt;
+&lt;h5 id="περίληψη"&gt;Περίληψη&lt;/h5&gt;
 &lt;p&gt;Η ανάγκη προστασίας, καταρχήν, και εν συνεχεία ανάδειξης και προβολής
 των δεκάδων αρχαιολογικών χώρων και θέσεων στους δύο Νομούς Πρέβεζας και
 Άρτας κατέστησε επιτακτική την ανάγκη ύπαρξης ενός εργαλείου καταγραφής
@@ -2906,7 +2908,7 @@ http://www.mapwindow.org&lt;/li&gt;
 1913. Πρακτικά της εν Αθήναις Αρχαιολογικής Εταιρείας 1913: 83-112.&lt;/li&gt;
 &lt;li&gt;Χαλκιά, Ε. 2007: Συμπληρωματική ανασκαφή στη Βασιλική Δ της
 Νικόπολης. Στο Ζάχος, Καράμπελας &amp;amp; Stork 2007: 659–666.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="GIS"></category><category term="GIS"></category><category term="Mapwindow"></category><category term="αρχαιολογία"></category></entry><entry><title>Χαρτογραφόντας τα πέτρινα γεφύρια της Ηπείρου…</title><link href="https://geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou/" rel="alternate"></link><published>2009-08-31T00:10:00+03:00</published><updated>2009-08-31T00:10:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2009-08-31:/khartographontas-ta-petrina-gephuria-tes-epeirou/</id><summary type="html">&lt;p&gt;&lt;img src="https://geographer.gr/images/m1.jpg"/&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Δημοσιεύσεις"></category><category term="GIS"></category><category term="Mapwindow"></category><category term="αρχαιολογία"></category></entry><entry><title>Χαρτογραφόντας τα πέτρινα γεφύρια της Ηπείρου…</title><link href="https://geographer.gr/khartographontas-ta-petrina-gephuria-tes-epeirou/" rel="alternate"></link><published>2009-08-31T00:10:00+03:00</published><updated>2009-08-31T00:10:00+03:00</updated><author><name>Leonidas Liakos</name></author><id>tag:geographer.gr,2009-08-31:/khartographontas-ta-petrina-gephuria-tes-epeirou/</id><summary type="html">&lt;p&gt;&lt;img src="https://geographer.gr/images/m1.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;H διαθεσιμότητα δεδομένων από το Πανεπιστήμιο Ιωαννίνων, μεταξύ αυτών
 και γεωγραφικών, για τα πέτρινα γεφύρια της Ηπείρου στο διαδίκτυο (&lt;a class="uri" href="http://www.petrinagefiria.uoi.gr/"&gt;http://www.petrinagefiria.uoi.gr/&lt;/a&gt;) δίνει την δυνατότητα
 χαρτογράφησης αυτής της πληροφορίας με λογισμικό ανοικτού κώδικα αλλά
@@ -4648,4 +4650,4 @@ http://mintaka.sdsu.edu/GF/explain/atmos_refr/horizon.html [Πρόσβαση:May
 Ιωάννινα, σελ. 127-129&lt;/p&gt;
 &lt;p&gt;Τζωρτζάτου Α., Φάτσιου Γ., 2006, Νέα στοιχειά για τη Θεσπρωτία των
 γεωμετρικών και αρχαϊκών χρόνων, Ηπειρωτικά Χρονικά (40), Ιωάννινα, σελ.
-61-90&lt;/p&gt;</content><category term="GIS"></category><category term="grass"></category><category term="thiessen"></category><category term="viewshed"></category><category term="xtent"></category><category term="αρχαιολογία"></category></entry></feed>
+61-90&lt;/p&gt;</content><category term="Δημοσιεύσεις"></category><category term="grass"></category><category term="thiessen"></category><category term="viewshed"></category><category term="xtent"></category><category term="αρχαιολογία"></category></entry></feed>
