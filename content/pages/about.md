@@ -2,6 +2,7 @@
 Title: About me
 Date: 2013-10-15 10:20
 Category: aboutme
+slug: about-me
 ---
 
 <img src={static}../images/100_1493.jpg  width="250" height="250">

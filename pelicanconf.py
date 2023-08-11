@@ -135,6 +135,7 @@ ARTICLE_EXCLUDES = ['html']
 #https://stackoverflow.com/questions/67141040/pelican-how-to-remove-html-extension-on-local-host
 ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
-
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
 
 
