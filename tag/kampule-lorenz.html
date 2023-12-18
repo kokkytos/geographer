@@ -118,11 +118,64 @@
     </ol>
             <article>
                 <h2><a href="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/">Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R</a></h2>
-                <div class="summary"><p>Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών
-ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz
-(Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την
-έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα
-σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της …</p>
+                <div class="summary"><p>Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών ανισοτήτων είναι η καμπύλη Lorenz.
+Για την εφαρμογή της καμπύλης Lorenz (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της εκτάσεως και του πληθυσμού, υπολογίζεται η ποσοστιαία  κατανομή, καθώς και η αθροιστική σειρά των ποσοστιαίων τούτων αναλογιών. Στη συνέχεια σε σύστημα ορθογώνιων συντεταγμένων χαράσσεται η γραφική παράσταση της καμπύλης Lorenz, στην οποία ο μεν άξονας των τετμημένων μετρά την αθροιστική σειρά της ποσοστιαίας κατανομής του πληθυσμού, ο δε άξονας των τεταγμένων της αθροιστική σειρά της ποσοστιαίας κατανομής της εκτάσεως και εντοπίζονται τα σημεία της αντιστοιχίας των αθροιστικών σειρών (%) εκτάσεως και πληθυσμού, τα οποία σχηματίζουν πολυγωνική γραμμή ο (καλούμενη καμπύλη Lorenz), φέρεται δε και η διαγώνιος (45ο), καλούμενη διαγώνιος ισοκατανομής. </p>
+<p><img alt="" src="https://geographer.gr/images/Economics_Gini_coefficient2.png"></p>
+<p>Στην απεικόνιση αυτή παρατηρούνται τα εξής:</p>
+<ol>
+<li>αν ο πληθυσμός ήταν ομοιομόρφως κατανεμημένος σε όλες τις επιμέρους περιοχές (γεωγραφικά διαμερίσματα), η αθροιστική καμπύλη του πληθυσμού θα ακολουθούσε τη διαγώνιο γραμμή της αθροιστικής σειράς των περιοχών (διαγώνιος ισοκατανομής).</li>
+<li>εάν, αντιθέτως ο πληθυσμός ήταν κατανεμημένος με την μέγιστη δυνατή ανισότητα, τότε η αθροιστική καμπύλη του πληθυσμού θα συνέπιπτε με τον άξονα των τετμημένων.</li>
+<li>ο βαθμός συγκεντρώσεως αντιπροσωπεύεται κατ’ ακολουθία από την απόκλιση της καμπύλης μεταξύ των δύο αυτών άκρων.</li>
+</ol>
+<p>Στα πλαίσια του τρέχοντος άρθρου και για εκπαιδευτικούς λόγους θα υπολογιστεί η καμπύλη Lorenz για τον νομό Θεσπρωτίας το 2001 με την βοήθεια του στατιστικού πακέτου R.</p>
+<p>To R (<a href="http://www.r-project.org/">http://www.r-project.org/</a>) είναι ένα υπολογιστικό πακέτο που προσφέρει δυνατότητες διαχείρισης και στατιστικής ανάλυσης δεδομένων καθώς και δυνατότητες κατασκευής γραφημάτων. Βασίζεται στην γλώσσα προγραμματισμού S (που χρησιμοποιεί και το στατιστικό πακέτο S plus) και πρόκειται για λογισμικό ανοικτού κώδικα (open source) που διατίθεται ελεύθερα. <a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f">Δείτε περισσότερα σχετικά με το R</a>
+Φυσικά ο υπολογισμός της καμπύλης αποκτά μεγαλύτερη αξία όταν εκτιμηθεί διαχρονικά και συγκριθεί με αντίστοιχες καμπύλες άλλων περιφερειών ή της χώρας.
+Τα σχετικά δεδομένα για τον Ν. Θεσπρωτίας το έτος 2001 είναι αποθηκευμένα σε ένα αρχείο CSV στην ακόλουθη μορφή:</p>
+<table>
+<thead>
+<tr>
+<th><strong>ID</strong></th>
+<th><strong>Name</strong></th>
+<th><strong>Population</strong></th>
+<th><strong>Area</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>320100</td>
+<td>ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΗΣ</td>
+<td>14710</td>
+<td>111.752</td>
+</tr>
+<tr>
+<td>326100</td>
+<td>ΚΟΙΝΟΤΗΤΑ ΠΕΡΔΙΚΑΣ</td>
+<td>2272</td>
+<td>34.605</td>
+</tr>
+<tr>
+<td>320700</td>
+<td>ΔΗΜΟΣ ΣΥΒΟΤΩΝ</td>
+<td>3010</td>
+<td>72.439</td>
+</tr>
+<tr>
+<td>320200</td>
+<td>ΔΗΜΟΣ ΑΧΕΡΟΝΤΑ</td>
+<td>2344</td>
+<td>67.343</td>
+</tr>
+<tr>
+<td>320500</td>
+<td>ΔΗΜΟΣ ΠΑΡΑΠΟΤΑΜΟΥ</td>
+<td>1668</td>
+<td>60.334</td>
+</tr>
+<tr>
+<td>320600</td>
+<td>ΔΗΜΟΣ ΣΑΓΙΑΔΑΣ</td>
+<td>2160</td>
+<td>87 …</td></tr></tbody></table>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/">more ...</a>
                 </div>
             </article>
@@ -159,6 +212,314 @@
   </ul>
 </li>
 <!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Tag Cloud -->
+<li class="list-group-item">
+  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+  <ul class="list-group list-inline tagcloud" id="tags">
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/api.html">API</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/big-data.html">big data</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/blender.html">Blender</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/cs2cs.html">cs2cs</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dem.html">dem</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/demos-souliou.html">Δήμος Σουλίου</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/ed50.html">ED50</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/etrs89-etrs-laea.html">ETRS89 ETRS LAEA</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/europe.html">Europe</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/gis.html">GIS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/github.html">github</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/hg.html">Hg</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/mapnik.html">mapnik</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/phd.html">phd</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/policy.html">Policy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
+    </li>
+    <li class="list-group-item tag-0">
+      <a href="https://geographer.gr/tag/python.html">python</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/r.html">R</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/raster.html">raster</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/redes.html">REDES</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/risk.html">Risk</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sar.html">SAR</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/seismoi.html">σεισμοί</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/soil-erosion.html">Soil erosion</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/soil-policy.html">soil policy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sql.html">sql</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/stack.html">stack</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sustema-geographikon-plerophorion.html">Σύστημα Γεωγραφικών Πληροφοριών</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Tag Cloud -->
 
 <!-- Sidebar/Links -->
 <li class="list-group-item">
@@ -205,7 +566,7 @@
 <script src="https://geographer.gr/theme/js/respond.min.js"></script>
 
 
-<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
     <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
