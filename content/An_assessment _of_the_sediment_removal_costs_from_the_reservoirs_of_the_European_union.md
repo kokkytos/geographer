@@ -1,5 +1,5 @@
 ---
-Title: Understanding the cost of soil erosion: An assessment of the sediment removal costs from the reservoirs of the European union
+Title: Understanding the cost of soil erosion. An assessment of the sediment removal costs from the reservoirs of the European union
 Date: 2023-12-18 11:15
 Category: Δημοσιεύσεις
 slug: assessment-sediment-removal-costs-reservoirs-european-union
