@@ -1,5 +1,5 @@
 ---
-Title: An assessment of the sediment removal costs from the reservoirs of the European union
+Title: Understanding the cost of soil erosion: An assessment of the sediment removal costs from the reservoirs of the European union
 Date: 2023-12-18 11:15
 Category: Δημοσιεύσεις
 slug: assessment-sediment-removal-costs-reservoirs-european-union
@@ -7,7 +7,9 @@ Tags:  Soil policy, EU soil observatory, Sediments, Costs, Off-site, Reservoir s
 summary: Soil erosion is both a major driver and consequence of land degradation with significant on-site and off-site costs which are critical to understand and quantify. One major cost of soil erosion originates from the sediments delivered to aquatic systems (e.g., rivers, lakes, and seas), which may generate a broad array of environmental and economic impacts. As part of the EU Soil Observatory (EUSO) working group on soil erosion, we provide a comprehensive assessment of the existing costs of sediment removal from European Union (EU) catchments due to water erosion.
 ---
 
-Panagos, P., Matthews, F., Patault, E., De Michele, C., Quaranta, E., Bezak, N., Kaffas, K., Patro, E.R., Auel, C., Schleiss, A.J., Fendrich, A., Liakos, L., Van Eynde, E., Vieira, D., Borrelli, P., 2023. Understanding the cost of soil erosion: An assessment of the sediment removal costs from the reservoirs of the European union. Journal of Cleaner Production 140183. https://doi.org/10.1016/j.jclepro.2023.140183
+![]({static}images/1-s2.0-S095965262304341X-ga1.jpg)
+
+Panagos, P., Matthews, F., Patault, E., De Michele, C., Quaranta, E., Bezak, N., Kaffas, K., Patro, E.R., Auel, C., Schleiss, A.J., Fendrich, A., Liakos, L., Van Eynde, E., Vieira, D., Borrelli, P., 2023. Understanding the cost of soil erosion: An assessment of the sediment removal costs from the reservoirs of the European union. Journal of Cleaner Production 140183. <https://doi.org/10.1016/j.jclepro.2023.140183>
 
 Soil erosion is both a major driver and consequence of land degradation with significant on-site and off-site costs which are critical to understand and quantify. One major cost of soil erosion originates from the sediments delivered to aquatic systems (e.g., rivers, lakes, and seas), which may generate a broad array of environmental and economic impacts. As part of the EU Soil Observatory (EUSO) working group on soil erosion, we provide a comprehensive assessment of the existing costs of sediment removal from European Union (EU) catchments due to water erosion. These quantifications combine continental average and regionally explicit sediment accumulation rates with published remediation costs, integrating numerous figures reported in the grey literature. The cost of removing an estimated 135 million m3 of accumulated sediments due to water erosion only is likely exceeding 2.3 billion euro (€) annually in the EU and UK, with large regional differences between countries.
 
