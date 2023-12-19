@@ -13,13 +13,13 @@
 
         <meta name="author" content="Leonidas Liakos" />
         <meta name="keywords" content="cs2cs,ED50,ETRS89 ETRS LAEA,gdalwrap,Greek Grid,ogr2ogr,WGS84,ΕΓΣΑ87" />
-        <meta name="description" content="Πολλά από τα δεδομένα, παγκόσμιας ή ευρωπαϊκής κλίμακας, που χρησιμοποιούνται στις εφαρμογές ΣΓΠ στην Ελλάδα απαιτούν μετατροπή του γεωδαιτικού συστήματος αναφοράς (ΓΣΑ) στο ΕΓΣΑ &#39;87 Στο παρόν άρθρο προτείνονται τρόποι μετατροπής συντεταγμένων προς το ΕΓΣΑ&#39;87 με βιβλιοθήκες ΕΛ/ΛΑΚ. Για την μετατροπή συντεταγμένων χρησιμοποιούνται οι βιβλιοθήκες cs2cs, ogr2ogr και gdalwarp ανάλογα με τον τύπο των δεδομένων. Η πρώτη χρησιμοποιείται για την μετατροπή ενός ή παραπάνω ζευγών συντεταγμένων, η δεύτερη για μετατροπή διανυσματικών δεδομένων (π.χ.shapefiles) και η τρίτη για ψηφιδωτά αρχεία (π.χ. αρχεία tiff). Για περισσότερες πληροφορίες σχετικά με τον τρόπο σύνταξης και τις διάφορες παραμέτρους ο χρήστης μπορεί να ανατρέξει στα αρχεία τεκμηρίωσης της κάθε βιβλιοθήκης. Σημαντικό σε κάθε περίπτωση είναι να γνωρίζει ο χρήστης πως ορίζεται το ΓΣΑ προέλευσης και προορισμού. Για τον ορισμό του ΓΣΑ υπάρχουν διάφορες μορφές καθώς και διαφορετική μορφή για την μετατροπή ανάλογα με την βιβλιοθήκη που καλείται. Ένα ΓΣΑ μπορεί να οριστεί/κληθεί είτε μέσω του κωδικού EPSG, είτε μέσω μιάς πρότασης παραμέτρων Proj4. Σε κάθε περίπτωση είναι αναγκαίο να είναι εγκατεστημένη η βιβλιοθήκη proj4. Για παράδειγμα το ΕΓΣΑ&#39;87 μπορεί να κληθεί/οριστεί με τους εξής τρόπους: &#34;EPSG:2100&#34; &#34;+init=epsg:2100&#34; &#34;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs …" />
+        <meta name="description" content="Πολλά από τα δεδομένα, παγκόσμιας ή ευρωπαϊκής κλίμακας, που χρησιμοποιούνται στις εφαρμογές ΣΓΠ στην Ελλάδα απαιτούν μετατροπή του γεωδαιτικού συστήματος αναφοράς (ΓΣΑ) στο ΕΓΣΑ ’87 Στο παρόν άρθρο προτείνονται τρόποι μετατροπής συντεταγμένων προς το ΕΓΣΑ’87 με βιβλιοθήκες ΕΛ/ΛΑΚ. Για την μετατροπή συντεταγμένων χρησιμοποιούνται οι βιβλιοθήκες cs2cs, ogr2ogr και …" />
 
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Μετατροπή συντεταγμένων από το ED50, ETRS89 - ETRS-LAEA , WGS84 στο ΕΓΣΑ87"/>
         <meta property="og:url" content="https://geographer.gr/metatrope-suntetagmenon-apo-to-ed50-etrs89-etrs-laea-wgs84-sto-egsa87/"/>
-        <meta property="og:description" content="Πολλά από τα δεδομένα, παγκόσμιας ή ευρωπαϊκής κλίμακας, που χρησιμοποιούνται στις εφαρμογές ΣΓΠ στην Ελλάδα απαιτούν μετατροπή του γεωδαιτικού συστήματος αναφοράς (ΓΣΑ) στο ΕΓΣΑ &#39;87 Στο παρόν άρθρο προτείνονται τρόποι μετατροπής συντεταγμένων προς το ΕΓΣΑ&#39;87 με βιβλιοθήκες ΕΛ/ΛΑΚ. Για την μετατροπή συντεταγμένων χρησιμοποιούνται οι βιβλιοθήκες cs2cs, ogr2ogr και gdalwarp ανάλογα με τον τύπο των δεδομένων. Η πρώτη χρησιμοποιείται για την μετατροπή ενός ή παραπάνω ζευγών συντεταγμένων, η δεύτερη για μετατροπή διανυσματικών δεδομένων (π.χ.shapefiles) και η τρίτη για ψηφιδωτά αρχεία (π.χ. αρχεία tiff). Για περισσότερες πληροφορίες σχετικά με τον τρόπο σύνταξης και τις διάφορες παραμέτρους ο χρήστης μπορεί να ανατρέξει στα αρχεία τεκμηρίωσης της κάθε βιβλιοθήκης. Σημαντικό σε κάθε περίπτωση είναι να γνωρίζει ο χρήστης πως ορίζεται το ΓΣΑ προέλευσης και προορισμού. Για τον ορισμό του ΓΣΑ υπάρχουν διάφορες μορφές καθώς και διαφορετική μορφή για την μετατροπή ανάλογα με την βιβλιοθήκη που καλείται. Ένα ΓΣΑ μπορεί να οριστεί/κληθεί είτε μέσω του κωδικού EPSG, είτε μέσω μιάς πρότασης παραμέτρων Proj4. Σε κάθε περίπτωση είναι αναγκαίο να είναι εγκατεστημένη η βιβλιοθήκη proj4. Για παράδειγμα το ΕΓΣΑ&#39;87 μπορεί να κληθεί/οριστεί με τους εξής τρόπους: &#34;EPSG:2100&#34; &#34;+init=epsg:2100&#34; &#34;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs …"/>
+        <meta property="og:description" content="Πολλά από τα δεδομένα, παγκόσμιας ή ευρωπαϊκής κλίμακας, που χρησιμοποιούνται στις εφαρμογές ΣΓΠ στην Ελλάδα απαιτούν μετατροπή του γεωδαιτικού συστήματος αναφοράς (ΓΣΑ) στο ΕΓΣΑ ’87 Στο παρόν άρθρο προτείνονται τρόποι μετατροπής συντεταγμένων προς το ΕΓΣΑ’87 με βιβλιοθήκες ΕΛ/ΛΑΚ. Για την μετατροπή συντεταγμένων χρησιμοποιούνται οι βιβλιοθήκες cs2cs, ogr2ogr και …"/>
         <meta property="article:published_time" content="2012-01-28" />
             <meta property="article:section" content="GIS" />
             <meta property="article:tag" content="cs2cs" />
@@ -140,7 +140,7 @@
     ❄
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/metatrope-suntetagmenon-apo-to-ed50-etrs89-etrs-laea-wgs84-sto-egsa87/" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/metatrope-suntetagmenon-apo-to-ed50-etrs89-etrs-laea-wgs84-sto-egsa87/&title=%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20ED50%2C%20ETRS89%20-%20ETRS-LAEA%20%2C%20WGS84%20%CF%83%CF%84%CE%BF%20%CE%95%CE%93%CE%A3%CE%9187&summary=%CE%A0%CE%BF%CE%BB%CE%BB%CE%AC%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B1%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%2C%20%CF%80%CE%B1%CE%B3%CE%BA%CF%8C%CF%83%CE%BC%CE%B9%CE%B1%CF%82%20%CE%AE%20%CE%B5%CF%85%CF%81%CF%89%CF%80%CE%B1%CF%8A%CE%BA%CE%AE%CF%82%20%CE%BA%CE%BB%CE%AF%CE%BC%CE%B1%CE%BA%CE%B1%CF%82%2C%20%CF%80%CE%BF%CF%85%20%CF%87%CF%81%CE%B7%CF%83%CE%B9%CE%BC%CE%BF%CF%80%CE%BF%CE%B9%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CF%83%CF%84%CE%B9%CF%82%20%CE%B5%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AD%CF%82%20%CE%A3%CE%93%CE%A0%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1%20%CE%B1%CF%80%CE%B1%CE%B9%CF%84%CE%BF%CF%8D%CE%BD%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%84%CE%BF%CF%85%20%CE%B3%CE%B5%CF%89%CE%B4%CE%B1%CE%B9%CF%84%CE%B9%CE%BA%CE%BF%CF%8D%20%CF%83%CF%85%CF%83%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%BF%CF%82%20%CE%B1%CE%BD%CE%B1%CF%86%CE%BF%CF%81%CE%AC%CF%82%20%28%CE%93%CE%A3%CE%91%29%20%CF%83%CF%84%CE%BF%20%CE%95%CE%93%CE%A3%CE%91%20%2787%0A%CE%A3%CF%84%CE%BF%20%CF%80%CE%B1%CF%81%CF%8C%CE%BD%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CF%80%CF%81%CE%BF%CF%84%CE%B5%CE%AF%CE%BD%CE%BF%CE%BD%CF%84%CE%B1%CE%B9%20%CF%84%CF%81%CF%8C%CF%80%CE%BF%CE%B9%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%CF%82%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CF%80%CF%81%CE%BF%CF%82%20%CF%84%CE%BF%20%CE%95%CE%93%CE%A3%CE%91%2787%20%CE%BC%CE%B5%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%20%CE%95%CE%9B/%CE%9B%CE%91%CE%9A.%0A%CE%93%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CF%87%CF%81%CE%B7%CF%83%CE%B9%CE%BC%CE%BF%CF%80%CE%BF%CE%B9%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CE%BF%CE%B9%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%20cs2cs%2C%20ogr2ogr%20%CE%BA%CE%B1%CE%B9%20gdalwarp%20%CE%B1%CE%BD%CE%AC%CE%BB%CE%BF%CE%B3%CE%B1%20%CE%BC%CE%B5%20%CF%84%CE%BF%CE%BD%20%CF%84%CF%8D%CF%80%CE%BF%20%CF%84%CF%89%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD.%0A%CE%97%20%CF%80%CF%81%CF%8E%CF%84%CE%B7%20%CF%87%CF%81%CE%B7%CF%83%CE%B9%CE%BC%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CF%84%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%B5%CE%BD%CF%8C%CF%82%20%CE%AE%20%CF%80%CE%B1%CF%81%CE%B1%CF%80%CE%AC%CE%BD%CF%89%20%CE%B6%CE%B5%CF%85%CE%B3%CF%8E%CE%BD%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%2C%20%CE%B7%20%CE%B4%CE%B5%CF%8D%CF%84%CE%B5%CF%81%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%28%CF%80.%CF%87.shapefiles%29%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CF%84%CF%81%CE%AF%CF%84%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%88%CE%B7%CF%86%CE%B9%CE%B4%CF%89%CF%84%CE%AC%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%B1%20%28%CF%80.%CF%87.%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%B1%20tiff%29.%20%CE%93%CE%B9%CE%B1%20%CF%80%CE%B5%CF%81%CE%B9%CF%83%CF%83%CF%8C%CF%84%CE%B5%CF%81%CE%B5%CF%82%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AC%20%CE%BC%CE%B5%20%CF%84%CE%BF%CE%BD%20%CF%84%CF%81%CF%8C%CF%80%CE%BF%20%CF%83%CF%8D%CE%BD%CF%84%CE%B1%CE%BE%CE%B7%CF%82%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%B9%CF%82%20%CE%B4%CE%B9%CE%AC%CF%86%CE%BF%CF%81%CE%B5%CF%82%20%CF%80%CE%B1%CF%81%CE%B1%CE%BC%CE%AD%CF%84%CF%81%CE%BF%CF%85%CF%82%20%CE%BF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%CF%82%20%CE%BC%CF%80%CE%BF%CF%81%CE%B5%CE%AF%20%CE%BD%CE%B1%20%CE%B1%CE%BD%CE%B1%CF%84%CF%81%CE%AD%CE%BE%CE%B5%CE%B9%20%CF%83%CF%84%CE%B1%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%B1%20%CF%84%CE%B5%CE%BA%CE%BC%CE%B7%CF%81%CE%AF%CF%89%CF%83%CE%B7%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%AC%CE%B8%CE%B5%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%CF%82.%0A%CE%A3%CE%B7%CE%BC%CE%B1%CE%BD%CF%84%CE%B9%CE%BA%CF%8C%20%CF%83%CE%B5%20%CE%BA%CE%AC%CE%B8%CE%B5%20%CF%80%CE%B5%CF%81%CE%AF%CF%80%CF%84%CF%89%CF%83%CE%B7%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CE%B3%CE%BD%CF%89%CF%81%CE%AF%CE%B6%CE%B5%CE%B9%20%CE%BF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%CF%82%20%CF%80%CF%89%CF%82%20%CE%BF%CF%81%CE%AF%CE%B6%CE%B5%CF%84%CE%B1%CE%B9%20%CF%84%CE%BF%20%CE%93%CE%A3%CE%91%20%CF%80%CF%81%CE%BF%CE%AD%CE%BB%CE%B5%CF%85%CF%83%CE%B7%CF%82%20%CE%BA%CE%B1%CE%B9%20%CF%80%CF%81%CE%BF%CE%BF%CF%81%CE%B9%CF%83%CE%BC%CE%BF%CF%8D.%0A%CE%93%CE%B9%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BF%CF%81%CE%B9%CF%83%CE%BC%CF%8C%20%CF%84%CE%BF%CF%85%20%CE%93%CE%A3%CE%91%20%CF%85%CF%80%CE%AC%CF%81%CF%87%CE%BF%CF%85%CE%BD%20%CE%B4%CE%B9%CE%AC%CF%86%CE%BF%CF%81%CE%B5%CF%82%20%CE%BC%CE%BF%CF%81%CF%86%CE%AD%CF%82%20%CE%BA%CE%B1%CE%B8%CF%8E%CF%82%20%CE%BA%CE%B1%CE%B9%20%CE%B4%CE%B9%CE%B1%CF%86%CE%BF%CF%81%CE%B5%CF%84%CE%B9%CE%BA%CE%AE%20%CE%BC%CE%BF%CF%81%CF%86%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%B1%CE%BD%CE%AC%CE%BB%CE%BF%CE%B3%CE%B1%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20%CF%80%CE%BF%CF%85%20%CE%BA%CE%B1%CE%BB%CE%B5%CE%AF%CF%84%CE%B1%CE%B9.%0A%CE%88%CE%BD%CE%B1%20%CE%93%CE%A3%CE%91%20%CE%BC%CF%80%CE%BF%CF%81%CE%B5%CE%AF%20%CE%BD%CE%B1%20%CE%BF%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF/%CE%BA%CE%BB%CE%B7%CE%B8%CE%B5%CE%AF%20%CE%B5%CE%AF%CF%84%CE%B5%20%CE%BC%CE%AD%CF%83%CF%89%20%CF%84%CE%BF%CF%85%20%CE%BA%CF%89%CE%B4%CE%B9%CE%BA%CE%BF%CF%8D%20EPSG%2C%20%CE%B5%CE%AF%CF%84%CE%B5%20%CE%BC%CE%AD%CF%83%CF%89%20%CE%BC%CE%B9%CE%AC%CF%82%20%CF%80%CF%81%CF%8C%CF%84%CE%B1%CF%83%CE%B7%CF%82%20%CF%80%CE%B1%CF%81%CE%B1%CE%BC%CE%AD%CF%84%CF%81%CF%89%CE%BD%20Proj4.%20%CE%A3%CE%B5%20%CE%BA%CE%AC%CE%B8%CE%B5%20%CF%80%CE%B5%CF%81%CE%AF%CF%80%CF%84%CF%89%CF%83%CE%B7%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BA%CE%B1%CE%AF%CE%BF%20%CE%BD%CE%B1%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B5%CE%B3%CE%BA%CE%B1%CF%84%CE%B5%CF%83%CF%84%CE%B7%CE%BC%CE%AD%CE%BD%CE%B7%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20proj4.%0A%CE%93%CE%B9%CE%B1%20%CF%80%CE%B1%CF%81%CE%AC%CE%B4%CE%B5%CE%B9%CE%B3%CE%BC%CE%B1%20%CF%84%CE%BF%20%CE%95%CE%93%CE%A3%CE%91%2787%20%CE%BC%CF%80%CE%BF%CF%81%CE%B5%CE%AF%20%CE%BD%CE%B1%20%CE%BA%CE%BB%CE%B7%CE%B8%CE%B5%CE%AF/%CE%BF%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%20%CE%BC%CE%B5%20%CF%84%CE%BF%CF%85%CF%82%20%CE%B5%CE%BE%CE%AE%CF%82%20%CF%84%CF%81%CF%8C%CF%80%CE%BF%CF%85%CF%82%3A%0A%22EPSG%3A2100%22%0A%22%2Binit%3Depsg%3A2100%22%0A%22%2Bproj%3Dtmerc%20%2Blat_0%3D0%20%2Blon_0%3D24%20%2Bk%3D0.9996%20%2Bx_0%3D500000%20%2By_0%3D0%20%2Bellps%3DGRS80%20%2Btowgs84%3D-199.87%2C74.79%2C246.62%2C0%2C0%2C0%2C0%20%2Bunits%3Dm%20%2Bno_defs%20%E2%80%A6&source=https%3A//geographer.gr/metatrope-suntetagmenon-apo-to-ed50-etrs89-etrs-laea-wgs84-sto-egsa87/" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/metatrope-suntetagmenon-apo-to-ed50-etrs89-etrs-laea-wgs84-sto-egsa87/&title=%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20ED50%2C%20ETRS89%20-%20ETRS-LAEA%20%2C%20WGS84%20%CF%83%CF%84%CE%BF%20%CE%95%CE%93%CE%A3%CE%9187&summary=%CE%A0%CE%BF%CE%BB%CE%BB%CE%AC%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B1%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%2C%20%CF%80%CE%B1%CE%B3%CE%BA%CF%8C%CF%83%CE%BC%CE%B9%CE%B1%CF%82%20%CE%AE%20%CE%B5%CF%85%CF%81%CF%89%CF%80%CE%B1%CF%8A%CE%BA%CE%AE%CF%82%20%CE%BA%CE%BB%CE%AF%CE%BC%CE%B1%CE%BA%CE%B1%CF%82%2C%20%CF%80%CE%BF%CF%85%0A%CF%87%CF%81%CE%B7%CF%83%CE%B9%CE%BC%CE%BF%CF%80%CE%BF%CE%B9%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CF%83%CF%84%CE%B9%CF%82%20%CE%B5%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AD%CF%82%20%CE%A3%CE%93%CE%A0%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1%20%CE%B1%CF%80%CE%B1%CE%B9%CF%84%CE%BF%CF%8D%CE%BD%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%84%CE%BF%CF%85%0A%CE%B3%CE%B5%CF%89%CE%B4%CE%B1%CE%B9%CF%84%CE%B9%CE%BA%CE%BF%CF%8D%20%CF%83%CF%85%CF%83%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%BF%CF%82%20%CE%B1%CE%BD%CE%B1%CF%86%CE%BF%CF%81%CE%AC%CF%82%20%28%CE%93%CE%A3%CE%91%29%20%CF%83%CF%84%CE%BF%20%CE%95%CE%93%CE%A3%CE%91%0A%E2%80%9987%0A%CE%A3%CF%84%CE%BF%20%CF%80%CE%B1%CF%81%CF%8C%CE%BD%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CF%80%CF%81%CE%BF%CF%84%CE%B5%CE%AF%CE%BD%CE%BF%CE%BD%CF%84%CE%B1%CE%B9%20%CF%84%CF%81%CF%8C%CF%80%CE%BF%CE%B9%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%CF%82%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CF%80%CF%81%CE%BF%CF%82%20%CF%84%CE%BF%0A%CE%95%CE%93%CE%A3%CE%91%E2%80%9987%20%CE%BC%CE%B5%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%20%CE%95%CE%9B/%CE%9B%CE%91%CE%9A.%20%CE%93%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%0A%CF%87%CF%81%CE%B7%CF%83%CE%B9%CE%BC%CE%BF%CF%80%CE%BF%CE%B9%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CE%BF%CE%B9%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%20cs2cs%2C%20ogr2ogr%20%CE%BA%CE%B1%CE%B9%20%E2%80%A6&source=https%3A//geographer.gr/metatrope-suntetagmenon-apo-to-ed50-etrs89-etrs-laea-wgs84-sto-egsa87/" title="Share on LinkedIn">LinkedIn</a>
     ❄
     <a href="https://news.ycombinator.com/submitlink?t=%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20ED50%2C%20ETRS89%20-%20ETRS-LAEA%20%2C%20WGS84%20%CF%83%CF%84%CE%BF%20%CE%95%CE%93%CE%A3%CE%9187&u=https%3A//geographer.gr/metatrope-suntetagmenon-apo-to-ed50-etrs89-etrs-laea-wgs84-sto-egsa87/" title="Share on HackerNews">HackerNews</a>
     ❄
@@ -195,53 +195,70 @@
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p><img alt="" src="https://geographer.gr/images/gdal-logo.png"></p>
-<p>Πολλά από τα δεδομένα, παγκόσμιας ή ευρωπαϊκής κλίμακας, που χρησιμοποιούνται στις εφαρμογές ΣΓΠ στην Ελλάδα απαιτούν μετατροπή του γεωδαιτικού συστήματος αναφοράς (ΓΣΑ) στο <a href="https://el.wikipedia.org/wiki/%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C_%CE%93%CE%B5%CF%89%CE%B4%CE%B1%CE%B9%CF%84%CE%B9%CE%BA%CF%8C_%CE%A3%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1_%CE%91%CE%BD%CE%B1%CF%86%CE%BF%CF%81%CE%AC%CF%82_1987">ΕΓΣΑ '87</a></p>
-<p>Στο παρόν άρθρο προτείνονται τρόποι μετατροπής συντεταγμένων προς το ΕΓΣΑ'87 με βιβλιοθήκες ΕΛ/ΛΑΚ.
-Για την μετατροπή συντεταγμένων χρησιμοποιούνται οι βιβλιοθήκες <a href="http://proj.maptools.org/man_cs2cs.html">cs2cs</a>, <a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a> και <a href="http://www.gdal.org/gdalwarp.html">gdalwarp</a> ανάλογα με τον τύπο των δεδομένων.</p>
-<p>Η πρώτη χρησιμοποιείται για την μετατροπή ενός ή παραπάνω ζευγών συντεταγμένων, η δεύτερη για μετατροπή διανυσματικών δεδομένων (π.χ.shapefiles) και η τρίτη για ψηφιδωτά αρχεία (π.χ. αρχεία tiff). Για περισσότερες πληροφορίες σχετικά με τον τρόπο σύνταξης και τις διάφορες παραμέτρους ο χρήστης μπορεί να ανατρέξει στα αρχεία τεκμηρίωσης της κάθε βιβλιοθήκης.</p>
-<p>Σημαντικό σε κάθε περίπτωση είναι να γνωρίζει ο χρήστης πως ορίζεται το ΓΣΑ προέλευσης και προορισμού.
-Για τον ορισμό του ΓΣΑ υπάρχουν διάφορες μορφές καθώς και διαφορετική μορφή για την μετατροπή ανάλογα με την βιβλιοθήκη που καλείται.</p>
-<p>Ένα ΓΣΑ μπορεί να οριστεί/κληθεί είτε μέσω του κωδικού <a href="http://www.epsg-registry.org/">EPSG</a>, είτε μέσω μιάς πρότασης <a href="https://trac.osgeo.org/proj/wiki/GenParms">παραμέτρων Proj4</a>. Σε κάθε περίπτωση είναι αναγκαίο να είναι εγκατεστημένη η βιβλιοθήκη <a href="https://trac.osgeo.org/proj/">proj4</a>.</p>
-<p>Για παράδειγμα το ΕΓΣΑ'87 μπορεί να κληθεί/οριστεί με τους εξής τρόπους:</p>
-<div class="highlight"><pre><span></span><code>&quot;EPSG:2100&quot;
-&quot;+init=epsg:2100&quot;
-&quot;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs&quot;
-</code></pre></div>
-
-
-<p>Οι κωδικοί EPSG αλλά και οι ορισμοί σε μορφή Proj4 που αφορούν τα ΓΣΑ είναι διαθέσιμοι στο <a href="https://spatialreference.org/">https://spatialreference.org/</a>.</p>
-<p>Δείτε περισσότερα ανα ΓΣΑ: <a href="http://spatialreference.org/ref/epsg/4230/">ED50</a>, <a href="http://spatialreference.org/ref/epsg/3035/">ETRS89/ETRS-LAEA</a> , <a href="http://spatialreference.org/ref/epsg/4326/">WGS84</a>, <a href="http://spatialreference.org/ref/epsg/2100/">ΕΓΣΑ '87</a>.</p>
+                <p><img src="https://geographer.gr/images/gdal-logo.png"/></p>
+<p>Πολλά από τα δεδομένα, παγκόσμιας ή ευρωπαϊκής κλίμακας, που
+χρησιμοποιούνται στις εφαρμογές ΣΓΠ στην Ελλάδα απαιτούν μετατροπή του
+γεωδαιτικού συστήματος αναφοράς (ΓΣΑ) στο <a href="https://el.wikipedia.org/wiki/%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C_%CE%93%CE%B5%CF%89%CE%B4%CE%B1%CE%B9%CF%84%CE%B9%CE%BA%CF%8C_%CE%A3%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1_%CE%91%CE%BD%CE%B1%CF%86%CE%BF%CF%81%CE%AC%CF%82_1987">ΕΓΣΑ
+’87</a></p>
+<p>Στο παρόν άρθρο προτείνονται τρόποι μετατροπής συντεταγμένων προς το
+ΕΓΣΑ’87 με βιβλιοθήκες ΕΛ/ΛΑΚ. Για την μετατροπή συντεταγμένων
+χρησιμοποιούνται οι βιβλιοθήκες <a href="http://proj.maptools.org/man_cs2cs.html">cs2cs</a>, <a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a> και <a href="http://www.gdal.org/gdalwarp.html">gdalwarp</a> ανάλογα με τον
+τύπο των δεδομένων.</p>
+<p>Η πρώτη χρησιμοποιείται για την μετατροπή ενός ή παραπάνω ζευγών
+συντεταγμένων, η δεύτερη για μετατροπή διανυσματικών δεδομένων
+(π.χ.shapefiles) και η τρίτη για ψηφιδωτά αρχεία (π.χ. αρχεία tiff). Για
+περισσότερες πληροφορίες σχετικά με τον τρόπο σύνταξης και τις διάφορες
+παραμέτρους ο χρήστης μπορεί να ανατρέξει στα αρχεία τεκμηρίωσης της
+κάθε βιβλιοθήκης.</p>
+<p>Σημαντικό σε κάθε περίπτωση είναι να γνωρίζει ο χρήστης πως ορίζεται
+το ΓΣΑ προέλευσης και προορισμού. Για τον ορισμό του ΓΣΑ υπάρχουν
+διάφορες μορφές καθώς και διαφορετική μορφή για την μετατροπή ανάλογα με
+την βιβλιοθήκη που καλείται.</p>
+<p>Ένα ΓΣΑ μπορεί να οριστεί/κληθεί είτε μέσω του κωδικού <a href="http://www.epsg-registry.org/">EPSG</a>, είτε μέσω μιάς πρότασης
+<a href="https://trac.osgeo.org/proj/wiki/GenParms">παραμέτρων
+Proj4</a>. Σε κάθε περίπτωση είναι αναγκαίο να είναι εγκατεστημένη η
+βιβλιοθήκη <a href="https://trac.osgeo.org/proj/">proj4</a>.</p>
+<p>Για παράδειγμα το ΕΓΣΑ’87 μπορεί να κληθεί/οριστεί με τους εξής
+τρόπους:</p>
+<pre><code>"EPSG:2100"
+"+init=epsg:2100"
+"+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs"</code></pre>
+<p>Οι κωδικοί EPSG αλλά και οι ορισμοί σε μορφή Proj4 που αφορούν τα ΓΣΑ
+είναι διαθέσιμοι στο <a class="uri" href="https://spatialreference.org/">https://spatialreference.org/</a>.</p>
+<p>Δείτε περισσότερα ανα ΓΣΑ: <a href="http://spatialreference.org/ref/epsg/4230/">ED50</a>, <a href="http://spatialreference.org/ref/epsg/3035/">ETRS89/ETRS-LAEA</a> ,
+<a href="http://spatialreference.org/ref/epsg/4326/">WGS84</a>, <a href="http://spatialreference.org/ref/epsg/2100/">ΕΓΣΑ ’87</a>.</p>
 <p>Προς το παρόν θα επικεντρωθώ στην παρουσίαση 3 παραδειγμάτων:</p>
-<p>Για την μετατροπή ενός ζεύγους συντεταγμένων (π.χ. 20^ο^,40^ο^) από το ED50 στο ΕΓΣΑ'87 εκτελούμε την εντολή:</p>
-<div class="highlight"><pre><span></span><code>echo 20 40|cs2cs +init=epsg:4230 +towgs84=-86,-92.2,-127.5  +to +init=epsg:2100
-</code></pre></div>
-
-
-<p>Αν θέλουμε να μετατρέψουμε ένα πλήθος συντεταγμένων αποθηκευμένες σε ένα αρχείο (coords.txt):</p>
-<div class="highlight"><pre><span></span><code>cat coords.txt|cs2cs +init=epsg:4230 +towgs84=-86,-92.2,-127.5  +to +init=epsg:2100
-</code></pre></div>
-
-
-<p>Προσοχή στο datum shift <code>+towgs84=-86,-92.2,-127.5</code>  </p>
-<p>Για την μετατροπή ενός αρχείου shapefile από το ETRS89/ETRS-LAEA στο ΕΓΣΑ'87 εκτελούμε την εντολή:</p>
-<div class="highlight"><pre><span></span><code>ogr2ogr -s_srs EPSG:3035 -t_srs EPSG:2100 outfile.shp infile.shp
-</code></pre></div>
-
-
+<p>Για την μετατροπή ενός ζεύγους συντεταγμένων (π.χ.
+20<sup>ο</sup>,40<sup>ο</sup>) από το ED50 στο ΕΓΣΑ’87 εκτελούμε την
+εντολή:</p>
+<pre><code>echo 20 40|cs2cs +init=epsg:4230 +towgs84=-86,-92.2,-127.5  +to +init=epsg:2100</code></pre>
+<p>Αν θέλουμε να μετατρέψουμε ένα πλήθος συντεταγμένων αποθηκευμένες σε
+ένα αρχείο (coords.txt):</p>
+<pre><code>cat coords.txt|cs2cs +init=epsg:4230 +towgs84=-86,-92.2,-127.5  +to +init=epsg:2100</code></pre>
+<p>Προσοχή στο datum shift <code>+towgs84=-86,-92.2,-127.5</code></p>
+<p>Για την μετατροπή ενός αρχείου shapefile από το ETRS89/ETRS-LAEA στο
+ΕΓΣΑ’87 εκτελούμε την εντολή:</p>
+<pre><code>ogr2ogr -s_srs EPSG:3035 -t_srs EPSG:2100 outfile.shp infile.shp</code></pre>
 <p>όπου</p>
-<p><code>-s_srs EPSG:3035</code>, το ΓΣΑ του αρχείου προέλευσης (στην περίπτωσή μας ορίζεται μέσω EPSG:3035 που είναι ο σχετικός κωδικός EPSG για το ETRS89/ETRS-LAEA)</p>
-<p><code>-t_srs EPSG:2100</code>, το ΓΣΑ του αρχείου προορισμού (στην περίπτωσή μας ορίζεται μέσω EPSG:2100 που είναι ο σχετικός κωδικός EPSG για το ΕΓΣΑ'87)</p>
-<p><code>outfile.shp</code>, το shapefile προορισμού σε ΕΓΣΑ'87</p>
-<p><code>infile.shp</code>, το shapefile προέλευσης σε ETRS89/ETRS-LAEA</p>
-<p>Για την μετατροπή ενός αρχείου tiff από το WGS84 στο ΕΓΣΑ'87 εκτελούμε την εντολή:</p>
-<div class="highlight"><pre><span></span><code>gdalwarp -s_srs EPSG:4326 -t_srs EPSG:2100 infile.tif outfile.tif
-</code></pre></div>
-
-
+<p><code>-s_srs EPSG:3035</code>, το ΓΣΑ του αρχείου προέλευσης (στην
+περίπτωσή μας ορίζεται μέσω EPSG:3035 που είναι ο σχετικός κωδικός EPSG
+για το ETRS89/ETRS-LAEA)</p>
+<p><code>-t_srs EPSG:2100</code>, το ΓΣΑ του αρχείου προορισμού (στην
+περίπτωσή μας ορίζεται μέσω EPSG:2100 που είναι ο σχετικός κωδικός EPSG
+για το ΕΓΣΑ’87)</p>
+<p><code>outfile.shp</code>, το shapefile προορισμού σε ΕΓΣΑ’87</p>
+<p><code>infile.shp</code>, το shapefile προέλευσης σε
+ETRS89/ETRS-LAEA</p>
+<p>Για την μετατροπή ενός αρχείου tiff από το WGS84 στο ΕΓΣΑ’87
+εκτελούμε την εντολή:</p>
+<pre><code>gdalwarp -s_srs EPSG:4326 -t_srs EPSG:2100 infile.tif outfile.tif</code></pre>
 <p>όπου</p>
-<p><code>-s_srs EPSG:4326</code>, το ΓΣΑ του αρχείου προέλευσης (στην περίπτωσή μας ορίζεται μέσω EPSG:4326 που είναι ο σχετικός κωδικός EPSG για το WGS84)</p>
-<p><code>-t_srs EPSG:2100</code>, το ΓΣΑ του αρχείου προορισμού (στην περίπτωσή μας ορίζεται μέσω EPSG:2100 που είναι ο σχετικός κωδικός EPSG για το ΕΓΣΑ87)</p>
+<p><code>-s_srs EPSG:4326</code>, το ΓΣΑ του αρχείου προέλευσης (στην
+περίπτωσή μας ορίζεται μέσω EPSG:4326 που είναι ο σχετικός κωδικός EPSG
+για το WGS84)</p>
+<p><code>-t_srs EPSG:2100</code>, το ΓΣΑ του αρχείου προορισμού (στην
+περίπτωσή μας ορίζεται μέσω EPSG:2100 που είναι ο σχετικός κωδικός EPSG
+για το ΕΓΣΑ87)</p>
 <p><code>outfile.tif</code>, το tiff αρχείο προορισμού σε ΕΓΣΑ87</p>
 <p><code>infile.tif</code>, το tiff αρχείο προέλευσης σε WGS84</p>
             </div>
@@ -310,314 +327,6 @@
   </ul>
 </li>
 <!-- End Sidebar/Categories -->
-
-<!-- Sidebar/Tag Cloud -->
-<li class="list-group-item">
-  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-  <ul class="list-group list-inline tagcloud" id="tags">
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/api.html">API</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/big-data.html">big data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/blender.html">Blender</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/cs2cs.html">cs2cs</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dem.html">dem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/demos-souliou.html">Δήμος Σουλίου</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ed50.html">ED50</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/etrs89-etrs-laea.html">ETRS89 ETRS LAEA</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/europe.html">Europe</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gis.html">GIS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/github.html">github</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hg.html">Hg</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/mapnik.html">mapnik</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phd.html">phd</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/policy.html">Policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
-    </li>
-    <li class="list-group-item tag-0">
-      <a href="https://geographer.gr/tag/python.html">python</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/r.html">R</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/raster.html">raster</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/redes.html">REDES</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/risk.html">Risk</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sar.html">SAR</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seismoi.html">σεισμοί</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-erosion.html">Soil erosion</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-policy.html">soil policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sql.html">sql</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/stack.html">stack</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sustema-geographikon-plerophorion.html">Σύστημα Γεωγραφικών Πληροφοριών</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
-    </li>
-  </ul>
-</li>
-<!-- End Sidebar/Tag Cloud -->
 
 <!-- Sidebar/Links -->
 <li class="list-group-item">

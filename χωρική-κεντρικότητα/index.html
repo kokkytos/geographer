@@ -13,13 +13,13 @@
 
         <meta name="author" content="Leonidas Liakos" />
         <meta name="keywords" content="aspace,maptools,R,rgdal,rpy,shapefiles,spgrass6" />
-        <meta name="description" content="Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός δείκτης μιας κατανομής είναι ο χωρικός μέσος (mean center). Ουσιαστικά πρόκειται για τον μέσο όρο των συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και κεντροειδές. Δίνεται από τον τύπο: $${x}=\frac{\sum\limits_{i=1}^n{x_i}}{n}, {y}=\frac{\sum\limits_{i=1}^n{y_i}}{n}$$ όπου, $x,y$ οι συντεταγμένες του χωρικού μέσου δηλαδή ο μέσος όρος των συντεταγμένων $x_i,y_i$ του πλήθους $N$ των σημείων της κατανομής. Ταυτόχρονα με τον αριθμητικό χωρικό μέσο, μπορεί να υπολογιστεί ο σταθμισμένος χωρικός μέσος (Weighted Mean Center) όπου ο υπολογισμός γίνεται με το στάθμισμα κάθε συντεταγμένης με μία μεταβλητή π.χ. εισόδημα, εγκληματικότητα, πληθυσμός κτλ. Δίνεται από τον τύπο: $${x}w=\frac{\sum\limits^n{w_ix_i}}{n},{y}w=\frac{\sum\limits^n{w_iy …" />
+        <meta name="description" content="Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός δείκτης μιας κατανομής είναι ο χωρικός μέσος (mean center). Ουσιαστικά πρόκειται για τον μέσο όρο των συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και κεντροειδές. Δίνεται από τον τύπο: \[{x}=\frac{\sum\limits_ …" />
 
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Υπολογισμός δεικτών χωρικής κεντρικότητας με την R"/>
         <meta property="og:url" content="https://geographer.gr/χωρική-κεντρικότητα/"/>
-        <meta property="og:description" content="Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός δείκτης μιας κατανομής είναι ο χωρικός μέσος (mean center). Ουσιαστικά πρόκειται για τον μέσο όρο των συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και κεντροειδές. Δίνεται από τον τύπο: $${x}=\frac{\sum\limits_{i=1}^n{x_i}}{n}, {y}=\frac{\sum\limits_{i=1}^n{y_i}}{n}$$ όπου, $x,y$ οι συντεταγμένες του χωρικού μέσου δηλαδή ο μέσος όρος των συντεταγμένων $x_i,y_i$ του πλήθους $N$ των σημείων της κατανομής. Ταυτόχρονα με τον αριθμητικό χωρικό μέσο, μπορεί να υπολογιστεί ο σταθμισμένος χωρικός μέσος (Weighted Mean Center) όπου ο υπολογισμός γίνεται με το στάθμισμα κάθε συντεταγμένης με μία μεταβλητή π.χ. εισόδημα, εγκληματικότητα, πληθυσμός κτλ. Δίνεται από τον τύπο: $${x}w=\frac{\sum\limits^n{w_ix_i}}{n},{y}w=\frac{\sum\limits^n{w_iy …"/>
+        <meta property="og:description" content="Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός δείκτης μιας κατανομής είναι ο χωρικός μέσος (mean center). Ουσιαστικά πρόκειται για τον μέσο όρο των συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και κεντροειδές. Δίνεται από τον τύπο: \[{x}=\frac{\sum\limits_ …"/>
         <meta property="article:published_time" content="2013-09-22" />
             <meta property="article:section" content="GIS" />
             <meta property="article:tag" content="aspace" />
@@ -139,7 +139,7 @@
     ❄
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE-%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1/" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE-%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1/&title=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CE%B4%CE%B5%CE%B9%CE%BA%CF%84%CF%8E%CE%BD%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE%CF%82%20%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20R&summary=%CE%9F%CE%B9%20%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AD%CF%82%20%CF%84%CE%B5%CF%87%CE%BD%CE%B9%CE%BA%CE%AD%CF%82%20%CE%B1%CF%80%CE%BF%CF%84%CE%B5%CE%BB%CE%BF%CF%8D%CE%BD%20%CF%84%CE%B9%CF%82%20%CE%B2%CE%B1%CF%83%CE%B9%CE%BA%CE%AD%CF%82%20%CF%84%CE%B5%CF%87%CE%BD%CE%B9%CE%BA%CE%AD%CF%82%20%CF%80%CE%B5%CF%81%CE%B9%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AE%CF%82%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20%CF%84%CE%B7%CF%82%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82.%0A%CE%9F%20%CF%80%CE%B9%CE%BF%20%CE%B1%CF%80%CE%BB%CF%8C%CF%82%20%CF%80%CE%B5%CF%81%CE%B9%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8C%CF%82%20%CE%B4%CE%B5%CE%AF%CE%BA%CF%84%CE%B7%CF%82%20%CE%BC%CE%B9%CE%B1%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%BF%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CF%8C%CF%82%20%CE%BC%CE%AD%CF%83%CE%BF%CF%82%20%28mean%20center%29.%20%CE%9F%CF%85%CF%83%CE%B9%CE%B1%CF%83%CF%84%CE%B9%CE%BA%CE%AC%20%CF%80%CF%81%CF%8C%CE%BA%CE%B5%CE%B9%CF%84%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BC%CE%AD%CF%83%CE%BF%20%CF%8C%CF%81%CE%BF%20%CF%84%CF%89%CE%BD%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%A7%2C%CE%A5%20%CE%BC%CE%B9%CE%B1%CF%82%20%CF%83%CE%B7%CE%BC%CE%B5%CE%B9%CE%B1%CE%BA%CE%AE%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82.%0A%CE%A3%CF%85%CF%87%CE%BD%CE%AC%20%CE%B1%CF%80%CE%BF%CE%BA%CE%B1%CE%BB%CE%B5%CE%AF%CF%84%CE%B1%CE%B9%20%CE%BA%CE%B1%CE%B9%20%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%BF%CE%B5%CE%B9%CE%B4%CE%AD%CF%82.%0A%CE%94%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%CE%BD%20%CF%84%CF%8D%CF%80%CE%BF%3A%0A%24%24%7Bx%7D%3D%5Cfrac%7B%5Csum%5Climits_%7Bi%3D1%7D%5En%7Bx_i%7D%7D%7Bn%7D%2C%20%7By%7D%3D%5Cfrac%7B%5Csum%5Climits_%7Bi%3D1%7D%5En%7By_i%7D%7D%7Bn%7D%24%24%0A%CF%8C%CF%80%CE%BF%CF%85%2C%0A%24x%2Cy%24%20%CE%BF%CE%B9%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CE%B5%CF%82%20%CF%84%CE%BF%CF%85%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%BF%CF%8D%20%CE%BC%CE%AD%CF%83%CE%BF%CF%85%20%CE%B4%CE%B7%CE%BB%CE%B1%CE%B4%CE%AE%20%CE%BF%20%CE%BC%CE%AD%CF%83%CE%BF%CF%82%20%CF%8C%CF%81%CE%BF%CF%82%20%CF%84%CF%89%CE%BD%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%24x_i%2Cy_i%24%20%20%CF%84%CE%BF%CF%85%20%CF%80%CE%BB%CE%AE%CE%B8%CE%BF%CF%85%CF%82%20%24N%24%20%CF%84%CF%89%CE%BD%20%CF%83%CE%B7%CE%BC%CE%B5%CE%AF%CF%89%CE%BD%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82.%0A%CE%A4%CE%B1%CF%85%CF%84%CF%8C%CF%87%CF%81%CE%BF%CE%BD%CE%B1%20%CE%BC%CE%B5%20%CF%84%CE%BF%CE%BD%20%CE%B1%CF%81%CE%B9%CE%B8%CE%BC%CE%B7%CF%84%CE%B9%CE%BA%CF%8C%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CF%8C%20%CE%BC%CE%AD%CF%83%CE%BF%2C%20%CE%BC%CF%80%CE%BF%CF%81%CE%B5%CE%AF%20%CE%BD%CE%B1%20%CF%85%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CF%84%CE%B5%CE%AF%20%CE%BF%20%CF%83%CF%84%CE%B1%CE%B8%CE%BC%CE%B9%CF%83%CE%BC%CE%AD%CE%BD%CE%BF%CF%82%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CF%8C%CF%82%20%CE%BC%CE%AD%CF%83%CE%BF%CF%82%20%28Weighted%20Mean%20Center%29%20%CF%8C%CF%80%CE%BF%CF%85%20%CE%BF%20%CF%85%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CE%B3%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CE%BC%CE%B5%20%CF%84%CE%BF%20%CF%83%CF%84%CE%AC%CE%B8%CE%BC%CE%B9%CF%83%CE%BC%CE%B1%20%CE%BA%CE%AC%CE%B8%CE%B5%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CE%B7%CF%82%20%CE%BC%CE%B5%20%CE%BC%CE%AF%CE%B1%20%CE%BC%CE%B5%CF%84%CE%B1%CE%B2%CE%BB%CE%B7%CF%84%CE%AE%20%CF%80.%CF%87.%20%CE%B5%CE%B9%CF%83%CF%8C%CE%B4%CE%B7%CE%BC%CE%B1%2C%20%CE%B5%CE%B3%CE%BA%CE%BB%CE%B7%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1%2C%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CF%8C%CF%82%20%CE%BA%CF%84%CE%BB.%0A%CE%94%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%CE%BD%20%CF%84%CF%8D%CF%80%CE%BF%3A%0A%24%24%7Bx%7Dw%3D%5Cfrac%7B%5Csum%5Climits%5En%7Bw_ix_i%7D%7D%7Bn%7D%2C%7By%7Dw%3D%5Cfrac%7B%5Csum%5Climits%5En%7Bw_iy%20%E2%80%A6&source=https%3A//geographer.gr/%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE-%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1/" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE-%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1/&title=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CE%B4%CE%B5%CE%B9%CE%BA%CF%84%CF%8E%CE%BD%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE%CF%82%20%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20R&summary=%CE%9F%CE%B9%20%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AD%CF%82%20%CF%84%CE%B5%CF%87%CE%BD%CE%B9%CE%BA%CE%AD%CF%82%20%CE%B1%CF%80%CE%BF%CF%84%CE%B5%CE%BB%CE%BF%CF%8D%CE%BD%20%CF%84%CE%B9%CF%82%20%CE%B2%CE%B1%CF%83%CE%B9%CE%BA%CE%AD%CF%82%20%CF%84%CE%B5%CF%87%CE%BD%CE%B9%CE%BA%CE%AD%CF%82%0A%CF%80%CE%B5%CF%81%CE%B9%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AE%CF%82%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20%CF%84%CE%B7%CF%82%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82.%20%CE%9F%20%CF%80%CE%B9%CE%BF%20%CE%B1%CF%80%CE%BB%CF%8C%CF%82%20%CF%80%CE%B5%CF%81%CE%B9%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8C%CF%82%0A%CE%B4%CE%B5%CE%AF%CE%BA%CF%84%CE%B7%CF%82%20%CE%BC%CE%B9%CE%B1%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%BF%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CF%8C%CF%82%20%CE%BC%CE%AD%CF%83%CE%BF%CF%82%20%28mean%0Acenter%29.%20%CE%9F%CF%85%CF%83%CE%B9%CE%B1%CF%83%CF%84%CE%B9%CE%BA%CE%AC%20%CF%80%CF%81%CF%8C%CE%BA%CE%B5%CE%B9%CF%84%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BC%CE%AD%CF%83%CE%BF%20%CF%8C%CF%81%CE%BF%20%CF%84%CF%89%CE%BD%0A%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%A7%2C%CE%A5%20%CE%BC%CE%B9%CE%B1%CF%82%20%CF%83%CE%B7%CE%BC%CE%B5%CE%B9%CE%B1%CE%BA%CE%AE%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82.%20%CE%A3%CF%85%CF%87%CE%BD%CE%AC%20%CE%B1%CF%80%CE%BF%CE%BA%CE%B1%CE%BB%CE%B5%CE%AF%CF%84%CE%B1%CE%B9%20%CE%BA%CE%B1%CE%B9%0A%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%BF%CE%B5%CE%B9%CE%B4%CE%AD%CF%82.%0A%CE%94%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%CE%BD%20%CF%84%CF%8D%CF%80%CE%BF%3A%0A%5C%5B%7Bx%7D%3D%5Cfrac%7B%5Csum%5Climits_%20%E2%80%A6&source=https%3A//geographer.gr/%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE-%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1/" title="Share on LinkedIn">LinkedIn</a>
     ❄
     <a href="https://news.ycombinator.com/submitlink?t=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CE%B4%CE%B5%CE%B9%CE%BA%CF%84%CF%8E%CE%BD%20%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE%CF%82%20%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20R&u=https%3A//geographer.gr/%CF%87%CF%89%CF%81%CE%B9%CE%BA%CE%AE-%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%84%CE%B7%CF%84%CE%B1/" title="Share on HackerNews">HackerNews</a>
     ❄
@@ -192,147 +192,188 @@
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <hr>
-<p>Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές περιγραφικής στατιστικής της χωρικής κατανομής.
-Ο πιο απλός περιγραφικός δείκτης μιας κατανομής είναι ο <strong>χωρικός μέσος (mean center)</strong>. Ουσιαστικά πρόκειται για τον μέσο όρο των συντεταγμένων Χ,Υ μιας σημειακής κατανομής.
-Συχνά αποκαλείται και κεντροειδές.</p>
+                <p>Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές
+περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός
+δείκτης μιας κατανομής είναι ο <strong>χωρικός μέσος (mean
+center)</strong>. Ουσιαστικά πρόκειται για τον μέσο όρο των
+συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και
+κεντροειδές.</p>
 <p>Δίνεται από τον τύπο:</p>
-<p>$${x}=\frac{\sum\limits_{i=1}^n{x_i}}{n}, {y}=\frac{\sum\limits_{i=1}^n{y_i}}{n}$$</p>
+<p><span class="math display">\[{x}=\frac{\sum\limits_{i=1}^n{x_i}}{n},
+{y}=\frac{\sum\limits_{i=1}^n{y_i}}{n}\]</span></p>
 <p>όπου,</p>
-<p>$x,y$ οι συντεταγμένες του χωρικού μέσου δηλαδή ο μέσος όρος των συντεταγμένων $x_i,y_i$  του πλήθους $N$ των σημείων της κατανομής.
-Ταυτόχρονα με τον αριθμητικό χωρικό μέσο, μπορεί να υπολογιστεί ο <strong>σταθμισμένος χωρικός μέσος (Weighted Mean Center)</strong> όπου ο υπολογισμός γίνεται με το στάθμισμα κάθε συντεταγμένης με μία μεταβλητή π.χ. εισόδημα, εγκληματικότητα, πληθυσμός κτλ.</p>
+<p><span class="math inline">\(x,y\)</span> οι συντεταγμένες του χωρικού
+μέσου δηλαδή ο μέσος όρος των συντεταγμένων <span class="math inline">\(x_i,y_i\)</span> του πλήθους <span class="math inline">\(N\)</span> των σημείων της κατανομής. Ταυτόχρονα
+με τον αριθμητικό χωρικό μέσο, μπορεί να υπολογιστεί ο
+<strong>σταθμισμένος χωρικός μέσος (Weighted Mean Center)</strong> όπου
+ο υπολογισμός γίνεται με το στάθμισμα κάθε συντεταγμένης με μία
+μεταβλητή π.χ. εισόδημα, εγκληματικότητα, πληθυσμός κτλ.</p>
 <p>Δίνεται από τον τύπο:</p>
-<p>$${x}<em i="1">w=\frac{\sum\limits</em>^n{w_ix_i}}{n},{y}<em i="1">w=\frac{\sum\limits</em>^n{w_iy_i}}{n}$$</p>
-<p>όπου,
-$x_w,y_w$  οι συντεταγμένες του σταθμισμένου χωρικού μέσου δηλαδή ο μέσος όρος των διακριτών συντεταγμένων $x_i,y_i$ του πλήθους $N$ των σημείων της κατανομής σταθμισμένες με το βάρος $W_i$ του κάθε σημείου.</p>
-<p>Παράλληλα με τον χωρικό μέσο ή τον σταθμισμένο χωρικό μέσο, υπολογίζεται και <strong>η τυπική απόσταση (Standard Distance)</strong> ως δείκτης μέτρησης του βαθμού συγκέντρωσης ή διασποράς των σημείων γύρω από τον χωρικό (ή σταθμισμένο) μέσο. Αποτέλει ότι και η τυπική απόσταση σε μια μη χωρική κατανομή.
-Δίνεται από τον τύπο:</p>
-<p>$$S_D=\sqrt{\frac{\sum\limits_{i=1}^n(x_i-{x})^2 + \sum\limits_{i=1}^n(y_i-{y})^2}{n}}$$</p>
-<p>όπου,
-$S_D$ , η τυπική απόσταση, $x,y$ οι συντεταγμένες του χωρικού μέσου και $x_i,y_i$  οι συντεταγμένες του κάθε διακριτού σημείου της σημειακής κατανομής.</p>
-<p>Κατ' αντιστοιχία, υπολογίζεται και <strong>η σταθμισμένη τυπική απόσταση (weighted standard distance)</strong> σε περιπτώσεις που μελετάται η διασπορά σε σχέση με τον σταθμισμένο μέσο όρο.</p>
+<p><span class="math display">\[{x}_w=\frac{\sum\limits_{i=1}^n{w_ix_i}}{n},{y}_w=\frac{\sum\limits_{i=1}^n{w_iy_i}}{n}\]</span></p>
+<p>όπου, <span class="math inline">\(x_w,y_w\)</span> οι συντεταγμένες
+του σταθμισμένου χωρικού μέσου δηλαδή ο μέσος όρος των διακριτών
+συντεταγμένων <span class="math inline">\(x_i,y_i\)</span> του πλήθους
+<span class="math inline">\(N\)</span> των σημείων της κατανομής
+σταθμισμένες με το βάρος <span class="math inline">\(W_i\)</span> του
+κάθε σημείου.</p>
+<p>Παράλληλα με τον χωρικό μέσο ή τον σταθμισμένο χωρικό μέσο,
+υπολογίζεται και <strong>η τυπική απόσταση (Standard Distance)</strong>
+ως δείκτης μέτρησης του βαθμού συγκέντρωσης ή διασποράς των σημείων γύρω
+από τον χωρικό (ή σταθμισμένο) μέσο. Αποτέλει ότι και η τυπική απόσταση
+σε μια μη χωρική κατανομή. Δίνεται από τον τύπο:</p>
+<p><span class="math display">\[S_D=\sqrt{\frac{\sum\limits_{i=1}^n(x_i-{x})^2 +
+\sum\limits_{i=1}^n(y_i-{y})^2}{n}}\]</span></p>
+<p>όπου, <span class="math inline">\(S_D\)</span> , η τυπική απόσταση,
+<span class="math inline">\(x,y\)</span> οι συντεταγμένες του χωρικού
+μέσου και <span class="math inline">\(x_i,y_i\)</span> οι συντεταγμένες
+του κάθε διακριτού σημείου της σημειακής κατανομής.</p>
+<p>Κατ’ αντιστοιχία, υπολογίζεται και <strong>η σταθμισμένη τυπική
+απόσταση (weighted standard distance)</strong> σε περιπτώσεις που
+μελετάται η διασπορά σε σχέση με τον σταθμισμένο μέσο όρο.</p>
 <p>Δίνεται από τον τύπο:</p>
-<p>$$S_{WD}=\sqrt{\frac{\sum\limits_{i=1}^n w_i(x_i-{x})^2 + \sum\limits_{i=1}^n w_i(y_i-{y})^2}{n}}$$</p>
-<p>όπου,
-$S_{WD}$ , η σταθμισμένη τυπική απόσταση, $x,y$  οι συντεταγμένες του χωρικού μέσου,  $x_i,y_i$ οι συντεταγμένες του κάθε διακριτού σημείου της σημειακής κατανομής και $W_i$ τ το αντίστοιχο βάρος τους.</p>
-<p>Οι ανωτέρω δείκτες αποκτούν ιδιαίτερη αξία όταν συγκριθούν διαχρονικά.</p>
-<p>Ας περιγράψουμε ένα παράδειγμα υπολογισμού των παραπάνω δεικτών με το <a href="http://cran.r-project.org/">R</a>. Η σημειακή κατανομή θα αποτελείται από τους οικισμούς του Ν. Θεσπρωτίας και από τον πραγματικό πληθυσμό τους κατά τα έτη 1991 και 2001 για περιπτώσεις υπολογισμού σταθμισμένων δεικτών.</p>
-<p>Ο υπολογισμός των δεικτών χωρικής κεντρικότητας στο R γίνεται με την χρήση του πακέτου <a href="http://cran.r-project.org/web/packages/aspace/aspace.pdf">aspace</a>.</p>
-<p>Πριν λοιπόν ξεκινήσουμε πρέπει να εγκαταστήσουμε τα απαραίτητα πακέτα στο R: <a href="http://cran.r-project.org/web/packages/aspace/aspace.pdf">aspace</a>, <a href="http://cran.r-project.org/web/packages/maptools/maptools.pdf">maptools</a>, <a href="http://cran.r-project.org/web/packages/shapefiles/shapefiles.pdf">shapefiles</a>, <a href="http://cran.r-project.org/web/packages/rgdal/rgdal.pdf">rgdal</a></p>
-<p>Ξεκινήστε το R ως υπερχρήστης (αλλιώς η εγκατάσταση των πακέτων θα αποτύχει) και δώστε τις παρακάτω εντολές</p>
-<div class="highlight"><pre><span></span><code><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;aspace&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;maptools&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;shapefiles&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;rgdal&quot;</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
-
-
-<p>Στην συνέχεια θα σας ζητηθεί να επιλέξετε έναν mirror. Επιλέξτε Greece και συνεχίστε.
-Επανεκκινήστε το R ως κανονικός πλέον χρήστης και δοκιμάστε να φορτώσετε τα παραπάνω πακέτα με τις εξής εντολές:</p>
-<div class="highlight"><pre><span></span><code><span class="n">library</span><span class="p">(</span><span class="s2">&quot;aspace&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">library</span><span class="p">(</span><span class="s2">&quot;maptools&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">library</span><span class="p">(</span><span class="s2">&quot;shapefiles&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">library</span><span class="p">(</span><span class="s2">&quot;rgdal&quot;</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
-
-
-<p>την συνέχεια ακολουθεί ο υπολογισμός τον δεικτών (ανατρέξτε στα σχόλια για λεπτομέρειες):</p>
-<h3>Υπολογισμός του Χωρικού Μέσου των οικισμών του Ν. Θεσπρωτίας:</h3>
-<div class="highlight"><pre><span></span><code><span class="c1">#ανάγνωση του αρχείου shapefile OIKISMOI</span>
-<span class="n">oikismoi</span> <span class="o">&lt;-</span> <span class="nf">readShapePoints</span><span class="p">(</span><span class="s">&quot;OIKISMOI&quot;</span><span class="p">)</span>
-
-<span class="c1">#Υπολογισμός του χωρικού μέσου mean_center</span>
-<span class="nf">mean_centre</span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">&quot;mean.txt&quot;</span><span class="p">,</span> <span class="n">weighted</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="nf">coordinates</span><span class="p">(</span><span class="n">oikismoi</span><span class="p">))</span>
-<span class="c1">#εξαγωγή σε shapefile </span>
-<span class="n">shp</span> <span class="o">&lt;-</span> <span class="nf">convert.to.shapefile </span><span class="p">(</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">meanloc</span><span class="p">),</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">meanatt</span><span class="p">),</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
-<span class="nf">write.shapefile</span><span class="p">(</span><span class="n">shp</span><span class="p">,</span> <span class="s">&quot;Mean&quot;</span><span class="p">,</span> <span class="n">arcgis</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="c1">#εγγραφή αρχείου prj για το ΕΓΣΑ &#39;87</span>
-<span class="nf">cat</span><span class="p">(</span><span class="nf">yt</span><span class="p">(</span><span class="n">proj4string</span><span class="o">&lt;-</span><span class="p">(</span><span class="s">&quot;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs&quot;</span><span class="p">)),</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;Mean.prj&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Ο Χωρικός Μέσος των οικισμών του Ν. Θεσπρωτίας εντοπίζεται στο σημείο Χ=191482.2, Υ=4381093.</p>
-<h3>Υπολογισμός του Σταθμισμένου Χωρικού Μέσου για τον πραγματικό πληθυσμό του 1991 των οικισμών του Ν. Θεσπρωτίας:</h3>
-<div class="highlight"><pre><span></span><code><span class="nf">mean_centre</span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">&quot;mean_PRAG91.txt&quot;</span><span class="p">,</span> <span class="n">weighted</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">oikismoi</span><span class="o">$</span><span class="n">POPPRAG199</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="nf">coordinates</span><span class="p">(</span><span class="n">oikismoi</span><span class="p">))</span>
-<span class="c1">#εξαγωγή σε shapefile</span>
-<span class="n">shp</span> <span class="o">&lt;-</span> <span class="nf">convert.to.shapefile </span><span class="p">(</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">meanloc</span><span class="p">),</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">meanatt</span><span class="p">),</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
-<span class="nf">write.shapefile</span><span class="p">(</span><span class="n">shp</span><span class="p">,</span> <span class="s">&quot;Mean_PRAG1991&quot;</span><span class="p">,</span> <span class="n">arcgis</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="c1">#εγγραφή αρχείου prj για το ΕΓΣΑ &#39;87</span>
-<span class="nf">cat</span><span class="p">(</span><span class="nf">showWKT</span><span class="p">(</span><span class="n">proj4string</span><span class="o">&lt;-</span><span class="p">(</span><span class="s">&quot;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs&quot;</span><span class="p">)),</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;Mean_PRAG1991.prj&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Ο Σταθμισμένος Χωρικός Μέσος των οικισμών του Ν. Θεσπρωτίας για το 2001 εντοπίζεται στο σημείο Χ=187644.1, Υ=4378180.</p>
-<h3>Υπολογισμός της Σταθμισμένης Τυπικής Απόστασης για τον πραγματικό πληθυσμό του 1991 των οικισμών του Ν. Θεσπρωτίας:</h3>
-<div class="highlight"><pre><span></span><code><span class="c1">## SDD 1991</span>
-<span class="nf">calc_sdd</span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">&quot;SDD_PRAG91.txt&quot;</span><span class="p">,</span> <span class="n">centre.xy</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> <span class="n">calccentre</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">weighted</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">oikismoi</span><span class="o">$</span><span class="n">POPPRAG199</span><span class="p">,</span><span class="n">points</span><span class="o">=</span><span class="nf">coordinates</span><span class="p">(</span><span class="n">oikismoi</span><span class="p">),</span><span class="n">verbose</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="n">shp</span> <span class="o">&lt;-</span> <span class="nf">convert.to.shapefile</span><span class="p">(</span><span class="n">sddloc</span><span class="p">,</span><span class="n">sddatt</span><span class="p">,</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
-<span class="nf">write.shapefile</span><span class="p">(</span><span class="n">shp</span><span class="p">,</span> <span class="s">&quot;SDD_1991&quot;</span><span class="p">,</span> <span class="n">arcgis</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="nf">cat</span><span class="p">(</span><span class="nf">showWKT</span><span class="p">(</span><span class="n">proj4string</span><span class="o">&lt;-</span><span class="p">(</span><span class="s">&quot;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs&quot;</span><span class="p">)),</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;SDD_1991.prj&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Η Σταθμισμένη Τυπική Απόσταση για τον πραγματικό πληθυσμό του 1991 των οικισμών του Ν. Θεσπρωτίας έχει ακτίνα 14563.64μ.</p>
-<p>To R δίνει την δυνατότητα στον χρήστη να αποδόσει σε γράφημα τους δείκτες του πακέτου aspace. Στην περίπτωση της Σταθμισμένης Τυπικής Απόστασης η απόδοση γίνεται με την χρήσης της εντολής plot_sdd. Η εντολή plot_sdd αποδίδει την τυπική απόσταση σαν ένα κύκλο με κέντρο τον χωρικό μέσο.</p>
+<p><span class="math display">\[S_{WD}=\sqrt{\frac{\sum\limits_{i=1}^n
+w_i(x_i-{x})^2 + \sum\limits_{i=1}^n w_i(y_i-{y})^2}{n}}\]</span></p>
+<p>όπου, <span class="math inline">\(S_{WD}\)</span> , η σταθμισμένη
+τυπική απόσταση, <span class="math inline">\(x,y\)</span> οι
+συντεταγμένες του χωρικού μέσου, <span class="math inline">\(x_i,y_i\)</span> οι συντεταγμένες του κάθε
+διακριτού σημείου της σημειακής κατανομής και <span class="math inline">\(W_i\)</span> τ το αντίστοιχο βάρος τους.</p>
+<p>Οι ανωτέρω δείκτες αποκτούν ιδιαίτερη αξία όταν συγκριθούν
+διαχρονικά.</p>
+<p>Ας περιγράψουμε ένα παράδειγμα υπολογισμού των παραπάνω δεικτών με το
+<a href="http://cran.r-project.org/">R</a>. Η σημειακή κατανομή θα
+αποτελείται από τους οικισμούς του Ν. Θεσπρωτίας και από τον πραγματικό
+πληθυσμό τους κατά τα έτη 1991 και 2001 για περιπτώσεις υπολογισμού
+σταθμισμένων δεικτών.</p>
+<p>Ο υπολογισμός των δεικτών χωρικής κεντρικότητας στο R γίνεται με την
+χρήση του πακέτου <a href="http://cran.r-project.org/web/packages/aspace/aspace.pdf">aspace</a>.</p>
+<p>Πριν λοιπόν ξεκινήσουμε πρέπει να εγκαταστήσουμε τα απαραίτητα πακέτα
+στο R: <a href="http://cran.r-project.org/web/packages/aspace/aspace.pdf">aspace</a>,
+<a href="http://cran.r-project.org/web/packages/maptools/maptools.pdf">maptools</a>,
+<a href="http://cran.r-project.org/web/packages/shapefiles/shapefiles.pdf">shapefiles</a>,
+<a href="http://cran.r-project.org/web/packages/rgdal/rgdal.pdf">rgdal</a></p>
+<p>Ξεκινήστε το R ως υπερχρήστης (αλλιώς η εγκατάσταση των πακέτων θα
+αποτύχει) και δώστε τις παρακάτω εντολές</p>
+<pre><code>install.packages("aspace")
+install.packages("maptools")
+install.packages("shapefiles")
+install.packages("rgdal")</code></pre>
+<p>Στην συνέχεια θα σας ζητηθεί να επιλέξετε έναν mirror. Επιλέξτε
+Greece και συνεχίστε. Επανεκκινήστε το R ως κανονικός πλέον χρήστης και
+δοκιμάστε να φορτώσετε τα παραπάνω πακέτα με τις εξής εντολές:</p>
+<pre><code>library("aspace")
+library("maptools")
+library("shapefiles")
+library("rgdal")</code></pre>
+<p>την συνέχεια ακολουθεί ο υπολογισμός τον δεικτών (ανατρέξτε στα
+σχόλια για λεπτομέρειες):</p>
+<h3 id="υπολογισμός-του-χωρικού-μέσου-των-οικισμών-του-ν.-θεσπρωτίας">Υπολογισμός
+του Χωρικού Μέσου των οικισμών του Ν. Θεσπρωτίας:</h3>
+<pre><code>#ανάγνωση του αρχείου shapefile OIKISMOI
+oikismoi &lt;- readShapePoints("OIKISMOI")
+ 
+#Υπολογισμός του χωρικού μέσου mean_center
+mean_centre(id=1, filename="mean.txt", weighted=FALSE, weights=NULL, points=coordinates(oikismoi))
+#εξαγωγή σε shapefile 
+shp &lt;- convert.to.shapefile (data.frame(meanloc), data.frame(meanatt),"id",1)
+write.shapefile(shp, "Mean", arcgis=T)
+#εγγραφή αρχείου prj για το ΕΓΣΑ '87
+cat(yt(proj4string&lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="Mean.prj")</code></pre>
+<p>Ο Χωρικός Μέσος των οικισμών του Ν. Θεσπρωτίας εντοπίζεται στο σημείο
+Χ=191482.2, Υ=4381093.</p>
+<h3 id="υπολογισμός-του-σταθμισμένου-χωρικού-μέσου-για-τον-πραγματικό-πληθυσμό-του-1991-των-οικισμών-του-ν.-θεσπρωτίας">Υπολογισμός
+του Σταθμισμένου Χωρικού Μέσου για τον πραγματικό πληθυσμό του 1991 των
+οικισμών του Ν. Θεσπρωτίας:</h3>
+<pre><code>mean_centre(id=1, filename="mean_PRAG91.txt", weighted=TRUE, weights=oikismoi$POPPRAG199, points=coordinates(oikismoi))
+#εξαγωγή σε shapefile
+shp &lt;- convert.to.shapefile (data.frame(meanloc), data.frame(meanatt),"id",1)
+write.shapefile(shp, "Mean_PRAG1991", arcgis=T)
+#εγγραφή αρχείου prj για το ΕΓΣΑ '87
+cat(showWKT(proj4string&lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="Mean_PRAG1991.prj")</code></pre>
+<p>Ο Σταθμισμένος Χωρικός Μέσος των οικισμών του Ν. Θεσπρωτίας για το
+2001 εντοπίζεται στο σημείο Χ=187644.1, Υ=4378180.</p>
+<h3 id="υπολογισμός-της-σταθμισμένης-τυπικής-απόστασης-για-τον-πραγματικό-πληθυσμό-του-1991-των-οικισμών-του-ν.-θεσπρωτίας">Υπολογισμός
+της Σταθμισμένης Τυπικής Απόστασης για τον πραγματικό πληθυσμό του 1991
+των οικισμών του Ν. Θεσπρωτίας:</h3>
+<pre><code>## SDD 1991
+calc_sdd(id=1, filename="SDD_PRAG91.txt", centre.xy=NULL, calccentre=TRUE,weighted=TRUE, weights=oikismoi$POPPRAG199,points=coordinates(oikismoi),verbose=TRUE)
+shp &lt;- convert.to.shapefile(sddloc,sddatt,"id",5)
+write.shapefile(shp, "SDD_1991", arcgis=T)
+cat(showWKT(proj4string&lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="SDD_1991.prj")</code></pre>
+<p>Η Σταθμισμένη Τυπική Απόσταση για τον πραγματικό πληθυσμό του 1991
+των οικισμών του Ν. Θεσπρωτίας έχει ακτίνα 14563.64μ.</p>
+<p>To R δίνει την δυνατότητα στον χρήστη να αποδόσει σε γράφημα τους
+δείκτες του πακέτου aspace. Στην περίπτωση της Σταθμισμένης Τυπικής
+Απόστασης η απόδοση γίνεται με την χρήσης της εντολής plot_sdd. Η εντολή
+plot_sdd αποδίδει την τυπική απόσταση σαν ένα κύκλο με κέντρο τον χωρικό
+μέσο.</p>
 <p>Παρατίθεται η σύνταξη της σχετικής εντολής:</p>
-<div class="highlight"><pre><span></span><code> plot_sdd(centre.col=&#39;red&#39;, titletxt=&quot;Σταθμισμένη Τυπική Απόσταση n για τον πραγματικό πληθυσμό του 1991 των οικισμών του Ν. Θεσπρωτίας&quot;, jpeg=TRUE)
-</code></pre></div>
-
-
+<pre><code> plot_sdd(centre.col='red', titletxt="Σταθμισμένη Τυπική Απόσταση n για τον πραγματικό πληθυσμό του 1991 των οικισμών του Ν. Θεσπρωτίας", jpeg=TRUE)</code></pre>
 <p>Το αποτέλεσμα είναι το παρακάτω γράφημα:</p>
-<p><img alt="" src="https://geographer.gr/images/SDD1.jpg"></p>
-<h3>Υπολογισμός του Σταθμισμένου Χωρικού Μέσου για τον πραγματικό πληθυσμό του 2001 των οικισμών του Ν. Θεσπρωτίας:</h3>
-<div class="highlight"><pre><span></span><code><span class="nf">mean_centre</span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">&quot;mean_PRAG2001.txt&quot;</span><span class="p">,</span> <span class="n">weighted</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">oikismoi</span><span class="o">$</span><span class="n">POPPRAG200</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="nf">coordinates</span><span class="p">(</span><span class="n">oikismoi</span><span class="p">))</span>
-<span class="c1">#εξαγωγή σε shapefile</span>
-<span class="n">shp</span> <span class="o">&lt;-</span> <span class="nf">convert.to.shapefile </span><span class="p">(</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">meanloc</span><span class="p">),</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">meanatt</span><span class="p">),</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
-<span class="nf">write.shapefile</span><span class="p">(</span><span class="n">shp</span><span class="p">,</span> <span class="s">&quot;Mean_PRAG2001&quot;</span><span class="p">,</span> <span class="n">arcgis</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="c1">#εγγραφή αρχείου prj για το ΕΓΣΑ &#39;87</span>
-<span class="nf">cat</span><span class="p">(</span><span class="nf">showWKT</span><span class="p">(</span><span class="n">proj4string</span><span class="o">&lt;-</span><span class="p">(</span><span class="s">&quot;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs&quot;</span><span class="p">)),</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;Mean_PRAG2001.prj&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Ο Σταθμισμένος Χωρικός Μέσος των οικισμών του Ν. Θεσπρωτίας για το 2001 εντοπίζεται στο σημείο Χ=186711.3, Υ=4377762.</p>
-<h3>Υπολογισμός της Σταθμισμένης Τυπικής Απόστασης για τον πραγματικό πληθυσμό του 2001 των οικισμών του Ν. Θεσπρωτίας:</h3>
-<div class="highlight"><pre><span></span><code><span class="c1">## SDD 2001</span>
-<span class="nf">calc_sdd</span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">&quot;SDD_2001.txt&quot;</span><span class="p">,</span> <span class="n">centre.xy</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> <span class="n">calccentre</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">weighted</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">oikismoi</span><span class="o">$</span><span class="n">POPPRAG200</span><span class="p">,</span><span class="n">points</span><span class="o">=</span><span class="nf">coordinates</span><span class="p">(</span><span class="n">oikismoi</span><span class="p">),</span><span class="n">verbose</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="nf">write.shapefile</span><span class="p">(</span><span class="n">shp</span><span class="p">,</span> <span class="s">&quot;SDD_2001&quot;</span><span class="p">,</span> <span class="n">arcgis</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="nf">cat</span><span class="p">(</span><span class="nf">showWKT</span><span class="p">(</span><span class="n">proj4string</span><span class="o">&lt;-</span><span class="p">(</span><span class="s">&quot;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs&quot;</span><span class="p">)),</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;SDD_2001.prj&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Η Σταθμισμένη Τυπική Απόσταση για τον πραγματικό πληθυσμό του 2001 των οικισμών του Ν. Θεσπρωτίας έχει ακτίνα 14019.97μ.</p>
+<p><img src="https://geographer.gr/images/SDD1.jpg"/></p>
+<h3 id="υπολογισμός-του-σταθμισμένου-χωρικού-μέσου-για-τον-πραγματικό-πληθυσμό-του-2001-των-οικισμών-του-ν.-θεσπρωτίας">Υπολογισμός
+του Σταθμισμένου Χωρικού Μέσου για τον πραγματικό πληθυσμό του 2001 των
+οικισμών του Ν. Θεσπρωτίας:</h3>
+<pre><code>mean_centre(id=1, filename="mean_PRAG2001.txt", weighted=TRUE, weights=oikismoi$POPPRAG200, points=coordinates(oikismoi))
+#εξαγωγή σε shapefile
+shp &lt;- convert.to.shapefile (data.frame(meanloc), data.frame(meanatt),"id",1)
+write.shapefile(shp, "Mean_PRAG2001", arcgis=T)
+#εγγραφή αρχείου prj για το ΕΓΣΑ '87
+cat(showWKT(proj4string&lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="Mean_PRAG2001.prj")</code></pre>
+<p>Ο Σταθμισμένος Χωρικός Μέσος των οικισμών του Ν. Θεσπρωτίας για το
+2001 εντοπίζεται στο σημείο Χ=186711.3, Υ=4377762.</p>
+<h3 id="υπολογισμός-της-σταθμισμένης-τυπικής-απόστασης-για-τον-πραγματικό-πληθυσμό-του-2001-των-οικισμών-του-ν.-θεσπρωτίας">Υπολογισμός
+της Σταθμισμένης Τυπικής Απόστασης για τον πραγματικό πληθυσμό του 2001
+των οικισμών του Ν. Θεσπρωτίας:</h3>
+<pre><code>## SDD 2001
+calc_sdd(id=1, filename="SDD_2001.txt", centre.xy=NULL, calccentre=TRUE,weighted=TRUE, weights=oikismoi$POPPRAG200,points=coordinates(oikismoi),verbose=TRUE)
+write.shapefile(shp, "SDD_2001", arcgis=T)
+cat(showWKT(proj4string&lt;-("+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs")),file="SDD_2001.prj")</code></pre>
+<p>Η Σταθμισμένη Τυπική Απόσταση για τον πραγματικό πληθυσμό του 2001
+των οικισμών του Ν. Θεσπρωτίας έχει ακτίνα 14019.97μ.</p>
 <p>Οι δείκτες είναι πιο αποκαλυπτικοί αν αποδοθούν σε έναν χάρτη.</p>
-<p><img alt="" src="https://geographer.gr/images/xorikos.mesos_.jpeg"></p>
-<p>Το πρώτο βασικό συμπέρασμα που διεξάγεται από τον χάρτη είναι ότι οι σταθμισμένοι χωρικοί μέσοι εντοπίζονται ΝΔ από τον χωρικό μέσο προφανώς ως απόρροια της επιρροής του πληθυσμού αστικών κέντρων όπως η Ηγουμενίτσα, η Πέρδικα, το Μαργαρίτι, το Γαρδίκι και η Παραμυθιά.</p>
-<p>Όσον αφορά τον σταθμισμένο χωρικό μέσο του πραγματικού πληθυσμού αυτός κινείται διαχρονικά, από το 1991 στο 2001, προς τα Δ-ΝΔ ως αποτέλεσμα της σημαντικής αύξησης του πραγματικού πληθυσμού της Ηγουμενίτσας (+28,00%) και της μείωσης του πληθυσμού των Φιλιατών (-13,00%).</p>
-<p>Η σταθμισμένη τυπική απόσταση δεν σημειώνει αξιόλογη μεταβολή παρά μόνο μια μικρή συσπείρωση των τιμών γύρω από τον σταθμισμένο χωρικό μέσο το 2001 σε σχέση με το 1991.</p>
-<p>Ανάλογα με τα δεδομένα μας και τον τρόπο προσπέλασης τους ο υπολογισμός των δεικτών μπορεί να γίνει με κλίση του R μέσω python με το πακέτο <a href="http://rpy.sourceforge.net/">rpy/rpy2</a> ή μέσω Grass GIS με το πακέτο <a href="http://cran.r-project.org/web/packages/spgrass6/spgrass6.pdf">spgrass6</a>.</p>
-<p>Για παράδειγμα ο υπολογισμός του χωρικού μέσου μπορεί να υπολογιστεί μέσω Python και rpy2 με το παρακάτω script:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rpy2.robjects</span> <span class="k">as</span> <span class="nn">robjects</span>
-<span class="kn">from</span> <span class="nn">rpy2.robjects.packages</span> <span class="kn">import</span> <span class="n">importr</span>
-<span class="n">r</span><span class="o">=</span><span class="n">robjects</span><span class="o">.</span><span class="n">r</span>
-<span class="n">aspace</span> <span class="o">=</span> <span class="n">importr</span><span class="p">(</span><span class="s2">&quot;aspace&quot;</span><span class="p">)</span>
-<span class="n">maptools</span> <span class="o">=</span> <span class="n">importr</span><span class="p">(</span><span class="s2">&quot;maptools&quot;</span><span class="p">)</span>
-<span class="n">shapefiles</span> <span class="o">=</span> <span class="n">importr</span><span class="p">(</span><span class="s2">&quot;shapefiles&quot;</span><span class="p">)</span>
-<span class="n">rgdal</span> <span class="o">=</span> <span class="n">importr</span><span class="p">(</span><span class="s2">&quot;rgdal&quot;</span><span class="p">)</span>
-<span class="n">sp</span> <span class="o">=</span> <span class="n">importr</span><span class="p">(</span><span class="s2">&quot;sp&quot;</span><span class="p">)</span>
-<span class="n">shp</span><span class="o">=</span><span class="n">maptools</span><span class="o">.</span><span class="n">readShapePoints</span><span class="p">(</span><span class="s2">&quot;OIKISMOI&quot;</span><span class="p">)</span>
-<span class="n">mean</span><span class="o">=</span><span class="n">aspace</span><span class="o">.</span><span class="n">mean_centre</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;mean.txt&quot;</span><span class="p">,</span> <span class="n">weighted</span><span class="o">=</span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s2">&quot;NULL&quot;</span><span class="p">,</span><span class="n">points</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">coordinates</span><span class="p">(</span><span class="n">shp</span><span class="p">))</span>
-<span class="n">myshp</span> <span class="o">=</span> <span class="n">shapefiles</span><span class="o">.</span><span class="n">convert_to_shapefile</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="s1">&#39;data.frame(meanatt)&#39;</span><span class="p">),</span> <span class="n">r</span><span class="p">(</span><span class="s1">&#39;data.frame(meanloc)&#39;</span><span class="p">),</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">shapefiles</span><span class="o">.</span><span class="n">write_shapefile</span><span class="p">(</span><span class="n">myshp</span><span class="p">,</span> <span class="s2">&quot;Mean&quot;</span><span class="p">,</span> <span class="n">arcgis</span><span class="o">=</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
-<span class="n">proj4string</span><span class="o">=</span><span class="s2">&quot;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs&quot;</span>
-<span class="n">r</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">rgdal</span><span class="o">.</span><span class="n">showWKT</span><span class="p">(</span><span class="n">proj4string</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;Mean.prj&quot;</span><span class="p">))</span>
-</code></pre></div>
-
-
-<p>Η αντίστοιχη διαδικασία μπορεί να εκτελεστεί και μέσω GRASS με την χρήστου του πακέτου [spgrass6](http://cran.r-project.org/web/packages/spgrass6/spgrass6.pdf όπως φαίνεται στο παράδειγμα:</p>
-<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="s">&quot;aspace&quot;</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="s">&quot;spgrass6&quot;</span><span class="p">)</span>
-<span class="n">oikismoi</span> <span class="o">&lt;-</span> <span class="nf">readVECT6</span><span class="p">(</span><span class="s">&quot;OIKISMOI&quot;</span><span class="p">)</span>
-<span class="nf">mean_centre</span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">&quot;mean.txt&quot;</span><span class="p">,</span> <span class="n">weighted</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="nf">coordinates</span><span class="p">(</span><span class="n">oikismoi</span><span class="p">))</span>
-<span class="n">mean_centre</span> <span class="o">&lt;-</span> <span class="nf">SpatialPointsDataFrame</span><span class="p">(</span><span class="n">coords</span><span class="o">=</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">meanloc</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="n">meanloc</span><span class="p">[</span><span class="m">3</span><span class="p">]),</span> <span class="n">data</span><span class="o">=</span><span class="n">meanatt</span><span class="p">)</span>
-<span class="nf">writeVECT6</span><span class="p">(</span><span class="n">mean_centre</span><span class="p">,</span><span class="n">v.in.ogr_flags</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;o&quot;</span><span class="p">,</span> <span class="s">&quot;overwrite&quot;</span><span class="p">),</span> <span class="s">&quot;mean_centre&quot;</span><span class="p">)</span>
-</code></pre></div>
+<p><img src="https://geographer.gr/images/xorikos.mesos_.jpeg"/></p>
+<p>Το πρώτο βασικό συμπέρασμα που διεξάγεται από τον χάρτη είναι ότι οι
+σταθμισμένοι χωρικοί μέσοι εντοπίζονται ΝΔ από τον χωρικό μέσο προφανώς
+ως απόρροια της επιρροής του πληθυσμού αστικών κέντρων όπως η
+Ηγουμενίτσα, η Πέρδικα, το Μαργαρίτι, το Γαρδίκι και η Παραμυθιά.</p>
+<p>Όσον αφορά τον σταθμισμένο χωρικό μέσο του πραγματικού πληθυσμού
+αυτός κινείται διαχρονικά, από το 1991 στο 2001, προς τα Δ-ΝΔ ως
+αποτέλεσμα της σημαντικής αύξησης του πραγματικού πληθυσμού της
+Ηγουμενίτσας (+28,00%) και της μείωσης του πληθυσμού των Φιλιατών
+(-13,00%).</p>
+<p>Η σταθμισμένη τυπική απόσταση δεν σημειώνει αξιόλογη μεταβολή παρά
+μόνο μια μικρή συσπείρωση των τιμών γύρω από τον σταθμισμένο χωρικό μέσο
+το 2001 σε σχέση με το 1991.</p>
+<p>Ανάλογα με τα δεδομένα μας και τον τρόπο προσπέλασης τους ο
+υπολογισμός των δεικτών μπορεί να γίνει με κλίση του R μέσω python με το
+πακέτο <a href="http://rpy.sourceforge.net/">rpy/rpy2</a> ή μέσω Grass
+GIS με το πακέτο <a href="http://cran.r-project.org/web/packages/spgrass6/spgrass6.pdf">spgrass6</a>.</p>
+<p>Για παράδειγμα ο υπολογισμός του χωρικού μέσου μπορεί να υπολογιστεί
+μέσω Python και rpy2 με το παρακάτω script:</p>
+<pre><code>import rpy2.robjects as robjects
+from rpy2.robjects.packages import importr
+r=robjects.r
+aspace = importr("aspace")
+maptools = importr("maptools")
+shapefiles = importr("shapefiles")
+rgdal = importr("rgdal")
+sp = importr("sp")
+shp=maptools.readShapePoints("OIKISMOI")
+mean=aspace.mean_centre(id=1, filename="mean.txt", weighted="FALSE", weights="NULL",points=sp.coordinates(shp))
+myshp = shapefiles.convert_to_shapefile(r('data.frame(meanatt)'), r('data.frame(meanloc)'), "id",1)
+shapefiles.write_shapefile(myshp, "Mean", arcgis="T")
+proj4string="+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs"
+r.cat(rgdal.showWKT(proj4string, file="Mean.prj"))</code></pre>
+<p>Η αντίστοιχη διαδικασία μπορεί να εκτελεστεί και μέσω GRASS με την
+χρήστου του πακέτου
+[spgrass6](http://cran.r-project.org/web/packages/spgrass6/spgrass6.pdf
+όπως φαίνεται στο παράδειγμα:</p>
+<pre><code>library("aspace")
+library("spgrass6")
+oikismoi &lt;- readVECT6("OIKISMOI")
+mean_centre(id=1, filename="mean.txt", weighted=FALSE, weights=NULL, points=coordinates(oikismoi))
+mean_centre &lt;- SpatialPointsDataFrame(coords=data.frame(meanloc[2],meanloc[3]), data=meanatt)
+writeVECT6(mean_centre,v.in.ogr_flags=c("o", "overwrite"), "mean_centre")</code></pre>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -399,314 +440,6 @@ $S_{WD}$ , η σταθμισμένη τυπική απόσταση, $x,y$  οι 
   </ul>
 </li>
 <!-- End Sidebar/Categories -->
-
-<!-- Sidebar/Tag Cloud -->
-<li class="list-group-item">
-  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-  <ul class="list-group list-inline tagcloud" id="tags">
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/api.html">API</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/big-data.html">big data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/blender.html">Blender</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/cs2cs.html">cs2cs</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dem.html">dem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/demos-souliou.html">Δήμος Σουλίου</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ed50.html">ED50</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/etrs89-etrs-laea.html">ETRS89 ETRS LAEA</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/europe.html">Europe</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gis.html">GIS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/github.html">github</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hg.html">Hg</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/mapnik.html">mapnik</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phd.html">phd</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/policy.html">Policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
-    </li>
-    <li class="list-group-item tag-0">
-      <a href="https://geographer.gr/tag/python.html">python</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/r.html">R</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/raster.html">raster</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/redes.html">REDES</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/risk.html">Risk</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sar.html">SAR</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seismoi.html">σεισμοί</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-erosion.html">Soil erosion</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-policy.html">soil policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sql.html">sql</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/stack.html">stack</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sustema-geographikon-plerophorion.html">Σύστημα Γεωγραφικών Πληροφοριών</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
-    </li>
-  </ul>
-</li>
-<!-- End Sidebar/Tag Cloud -->
 
 <!-- Sidebar/Links -->
 <li class="list-group-item">

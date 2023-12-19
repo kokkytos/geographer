@@ -119,276 +119,127 @@
     </ol>
             <article>
                 <h2><a href="https://geographer.gr/raster-και-raster-stack-στην-r/">Raster και Raster Stack στην R</a></h2>
-                <div class="summary"><p>Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο <a href="https://2019.fosscomm.gr/">FOSSCOMM 2019</a> στην Λαμία. Για περισσότερες λεπτομέρειες ανατρέξτε στο <a href="https://github.com/kokkytos/rworkshop">github repository</a>.</p>
-<p>Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο <a href="https://cran.r-project.org/web/packages/raster/index.html">raster</a> της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων (raster) και επεξεργασίας τους (<a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/crop">crop</a>, <a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/reclassify">reclassify</a>, <a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/projectRaster">reproject</a>, <a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/resample">resample</a> κτλ.).</p>
-<p>Επιπλέον, θα επικεντρωθούμε στην κλάση <a href="https://web.archive.org/web/20211006131229/https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/stack">raster stack</a> η οποία δημιουργεί συστοιχίες ψηφιδωτών δεδομένων, κατάλληλες για χρονοσειρές και πολυκαναλικές εικόνες.</p>
-<p>Η διεξαγωγή του εργαστηρίου θα γίνει μέσω παραδειγμάτων και με την χρήση δεδομένων νυκτερινών φώτων <a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/stack">DMSP-OLS Nighttime Lights Time Series (Stable Lights Version 4)</a>. Θα προηγηθεί μια σύντομη παρουσίαση των βημάτων και της διαδικασίας ώστε οι χρήστες να αποκτήσουν μια σύντομη αλλά περιεκτική εικόνα του στόχου του εργαστηρίου και των δυνατοτητων που προσφέρει ο προγραμματισμός με την R.</p>
-<h3>Εγκατάσταση των απαραίτητων βιβλιοθηκών</h3>
-<div class="highlight"><pre><span></span><code>install.packages(c(&quot;raster&quot;,&quot;ggplot2&quot;,&quot;rasterVis&quot;,&quot;rgdal&quot;,&quot;leaflet&quot;),dependencies=T)
-</code></pre></div>
-
-
-<h3>Εισαγωγή των απαραίτητων βιβλιοθηκών</h3>
-<div class="highlight"><pre><span></span><code>library(raster)
-library(ggplot2)
-library(rasterVis)
-library(rgdal)
-library(leaflet)
-</code></pre></div>
-
-
-<h3>Ορισμός Working directory</h3>
-<div class="highlight"><pre><span></span><code>setwd(&#39;/home/leonidas/Desktop …</code></pre></div>
+                <div class="summary"><p>Η ανάρτηση αυτή περιλαμβάνει το περιεχόμενο από το workshop στο <a href="https://2019.fosscomm.gr/">FOSSCOMM 2019</a> στην Λαμία. Για
+περισσότερες λεπτομέρειες ανατρέξτε στο <a href="https://github.com/kokkytos/rworkshop">github repository</a>.</p>
+<p>Στόχος του εργαστηρίου είναι η εξοικείωση του χρήστη με το πακέτο <a href="https://cran.r-project.org/web/packages/raster/index.html">raster</a>
+της R το οποίο προσφέρει την δυνατότητα ανάγνωσης ψηφιδωτών δεδομένων
+(raster) και επεξεργασίας τους (<a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/crop">crop</a>,
+<a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/reclassify">reclassify</a>,
+<a href="https://www.rdocumentation.org/packages/raster/versions/2.9-5/topics/projectRaster">reproject …</a></p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/raster-και-raster-stack-στην-r/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api/">Λήψη δορυφορικών εικόνων στην R μέσω του GIBS API</a></h2>
-                <div class="summary"><p>Η υπηρεσία <a href="https://wiki.earthdata.nasa.gov/display/GIBS/Global+Imagery+Browse+Services+-+GIBS">Global Imagery Browse Services (GIBS)</a> του παρατηρητηρίου <a href="https://earthdata.nasa.gov/">Earth Observing System Data and Information System (EOSDIS)</a> παρέχει δορυφορικές εικόνες πλήρους ανάλυσης σε παγκόσμιο επίπεδο. Η υπηρεσία παρέχει πρόσβαση σε 600 και πλέον προϊόντα δορυφορικών εικόνων τα οποία στην πλειονότητά τους είναι διαθέσιμα με χρονική υστέρηση λίγων ωρών από την διέλευση του δορυφόρου. Η οπτικοποίηση των δεδομένων αυτών υποστηρίζεται από σχετική διαδικτυακή εφαρμογή <a href="https://worldview.earthdata.nasa.gov/">WorldView</a>αλλά και μέσω υπηρεσιών (πρωτόκολλα OGC Web Map Tile Service (WMTS)/Tiled Web Map Service (TWMS)) που επιτρέπουν την ενσωμάτωσή του σε τρίτες εφαρμογές. Επιπλέον μια από της πλέον χρήσιμες λειτουργίες της υπηρεσίας GIBS είναι δυνατότητα εκτέλεσης σεναρίου εντολών μέσω της βιβλιοθήκης <a href="http://www.gdal.org/">Geospatial Data Abstraction Library (GDAL)</a>. Αυτή η δυνατότητα παρέχει στον χρήση την ευκολία να αυτοματοποιήσει την λήψη δεδομένων (π.χ. μαζική λήψη δεδομένων, αυτόματη περιοδική λήψη, λήψη δεδομένων υπό συγκεκριμένες συνθήκες κτλ.).</p>
-<p>Στην τρέχουσα ανάρτηση παρουσιάζεται ένα σενάριο λήψης δεδομένων από την πλατφόρμα GIBS με την γλώσσα προγραμματισμού R. Στόχος είναι να δημιουργηθεί ένα σενάριο εντολών όπου ο χρήστης θα παρέχει στο script πληροφορίες για το προϊόν και το script θα λαμβάνει τις σχετικές δορυφορικές εικόνες.</p>
-<p>Οι πληροφορίες αυτές αφορούν το όνομα του προϊόντος, το προβολικό του σύστημα, την ημερομηνία λήψης και την περιοχή μελέτης που ενδιαφέρει τον χρήστη. Οι πληροφορίες για κάθε προϊόν (ονομασία, επίπεδα εστίασης, προβολικό σύστημα) είναι διαθέσιμες στην σχετική ενότητα της <a href="https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+Available+Imagery+Products">υπηρεσίας</a>. Στην συνέχεια θα αυτοματοποιήσουμε την λήψη μιας σειράς εικόνων VIIRS για ένα συγκεκριμένο χρονικό διάστημα.</p>
-<p>Το σενάριο R απαιτεί το πακέτο <a href="https://cran.r-project.org/web/packages/gdalUtils/index.html">gdalUtils</a>, ένα πακέτο "περιτυλίγµατος" (wrapper) για την βιβλιοθήκη GDAL, το οποίο φορτώνουμε στο περιβάλλον εργασίας της R:</p>
-<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">gdalUtils</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Ακολουθεί η συνάρτηση (function) που πραγματοποιεί την λήψη των δορυφορικών εικόνων. Δέχεται ως παραμέτρους την ημερομηνία λήψης του προϊόντος (αν δεν οριστεί από τον χρήστη ορίζεται ως προκαθορισμένη η τρέχουσα), το όνομα του προϊόντος, τον κωδικό προβολικού συστήματος κατά EPSG, τον κατάλογο που θέλουμε να αποθηκεύσουμε τα δεδομένα (προκαθορισμένος ο $HOME/gibs_downloads) και την γεωγραφική έκταση (extent …</p>
+                <div class="summary"><p>Η υπηρεσία <a href="https://wiki.earthdata.nasa.gov/display/GIBS/Global+Imagery+Browse+Services+-+GIBS">Global
+Imagery Browse Services (GIBS)</a> του παρατηρητηρίου <a href="https://earthdata.nasa.gov/">Earth Observing System Data and
+Information System (EOSDIS)</a> παρέχει δορυφορικές εικόνες πλήρους
+ανάλυσης σε παγκόσμιο επίπεδο. Η υπηρεσία παρέχει πρόσβαση σε 600 και
+πλέον προϊόντα δορυφορικών εικόνων τα οποία στην πλειονότητά τους είναι
+διαθέσιμα με χρονική υστέρηση λίγων ωρών από την …</p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://geographer.gr/trisdiastata-montela-gia-ektupose-bounon-tes-elladas/">Τρισδιάστατα μοντέλα για εκτύπωση βουνών της Ελλάδας</a></h2>
-                <div class="summary"><p>Στα πλαίσιο του έργου “Ηλεκτρονικές Υπηρεσίες για την Ανάπτυξη και Διάδοση του Ανοιχτού Λογισμικού” δημιουργήθηκαν τρισδιάστατα μοντέλα για βουνά της Ελλάδας, κατάλληλα για εκτύπωση σε 3D εκτυπωτή.
-Η ομάδα έργου αποτελείται από τους <a href="https://gr.linkedin.com/in/dstath">Δημήτρη Σταθάκη</a>,<a href="https://gr.linkedin.com/in/leonidasliakos">Λεωνίδα Λιάκο</a>, <a href="https://gr.linkedin.com/pub/faraslis-ioannis/9/30b/40">Ιωάννη Φαρασλή</a> και <a href="https://www.linkedin.com/pub/christos-liotiris/a0/32b/18">Χρίστο Λυοτύρη</a>.
-Τα συγκεκριμένα βουνά που μοντελοποιήθηκαν είναι ο Υμηττός, το Πήλιο και η Σαμοθράκη (όλο το νησί). Τα ψηφιακά μοντέλα που αναπαράχθηκαν διατίθενται υπό την άδεια Creative Commons Attribution-ShareAlike 4.0 International.</p>
-<p><img alt="Μοντέλο για 3d εκτύπωση για το Πήλιο" src="https://geographer.gr/images/8acbf210-6b77-11e5-98b4-73c6c8739ceb-1024x483.png"></p>
-<p>Η διαδικασία αναλυτικά για κάθε βουνό περιλαμβάνει:</p>
-<ul>
-<li>απόκτηση Ψηφιακού Μοντέλου Εδάφους από ανοικτά δεδομένα (ASTER GDEM V.2 με χωρική ανάλυση περίπου 30μ.)</li>
-<li>δημιουργία μωσαϊκού από τα επιμέρους φύλλα (tiles).</li>
-<li>αποκοπή στην γεωγραφική έκταση του κάθε βουνού.</li>
-<li>προβολή των δεδομένων στο σύστημα συντεταγμένων ΕΓΣΑ87.</li>
-<li>την επιλογή του απαιτούμενου βαθμού υπερβολής (z factor) ώστε να βελτιστοποιηθεί το οπτικό αποτέλεσμα της εκτύπωσης.</li>
-<li>μετάφραση των δεδομένων σε φορματ κατάλληλο για 3D printer.</li>
-<li>εκτύπωση σε 3D printer εντός κύβου με διάσταση 20x20x20cm.</li>
-</ul>
-<p>Για την ολοκλήρωση του έργου χρησιμοποιήθηκε ΕΛ/ΛΑΚ.
-Πιο συγκεκριμένα τα λογισμικά:</p>
-<ul>
-<li>gdal_merge,για την δημιουργία μωσαϊκού των επιμέρους πλακιδίων του ψηφιακού μοντέλου εδάφους.</li>
-<li>gdalwarp, για την επαναπροβολή του ψηφιακού μοντέλου εδάφους από το WGS'84 στο ΕΓΣΑ'87.</li>
-<li>gdal_translate, για την αποκοπή του ψηφιακού μοντέλου εδάφους στα όρια των ορεινών όγκων.</li>
-<li>Kosmo GIS Desktop με το πρόσθετο DEMto3D, για την μετατροπή των αρχείων ψηφιακού μοντέλου εδάφους (μορφότυπο geotiff) σε μορφότυπο κατάλληλο για τρισδιάστατη εκτύπωση (stl).</li>
-<li>Meshlab, για την απλοποίηση των αρχείων stl.</li>
-<li>Blender, για την προσθήκη ανάγλυφου αποτυπώματος με τον τίτλο της περιοχής και τον κατάλληλο ορισμό της κλίμακας.</li>
-</ul>
-<p>Η διαδικασία και τα σχετικά αρχεία για 3d εκτύπωση είναι διαθέσιμα στο σχετικό αποθετήριο στο github:
-<a href="https://github.com/ellak-monades-aristeias/greekmnts3d">https://github.com/ellak-monades-aristeias/greekmnts3d</a>
-</BR></p>
-<p><img alt="Εκτυπωμένο μοντέλο τμήματος του Πηλίου" src="https://geographer.gr/images/94cfbbe8-6b77-11e5-872e-0147ac615e8a-300x225.jpg"></p>
+                <div class="summary"><p>Στα πλαίσιο του έργου “Ηλεκτρονικές Υπηρεσίες για την Ανάπτυξη και
+Διάδοση του Ανοιχτού Λογισμικού” δημιουργήθηκαν τρισδιάστατα μοντέλα για
+βουνά της Ελλάδας, κατάλληλα για εκτύπωση σε 3D εκτυπωτή. Η ομάδα έργου
+αποτελείται από τους <a href="https://gr.linkedin.com/in/dstath">Δημήτρη
+Σταθάκη</a>,<a href="https://gr.linkedin.com/in/leonidasliakos">Λεωνίδα
+Λιάκο</a>, <a href="https://gr.linkedin.com/pub/faraslis-ioannis/9/30b/40">Ιωάννη
+Φαρασλή</a> και <a href="https://www.linkedin.com/pub/christos-liotiris/a0/32b/18">Χρίστο
+Λυοτύρη</a>. Τα συγκεκριμένα βουνά που μοντελοποιήθηκαν είναι ο Υμηττός …</p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/trisdiastata-montela-gia-ektupose-bounon-tes-elladas/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema/">PyQgis tips. QgsVectorLayer από postgis sql ερώτημα</a></h2>
-                <div class="summary"><p>Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/index.html">pyqgis</a> είναι να "φορτώνουμε" vector layer που προέρχεται από ερώτημα sql στην <a href="http://postgis.net/">postgis</a>.
-Έτσι ο χρήστης μπορεί να συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το layer που επιθυμεί.
-Ωστόσο, στην σχετική <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/loadlayer.html">τεκμηρίωση</a> για το τρόπο που φορτώνουμε vector layers δεν αναφέρεται η σχετική δυνατότητα. Μετά από αρκετό ψάξιμο και δοκιμές κατέληξα σε μερικά tips για το πως γίνεται. Αναγκαίες προϋποθέσεις για το sql ερώτημα είναι:</p>
-<ul>
-<li>Να υπάρχει πεδίο γεωμετρίας μέσα σε αυτό</li>
-<li>να υπάρχει μοναδικό πεδίο τύπου integer</li>
-<li>ο κώδικας sql πρέπει να περικλείεται σε παρενθέσεις ώστε να είναι διακρίνεται ότι πρόκειται για sql ερώτημα και όχι για όνομα πίνακα.</li>
-</ul>
-<p>Τα υπόλοιπα συντάσσονται με το ίδιο τρόπο που "φορτώνεται" ένας πίνακας postgis:</p>
-<div class="highlight"><pre><span></span><code><span class="n">sql</span> <span class="o">=</span><span class="s2">&quot;(select the_geom, id, name from mytable)&quot;</span>
-<span class="n">uri</span> <span class="o">=</span> <span class="n">QgsDataSourceURI</span><span class="p">()</span>
-<span class="n">uri</span><span class="o">.</span><span class="n">setConnection</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span><span class="s2">&quot;5432&quot;</span><span class="p">,</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span><span class="s2">&quot;xxxxx&quot;</span><span class="p">)</span>
-<span class="n">uri</span><span class="o">.</span><span class="n">setDataSource</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">sql</span><span class="p">,</span><span class="s2">&quot;the_geom&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
-<span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">uri</span><span class="o">.</span><span class="n">uri</span><span class="p">(),</span><span class="s2">&quot;LayerName&quot;</span><span class="p">,</span><span class="s2">&quot;postgres&quot;</span><span class="p">)</span>
-<span class="n">QgsMapLayerRegistry</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Επίσης, κατόπιν δοκιμών, παρατήρησα ότι το sql …</p>
+                <div class="summary"><p>Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/index.html">pyqgis</a>
+είναι να “φορτώνουμε” vector layer που προέρχεται από ερώτημα sql στην
+<a href="http://postgis.net/">postgis</a>. Έτσι ο χρήστης μπορεί να
+συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το
+layer που επιθυμεί. Ωστόσο, στην σχετική <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/loadlayer.html">τεκμηρίωση</a>
+για το τρόπο που …</p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/">Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R</a></h2>
-                <div class="summary"><p>Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών ανισοτήτων είναι η καμπύλη Lorenz.
-Για την εφαρμογή της καμπύλης Lorenz (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της εκτάσεως και του πληθυσμού, υπολογίζεται η ποσοστιαία  κατανομή, καθώς και η αθροιστική σειρά των ποσοστιαίων τούτων αναλογιών. Στη συνέχεια σε σύστημα ορθογώνιων συντεταγμένων χαράσσεται η γραφική παράσταση της καμπύλης Lorenz, στην οποία ο μεν άξονας των τετμημένων μετρά την αθροιστική σειρά της ποσοστιαίας κατανομής του πληθυσμού, ο δε άξονας των τεταγμένων της αθροιστική σειρά της ποσοστιαίας κατανομής της εκτάσεως και εντοπίζονται τα σημεία της αντιστοιχίας των αθροιστικών σειρών (%) εκτάσεως και πληθυσμού, τα οποία σχηματίζουν πολυγωνική γραμμή ο (καλούμενη καμπύλη Lorenz), φέρεται δε και η διαγώνιος (45ο), καλούμενη διαγώνιος ισοκατανομής. </p>
-<p><img alt="" src="https://geographer.gr/images/Economics_Gini_coefficient2.png"></p>
-<p>Στην απεικόνιση αυτή παρατηρούνται τα εξής:</p>
-<ol>
-<li>αν ο πληθυσμός ήταν ομοιομόρφως κατανεμημένος σε όλες τις επιμέρους περιοχές (γεωγραφικά διαμερίσματα), η αθροιστική καμπύλη του πληθυσμού θα ακολουθούσε τη διαγώνιο γραμμή της αθροιστικής σειράς των περιοχών (διαγώνιος ισοκατανομής).</li>
-<li>εάν, αντιθέτως ο πληθυσμός ήταν κατανεμημένος με την μέγιστη δυνατή ανισότητα, τότε η αθροιστική καμπύλη του πληθυσμού θα συνέπιπτε με τον άξονα των τετμημένων.</li>
-<li>ο βαθμός συγκεντρώσεως αντιπροσωπεύεται κατ’ ακολουθία από την απόκλιση της καμπύλης μεταξύ των δύο αυτών άκρων.</li>
-</ol>
-<p>Στα πλαίσια του τρέχοντος άρθρου και για εκπαιδευτικούς λόγους θα υπολογιστεί η καμπύλη Lorenz για τον νομό Θεσπρωτίας το 2001 με την βοήθεια του στατιστικού πακέτου R.</p>
-<p>To R (<a href="http://www.r-project.org/">http://www.r-project.org/</a>) είναι ένα υπολογιστικό πακέτο που προσφέρει δυνατότητες διαχείρισης και στατιστικής ανάλυσης δεδομένων καθώς και δυνατότητες κατασκευής γραφημάτων. Βασίζεται στην γλώσσα προγραμματισμού S (που χρησιμοποιεί και το στατιστικό πακέτο S plus) και πρόκειται για λογισμικό ανοικτού κώδικα (open source) που διατίθεται ελεύθερα. <a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f">Δείτε περισσότερα σχετικά με το R</a>
-Φυσικά ο υπολογισμός της καμπύλης αποκτά μεγαλύτερη αξία όταν εκτιμηθεί διαχρονικά και συγκριθεί με αντίστοιχες καμπύλες άλλων περιφερειών ή της χώρας.
-Τα σχετικά δεδομένα για τον Ν. Θεσπρωτίας το έτος 2001 είναι αποθηκευμένα σε ένα αρχείο CSV στην ακόλουθη μορφή:</p>
-<table>
-<thead>
-<tr>
-<th><strong>ID</strong></th>
-<th><strong>Name</strong></th>
-<th><strong>Population</strong></th>
-<th><strong>Area</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>320100</td>
-<td>ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΗΣ</td>
-<td>14710</td>
-<td>111.752</td>
-</tr>
-<tr>
-<td>326100</td>
-<td>ΚΟΙΝΟΤΗΤΑ ΠΕΡΔΙΚΑΣ</td>
-<td>2272</td>
-<td>34.605</td>
-</tr>
-<tr>
-<td>320700</td>
-<td>ΔΗΜΟΣ ΣΥΒΟΤΩΝ</td>
-<td>3010</td>
-<td>72.439</td>
-</tr>
-<tr>
-<td>320200</td>
-<td>ΔΗΜΟΣ ΑΧΕΡΟΝΤΑ</td>
-<td>2344</td>
-<td>67.343</td>
-</tr>
-<tr>
-<td>320500</td>
-<td>ΔΗΜΟΣ ΠΑΡΑΠΟΤΑΜΟΥ</td>
-<td>1668</td>
-<td>60.334</td>
-</tr>
-<tr>
-<td>320600</td>
-<td>ΔΗΜΟΣ ΣΑΓΙΑΔΑΣ</td>
-<td>2160</td>
-<td>87 …</td></tr></tbody></table>
+                <div class="summary"><p>Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών
+ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz
+(Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την
+έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα
+σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της …</p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://geographer.gr/χωρική-κεντρικότητα/">Υπολογισμός δεικτών χωρικής κεντρικότητας με την R</a></h2>
-                <div class="summary"><hr>
-<p>Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές περιγραφικής στατιστικής της χωρικής κατανομής.
-Ο πιο απλός περιγραφικός δείκτης μιας κατανομής είναι ο <strong>χωρικός μέσος (mean center)</strong>. Ουσιαστικά πρόκειται για τον μέσο όρο των συντεταγμένων Χ,Υ μιας σημειακής κατανομής.
-Συχνά αποκαλείται και κεντροειδές.</p>
+                <div class="summary"><p>Οι κεντρογραφικές τεχνικές αποτελούν τις βασικές τεχνικές
+περιγραφικής στατιστικής της χωρικής κατανομής. Ο πιο απλός περιγραφικός
+δείκτης μιας κατανομής είναι ο <strong>χωρικός μέσος (mean
+center)</strong>. Ουσιαστικά πρόκειται για τον μέσο όρο των
+συντεταγμένων Χ,Υ μιας σημειακής κατανομής. Συχνά αποκαλείται και
+κεντροειδές.</p>
 <p>Δίνεται από τον τύπο:</p>
-<p>$${x}=\frac{\sum\limits_{i=1}^n{x_i}}{n}, {y}=\frac{\sum\limits_{i=1}^n{y_i}}{n}$$</p>
-<p>όπου,</p>
-<p>$x,y$ οι συντεταγμένες του χωρικού μέσου δηλαδή ο μέσος όρος των συντεταγμένων $x_i,y_i$  του πλήθους $N$ των σημείων της κατανομής.
-Ταυτόχρονα με τον αριθμητικό χωρικό μέσο, μπορεί να υπολογιστεί ο <strong>σταθμισμένος χωρικός μέσος (Weighted Mean Center)</strong> όπου ο υπολογισμός γίνεται με το στάθμισμα κάθε συντεταγμένης με μία μεταβλητή π.χ. εισόδημα, εγκληματικότητα, πληθυσμός κτλ.</p>
-<p>Δίνεται από τον τύπο:</p>
-<p>$${x}<em i="1">w=\frac{\sum\limits</em>^n{w_ix_i}}{n},{y}<em i="1">w=\frac{\sum\limits</em>^n{w_iy …</p>
+<p><span class="math display">\[{x}=\frac{\sum\limits_ …</span></p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/χωρική-κεντρικότητα/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/">Οπτική βελτίωση σκιασμένου αναγλύφου εδάφους</a></h2>
-                <div class="summary"><p>Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την οπτική βελτίωση μιας σκίασης αναγλύφου εδάφους.</p>
+                <div class="summary"><p>Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την
+οπτική βελτίωση μιας σκίασης αναγλύφου εδάφους.</p>
 <p>Το λογισμικό που απαιτείται είναι το <a href="http://www.gdal.org/gdaldem.html">gdaldem</a>, <a href="http://www.gdal.org/gdalwarp.html">gdalwrap</a> και το <a href="https://www.gimp.org/">GIMP</a>.</p>
-<p>Τα κλασσικά προγράμματα ΣΓΠ αναπαριστούν την σκίαση αναγλύφου με τρόπο μονότονο, συχνά μη φυσικό και με περιττή πληροφορία για τον αναγνώστη.</p>
-<p>Στόχος είναι να εφαρμόσουμε μια τεχνική που πρώτος εφάρμοσε ο <a href="http://www.reliefshading.com/cartographers/imhof.html">Eduard Imhof</a>, την αναπαράσταση του αναγλύφου με θέαση αφ' ύψηλου (aerial perspective). Η συγκεκριμένη τεχνική του Imhof προσομοιάζει την πραγματική, αφ' υψηλού οπτική ενός τοπίου όπου ο θεατής βλέπει τις κορυφές με περισσότερη λεπτομέρεια και έντονη αντίθεση και τις περιοχές χαμηλότερου υψομέτρου με λιγότερη λεπτομέρεια λόγω απόστασης και ομίχλης στο τοπίο. Η τεχνική που ακολουθεί απαιτεί:</p>
-<ol>
-<li>
-<p>Ένα Ψηφιακό Μοντέλο Εδάφους (DEM)</p>
-</li>
-<li>
-<p>Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου (z exaggeration).</p>
-</li>
-<li>
-<p>Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου (z exaggeration) και πηγή φωτός σε γωνία 90 μοιρών.</p>
-</li>
-<li>
-<p>Τεχνικές θαμπώματος (blur) για την εξομάλυνση και την απαλοιφή της περιττής πληροφορίας του DEM.</p>
-</li>
-<li>
-<p>Οπτική ενίσχυση των ορεινών όγκων και μίξη του αποτελέσματος με την σκίαση.</p>
-</li>
-</ol>
-<p>Παρακάτω φαίνεται η σύγκριση μεταξύ μίας τυπικής σκίασης αναγλύφου και της σκίασης που προκύπτει μετά την προτεινόμενη μέθοδο απεικόνισης και επεξεργασίας.</p>
-<p><img src={static}images/aster_ggrs.hillshade.z1.jpg  title="Τυπική σκίαση αναγλύφου" width="400"> <img src={static}images/dem_final.jpg  width="400"  title="Σκίαση αναγλύφου κατόπιν επεξεργασίας"></p>
-<h3>ΠΕΡΙΓΡΑΦΗ ΤΗΣ ΜΕΘΟΔΟΥ</h3>
-<p>Κατεβάζουμε από την ιστοσελίδα <a href="http://gdem.ersdac.jspacesystems.or.jp/search.jsp">http://gdem.ersdac.jspacesystems.or.jp/search.jsp</a> το απαραίτητο Dem προς επεξεργασία στην περίπτωσή μας το: ASTGTM2_N39E020.zip</p>
-<p>Ακολουθεί αποσυμπίεση του συμπιεσμένου αρχείου με:</p>
-<div class="highlight"><pre><span></span><code>unzip -j ASTGTM2_N39E020.zip
-</code></pre></div>
-
-
-<p>Μετατροπή του DEM στο ΕΓΣΑ'87 με:</p>
-<div class="highlight"><pre><span></span><code>gdalwarp -t_srs EPSG:2100 -s_srs EPSG:4326 ASTGTM2_N39E020_dem.tif …</code></pre></div>
+<p>Τα κλασσικά προγράμματα ΣΓΠ αναπαριστούν την σκίαση αναγλύφου με
+τρόπο μονότονο, συχνά μη φυσικό και με περιττή πληροφορία για τον
+αναγνώστη.</p>
+<p>Στόχος είναι …</p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://geographer.gr/online-sustema-geographikon-plerophorion-demou-souliou/">Online Σύστημα Γεωγραφικών Πληροφοριών Δήμου Σουλίου</a></h2>
-                <div class="summary"><p>Η εν λόγω πλατφόρμα αποτελεί ένα Σύστημα Γεωγραφικών Πληροφοριών (ΣΓΠ-GIS) για τον <a href="http://www.dimossouliou.gov.gr/">δήμο Σουλίου</a> σε πρώιμο στάδιο. Η λειτουργία του βασίζεται στο λογισμικό ανοικτού κώδικα  WorldMap που είναι μια πλατφόρμα τεχνολογίας διαδικτύου σε συνδυασμό με ΣΓΠ. Η πλατφόρμα προσφέρει την τεχνολογική υποδομή μέσω της οποίας μπορεί να στηριχθεί η αποτύπωση κάθε είδους χωρικών δεδομένων (διανυσματικών και ψηφιδωτών) και να χαρτογραφηθούν πολύτιμα δεδομένα που είναι αποσπασματικά αποθηκευμένα σε έγγραφα, χάρτες, συσκευές GPS, ιδιωτικές συλλογές και δημόσια αρχεία. Σκοπεύοντας στην συγχώνευση γεωχωρικών δεδομένων από διαφορετικές πηγές και μέσα αποτελεί ένα εύχρηστο εργαλείο σχεδιασμού για τις τοπικές αρχές αυτοδιοίκησης αλλά και μία ολοκληρωμένη βάση δεδομένων για τον μεμονωμένο επιστήμονα, ερευνητή. Αναμφισβήτητη δε είναι και η συνεισφορά του στον επισκέπτη αυτού του τόπου εφόσον μπορεί ταυτόχρονα να λειτουργήσει σαν τουριστικός χάρτης σε όποιον περιηγητή επιθυμεί να γνωρίσεις τις ομορφιές του δήμου. Οι λειτουργίες του όμως δεν περιορίζονται στην απλή εποπτεία των χωρικών δεδομένων αλλά με συμμετοχικό τρόπο κάθε χρήστης-επισκέπτης της πλατφόρμας μπορεί να συμβάλει με την προσθήκη/διόρθωση δεδομένων σε αυτή. Μέσω ενός συστήματος καταχώρησης δικαιωμάτων, ο διαχειριστής επιλέγει το επίπεδο πρόσβασης στην επεξεργασία και προσπέλασης των χωρικών δεδομένων σε ομάδες χρηστών. Παράλληλα με την απόδοση των χωρικών δεδομένων η πλατφόρμα προσφέρει σε αρκετές περιπτώσεις πληθώρα περιγραφικών δεδομένων για τα γεωγραφικά αντικείμενα καθώς και παραπομπές σε ιστοσελίδες σχετικές με αυτά. Όσον αφορά την πηγή των δεδομένων αυτά προέρχονται από πηγές που διαθέτουν ελεύθερα δεδομένα όπως το <a href="http://geodata.gov.gr/">geodata.gov.gr</a> αλλά και από επεξεργασία δεδομένων από το προσωπικό αρχείο του διαχειριστή.
-Είναι λοιπόν στο χέρι των χρηστών να επεκταθεί η γκάμα των θεματικών επιπέδων των δεδομένων, να αξιολογηθεί ποιοτικά και να ενημερώνεται τακτικά ώστε να έχει πρακτική εφαρμογή σε καθημερινές δράσης σε συλλογικό αλλά και ατομικό επίπεδο. Σε μελλοντικές εκδόσεις θα μπορούσε να καλύψει ανάγκες της διοικητικής λειτουργίας του δήμου στο σχεδιασμό και την εκπόνηση έργων και την λήψη αποφάσεων αφού υπάρχει η δυνατότητα να αποτυπωθούν δεδομένα συνοδευόμενα με τα σχετικά αρχεία τεκμηρίωσης όπως Γενικά Πολεοδομικά Σχέδια, Πολεοδομικές Μελέτες, Ζώνες αντικειμενικών αξιών ακινήτων, Αναδασμοί, δίκτυα κοινής ωφελείας, διαδρομές απορριματοφόρών, κοινόχρηστοι χώροι, ζώνες προστασίας αρχαιολογικών χώρων και φυσικών πόρων  κ.α. Ταυτόχρονα, με την ανάρτηση όλων αυτών των δεδομένων στο διαδίκτυο, η τοπική αυτοδιοίκηση μπορεί να αποφορτιστεί από το βάρος της διάχυσης της πληροφορίας προς το κοινό αποφεύγοντας παραδοσιακές μεθόδους που πολλές φορές ταλαιπωρούν τον πολίτη και δεσμεύουν πολύτιμους ανθρώπινους πόρους από την διοικητική μηχανή.</p>
-<p><img alt="" src="https://geographer.gr/images/gis_souliou.jpg"></p>
-<p>Δείτε το Σύστημα Γεωγραφικών Πληροφοριών <a href="http://worldmap.harvard.edu/maps/536">εδώ</a></p>
+                <div class="summary"><p>Η εν λόγω πλατφόρμα αποτελεί ένα Σύστημα Γεωγραφικών Πληροφοριών
+(ΣΓΠ-GIS) για τον <a href="http://www.dimossouliou.gov.gr/">δήμο
+Σουλίου</a> σε πρώιμο στάδιο. Η λειτουργία του βασίζεται στο λογισμικό
+ανοικτού κώδικα WorldMap που είναι μια πλατφόρμα τεχνολογίας διαδικτύου
+σε συνδυασμό με ΣΓΠ. Η πλατφόρμα προσφέρει την τεχνολογική υποδομή μέσω
+της οποίας μπορεί να στηριχθεί η αποτύπωση …</p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/online-sustema-geographikon-plerophorion-demou-souliou/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/">Αυτοματοποιημένη χαρτογράφηση της σεισμικής δραστηριότητας με βιβλιοθήκες ΕΛΛΑΚ.</a></h2>
-                <div class="summary"><p>Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να χρησιμοποιήσει κάποιος μια γλώσσα προγραμματισμού και να συντάξει ένα σενάριο (script), πολύπλοκων αρκετές φορές, εντολών για να παράγει ένα χάρτη από την στιγμή που υπάρχει λογισμικό με γραφικό περιβάλλον που με ευκολία μπορεί να οδηγήσει στο ίδιο αποτέλεσμα; Η απάντηση είναι, μεταξύ άλλων, γιατί θέλει να αυτοματοποιήσει την διαδικασία και να αποφύγει ο χρήστης την επανάληψη εργασιών που πολλές φορές στοιχίζει σε χρόνο και χρήμα. Με την σύνταξη του κατάλληλου σεναρίου ο υπολογιστής αναλαμβάνει να εκτελέσει όλη την εργασία και να την επαναλαμβάνει όποτε ο χρήστης του ορίσει.</p>
-<p><img alt="" src="https://geographer.gr/images/eqf1.png"></p>
-<p>Για να γίνει πιο κατανοητή η δύναμη της αυτοματοποιημένης χαρτογραφίας παρατίθεται ένα παράδειγμα χαρτογράφησης των σεισμών σε παγκόσμιο επίπεδο.</p>
-<p>Τα δεδομένα για το υπόβαθρο του χάρτη προέρχονται από την ιστοσελίδα <a href="http://www.naturalearthdata.com/">Natural Earth</a> ενώ τα δεδομένα με τα επίκεντρα των σεισμών προέρχονται από το <a href="http://earthquake.usgs.gov/">United States Geological Survey</a> (USGS).</p>
-<p>Διαλέξαμε το <a href="http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.tx">αρχείο</a> που περιλαμβάνει τους σεισμούς των τελευταίων 7 ημερών μεγέθους άνω των 2,5 Richter.</p>
-<p>Σκοπός του σεναρίου (script) είναι:</p>
-<ul>
-<li>Να κατεβάσει από το διαδίκτυο τα απαραίτητα δεδομένα σε μορφή CSV.</li>
-<li>Να μετατρέψει το αρχείο CSV σε Shapefile με την βιβλιοθήκη ogr.</li>
-<li>Να παράγει τον τελικό χάρτη που θα συνδυάζει το γεωφυσικό υπόβαθρο με τα επικεντρα των σεισμών με βοήθεια της βιβλιοθήκης Mapnik.</li>
-<li>Να φορτώσει τον χάρτη σε μορφή PNG στην τρέχουσα ιστοσελίδα.</li>
-<li>Να εκτελείται επαναλαμβανόμενα σε καθημερινή βάση ώστε ο χάρτης να ανεβαίνει ενημερωμένος στην σελίδα.</li>
-<li>Το σενάριο συντάχθηκε με την Python στο λειτουργικό σύστημα Ubuntu Linux 11.04 (Natty Narwhal).</li>
-</ul>
-<p>Το σενάριο:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="c1">#!/usr/bin/python</span>
-
-<span class="c1">#Εισάγουμε τις απαραίτητες βιβλιοθήκες</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span>  <span class="nn">urllib</span><span class="o">,</span> <span class="nn">mapnik</span><span class="o">,</span>  <span class="nn">Image</span><span class="o">,</span>  <span class="nn">csv</span><span class="o">,</span>  <span class="nn">ftplib</span><span class="o">,</span>  <span class="nn">datetime</span>
-<span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">ogr</span>
-<span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">osr</span>
-<span class="kn">from</span> <span class="nn">StringIO</span> <span class="kn">import …</span></code></pre></div>
+                <div class="summary"><p>Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να
+χρησιμοποιήσει κάποιος μια γλώσσα προγραμματισμού και να συντάξει ένα
+σενάριο (script), πολύπλοκων αρκετές φορές, εντολών για να παράγει ένα
+χάρτη από την στιγμή που υπάρχει λογισμικό με γραφικό περιβάλλον που με
+ευκολία μπορεί να οδηγήσει στο ίδιο αποτέλεσμα; Η απάντηση είναι, μεταξύ
+άλλων …</p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://geographer.gr/metatrope-suntetagmenon-apo-to-ed50-etrs89-etrs-laea-wgs84-sto-egsa87/">Μετατροπή συντεταγμένων από το ED50, ETRS89 - ETRS-LAEA , WGS84 στο ΕΓΣΑ87</a></h2>
-                <div class="summary"><p><img alt="" src="https://geographer.gr/images/gdal-logo.png"></p>
-<p>Πολλά από τα δεδομένα, παγκόσμιας ή ευρωπαϊκής κλίμακας, που χρησιμοποιούνται στις εφαρμογές ΣΓΠ στην Ελλάδα απαιτούν μετατροπή του γεωδαιτικού συστήματος αναφοράς (ΓΣΑ) στο <a href="https://el.wikipedia.org/wiki/%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C_%CE%93%CE%B5%CF%89%CE%B4%CE%B1%CE%B9%CF%84%CE%B9%CE%BA%CF%8C_%CE%A3%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1_%CE%91%CE%BD%CE%B1%CF%86%CE%BF%CF%81%CE%AC%CF%82_1987">ΕΓΣΑ '87</a></p>
-<p>Στο παρόν άρθρο προτείνονται τρόποι μετατροπής συντεταγμένων προς το ΕΓΣΑ'87 με βιβλιοθήκες ΕΛ/ΛΑΚ.
-Για την μετατροπή συντεταγμένων χρησιμοποιούνται οι βιβλιοθήκες <a href="http://proj.maptools.org/man_cs2cs.html">cs2cs</a>, <a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a> και <a href="http://www.gdal.org/gdalwarp.html">gdalwarp</a> ανάλογα με τον τύπο των δεδομένων.</p>
-<p>Η πρώτη χρησιμοποιείται για την μετατροπή ενός ή παραπάνω ζευγών συντεταγμένων, η δεύτερη για μετατροπή διανυσματικών δεδομένων (π.χ.shapefiles) και η τρίτη για ψηφιδωτά αρχεία (π.χ. αρχεία tiff). Για περισσότερες πληροφορίες σχετικά με τον τρόπο σύνταξης και τις διάφορες παραμέτρους ο χρήστης μπορεί να ανατρέξει στα αρχεία τεκμηρίωσης της κάθε βιβλιοθήκης.</p>
-<p>Σημαντικό σε κάθε περίπτωση είναι να γνωρίζει ο χρήστης πως ορίζεται το ΓΣΑ προέλευσης και προορισμού.
-Για τον ορισμό του ΓΣΑ υπάρχουν διάφορες μορφές καθώς και διαφορετική μορφή για την μετατροπή ανάλογα με την βιβλιοθήκη που καλείται.</p>
-<p>Ένα ΓΣΑ μπορεί να οριστεί/κληθεί είτε μέσω του κωδικού <a href="http://www.epsg-registry.org/">EPSG</a>, είτε μέσω μιάς πρότασης <a href="https://trac.osgeo.org/proj/wiki/GenParms">παραμέτρων Proj4</a>. Σε κάθε περίπτωση είναι αναγκαίο να είναι εγκατεστημένη η βιβλιοθήκη <a href="https://trac.osgeo.org/proj/">proj4</a>.</p>
-<p>Για παράδειγμα το ΕΓΣΑ'87 μπορεί να κληθεί/οριστεί με τους εξής τρόπους:</p>
-<div class="highlight"><pre><span></span><code>&quot;EPSG:2100&quot;
-&quot;+init=epsg:2100&quot;
-&quot;+proj=tmerc +lat_0=0 +lon_0=24 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=-199.87,74.79,246.62,0,0,0,0 +units=m +no_defs …</code></pre></div>
+                <div class="summary"><p><img src="https://geographer.gr/images/gdal-logo.png"/></p>
+<p>Πολλά από τα δεδομένα, παγκόσμιας ή ευρωπαϊκής κλίμακας, που
+χρησιμοποιούνται στις εφαρμογές ΣΓΠ στην Ελλάδα απαιτούν μετατροπή του
+γεωδαιτικού συστήματος αναφοράς (ΓΣΑ) στο <a href="https://el.wikipedia.org/wiki/%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C_%CE%93%CE%B5%CF%89%CE%B4%CE%B1%CE%B9%CF%84%CE%B9%CE%BA%CF%8C_%CE%A3%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1_%CE%91%CE%BD%CE%B1%CF%86%CE%BF%CF%81%CE%AC%CF%82_1987">ΕΓΣΑ
+’87</a></p>
+<p>Στο παρόν άρθρο προτείνονται τρόποι μετατροπής συντεταγμένων προς το
+ΕΓΣΑ’87 με βιβλιοθήκες ΕΛ/ΛΑΚ. Για την μετατροπή συντεταγμένων
+χρησιμοποιούνται οι βιβλιοθήκες <a href="http://proj.maptools.org/man_cs2cs.html">cs2cs</a>, <a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a> και …</p>
                     <a class="btn btn-default btn-xs" href="https://geographer.gr/metatrope-suntetagmenon-apo-to-ed50-etrs89-etrs-laea-wgs84-sto-egsa87/">more ...</a>
                 </div>
             </article>
@@ -434,314 +285,6 @@ library(leaflet)
   </ul>
 </li>
 <!-- End Sidebar/Categories -->
-
-<!-- Sidebar/Tag Cloud -->
-<li class="list-group-item">
-  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-  <ul class="list-group list-inline tagcloud" id="tags">
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/api.html">API</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/big-data.html">big data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/blender.html">Blender</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/cs2cs.html">cs2cs</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dem.html">dem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/demos-souliou.html">Δήμος Σουλίου</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ed50.html">ED50</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/etrs89-etrs-laea.html">ETRS89 ETRS LAEA</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/europe.html">Europe</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gis.html">GIS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/github.html">github</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hg.html">Hg</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/mapnik.html">mapnik</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phd.html">phd</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/policy.html">Policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
-    </li>
-    <li class="list-group-item tag-0">
-      <a href="https://geographer.gr/tag/python.html">python</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/r.html">R</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/raster.html">raster</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/redes.html">REDES</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/risk.html">Risk</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sar.html">SAR</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seismoi.html">σεισμοί</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-erosion.html">Soil erosion</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-policy.html">soil policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sql.html">sql</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/stack.html">stack</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sustema-geographikon-plerophorion.html">Σύστημα Γεωγραφικών Πληροφοριών</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
-    </li>
-  </ul>
-</li>
-<!-- End Sidebar/Tag Cloud -->
 
 <!-- Sidebar/Links -->
 <li class="list-group-item">

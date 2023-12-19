@@ -13,13 +13,13 @@
 
         <meta name="author" content="Leonidas Liakos" />
         <meta name="keywords" content="lawstat,R,καμπύλη Lorenz" />
-        <meta name="description" content="Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της εκτάσεως και του πληθυσμού, υπολογίζεται η ποσοστιαία κατανομή, καθώς και η αθροιστική σειρά των ποσοστιαίων τούτων αναλογιών. Στη συνέχεια σε σύστημα ορθογώνιων συντεταγμένων χαράσσεται η γραφική παράσταση της καμπύλης Lorenz, στην οποία ο μεν άξονας των τετμημένων μετρά την αθροιστική σειρά της ποσοστιαίας κατανομής του πληθυσμού, ο δε άξονας των τεταγμένων της αθροιστική σειρά της ποσοστιαίας κατανομής της εκτάσεως και εντοπίζονται τα σημεία της αντιστοιχίας των αθροιστικών σειρών (%) εκτάσεως και πληθυσμού, τα οποία σχηματίζουν πολυγωνική γραμμή ο (καλούμενη καμπύλη Lorenz), φέρεται δε και η διαγώνιος (45ο), καλούμενη διαγώνιος ισοκατανομής. Στην απεικόνιση αυτή παρατηρούνται τα εξής: αν ο πληθυσμός ήταν ομοιομόρφως κατανεμημένος σε όλες τις επιμέρους περιοχές (γεωγραφικά διαμερίσματα), η αθροιστική καμπύλη του πληθυσμού θα ακολουθούσε τη διαγώνιο γραμμή της αθροιστικής σειράς των περιοχών (διαγώνιος ισοκατανομής). εάν, αντιθέτως ο πληθυσμός ήταν κατανεμημένος με την μέγιστη δυνατή ανισότητα, τότε η αθροιστική καμπύλη του πληθυσμού θα συνέπιπτε με τον άξονα των τετμημένων. ο βαθμός συγκεντρώσεως αντιπροσωπεύεται κατ’ ακολουθία από την απόκλιση της καμπύλης μεταξύ των δύο αυτών άκρων. Στα πλαίσια του τρέχοντος άρθρου και για εκπαιδευτικούς λόγους θα υπολογιστεί η καμπύλη Lorenz για τον νομό Θεσπρωτίας το 2001 με την βοήθεια του στατιστικού πακέτου R. To R (http://www.r-project.org/) είναι ένα υπολογιστικό πακέτο που προσφέρει δυνατότητες διαχείρισης και στατιστικής ανάλυσης δεδομένων καθώς και δυνατότητες κατασκευής γραφημάτων. Βασίζεται στην γλώσσα προγραμματισμού S (που χρησιμοποιεί και το στατιστικό πακέτο S plus) και πρόκειται για λογισμικό ανοικτού κώδικα (open source) που διατίθεται ελεύθερα. Δείτε περισσότερα σχετικά με το R Φυσικά ο υπολογισμός της καμπύλης αποκτά μεγαλύτερη αξία όταν εκτιμηθεί διαχρονικά και συγκριθεί με αντίστοιχες καμπύλες άλλων περιφερειών ή της χώρας. Τα σχετικά δεδομένα για τον Ν. Θεσπρωτίας το έτος 2001 είναι αποθηκευμένα σε ένα αρχείο CSV στην ακόλουθη μορφή: ID Name Population Area 320100 ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΗΣ 14710 111.752 326100 ΚΟΙΝΟΤΗΤΑ ΠΕΡΔΙΚΑΣ 2272 34.605 320700 ΔΗΜΟΣ ΣΥΒΟΤΩΝ 3010 72.439 320200 ΔΗΜΟΣ ΑΧΕΡΟΝΤΑ 2344 67.343 320500 ΔΗΜΟΣ ΠΑΡΑΠΟΤΑΜΟΥ 1668 60.334 320600 ΔΗΜΟΣ ΣΑΓΙΑΔΑΣ 2160 87 …" />
+        <meta name="description" content="Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της …" />
 
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Υπολογισμός της καμπύλης Lorenz με το open source πακέτο στατιστικής R"/>
         <meta property="og:url" content="https://geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/"/>
-        <meta property="og:description" content="Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της εκτάσεως και του πληθυσμού, υπολογίζεται η ποσοστιαία κατανομή, καθώς και η αθροιστική σειρά των ποσοστιαίων τούτων αναλογιών. Στη συνέχεια σε σύστημα ορθογώνιων συντεταγμένων χαράσσεται η γραφική παράσταση της καμπύλης Lorenz, στην οποία ο μεν άξονας των τετμημένων μετρά την αθροιστική σειρά της ποσοστιαίας κατανομής του πληθυσμού, ο δε άξονας των τεταγμένων της αθροιστική σειρά της ποσοστιαίας κατανομής της εκτάσεως και εντοπίζονται τα σημεία της αντιστοιχίας των αθροιστικών σειρών (%) εκτάσεως και πληθυσμού, τα οποία σχηματίζουν πολυγωνική γραμμή ο (καλούμενη καμπύλη Lorenz), φέρεται δε και η διαγώνιος (45ο), καλούμενη διαγώνιος ισοκατανομής. Στην απεικόνιση αυτή παρατηρούνται τα εξής: αν ο πληθυσμός ήταν ομοιομόρφως κατανεμημένος σε όλες τις επιμέρους περιοχές (γεωγραφικά διαμερίσματα), η αθροιστική καμπύλη του πληθυσμού θα ακολουθούσε τη διαγώνιο γραμμή της αθροιστικής σειράς των περιοχών (διαγώνιος ισοκατανομής). εάν, αντιθέτως ο πληθυσμός ήταν κατανεμημένος με την μέγιστη δυνατή ανισότητα, τότε η αθροιστική καμπύλη του πληθυσμού θα συνέπιπτε με τον άξονα των τετμημένων. ο βαθμός συγκεντρώσεως αντιπροσωπεύεται κατ’ ακολουθία από την απόκλιση της καμπύλης μεταξύ των δύο αυτών άκρων. Στα πλαίσια του τρέχοντος άρθρου και για εκπαιδευτικούς λόγους θα υπολογιστεί η καμπύλη Lorenz για τον νομό Θεσπρωτίας το 2001 με την βοήθεια του στατιστικού πακέτου R. To R (http://www.r-project.org/) είναι ένα υπολογιστικό πακέτο που προσφέρει δυνατότητες διαχείρισης και στατιστικής ανάλυσης δεδομένων καθώς και δυνατότητες κατασκευής γραφημάτων. Βασίζεται στην γλώσσα προγραμματισμού S (που χρησιμοποιεί και το στατιστικό πακέτο S plus) και πρόκειται για λογισμικό ανοικτού κώδικα (open source) που διατίθεται ελεύθερα. Δείτε περισσότερα σχετικά με το R Φυσικά ο υπολογισμός της καμπύλης αποκτά μεγαλύτερη αξία όταν εκτιμηθεί διαχρονικά και συγκριθεί με αντίστοιχες καμπύλες άλλων περιφερειών ή της χώρας. Τα σχετικά δεδομένα για τον Ν. Θεσπρωτίας το έτος 2001 είναι αποθηκευμένα σε ένα αρχείο CSV στην ακόλουθη μορφή: ID Name Population Area 320100 ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΗΣ 14710 111.752 326100 ΚΟΙΝΟΤΗΤΑ ΠΕΡΔΙΚΑΣ 2272 34.605 320700 ΔΗΜΟΣ ΣΥΒΟΤΩΝ 3010 72.439 320200 ΔΗΜΟΣ ΑΧΕΡΟΝΤΑ 2344 67.343 320500 ΔΗΜΟΣ ΠΑΡΑΠΟΤΑΜΟΥ 1668 60.334 320600 ΔΗΜΟΣ ΣΑΓΙΑΔΑΣ 2160 87 …"/>
+        <meta property="og:description" content="Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της …"/>
         <meta property="article:published_time" content="2013-10-09" />
             <meta property="article:section" content="GIS" />
             <meta property="article:tag" content="lawstat" />
@@ -135,7 +135,7 @@
     ❄
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/&title=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%CE%BC%CE%B5%20%CF%84%CE%BF%20open%20source%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20R&summary=%CE%88%CE%BD%CE%B1%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B1%20%CE%BC%CE%AD%CF%84%CF%81%CE%B1%20%CF%83%CF%85%CE%B3%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CF%89%CF%83%CE%B7%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B5%CE%BA%CF%84%CE%AF%CE%BC%CE%B7%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CF%86%CE%B5%CF%81%CE%B5%CE%B9%CE%B1%CE%BA%CF%8E%CE%BD%20%CE%B1%CE%BD%CE%B9%CF%83%CE%BF%CF%84%CE%AE%CF%84%CF%89%CE%BD%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B7%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%20Lorenz.%0A%CE%93%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B5%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%28%CE%A0%CE%B1%CF%80%CE%B1%CE%B4%CE%B1%CF%83%CE%BA%CE%B1%CE%BB%CF%8C%CF%80%CE%BF%CF%85%CE%BB%CE%BF%CF%82%2C%202000%29%2C%20%CE%BF%CE%B9%20%CE%B5%CF%80%CE%B9%CE%BC%CE%AD%CF%81%CE%BF%CF%85%CF%82%20%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AD%CF%82%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AD%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%AD%CE%BA%CF%84%CE%B1%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%CE%BD%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%BF%CE%B9%CF%87%CE%BF%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CF%8C%20%CF%84%CE%BF%CF%85%CF%82%2C%20%CF%84%CE%B1%CE%BE%CE%B9%CE%BD%CE%BF%CE%BC%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CE%BA%CE%B1%CF%84%CE%AC%20%CF%86%CE%B8%CE%AF%CE%BD%CE%BF%CF%85%CF%83%CE%B1%20%CF%83%CE%B5%CE%B9%CF%81%CE%AC%20%CF%84%CE%B7%CF%82%20%CF%80%CF%85%CE%BA%CE%BD%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CE%B1%CF%85%CF%84%CF%8E%CE%BD%2C%20%CE%BA%CE%B1%CE%B9%20%CE%BA%CE%AC%CE%B8%CE%B5%20%CE%BC%CE%B9%CE%B1%CF%82%20%CF%84%CF%89%CE%BD%20%CE%B4%CF%85%CE%BF%20%CF%84%CE%BF%CF%8D%CF%84%CF%89%CE%BD%20%CF%83%CF%84%CE%B7%CE%BB%CF%8E%CE%BD%2C%20%CF%84%CE%B7%CF%82%20%CE%B5%CE%BA%CF%84%CE%AC%CF%83%CE%B5%CF%89%CF%82%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%CF%85%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CE%BF%CF%8D%2C%20%CF%85%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B6%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B7%20%CF%80%CE%BF%CF%83%CE%BF%CF%83%CF%84%CE%B9%CE%B1%CE%AF%CE%B1%20%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%2C%20%CE%BA%CE%B1%CE%B8%CF%8E%CF%82%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B1%CE%B8%CF%81%CE%BF%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%20%CF%83%CE%B5%CE%B9%CF%81%CE%AC%20%CF%84%CF%89%CE%BD%20%CF%80%CE%BF%CF%83%CE%BF%CF%83%CF%84%CE%B9%CE%B1%CE%AF%CF%89%CE%BD%20%CF%84%CE%BF%CF%8D%CF%84%CF%89%CE%BD%20%CE%B1%CE%BD%CE%B1%CE%BB%CE%BF%CE%B3%CE%B9%CF%8E%CE%BD.%20%CE%A3%CF%84%CE%B7%20%CF%83%CF%85%CE%BD%CE%AD%CF%87%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B5%20%CF%83%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1%20%CE%BF%CF%81%CE%B8%CE%BF%CE%B3%CF%8E%CE%BD%CE%B9%CF%89%CE%BD%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CF%87%CE%B1%CF%81%CE%AC%CF%83%CF%83%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B7%20%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AE%20%CF%80%CE%B1%CF%81%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%2C%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%BF%CF%80%CE%BF%CE%AF%CE%B1%20%CE%BF%20%CE%BC%CE%B5%CE%BD%20%CE%AC%CE%BE%CE%BF%CE%BD%CE%B1%CF%82%20%CF%84%CF%89%CE%BD%20%CF%84%CE%B5%CF%84%CE%BC%CE%B7%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%BC%CE%B5%CF%84%CF%81%CE%AC%20%CF%84%CE%B7%CE%BD%20%CE%B1%CE%B8%CF%81%CE%BF%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%20%CF%83%CE%B5%CE%B9%CF%81%CE%AC%20%CF%84%CE%B7%CF%82%20%CF%80%CE%BF%CF%83%CE%BF%CF%83%CF%84%CE%B9%CE%B1%CE%AF%CE%B1%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82%20%CF%84%CE%BF%CF%85%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CE%BF%CF%8D%2C%20%CE%BF%20%CE%B4%CE%B5%20%CE%AC%CE%BE%CE%BF%CE%BD%CE%B1%CF%82%20%CF%84%CF%89%CE%BD%20%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CF%84%CE%B7%CF%82%20%CE%B1%CE%B8%CF%81%CE%BF%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%20%CF%83%CE%B5%CE%B9%CF%81%CE%AC%20%CF%84%CE%B7%CF%82%20%CF%80%CE%BF%CF%83%CE%BF%CF%83%CF%84%CE%B9%CE%B1%CE%AF%CE%B1%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82%20%CF%84%CE%B7%CF%82%20%CE%B5%CE%BA%CF%84%CE%AC%CF%83%CE%B5%CF%89%CF%82%20%CE%BA%CE%B1%CE%B9%20%CE%B5%CE%BD%CF%84%CE%BF%CF%80%CE%AF%CE%B6%CE%BF%CE%BD%CF%84%CE%B1%CE%B9%20%CF%84%CE%B1%20%CF%83%CE%B7%CE%BC%CE%B5%CE%AF%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%BF%CE%B9%CF%87%CE%AF%CE%B1%CF%82%20%CF%84%CF%89%CE%BD%20%CE%B1%CE%B8%CF%81%CE%BF%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8E%CE%BD%20%CF%83%CE%B5%CE%B9%CF%81%CF%8E%CE%BD%20%28%25%29%20%CE%B5%CE%BA%CF%84%CE%AC%CF%83%CE%B5%CF%89%CF%82%20%CE%BA%CE%B1%CE%B9%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CE%BF%CF%8D%2C%20%CF%84%CE%B1%20%CE%BF%CF%80%CE%BF%CE%AF%CE%B1%20%CF%83%CF%87%CE%B7%CE%BC%CE%B1%CF%84%CE%AF%CE%B6%CE%BF%CF%85%CE%BD%20%CF%80%CE%BF%CE%BB%CF%85%CE%B3%CF%89%CE%BD%CE%B9%CE%BA%CE%AE%20%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%AE%20%CE%BF%20%28%CE%BA%CE%B1%CE%BB%CE%BF%CF%8D%CE%BC%CE%B5%CE%BD%CE%B7%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%20Lorenz%29%2C%20%CF%86%CE%AD%CF%81%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B4%CE%B5%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B4%CE%B9%CE%B1%CE%B3%CF%8E%CE%BD%CE%B9%CE%BF%CF%82%20%2845%CE%BF%29%2C%20%CE%BA%CE%B1%CE%BB%CE%BF%CF%8D%CE%BC%CE%B5%CE%BD%CE%B7%20%CE%B4%CE%B9%CE%B1%CE%B3%CF%8E%CE%BD%CE%B9%CE%BF%CF%82%20%CE%B9%CF%83%CE%BF%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82.%20%0A%0A%CE%A3%CF%84%CE%B7%CE%BD%20%CE%B1%CF%80%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CE%B9%CF%83%CE%B7%20%CE%B1%CF%85%CF%84%CE%AE%20%CF%80%CE%B1%CF%81%CE%B1%CF%84%CE%B7%CF%81%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CF%84%CE%B1%20%CE%B5%CE%BE%CE%AE%CF%82%3A%0A%0A%CE%B1%CE%BD%20%CE%BF%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CF%8C%CF%82%20%CE%AE%CF%84%CE%B1%CE%BD%20%CE%BF%CE%BC%CE%BF%CE%B9%CE%BF%CE%BC%CF%8C%CF%81%CF%86%CF%89%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%B5%CE%BC%CE%B7%CE%BC%CE%AD%CE%BD%CE%BF%CF%82%20%CF%83%CE%B5%20%CF%8C%CE%BB%CE%B5%CF%82%20%CF%84%CE%B9%CF%82%20%CE%B5%CF%80%CE%B9%CE%BC%CE%AD%CF%81%CE%BF%CF%85%CF%82%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AD%CF%82%20%28%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B9%CE%B1%CE%BC%CE%B5%CF%81%CE%AF%CF%83%CE%BC%CE%B1%CF%84%CE%B1%29%2C%20%CE%B7%20%CE%B1%CE%B8%CF%81%CE%BF%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%20%CF%84%CE%BF%CF%85%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CE%BF%CF%8D%20%CE%B8%CE%B1%20%CE%B1%CE%BA%CE%BF%CE%BB%CE%BF%CF%85%CE%B8%CE%BF%CF%8D%CF%83%CE%B5%20%CF%84%CE%B7%20%CE%B4%CE%B9%CE%B1%CE%B3%CF%8E%CE%BD%CE%B9%CE%BF%20%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%AE%20%CF%84%CE%B7%CF%82%20%CE%B1%CE%B8%CF%81%CE%BF%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20%CF%83%CE%B5%CE%B9%CF%81%CE%AC%CF%82%20%CF%84%CF%89%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CF%8E%CE%BD%20%28%CE%B4%CE%B9%CE%B1%CE%B3%CF%8E%CE%BD%CE%B9%CE%BF%CF%82%20%CE%B9%CF%83%CE%BF%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82%29.%0A%CE%B5%CE%AC%CE%BD%2C%20%CE%B1%CE%BD%CF%84%CE%B9%CE%B8%CE%AD%CF%84%CF%89%CF%82%20%CE%BF%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CF%8C%CF%82%20%CE%AE%CF%84%CE%B1%CE%BD%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%B5%CE%BC%CE%B7%CE%BC%CE%AD%CE%BD%CE%BF%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%BC%CE%AD%CE%B3%CE%B9%CF%83%CF%84%CE%B7%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CE%AE%20%CE%B1%CE%BD%CE%B9%CF%83%CF%8C%CF%84%CE%B7%CF%84%CE%B1%2C%20%CF%84%CF%8C%CF%84%CE%B5%20%CE%B7%20%CE%B1%CE%B8%CF%81%CE%BF%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%20%CF%84%CE%BF%CF%85%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CE%BF%CF%8D%20%CE%B8%CE%B1%20%CF%83%CF%85%CE%BD%CE%AD%CF%80%CE%B9%CF%80%CF%84%CE%B5%20%CE%BC%CE%B5%20%CF%84%CE%BF%CE%BD%20%CE%AC%CE%BE%CE%BF%CE%BD%CE%B1%20%CF%84%CF%89%CE%BD%20%CF%84%CE%B5%CF%84%CE%BC%CE%B7%CE%BC%CE%AD%CE%BD%CF%89%CE%BD.%0A%CE%BF%20%CE%B2%CE%B1%CE%B8%CE%BC%CF%8C%CF%82%20%CF%83%CF%85%CE%B3%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CF%8E%CF%83%CE%B5%CF%89%CF%82%20%CE%B1%CE%BD%CF%84%CE%B9%CF%80%CF%81%CE%BF%CF%83%CF%89%CF%80%CE%B5%CF%8D%CE%B5%CF%84%CE%B1%CE%B9%20%CE%BA%CE%B1%CF%84%E2%80%99%20%CE%B1%CE%BA%CE%BF%CE%BB%CE%BF%CF%85%CE%B8%CE%AF%CE%B1%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%CE%BD%20%CE%B1%CF%80%CF%8C%CE%BA%CE%BB%CE%B9%CF%83%CE%B7%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20%CE%BC%CE%B5%CF%84%CE%B1%CE%BE%CF%8D%20%CF%84%CF%89%CE%BD%20%CE%B4%CF%8D%CE%BF%20%CE%B1%CF%85%CF%84%CF%8E%CE%BD%20%CE%AC%CE%BA%CF%81%CF%89%CE%BD.%0A%0A%CE%A3%CF%84%CE%B1%20%CF%80%CE%BB%CE%B1%CE%AF%CF%83%CE%B9%CE%B1%20%CF%84%CE%BF%CF%85%20%CF%84%CF%81%CE%AD%CF%87%CE%BF%CE%BD%CF%84%CE%BF%CF%82%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%CF%85%20%CE%BA%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%20%CE%B5%CE%BA%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CF%85%CF%84%CE%B9%CE%BA%CE%BF%CF%8D%CF%82%20%CE%BB%CF%8C%CE%B3%CE%BF%CF%85%CF%82%20%CE%B8%CE%B1%20%CF%85%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CF%84%CE%B5%CE%AF%20%CE%B7%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%20Lorenz%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BD%CE%BF%CE%BC%CF%8C%20%CE%98%CE%B5%CF%83%CF%80%CF%81%CF%89%CF%84%CE%AF%CE%B1%CF%82%20%CF%84%CE%BF%202001%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%B2%CE%BF%CE%AE%CE%B8%CE%B5%CE%B9%CE%B1%20%CF%84%CE%BF%CF%85%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%BF%CF%8D%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%CF%85%20R.%0ATo%20R%20%28http%3A//www.r-project.org/%29%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%AD%CE%BD%CE%B1%20%CF%85%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8C%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%80%CE%BF%CF%85%20%CF%80%CF%81%CE%BF%CF%83%CF%86%CE%AD%CF%81%CE%B5%CE%B9%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B5%CF%82%20%CE%B4%CE%B9%CE%B1%CF%87%CE%B5%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82%20%CE%BA%CE%B1%CE%B9%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20%CE%B1%CE%BD%CE%AC%CE%BB%CF%85%CF%83%CE%B7%CF%82%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%BA%CE%B1%CE%B8%CF%8E%CF%82%20%CE%BA%CE%B1%CE%B9%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B5%CF%82%20%CE%BA%CE%B1%CF%84%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CE%AE%CF%82%20%CE%B3%CF%81%CE%B1%CF%86%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD.%20%CE%92%CE%B1%CF%83%CE%AF%CE%B6%CE%B5%CF%84%CE%B1%CE%B9%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D%20S%20%28%CF%80%CE%BF%CF%85%20%CF%87%CF%81%CE%B7%CF%83%CE%B9%CE%BC%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8C%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20S%20plus%29%20%CE%BA%CE%B1%CE%B9%20%CF%80%CF%81%CF%8C%CE%BA%CE%B5%CE%B9%CF%84%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%20%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CF%8C%20%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D%20%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%20%28open%20source%29%20%CF%80%CE%BF%CF%85%20%CE%B4%CE%B9%CE%B1%CF%84%CE%AF%CE%B8%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B5%CE%BB%CE%B5%CF%8D%CE%B8%CE%B5%CF%81%CE%B1.%20%CE%94%CE%B5%CE%AF%CF%84%CE%B5%20%CF%80%CE%B5%CF%81%CE%B9%CF%83%CF%83%CF%8C%CF%84%CE%B5%CF%81%CE%B1%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AC%20%CE%BC%CE%B5%20%CF%84%CE%BF%20R%0A%CE%A6%CF%85%CF%83%CE%B9%CE%BA%CE%AC%20%CE%BF%20%CF%85%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20%CE%B1%CF%80%CE%BF%CE%BA%CF%84%CE%AC%20%CE%BC%CE%B5%CE%B3%CE%B1%CE%BB%CF%8D%CF%84%CE%B5%CF%81%CE%B7%20%CE%B1%CE%BE%CE%AF%CE%B1%20%CF%8C%CF%84%CE%B1%CE%BD%20%CE%B5%CE%BA%CF%84%CE%B9%CE%BC%CE%B7%CE%B8%CE%B5%CE%AF%20%CE%B4%CE%B9%CE%B1%CF%87%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC%20%CE%BA%CE%B1%CE%B9%20%CF%83%CF%85%CE%B3%CE%BA%CF%81%CE%B9%CE%B8%CE%B5%CE%AF%20%CE%BC%CE%B5%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%BF%CE%B9%CF%87%CE%B5%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B5%CF%82%20%CE%AC%CE%BB%CE%BB%CF%89%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CF%86%CE%B5%CF%81%CE%B5%CE%B9%CF%8E%CE%BD%20%CE%AE%20%CF%84%CE%B7%CF%82%20%CF%87%CF%8E%CF%81%CE%B1%CF%82.%0A%CE%A4%CE%B1%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%9D.%20%CE%98%CE%B5%CF%83%CF%80%CF%81%CF%89%CF%84%CE%AF%CE%B1%CF%82%20%CF%84%CE%BF%20%CE%AD%CF%84%CE%BF%CF%82%202001%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B1%CF%80%CE%BF%CE%B8%CE%B7%CE%BA%CE%B5%CF%85%CE%BC%CE%AD%CE%BD%CE%B1%20%CF%83%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%20CSV%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B1%CE%BA%CF%8C%CE%BB%CE%BF%CF%85%CE%B8%CE%B7%20%CE%BC%CE%BF%CF%81%CF%86%CE%AE%3A%0A%0A%0A%0AID%0AName%0APopulation%0AArea%0A%0A%0A%0A%0A320100%0A%CE%94%CE%97%CE%9C%CE%9F%CE%A3%20%CE%97%CE%93%CE%9F%CE%A5%CE%9C%CE%95%CE%9D%CE%99%CE%A4%CE%A3%CE%97%CE%A3%0A14710%0A111.752%0A%0A%0A326100%0A%CE%9A%CE%9F%CE%99%CE%9D%CE%9F%CE%A4%CE%97%CE%A4%CE%91%20%CE%A0%CE%95%CE%A1%CE%94%CE%99%CE%9A%CE%91%CE%A3%0A2272%0A34.605%0A%0A%0A320700%0A%CE%94%CE%97%CE%9C%CE%9F%CE%A3%20%CE%A3%CE%A5%CE%92%CE%9F%CE%A4%CE%A9%CE%9D%0A3010%0A72.439%0A%0A%0A320200%0A%CE%94%CE%97%CE%9C%CE%9F%CE%A3%20%CE%91%CE%A7%CE%95%CE%A1%CE%9F%CE%9D%CE%A4%CE%91%0A2344%0A67.343%0A%0A%0A320500%0A%CE%94%CE%97%CE%9C%CE%9F%CE%A3%20%CE%A0%CE%91%CE%A1%CE%91%CE%A0%CE%9F%CE%A4%CE%91%CE%9C%CE%9F%CE%A5%0A1668%0A60.334%0A%0A%0A320600%0A%CE%94%CE%97%CE%9C%CE%9F%CE%A3%20%CE%A3%CE%91%CE%93%CE%99%CE%91%CE%94%CE%91%CE%A3%0A2160%0A87%20%E2%80%A6&source=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/&title=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%CE%BC%CE%B5%20%CF%84%CE%BF%20open%20source%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20R&summary=%CE%88%CE%BD%CE%B1%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B1%20%CE%BC%CE%AD%CF%84%CF%81%CE%B1%20%CF%83%CF%85%CE%B3%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CF%89%CF%83%CE%B7%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B5%CE%BA%CF%84%CE%AF%CE%BC%CE%B7%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CF%86%CE%B5%CF%81%CE%B5%CE%B9%CE%B1%CE%BA%CF%8E%CE%BD%0A%CE%B1%CE%BD%CE%B9%CF%83%CE%BF%CF%84%CE%AE%CF%84%CF%89%CE%BD%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B7%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%20Lorenz.%20%CE%93%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B5%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%0A%28%CE%A0%CE%B1%CF%80%CE%B1%CE%B4%CE%B1%CF%83%CE%BA%CE%B1%CE%BB%CF%8C%CF%80%CE%BF%CF%85%CE%BB%CE%BF%CF%82%2C%202000%29%2C%20%CE%BF%CE%B9%20%CE%B5%CF%80%CE%B9%CE%BC%CE%AD%CF%81%CE%BF%CF%85%CF%82%20%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AD%CF%82%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AD%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%0A%CE%AD%CE%BA%CF%84%CE%B1%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%CE%BD%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%BF%CE%B9%CF%87%CE%BF%20%CF%80%CE%BB%CE%B7%CE%B8%CF%85%CF%83%CE%BC%CF%8C%20%CF%84%CE%BF%CF%85%CF%82%2C%20%CF%84%CE%B1%CE%BE%CE%B9%CE%BD%CE%BF%CE%BC%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CE%BA%CE%B1%CF%84%CE%AC%20%CF%86%CE%B8%CE%AF%CE%BD%CE%BF%CF%85%CF%83%CE%B1%0A%CF%83%CE%B5%CE%B9%CF%81%CE%AC%20%CF%84%CE%B7%CF%82%20%CF%80%CF%85%CE%BA%CE%BD%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CE%B1%CF%85%CF%84%CF%8E%CE%BD%2C%20%CE%BA%CE%B1%CE%B9%20%CE%BA%CE%AC%CE%B8%CE%B5%20%CE%BC%CE%B9%CE%B1%CF%82%20%CF%84%CF%89%CE%BD%20%CE%B4%CF%85%CE%BF%20%CF%84%CE%BF%CF%8D%CF%84%CF%89%CE%BD%20%CF%83%CF%84%CE%B7%CE%BB%CF%8E%CE%BD%2C%20%CF%84%CE%B7%CF%82%20%E2%80%A6&source=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/" title="Share on LinkedIn">LinkedIn</a>
     ❄
     <a href="https://news.ycombinator.com/submitlink?t=%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CF%8C%CF%82%20%CF%84%CE%B7%CF%82%20%CE%BA%CE%B1%CE%BC%CF%80%CF%8D%CE%BB%CE%B7%CF%82%20Lorenz%20%CE%BC%CE%B5%20%CF%84%CE%BF%20open%20source%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%AE%CF%82%20R&u=https%3A//geographer.gr/upologismos-tes-kampules-lorenz-me-to-open-source-paketo-statistikes-r/" title="Share on HackerNews">HackerNews</a>
     ❄
@@ -180,22 +180,51 @@
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών ανισοτήτων είναι η καμπύλη Lorenz.
-Για την εφαρμογή της καμπύλης Lorenz (Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της εκτάσεως και του πληθυσμού, υπολογίζεται η ποσοστιαία  κατανομή, καθώς και η αθροιστική σειρά των ποσοστιαίων τούτων αναλογιών. Στη συνέχεια σε σύστημα ορθογώνιων συντεταγμένων χαράσσεται η γραφική παράσταση της καμπύλης Lorenz, στην οποία ο μεν άξονας των τετμημένων μετρά την αθροιστική σειρά της ποσοστιαίας κατανομής του πληθυσμού, ο δε άξονας των τεταγμένων της αθροιστική σειρά της ποσοστιαίας κατανομής της εκτάσεως και εντοπίζονται τα σημεία της αντιστοιχίας των αθροιστικών σειρών (%) εκτάσεως και πληθυσμού, τα οποία σχηματίζουν πολυγωνική γραμμή ο (καλούμενη καμπύλη Lorenz), φέρεται δε και η διαγώνιος (45ο), καλούμενη διαγώνιος ισοκατανομής. </p>
-<p><img alt="" src="https://geographer.gr/images/Economics_Gini_coefficient2.png"></p>
+                <p>Ένα από τα μέτρα συγκέντρωσης για την εκτίμηση των περιφερειακών
+ανισοτήτων είναι η καμπύλη Lorenz. Για την εφαρμογή της καμπύλης Lorenz
+(Παπαδασκαλόπουλος, 2000), οι επιμέρους γεωγραφικές περιοχές με την
+έκταση και τον αντίστοιχο πληθυσμό τους, ταξινομούνται κατά φθίνουσα
+σειρά της πυκνότητας αυτών, και κάθε μιας των δυο τούτων στηλών, της
+εκτάσεως και του πληθυσμού, υπολογίζεται η ποσοστιαία κατανομή, καθώς
+και η αθροιστική σειρά των ποσοστιαίων τούτων αναλογιών. Στη συνέχεια σε
+σύστημα ορθογώνιων συντεταγμένων χαράσσεται η γραφική παράσταση της
+καμπύλης Lorenz, στην οποία ο μεν άξονας των τετμημένων μετρά την
+αθροιστική σειρά της ποσοστιαίας κατανομής του πληθυσμού, ο δε άξονας
+των τεταγμένων της αθροιστική σειρά της ποσοστιαίας κατανομής της
+εκτάσεως και εντοπίζονται τα σημεία της αντιστοιχίας των αθροιστικών
+σειρών (%) εκτάσεως και πληθυσμού, τα οποία σχηματίζουν πολυγωνική
+γραμμή ο (καλούμενη καμπύλη Lorenz), φέρεται δε και η διαγώνιος (45ο),
+καλούμενη διαγώνιος ισοκατανομής.</p>
+<p><img src="https://geographer.gr/images/Economics_Gini_coefficient2.png"/></p>
 <p>Στην απεικόνιση αυτή παρατηρούνται τα εξής:</p>
-<ol>
-<li>αν ο πληθυσμός ήταν ομοιομόρφως κατανεμημένος σε όλες τις επιμέρους περιοχές (γεωγραφικά διαμερίσματα), η αθροιστική καμπύλη του πληθυσμού θα ακολουθούσε τη διαγώνιο γραμμή της αθροιστικής σειράς των περιοχών (διαγώνιος ισοκατανομής).</li>
-<li>εάν, αντιθέτως ο πληθυσμός ήταν κατανεμημένος με την μέγιστη δυνατή ανισότητα, τότε η αθροιστική καμπύλη του πληθυσμού θα συνέπιπτε με τον άξονα των τετμημένων.</li>
-<li>ο βαθμός συγκεντρώσεως αντιπροσωπεύεται κατ’ ακολουθία από την απόκλιση της καμπύλης μεταξύ των δύο αυτών άκρων.</li>
+<ol type="1">
+<li>αν ο πληθυσμός ήταν ομοιομόρφως κατανεμημένος σε όλες τις επιμέρους
+περιοχές (γεωγραφικά διαμερίσματα), η αθροιστική καμπύλη του πληθυσμού
+θα ακολουθούσε τη διαγώνιο γραμμή της αθροιστικής σειράς των περιοχών
+(διαγώνιος ισοκατανομής).</li>
+<li>εάν, αντιθέτως ο πληθυσμός ήταν κατανεμημένος με την μέγιστη δυνατή
+ανισότητα, τότε η αθροιστική καμπύλη του πληθυσμού θα συνέπιπτε με τον
+άξονα των τετμημένων.</li>
+<li>ο βαθμός συγκεντρώσεως αντιπροσωπεύεται κατ’ ακολουθία από την
+απόκλιση της καμπύλης μεταξύ των δύο αυτών άκρων.</li>
 </ol>
-<p>Στα πλαίσια του τρέχοντος άρθρου και για εκπαιδευτικούς λόγους θα υπολογιστεί η καμπύλη Lorenz για τον νομό Θεσπρωτίας το 2001 με την βοήθεια του στατιστικού πακέτου R.</p>
-<p>To R (<a href="http://www.r-project.org/">http://www.r-project.org/</a>) είναι ένα υπολογιστικό πακέτο που προσφέρει δυνατότητες διαχείρισης και στατιστικής ανάλυσης δεδομένων καθώς και δυνατότητες κατασκευής γραφημάτων. Βασίζεται στην γλώσσα προγραμματισμού S (που χρησιμοποιεί και το στατιστικό πακέτο S plus) και πρόκειται για λογισμικό ανοικτού κώδικα (open source) που διατίθεται ελεύθερα. <a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f">Δείτε περισσότερα σχετικά με το R</a>
-Φυσικά ο υπολογισμός της καμπύλης αποκτά μεγαλύτερη αξία όταν εκτιμηθεί διαχρονικά και συγκριθεί με αντίστοιχες καμπύλες άλλων περιφερειών ή της χώρας.
-Τα σχετικά δεδομένα για τον Ν. Θεσπρωτίας το έτος 2001 είναι αποθηκευμένα σε ένα αρχείο CSV στην ακόλουθη μορφή:</p>
+<p>Στα πλαίσια του τρέχοντος άρθρου και για εκπαιδευτικούς λόγους θα
+υπολογιστεί η καμπύλη Lorenz για τον νομό Θεσπρωτίας το 2001 με την
+βοήθεια του στατιστικού πακέτου R.</p>
+<p>To R (<a class="uri" href="http://www.r-project.org/">http://www.r-project.org/</a>) είναι ένα υπολογιστικό πακέτο
+που προσφέρει δυνατότητες διαχείρισης και στατιστικής ανάλυσης δεδομένων
+καθώς και δυνατότητες κατασκευής γραφημάτων. Βασίζεται στην γλώσσα
+προγραμματισμού S (που χρησιμοποιεί και το στατιστικό πακέτο S plus) και
+πρόκειται για λογισμικό ανοικτού κώδικα (open source) που διατίθεται
+ελεύθερα. <a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f">Δείτε
+περισσότερα σχετικά με το R</a> Φυσικά ο υπολογισμός της καμπύλης αποκτά
+μεγαλύτερη αξία όταν εκτιμηθεί διαχρονικά και συγκριθεί με αντίστοιχες
+καμπύλες άλλων περιφερειών ή της χώρας. Τα σχετικά δεδομένα για τον Ν.
+Θεσπρωτίας το έτος 2001 είναι αποθηκευμένα σε ένα αρχείο CSV στην
+ακόλουθη μορφή:</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th><strong>ID</strong></th>
 <th><strong>Name</strong></th>
 <th><strong>Population</strong></th>
@@ -203,61 +232,61 @@
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>320100</td>
 <td>ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΗΣ</td>
 <td>14710</td>
 <td>111.752</td>
 </tr>
-<tr>
+<tr class="even">
 <td>326100</td>
 <td>ΚΟΙΝΟΤΗΤΑ ΠΕΡΔΙΚΑΣ</td>
 <td>2272</td>
 <td>34.605</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>320700</td>
 <td>ΔΗΜΟΣ ΣΥΒΟΤΩΝ</td>
 <td>3010</td>
 <td>72.439</td>
 </tr>
-<tr>
+<tr class="even">
 <td>320200</td>
 <td>ΔΗΜΟΣ ΑΧΕΡΟΝΤΑ</td>
 <td>2344</td>
 <td>67.343</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>320500</td>
 <td>ΔΗΜΟΣ ΠΑΡΑΠΟΤΑΜΟΥ</td>
 <td>1668</td>
 <td>60.334</td>
 </tr>
-<tr>
+<tr class="even">
 <td>320600</td>
 <td>ΔΗΜΟΣ ΣΑΓΙΑΔΑΣ</td>
 <td>2160</td>
 <td>87.803</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>320400</td>
 <td>ΔΗΜΟΣ ΠΑΡΑΜΥΘΙΑΣ</td>
 <td>7859</td>
 <td>342.197</td>
 </tr>
-<tr>
+<tr class="even">
 <td>320300</td>
 <td>ΔΗΜΟΣ ΜΑΡΓΑΡΙΤΙΟΥ</td>
 <td>3032</td>
 <td>149.223</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>320800</td>
 <td>ΔΗΜΟΣ ΦΙΛΙΑΤΩΝ</td>
 <td>8288</td>
 <td>495.727</td>
 </tr>
-<tr>
+<tr class="even">
 <td>326200</td>
 <td>ΚΟΙΝΟΤΗΤΑ ΣΟΥΛΙΟΥ</td>
 <td>748</td>
@@ -266,43 +295,38 @@
 </tbody>
 </table>
 <p>Εγκαθιστούμε το R με:</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get install r-base-core
-</code></pre></div>
-
-
-<p>Εκκινούμε το R πληκτρολογώντας στο τερματικό R (αν θέλουμε γραφικό περιβάλλον πληκτρολογούμε R --gui=Tk)
-Κατεβάζουμε και εγκαθιστούμε το πακέτο lawstat:</p>
-<div class="highlight"><pre><span></span><code>install.packages(&quot;lawstat&quot;)
-</code></pre></div>
-
-
+<pre><code>sudo apt-get install r-base-core</code></pre>
+<p>Εκκινούμε το R πληκτρολογώντας στο τερματικό R (αν θέλουμε γραφικό
+περιβάλλον πληκτρολογούμε R –gui=Tk) Κατεβάζουμε και εγκαθιστούμε το
+πακέτο lawstat:</p>
+<pre><code>install.packages("lawstat")</code></pre>
 <p>Φορτώνουμε το απαραίτητο πακέτο lawstat με:</p>
-<div class="highlight"><pre><span></span><code>library(lawstat)
-</code></pre></div>
-
-
+<pre><code>library(lawstat)</code></pre>
 <p>Διαβάζουμε τα δεδομένα με την εντολή:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Data</span><span class="o">&lt;-</span><span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Στην συνέχεια υπολογίζουμε και αποθηκεύουμε το γράφημα της καμπύλης Lorenz με τις παρακάτω εντολές:</p>
-<div class="highlight"><pre><span></span><code>png(&quot;myplot.png&quot;,width=700,height=500)
-lorenz.curve(Data[,&quot;Population&quot;], Data[,&quot;Area&quot;])
-dev.off()
-</code></pre></div>
-
-
+<pre><code>Data&lt;-read.table('data.csv', header=TRUE)</code></pre>
+<p>Στην συνέχεια υπολογίζουμε και αποθηκεύουμε το γράφημα της καμπύλης
+Lorenz με τις παρακάτω εντολές:</p>
+<pre><code>png("myplot.png",width=700,height=500)
+lorenz.curve(Data[,"Population"], Data[,"Area"])
+dev.off()</code></pre>
 <p>Το αποτέλεσμα των παραπάνω εντολών είναι η καμπύλη Lorenz:</p>
-<p><img alt="" src="https://geographer.gr/images/myplot.png"></p>
-<p>Η σχετική εντολή στο R (lorenz.curve), δεν υπολογίζει μόνο την καμπύλη Lorenz αλλά υπολογίζει και διάφορους συντελεστές, (oπως ο συντελεστής Gini), που αναγράφονται στο αριστερό τμήμα εντός του γραφήματος.</p>
+<p><img src="https://geographer.gr/images/myplot.png"/></p>
+<p>Η σχετική εντολή στο R (lorenz.curve), δεν υπολογίζει μόνο την
+καμπύλη Lorenz αλλά υπολογίζει και διάφορους συντελεστές, (oπως ο
+συντελεστής Gini), που αναγράφονται στο αριστερό τμήμα εντός του
+γραφήματος.</p>
 <p>Βιβλιογραφία:</p>
 <ul>
-<li>Παπαδασκαλόπουλος, Αθ. (2000) Μέθοδοι Περιφερειακής Ανάλυσης, Παπαζήσης: Αθήνα.</li>
-<li>R-project, Documentation of Lorenz Curve, http://rss.acs.unt.edu/Rdoc/library/lawstat/html/lorenz.curve.html, [Πρόσβαση: 3/09/2010].</li>
-<li>Εθνική Στατιστική Υπηρεσία (ΕΣΥΕ), Απογραφή πληθυσμού 2001. Διαθέσιμο στο: http://www.statistics.gr [Πρόσβαση:10/11/2009]</li>
+<li>Παπαδασκαλόπουλος, Αθ. (2000) Μέθοδοι Περιφερειακής Ανάλυσης,
+Παπαζήσης: Αθήνα.</li>
+<li>R-project, Documentation of Lorenz Curve,
+http://rss.acs.unt.edu/Rdoc/library/lawstat/html/lorenz.curve.html,
+[Πρόσβαση: 3/09/2010].</li>
+<li>Εθνική Στατιστική Υπηρεσία (ΕΣΥΕ), Απογραφή πληθυσμού 2001.
+Διαθέσιμο στο: http://www.statistics.gr [Πρόσβαση:10/11/2009]</li>
 </ul>
-<p>(<em>Ο υπολογισμός της καμπύλης Lorenz έγινε στην διανομή Ubuntu 10.04 LTS-Lucid Lynx με την έκδοση R 2.10.1</em>)</p>
+<p>(<em>Ο υπολογισμός της καμπύλης Lorenz έγινε στην διανομή Ubuntu
+10.04 LTS-Lucid Lynx με την έκδοση R 2.10.1</em>)</p>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -369,314 +393,6 @@ dev.off()
   </ul>
 </li>
 <!-- End Sidebar/Categories -->
-
-<!-- Sidebar/Tag Cloud -->
-<li class="list-group-item">
-  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-  <ul class="list-group list-inline tagcloud" id="tags">
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/api.html">API</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/big-data.html">big data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/blender.html">Blender</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/cs2cs.html">cs2cs</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dem.html">dem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/demos-souliou.html">Δήμος Σουλίου</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ed50.html">ED50</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/etrs89-etrs-laea.html">ETRS89 ETRS LAEA</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/europe.html">Europe</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gis.html">GIS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/github.html">github</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hg.html">Hg</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/mapnik.html">mapnik</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phd.html">phd</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/policy.html">Policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
-    </li>
-    <li class="list-group-item tag-0">
-      <a href="https://geographer.gr/tag/python.html">python</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/r.html">R</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/raster.html">raster</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/redes.html">REDES</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/risk.html">Risk</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sar.html">SAR</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seismoi.html">σεισμοί</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-erosion.html">Soil erosion</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-policy.html">soil policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sql.html">sql</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/stack.html">stack</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sustema-geographikon-plerophorion.html">Σύστημα Γεωγραφικών Πληροφοριών</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
-    </li>
-  </ul>
-</li>
-<!-- End Sidebar/Tag Cloud -->
 
 <!-- Sidebar/Links -->
 <li class="list-group-item">
