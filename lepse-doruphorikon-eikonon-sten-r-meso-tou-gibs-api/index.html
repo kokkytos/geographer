@@ -13,13 +13,13 @@
 
         <meta name="author" content="Leonidas Liakos" />
         <meta name="keywords" content="API,gdal,gdalUtils,GIBS,R" />
-        <meta name="description" content="Η υπηρεσία Global Imagery Browse Services (GIBS) του παρατηρητηρίου Earth Observing System Data and Information System (EOSDIS) παρέχει δορυφορικές εικόνες πλήρους ανάλυσης σε παγκόσμιο επίπεδο. Η υπηρεσία παρέχει πρόσβαση σε 600 και πλέον προϊόντα δορυφορικών εικόνων τα οποία στην πλειονότητά τους είναι διαθέσιμα με χρονική υστέρηση λίγων ωρών από την διέλευση του δορυφόρου. Η οπτικοποίηση των δεδομένων αυτών υποστηρίζεται από σχετική διαδικτυακή εφαρμογή WorldViewαλλά και μέσω υπηρεσιών (πρωτόκολλα OGC Web Map Tile Service (WMTS)/Tiled Web Map Service (TWMS)) που επιτρέπουν την ενσωμάτωσή του σε τρίτες εφαρμογές. Επιπλέον μια από της πλέον χρήσιμες λειτουργίες της υπηρεσίας GIBS είναι δυνατότητα εκτέλεσης σεναρίου εντολών μέσω της βιβλιοθήκης Geospatial Data Abstraction Library (GDAL). Αυτή η δυνατότητα παρέχει στον χρήση την ευκολία να αυτοματοποιήσει την λήψη δεδομένων (π.χ. μαζική λήψη δεδομένων, αυτόματη περιοδική λήψη, λήψη δεδομένων υπό συγκεκριμένες συνθήκες κτλ.). Στην τρέχουσα ανάρτηση παρουσιάζεται ένα σενάριο λήψης δεδομένων από την πλατφόρμα GIBS με την γλώσσα προγραμματισμού R. Στόχος είναι να δημιουργηθεί ένα σενάριο εντολών όπου ο χρήστης θα παρέχει στο script πληροφορίες για το προϊόν και το script θα λαμβάνει τις σχετικές δορυφορικές εικόνες. Οι πληροφορίες αυτές αφορούν το όνομα του προϊόντος, το προβολικό του σύστημα, την ημερομηνία λήψης και την περιοχή μελέτης που ενδιαφέρει τον χρήστη. Οι πληροφορίες για κάθε προϊόν (ονομασία, επίπεδα εστίασης, προβολικό σύστημα) είναι διαθέσιμες στην σχετική ενότητα της υπηρεσίας. Στην συνέχεια θα αυτοματοποιήσουμε την λήψη μιας σειράς εικόνων VIIRS για ένα συγκεκριμένο χρονικό διάστημα. Το σενάριο R απαιτεί το πακέτο gdalUtils, ένα πακέτο &#34;περιτυλίγµατος&#34; (wrapper) για την βιβλιοθήκη GDAL, το οποίο φορτώνουμε στο περιβάλλον εργασίας της R: library(gdalUtils) Ακολουθεί η συνάρτηση (function) που πραγματοποιεί την λήψη των δορυφορικών εικόνων. Δέχεται ως παραμέτρους την ημερομηνία λήψης του προϊόντος (αν δεν οριστεί από τον χρήστη ορίζεται ως προκαθορισμένη η τρέχουσα), το όνομα του προϊόντος, τον κωδικό προβολικού συστήματος κατά EPSG, τον κατάλογο που θέλουμε να αποθηκεύσουμε τα δεδομένα (προκαθορισμένος ο $HOME/gibs_downloads) και την γεωγραφική έκταση (extent …" />
+        <meta name="description" content="Η υπηρεσία Global Imagery Browse Services (GIBS) του παρατηρητηρίου Earth Observing System Data and Information System (EOSDIS) παρέχει δορυφορικές εικόνες πλήρους ανάλυσης σε παγκόσμιο επίπεδο. Η υπηρεσία παρέχει πρόσβαση σε 600 και πλέον προϊόντα δορυφορικών εικόνων τα οποία στην πλειονότητά τους είναι διαθέσιμα με χρονική υστέρηση λίγων ωρών από την …" />
 
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Λήψη δορυφορικών εικόνων στην R μέσω του GIBS API"/>
         <meta property="og:url" content="https://geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api/"/>
-        <meta property="og:description" content="Η υπηρεσία Global Imagery Browse Services (GIBS) του παρατηρητηρίου Earth Observing System Data and Information System (EOSDIS) παρέχει δορυφορικές εικόνες πλήρους ανάλυσης σε παγκόσμιο επίπεδο. Η υπηρεσία παρέχει πρόσβαση σε 600 και πλέον προϊόντα δορυφορικών εικόνων τα οποία στην πλειονότητά τους είναι διαθέσιμα με χρονική υστέρηση λίγων ωρών από την διέλευση του δορυφόρου. Η οπτικοποίηση των δεδομένων αυτών υποστηρίζεται από σχετική διαδικτυακή εφαρμογή WorldViewαλλά και μέσω υπηρεσιών (πρωτόκολλα OGC Web Map Tile Service (WMTS)/Tiled Web Map Service (TWMS)) που επιτρέπουν την ενσωμάτωσή του σε τρίτες εφαρμογές. Επιπλέον μια από της πλέον χρήσιμες λειτουργίες της υπηρεσίας GIBS είναι δυνατότητα εκτέλεσης σεναρίου εντολών μέσω της βιβλιοθήκης Geospatial Data Abstraction Library (GDAL). Αυτή η δυνατότητα παρέχει στον χρήση την ευκολία να αυτοματοποιήσει την λήψη δεδομένων (π.χ. μαζική λήψη δεδομένων, αυτόματη περιοδική λήψη, λήψη δεδομένων υπό συγκεκριμένες συνθήκες κτλ.). Στην τρέχουσα ανάρτηση παρουσιάζεται ένα σενάριο λήψης δεδομένων από την πλατφόρμα GIBS με την γλώσσα προγραμματισμού R. Στόχος είναι να δημιουργηθεί ένα σενάριο εντολών όπου ο χρήστης θα παρέχει στο script πληροφορίες για το προϊόν και το script θα λαμβάνει τις σχετικές δορυφορικές εικόνες. Οι πληροφορίες αυτές αφορούν το όνομα του προϊόντος, το προβολικό του σύστημα, την ημερομηνία λήψης και την περιοχή μελέτης που ενδιαφέρει τον χρήστη. Οι πληροφορίες για κάθε προϊόν (ονομασία, επίπεδα εστίασης, προβολικό σύστημα) είναι διαθέσιμες στην σχετική ενότητα της υπηρεσίας. Στην συνέχεια θα αυτοματοποιήσουμε την λήψη μιας σειράς εικόνων VIIRS για ένα συγκεκριμένο χρονικό διάστημα. Το σενάριο R απαιτεί το πακέτο gdalUtils, ένα πακέτο &#34;περιτυλίγµατος&#34; (wrapper) για την βιβλιοθήκη GDAL, το οποίο φορτώνουμε στο περιβάλλον εργασίας της R: library(gdalUtils) Ακολουθεί η συνάρτηση (function) που πραγματοποιεί την λήψη των δορυφορικών εικόνων. Δέχεται ως παραμέτρους την ημερομηνία λήψης του προϊόντος (αν δεν οριστεί από τον χρήστη ορίζεται ως προκαθορισμένη η τρέχουσα), το όνομα του προϊόντος, τον κωδικό προβολικού συστήματος κατά EPSG, τον κατάλογο που θέλουμε να αποθηκεύσουμε τα δεδομένα (προκαθορισμένος ο $HOME/gibs_downloads) και την γεωγραφική έκταση (extent …"/>
+        <meta property="og:description" content="Η υπηρεσία Global Imagery Browse Services (GIBS) του παρατηρητηρίου Earth Observing System Data and Information System (EOSDIS) παρέχει δορυφορικές εικόνες πλήρους ανάλυσης σε παγκόσμιο επίπεδο. Η υπηρεσία παρέχει πρόσβαση σε 600 και πλέον προϊόντα δορυφορικών εικόνων τα οποία στην πλειονότητά τους είναι διαθέσιμα με χρονική υστέρηση λίγων ωρών από την …"/>
         <meta property="article:published_time" content="2017-11-19" />
             <meta property="article:section" content="GIS" />
             <meta property="article:tag" content="API" />
@@ -137,7 +137,7 @@
     ❄
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api/" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api/&title=%CE%9B%CE%AE%CF%88%CE%B7%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CF%89%CE%BD%20%CF%83%CF%84%CE%B7%CE%BD%20R%20%CE%BC%CE%AD%CF%83%CF%89%20%CF%84%CE%BF%CF%85%20GIBS%20API&summary=%CE%97%20%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%AF%CE%B1%20Global%20Imagery%20Browse%20Services%20%28GIBS%29%20%CF%84%CE%BF%CF%85%20%CF%80%CE%B1%CF%81%CE%B1%CF%84%CE%B7%CF%81%CE%B7%CF%84%CE%B7%CF%81%CE%AF%CE%BF%CF%85%20Earth%20Observing%20System%20Data%20and%20Information%20System%20%28EOSDIS%29%20%CF%80%CE%B1%CF%81%CE%AD%CF%87%CE%B5%CE%B9%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CE%AD%CF%82%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CE%B5%CF%82%20%CF%80%CE%BB%CE%AE%CF%81%CE%BF%CF%85%CF%82%20%CE%B1%CE%BD%CE%AC%CE%BB%CF%85%CF%83%CE%B7%CF%82%20%CF%83%CE%B5%20%CF%80%CE%B1%CE%B3%CE%BA%CF%8C%CF%83%CE%BC%CE%B9%CE%BF%20%CE%B5%CF%80%CE%AF%CF%80%CE%B5%CE%B4%CE%BF.%20%CE%97%20%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%AF%CE%B1%20%CF%80%CE%B1%CF%81%CE%AD%CF%87%CE%B5%CE%B9%20%CF%80%CF%81%CF%8C%CF%83%CE%B2%CE%B1%CF%83%CE%B7%20%CF%83%CE%B5%20600%20%CE%BA%CE%B1%CE%B9%20%CF%80%CE%BB%CE%AD%CE%BF%CE%BD%20%CF%80%CF%81%CE%BF%CF%8A%CF%8C%CE%BD%CF%84%CE%B1%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CF%89%CE%BD%20%CF%84%CE%B1%20%CE%BF%CF%80%CE%BF%CE%AF%CE%B1%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%80%CE%BB%CE%B5%CE%B9%CE%BF%CE%BD%CF%8C%CF%84%CE%B7%CF%84%CE%AC%20%CF%84%CE%BF%CF%85%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B4%CE%B9%CE%B1%CE%B8%CE%AD%CF%83%CE%B9%CE%BC%CE%B1%20%CE%BC%CE%B5%20%CF%87%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AE%20%CF%85%CF%83%CF%84%CE%AD%CF%81%CE%B7%CF%83%CE%B7%20%CE%BB%CE%AF%CE%B3%CF%89%CE%BD%20%CF%89%CF%81%CF%8E%CE%BD%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%CE%BD%20%CE%B4%CE%B9%CE%AD%CE%BB%CE%B5%CF%85%CF%83%CE%B7%20%CF%84%CE%BF%CF%85%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CF%8C%CF%81%CE%BF%CF%85.%20%CE%97%20%CE%BF%CF%80%CF%84%CE%B9%CE%BA%CE%BF%CF%80%CE%BF%CE%AF%CE%B7%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%B1%CF%85%CF%84%CF%8E%CE%BD%20%CF%85%CF%80%CE%BF%CF%83%CF%84%CE%B7%CF%81%CE%AF%CE%B6%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B4%CE%B9%CE%B1%CE%B4%CE%B9%CE%BA%CF%84%CF%85%CE%B1%CE%BA%CE%AE%20%CE%B5%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20WorldView%CE%B1%CE%BB%CE%BB%CE%AC%20%CE%BA%CE%B1%CE%B9%20%CE%BC%CE%AD%CF%83%CF%89%20%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CF%8E%CE%BD%20%28%CF%80%CF%81%CF%89%CF%84%CF%8C%CE%BA%CE%BF%CE%BB%CE%BB%CE%B1%20OGC%20Web%20Map%20Tile%20Service%20%28WMTS%29/Tiled%20Web%20Map%20Service%20%28TWMS%29%29%20%CF%80%CE%BF%CF%85%20%CE%B5%CF%80%CE%B9%CF%84%CF%81%CE%AD%CF%80%CE%BF%CF%85%CE%BD%20%CF%84%CE%B7%CE%BD%20%CE%B5%CE%BD%CF%83%CF%89%CE%BC%CE%AC%CF%84%CF%89%CF%83%CE%AE%20%CF%84%CE%BF%CF%85%20%CF%83%CE%B5%20%CF%84%CF%81%CE%AF%CF%84%CE%B5%CF%82%20%CE%B5%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AD%CF%82.%20%CE%95%CF%80%CE%B9%CF%80%CE%BB%CE%AD%CE%BF%CE%BD%20%CE%BC%CE%B9%CE%B1%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%CF%82%20%CF%80%CE%BB%CE%AD%CE%BF%CE%BD%20%CF%87%CF%81%CE%AE%CF%83%CE%B9%CE%BC%CE%B5%CF%82%20%CE%BB%CE%B5%CE%B9%CF%84%CE%BF%CF%85%CF%81%CE%B3%CE%AF%CE%B5%CF%82%20%CF%84%CE%B7%CF%82%20%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%AF%CE%B1%CF%82%20GIBS%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CE%B5%CE%BA%CF%84%CE%AD%CE%BB%CE%B5%CF%83%CE%B7%CF%82%20%CF%83%CE%B5%CE%BD%CE%B1%CF%81%CE%AF%CE%BF%CF%85%20%CE%B5%CE%BD%CF%84%CE%BF%CE%BB%CF%8E%CE%BD%20%CE%BC%CE%AD%CF%83%CF%89%20%CF%84%CE%B7%CF%82%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%CF%82%20Geospatial%20Data%20Abstraction%20Library%20%28GDAL%29.%20%CE%91%CF%85%CF%84%CE%AE%20%CE%B7%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CF%80%CE%B1%CF%81%CE%AD%CF%87%CE%B5%CE%B9%20%CF%83%CF%84%CE%BF%CE%BD%20%CF%87%CF%81%CE%AE%CF%83%CE%B7%20%CF%84%CE%B7%CE%BD%20%CE%B5%CF%85%CE%BA%CE%BF%CE%BB%CE%AF%CE%B1%20%CE%BD%CE%B1%20%CE%B1%CF%85%CF%84%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CF%80%CE%BF%CE%B9%CE%AE%CF%83%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%BB%CE%AE%CF%88%CE%B7%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%28%CF%80.%CF%87.%20%CE%BC%CE%B1%CE%B6%CE%B9%CE%BA%CE%AE%20%CE%BB%CE%AE%CF%88%CE%B7%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%2C%20%CE%B1%CF%85%CF%84%CF%8C%CE%BC%CE%B1%CF%84%CE%B7%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CE%B4%CE%B9%CE%BA%CE%AE%20%CE%BB%CE%AE%CF%88%CE%B7%2C%20%CE%BB%CE%AE%CF%88%CE%B7%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CF%85%CF%80%CF%8C%20%CF%83%CF%85%CE%B3%CE%BA%CE%B5%CE%BA%CF%81%CE%B9%CE%BC%CE%AD%CE%BD%CE%B5%CF%82%20%CF%83%CF%85%CE%BD%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%20%CE%BA%CF%84%CE%BB.%29.%0A%CE%A3%CF%84%CE%B7%CE%BD%20%CF%84%CF%81%CE%AD%CF%87%CE%BF%CF%85%CF%83%CE%B1%20%CE%B1%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7%20%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%B9%CE%AC%CE%B6%CE%B5%CF%84%CE%B1%CE%B9%20%CE%AD%CE%BD%CE%B1%20%CF%83%CE%B5%CE%BD%CE%AC%CF%81%CE%B9%CE%BF%20%CE%BB%CE%AE%CF%88%CE%B7%CF%82%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%BB%CE%B1%CF%84%CF%86%CF%8C%CF%81%CE%BC%CE%B1%20GIBS%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D%20R.%20%CE%A3%CF%84%CF%8C%CF%87%CE%BF%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CE%B4%CE%B7%CE%BC%CE%B9%CE%BF%CF%85%CF%81%CE%B3%CE%B7%CE%B8%CE%B5%CE%AF%20%CE%AD%CE%BD%CE%B1%20%CF%83%CE%B5%CE%BD%CE%AC%CF%81%CE%B9%CE%BF%20%CE%B5%CE%BD%CF%84%CE%BF%CE%BB%CF%8E%CE%BD%20%CF%8C%CF%80%CE%BF%CF%85%20%CE%BF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%CF%82%20%CE%B8%CE%B1%20%CF%80%CE%B1%CF%81%CE%AD%CF%87%CE%B5%CE%B9%20%CF%83%CF%84%CE%BF%20script%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%80%CF%81%CE%BF%CF%8A%CF%8C%CE%BD%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%20script%20%CE%B8%CE%B1%20%CE%BB%CE%B1%CE%BC%CE%B2%CE%AC%CE%BD%CE%B5%CE%B9%20%CF%84%CE%B9%CF%82%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AD%CF%82%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CE%AD%CF%82%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CE%B5%CF%82.%0A%CE%9F%CE%B9%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B1%CF%85%CF%84%CE%AD%CF%82%20%CE%B1%CF%86%CE%BF%CF%81%CE%BF%CF%8D%CE%BD%20%CF%84%CE%BF%20%CF%8C%CE%BD%CE%BF%CE%BC%CE%B1%20%CF%84%CE%BF%CF%85%20%CF%80%CF%81%CE%BF%CF%8A%CF%8C%CE%BD%CF%84%CE%BF%CF%82%2C%20%CF%84%CE%BF%20%CF%80%CF%81%CE%BF%CE%B2%CE%BF%CE%BB%CE%B9%CE%BA%CF%8C%20%CF%84%CE%BF%CF%85%20%CF%83%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1%2C%20%CF%84%CE%B7%CE%BD%20%CE%B7%CE%BC%CE%B5%CF%81%CE%BF%CE%BC%CE%B7%CE%BD%CE%AF%CE%B1%20%CE%BB%CE%AE%CF%88%CE%B7%CF%82%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%20%CE%BC%CE%B5%CE%BB%CE%AD%CF%84%CE%B7%CF%82%20%CF%80%CE%BF%CF%85%20%CE%B5%CE%BD%CE%B4%CE%B9%CE%B1%CF%86%CE%AD%CF%81%CE%B5%CE%B9%20%CF%84%CE%BF%CE%BD%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7.%20%CE%9F%CE%B9%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CE%BA%CE%AC%CE%B8%CE%B5%20%CF%80%CF%81%CE%BF%CF%8A%CF%8C%CE%BD%20%28%CE%BF%CE%BD%CE%BF%CE%BC%CE%B1%CF%83%CE%AF%CE%B1%2C%20%CE%B5%CF%80%CE%AF%CF%80%CE%B5%CE%B4%CE%B1%20%CE%B5%CF%83%CF%84%CE%AF%CE%B1%CF%83%CE%B7%CF%82%2C%20%CF%80%CF%81%CE%BF%CE%B2%CE%BF%CE%BB%CE%B9%CE%BA%CF%8C%20%CF%83%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1%29%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B4%CE%B9%CE%B1%CE%B8%CE%AD%CF%83%CE%B9%CE%BC%CE%B5%CF%82%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B5%CE%BD%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CF%84%CE%B7%CF%82%20%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%AF%CE%B1%CF%82.%20%CE%A3%CF%84%CE%B7%CE%BD%20%CF%83%CF%85%CE%BD%CE%AD%CF%87%CE%B5%CE%B9%CE%B1%20%CE%B8%CE%B1%20%CE%B1%CF%85%CF%84%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CF%80%CE%BF%CE%B9%CE%AE%CF%83%CE%BF%CF%85%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%BB%CE%AE%CF%88%CE%B7%20%CE%BC%CE%B9%CE%B1%CF%82%20%CF%83%CE%B5%CE%B9%CF%81%CE%AC%CF%82%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CF%89%CE%BD%20VIIRS%20%CE%B3%CE%B9%CE%B1%20%CE%AD%CE%BD%CE%B1%20%CF%83%CF%85%CE%B3%CE%BA%CE%B5%CE%BA%CF%81%CE%B9%CE%BC%CE%AD%CE%BD%CE%BF%20%CF%87%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CF%8C%20%CE%B4%CE%B9%CE%AC%CF%83%CF%84%CE%B7%CE%BC%CE%B1.%0A%CE%A4%CE%BF%20%CF%83%CE%B5%CE%BD%CE%AC%CF%81%CE%B9%CE%BF%20R%20%CE%B1%CF%80%CE%B1%CE%B9%CF%84%CE%B5%CE%AF%20%CF%84%CE%BF%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20gdalUtils%2C%20%CE%AD%CE%BD%CE%B1%20%CF%80%CE%B1%CE%BA%CE%AD%CF%84%CE%BF%20%22%CF%80%CE%B5%CF%81%CE%B9%CF%84%CF%85%CE%BB%CE%AF%CE%B3%C2%B5%CE%B1%CF%84%CE%BF%CF%82%22%20%28wrapper%29%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20GDAL%2C%20%CF%84%CE%BF%20%CE%BF%CF%80%CE%BF%CE%AF%CE%BF%20%CF%86%CE%BF%CF%81%CF%84%CF%8E%CE%BD%CE%BF%CF%85%CE%BC%CE%B5%20%CF%83%CF%84%CE%BF%20%CF%80%CE%B5%CF%81%CE%B9%CE%B2%CE%AC%CE%BB%CE%BB%CE%BF%CE%BD%20%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82%20%CF%84%CE%B7%CF%82%20R%3A%0Alibrary%28gdalUtils%29%0A%0A%CE%91%CE%BA%CE%BF%CE%BB%CE%BF%CF%85%CE%B8%CE%B5%CE%AF%20%CE%B7%20%CF%83%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7%20%28function%29%20%CF%80%CE%BF%CF%85%20%CF%80%CF%81%CE%B1%CE%B3%CE%BC%CE%B1%CF%84%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%20%CF%84%CE%B7%CE%BD%20%CE%BB%CE%AE%CF%88%CE%B7%20%CF%84%CF%89%CE%BD%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CF%89%CE%BD.%20%CE%94%CE%AD%CF%87%CE%B5%CF%84%CE%B1%CE%B9%20%CF%89%CF%82%20%CF%80%CE%B1%CF%81%CE%B1%CE%BC%CE%AD%CF%84%CF%81%CE%BF%CF%85%CF%82%20%CF%84%CE%B7%CE%BD%20%CE%B7%CE%BC%CE%B5%CF%81%CE%BF%CE%BC%CE%B7%CE%BD%CE%AF%CE%B1%20%CE%BB%CE%AE%CF%88%CE%B7%CF%82%20%CF%84%CE%BF%CF%85%20%CF%80%CF%81%CE%BF%CF%8A%CF%8C%CE%BD%CF%84%CE%BF%CF%82%20%28%CE%B1%CE%BD%20%CE%B4%CE%B5%CE%BD%20%CE%BF%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%CE%BD%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%20%CE%BF%CF%81%CE%AF%CE%B6%CE%B5%CF%84%CE%B1%CE%B9%20%CF%89%CF%82%20%CF%80%CF%81%CE%BF%CE%BA%CE%B1%CE%B8%CE%BF%CF%81%CE%B9%CF%83%CE%BC%CE%AD%CE%BD%CE%B7%20%CE%B7%20%CF%84%CF%81%CE%AD%CF%87%CE%BF%CF%85%CF%83%CE%B1%29%2C%20%CF%84%CE%BF%20%CF%8C%CE%BD%CE%BF%CE%BC%CE%B1%20%CF%84%CE%BF%CF%85%20%CF%80%CF%81%CE%BF%CF%8A%CF%8C%CE%BD%CF%84%CE%BF%CF%82%2C%20%CF%84%CE%BF%CE%BD%20%CE%BA%CF%89%CE%B4%CE%B9%CE%BA%CF%8C%20%CF%80%CF%81%CE%BF%CE%B2%CE%BF%CE%BB%CE%B9%CE%BA%CE%BF%CF%8D%20%CF%83%CF%85%CF%83%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%BF%CF%82%20%CE%BA%CE%B1%CF%84%CE%AC%20EPSG%2C%20%CF%84%CE%BF%CE%BD%20%CE%BA%CE%B1%CF%84%CE%AC%CE%BB%CE%BF%CE%B3%CE%BF%20%CF%80%CE%BF%CF%85%20%CE%B8%CE%AD%CE%BB%CE%BF%CF%85%CE%BC%CE%B5%20%CE%BD%CE%B1%20%CE%B1%CF%80%CE%BF%CE%B8%CE%B7%CE%BA%CE%B5%CF%8D%CF%83%CE%BF%CF%85%CE%BC%CE%B5%20%CF%84%CE%B1%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%28%CF%80%CF%81%CE%BF%CE%BA%CE%B1%CE%B8%CE%BF%CF%81%CE%B9%CF%83%CE%BC%CE%AD%CE%BD%CE%BF%CF%82%20%CE%BF%20%24HOME/gibs_downloads%29%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CE%AE%20%CE%AD%CE%BA%CF%84%CE%B1%CF%83%CE%B7%20%28extent%20%E2%80%A6&source=https%3A//geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api/" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api/&title=%CE%9B%CE%AE%CF%88%CE%B7%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CF%89%CE%BD%20%CF%83%CF%84%CE%B7%CE%BD%20R%20%CE%BC%CE%AD%CF%83%CF%89%20%CF%84%CE%BF%CF%85%20GIBS%20API&summary=%CE%97%20%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%AF%CE%B1%20Global%0AImagery%20Browse%20Services%20%28GIBS%29%20%CF%84%CE%BF%CF%85%20%CF%80%CE%B1%CF%81%CE%B1%CF%84%CE%B7%CF%81%CE%B7%CF%84%CE%B7%CF%81%CE%AF%CE%BF%CF%85%20Earth%20Observing%20System%20Data%20and%0AInformation%20System%20%28EOSDIS%29%20%CF%80%CE%B1%CF%81%CE%AD%CF%87%CE%B5%CE%B9%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CE%AD%CF%82%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CE%B5%CF%82%20%CF%80%CE%BB%CE%AE%CF%81%CE%BF%CF%85%CF%82%0A%CE%B1%CE%BD%CE%AC%CE%BB%CF%85%CF%83%CE%B7%CF%82%20%CF%83%CE%B5%20%CF%80%CE%B1%CE%B3%CE%BA%CF%8C%CF%83%CE%BC%CE%B9%CE%BF%20%CE%B5%CF%80%CE%AF%CF%80%CE%B5%CE%B4%CE%BF.%20%CE%97%20%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%AF%CE%B1%20%CF%80%CE%B1%CF%81%CE%AD%CF%87%CE%B5%CE%B9%20%CF%80%CF%81%CF%8C%CF%83%CE%B2%CE%B1%CF%83%CE%B7%20%CF%83%CE%B5%20600%20%CE%BA%CE%B1%CE%B9%0A%CF%80%CE%BB%CE%AD%CE%BF%CE%BD%20%CF%80%CF%81%CE%BF%CF%8A%CF%8C%CE%BD%CF%84%CE%B1%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CF%89%CE%BD%20%CF%84%CE%B1%20%CE%BF%CF%80%CE%BF%CE%AF%CE%B1%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%80%CE%BB%CE%B5%CE%B9%CE%BF%CE%BD%CF%8C%CF%84%CE%B7%CF%84%CE%AC%20%CF%84%CE%BF%CF%85%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%0A%CE%B4%CE%B9%CE%B1%CE%B8%CE%AD%CF%83%CE%B9%CE%BC%CE%B1%20%CE%BC%CE%B5%20%CF%87%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AE%20%CF%85%CF%83%CF%84%CE%AD%CF%81%CE%B7%CF%83%CE%B7%20%CE%BB%CE%AF%CE%B3%CF%89%CE%BD%20%CF%89%CF%81%CF%8E%CE%BD%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%CE%BD%20%E2%80%A6&source=https%3A//geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api/" title="Share on LinkedIn">LinkedIn</a>
     ❄
     <a href="https://news.ycombinator.com/submitlink?t=%CE%9B%CE%AE%CF%88%CE%B7%20%CE%B4%CE%BF%CF%81%CF%85%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CF%89%CE%BD%20%CF%83%CF%84%CE%B7%CE%BD%20R%20%CE%BC%CE%AD%CF%83%CF%89%20%CF%84%CE%BF%CF%85%20GIBS%20API&u=https%3A//geographer.gr/lepse-doruphorikon-eikonon-sten-r-meso-tou-gibs-api/" title="Share on HackerNews">HackerNews</a>
     ❄
@@ -186,93 +186,119 @@
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Η υπηρεσία <a href="https://wiki.earthdata.nasa.gov/display/GIBS/Global+Imagery+Browse+Services+-+GIBS">Global Imagery Browse Services (GIBS)</a> του παρατηρητηρίου <a href="https://earthdata.nasa.gov/">Earth Observing System Data and Information System (EOSDIS)</a> παρέχει δορυφορικές εικόνες πλήρους ανάλυσης σε παγκόσμιο επίπεδο. Η υπηρεσία παρέχει πρόσβαση σε 600 και πλέον προϊόντα δορυφορικών εικόνων τα οποία στην πλειονότητά τους είναι διαθέσιμα με χρονική υστέρηση λίγων ωρών από την διέλευση του δορυφόρου. Η οπτικοποίηση των δεδομένων αυτών υποστηρίζεται από σχετική διαδικτυακή εφαρμογή <a href="https://worldview.earthdata.nasa.gov/">WorldView</a>αλλά και μέσω υπηρεσιών (πρωτόκολλα OGC Web Map Tile Service (WMTS)/Tiled Web Map Service (TWMS)) που επιτρέπουν την ενσωμάτωσή του σε τρίτες εφαρμογές. Επιπλέον μια από της πλέον χρήσιμες λειτουργίες της υπηρεσίας GIBS είναι δυνατότητα εκτέλεσης σεναρίου εντολών μέσω της βιβλιοθήκης <a href="http://www.gdal.org/">Geospatial Data Abstraction Library (GDAL)</a>. Αυτή η δυνατότητα παρέχει στον χρήση την ευκολία να αυτοματοποιήσει την λήψη δεδομένων (π.χ. μαζική λήψη δεδομένων, αυτόματη περιοδική λήψη, λήψη δεδομένων υπό συγκεκριμένες συνθήκες κτλ.).</p>
-<p>Στην τρέχουσα ανάρτηση παρουσιάζεται ένα σενάριο λήψης δεδομένων από την πλατφόρμα GIBS με την γλώσσα προγραμματισμού R. Στόχος είναι να δημιουργηθεί ένα σενάριο εντολών όπου ο χρήστης θα παρέχει στο script πληροφορίες για το προϊόν και το script θα λαμβάνει τις σχετικές δορυφορικές εικόνες.</p>
-<p>Οι πληροφορίες αυτές αφορούν το όνομα του προϊόντος, το προβολικό του σύστημα, την ημερομηνία λήψης και την περιοχή μελέτης που ενδιαφέρει τον χρήστη. Οι πληροφορίες για κάθε προϊόν (ονομασία, επίπεδα εστίασης, προβολικό σύστημα) είναι διαθέσιμες στην σχετική ενότητα της <a href="https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+Available+Imagery+Products">υπηρεσίας</a>. Στην συνέχεια θα αυτοματοποιήσουμε την λήψη μιας σειράς εικόνων VIIRS για ένα συγκεκριμένο χρονικό διάστημα.</p>
-<p>Το σενάριο R απαιτεί το πακέτο <a href="https://cran.r-project.org/web/packages/gdalUtils/index.html">gdalUtils</a>, ένα πακέτο "περιτυλίγµατος" (wrapper) για την βιβλιοθήκη GDAL, το οποίο φορτώνουμε στο περιβάλλον εργασίας της R:</p>
-<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">gdalUtils</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Ακολουθεί η συνάρτηση (function) που πραγματοποιεί την λήψη των δορυφορικών εικόνων. Δέχεται ως παραμέτρους την ημερομηνία λήψης του προϊόντος (αν δεν οριστεί από τον χρήστη ορίζεται ως προκαθορισμένη η τρέχουσα), το όνομα του προϊόντος, τον κωδικό προβολικού συστήματος κατά EPSG, τον κατάλογο που θέλουμε να αποθηκεύσουμε τα δεδομένα (προκαθορισμένος ο $HOME/gibs_downloads) και την γεωγραφική έκταση (extent) της περιοχής ενδιαφέροντος.</p>
-<p>Το σενάριο χρησιμοποιεί την υπηρεσία Tiled Web Map Service μέσω της συνάρτησης gdal_translate του πακέτου gdalUtils. Ανάλογα με τις πληροφορίες που παρέχει ο χρήστης δημιουργεί δυναμικά ένα προσωρινό αρχείο XML το οποίο μεταβιβάζει σαν παράμετρο στην συνάρτηση <a href="http://www.gdal.org/gdal_translate.html">gdal_translate</a>. Επιστρέφει την διαδρομή της ληφθείσας εικόνας στο τοπικό σύστημα αρχείων του χρήστη.</p>
-<div class="highlight"><pre><span></span><code><span class="n">rGIBS</span><span class="o">&lt;-</span><span class="nf">function</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="nf">Sys.Date</span><span class="p">(),</span> <span class="n">EPSGCODE</span><span class="p">,</span><span class="n">PRODUCT</span><span class="p">,</span><span class="n">projwin</span><span class="p">,</span> <span class="n">outputdir</span><span class="o">=</span><span class="nf">file.path</span><span class="p">(</span><span class="nf">Sys.getenv</span><span class="p">(</span><span class="s">&quot;HOME&quot;</span><span class="p">),</span><span class="s">&quot;gibs_downloads&quot;</span><span class="p">),</span><span class="kc">...</span><span class="p">){</span>
-  <span class="nf">dir.create</span><span class="p">(</span><span class="n">outputdir</span><span class="p">,</span> <span class="n">showWarnings</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-  <span class="nf">setwd</span><span class="p">(</span><span class="n">outputdir</span><span class="p">)</span>
-  <span class="c1">#generate xml</span>
-  <span class="n">makeXML</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">EPSGCODE</span><span class="p">,</span><span class="n">PRODUCT</span><span class="p">){</span>
-    <span class="n">myxml</span><span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&#39;https://gibs.earthdata.nasa.gov/twms/epsg%s/best/twms.cgi?%s tileset%s&#39;</span><span class="p">,</span><span class="n">EPSGCODE</span><span class="p">,</span> <span class="n">PRODUCT</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
-    <span class="n">tmp</span> <span class="o">&lt;-</span> <span class="nf">tempfile</span><span class="p">(</span><span class="n">fileext</span><span class="o">=</span><span class="s">&quot;.xml&quot;</span><span class="p">)</span>
-    <span class="n">fileConn</span><span class="o">&lt;-</span><span class="nf">file</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
-    <span class="nf">writeLines</span><span class="p">(</span><span class="n">myxml</span><span class="p">,</span> <span class="n">fileConn</span><span class="p">)</span>
-    <span class="nf">close</span><span class="p">(</span><span class="n">fileConn</span><span class="p">)</span>
-    <span class="nf">return</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
-  <span class="p">}</span>
-
-  <span class="n">infile</span><span class="o">&lt;-</span><span class="nf">makeXML</span><span class="p">(</span><span class="n">date</span><span class="p">,</span><span class="n">EPSGCODE</span><span class="p">,</span><span class="n">PRODUCT</span><span class="p">)</span>
-  <span class="n">outfile</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="s">&quot;_&quot;</span><span class="p">,(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">&#39;%s_%s_EPSG%s.tif&#39;</span><span class="p">,</span><span class="n">PRODUCT</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">EPSGCODE</span><span class="p">)))</span>
-
-
-  <span class="nf">gdal_translate</span><span class="p">(</span>
-    <span class="n">infile</span><span class="p">,</span>
-    <span class="n">outfile</span><span class="p">,</span>
-    <span class="n">projwin</span><span class="o">=</span><span class="n">projwin</span><span class="p">,</span>
-    <span class="n">verbose</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
-    <span class="kc">...</span>
-  <span class="p">)</span>
-
- <span class="c1">#delete temp file</span>
-  <span class="nf">unlink</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
-  <span class="nf">message</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;Image %s was saved in %s&quot;</span><span class="p">,</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">outputdir</span><span class="p">))</span>
-  <span class="nf">return </span><span class="p">(</span><span class="nf">file.path</span><span class="p">(</span><span class="n">outputdir</span><span class="p">,</span><span class="n">outfile</span><span class="p">))</span>
-
-<span class="p">}</span>
-</code></pre></div>
-
-
-<p>Έστω ότι στόχος είναι η λήψη της εικόνας του προϊόντος VIIRS DayNightBand για την 15η Αυγούστου του 2017 για την Ελλάδα. Ο χρήστης καλείται να παρέχει της πληροφορίες αυτές στην συνάρτηση rGIBS. Τις πληροφορίες αυτές θα τις ορίσουμε με την μορφή μεταβλητών:</p>
-<div class="highlight"><pre><span></span><code><span class="n">PRODUCT</span><span class="o">&lt;-</span><span class="s">&#39;VIIRS SNPP DayNightBand ENCC&#39;</span> <span class="c1"># όνομα προϊόντος</span>
-<span class="n">EPSGCODE</span><span class="o">&lt;-</span><span class="m">4326</span> <span class="c1">#  EPSG κωδικός</span>
-<span class="n">date</span><span class="o">&lt;-</span><span class="s">&#39;2017-08-15&#39;</span> <span class="c1"># ημερομηνία λήψης</span>
-<span class="n">projwin</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">19.07</span><span class="p">,</span> <span class="m">42.16</span><span class="p">,</span> <span class="m">28.39</span><span class="p">,</span> <span class="m">34.5</span><span class="p">)</span> <span class="c1"># γεωγραφική έκταση (extent) της περιοχής μελέτης</span>
-</code></pre></div>
-
-
-<p>Στην συνέχεια θα καλέσουμε την συνάρτηση rGIBS και θα προσαρτήσουμε την επιστραφείσα τιμή στην μεταβλητή image</p>
-<div class="highlight"><pre><span></span><code><span class="n">image</span><span class="o">&lt;-</span><span class="nf">rGIBS</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">date</span><span class="p">,</span><span class="n">EPSGCODE</span><span class="o">=</span><span class="n">EPSGCODE</span><span class="p">,</span><span class="n">PRODUCT</span><span class="o">=</span><span class="n">PRODUCT</span><span class="p">,</span> <span class="n">projwin</span><span class="o">=</span><span class="n">projwin</span><span class="p">,</span> <span class="n">of</span> <span class="o">=</span> <span class="s">&quot;GTiff&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Η μεταβλητή image περιέχει την διαδρομή της εικόνας που μεταφορτώθηκε και μπορεί να χρησιμοποιηθεί σε άλλες συναρτήσεις.
-Ας οπτικοποιήσουμε την εικόνα VIIRS που λάβαμε.</p>
-<div class="highlight"><pre><span></span><code><span class="nf">plotRGB</span><span class="p">(</span><span class="nf">stack</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
-</code></pre></div>
-
-
-<p><img alt="" src="https://geographer.gr/images/Rplot_Nighttime_Imagery-286x300.png"></p>
-<p>Όπως προαναφέρθηκε στόχος του σεναρίου είναι η μαζική λήψη εικόνων ενός χρονικού διαστήματος σε ημερήσια βάση.
-Ας δημιουργήσουμε μια λίστα με τις ημερομηνίες ανά ημέρα για το διάστημα 01/08/2017 ως 05/08/2017. Η λίστα δεν είναι απαραίτητο να περιλαμβάνει διαδοχικές ημερομηνίες.</p>
-<div class="highlight"><pre><span></span><code><span class="n">dates</span><span class="o">&lt;-</span><span class="nf">seq</span><span class="p">(</span><span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2017/08/01&quot;</span><span class="p">),</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2017/08/05&quot;</span><span class="p">),</span> <span class="s">&quot;days&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p>Μπορούμε για κάθε στοιχείο της λίστας (κάθε ημερομηνία) να κατεβάσουμε την σχετική δορυφορική εικόνα VIIRS μέσω της συνάρτησης lapply:</p>
-<div class="highlight"><pre><span></span><code><span class="n">myresults</span><span class="o">&lt;-</span><span class="nf">lapply</span><span class="p">(</span>
-<span class="n">dates</span><span class="p">,</span>
-<span class="n">rGIBS</span><span class="p">,</span>
-<span class="n">EPSGCODE</span><span class="o">=</span><span class="n">EPSGCODE</span><span class="p">,</span>
-<span class="n">PRODUCT</span><span class="o">=</span><span class="n">PRODUCT</span><span class="p">,</span>
-<span class="n">projwin</span><span class="o">=</span><span class="n">projwin</span><span class="p">,</span>
-<span class="n">of</span> <span class="o">=</span> <span class="s">&quot;GTiff&quot;</span>
-<span class="p">)</span>
-</code></pre></div>
-
-
-<p>Η μεταβλητή <em>myresults</em> είναι λίστα η οποία περιλαμβάνει τις διαδρομές των αρχείων που μεταφορτώθηκαν ανά ημέρα.</p>
-<p>Υποσημειώσεις:
-1. Ο κώδικας της ανάρτησης είναι διαθέσιμος σε <a href="https://gist.github.com/kokkytos/59421f6b62df85fecba05a0ffd0cfba1">github gist</a>.
-2. Το script έχει δοκιμαστεί επιτυχώς με GDAL 2.2.1. Έχει αποτύχει με GDAL 2.1.2
-3. Δεν έχει δοκιμαστεί η λήψη άλλων προϊόντων.</p>
+                <p>Η υπηρεσία <a href="https://wiki.earthdata.nasa.gov/display/GIBS/Global+Imagery+Browse+Services+-+GIBS">Global
+Imagery Browse Services (GIBS)</a> του παρατηρητηρίου <a href="https://earthdata.nasa.gov/">Earth Observing System Data and
+Information System (EOSDIS)</a> παρέχει δορυφορικές εικόνες πλήρους
+ανάλυσης σε παγκόσμιο επίπεδο. Η υπηρεσία παρέχει πρόσβαση σε 600 και
+πλέον προϊόντα δορυφορικών εικόνων τα οποία στην πλειονότητά τους είναι
+διαθέσιμα με χρονική υστέρηση λίγων ωρών από την διέλευση του δορυφόρου.
+Η οπτικοποίηση των δεδομένων αυτών υποστηρίζεται από σχετική διαδικτυακή
+εφαρμογή <a href="https://worldview.earthdata.nasa.gov/">WorldView</a>αλλά και μέσω
+υπηρεσιών (πρωτόκολλα OGC Web Map Tile Service (WMTS)/Tiled Web Map
+Service (TWMS)) που επιτρέπουν την ενσωμάτωσή του σε τρίτες εφαρμογές.
+Επιπλέον μια από της πλέον χρήσιμες λειτουργίες της υπηρεσίας GIBS είναι
+δυνατότητα εκτέλεσης σεναρίου εντολών μέσω της βιβλιοθήκης <a href="http://www.gdal.org/">Geospatial Data Abstraction Library
+(GDAL)</a>. Αυτή η δυνατότητα παρέχει στον χρήση την ευκολία να
+αυτοματοποιήσει την λήψη δεδομένων (π.χ. μαζική λήψη δεδομένων, αυτόματη
+περιοδική λήψη, λήψη δεδομένων υπό συγκεκριμένες συνθήκες κτλ.).</p>
+<p>Στην τρέχουσα ανάρτηση παρουσιάζεται ένα σενάριο λήψης δεδομένων από
+την πλατφόρμα GIBS με την γλώσσα προγραμματισμού R. Στόχος είναι να
+δημιουργηθεί ένα σενάριο εντολών όπου ο χρήστης θα παρέχει στο script
+πληροφορίες για το προϊόν και το script θα λαμβάνει τις σχετικές
+δορυφορικές εικόνες.</p>
+<p>Οι πληροφορίες αυτές αφορούν το όνομα του προϊόντος, το προβολικό του
+σύστημα, την ημερομηνία λήψης και την περιοχή μελέτης που ενδιαφέρει τον
+χρήστη. Οι πληροφορίες για κάθε προϊόν (ονομασία, επίπεδα εστίασης,
+προβολικό σύστημα) είναι διαθέσιμες στην σχετική ενότητα της <a href="https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+Available+Imagery+Products">υπηρεσίας</a>.
+Στην συνέχεια θα αυτοματοποιήσουμε την λήψη μιας σειράς εικόνων VIIRS
+για ένα συγκεκριμένο χρονικό διάστημα.</p>
+<p>Το σενάριο R απαιτεί το πακέτο <a href="https://cran.r-project.org/web/packages/gdalUtils/index.html">gdalUtils</a>,
+ένα πακέτο “περιτυλίγµατος” (wrapper) για την βιβλιοθήκη GDAL, το οποίο
+φορτώνουμε στο περιβάλλον εργασίας της R:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(gdalUtils)</span></code></pre></div>
+<p>Ακολουθεί η συνάρτηση (function) που πραγματοποιεί την λήψη των
+δορυφορικών εικόνων. Δέχεται ως παραμέτρους την ημερομηνία λήψης του
+προϊόντος (αν δεν οριστεί από τον χρήστη ορίζεται ως προκαθορισμένη η
+τρέχουσα), το όνομα του προϊόντος, τον κωδικό προβολικού συστήματος κατά
+EPSG, τον κατάλογο που θέλουμε να αποθηκεύσουμε τα δεδομένα
+(προκαθορισμένος ο $HOME/gibs_downloads) και την γεωγραφική έκταση
+(extent) της περιοχής ενδιαφέροντος.</p>
+<p>Το σενάριο χρησιμοποιεί την υπηρεσία Tiled Web Map Service μέσω της
+συνάρτησης gdal_translate του πακέτου gdalUtils. Ανάλογα με τις
+πληροφορίες που παρέχει ο χρήστης δημιουργεί δυναμικά ένα προσωρινό
+αρχείο XML το οποίο μεταβιβάζει σαν παράμετρο στην συνάρτηση <a href="http://www.gdal.org/gdal_translate.html">gdal_translate</a>.
+Επιστρέφει την διαδρομή της ληφθείσας εικόνας στο τοπικό σύστημα αρχείων
+του χρήστη.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a>rGIBS<span class="ot">&lt;-</span><span class="cf">function</span>(<span class="at">date=</span><span class="fu">Sys.Date</span>(), EPSGCODE,PRODUCT,projwin, <span class="at">outputdir=</span><span class="fu">file.path</span>(<span class="fu">Sys.getenv</span>(<span class="st">"HOME"</span>),<span class="st">"gibs_downloads"</span>),...){</span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>  <span class="fu">dir.create</span>(outputdir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>  <span class="fu">setwd</span>(outputdir)</span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>  <span class="co">#generate xml</span></span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>  makeXML <span class="ot">&lt;-</span> <span class="cf">function</span>(date, EPSGCODE,PRODUCT){</span>
+<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a>    myxml<span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">'https://gibs.earthdata.nasa.gov/twms/epsg%s/best/twms.cgi?%s tileset%s'</span>,EPSGCODE, PRODUCT, date)</span>
+<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a>    tmp <span class="ot">&lt;-</span> <span class="fu">tempfile</span>(<span class="at">fileext=</span><span class="st">".xml"</span>)</span>
+<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>    fileConn<span class="ot">&lt;-</span><span class="fu">file</span>(tmp)</span>
+<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>    <span class="fu">writeLines</span>(myxml, fileConn)</span>
+<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>    <span class="fu">close</span>(fileConn)</span>
+<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>    <span class="fu">return</span>(tmp)</span>
+<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>  }</span>
+<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a> </span>
+<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>  infile<span class="ot">&lt;-</span><span class="fu">makeXML</span>(date,EPSGCODE,PRODUCT)</span>
+<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>  outfile<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">" "</span>,<span class="st">"_"</span>,(<span class="fu">sprintf</span>(<span class="st">'%s_%s_EPSG%s.tif'</span>,PRODUCT,date,EPSGCODE)))</span>
+<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a> </span>
+<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a> </span>
+<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a>  <span class="fu">gdal_translate</span>(</span>
+<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a>    infile,</span>
+<span id="cb2-20"><a aria-hidden="true" href="#cb2-20" tabindex="-1"></a>    outfile,</span>
+<span id="cb2-21"><a aria-hidden="true" href="#cb2-21" tabindex="-1"></a>    <span class="at">projwin=</span>projwin,</span>
+<span id="cb2-22"><a aria-hidden="true" href="#cb2-22" tabindex="-1"></a>    <span class="at">verbose =</span> T,</span>
+<span id="cb2-23"><a aria-hidden="true" href="#cb2-23" tabindex="-1"></a>    ...</span>
+<span id="cb2-24"><a aria-hidden="true" href="#cb2-24" tabindex="-1"></a>  )</span>
+<span id="cb2-25"><a aria-hidden="true" href="#cb2-25" tabindex="-1"></a> </span>
+<span id="cb2-26"><a aria-hidden="true" href="#cb2-26" tabindex="-1"></a> <span class="co">#delete temp file</span></span>
+<span id="cb2-27"><a aria-hidden="true" href="#cb2-27" tabindex="-1"></a>  <span class="fu">unlink</span>(infile)</span>
+<span id="cb2-28"><a aria-hidden="true" href="#cb2-28" tabindex="-1"></a>  <span class="fu">message</span>(<span class="fu">sprintf</span>(<span class="st">"Image %s was saved in %s"</span>, outfile, outputdir))</span>
+<span id="cb2-29"><a aria-hidden="true" href="#cb2-29" tabindex="-1"></a>  <span class="fu">return</span> (<span class="fu">file.path</span>(outputdir,outfile))</span>
+<span id="cb2-30"><a aria-hidden="true" href="#cb2-30" tabindex="-1"></a> </span>
+<span id="cb2-31"><a aria-hidden="true" href="#cb2-31" tabindex="-1"></a>}</span>
+<span id="cb2-32"><a aria-hidden="true" href="#cb2-32" tabindex="-1"></a></span></code></pre></div>
+<p>Έστω ότι στόχος είναι η λήψη της εικόνας του προϊόντος VIIRS
+DayNightBand για την 15η Αυγούστου του 2017 για την Ελλάδα. Ο χρήστης
+καλείται να παρέχει της πληροφορίες αυτές στην συνάρτηση rGIBS. Τις
+πληροφορίες αυτές θα τις ορίσουμε με την μορφή μεταβλητών:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a>PRODUCT<span class="ot">&lt;-</span><span class="st">'VIIRS SNPP DayNightBand ENCC'</span> <span class="co"># όνομα προϊόντος</span></span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a>EPSGCODE<span class="ot">&lt;-</span><span class="dv">4326</span> <span class="co">#  EPSG κωδικός</span></span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>date<span class="ot">&lt;-</span><span class="st">'2017-08-15'</span> <span class="co"># ημερομηνία λήψης</span></span>
+<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>projwin <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">19.07</span>, <span class="fl">42.16</span>, <span class="fl">28.39</span>, <span class="fl">34.5</span>) <span class="co"># γεωγραφική έκταση (extent) της περιοχής μελέτης</span></span></code></pre></div>
+<p>Στην συνέχεια θα καλέσουμε την συνάρτηση rGIBS και θα προσαρτήσουμε
+την επιστραφείσα τιμή στην μεταβλητή image</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a>image<span class="ot">&lt;-</span><span class="fu">rGIBS</span>(<span class="at">date=</span>date,<span class="at">EPSGCODE=</span>EPSGCODE,<span class="at">PRODUCT=</span>PRODUCT, <span class="at">projwin=</span>projwin, <span class="at">of =</span> <span class="st">"GTiff"</span>)</span></code></pre></div>
+<p>Η μεταβλητή image περιέχει την διαδρομή της εικόνας που μεταφορτώθηκε
+και μπορεί να χρησιμοποιηθεί σε άλλες συναρτήσεις. Ας οπτικοποιήσουμε
+την εικόνα VIIRS που λάβαμε.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">plotRGB</span>(<span class="fu">stack</span>(image))</span></code></pre></div>
+<p><img src="https://geographer.gr/images/Rplot_Nighttime_Imagery-286x300.png"/></p>
+<p>Όπως προαναφέρθηκε στόχος του σεναρίου είναι η μαζική λήψη εικόνων
+ενός χρονικού διαστήματος σε ημερήσια βάση. Ας δημιουργήσουμε μια λίστα
+με τις ημερομηνίες ανά ημέρα για το διάστημα 01/08/2017 ως 05/08/2017. Η
+λίστα δεν είναι απαραίτητο να περιλαμβάνει διαδοχικές ημερομηνίες.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a>dates<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="fu">as.Date</span>(<span class="st">"2017/08/01"</span>), <span class="fu">as.Date</span>(<span class="st">"2017/08/05"</span>), <span class="st">"days"</span>)</span></code></pre></div>
+<p>Μπορούμε για κάθε στοιχείο της λίστας (κάθε ημερομηνία) να
+κατεβάσουμε την σχετική δορυφορική εικόνα VIIRS μέσω της συνάρτησης
+lapply:</p>
+<pre><code>myresults&lt;-lapply(
+dates,
+rGIBS,
+EPSGCODE=EPSGCODE,
+PRODUCT=PRODUCT,
+projwin=projwin,
+of = "GTiff"
+)</code></pre>
+<p>Η μεταβλητή <em>myresults</em> είναι λίστα η οποία περιλαμβάνει τις
+διαδρομές των αρχείων που μεταφορτώθηκαν ανά ημέρα.</p>
+<p>Υποσημειώσεις: 1. Ο κώδικας της ανάρτησης είναι διαθέσιμος σε <a href="https://gist.github.com/kokkytos/59421f6b62df85fecba05a0ffd0cfba1">github
+gist</a>. 2. Το script έχει δοκιμαστεί επιτυχώς με GDAL 2.2.1. Έχει
+αποτύχει με GDAL 2.1.2 3. Δεν έχει δοκιμαστεί η λήψη άλλων
+προϊόντων.</p>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -340,320 +366,15 @@
 </li>
 <!-- End Sidebar/Categories -->
 
-<!-- Sidebar/Tag Cloud -->
-<li class="list-group-item">
-  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-  <ul class="list-group list-inline tagcloud" id="tags">
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/api.html">API</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/big-data.html">big data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/blender.html">Blender</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/costs.html">Costs</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dem.html">dem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/discharges.html">discharges</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eu-soil-observatory.html">EU soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/europe.html">Europe</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/floods.html">floods</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gis.html">GIS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/github.html">github</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hg.html">Hg</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/off-site.html">Off-site</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phd.html">phd</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/policy.html">Policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/precipitation.html">precipitation</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
-    </li>
-    <li class="list-group-item tag-0">
-      <a href="https://geographer.gr/tag/python.html">python</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/r.html">R</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/raster.html">raster</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/redes.html">REDES</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/reservoir-sedimentation.html">Reservoir sedimentation</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/risk.html">Risk</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sar.html">SAR</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/soil-erosion.html">soil erosion</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-policy.html">Soil policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sql.html">sql</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/stack.html">stack</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
-    </li>
-  </ul>
-</li>
-<!-- End Sidebar/Tag Cloud -->
-
 <!-- Sidebar/Links -->
 <li class="list-group-item">
   <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
   <ul class="list-group" id="links">
     <li class="list-group-item">
       <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geography.aegean.gr/" target="_blank">Τμήμα Γεωγραφία</a>
     </li>
     <li class="list-group-item">
       <a href="https://gislab.gr/" target="_blank">GISlab</a>

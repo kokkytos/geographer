@@ -13,13 +13,13 @@
 
         <meta name="author" content="Leonidas Liakos" />
         <meta name="keywords" content="mapnik,ogr,python,σεισμοί" />
-        <meta name="description" content="Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να χρησιμοποιήσει κάποιος μια γλώσσα προγραμματισμού και να συντάξει ένα σενάριο (script), πολύπλοκων αρκετές φορές, εντολών για να παράγει ένα χάρτη από την στιγμή που υπάρχει λογισμικό με γραφικό περιβάλλον που με ευκολία μπορεί να οδηγήσει στο ίδιο αποτέλεσμα; Η απάντηση είναι, μεταξύ άλλων, γιατί θέλει να αυτοματοποιήσει την διαδικασία και να αποφύγει ο χρήστης την επανάληψη εργασιών που πολλές φορές στοιχίζει σε χρόνο και χρήμα. Με την σύνταξη του κατάλληλου σεναρίου ο υπολογιστής αναλαμβάνει να εκτελέσει όλη την εργασία και να την επαναλαμβάνει όποτε ο χρήστης του ορίσει. Για να γίνει πιο κατανοητή η δύναμη της αυτοματοποιημένης χαρτογραφίας παρατίθεται ένα παράδειγμα χαρτογράφησης των σεισμών σε παγκόσμιο επίπεδο. Τα δεδομένα για το υπόβαθρο του χάρτη προέρχονται από την ιστοσελίδα Natural Earth ενώ τα δεδομένα με τα επίκεντρα των σεισμών προέρχονται από το United States Geological Survey (USGS). Διαλέξαμε το αρχείο που περιλαμβάνει τους σεισμούς των τελευταίων 7 ημερών μεγέθους άνω των 2,5 Richter. Σκοπός του σεναρίου (script) είναι: Να κατεβάσει από το διαδίκτυο τα απαραίτητα δεδομένα σε μορφή CSV. Να μετατρέψει το αρχείο CSV σε Shapefile με την βιβλιοθήκη ogr. Να παράγει τον τελικό χάρτη που θα συνδυάζει το γεωφυσικό υπόβαθρο με τα επικεντρα των σεισμών με βοήθεια της βιβλιοθήκης Mapnik. Να φορτώσει τον χάρτη σε μορφή PNG στην τρέχουσα ιστοσελίδα. Να εκτελείται επαναλαμβανόμενα σε καθημερινή βάση ώστε ο χάρτης να ανεβαίνει ενημερωμένος στην σελίδα. Το σενάριο συντάχθηκε με την Python στο λειτουργικό σύστημα Ubuntu Linux 11.04 (Natty Narwhal). Το σενάριο: # -*- coding: utf-8 -*- #!/usr/bin/python #Εισάγουμε τις απαραίτητες βιβλιοθήκες import os, urllib, mapnik, Image, csv, ftplib, datetime from osgeo import ogr from osgeo import osr from StringIO import …" />
+        <meta name="description" content="Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να χρησιμοποιήσει κάποιος μια γλώσσα προγραμματισμού και να συντάξει ένα σενάριο (script), πολύπλοκων αρκετές φορές, εντολών για να παράγει ένα χάρτη από την στιγμή που υπάρχει λογισμικό με γραφικό περιβάλλον που με ευκολία μπορεί να οδηγήσει στο ίδιο αποτέλεσμα; Η απάντηση είναι, μεταξύ άλλων …" />
 
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Αυτοματοποιημένη χαρτογράφηση της σεισμικής δραστηριότητας με βιβλιοθήκες ΕΛΛΑΚ."/>
         <meta property="og:url" content="https://geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/"/>
-        <meta property="og:description" content="Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να χρησιμοποιήσει κάποιος μια γλώσσα προγραμματισμού και να συντάξει ένα σενάριο (script), πολύπλοκων αρκετές φορές, εντολών για να παράγει ένα χάρτη από την στιγμή που υπάρχει λογισμικό με γραφικό περιβάλλον που με ευκολία μπορεί να οδηγήσει στο ίδιο αποτέλεσμα; Η απάντηση είναι, μεταξύ άλλων, γιατί θέλει να αυτοματοποιήσει την διαδικασία και να αποφύγει ο χρήστης την επανάληψη εργασιών που πολλές φορές στοιχίζει σε χρόνο και χρήμα. Με την σύνταξη του κατάλληλου σεναρίου ο υπολογιστής αναλαμβάνει να εκτελέσει όλη την εργασία και να την επαναλαμβάνει όποτε ο χρήστης του ορίσει. Για να γίνει πιο κατανοητή η δύναμη της αυτοματοποιημένης χαρτογραφίας παρατίθεται ένα παράδειγμα χαρτογράφησης των σεισμών σε παγκόσμιο επίπεδο. Τα δεδομένα για το υπόβαθρο του χάρτη προέρχονται από την ιστοσελίδα Natural Earth ενώ τα δεδομένα με τα επίκεντρα των σεισμών προέρχονται από το United States Geological Survey (USGS). Διαλέξαμε το αρχείο που περιλαμβάνει τους σεισμούς των τελευταίων 7 ημερών μεγέθους άνω των 2,5 Richter. Σκοπός του σεναρίου (script) είναι: Να κατεβάσει από το διαδίκτυο τα απαραίτητα δεδομένα σε μορφή CSV. Να μετατρέψει το αρχείο CSV σε Shapefile με την βιβλιοθήκη ogr. Να παράγει τον τελικό χάρτη που θα συνδυάζει το γεωφυσικό υπόβαθρο με τα επικεντρα των σεισμών με βοήθεια της βιβλιοθήκης Mapnik. Να φορτώσει τον χάρτη σε μορφή PNG στην τρέχουσα ιστοσελίδα. Να εκτελείται επαναλαμβανόμενα σε καθημερινή βάση ώστε ο χάρτης να ανεβαίνει ενημερωμένος στην σελίδα. Το σενάριο συντάχθηκε με την Python στο λειτουργικό σύστημα Ubuntu Linux 11.04 (Natty Narwhal). Το σενάριο: # -*- coding: utf-8 -*- #!/usr/bin/python #Εισάγουμε τις απαραίτητες βιβλιοθήκες import os, urllib, mapnik, Image, csv, ftplib, datetime from osgeo import ogr from osgeo import osr from StringIO import …"/>
+        <meta property="og:description" content="Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να χρησιμοποιήσει κάποιος μια γλώσσα προγραμματισμού και να συντάξει ένα σενάριο (script), πολύπλοκων αρκετές φορές, εντολών για να παράγει ένα χάρτη από την στιγμή που υπάρχει λογισμικό με γραφικό περιβάλλον που με ευκολία μπορεί να οδηγήσει στο ίδιο αποτέλεσμα; Η απάντηση είναι, μεταξύ άλλων …"/>
         <meta property="article:published_time" content="2012-01-28" />
             <meta property="article:section" content="GIS" />
             <meta property="article:tag" content="mapnik" />
@@ -136,7 +136,7 @@
     ❄
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/&title=%CE%91%CF%85%CF%84%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CF%80%CE%BF%CE%B9%CE%B7%CE%BC%CE%AD%CE%BD%CE%B7%20%CF%87%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%AC%CF%86%CE%B7%CF%83%CE%B7%20%CF%84%CE%B7%CF%82%20%CF%83%CE%B5%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CE%AE%CF%82%20%CE%B4%CF%81%CE%B1%CF%83%CF%84%CE%B7%CF%81%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CE%BC%CE%B5%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%20%CE%95%CE%9B%CE%9B%CE%91%CE%9A.&summary=%CE%91%CF%81%CE%BA%CE%B5%CF%84%CE%BF%CE%AF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B5%CF%82%2C%20%CE%BA%CF%85%CF%81%CE%AF%CF%89%CF%82%20%CE%B1%CF%81%CF%87%CE%AC%CF%81%CE%B9%CE%BF%CE%B9%2C%20%CE%B1%CE%BD%CE%B1%CF%81%CF%89%CF%84%CE%B9%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%CF%84%CE%AF%20%CE%BD%CE%B1%20%CF%87%CF%81%CE%B7%CF%83%CE%B9%CE%BC%CE%BF%CF%80%CE%BF%CE%B9%CE%AE%CF%83%CE%B5%CE%B9%20%CE%BA%CE%AC%CF%80%CE%BF%CE%B9%CE%BF%CF%82%20%CE%BC%CE%B9%CE%B1%20%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D%20%CE%BA%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CF%83%CF%85%CE%BD%CF%84%CE%AC%CE%BE%CE%B5%CE%B9%20%CE%AD%CE%BD%CE%B1%20%CF%83%CE%B5%CE%BD%CE%AC%CF%81%CE%B9%CE%BF%20%28script%29%2C%20%CF%80%CE%BF%CE%BB%CF%8D%CF%80%CE%BB%CE%BF%CE%BA%CF%89%CE%BD%20%CE%B1%CF%81%CE%BA%CE%B5%CF%84%CE%AD%CF%82%20%CF%86%CE%BF%CF%81%CE%AD%CF%82%2C%20%CE%B5%CE%BD%CF%84%CE%BF%CE%BB%CF%8E%CE%BD%20%CE%B3%CE%B9%CE%B1%20%CE%BD%CE%B1%20%CF%80%CE%B1%CF%81%CE%AC%CE%B3%CE%B5%CE%B9%20%CE%AD%CE%BD%CE%B1%20%CF%87%CE%AC%CF%81%CF%84%CE%B7%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%CE%BD%20%CF%83%CF%84%CE%B9%CE%B3%CE%BC%CE%AE%20%CF%80%CE%BF%CF%85%20%CF%85%CF%80%CE%AC%CF%81%CF%87%CE%B5%CE%B9%20%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CF%8C%20%CE%BC%CE%B5%20%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8C%20%CF%80%CE%B5%CF%81%CE%B9%CE%B2%CE%AC%CE%BB%CE%BB%CE%BF%CE%BD%20%CF%80%CE%BF%CF%85%20%CE%BC%CE%B5%20%CE%B5%CF%85%CE%BA%CE%BF%CE%BB%CE%AF%CE%B1%20%CE%BC%CF%80%CE%BF%CF%81%CE%B5%CE%AF%20%CE%BD%CE%B1%20%CE%BF%CE%B4%CE%B7%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%20%CF%83%CF%84%CE%BF%20%CE%AF%CE%B4%CE%B9%CE%BF%20%CE%B1%CF%80%CE%BF%CF%84%CE%AD%CE%BB%CE%B5%CF%83%CE%BC%CE%B1%3B%20%CE%97%20%CE%B1%CF%80%CE%AC%CE%BD%CF%84%CE%B7%CF%83%CE%B7%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%2C%20%CE%BC%CE%B5%CF%84%CE%B1%CE%BE%CF%8D%20%CE%AC%CE%BB%CE%BB%CF%89%CE%BD%2C%20%CE%B3%CE%B9%CE%B1%CF%84%CE%AF%20%CE%B8%CE%AD%CE%BB%CE%B5%CE%B9%20%CE%BD%CE%B1%20%CE%B1%CF%85%CF%84%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CF%80%CE%BF%CE%B9%CE%AE%CF%83%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%B4%CE%B9%CE%B1%CE%B4%CE%B9%CE%BA%CE%B1%CF%83%CE%AF%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CE%B1%CF%80%CE%BF%CF%86%CF%8D%CE%B3%CE%B5%CE%B9%20%CE%BF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%CF%82%20%CF%84%CE%B7%CE%BD%20%CE%B5%CF%80%CE%B1%CE%BD%CE%AC%CE%BB%CE%B7%CF%88%CE%B7%20%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%B9%CF%8E%CE%BD%20%CF%80%CE%BF%CF%85%20%CF%80%CE%BF%CE%BB%CE%BB%CE%AD%CF%82%20%CF%86%CE%BF%CF%81%CE%AD%CF%82%20%CF%83%CF%84%CE%BF%CE%B9%CF%87%CE%AF%CE%B6%CE%B5%CE%B9%20%CF%83%CE%B5%20%CF%87%CF%81%CF%8C%CE%BD%CE%BF%20%CE%BA%CE%B1%CE%B9%20%CF%87%CF%81%CE%AE%CE%BC%CE%B1.%20%CE%9C%CE%B5%20%CF%84%CE%B7%CE%BD%20%CF%83%CF%8D%CE%BD%CF%84%CE%B1%CE%BE%CE%B7%20%CF%84%CE%BF%CF%85%20%CE%BA%CE%B1%CF%84%CE%AC%CE%BB%CE%BB%CE%B7%CE%BB%CE%BF%CF%85%20%CF%83%CE%B5%CE%BD%CE%B1%CF%81%CE%AF%CE%BF%CF%85%20%CE%BF%20%CF%85%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CF%84%CE%AE%CF%82%20%CE%B1%CE%BD%CE%B1%CE%BB%CE%B1%CE%BC%CE%B2%CE%AC%CE%BD%CE%B5%CE%B9%20%CE%BD%CE%B1%20%CE%B5%CE%BA%CF%84%CE%B5%CE%BB%CE%AD%CF%83%CE%B5%CE%B9%20%CF%8C%CE%BB%CE%B7%20%CF%84%CE%B7%CE%BD%20%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B5%CF%80%CE%B1%CE%BD%CE%B1%CE%BB%CE%B1%CE%BC%CE%B2%CE%AC%CE%BD%CE%B5%CE%B9%20%CF%8C%CF%80%CE%BF%CF%84%CE%B5%20%CE%BF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%CF%82%20%CF%84%CE%BF%CF%85%20%CE%BF%CF%81%CE%AF%CF%83%CE%B5%CE%B9.%0A%0A%CE%93%CE%B9%CE%B1%20%CE%BD%CE%B1%20%CE%B3%CE%AF%CE%BD%CE%B5%CE%B9%20%CF%80%CE%B9%CE%BF%20%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%BF%CE%B7%CF%84%CE%AE%20%CE%B7%20%CE%B4%CF%8D%CE%BD%CE%B1%CE%BC%CE%B7%20%CF%84%CE%B7%CF%82%20%CE%B1%CF%85%CF%84%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CF%80%CE%BF%CE%B9%CE%B7%CE%BC%CE%AD%CE%BD%CE%B7%CF%82%20%CF%87%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%B1%CF%86%CE%AF%CE%B1%CF%82%20%CF%80%CE%B1%CF%81%CE%B1%CF%84%CE%AF%CE%B8%CE%B5%CF%84%CE%B1%CE%B9%20%CE%AD%CE%BD%CE%B1%20%CF%80%CE%B1%CF%81%CE%AC%CE%B4%CE%B5%CE%B9%CE%B3%CE%BC%CE%B1%20%CF%87%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%AC%CF%86%CE%B7%CF%83%CE%B7%CF%82%20%CF%84%CF%89%CE%BD%20%CF%83%CE%B5%CE%B9%CF%83%CE%BC%CF%8E%CE%BD%20%CF%83%CE%B5%20%CF%80%CE%B1%CE%B3%CE%BA%CF%8C%CF%83%CE%BC%CE%B9%CE%BF%20%CE%B5%CF%80%CE%AF%CF%80%CE%B5%CE%B4%CE%BF.%0A%CE%A4%CE%B1%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%85%CF%80%CF%8C%CE%B2%CE%B1%CE%B8%CF%81%CE%BF%20%CF%84%CE%BF%CF%85%20%CF%87%CE%AC%CF%81%CF%84%CE%B7%20%CF%80%CF%81%CE%BF%CE%AD%CF%81%CF%87%CE%BF%CE%BD%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%CE%BD%20%CE%B9%CF%83%CF%84%CE%BF%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1%20Natural%20Earth%20%CE%B5%CE%BD%CF%8E%20%CF%84%CE%B1%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BC%CE%B5%20%CF%84%CE%B1%20%CE%B5%CF%80%CE%AF%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B1%20%CF%84%CF%89%CE%BD%20%CF%83%CE%B5%CE%B9%CF%83%CE%BC%CF%8E%CE%BD%20%CF%80%CF%81%CE%BF%CE%AD%CF%81%CF%87%CE%BF%CE%BD%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20United%20States%20Geological%20Survey%20%28USGS%29.%0A%CE%94%CE%B9%CE%B1%CE%BB%CE%AD%CE%BE%CE%B1%CE%BC%CE%B5%20%CF%84%CE%BF%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%20%CF%80%CE%BF%CF%85%20%CF%80%CE%B5%CF%81%CE%B9%CE%BB%CE%B1%CE%BC%CE%B2%CE%AC%CE%BD%CE%B5%CE%B9%20%CF%84%CE%BF%CF%85%CF%82%20%CF%83%CE%B5%CE%B9%CF%83%CE%BC%CE%BF%CF%8D%CF%82%20%CF%84%CF%89%CE%BD%20%CF%84%CE%B5%CE%BB%CE%B5%CF%85%CF%84%CE%B1%CE%AF%CF%89%CE%BD%207%20%CE%B7%CE%BC%CE%B5%CF%81%CF%8E%CE%BD%20%CE%BC%CE%B5%CE%B3%CE%AD%CE%B8%CE%BF%CF%85%CF%82%20%CE%AC%CE%BD%CF%89%20%CF%84%CF%89%CE%BD%202%2C5%20Richter.%0A%CE%A3%CE%BA%CE%BF%CF%80%CF%8C%CF%82%20%CF%84%CE%BF%CF%85%20%CF%83%CE%B5%CE%BD%CE%B1%CF%81%CE%AF%CE%BF%CF%85%20%28script%29%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%3A%0A%0A%CE%9D%CE%B1%20%CE%BA%CE%B1%CF%84%CE%B5%CE%B2%CE%AC%CF%83%CE%B5%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20%CE%B4%CE%B9%CE%B1%CE%B4%CE%AF%CE%BA%CF%84%CF%85%CE%BF%20%CF%84%CE%B1%20%CE%B1%CF%80%CE%B1%CF%81%CE%B1%CE%AF%CF%84%CE%B7%CF%84%CE%B1%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CF%83%CE%B5%20%CE%BC%CE%BF%CF%81%CF%86%CE%AE%20CSV.%0A%CE%9D%CE%B1%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%AD%CF%88%CE%B5%CE%B9%20%CF%84%CE%BF%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%20CSV%20%CF%83%CE%B5%20Shapefile%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr.%0A%CE%9D%CE%B1%20%CF%80%CE%B1%CF%81%CE%AC%CE%B3%CE%B5%CE%B9%20%CF%84%CE%BF%CE%BD%20%CF%84%CE%B5%CE%BB%CE%B9%CE%BA%CF%8C%20%CF%87%CE%AC%CF%81%CF%84%CE%B7%20%CF%80%CE%BF%CF%85%20%CE%B8%CE%B1%20%CF%83%CF%85%CE%BD%CE%B4%CF%85%CE%AC%CE%B6%CE%B5%CE%B9%20%CF%84%CE%BF%20%CE%B3%CE%B5%CF%89%CF%86%CF%85%CF%83%CE%B9%CE%BA%CF%8C%20%CF%85%CF%80%CF%8C%CE%B2%CE%B1%CE%B8%CF%81%CE%BF%20%CE%BC%CE%B5%20%CF%84%CE%B1%20%CE%B5%CF%80%CE%B9%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CE%B1%20%CF%84%CF%89%CE%BD%20%CF%83%CE%B5%CE%B9%CF%83%CE%BC%CF%8E%CE%BD%20%CE%BC%CE%B5%20%CE%B2%CE%BF%CE%AE%CE%B8%CE%B5%CE%B9%CE%B1%20%CF%84%CE%B7%CF%82%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%CF%82%20Mapnik.%0A%CE%9D%CE%B1%20%CF%86%CE%BF%CF%81%CF%84%CF%8E%CF%83%CE%B5%CE%B9%20%CF%84%CE%BF%CE%BD%20%CF%87%CE%AC%CF%81%CF%84%CE%B7%20%CF%83%CE%B5%20%CE%BC%CE%BF%CF%81%CF%86%CE%AE%20PNG%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%84%CF%81%CE%AD%CF%87%CE%BF%CF%85%CF%83%CE%B1%20%CE%B9%CF%83%CF%84%CE%BF%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1.%0A%CE%9D%CE%B1%20%CE%B5%CE%BA%CF%84%CE%B5%CE%BB%CE%B5%CE%AF%CF%84%CE%B1%CE%B9%20%CE%B5%CF%80%CE%B1%CE%BD%CE%B1%CE%BB%CE%B1%CE%BC%CE%B2%CE%B1%CE%BD%CF%8C%CE%BC%CE%B5%CE%BD%CE%B1%20%CF%83%CE%B5%20%CE%BA%CE%B1%CE%B8%CE%B7%CE%BC%CE%B5%CF%81%CE%B9%CE%BD%CE%AE%20%CE%B2%CE%AC%CF%83%CE%B7%20%CF%8E%CF%83%CF%84%CE%B5%20%CE%BF%20%CF%87%CE%AC%CF%81%CF%84%CE%B7%CF%82%20%CE%BD%CE%B1%20%CE%B1%CE%BD%CE%B5%CE%B2%CE%B1%CE%AF%CE%BD%CE%B5%CE%B9%20%CE%B5%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CE%BC%CE%AD%CE%BD%CE%BF%CF%82%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1.%0A%CE%A4%CE%BF%20%CF%83%CE%B5%CE%BD%CE%AC%CF%81%CE%B9%CE%BF%20%CF%83%CF%85%CE%BD%CF%84%CE%AC%CF%87%CE%B8%CE%B7%CE%BA%CE%B5%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20Python%20%CF%83%CF%84%CE%BF%20%CE%BB%CE%B5%CE%B9%CF%84%CE%BF%CF%85%CF%81%CE%B3%CE%B9%CE%BA%CF%8C%20%CF%83%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1%20Ubuntu%20Linux%2011.04%20%28Natty%20Narwhal%29.%0A%0A%CE%A4%CE%BF%20%CF%83%CE%B5%CE%BD%CE%AC%CF%81%CE%B9%CE%BF%3A%0A%23%20-%2A-%20coding%3A%20utf-8%20-%2A-%0A%23%21/usr/bin/python%0A%0A%23%CE%95%CE%B9%CF%83%CE%AC%CE%B3%CE%BF%CF%85%CE%BC%CE%B5%20%CF%84%CE%B9%CF%82%20%CE%B1%CF%80%CE%B1%CF%81%CE%B1%CE%AF%CF%84%CE%B7%CF%84%CE%B5%CF%82%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%0Aimport%20os%2C%20%20urllib%2C%20mapnik%2C%20%20Image%2C%20%20csv%2C%20%20ftplib%2C%20%20datetime%0Afrom%20osgeo%20import%20ogr%0Afrom%20osgeo%20import%20osr%0Afrom%20StringIO%20import%20%E2%80%A6&source=https%3A//geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/&title=%CE%91%CF%85%CF%84%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CF%80%CE%BF%CE%B9%CE%B7%CE%BC%CE%AD%CE%BD%CE%B7%20%CF%87%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%AC%CF%86%CE%B7%CF%83%CE%B7%20%CF%84%CE%B7%CF%82%20%CF%83%CE%B5%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CE%AE%CF%82%20%CE%B4%CF%81%CE%B1%CF%83%CF%84%CE%B7%CF%81%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CE%BC%CE%B5%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%20%CE%95%CE%9B%CE%9B%CE%91%CE%9A.&summary=%CE%91%CF%81%CE%BA%CE%B5%CF%84%CE%BF%CE%AF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B5%CF%82%2C%20%CE%BA%CF%85%CF%81%CE%AF%CF%89%CF%82%20%CE%B1%CF%81%CF%87%CE%AC%CF%81%CE%B9%CE%BF%CE%B9%2C%20%CE%B1%CE%BD%CE%B1%CF%81%CF%89%CF%84%CE%B9%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%CF%84%CE%AF%20%CE%BD%CE%B1%0A%CF%87%CF%81%CE%B7%CF%83%CE%B9%CE%BC%CE%BF%CF%80%CE%BF%CE%B9%CE%AE%CF%83%CE%B5%CE%B9%20%CE%BA%CE%AC%CF%80%CE%BF%CE%B9%CE%BF%CF%82%20%CE%BC%CE%B9%CE%B1%20%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D%20%CE%BA%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CF%83%CF%85%CE%BD%CF%84%CE%AC%CE%BE%CE%B5%CE%B9%20%CE%AD%CE%BD%CE%B1%0A%CF%83%CE%B5%CE%BD%CE%AC%CF%81%CE%B9%CE%BF%20%28script%29%2C%20%CF%80%CE%BF%CE%BB%CF%8D%CF%80%CE%BB%CE%BF%CE%BA%CF%89%CE%BD%20%CE%B1%CF%81%CE%BA%CE%B5%CF%84%CE%AD%CF%82%20%CF%86%CE%BF%CF%81%CE%AD%CF%82%2C%20%CE%B5%CE%BD%CF%84%CE%BF%CE%BB%CF%8E%CE%BD%20%CE%B3%CE%B9%CE%B1%20%CE%BD%CE%B1%20%CF%80%CE%B1%CF%81%CE%AC%CE%B3%CE%B5%CE%B9%20%CE%AD%CE%BD%CE%B1%0A%CF%87%CE%AC%CF%81%CF%84%CE%B7%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%CE%BD%20%CF%83%CF%84%CE%B9%CE%B3%CE%BC%CE%AE%20%CF%80%CE%BF%CF%85%20%CF%85%CF%80%CE%AC%CF%81%CF%87%CE%B5%CE%B9%20%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CF%8C%20%CE%BC%CE%B5%20%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8C%20%CF%80%CE%B5%CF%81%CE%B9%CE%B2%CE%AC%CE%BB%CE%BB%CE%BF%CE%BD%20%CF%80%CE%BF%CF%85%20%CE%BC%CE%B5%0A%CE%B5%CF%85%CE%BA%CE%BF%CE%BB%CE%AF%CE%B1%20%CE%BC%CF%80%CE%BF%CF%81%CE%B5%CE%AF%20%CE%BD%CE%B1%20%CE%BF%CE%B4%CE%B7%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%20%CF%83%CF%84%CE%BF%20%CE%AF%CE%B4%CE%B9%CE%BF%20%CE%B1%CF%80%CE%BF%CF%84%CE%AD%CE%BB%CE%B5%CF%83%CE%BC%CE%B1%3B%20%CE%97%20%CE%B1%CF%80%CE%AC%CE%BD%CF%84%CE%B7%CF%83%CE%B7%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%2C%20%CE%BC%CE%B5%CF%84%CE%B1%CE%BE%CF%8D%0A%CE%AC%CE%BB%CE%BB%CF%89%CE%BD%20%E2%80%A6&source=https%3A//geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/" title="Share on LinkedIn">LinkedIn</a>
     ❄
     <a href="https://news.ycombinator.com/submitlink?t=%CE%91%CF%85%CF%84%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CF%80%CE%BF%CE%B9%CE%B7%CE%BC%CE%AD%CE%BD%CE%B7%20%CF%87%CE%B1%CF%81%CF%84%CE%BF%CE%B3%CF%81%CE%AC%CF%86%CE%B7%CF%83%CE%B7%20%CF%84%CE%B7%CF%82%20%CF%83%CE%B5%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CE%AE%CF%82%20%CE%B4%CF%81%CE%B1%CF%83%CF%84%CE%B7%CF%81%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1%CF%82%20%CE%BC%CE%B5%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%20%CE%95%CE%9B%CE%9B%CE%91%CE%9A.&u=https%3A//geographer.gr/automatopoiemene-khartographese-tes-seismikes-drasteriotetas-me-bibliothekes-ellak/" title="Share on HackerNews">HackerNews</a>
     ❄
@@ -183,222 +183,243 @@
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να χρησιμοποιήσει κάποιος μια γλώσσα προγραμματισμού και να συντάξει ένα σενάριο (script), πολύπλοκων αρκετές φορές, εντολών για να παράγει ένα χάρτη από την στιγμή που υπάρχει λογισμικό με γραφικό περιβάλλον που με ευκολία μπορεί να οδηγήσει στο ίδιο αποτέλεσμα; Η απάντηση είναι, μεταξύ άλλων, γιατί θέλει να αυτοματοποιήσει την διαδικασία και να αποφύγει ο χρήστης την επανάληψη εργασιών που πολλές φορές στοιχίζει σε χρόνο και χρήμα. Με την σύνταξη του κατάλληλου σεναρίου ο υπολογιστής αναλαμβάνει να εκτελέσει όλη την εργασία και να την επαναλαμβάνει όποτε ο χρήστης του ορίσει.</p>
-<p><img alt="" src="https://geographer.gr/images/eqf1.png"></p>
-<p>Για να γίνει πιο κατανοητή η δύναμη της αυτοματοποιημένης χαρτογραφίας παρατίθεται ένα παράδειγμα χαρτογράφησης των σεισμών σε παγκόσμιο επίπεδο.</p>
-<p>Τα δεδομένα για το υπόβαθρο του χάρτη προέρχονται από την ιστοσελίδα <a href="http://www.naturalearthdata.com/">Natural Earth</a> ενώ τα δεδομένα με τα επίκεντρα των σεισμών προέρχονται από το <a href="http://earthquake.usgs.gov/">United States Geological Survey</a> (USGS).</p>
-<p>Διαλέξαμε το <a href="http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.tx">αρχείο</a> που περιλαμβάνει τους σεισμούς των τελευταίων 7 ημερών μεγέθους άνω των 2,5 Richter.</p>
+                <p>Αρκετοί χρήστες, κυρίως αρχάριοι, αναρωτιούνται γιατί να
+χρησιμοποιήσει κάποιος μια γλώσσα προγραμματισμού και να συντάξει ένα
+σενάριο (script), πολύπλοκων αρκετές φορές, εντολών για να παράγει ένα
+χάρτη από την στιγμή που υπάρχει λογισμικό με γραφικό περιβάλλον που με
+ευκολία μπορεί να οδηγήσει στο ίδιο αποτέλεσμα; Η απάντηση είναι, μεταξύ
+άλλων, γιατί θέλει να αυτοματοποιήσει την διαδικασία και να αποφύγει ο
+χρήστης την επανάληψη εργασιών που πολλές φορές στοιχίζει σε χρόνο και
+χρήμα. Με την σύνταξη του κατάλληλου σεναρίου ο υπολογιστής αναλαμβάνει
+να εκτελέσει όλη την εργασία και να την επαναλαμβάνει όποτε ο χρήστης
+του ορίσει.</p>
+<p><img src="https://geographer.gr/images/eqf1.png"/></p>
+<p>Για να γίνει πιο κατανοητή η δύναμη της αυτοματοποιημένης
+χαρτογραφίας παρατίθεται ένα παράδειγμα χαρτογράφησης των σεισμών σε
+παγκόσμιο επίπεδο.</p>
+<p>Τα δεδομένα για το υπόβαθρο του χάρτη προέρχονται από την ιστοσελίδα
+<a href="http://www.naturalearthdata.com/">Natural Earth</a> ενώ τα
+δεδομένα με τα επίκεντρα των σεισμών προέρχονται από το <a href="http://earthquake.usgs.gov/">United States Geological Survey</a>
+(USGS).</p>
+<p>Διαλέξαμε το <a href="http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.tx">αρχείο</a>
+που περιλαμβάνει τους σεισμούς των τελευταίων 7 ημερών μεγέθους άνω των
+2,5 Richter.</p>
 <p>Σκοπός του σεναρίου (script) είναι:</p>
 <ul>
-<li>Να κατεβάσει από το διαδίκτυο τα απαραίτητα δεδομένα σε μορφή CSV.</li>
+<li>Να κατεβάσει από το διαδίκτυο τα απαραίτητα δεδομένα σε μορφή
+CSV.</li>
 <li>Να μετατρέψει το αρχείο CSV σε Shapefile με την βιβλιοθήκη ogr.</li>
-<li>Να παράγει τον τελικό χάρτη που θα συνδυάζει το γεωφυσικό υπόβαθρο με τα επικεντρα των σεισμών με βοήθεια της βιβλιοθήκης Mapnik.</li>
+<li>Να παράγει τον τελικό χάρτη που θα συνδυάζει το γεωφυσικό υπόβαθρο
+με τα επικεντρα των σεισμών με βοήθεια της βιβλιοθήκης Mapnik.</li>
 <li>Να φορτώσει τον χάρτη σε μορφή PNG στην τρέχουσα ιστοσελίδα.</li>
-<li>Να εκτελείται επαναλαμβανόμενα σε καθημερινή βάση ώστε ο χάρτης να ανεβαίνει ενημερωμένος στην σελίδα.</li>
-<li>Το σενάριο συντάχθηκε με την Python στο λειτουργικό σύστημα Ubuntu Linux 11.04 (Natty Narwhal).</li>
+<li>Να εκτελείται επαναλαμβανόμενα σε καθημερινή βάση ώστε ο χάρτης να
+ανεβαίνει ενημερωμένος στην σελίδα.</li>
+<li>Το σενάριο συντάχθηκε με την Python στο λειτουργικό σύστημα Ubuntu
+Linux 11.04 (Natty Narwhal).</li>
 </ul>
 <p>Το σενάριο:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="c1">#!/usr/bin/python</span>
-
-<span class="c1">#Εισάγουμε τις απαραίτητες βιβλιοθήκες</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span>  <span class="nn">urllib</span><span class="o">,</span> <span class="nn">mapnik</span><span class="o">,</span>  <span class="nn">Image</span><span class="o">,</span>  <span class="nn">csv</span><span class="o">,</span>  <span class="nn">ftplib</span><span class="o">,</span>  <span class="nn">datetime</span>
-<span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">ogr</span>
-<span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">osr</span>
-<span class="kn">from</span> <span class="nn">StringIO</span> <span class="kn">import</span> <span class="n">StringIO</span>
-
-<span class="kn">import</span> <span class="nn">PIL</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">ImageFont</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">ImageDraw</span>
-
-<span class="c1">#Κατεβάζουμε τα απαραίτητα δεδομένα σε csv μορφή</span>
-<span class="nb">print</span> <span class="s2">&quot;Downloading data file...&quot;</span>
-<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="n">url</span> <span class="o">=</span><span class="s1">&#39;http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt&#39;</span>
-<span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;earthquakes.txt&#39;</span>
-<span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span> <span class="n">url</span><span class="p">,</span><span class="n">file</span><span class="p">)</span>
-
-<span class="c1">#Δημιουργία του shapefile</span>
-<span class="n">outShapeFile</span> <span class="o">=</span> <span class="s1">&#39;earthquakes.shp&#39;</span>
-<span class="n">drv</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">GetDriverByName</span><span class="p">(</span><span class="s1">&#39;ESRI Shapefile&#39;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">outShapeFile</span><span class="p">)):</span>
-<span class="n">drv</span><span class="o">.</span><span class="n">DeleteDataSource</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">outShapeFile</span><span class="p">))</span>
-<span class="nb">print</span> <span class="s2">&quot;Deleting shapefile that already exists: &quot;</span> <span class="o">+</span> <span class="n">outShapeFile</span>
-
-<span class="c1"># Δημιουργία SpatialReference</span>
-<span class="n">t_srs</span> <span class="o">=</span> <span class="n">osr</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span>
-<span class="n">t_srs</span><span class="o">.</span><span class="n">SetFromUserInput</span><span class="p">(</span><span class="s1">&#39;WGS84&#39;</span><span class="p">)</span>
-
-<span class="n">ds</span> <span class="o">=</span> <span class="n">drv</span><span class="o">.</span><span class="n">CreateDataSource</span><span class="p">(</span><span class="n">outShapeFile</span><span class="p">)</span>
-<span class="nb">print</span> <span class="s2">&quot;Creating shapefile: &quot;</span> <span class="o">+</span> <span class="n">outShapeFile</span>
-<span class="n">layer</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">CreateLayer</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">GetName</span><span class="p">(),</span> <span class="n">geom_type</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">wkbPoint</span><span class="p">,</span> <span class="n">srs</span> <span class="o">=</span> <span class="n">t_srs</span><span class="p">)</span>
-
-<span class="c1">#Τα πεδία με το όνομα τους και τις ιδιότητές τους</span>
-<span class="n">fields</span><span class="o">=</span><span class="p">[[</span><span class="s1">&#39;Src&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTString</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-<span class="p">[</span><span class="s1">&#39;Eqid&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTString</span> <span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
-<span class="p">[</span><span class="s1">&#39;Version&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTInteger</span><span class="p">]</span> <span class="p">,</span>
-<span class="p">[</span><span class="s1">&#39;Datetime&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTString</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span> <span class="p">,</span>
-<span class="p">[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTReal</span><span class="p">],</span>
-<span class="p">[</span><span class="s1">&#39;Lon&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTReal</span><span class="p">],</span>
-<span class="p">[</span><span class="s1">&#39;Magnitude&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTReal</span><span class="p">],</span>
-<span class="p">[</span><span class="s1">&#39;Depth&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTReal</span><span class="p">],</span>
-<span class="p">[</span><span class="s1">&#39;NST&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTReal</span><span class="p">],</span>
-<span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">OFTString</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
-<span class="p">]</span>
-
-<span class="c1">#Δημιουργία πεδίων</span>
-<span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">:</span>
-<span class="n">fieldname</span><span class="o">=</span><span class="n">field</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">fieldproperty</span><span class="o">=</span><span class="n">field</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span> <span class="s2">&quot;Creating Field &quot;</span>  <span class="o">+</span> <span class="n">fieldname</span>
-<span class="n">ofield</span>  <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">FieldDefn</span><span class="p">(</span><span class="n">fieldname</span><span class="p">,</span> <span class="n">fieldproperty</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">fieldproperty</span> <span class="o">==</span><span class="mi">4</span><span class="p">:</span><span class="c1">#Ειδικό property αν είναι string</span>
-<span class="n">fieldlen</span><span class="o">=</span><span class="n">field</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">ofield</span><span class="o">.</span><span class="n">SetWidth</span><span class="p">(</span><span class="n">fieldlen</span><span class="p">)</span>
-<span class="n">layer</span><span class="o">.</span><span class="n">CreateField</span><span class="p">(</span><span class="n">ofield</span><span class="p">)</span>
-
-<span class="nb">print</span> <span class="s2">&quot;Creating geometry object...&quot;</span>
-<span class="n">geom</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">Geometry</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="n">ogr</span><span class="o">.</span><span class="n">wkbPoint</span><span class="p">)</span>
-
-<span class="c1"># αρχικοποίηση μιας απαραίτητης μεταβλητής</span>
-<span class="n">Line</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-
-<span class="c1">#Ανάγνωση αρχείου csv</span>
-<span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="s1">&#39;earthquakes.txt&#39;</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-<span class="k">while</span> <span class="n">Line</span><span class="o">.</span><span class="n">isalnum</span><span class="p">:</span>
-<span class="n">Line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">Line</span><span class="p">:</span> <span class="k">break</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">Line</span><span class="p">)</span>
-<span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
-<span class="n">geom</span><span class="o">.</span><span class="n">AddPoint</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">]),</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span><span class="c1">#Προσθήκη ενός σημείου</span>
-<span class="n">feat</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">feature_def</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">GetLayerDefn</span><span class="p">())</span>
-<span class="nb">print</span> <span class="s2">&quot;Importing shape into feature.&quot;</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetGeometry</span><span class="p">(</span><span class="n">geom</span><span class="p">)</span>
-<span class="c1">#Προσθήκη δεδομένων στο feature</span>
-<span class="nb">print</span> <span class="s2">&quot;Importing attributes into feature.&quot;</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Src&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Eqid&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Version&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Datetime&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Lon&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Magnitude&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Depth&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;NST&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">layer</span><span class="o">.</span><span class="n">CreateFeature</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span>
-
-<span class="c1">#Διαγραφή objects</span>
-<span class="n">feat</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-<span class="n">ds</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-
-<span class="c1">#Δημιουργία του χάρτη με το mapnik</span>
-
-<span class="n">mapfile</span> <span class="o">=</span> <span class="s1">&#39;world_styles.xml&#39;</span> <span class="c1">#απαραίτητο xml με τις πηγές των αρχείων και διάφορες ιδιότητές τους</span>
-<span class="n">map_output</span> <span class="o">=</span> <span class="s1">&#39;earthquakes.png&#39;</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">550</span><span class="p">)</span>
-<span class="n">mapnik</span><span class="o">.</span><span class="n">load_map</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">mapfile</span><span class="p">)</span>
-<span class="n">bbox</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Envelope</span><span class="p">(</span><span class="n">mapnik</span><span class="o">.</span><span class="n">Coord</span><span class="p">(</span><span class="o">-</span><span class="mf">180.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">90.0</span><span class="p">),</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Coord</span><span class="p">(</span><span class="mf">180.0</span><span class="p">,</span> <span class="mf">90.0</span><span class="p">))</span>
-<span class="n">m</span><span class="o">.</span><span class="n">zoom_to_box</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
-<span class="n">mapnik</span><span class="o">.</span><span class="n">render_to_file</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">map_output</span><span class="p">,</span>  <span class="s2">&quot;png&quot;</span><span class="p">)</span> <span class="c1">#εξαγωγή σε png</span>
-
-<span class="c1">#Αναγραφή της ημερομηνίας ενημέρωσης του χάρτη.</span>
-<span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="s2">&quot;/usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed.ttf&quot;</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">infile</span> <span class="o">=</span> <span class="s2">&quot;earthquakes.png&quot;</span>
-<span class="n">img</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
-<span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-
-<span class="n">curdate</span><span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">-%m-%Y %H:%M&quot;</span><span class="p">)</span>
-<span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span><span class="sa">u</span><span class="s2">&quot;Τελευταία ενημέρωση:&quot;</span> <span class="o">+</span> <span class="n">curdate</span> <span class="o">+</span> <span class="s2">&quot;, by geographer.gr&quot;</span><span class="p">,(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
-<span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;earthquakes.png&quot;</span><span class="p">)</span>
-
-<span class="c1">#Δημιουργία thumbnail</span>
-<span class="nb">print</span> <span class="s2">&quot;Generate the thumbnail&quot;</span>
-<span class="n">thumbfile</span><span class="o">=</span><span class="s2">&quot;earthquakes_404x196_a0da98766e696ec356a29088bc2d8e16.jpg&quot;</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">map_output</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">500</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
-<span class="n">image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">thumbfile</span><span class="p">)</span>
-
-<span class="c1">#Ανέβασμα των χαρτών με ftp στους απαραίτητους φακέλους στο geographer.gr</span>
-<span class="nb">print</span> <span class="s2">&quot;Upload data on geographer.gr&quot;</span>
-<span class="n">ftp</span> <span class="o">=</span> <span class="n">ftplib</span><span class="o">.</span><span class="n">FTP</span><span class="p">(</span><span class="s2">&quot;geographer.gr&quot;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">ftp</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;myusername&quot;</span><span class="p">,</span> <span class="s2">&quot;mypass&quot;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="s1">&#39;/public_html/images/stories/earthquakes&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">ftp</span><span class="o">.</span><span class="n">storbinary</span><span class="p">(</span><span class="s2">&quot;STOR &quot;</span> <span class="o">+</span> <span class="n">map_output</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">map_output</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
-
-<span class="nb">print</span> <span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="s1">&#39;/public_html/plugins/content/fboxbot/thumbs&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">ftp</span><span class="o">.</span><span class="n">storbinary</span><span class="p">(</span><span class="s2">&quot;STOR &quot;</span> <span class="o">+</span> <span class="n">thumbfile</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">thumbfile</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
-<span class="nb">print</span> <span class="s1">&#39;Closing FTP connection&#39;</span>
-<span class="nb">print</span> <span class="n">ftp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nb">print</span> <span class="s2">&quot;Job done!&quot;</span>
-</code></pre></div>
-
-
-<p>Όπως φαίνεται παραπάνω το mapnik χρησιμοποιεί για την δημιουργία του χάρτη ένα αρχείο xml όπου περιέχει την προέλευση των αρχείων των δεδομένων και διάφορες ιδιότητες τους όπως το γεωγραφικό σύστημα αναφορά, σύμβολα και κλάσεις. Το περιεχόμενο του αρχείου δίδεται παρακάτω:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="vm">?</span><span class="nc">xml</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="ss">&quot;1.0&quot;</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="ss">&quot;utf-8&quot;</span><span class="vm">?</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Map</span><span class="w"> </span><span class="n">srs</span><span class="o">=</span><span class="ss">&quot;+init=epsg:4326&quot;</span><span class="w"> </span><span class="n">bgcolor</span><span class="o">=</span><span class="ss">&quot;rgb(255,255,255)&quot;</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">Style</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;NE2_50M_SR_W_style&quot;</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">RasterSymbolizer</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">CssParameter</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;scaling&quot;</span><span class="o">&gt;</span><span class="n">bilinear</span><span class="o">&lt;/</span><span class="n">CssParameter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="n">RasterSymbolizer</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="n">Style</span><span class="o">&gt;</span><span class="w"></span>
-
-<span class="o">&lt;</span><span class="n">Style</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;earthquakes_style&quot;</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Filter</span><span class="o">&gt;</span><span class="p">((</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span><span class="mf">3.5</span><span class="p">))</span><span class="o">&lt;/</span><span class="k">Filter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">PointSymbolizer</span><span class="w"> </span><span class="n">allow_overlap</span><span class="o">=</span><span class="ss">&quot;yes&quot;</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="ss">&quot;symbols/sym_0.png&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="ss">&quot;png&quot;</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="ss">&quot;7&quot;</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="ss">&quot;7&quot;</span><span class="w"> </span><span class="n">opacity</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="o">&gt;&lt;/</span><span class="n">PointSymbolizer</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Filter</span><span class="o">&gt;</span><span class="p">((</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">gt</span><span class="p">;</span><span class="mf">3.5</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span><span class="mf">4.5</span><span class="p">))</span><span class="o">&lt;/</span><span class="k">Filter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">PointSymbolizer</span><span class="w"> </span><span class="n">allow_overlap</span><span class="o">=</span><span class="ss">&quot;yes&quot;</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="ss">&quot;symbols/sym_1.png&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="ss">&quot;png&quot;</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="ss">&quot;9&quot;</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="ss">&quot;9&quot;</span><span class="w"> </span><span class="n">opacity</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="o">&gt;&lt;/</span><span class="n">PointSymbolizer</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Filter</span><span class="o">&gt;</span><span class="p">((</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">gt</span><span class="p">;</span><span class="mf">4.5</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span><span class="o">&lt;/</span><span class="k">Filter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">PointSymbolizer</span><span class="w"> </span><span class="n">allow_overlap</span><span class="o">=</span><span class="ss">&quot;yes&quot;</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="ss">&quot;symbols/sym_2.png&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="ss">&quot;png&quot;</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="ss">&quot;13&quot;</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="ss">&quot;13&quot;</span><span class="w"> </span><span class="n">opacity</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="o">&gt;&lt;/</span><span class="n">PointSymbolizer</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Filter</span><span class="o">&gt;</span><span class="p">((</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">gt</span><span class="p">;</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span><span class="mf">5.5</span><span class="p">))</span><span class="o">&lt;/</span><span class="k">Filter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">PointSymbolizer</span><span class="w"> </span><span class="n">allow_overlap</span><span class="o">=</span><span class="ss">&quot;yes&quot;</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="ss">&quot;symbols/sym_3.png&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="ss">&quot;png&quot;</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="ss">&quot;15&quot;</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="ss">&quot;15&quot;</span><span class="w"> </span><span class="n">opacity</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="o">&gt;&lt;/</span><span class="n">PointSymbolizer</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Filter</span><span class="o">&gt;</span><span class="p">((</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">gt</span><span class="p">;</span><span class="mf">5.5</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">Magnitude</span><span class="o">]&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span><span class="mf">6.2</span><span class="p">))</span><span class="o">&lt;/</span><span class="k">Filter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">PointSymbolizer</span><span class="w"> </span><span class="n">allow_overlap</span><span class="o">=</span><span class="ss">&quot;yes&quot;</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="ss">&quot;symbols/sym_4.png&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="ss">&quot;png&quot;</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="ss">&quot;21&quot;</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="ss">&quot;21&quot;</span><span class="w"> </span><span class="n">opacity</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="o">&gt;&lt;/</span><span class="n">PointSymbolizer</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="k">Rule</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="n">Style</span><span class="o">&gt;</span><span class="w"></span>
-
-<span class="o">&lt;</span><span class="n">Layer</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;HYP_50M_SR_W&quot;</span><span class="w"> </span><span class="n">srs</span><span class="o">=</span><span class="ss">&quot;+init=epsg:4326&quot;</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">StyleName</span><span class="o">&gt;</span><span class="n">NE2_50M_SR_W_style</span><span class="o">&lt;/</span><span class="n">StyleName</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">Datasource</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Parameter</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;file&quot;</span><span class="o">&gt;</span><span class="n">NE2_50M_SR_W</span><span class="o">/</span><span class="n">NE2_50M_SR_W</span><span class="p">.</span><span class="n">tif</span><span class="o">&lt;/</span><span class="k">Parameter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Parameter</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;type&quot;</span><span class="o">&gt;</span><span class="n">gdal</span><span class="o">&lt;/</span><span class="k">Parameter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="n">Datasource</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="n">Layer</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">Layer</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;earthquakes&quot;</span><span class="w"> </span><span class="n">srs</span><span class="o">=</span><span class="ss">&quot;+init=epsg:4326&quot;</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">StyleName</span><span class="o">&gt;</span><span class="n">earthquakes_style</span><span class="o">&lt;/</span><span class="n">StyleName</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">Datasource</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Parameter</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;file&quot;</span><span class="o">&gt;</span><span class="n">earthquakes</span><span class="p">.</span><span class="n">shp</span><span class="o">&lt;/</span><span class="k">Parameter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="k">Parameter</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;type&quot;</span><span class="o">&gt;</span><span class="n">shape</span><span class="o">&lt;/</span><span class="k">Parameter</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="n">Datasource</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&lt;/</span><span class="n">Layer</span><span class="o">&gt;</span><span class="w"></span>
-
-<span class="o">&lt;/</span><span class="k">Map</span><span class="o">&gt;</span><span class="w"></span>
-
-<span class="o">&lt;</span><span class="err">!</span><span class="c1">-- nik2img.py mapnik.xml out.png -d 1017 308 -e -302.42451763 -76.2454581721 301.57881763 105.848158172 --&gt;</span>
-</code></pre></div>
-
-
-<p><img alt="" src="https://geographer.gr/images/earthquakes.png"></p>
-<p>Για την καθημερινή επαναλαμβανόμενη εκτέλεση του σεναρίου (π.χ. στις 8:50 κάθε πρωί) χρησιμοποιούμε την υπηρεσία <a href="https://en.wikipedia.org/wiki/Cron">cron</a> του linux, όπου εισάγουμε την παρακάτω εγγραφή στο αρχείο <a href="https://web.archive.org/web/20230205213835/http://crontab.org/">crontab</a>:</p>
-<div class="highlight"><pre><span></span><code><span class="mf">50</span> <span class="mf">8</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">cd</span> <span class="err">~</span><span class="o">/</span><span class="n">GIS</span><span class="o">/</span><span class="n">earthquakes</span><span class="p">;</span><span class="o">/</span><span class="nb">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python</span>
-</code></pre></div>
+<pre><code># -*- coding: utf-8 -*-
+#!/usr/bin/python
+ 
+#Εισάγουμε τις απαραίτητες βιβλιοθήκες
+import os,  urllib, mapnik,  Image,  csv,  ftplib,  datetime
+from osgeo import ogr
+from osgeo import osr
+from StringIO import StringIO
+ 
+import PIL
+from PIL import ImageFont
+from PIL import Image
+from PIL import ImageDraw
+ 
+#Κατεβάζουμε τα απαραίτητα δεδομένα σε csv μορφή
+print "Downloading data file..."
+now = datetime.datetime.now()
+url ='http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt'
+file = 'earthquakes.txt'
+urllib.urlretrieve( url,file)
+ 
+#Δημιουργία του shapefile
+outShapeFile = 'earthquakes.shp'
+drv = ogr.GetDriverByName('ESRI Shapefile')
+ 
+if os.path.exists(str(outShapeFile)):
+drv.DeleteDataSource(str(outShapeFile))
+print "Deleting shapefile that already exists: " + outShapeFile
+ 
+# Δημιουργία SpatialReference
+t_srs = osr.SpatialReference()
+t_srs.SetFromUserInput('WGS84')
+ 
+ds = drv.CreateDataSource(outShapeFile)
+print "Creating shapefile: " + outShapeFile
+layer = ds.CreateLayer(ds.GetName(), geom_type = ogr.wkbPoint, srs = t_srs)
+ 
+#Τα πεδία με το όνομα τους και τις ιδιότητές τους
+fields=[['Src',  ogr.OFTString, 5],
+['Eqid',  ogr.OFTString , 15],
+['Version',  ogr.OFTInteger] ,
+['Datetime',  ogr.OFTString, 255] ,
+['Lat',  ogr.OFTReal],
+['Lon',  ogr.OFTReal],
+['Magnitude',  ogr.OFTReal],
+['Depth',  ogr.OFTReal],
+['NST',  ogr.OFTReal],
+['Region',  ogr.OFTString, 100]
+]
+ 
+#Δημιουργία πεδίων
+for field in fields:
+fieldname=field[0]
+fieldproperty=field[1]
+print "Creating Field "  + fieldname
+ofield  = ogr.FieldDefn(fieldname, fieldproperty)
+if fieldproperty ==4:#Ειδικό property αν είναι string
+fieldlen=field[2]
+ofield.SetWidth(fieldlen)
+layer.CreateField(ofield)
+ 
+print "Creating geometry object..."
+geom = ogr.Geometry(type=ogr.wkbPoint)
+ 
+# αρχικοποίηση μιας απαραίτητης μεταβλητής
+Line = ""
+ 
+#Ανάγνωση αρχείου csv
+f=open(str('earthquakes.txt'), 'r')
+f.readline()
+while Line.isalnum:
+Line = f.readline()
+if not Line: break
+data = StringIO(Line)
+reader = csv.reader(data, delimiter=',')
+for row in reader:
+geom.AddPoint(float(row[5]),float(row[4]))#Προσθήκη ενός σημείου
+feat = ogr.Feature(feature_def=layer.GetLayerDefn())
+print "Importing shape into feature."
+feat.SetGeometry(geom)
+#Προσθήκη δεδομένων στο feature
+print "Importing attributes into feature."
+feat.SetField('Src',row[0] )
+feat.SetField('Eqid',row[1] )
+feat.SetField('Version',row[2] )
+feat.SetField('Datetime',row[3] )
+feat.SetField('Lat',row[4] )
+feat.SetField('Lon',row[5] )
+feat.SetField('Magnitude',row[6] )
+feat.SetField('Depth',row[7] )
+feat.SetField('NST',row[8] )
+feat.SetField('Region',row[9] )
+layer.CreateFeature(feat)
+ 
+#Διαγραφή objects
+feat.Destroy()
+ds.Destroy()
+ 
+#Δημιουργία του χάρτη με το mapnik
+ 
+mapfile = 'world_styles.xml' #απαραίτητο xml με τις πηγές των αρχείων και διάφορες ιδιότητές τους
+map_output = 'earthquakes.png'
+m = mapnik.Map(1024, 550)
+mapnik.load_map(m, mapfile)
+bbox = mapnik.Envelope(mapnik.Coord(-180.0, -90.0), mapnik.Coord(180.0, 90.0))
+m.zoom_to_box(bbox)
+mapnik.render_to_file(m, map_output,  "png") #εξαγωγή σε png
+ 
+#Αναγραφή της ημερομηνίας ενημέρωσης του χάρτη.
+font = ImageFont.truetype("/usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed.ttf",12)
+infile = "earthquakes.png"
+img=Image.open(infile)
+draw = ImageDraw.Draw(img)
+ 
+curdate= now.strftime("%d-%m-%Y %H:%M")
+draw.text((10, 0),u"Τελευταία ενημέρωση:" + curdate + ", by geographer.gr",(0, 0,0),font=font)
+draw = ImageDraw.Draw(img)
+img.save("earthquakes.png")
+ 
+#Δημιουργία thumbnail
+print "Generate the thumbnail"
+thumbfile="earthquakes_404x196_a0da98766e696ec356a29088bc2d8e16.jpg"
+image = Image.open(map_output)
+image = image.resize((500, 250), Image.ANTIALIAS)
+image.save(thumbfile)
+ 
+#Ανέβασμα των χαρτών με ftp στους απαραίτητους φακέλους στο geographer.gr
+print "Upload data on geographer.gr"
+ftp = ftplib.FTP("geographer.gr")
+print ftp.login("myusername", "mypass")
+print ftp.cwd('/public_html/images/stories/earthquakes')
+print ftp.storbinary("STOR " + map_output, open(map_output, "rb"))
+ 
+print ftp.cwd('/public_html/plugins/content/fboxbot/thumbs')
+print ftp.storbinary("STOR " + thumbfile, open(thumbfile, "rb"))
+print 'Closing FTP connection'
+print ftp.close()
+ 
+print "Job done!"
+</code></pre>
+<p>Όπως φαίνεται παραπάνω το mapnik χρησιμοποιεί για την δημιουργία του
+χάρτη ένα αρχείο xml όπου περιέχει την προέλευση των αρχείων των
+δεδομένων και διάφορες ιδιότητες τους όπως το γεωγραφικό σύστημα
+αναφορά, σύμβολα και κλάσεις. Το περιεχόμενο του αρχείου δίδεται
+παρακάτω:</p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Map srs="+init=epsg:4326" bgcolor="rgb(255,255,255)"&gt;
+&lt;Style name="NE2_50M_SR_W_style"&gt;
+&lt;Rule&gt;
+&lt;RasterSymbolizer&gt;
+&lt;CssParameter name="scaling"&gt;bilinear&lt;/CssParameter&gt;
+&lt;/RasterSymbolizer&gt;
+&lt;/Rule&gt;
+&lt;/Style&gt;
+ 
+&lt;Style name="earthquakes_style"&gt;
+&lt;Rule&gt;
+&lt;Filter&gt;(([Magnitude]&amp;amp;gt;=2.5) and ([Magnitude]&amp;amp;lt;=3.5))&lt;/Filter&gt;
+&lt;PointSymbolizer allow_overlap="yes" file="symbols/sym_0.png" type="png" width="7" height="7" opacity="1"&gt;&lt;/PointSymbolizer&gt;
+&lt;/Rule&gt;
+&lt;Rule&gt;
+&lt;Filter&gt;(([Magnitude]&amp;amp;gt;3.5) and ([Magnitude]&amp;amp;lt;=4.5))&lt;/Filter&gt;
+&lt;PointSymbolizer allow_overlap="yes" file="symbols/sym_1.png" type="png" width="9" height="9" opacity="1"&gt;&lt;/PointSymbolizer&gt;
+&lt;/Rule&gt;
+&lt;Rule&gt;
+&lt;Filter&gt;(([Magnitude]&amp;amp;gt;4.5) and ([Magnitude]&amp;amp;lt;=5))&lt;/Filter&gt;
+&lt;PointSymbolizer allow_overlap="yes" file="symbols/sym_2.png" type="png" width="13" height="13" opacity="1"&gt;&lt;/PointSymbolizer&gt;
+&lt;/Rule&gt;
+&lt;Rule&gt;
+&lt;Filter&gt;(([Magnitude]&amp;amp;gt;5) and ([Magnitude]&amp;amp;lt;=5.5))&lt;/Filter&gt;
+&lt;PointSymbolizer allow_overlap="yes" file="symbols/sym_3.png" type="png" width="15" height="15" opacity="1"&gt;&lt;/PointSymbolizer&gt;
+&lt;/Rule&gt;
+&lt;Rule&gt;
+&lt;Filter&gt;(([Magnitude]&amp;amp;gt;5.5) and ([Magnitude]&amp;amp;lt;=6.2))&lt;/Filter&gt;
+&lt;PointSymbolizer allow_overlap="yes" file="symbols/sym_4.png" type="png" width="21" height="21" opacity="1"&gt;&lt;/PointSymbolizer&gt;
+&lt;/Rule&gt;
+&lt;/Style&gt;
+ 
+&lt;Layer name="HYP_50M_SR_W" srs="+init=epsg:4326"&gt;
+&lt;StyleName&gt;NE2_50M_SR_W_style&lt;/StyleName&gt;
+&lt;Datasource&gt;
+&lt;Parameter name="file"&gt;NE2_50M_SR_W/NE2_50M_SR_W.tif&lt;/Parameter&gt;
+&lt;Parameter name="type"&gt;gdal&lt;/Parameter&gt;
+&lt;/Datasource&gt;
+&lt;/Layer&gt;
+&lt;Layer name="earthquakes" srs="+init=epsg:4326"&gt;
+&lt;StyleName&gt;earthquakes_style&lt;/StyleName&gt;
+&lt;Datasource&gt;
+&lt;Parameter name="file"&gt;earthquakes.shp&lt;/Parameter&gt;
+&lt;Parameter name="type"&gt;shape&lt;/Parameter&gt;
+&lt;/Datasource&gt;
+&lt;/Layer&gt;
+ 
+&lt;/Map&gt;
+ 
+&lt;!-- nik2img.py mapnik.xml out.png -d 1017 308 -e -302.42451763 -76.2454581721 301.57881763 105.848158172 --&gt;
+</code></pre>
+<p><img src="https://geographer.gr/images/earthquakes.png"/></p>
+<p>Για την καθημερινή επαναλαμβανόμενη εκτέλεση του σεναρίου (π.χ. στις
+8:50 κάθε πρωί) χρησιμοποιούμε την υπηρεσία <a href="https://en.wikipedia.org/wiki/Cron">cron</a> του linux, όπου
+εισάγουμε την παρακάτω εγγραφή στο αρχείο <a href="https://web.archive.org/web/20230205213835/http://crontab.org/">crontab</a>:</p>
+<pre><code>50 8 * * * cd ~/GIS/earthquakes;/usr/bin/python</code></pre>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -466,320 +487,15 @@
 </li>
 <!-- End Sidebar/Categories -->
 
-<!-- Sidebar/Tag Cloud -->
-<li class="list-group-item">
-  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-  <ul class="list-group list-inline tagcloud" id="tags">
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/api.html">API</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/big-data.html">big data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/blender.html">Blender</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/costs.html">Costs</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dem.html">dem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/discharges.html">discharges</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eu-soil-observatory.html">EU soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/europe.html">Europe</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/floods.html">floods</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gis.html">GIS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/github.html">github</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hg.html">Hg</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/off-site.html">Off-site</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phd.html">phd</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/policy.html">Policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/precipitation.html">precipitation</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
-    </li>
-    <li class="list-group-item tag-0">
-      <a href="https://geographer.gr/tag/python.html">python</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/r.html">R</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/raster.html">raster</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/redes.html">REDES</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/reservoir-sedimentation.html">Reservoir sedimentation</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/risk.html">Risk</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sar.html">SAR</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/soil-erosion.html">soil erosion</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-policy.html">Soil policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sql.html">sql</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/stack.html">stack</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
-    </li>
-  </ul>
-</li>
-<!-- End Sidebar/Tag Cloud -->
-
 <!-- Sidebar/Links -->
 <li class="list-group-item">
   <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
   <ul class="list-group" id="links">
     <li class="list-group-item">
       <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geography.aegean.gr/" target="_blank">Τμήμα Γεωγραφία</a>
     </li>
     <li class="list-group-item">
       <a href="https://gislab.gr/" target="_blank">GISlab</a>

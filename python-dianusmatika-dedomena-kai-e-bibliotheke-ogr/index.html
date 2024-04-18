@@ -13,13 +13,13 @@
 
         <meta name="author" content="Leonidas Liakos" />
         <meta name="keywords" content="ogr,osr,python,vector" />
-        <meta name="description" content="Λιάκος Λ., 2011, Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr, 1η Συνάντηση Ελλήνων Χρηστών GRASS and GFOSS, HellasGI, ΕΛ/ΛΑΚ, ΤΜΧΠΑ-Πανεπιστήμιο Θεσσαλίας,ΤΕΙ Σερρών, ελληνικό παράρτημα του OSGeo, Αργαλαστή Πηλίου, 17-19/6/2011 Περιγραφή παρουσίασης: Tο τρέχον εκπαιδευτικό βοήθημα έχει σαν στόχο να εξοικειωθούν οι ενδιαφερόμενοι με ένα εναλλακτικό μοντέλο προγραμματισμού όσον αφορά την προσπέλαση και επεξεργασία γεωχωρικών δεδομένων. Εναλλακτικό γιατί στηρίζεται στις δυναμικές και συνεχώς εξελισσόμενες, αλλά πολλές φορές παρεξηγημένες και απρόσιτες για τον κοινό χρήστη, τεχνολογίες του ελεύθερου και ανοικτού λογισμικού. Για τον προγραμματισμό του εν λόγω βοηθήματος επελέγει η διερμηνευόμενη και αντικειμενοστραφής γλώσσα Python καθώς ο διερμηνευτής της είναι διαθέσιμος σε διάφορα λειτουργικά συστήματα αλλά και για την ευκολία και απλότητα της σύνταξή της. Σε συνάρτηση με την γλώσσα προγραμματισμού λειτουργούν και οι σχετικές βιβλιοθήκες για την προσπέλαση των γεωχωρικών δεδομένων. Η βιβλιοθήκη gdal χρησιμοποιείται για την προσπέλαση ψηφιδωτών γεωχωρικών δεδομένων και η βιβλιοθήκη ogr για την προσπέλαση διανυσματικών δεδομένων. Το βοήθημα επικεντρώνεται στην ανάγνωση και εγγραφή διανυσματικών δεδομένων, την δημιουργία γεωμετριών και τον χειρισμό και μετατροπή προβολικών συστημάτων, το φιλτράρισμα και την παρουσίαση των λειτουργιών ανάλυσης που παρέχει η βιβλιοθήκη ogr. Για την παρακολούθηση των διαδικασιών του βοηθήματος θεωρείται απαραίτητη η γνώση βασικών αρχών προγραμματισμού και η σύνταξη στην γλώσσα Python. Τα παραδείγματα που θα παρουσιαστούν εκτελούνται σε περιβάλλον Linux ωστόσο οι χρήστες Windows με την εγκατάσταση του απαραίτητου λογισμικού μπορούν με ευκολία να ακολουθήσουν. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 …" />
+        <meta name="description" content="Λιάκος Λ., 2011, Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr, 1η Συνάντηση Ελλήνων Χρηστών GRASS and GFOSS, HellasGI, ΕΛ/ΛΑΚ, ΤΜΧΠΑ-Πανεπιστήμιο Θεσσαλίας,ΤΕΙ Σερρών, ελληνικό παράρτημα του OSGeo, Αργαλαστή Πηλίου, 17-19/6/2011 Περιγραφή παρουσίασης: Tο τρέχον εκπαιδευτικό βοήθημα έχει σαν στόχο να εξοικειωθούν οι ενδιαφερόμενοι με ένα εναλλακτικό μοντέλο …" />
 
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr"/>
         <meta property="og:url" content="https://geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr/"/>
-        <meta property="og:description" content="Λιάκος Λ., 2011, Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr, 1η Συνάντηση Ελλήνων Χρηστών GRASS and GFOSS, HellasGI, ΕΛ/ΛΑΚ, ΤΜΧΠΑ-Πανεπιστήμιο Θεσσαλίας,ΤΕΙ Σερρών, ελληνικό παράρτημα του OSGeo, Αργαλαστή Πηλίου, 17-19/6/2011 Περιγραφή παρουσίασης: Tο τρέχον εκπαιδευτικό βοήθημα έχει σαν στόχο να εξοικειωθούν οι ενδιαφερόμενοι με ένα εναλλακτικό μοντέλο προγραμματισμού όσον αφορά την προσπέλαση και επεξεργασία γεωχωρικών δεδομένων. Εναλλακτικό γιατί στηρίζεται στις δυναμικές και συνεχώς εξελισσόμενες, αλλά πολλές φορές παρεξηγημένες και απρόσιτες για τον κοινό χρήστη, τεχνολογίες του ελεύθερου και ανοικτού λογισμικού. Για τον προγραμματισμό του εν λόγω βοηθήματος επελέγει η διερμηνευόμενη και αντικειμενοστραφής γλώσσα Python καθώς ο διερμηνευτής της είναι διαθέσιμος σε διάφορα λειτουργικά συστήματα αλλά και για την ευκολία και απλότητα της σύνταξή της. Σε συνάρτηση με την γλώσσα προγραμματισμού λειτουργούν και οι σχετικές βιβλιοθήκες για την προσπέλαση των γεωχωρικών δεδομένων. Η βιβλιοθήκη gdal χρησιμοποιείται για την προσπέλαση ψηφιδωτών γεωχωρικών δεδομένων και η βιβλιοθήκη ogr για την προσπέλαση διανυσματικών δεδομένων. Το βοήθημα επικεντρώνεται στην ανάγνωση και εγγραφή διανυσματικών δεδομένων, την δημιουργία γεωμετριών και τον χειρισμό και μετατροπή προβολικών συστημάτων, το φιλτράρισμα και την παρουσίαση των λειτουργιών ανάλυσης που παρέχει η βιβλιοθήκη ogr. Για την παρακολούθηση των διαδικασιών του βοηθήματος θεωρείται απαραίτητη η γνώση βασικών αρχών προγραμματισμού και η σύνταξη στην γλώσσα Python. Τα παραδείγματα που θα παρουσιαστούν εκτελούνται σε περιβάλλον Linux ωστόσο οι χρήστες Windows με την εγκατάσταση του απαραίτητου λογισμικού μπορούν με ευκολία να ακολουθήσουν. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 …"/>
+        <meta property="og:description" content="Λιάκος Λ., 2011, Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr, 1η Συνάντηση Ελλήνων Χρηστών GRASS and GFOSS, HellasGI, ΕΛ/ΛΑΚ, ΤΜΧΠΑ-Πανεπιστήμιο Θεσσαλίας,ΤΕΙ Σερρών, ελληνικό παράρτημα του OSGeo, Αργαλαστή Πηλίου, 17-19/6/2011 Περιγραφή παρουσίασης: Tο τρέχον εκπαιδευτικό βοήθημα έχει σαν στόχο να εξοικειωθούν οι ενδιαφερόμενοι με ένα εναλλακτικό μοντέλο …"/>
         <meta property="article:published_time" content="2011-06-22" />
             <meta property="article:section" content="GIS" />
             <meta property="article:tag" content="ogr" />
@@ -136,7 +136,7 @@
     ❄
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr/" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr/&title=Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr&summary=%CE%9B%CE%B9%CE%AC%CE%BA%CE%BF%CF%82%20%CE%9B.%2C%202011%2C%20Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr%2C%201%CE%B7%20%CE%A3%CF%85%CE%BD%CE%AC%CE%BD%CF%84%CE%B7%CF%83%CE%B7%20%CE%95%CE%BB%CE%BB%CE%AE%CE%BD%CF%89%CE%BD%20%CE%A7%CF%81%CE%B7%CF%83%CF%84%CF%8E%CE%BD%20GRASS%20and%20GFOSS%2C%20HellasGI%2C%20%CE%95%CE%9B/%CE%9B%CE%91%CE%9A%2C%20%CE%A4%CE%9C%CE%A7%CE%A0%CE%91-%CE%A0%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%AF%CE%B1%CF%82%2C%CE%A4%CE%95%CE%99%20%CE%A3%CE%B5%CF%81%CF%81%CF%8E%CE%BD%2C%20%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C%20%CF%80%CE%B1%CF%81%CE%AC%CF%81%CF%84%CE%B7%CE%BC%CE%B1%20%CF%84%CE%BF%CF%85%20OSGeo%2C%20%CE%91%CF%81%CE%B3%CE%B1%CE%BB%CE%B1%CF%83%CF%84%CE%AE%20%CE%A0%CE%B7%CE%BB%CE%AF%CE%BF%CF%85%2C%2017-19/6/2011%0A%CE%A0%CE%B5%CF%81%CE%B9%CE%B3%CF%81%CE%B1%CF%86%CE%AE%20%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%AF%CE%B1%CF%83%CE%B7%CF%82%3A%0AT%CE%BF%20%CF%84%CF%81%CE%AD%CF%87%CE%BF%CE%BD%20%CE%B5%CE%BA%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CF%85%CF%84%CE%B9%CE%BA%CF%8C%20%CE%B2%CE%BF%CE%AE%CE%B8%CE%B7%CE%BC%CE%B1%20%CE%AD%CF%87%CE%B5%CE%B9%20%CF%83%CE%B1%CE%BD%20%CF%83%CF%84%CF%8C%CF%87%CE%BF%20%CE%BD%CE%B1%20%CE%B5%CE%BE%CE%BF%CE%B9%CE%BA%CE%B5%CE%B9%CF%89%CE%B8%CE%BF%CF%8D%CE%BD%20%CE%BF%CE%B9%20%CE%B5%CE%BD%CE%B4%CE%B9%CE%B1%CF%86%CE%B5%CF%81%CF%8C%CE%BC%CE%B5%CE%BD%CE%BF%CE%B9%20%CE%BC%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CE%B5%CE%BD%CE%B1%CE%BB%CE%BB%CE%B1%CE%BA%CF%84%CE%B9%CE%BA%CF%8C%20%CE%BC%CE%BF%CE%BD%CF%84%CE%AD%CE%BB%CE%BF%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D%20%CF%8C%CF%83%CE%BF%CE%BD%20%CE%B1%CF%86%CE%BF%CF%81%CE%AC%20%CF%84%CE%B7%CE%BD%20%CF%80%CF%81%CE%BF%CF%83%CF%80%CE%AD%CE%BB%CE%B1%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CE%B5%CF%80%CE%B5%CE%BE%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%20%CE%B3%CE%B5%CF%89%CF%87%CF%89%CF%81%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD.%20%CE%95%CE%BD%CE%B1%CE%BB%CE%BB%CE%B1%CE%BA%CF%84%CE%B9%CE%BA%CF%8C%20%CE%B3%CE%B9%CE%B1%CF%84%CE%AF%20%CF%83%CF%84%CE%B7%CF%81%CE%AF%CE%B6%CE%B5%CF%84%CE%B1%CE%B9%20%CF%83%CF%84%CE%B9%CF%82%20%CE%B4%CF%85%CE%BD%CE%B1%CE%BC%CE%B9%CE%BA%CE%AD%CF%82%20%CE%BA%CE%B1%CE%B9%20%CF%83%CF%85%CE%BD%CE%B5%CF%87%CF%8E%CF%82%20%CE%B5%CE%BE%CE%B5%CE%BB%CE%B9%CF%83%CF%83%CF%8C%CE%BC%CE%B5%CE%BD%CE%B5%CF%82%2C%20%CE%B1%CE%BB%CE%BB%CE%AC%20%CF%80%CE%BF%CE%BB%CE%BB%CE%AD%CF%82%20%CF%86%CE%BF%CF%81%CE%AD%CF%82%20%CF%80%CE%B1%CF%81%CE%B5%CE%BE%CE%B7%CE%B3%CE%B7%CE%BC%CE%AD%CE%BD%CE%B5%CF%82%20%CE%BA%CE%B1%CE%B9%20%CE%B1%CF%80%CF%81%CF%8C%CF%83%CE%B9%CF%84%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BA%CE%BF%CE%B9%CE%BD%CF%8C%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%2C%20%CF%84%CE%B5%CF%87%CE%BD%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B5%CF%82%20%CF%84%CE%BF%CF%85%20%CE%B5%CE%BB%CE%B5%CF%8D%CE%B8%CE%B5%CF%81%CE%BF%CF%85%20%CE%BA%CE%B1%CE%B9%20%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D%20%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CE%BF%CF%8D.%20%CE%93%CE%B9%CE%B1%20%CF%84%CE%BF%CE%BD%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CF%8C%20%CF%84%CE%BF%CF%85%20%CE%B5%CE%BD%20%CE%BB%CF%8C%CE%B3%CF%89%20%CE%B2%CE%BF%CE%B7%CE%B8%CE%AE%CE%BC%CE%B1%CF%84%CE%BF%CF%82%20%CE%B5%CF%80%CE%B5%CE%BB%CE%AD%CE%B3%CE%B5%CE%B9%20%CE%B7%20%CE%B4%CE%B9%CE%B5%CF%81%CE%BC%CE%B7%CE%BD%CE%B5%CF%85%CF%8C%CE%BC%CE%B5%CE%BD%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CE%B1%CE%BD%CF%84%CE%B9%CE%BA%CE%B5%CE%B9%CE%BC%CE%B5%CE%BD%CE%BF%CF%83%CF%84%CF%81%CE%B1%CF%86%CE%AE%CF%82%20%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1%20Python%20%CE%BA%CE%B1%CE%B8%CF%8E%CF%82%20%CE%BF%20%CE%B4%CE%B9%CE%B5%CF%81%CE%BC%CE%B7%CE%BD%CE%B5%CF%85%CF%84%CE%AE%CF%82%20%CF%84%CE%B7%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B4%CE%B9%CE%B1%CE%B8%CE%AD%CF%83%CE%B9%CE%BC%CE%BF%CF%82%20%CF%83%CE%B5%20%CE%B4%CE%B9%CE%AC%CF%86%CE%BF%CF%81%CE%B1%20%CE%BB%CE%B5%CE%B9%CF%84%CE%BF%CF%85%CF%81%CE%B3%CE%B9%CE%BA%CE%AC%20%CF%83%CF%85%CF%83%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%B1%20%CE%B1%CE%BB%CE%BB%CE%AC%20%CE%BA%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B5%CF%85%CE%BA%CE%BF%CE%BB%CE%AF%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B1%CF%80%CE%BB%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CF%84%CE%B7%CF%82%20%CF%83%CF%8D%CE%BD%CF%84%CE%B1%CE%BE%CE%AE%20%CF%84%CE%B7%CF%82.%20%CE%A3%CE%B5%20%CF%83%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D%20%CE%BB%CE%B5%CE%B9%CF%84%CE%BF%CF%85%CF%81%CE%B3%CE%BF%CF%8D%CE%BD%20%CE%BA%CE%B1%CE%B9%20%CE%BF%CE%B9%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AD%CF%82%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CF%81%CE%BF%CF%83%CF%80%CE%AD%CE%BB%CE%B1%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CE%B3%CE%B5%CF%89%CF%87%CF%89%CF%81%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD.%0A%CE%97%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20gdal%20%CF%87%CF%81%CE%B7%CF%83%CE%B9%CE%BC%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CF%84%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CF%81%CE%BF%CF%83%CF%80%CE%AD%CE%BB%CE%B1%CF%83%CE%B7%20%CF%88%CE%B7%CF%86%CE%B9%CE%B4%CF%89%CF%84%CF%8E%CE%BD%20%CE%B3%CE%B5%CF%89%CF%87%CF%89%CF%81%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CF%81%CE%BF%CF%83%CF%80%CE%AD%CE%BB%CE%B1%CF%83%CE%B7%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD.%20%CE%A4%CE%BF%20%CE%B2%CE%BF%CE%AE%CE%B8%CE%B7%CE%BC%CE%B1%20%CE%B5%CF%80%CE%B9%CE%BA%CE%B5%CE%BD%CF%84%CF%81%CF%8E%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B1%CE%BD%CE%AC%CE%B3%CE%BD%CF%89%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CE%B5%CE%B3%CE%B3%CF%81%CE%B1%CF%86%CE%AE%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%2C%20%CF%84%CE%B7%CE%BD%20%CE%B4%CE%B7%CE%BC%CE%B9%CE%BF%CF%85%CF%81%CE%B3%CE%AF%CE%B1%20%CE%B3%CE%B5%CF%89%CE%BC%CE%B5%CF%84%CF%81%CE%B9%CF%8E%CE%BD%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%CE%BD%20%CF%87%CE%B5%CE%B9%CF%81%CE%B9%CF%83%CE%BC%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%80%CF%81%CE%BF%CE%B2%CE%BF%CE%BB%CE%B9%CE%BA%CF%8E%CE%BD%20%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%AC%CF%84%CF%89%CE%BD%2C%20%CF%84%CE%BF%20%CF%86%CE%B9%CE%BB%CF%84%CF%81%CE%AC%CF%81%CE%B9%CF%83%CE%BC%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%AF%CE%B1%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CE%BB%CE%B5%CE%B9%CF%84%CE%BF%CF%85%CF%81%CE%B3%CE%B9%CF%8E%CE%BD%20%CE%B1%CE%BD%CE%AC%CE%BB%CF%85%CF%83%CE%B7%CF%82%20%CF%80%CE%BF%CF%85%20%CF%80%CE%B1%CF%81%CE%AD%CF%87%CE%B5%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr.%20%CE%93%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%B1%CF%81%CE%B1%CE%BA%CE%BF%CE%BB%CE%BF%CF%8D%CE%B8%CE%B7%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CE%B4%CE%B9%CE%B1%CE%B4%CE%B9%CE%BA%CE%B1%CF%83%CE%B9%CF%8E%CE%BD%20%CF%84%CE%BF%CF%85%20%CE%B2%CE%BF%CE%B7%CE%B8%CE%AE%CE%BC%CE%B1%CF%84%CE%BF%CF%82%20%CE%B8%CE%B5%CF%89%CF%81%CE%B5%CE%AF%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CE%B1%CF%81%CE%B1%CE%AF%CF%84%CE%B7%CF%84%CE%B7%20%CE%B7%20%CE%B3%CE%BD%CF%8E%CF%83%CE%B7%20%CE%B2%CE%B1%CF%83%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%B1%CF%81%CF%87%CF%8E%CE%BD%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CF%83%CF%8D%CE%BD%CF%84%CE%B1%CE%BE%CE%B7%20%CF%83%CF%84%CE%B7%CE%BD%20%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1%20Python.%20%CE%A4%CE%B1%20%CF%80%CE%B1%CF%81%CE%B1%CE%B4%CE%B5%CE%AF%CE%B3%CE%BC%CE%B1%CF%84%CE%B1%20%CF%80%CE%BF%CF%85%20%CE%B8%CE%B1%20%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%B9%CE%B1%CF%83%CF%84%CE%BF%CF%8D%CE%BD%20%CE%B5%CE%BA%CF%84%CE%B5%CE%BB%CE%BF%CF%8D%CE%BD%CF%84%CE%B1%CE%B9%20%CF%83%CE%B5%20%CF%80%CE%B5%CF%81%CE%B9%CE%B2%CE%AC%CE%BB%CE%BB%CE%BF%CE%BD%20Linux%20%CF%89%CF%83%CF%84%CF%8C%CF%83%CE%BF%20%CE%BF%CE%B9%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B5%CF%82%20Windows%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%B5%CE%B3%CE%BA%CE%B1%CF%84%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7%20%CF%84%CE%BF%CF%85%20%CE%B1%CF%80%CE%B1%CF%81%CE%B1%CE%AF%CF%84%CE%B7%CF%84%CE%BF%CF%85%20%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CE%BF%CF%8D%20%CE%BC%CF%80%CE%BF%CF%81%CE%BF%CF%8D%CE%BD%20%CE%BC%CE%B5%20%CE%B5%CF%85%CE%BA%CE%BF%CE%BB%CE%AF%CE%B1%20%CE%BD%CE%B1%20%CE%B1%CE%BA%CE%BF%CE%BB%CE%BF%CF%85%CE%B8%CE%AE%CF%83%CE%BF%CF%85%CE%BD.%0A%20%201%0A%20%202%0A%20%203%0A%20%204%0A%20%205%0A%20%206%0A%20%207%0A%20%208%0A%20%209%0A%2010%0A%2011%0A%2012%0A%2013%0A%2014%0A%2015%0A%2016%0A%2017%0A%2018%0A%2019%0A%2020%0A%2021%0A%2022%0A%2023%0A%2024%0A%2025%0A%2026%0A%2027%0A%2028%0A%2029%0A%2030%20%E2%80%A6&source=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr/" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr/&title=Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr&summary=%CE%9B%CE%B9%CE%AC%CE%BA%CE%BF%CF%82%20%CE%9B.%2C%202011%2C%20Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr%2C%0A1%CE%B7%20%CE%A3%CF%85%CE%BD%CE%AC%CE%BD%CF%84%CE%B7%CF%83%CE%B7%20%CE%95%CE%BB%CE%BB%CE%AE%CE%BD%CF%89%CE%BD%20%CE%A7%CF%81%CE%B7%CF%83%CF%84%CF%8E%CE%BD%20GRASS%20and%20GFOSS%2C%20HellasGI%2C%20%CE%95%CE%9B/%CE%9B%CE%91%CE%9A%2C%0A%CE%A4%CE%9C%CE%A7%CE%A0%CE%91-%CE%A0%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%AF%CE%B1%CF%82%2C%CE%A4%CE%95%CE%99%20%CE%A3%CE%B5%CF%81%CF%81%CF%8E%CE%BD%2C%20%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C%20%CF%80%CE%B1%CF%81%CE%AC%CF%81%CF%84%CE%B7%CE%BC%CE%B1%20%CF%84%CE%BF%CF%85%20OSGeo%2C%0A%CE%91%CF%81%CE%B3%CE%B1%CE%BB%CE%B1%CF%83%CF%84%CE%AE%20%CE%A0%CE%B7%CE%BB%CE%AF%CE%BF%CF%85%2C%2017-19/6/2011%0A%CE%A0%CE%B5%CF%81%CE%B9%CE%B3%CF%81%CE%B1%CF%86%CE%AE%20%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%AF%CE%B1%CF%83%CE%B7%CF%82%3A%0AT%CE%BF%20%CF%84%CF%81%CE%AD%CF%87%CE%BF%CE%BD%20%CE%B5%CE%BA%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CF%85%CF%84%CE%B9%CE%BA%CF%8C%20%CE%B2%CE%BF%CE%AE%CE%B8%CE%B7%CE%BC%CE%B1%20%CE%AD%CF%87%CE%B5%CE%B9%20%CF%83%CE%B1%CE%BD%20%CF%83%CF%84%CF%8C%CF%87%CE%BF%20%CE%BD%CE%B1%20%CE%B5%CE%BE%CE%BF%CE%B9%CE%BA%CE%B5%CE%B9%CF%89%CE%B8%CE%BF%CF%8D%CE%BD%20%CE%BF%CE%B9%0A%CE%B5%CE%BD%CE%B4%CE%B9%CE%B1%CF%86%CE%B5%CF%81%CF%8C%CE%BC%CE%B5%CE%BD%CE%BF%CE%B9%20%CE%BC%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CE%B5%CE%BD%CE%B1%CE%BB%CE%BB%CE%B1%CE%BA%CF%84%CE%B9%CE%BA%CF%8C%20%CE%BC%CE%BF%CE%BD%CF%84%CE%AD%CE%BB%CE%BF%20%E2%80%A6&source=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr/" title="Share on LinkedIn">LinkedIn</a>
     ❄
     <a href="https://news.ycombinator.com/submitlink?t=Python%2C%20%CE%B4%CE%B9%CE%B1%CE%BD%CF%85%CF%83%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AC%20%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CE%B2%CE%B9%CE%B2%CE%BB%CE%B9%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7%20ogr&u=https%3A//geographer.gr/python-dianusmatika-dedomena-kai-e-bibliotheke-ogr/" title="Share on HackerNews">HackerNews</a>
     ❄
@@ -183,680 +183,368 @@
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p><img alt="" src="https://geographer.gr/images/extent1.png"></p>
-<p>Λιάκος Λ., 2011, Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr, 1η Συνάντηση Ελλήνων Χρηστών GRASS and GFOSS, HellasGI, ΕΛ/ΛΑΚ, ΤΜΧΠΑ-Πανεπιστήμιο Θεσσαλίας,ΤΕΙ Σερρών, ελληνικό παράρτημα του OSGeo, Αργαλαστή Πηλίου, 17-19/6/2011</p>
+                <p><img src="https://geographer.gr/images/extent1.png"/></p>
+<p>Λιάκος Λ., 2011, Python, διανυσματικά δεδομένα και η βιβλιοθήκη ogr,
+1η Συνάντηση Ελλήνων Χρηστών GRASS and GFOSS, HellasGI, ΕΛ/ΛΑΚ,
+ΤΜΧΠΑ-Πανεπιστήμιο Θεσσαλίας,ΤΕΙ Σερρών, ελληνικό παράρτημα του OSGeo,
+Αργαλαστή Πηλίου, 17-19/6/2011</p>
 <p>Περιγραφή παρουσίασης:</p>
-<p>Tο τρέχον εκπαιδευτικό βοήθημα έχει σαν στόχο να εξοικειωθούν οι ενδιαφερόμενοι με ένα εναλλακτικό μοντέλο προγραμματισμού όσον αφορά την προσπέλαση και επεξεργασία γεωχωρικών δεδομένων. Εναλλακτικό γιατί στηρίζεται στις δυναμικές και συνεχώς εξελισσόμενες, αλλά πολλές φορές παρεξηγημένες και απρόσιτες για τον κοινό χρήστη, τεχνολογίες του ελεύθερου και ανοικτού λογισμικού. Για τον προγραμματισμό του εν λόγω βοηθήματος επελέγει η διερμηνευόμενη και αντικειμενοστραφής γλώσσα Python καθώς ο διερμηνευτής της είναι διαθέσιμος σε διάφορα λειτουργικά συστήματα αλλά και για την ευκολία και απλότητα της σύνταξή της. Σε συνάρτηση με την γλώσσα προγραμματισμού λειτουργούν και οι σχετικές βιβλιοθήκες για την προσπέλαση των γεωχωρικών δεδομένων.</p>
-<p>Η βιβλιοθήκη gdal χρησιμοποιείται για την προσπέλαση ψηφιδωτών γεωχωρικών δεδομένων και η βιβλιοθήκη ogr για την προσπέλαση διανυσματικών δεδομένων. Το βοήθημα επικεντρώνεται στην ανάγνωση και εγγραφή διανυσματικών δεδομένων, την δημιουργία γεωμετριών και τον χειρισμό και μετατροπή προβολικών συστημάτων, το φιλτράρισμα και την παρουσίαση των λειτουργιών ανάλυσης που παρέχει η βιβλιοθήκη ogr. Για την παρακολούθηση των διαδικασιών του βοηθήματος θεωρείται απαραίτητη η γνώση βασικών αρχών προγραμματισμού και η σύνταξη στην γλώσσα Python. Τα παραδείγματα που θα παρουσιαστούν εκτελούνται σε περιβάλλον Linux ωστόσο οι χρήστες Windows με την εγκατάσταση του απαραίτητου λογισμικού μπορούν με ευκολία να ακολουθήσουν.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
-<span class="normal">215</span>
-<span class="normal">216</span>
-<span class="normal">217</span>
-<span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span>
-<span class="normal">224</span>
-<span class="normal">225</span>
-<span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span>
-<span class="normal">248</span>
-<span class="normal">249</span>
-<span class="normal">250</span>
-<span class="normal">251</span>
-<span class="normal">252</span>
-<span class="normal">253</span>
-<span class="normal">254</span>
-<span class="normal">255</span>
-<span class="normal">256</span>
-<span class="normal">257</span>
-<span class="normal">258</span>
-<span class="normal">259</span>
-<span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
-<span class="normal">263</span>
-<span class="normal">264</span>
-<span class="normal">265</span>
-<span class="normal">266</span>
-<span class="normal">267</span>
-<span class="normal">268</span>
-<span class="normal">269</span>
-<span class="normal">270</span>
-<span class="normal">271</span>
-<span class="normal">272</span>
-<span class="normal">273</span>
-<span class="normal">274</span>
-<span class="normal">275</span>
-<span class="normal">276</span>
-<span class="normal">277</span>
-<span class="normal">278</span>
-<span class="normal">279</span>
-<span class="normal">280</span>
-<span class="normal">281</span>
-<span class="normal">282</span>
-<span class="normal">283</span>
-<span class="normal">284</span>
-<span class="normal">285</span>
-<span class="normal">286</span>
-<span class="normal">287</span>
-<span class="normal">288</span>
-<span class="normal">289</span>
-<span class="normal">290</span>
-<span class="normal">291</span>
-<span class="normal">292</span>
-<span class="normal">293</span>
-<span class="normal">294</span>
-<span class="normal">295</span>
-<span class="normal">296</span>
-<span class="normal">297</span>
-<span class="normal">298</span>
-<span class="normal">299</span>
-<span class="normal">300</span>
-<span class="normal">301</span>
-<span class="normal">302</span>
-<span class="normal">303</span>
-<span class="normal">304</span>
-<span class="normal">305</span>
-<span class="normal">306</span>
-<span class="normal">307</span>
-<span class="normal">308</span>
-<span class="normal">309</span>
-<span class="normal">310</span>
-<span class="normal">311</span>
-<span class="normal">312</span>
-<span class="normal">313</span>
-<span class="normal">314</span>
-<span class="normal">315</span>
-<span class="normal">316</span>
-<span class="normal">317</span>
-<span class="normal">318</span>
-<span class="normal">319</span>
-<span class="normal">320</span>
-<span class="normal">321</span>
-<span class="normal">322</span>
-<span class="normal">323</span>
-<span class="normal">324</span>
-<span class="normal">325</span>
-<span class="normal">326</span>
-<span class="normal">327</span>
-<span class="normal">328</span>
-<span class="normal">329</span>
-<span class="normal">330</span>
-<span class="normal">331</span>
-<span class="normal">332</span>
-<span class="normal">333</span>
-<span class="normal">334</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/python</span>
-<span class="c1"># -*- coding: utf-8 -*-</span>
-
-<span class="c1">#http://www.gdal.org/ogr/ogr_arch.html</span>
-<span class="c1">#Για help από το documentation του Python binding: pydoc -g osgeo</span>
-
-<span class="c1">#********************** - ΕΙΣΑΓΩΓΗ ΑΠΑΡΑΙΤΗΤΩΝ ΒΙΒΛΙΟΘΗΚΩΝ - ********************** </span>
-<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
-
-<span class="c1"># Εισάγουμε την βιβλιοθήκη για πρόσβαση στα διανυσματικά δεδομένα (ogr) και </span>
-<span class="c1">#την βιβλιοθήκη  για την διαχείριση των προβολικών συστημάτων αναφοράς (osr)</span>
-<span class="k">try</span><span class="p">:</span>
-    <span class="c1">#Σε περίπτωση που χρησιμοποιούμε κάποια διανομή OSGeo</span>
-    <span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">ogr</span> <span class="p">,</span> <span class="n">osr</span>    
-<span class="k">except</span><span class="p">:</span>
-    <span class="c1">#Σε περίπτωση που χρησιμοποιούμε FWTools</span>
-    <span class="kn">import</span> <span class="nn">ogr</span><span class="o">,</span>  <span class="nn">osr</span>
-
-<span class="c1"># ********************** - ΑΝΑΓΝΩΣΗ ΔΙΑΝΥΣΜΑΤΙΚΩΝ ΔΕΔΟΜΕΝΩΝ - **********************************</span>
-<span class="c1">#*************************************************************************************************************</span>
-
-<span class="c1">#Ορίζουμε τη διαδρομή για τον τρέχοντα κατάλογο εργασίας και ονόμα αρχείου shapefile</span>
-<span class="n">scriptdir</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span> <span class="vm">__file__</span> <span class="p">)</span> <span class="p">)</span><span class="c1"># η διαδρομή του φακέλου που βρίσκεται το τρέχον αρχείο</span>
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">scriptdir</span><span class="o">+</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="o">+</span><span class="s1">&#39;shps&#39;</span><span class="p">)</span><span class="c1">#αλλαγή του τρέχοντος καταλόγου εργασίας</span>
-
-<span class="n">shapefile</span><span class="o">=</span> <span class="s1">&#39;oikismoi.shp&#39;</span>
-
-<span class="c1"># O driver είναι ένα αντικείμενο που μας βοηθά να αλληλεπιδρούμε (διαβάζουμε - γράφουμε) με έναν τύπο αρχείου</span>
-<span class="c1">#http://www.gdal.org/ogr/ogr_formats.html</span>
-<span class="n">driver</span> <span class="o">=</span>  <span class="n">ogr</span><span class="o">.</span><span class="n">GetDriverByName</span><span class="p">(</span><span class="s1">&#39;ESRI Shapefile&#39;</span><span class="p">)</span> <span class="c1"># Το όνομα παρέχεται από το documentation</span>
-
-<span class="c1"># Με την μέθοδο Open() του driver επιστρεφεται ένα αντικείμενο datasource</span>
-<span class="n">dataSource</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">shapefile</span><span class="p">,</span>  <span class="mi">0</span><span class="p">)</span> <span class="c1">#0=readonly, 1=write</span>
-
-<span class="k">if</span> <span class="n">dataSource</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="c1"># Αν δεν υπάρχει τιμή στην dataSource</span>
-    <span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Η πηγή δεδομένων δεν αναγνώστηκε:&#39;</span> <span class="p">,</span>   <span class="n">shapefile</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#έξοδος με έναν κωδικό σφάλματος</span>
-
-<span class="n">layer</span> <span class="o">=</span> <span class="n">dataSource</span><span class="o">.</span><span class="n">GetLayer</span><span class="p">()</span> 
-<span class="c1">#1.μπορούμε να χρησιμοποιήσουμε και index π.χ dataSource.GetLayer(1) αλλά για τα shapefiles είναι 0</span>
-<span class="c1">#2.ή να περάσουμε το όνομα σαν string (π.χ. &#39;oikismoi&#39;)</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Το όνομα του layer:&#39;</span> <span class="p">,</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetName</span><span class="p">()</span>
-
-<span class="c1">#Ο αριθμός των features στο layer</span>
-<span class="n">numFeatures</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetFeatureCount</span><span class="p">()</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Αριθμός Features :&#39;</span><span class="p">,</span> <span class="n">numFeatures</span>
-
-<span class="c1"># επιστρέφει τα ακραία σημεία του layer</span>
-<span class="n">extent</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetExtent</span><span class="p">()</span> 
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Ακραία σημεία:&#39;</span><span class="p">,</span> <span class="n">extent</span>
-
-<span class="c1"># εφόσον γνωρίζουμε το FID ενος feature μπορούμε να το πάρουμε σαν αντικείμενο</span>
-<span class="n">feature</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetFeature</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#FID=2</span>
-
-<span class="n">CODE_OIK</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">GetField</span><span class="p">(</span><span class="s1">&#39;CODE_OIK&#39;</span><span class="p">)</span> <span class="c1">#GetField(&amp;lt;όνομα πεδίου&amp;gt;) μία μέθοδος του feature που μας επιστρέφει την τιμή του πεδίου </span>
-<span class="c1">#fields= layer.GetLayerDefn().GetFieldCount() # παίρνουμε τον αριθμό των πεδίων σε ένα layer</span>
-
-<span class="n">NAME_OIK</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">GetField</span><span class="p">(</span><span class="s1">&#39;NAME_OIK&#39;</span><span class="p">)</span>
-<span class="c1"># Παραλλαγή:</span>
-<span class="c1">#GetFieldAsString(&amp;lt;όνομα πεδίου&amp;gt;) και GetFieldAsInteger(&amp;lt;όνομα πεδίου&amp;gt;)</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;CODE_OIK για το feature με id = 2:&#39;</span><span class="p">,</span>  <span class="n">CODE_OIK</span>
-<span class="n">NAME_OIK</span> <span class="o">=</span> <span class="n">NAME_OIK</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;iso-8859-7&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;NAME_OIK για το feature με id = 2:&#39;</span><span class="p">,</span>  <span class="n">NAME_OIK</span>
-
-<span class="c1">#μπορούμε να βάλουμε όλα τα features του layer σε έναν βρόγχο</span>
-<span class="n">feature</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetNextFeature</span><span class="p">()</span> <span class="c1"># επιστρέφει το πρώτο Feature στην σειρά και κάθε φορά που το καλούμε πηγαίνει στο επόμενο</span>
-<span class="k">while</span> <span class="n">feature</span><span class="p">:</span>
-    <span class="n">CODE_OIK</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">GetField</span><span class="p">(</span><span class="s1">&#39;CODE_OIK&#39;</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="s1">&#39;FID:</span><span class="si">%s</span><span class="s1">,CODE_OIK:</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">feature</span><span class="o">.</span><span class="n">GetFID</span><span class="p">(),</span> <span class="n">CODE_OIK</span><span class="p">)</span>
-    <span class="n">feature</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetNextFeature</span><span class="p">()</span>
-
-<span class="n">layer</span><span class="o">.</span><span class="n">ResetReading</span><span class="p">()</span> <span class="c1">#επιστρέφει την ανάγνωση των features στην αρχή της λίστας των features</span>
-
-<span class="c1"># ας ξανα πάμε στο πρώτο Feature</span>
-<span class="n">feature</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetNextFeature</span><span class="p">()</span> 
-<span class="c1">#ας πάρουμε την γεωμετρία του</span>
-<span class="n">geometry</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">GetGeometryRef</span><span class="p">()</span> <span class="c1">#GetGeometryRef() μία μέθοδος του feature που επιστρέφει την γεωμετρία σαν αντικείμενο </span>
-<span class="nb">print</span> <span class="s2">&quot;Geometry name: &quot;</span><span class="p">,</span> <span class="n">geometry</span><span class="o">.</span><span class="n">GetGeometryName</span><span class="p">()</span> <span class="c1"># as WKT</span>
-<span class="c1">#Ειδικά τα σημειακά layers έχουν μια μέθοδο στο αντικείμενο της γεωμετρίας που τους επιστρέφει το X και το Y</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">geometry</span><span class="o">.</span><span class="n">GetX</span><span class="p">()</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">geometry</span><span class="o">.</span><span class="n">GetY</span><span class="p">()</span>
-<span class="nb">print</span> <span class="s2">&quot;X Y:&quot;</span><span class="p">,</span>  <span class="n">x</span><span class="p">,</span>  <span class="n">y</span>
-
-<span class="c1">#********************************** - Φίλτρα στα περιγραφικά δεδομένα - **********************************</span>
-<span class="c1">#************************************************************************************************************</span>
-<span class="c1"># 1: .SetAttributeFilter</span>
-<span class="c1"># 2: .ExecuteSQL</span>
-
-<span class="c1"># ------1: layer.SetAttributeFilter</span>
-<span class="n">allFeatures</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetFeatureCount</span><span class="p">()</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Όλα τα Features :&#39;</span><span class="p">,</span> <span class="n">allFeatures</span>
-
-<span class="n">layer</span><span class="o">.</span><span class="n">SetAttributeFilter</span><span class="p">(</span><span class="s2">&quot;CODE_NOM = &#39;32&#39;&quot;</span><span class="p">)</span> <span class="c1"># με την μέθοδο SetAttributeFilter ορίζουμε τα κριτήρια ενός φίλτρου π.χ. εδώ ζητήσαμε από τους οικισμούς να μας φέρει αυτούς που έχουν (&quot;CODE_NOM = &#39;32&#39;&quot;) </span>
-<span class="n">thesprotia</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetFeatureCount</span><span class="p">()</span> <span class="c1"># πλέον η μέθοδος GetFeatureCount() του layer μας επιστρέφει μόνο τα Features με CODE_NOM = &#39;32&#39;</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Tα Features της Θεσπρωτίας :&#39;</span><span class="p">,</span> <span class="n">thesprotia</span>
-
-<span class="n">feature</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetNextFeature</span><span class="p">()</span> <span class="c1"># επιστρέφει το πρώτο Feature στην σειρά από την λίστα των φιλτραρισμένων και κάθε φορά που το καλούμε πηγαίνει στο επόμενο</span>
-
-<span class="n">layer</span><span class="o">.</span><span class="n">SetAttributeFilter</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span> <span class="c1"># κάνουμε reset του φίλτρου</span>
-
-<span class="c1"># -------2: dataSource.ExecuteSQL</span>
-<span class="c1">#Μπορούμε να κάνουμε και πιο προχωρημένα ερωτήματα με ExecuteSQL() στο datasource αντικείμενο</span>
-<span class="c1">#http://www.gdal.org/ogr/ogr_sql.html</span>
-<span class="n">resultlayer</span> <span class="o">=</span> <span class="n">dataSource</span><span class="o">.</span><span class="n">ExecuteSQL</span><span class="p">(</span><span class="s2">&quot;SELECT * from oikismoi  WHERE OBJECTID &amp;gt; 13000 ORDER BY CODE_OIK DESC&quot;</span><span class="p">)</span>
-<span class="n">sqlFeatures</span> <span class="o">=</span> <span class="n">resultlayer</span><span class="o">.</span><span class="n">GetFeatureCount</span><span class="p">()</span> <span class="c1"># πλέον η μέθοδος GetFeatureCount() του layer μας επιστρέφει μόνο τα Features με CODE_NOM = &#39;32&#39;</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Tα Features με OBJECTID &amp;gt; 13000 :&#39;</span><span class="p">,</span> <span class="n">sqlFeatures</span>
-<span class="n">dataSource</span><span class="o">.</span><span class="n">ReleaseResultSet</span><span class="p">(</span><span class="n">resultlayer</span><span class="p">)</span><span class="c1"># κάνουμε reset του φίλτρου</span>
-
-<span class="c1">#********************************** - Φίλτρα στα χωρικά δεδομένα - **********************************</span>
-<span class="c1">#************************************************************************************************************</span>
-
-<span class="c1">#1.  .SetSpatialFilter()</span>
-<span class="c1">#2.  .SetSpatialFilterRect(, ,, )</span>
-
-<span class="c1">#Eπιλέγουμε το πολύγωνο της Θεσπρωτίας από τους νομούς για να το χρησιμοποιήσουμε σαν παράμετρο στο SetSpatialFilter</span>
-<span class="n">nomoishp</span><span class="o">=</span> <span class="s1">&#39;nomoi_okxe.shp&#39;</span>
-<span class="n">dataSource2</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">nomoishp</span><span class="p">,</span>  <span class="mi">0</span><span class="p">)</span> <span class="c1">#0=readonly, 1=write</span>
-<span class="n">layer2</span><span class="o">=</span> <span class="n">dataSource2</span><span class="o">.</span><span class="n">GetLayer</span><span class="p">()</span>
-<span class="n">feature52</span> <span class="o">=</span> <span class="n">layer2</span><span class="o">.</span><span class="n">GetFeature</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span> <span class="c1">#52 το fid του Ν. Θεσπρωτίας</span>
-<span class="n">polyThesprotia</span> <span class="o">=</span> <span class="n">feature52</span><span class="o">.</span><span class="n">GetGeometryRef</span><span class="p">()</span><span class="c1"># πήραμε το γεωμετρικό αντικείμενο του feature52 (του Ν. Θεσπρωτίας)</span>
-
-<span class="c1">#1.  .SetSpatialFilter()</span>
-<span class="n">layer</span><span class="o">.</span><span class="n">SetSpatialFilter</span><span class="p">(</span><span class="n">polyThesprotia</span><span class="p">)</span> 
-<span class="n">oikismoiThesprotias</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetFeatureCount</span><span class="p">()</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Οι οικισμοί της Θεσπρωτίας από χωρικό φίλτρο :&#39;</span><span class="p">,</span> <span class="n">oikismoiThesprotias</span>
-<span class="n">layer</span><span class="o">.</span><span class="n">SetSpatialFilter</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span> <span class="c1"># κάνουμε reset του φίλτρου</span>
-
-<span class="c1">#SLIDE 9</span>
-
-<span class="c1">#2. .SetSpatialFilterRect(, ,, )</span>
-<span class="n">layer</span><span class="o">.</span><span class="n">SetSpatialFilterRect</span><span class="p">(</span><span class="mi">170000</span><span class="p">,</span> <span class="mi">4270000</span><span class="p">,</span><span class="mi">300000</span><span class="p">,</span> <span class="mi">4500000</span><span class="p">)</span>
-<span class="n">numfromRect</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetFeatureCount</span><span class="p">()</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Αριθμός από χωρικό φίλτρο :&#39;</span><span class="p">,</span> <span class="n">numfromRect</span>
-
-<span class="c1">#SLIDE 10</span>
-
-<span class="n">layer</span><span class="o">.</span><span class="n">SetSpatialFilter</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span> <span class="c1"># κάνουμε reset του φίλτρου</span>
-
-<span class="n">AllFeatures</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetFeatureCount</span><span class="p">()</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Όλα τα Features ξανά :&#39;</span><span class="p">,</span> <span class="n">AllFeatures</span>
-
-<span class="c1">#************************************* - Simple analysis - Geoprocessing ***************************************************</span>
-<span class="c1">#************************************************************************************************************</span>
-
-<span class="c1">#Είναι μέθοδοι του geometry object όπου  επιστρέφουν boolean ή geometry objects ή αριθμός</span>
-<span class="c1">#http://www.gdal.org/ogr/classOGRGeometry.html</span>
-<span class="c1">#Within, Overlaps, Contains, Convexhull, Buffer, Union, Difference κ.α.</span>
-
-<span class="c1"># Μερικά απαράιτητα δεδομένα:</span>
-
-<span class="c1"># Η Παραμυθιά Θεσπρωτίας (point)</span>
-<span class="n">featParamythia</span><span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetFeature</span><span class="p">(</span><span class="mi">3005</span><span class="p">)</span> <span class="c1">#feature object</span>
-<span class="n">ptParamythia</span><span class="o">=</span> <span class="n">featParamythia</span><span class="o">.</span><span class="n">GetGeometryRef</span><span class="p">()</span><span class="c1">#geometry object</span>
-<span class="nb">print</span> <span class="n">ptParamythia</span> <span class="c1">#σαν WKT</span>
-
-<span class="c1"># Η Αργαλαστή (point)</span>
-<span class="n">featArgalasti</span><span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetFeature</span><span class="p">(</span><span class="mi">11651</span><span class="p">)</span> 
-<span class="n">ptArgalasti</span> <span class="o">=</span> <span class="n">featArgalasti</span><span class="o">.</span><span class="n">GetGeometryRef</span><span class="p">()</span>
-<span class="nb">print</span> <span class="n">ptArgalasti</span>
-
-<span class="c1">#Ποιά η  απόσταση από Παραμυθιά σε Αργαλαστή;</span>
-<span class="n">dist</span> <span class="o">=</span> <span class="n">ptParamythia</span><span class="o">.</span><span class="n">Distance</span><span class="p">(</span><span class="n">ptArgalasti</span><span class="p">)</span> 
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Απόσταση Παραμυθιά-Αργαλαστή σε χλμ.:&#39;</span><span class="p">,</span> <span class="n">dist</span><span class="o">/</span><span class="mi">1000</span>
-
-<span class="c1">#buffer 1000μ. για την Παραμυθιά</span>
-<span class="n">ptBuffer</span> <span class="o">=</span> <span class="n">ptParamythia</span><span class="o">.</span><span class="n">Buffer</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="c1"># geometry object</span>
-<span class="nb">print</span> <span class="n">ptBuffer</span> <span class="c1">#polygon</span>
-
-<span class="c1"># Η Θεσπρωτία περιέχει την Παραμυθιά;</span>
-<span class="nb">print</span> <span class="n">polyThesprotia</span><span class="o">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">ptParamythia</span><span class="p">)</span>
-
-<span class="c1"># Η Παραμυθιά περιέχεται στην Θεσπρωτία;</span>
-<span class="nb">print</span> <span class="n">ptParamythia</span><span class="o">.</span><span class="n">Within</span><span class="p">(</span><span class="n">polyThesprotia</span><span class="p">)</span>
-
-<span class="c1">#Το κεντροειδές της Θεσπρωτίας</span>
-<span class="n">centroid_obj</span> <span class="o">=</span> <span class="n">polyThesprotia</span><span class="o">.</span><span class="n">Centroid</span><span class="p">()</span>
-<span class="nb">print</span>  <span class="sa">u</span><span class="s1">&#39;Το κεντροειδές της Θεσπρωτίας σαν WKT:&#39;</span> <span class="p">,</span> <span class="n">centroid_obj</span>
-<span class="n">centroid</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">CreateGeometryFromWkt</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">centroid_obj</span><span class="p">))</span><span class="c1">#Δημιουργία geometry object (σημείου) από  WKT</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">centroid</span><span class="o">.</span><span class="n">GetX</span><span class="p">()</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">centroid</span><span class="o">.</span><span class="n">GetY</span><span class="p">()</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Το κεντροειδές της Θεσπρωτίας: &#39;</span><span class="p">,</span>  <span class="n">x</span><span class="p">,</span>  <span class="n">y</span>
-
-<span class="c1"># Η γεωγραφική έκταση της Θεσπρωτίας (minx,maxx, miny, maxy):</span>
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;minx,maxx, miny, maxy για την Θεσπρωτία:&#39;</span><span class="p">,</span> <span class="n">polyThesprotia</span><span class="o">.</span><span class="n">GetEnvelope</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>  <span class="n">polyThesprotia</span><span class="o">.</span><span class="n">GetEnvelope</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span>  <span class="n">polyThesprotia</span><span class="o">.</span><span class="n">GetEnvelope</span><span class="p">()[</span><span class="mi">2</span><span class="p">],</span> <span class="n">polyThesprotia</span><span class="o">.</span><span class="n">GetEnvelope</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
-
-<span class="c1">#********************************* - ΕΓΓΡΑΦΗ ΔΕΔΟΜΕΝΩΝ -  ΠΡΟΒΟΛΙΚΑ ΣΥΣΤΗΜΑΤΑ*********************************************</span>
-<span class="c1">#************************************************************************************************************</span>
-
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;mypoints.shp&#39;</span><span class="p">):</span><span class="c1"># έλεγχος αν υπάρχει το path</span>
-    <span class="n">driver</span><span class="o">.</span><span class="n">DeleteDataSource</span><span class="p">(</span><span class="s1">&#39;mypoints.shp&#39;</span><span class="p">)</span>
-
-<span class="n">ds</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">CreateDataSource</span><span class="p">(</span><span class="s1">&#39;mypoints.shp&#39;</span><span class="p">)</span>
-
-<span class="c1">#Αναγκαία η εισαγωγή της βιβλιοθήκης: from osgeo import osr</span>
-
-<span class="c1">#Ορίζουμε ένα αντικείμενο για το γεωγραφικό σύστημα αναφοράς</span>
-<span class="n">SpatialReference</span> <span class="o">=</span> <span class="n">osr</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span> <span class="c1">#αρχικοποίηση αντικειμένου γεωγραφικού σύστηματος αναφοράς</span>
-<span class="c1">#Πολλοί τρόποι σύνταξης/ορισμού ενός συστήματος αναφοράς,Well Known Text (WKT), Proj4, EPSG, ESRI .prj, JSON, GML, XML</span>
-<span class="c1">#Σημαντικό: για το τρόπο σύνταξης και λεπτομέρειες ανά σύστημα αναφοράς μπορείτε να δείτε στο http://spatialreference.org/</span>
-
-<span class="c1">#Περισσότεροι τρόποι:</span>
-<span class="c1">#ImportFromWkt()</span>
-<span class="c1">#ImportFromEPSG()</span>
-<span class="c1">#ImportFromProj4()</span>
-<span class="c1">#ImportFromESRI(&amp;lt;proj_lines&amp;gt;)</span>
-<span class="c1">#ImportFromPCI(, ,</span>
-<span class="c1">#ImportFromUSGS(&amp;lt;proj_code&amp;gt;, )</span>
-<span class="c1">#ImportFromXML()</span>
-
-<span class="n">SpatialReference</span><span class="o">.</span><span class="n">ImportFromEPSG</span><span class="p">(</span><span class="mi">2100</span><span class="p">)</span>
-<span class="c1">#SpatialReference.SetFromUserInput(&#39;EPSG:2100&#39;)</span>
-<span class="c1">#Μπορούμε να το ορίσουμε και με άλλο τρόπο μέσω του EPSG code:</span>
-<span class="c1">#SpatialReference.ImportFromProj4(&quot;+proj=tmerc +lon_0=24 +k=.9996 +x_0=500000 +towgs84=-199.72,74.03,246.02+ellps=GRS80&quot;)</span>
-
-<span class="c1">#------------Δημιουργία νέου layer--------------</span>
-<span class="n">newlayer</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">CreateLayer</span><span class="p">(</span><span class="s1">&#39;mypoints&#39;</span><span class="p">,</span><span class="n">geom_type</span><span class="o">=</span><span class="n">ogr</span><span class="o">.</span><span class="n">wkbPoint</span><span class="p">,</span>  <span class="n">srs</span> <span class="o">=</span> <span class="n">SpatialReference</span><span class="p">)</span>
-<span class="c1">#Τύπου γεωμετρίας: wkbPoint, wkbLineString, wkbPolygon, wkbGeometryCollection, wkbMultiPolygon, wkbMultiPoint, wkbMultiLineString.</span>
-
-<span class="c1"># Αν θέλουμε να ανακτήσουμε το προβολικό σύστημα ενός layer σαν αντικείμενο:</span>
-<span class="n">SR</span> <span class="o">=</span> <span class="n">newlayer</span><span class="o">.</span><span class="n">GetSpatialRef</span><span class="p">()</span>
-<span class="nb">print</span> <span class="n">SR</span>
-<span class="c1"># Μπορεί να ανακτηθεί και από ένα αντικείμενο γεωμετρίας: spatialRef = geom.GetSpatialReference()</span>
-<span class="nb">print</span> <span class="n">SR</span><span class="o">.</span><span class="n">ExportToXML</span><span class="p">()</span> <span class="c1">#εξαγωγή σαν GML</span>
-
-<span class="c1">#Δημιουργία ενός FieldDefn</span>
-<span class="n">fieldDefn</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">FieldDefn</span><span class="p">(</span><span class="s1">&#39;greekname&#39;</span><span class="p">,</span> <span class="n">ogr</span><span class="o">.</span><span class="n">OFTString</span><span class="p">)</span> <span class="c1">#Constructor of Definition of an attribute of an OGRFieldDefn. , http://www.gdal.org/ogr/classOGRFieldDefn.html#fc375f038b548b5a86b854c214fee114</span>
-<span class="n">fieldDefn</span><span class="o">.</span><span class="n">SetWidth</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-
-<span class="n">newlayer</span><span class="o">.</span><span class="n">CreateField</span><span class="p">(</span><span class="n">fieldDefn</span><span class="p">)</span><span class="c1">#αποθήκευση του FieldDefn στο layer</span>
-
-<span class="c1">#ορίζουμε ένα νέο γεωμετρικό αντικείμενο τύπου σημείου</span>
-<span class="n">geom</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">Geometry</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="n">ogr</span><span class="o">.</span><span class="n">wkbPoint</span><span class="p">)</span>
-<span class="n">geom</span><span class="o">.</span><span class="n">AddPoint</span><span class="p">(</span><span class="mf">23.726683</span><span class="p">,</span> <span class="mf">37.971505</span><span class="p">)</span> <span class="c1">#δεδομενα σε WGS84 , προαρετικά τρίτη παράμετρος το z  (default=0)</span>
-<span class="c1"># για αλλαγή των Χ, Υ: geom.SetPoint(0, 23.0, 37.0), όπου για σημεία υποστηρίζεται μόνο το 0</span>
-<span class="c1">#για αντικείμενα τύπου γραμμής προσθέτουμε νέα σημεία της γραμμής με το AddPoint</span>
-
-<span class="c1">#------------Reprojection του geom από WGS84 σε Greek Grid</span>
-<span class="c1">#Ορίζουμε τα προβολικά συστήματα ως objects και τους δίνουμε παραμέτρους:</span>
-
-<span class="c1">#WGS84</span>
-<span class="n">wgs84SR</span><span class="o">=</span> <span class="n">osr</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span>
-<span class="n">wgs84SR</span><span class="o">.</span><span class="n">ImportFromEPSG</span><span class="p">(</span><span class="mi">4326</span><span class="p">)</span> <span class="c1">#  WGS84</span>
-<span class="c1">#Greek_Grid</span>
-<span class="n">greekGridSR</span><span class="o">=</span> <span class="n">osr</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span>
-<span class="n">greekGridSR</span><span class="o">.</span><span class="n">ImportFromEPSG</span><span class="p">(</span><span class="mi">2100</span><span class="p">)</span> <span class="c1"># Greek Grid</span>
-
-<span class="c1">#Απαιτείται ένα CoordinateTransformation αντικείμενο</span>
-<span class="n">coordTrans</span> <span class="o">=</span> <span class="n">osr</span><span class="o">.</span><span class="n">CoordinateTransformation</span><span class="p">(</span><span class="n">wgs84SR</span><span class="p">,</span> <span class="n">greekGridSR</span><span class="p">)</span>
-
-<span class="c1">#Καλούμε την function Transform του geometry αντικειμένου</span>
-<span class="n">geom</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">coordTrans</span><span class="p">)</span>
-
-<span class="n">xEgsa</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">GetX</span><span class="p">()</span>
-<span class="n">yEgsa</span>  <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">GetY</span><span class="p">()</span>
-<span class="nb">print</span> <span class="s2">&quot;X, Y ΕΓΣΑ-87:&quot;</span><span class="p">,</span>  <span class="n">xEgsa</span> <span class="p">,</span>  <span class="n">yEgsa</span> 
-
-<span class="c1">#Δημιουργία του Feature object</span>
-<span class="n">featureDefn</span> <span class="o">=</span> <span class="n">newlayer</span><span class="o">.</span><span class="n">GetLayerDefn</span><span class="p">()</span> <span class="c1"># ανάκτηση τους σχήματος του layer (σχήμα πεδίων και ιδιοτήτων τους των features του layer.Επιστρέφει: feature definition. </span>
-<span class="n">feature</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">featureDefn</span><span class="p">)</span> <span class="c1">#Constructor για νέο feature object με το field definition του layer </span>
-<span class="n">feature</span><span class="o">.</span><span class="n">SetGeometry</span><span class="p">(</span><span class="n">geom</span><span class="p">)</span><span class="c1">#Του ορίζουμε σαν γεωμετρία το geom object</span>
-
-<span class="n">feature</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;greekname&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;Ακρόπολη&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;iso-8859-7&#39;</span><span class="p">))</span>
-
-<span class="n">newlayer</span><span class="o">.</span><span class="n">CreateFeature</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span><span class="c1">#αποθήκευση του feature στο layer</span>
-
-<span class="c1"># Cleanup, απελευθερώνουμε πόρους</span>
-<span class="c1">#Δεν καλούμε το Destroy() σε geometry objects που προέρχονται από features (Segmentation fault στην Python ) π.χ. polyThesprotia, ptArgalasti, ptParamythia</span>
-
-<span class="c1">#Destroy geometries</span>
-<span class="n">centroid_obj</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-<span class="n">geom</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-
-<span class="c1">#Destroy features</span>
-<span class="n">feature</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-<span class="n">feature52</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-<span class="n">featParamythia</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-<span class="n">featArgalasti</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-
-<span class="c1">#Destroy datasources</span>
-<span class="n">dataSource</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-<span class="n">dataSource2</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
-<span class="n">ds</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span> <span class="c1"># Κλείσιμο και αποθήκευση του datasource για να αποθηκευτεί</span>
-
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Δημιουργία εικόνας png με το Mapnik!&#39;</span>
-
-<span class="kn">import</span> <span class="nn">mapnik</span>
-
-<span class="c1">#symbolizers</span>
-<span class="n">symbolizer</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">PolygonSymbolizer</span><span class="p">(</span><span class="n">mapnik</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;#fdf9e5&quot;</span><span class="p">))</span>
-<span class="n">symbolizer1</span><span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">LineSymbolizer</span><span class="p">(</span><span class="n">mapnik</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">),</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">symbolizer2</span><span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">ShieldSymbolizer</span><span class="p">(</span><span class="s1">&#39;greekname&#39;</span><span class="p">,</span><span class="s1">&#39;DejaVu Sans Bold&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="n">mapnik</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;#000000&#39;</span><span class="p">),</span><span class="s1">&#39;icon.png&#39;</span><span class="p">,</span><span class="s1">&#39;png&#39;</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">32</span><span class="p">)</span>
-
-<span class="c1">#</span>
-<span class="n">rule</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Rule</span><span class="p">()</span>
-<span class="n">rule</span><span class="o">.</span><span class="n">symbols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">symbolizer</span><span class="p">)</span>
-<span class="n">rule</span><span class="o">.</span><span class="n">symbols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">symbolizer1</span><span class="p">)</span>
-
-<span class="n">rule2</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Rule</span><span class="p">()</span>
-<span class="n">rule2</span><span class="o">.</span><span class="n">symbols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">symbolizer2</span><span class="p">)</span>
-
-<span class="c1">#styles</span>
-<span class="n">style</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Style</span><span class="p">()</span>
-<span class="n">style</span><span class="o">.</span><span class="n">rules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rule</span><span class="p">)</span>
-
-<span class="n">style2</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Style</span><span class="p">()</span>
-<span class="n">style2</span><span class="o">.</span><span class="n">rules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rule2</span><span class="p">)</span>
-
-<span class="c1">#layers</span>
-<span class="n">layer</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Layer</span><span class="p">(</span><span class="s2">&quot;nomoi&quot;</span><span class="p">)</span>
-<span class="n">layer</span><span class="o">.</span><span class="n">datasource</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Shapefile</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;nomoi_okxe.shp&quot;</span><span class="p">)</span>
-
-<span class="n">layer2</span><span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Layer</span><span class="p">(</span><span class="s2">&quot;oikismoi&quot;</span><span class="p">)</span>
-<span class="n">layer2</span><span class="o">.</span><span class="n">datasource</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Shapefile</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;mypoints.shp&quot;</span><span class="p">,</span>  <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-7&#39;</span><span class="p">)</span>
-
-<span class="n">layer</span><span class="o">.</span><span class="n">styles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;mapStyle&quot;</span><span class="p">)</span>
-<span class="n">layer2</span><span class="o">.</span><span class="n">styles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;mapStyle2&quot;</span><span class="p">)</span>
-
-<span class="nb">map</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
-<span class="nb">map</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;#c5edff&quot;</span><span class="p">)</span>
-
-<span class="nb">map</span><span class="o">.</span><span class="n">append_style</span><span class="p">(</span><span class="s2">&quot;mapStyle&quot;</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
-<span class="nb">map</span><span class="o">.</span><span class="n">append_style</span><span class="p">(</span><span class="s2">&quot;mapStyle2&quot;</span><span class="p">,</span> <span class="n">style2</span><span class="p">)</span>
-
-<span class="nb">map</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
-<span class="nb">map</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer2</span><span class="p">)</span>
-
-<span class="nb">map</span><span class="o">.</span><span class="n">zoom_all</span><span class="p">()</span>
-
-<span class="n">mapnik</span><span class="o">.</span><span class="n">render_to_file</span><span class="p">(</span><span class="nb">map</span><span class="p">,</span> <span class="s2">&quot;map.png&quot;</span><span class="p">,</span> <span class="s2">&quot;png&quot;</span><span class="p">)</span>
-
-<span class="nb">print</span> <span class="sa">u</span><span class="s1">&#39;Η εκτέλεση του script ολοκληρώθηκε!&#39;</span>
-
-<span class="c1">#Παραδείγματα:</span>
-<span class="c1">#//www.geographer.gr/gis/64-gefyria.html</span>
-</code></pre></div>
-</td></tr></table>
+<p>Tο τρέχον εκπαιδευτικό βοήθημα έχει σαν στόχο να εξοικειωθούν οι
+ενδιαφερόμενοι με ένα εναλλακτικό μοντέλο προγραμματισμού όσον αφορά την
+προσπέλαση και επεξεργασία γεωχωρικών δεδομένων. Εναλλακτικό γιατί
+στηρίζεται στις δυναμικές και συνεχώς εξελισσόμενες, αλλά πολλές φορές
+παρεξηγημένες και απρόσιτες για τον κοινό χρήστη, τεχνολογίες του
+ελεύθερου και ανοικτού λογισμικού. Για τον προγραμματισμό του εν λόγω
+βοηθήματος επελέγει η διερμηνευόμενη και αντικειμενοστραφής γλώσσα
+Python καθώς ο διερμηνευτής της είναι διαθέσιμος σε διάφορα λειτουργικά
+συστήματα αλλά και για την ευκολία και απλότητα της σύνταξή της. Σε
+συνάρτηση με την γλώσσα προγραμματισμού λειτουργούν και οι σχετικές
+βιβλιοθήκες για την προσπέλαση των γεωχωρικών δεδομένων.</p>
+<p>Η βιβλιοθήκη gdal χρησιμοποιείται για την προσπέλαση ψηφιδωτών
+γεωχωρικών δεδομένων και η βιβλιοθήκη ogr για την προσπέλαση
+διανυσματικών δεδομένων. Το βοήθημα επικεντρώνεται στην ανάγνωση και
+εγγραφή διανυσματικών δεδομένων, την δημιουργία γεωμετριών και τον
+χειρισμό και μετατροπή προβολικών συστημάτων, το φιλτράρισμα και την
+παρουσίαση των λειτουργιών ανάλυσης που παρέχει η βιβλιοθήκη ogr. Για
+την παρακολούθηση των διαδικασιών του βοηθήματος θεωρείται απαραίτητη η
+γνώση βασικών αρχών προγραμματισμού και η σύνταξη στην γλώσσα Python. Τα
+παραδείγματα που θα παρουσιαστούν εκτελούνται σε περιβάλλον Linux ωστόσο
+οι χρήστες Windows με την εγκατάσταση του απαραίτητου λογισμικού μπορούν
+με ευκολία να ακολουθήσουν.</p>
+<pre><code>#!/usr/bin/python
+# -*- coding: utf-8 -*-
+ 
+#http://www.gdal.org/ogr/ogr_arch.html
+#Για help από το documentation του Python binding: pydoc -g osgeo
+ 
+#********************** - ΕΙΣΑΓΩΓΗ ΑΠΑΡΑΙΤΗΤΩΝ ΒΙΒΛΙΟΘΗΚΩΝ - ********************** 
+import sys, os
+ 
+# Εισάγουμε την βιβλιοθήκη για πρόσβαση στα διανυσματικά δεδομένα (ogr) και 
+#την βιβλιοθήκη  για την διαχείριση των προβολικών συστημάτων αναφοράς (osr)
+try:
+    #Σε περίπτωση που χρησιμοποιούμε κάποια διανομή OSGeo
+    from osgeo import ogr , osr    
+except:
+    #Σε περίπτωση που χρησιμοποιούμε FWTools
+    import ogr,  osr
+ 
+# ********************** - ΑΝΑΓΝΩΣΗ ΔΙΑΝΥΣΜΑΤΙΚΩΝ ΔΕΔΟΜΕΝΩΝ - **********************************
+#*************************************************************************************************************
+ 
+#Ορίζουμε τη διαδρομή για τον τρέχοντα κατάλογο εργασίας και ονόμα αρχείου shapefile
+scriptdir= os.path.dirname( os.path.realpath( __file__ ) )# η διαδρομή του φακέλου που βρίσκεται το τρέχον αρχείο
+os.chdir(scriptdir+os.sep+'shps')#αλλαγή του τρέχοντος καταλόγου εργασίας
+ 
+shapefile= 'oikismoi.shp'
+ 
+# O driver είναι ένα αντικείμενο που μας βοηθά να αλληλεπιδρούμε (διαβάζουμε - γράφουμε) με έναν τύπο αρχείου
+#http://www.gdal.org/ogr/ogr_formats.html
+driver =  ogr.GetDriverByName('ESRI Shapefile') # Το όνομα παρέχεται από το documentation
+ 
+# Με την μέθοδο Open() του driver επιστρεφεται ένα αντικείμενο datasource
+dataSource = driver.Open(shapefile,  0) #0=readonly, 1=write
+ 
+if dataSource is None: # Αν δεν υπάρχει τιμή στην dataSource
+    print u'Η πηγή δεδομένων δεν αναγνώστηκε:' ,   shapefile
+    sys.exit(1) #έξοδος με έναν κωδικό σφάλματος
+ 
+layer = dataSource.GetLayer() 
+#1.μπορούμε να χρησιμοποιήσουμε και index π.χ dataSource.GetLayer(1) αλλά για τα shapefiles είναι 0
+#2.ή να περάσουμε το όνομα σαν string (π.χ. 'oikismoi')
+print u'Το όνομα του layer:' , layer.GetName()
+ 
+#Ο αριθμός των features στο layer
+numFeatures = layer.GetFeatureCount()
+print u'Αριθμός Features :', numFeatures
+ 
+# επιστρέφει τα ακραία σημεία του layer
+extent = layer.GetExtent() 
+print u'Ακραία σημεία:', extent
+ 
+# εφόσον γνωρίζουμε το FID ενος feature μπορούμε να το πάρουμε σαν αντικείμενο
+feature = layer.GetFeature(2) #FID=2
+ 
+CODE_OIK = feature.GetField('CODE_OIK') #GetField(&amp;lt;όνομα πεδίου&amp;gt;) μία μέθοδος του feature που μας επιστρέφει την τιμή του πεδίου 
+#fields= layer.GetLayerDefn().GetFieldCount() # παίρνουμε τον αριθμό των πεδίων σε ένα layer
+ 
+NAME_OIK = feature.GetField('NAME_OIK')
+# Παραλλαγή:
+#GetFieldAsString(&amp;lt;όνομα πεδίου&amp;gt;) και GetFieldAsInteger(&amp;lt;όνομα πεδίου&amp;gt;)
+print u'CODE_OIK για το feature με id = 2:',  CODE_OIK
+NAME_OIK = NAME_OIK.decode('iso-8859-7')
+print u'NAME_OIK για το feature με id = 2:',  NAME_OIK
+ 
+#μπορούμε να βάλουμε όλα τα features του layer σε έναν βρόγχο
+feature = layer.GetNextFeature() # επιστρέφει το πρώτο Feature στην σειρά και κάθε φορά που το καλούμε πηγαίνει στο επόμενο
+while feature:
+    CODE_OIK = feature.GetField('CODE_OIK')
+    print 'FID:%s,CODE_OIK:%s' % (feature.GetFID(), CODE_OIK)
+    feature = layer.GetNextFeature()
+ 
+layer.ResetReading() #επιστρέφει την ανάγνωση των features στην αρχή της λίστας των features
+ 
+# ας ξανα πάμε στο πρώτο Feature
+feature = layer.GetNextFeature() 
+#ας πάρουμε την γεωμετρία του
+geometry = feature.GetGeometryRef() #GetGeometryRef() μία μέθοδος του feature που επιστρέφει την γεωμετρία σαν αντικείμενο 
+print "Geometry name: ", geometry.GetGeometryName() # as WKT
+#Ειδικά τα σημειακά layers έχουν μια μέθοδο στο αντικείμενο της γεωμετρίας που τους επιστρέφει το X και το Y
+x = geometry.GetX()
+y = geometry.GetY()
+print "X Y:",  x,  y
+ 
+#********************************** - Φίλτρα στα περιγραφικά δεδομένα - **********************************
+#************************************************************************************************************
+# 1: .SetAttributeFilter
+# 2: .ExecuteSQL
+ 
+# ------1: layer.SetAttributeFilter
+allFeatures = layer.GetFeatureCount()
+print u'Όλα τα Features :', allFeatures
+ 
+layer.SetAttributeFilter("CODE_NOM = '32'") # με την μέθοδο SetAttributeFilter ορίζουμε τα κριτήρια ενός φίλτρου π.χ. εδώ ζητήσαμε από τους οικισμούς να μας φέρει αυτούς που έχουν ("CODE_NOM = '32'") 
+thesprotia = layer.GetFeatureCount() # πλέον η μέθοδος GetFeatureCount() του layer μας επιστρέφει μόνο τα Features με CODE_NOM = '32'
+print u'Tα Features της Θεσπρωτίας :', thesprotia
+ 
+feature = layer.GetNextFeature() # επιστρέφει το πρώτο Feature στην σειρά από την λίστα των φιλτραρισμένων και κάθε φορά που το καλούμε πηγαίνει στο επόμενο
+ 
+layer.SetAttributeFilter(None) # κάνουμε reset του φίλτρου
+ 
+# -------2: dataSource.ExecuteSQL
+#Μπορούμε να κάνουμε και πιο προχωρημένα ερωτήματα με ExecuteSQL() στο datasource αντικείμενο
+#http://www.gdal.org/ogr/ogr_sql.html
+resultlayer = dataSource.ExecuteSQL("SELECT * from oikismoi  WHERE OBJECTID &amp;gt; 13000 ORDER BY CODE_OIK DESC")
+sqlFeatures = resultlayer.GetFeatureCount() # πλέον η μέθοδος GetFeatureCount() του layer μας επιστρέφει μόνο τα Features με CODE_NOM = '32'
+print u'Tα Features με OBJECTID &amp;gt; 13000 :', sqlFeatures
+dataSource.ReleaseResultSet(resultlayer)# κάνουμε reset του φίλτρου
+ 
+#********************************** - Φίλτρα στα χωρικά δεδομένα - **********************************
+#************************************************************************************************************
+ 
+#1.  .SetSpatialFilter()
+#2.  .SetSpatialFilterRect(, ,, )
+ 
+#Eπιλέγουμε το πολύγωνο της Θεσπρωτίας από τους νομούς για να το χρησιμοποιήσουμε σαν παράμετρο στο SetSpatialFilter
+nomoishp= 'nomoi_okxe.shp'
+dataSource2 = driver.Open(nomoishp,  0) #0=readonly, 1=write
+layer2= dataSource2.GetLayer()
+feature52 = layer2.GetFeature(52) #52 το fid του Ν. Θεσπρωτίας
+polyThesprotia = feature52.GetGeometryRef()# πήραμε το γεωμετρικό αντικείμενο του feature52 (του Ν. Θεσπρωτίας)
+ 
+#1.  .SetSpatialFilter()
+layer.SetSpatialFilter(polyThesprotia) 
+oikismoiThesprotias = layer.GetFeatureCount()
+print u'Οι οικισμοί της Θεσπρωτίας από χωρικό φίλτρο :', oikismoiThesprotias
+layer.SetSpatialFilter(None) # κάνουμε reset του φίλτρου
+ 
+#SLIDE 9
+ 
+#2. .SetSpatialFilterRect(, ,, )
+layer.SetSpatialFilterRect(170000, 4270000,300000, 4500000)
+numfromRect = layer.GetFeatureCount()
+print u'Αριθμός από χωρικό φίλτρο :', numfromRect
+ 
+#SLIDE 10
+ 
+layer.SetSpatialFilter(None) # κάνουμε reset του φίλτρου
+ 
+AllFeatures = layer.GetFeatureCount()
+print u'Όλα τα Features ξανά :', AllFeatures
+ 
+#************************************* - Simple analysis - Geoprocessing ***************************************************
+#************************************************************************************************************
+ 
+#Είναι μέθοδοι του geometry object όπου  επιστρέφουν boolean ή geometry objects ή αριθμός
+#http://www.gdal.org/ogr/classOGRGeometry.html
+#Within, Overlaps, Contains, Convexhull, Buffer, Union, Difference κ.α.
+ 
+# Μερικά απαράιτητα δεδομένα:
+ 
+# Η Παραμυθιά Θεσπρωτίας (point)
+featParamythia= layer.GetFeature(3005) #feature object
+ptParamythia= featParamythia.GetGeometryRef()#geometry object
+print ptParamythia #σαν WKT
+ 
+# Η Αργαλαστή (point)
+featArgalasti= layer.GetFeature(11651) 
+ptArgalasti = featArgalasti.GetGeometryRef()
+print ptArgalasti
+ 
+#Ποιά η  απόσταση από Παραμυθιά σε Αργαλαστή;
+dist = ptParamythia.Distance(ptArgalasti) 
+print u'Απόσταση Παραμυθιά-Αργαλαστή σε χλμ.:', dist/1000
+ 
+#buffer 1000μ. για την Παραμυθιά
+ptBuffer = ptParamythia.Buffer(1000) # geometry object
+print ptBuffer #polygon
+ 
+# Η Θεσπρωτία περιέχει την Παραμυθιά;
+print polyThesprotia.Contains(ptParamythia)
+ 
+# Η Παραμυθιά περιέχεται στην Θεσπρωτία;
+print ptParamythia.Within(polyThesprotia)
+ 
+#Το κεντροειδές της Θεσπρωτίας
+centroid_obj = polyThesprotia.Centroid()
+print  u'Το κεντροειδές της Θεσπρωτίας σαν WKT:' , centroid_obj
+centroid = ogr.CreateGeometryFromWkt(str(centroid_obj))#Δημιουργία geometry object (σημείου) από  WKT
+x = centroid.GetX()
+y = centroid.GetY()
+print u'Το κεντροειδές της Θεσπρωτίας: ',  x,  y
+ 
+# Η γεωγραφική έκταση της Θεσπρωτίας (minx,maxx, miny, maxy):
+print u'minx,maxx, miny, maxy για την Θεσπρωτία:', polyThesprotia.GetEnvelope()[0],  polyThesprotia.GetEnvelope()[1],  polyThesprotia.GetEnvelope()[2], polyThesprotia.GetEnvelope()[2]
+ 
+#********************************* - ΕΓΓΡΑΦΗ ΔΕΔΟΜΕΝΩΝ -  ΠΡΟΒΟΛΙΚΑ ΣΥΣΤΗΜΑΤΑ*********************************************
+#************************************************************************************************************
+ 
+if os.path.exists('mypoints.shp'):# έλεγχος αν υπάρχει το path
+    driver.DeleteDataSource('mypoints.shp')
+ 
+ds = driver.CreateDataSource('mypoints.shp')
+ 
+#Αναγκαία η εισαγωγή της βιβλιοθήκης: from osgeo import osr
+ 
+#Ορίζουμε ένα αντικείμενο για το γεωγραφικό σύστημα αναφοράς
+SpatialReference = osr.SpatialReference() #αρχικοποίηση αντικειμένου γεωγραφικού σύστηματος αναφοράς
+#Πολλοί τρόποι σύνταξης/ορισμού ενός συστήματος αναφοράς,Well Known Text (WKT), Proj4, EPSG, ESRI .prj, JSON, GML, XML
+#Σημαντικό: για το τρόπο σύνταξης και λεπτομέρειες ανά σύστημα αναφοράς μπορείτε να δείτε στο http://spatialreference.org/
+ 
+#Περισσότεροι τρόποι:
+#ImportFromWkt()
+#ImportFromEPSG()
+#ImportFromProj4()
+#ImportFromESRI(&amp;lt;proj_lines&amp;gt;)
+#ImportFromPCI(, ,
+#ImportFromUSGS(&amp;lt;proj_code&amp;gt;, )
+#ImportFromXML()
+ 
+SpatialReference.ImportFromEPSG(2100)
+#SpatialReference.SetFromUserInput('EPSG:2100')
+#Μπορούμε να το ορίσουμε και με άλλο τρόπο μέσω του EPSG code:
+#SpatialReference.ImportFromProj4("+proj=tmerc +lon_0=24 +k=.9996 +x_0=500000 +towgs84=-199.72,74.03,246.02+ellps=GRS80")
+ 
+#------------Δημιουργία νέου layer--------------
+newlayer = ds.CreateLayer('mypoints',geom_type=ogr.wkbPoint,  srs = SpatialReference)
+#Τύπου γεωμετρίας: wkbPoint, wkbLineString, wkbPolygon, wkbGeometryCollection, wkbMultiPolygon, wkbMultiPoint, wkbMultiLineString.
+ 
+# Αν θέλουμε να ανακτήσουμε το προβολικό σύστημα ενός layer σαν αντικείμενο:
+SR = newlayer.GetSpatialRef()
+print SR
+# Μπορεί να ανακτηθεί και από ένα αντικείμενο γεωμετρίας: spatialRef = geom.GetSpatialReference()
+print SR.ExportToXML() #εξαγωγή σαν GML
+ 
+#Δημιουργία ενός FieldDefn
+fieldDefn = ogr.FieldDefn('greekname', ogr.OFTString) #Constructor of Definition of an attribute of an OGRFieldDefn. , http://www.gdal.org/ogr/classOGRFieldDefn.html#fc375f038b548b5a86b854c214fee114
+fieldDefn.SetWidth(15)
+ 
+newlayer.CreateField(fieldDefn)#αποθήκευση του FieldDefn στο layer
+ 
+#ορίζουμε ένα νέο γεωμετρικό αντικείμενο τύπου σημείου
+geom = ogr.Geometry(type=ogr.wkbPoint)
+geom.AddPoint(23.726683, 37.971505) #δεδομενα σε WGS84 , προαρετικά τρίτη παράμετρος το z  (default=0)
+# για αλλαγή των Χ, Υ: geom.SetPoint(0, 23.0, 37.0), όπου για σημεία υποστηρίζεται μόνο το 0
+#για αντικείμενα τύπου γραμμής προσθέτουμε νέα σημεία της γραμμής με το AddPoint
+ 
+#------------Reprojection του geom από WGS84 σε Greek Grid
+#Ορίζουμε τα προβολικά συστήματα ως objects και τους δίνουμε παραμέτρους:
+ 
+#WGS84
+wgs84SR= osr.SpatialReference()
+wgs84SR.ImportFromEPSG(4326) #  WGS84
+#Greek_Grid
+greekGridSR= osr.SpatialReference()
+greekGridSR.ImportFromEPSG(2100) # Greek Grid
+ 
+#Απαιτείται ένα CoordinateTransformation αντικείμενο
+coordTrans = osr.CoordinateTransformation(wgs84SR, greekGridSR)
+ 
+#Καλούμε την function Transform του geometry αντικειμένου
+geom.Transform(coordTrans)
+ 
+xEgsa = geom.GetX()
+yEgsa  = geom.GetY()
+print "X, Y ΕΓΣΑ-87:",  xEgsa ,  yEgsa 
+ 
+#Δημιουργία του Feature object
+featureDefn = newlayer.GetLayerDefn() # ανάκτηση τους σχήματος του layer (σχήμα πεδίων και ιδιοτήτων τους των features του layer.Επιστρέφει: feature definition. 
+feature = ogr.Feature(featureDefn) #Constructor για νέο feature object με το field definition του layer 
+feature.SetGeometry(geom)#Του ορίζουμε σαν γεωμετρία το geom object
+ 
+feature.SetField('greekname', u"Ακρόπολη".encode('iso-8859-7'))
+ 
+newlayer.CreateFeature(feature)#αποθήκευση του feature στο layer
+ 
+# Cleanup, απελευθερώνουμε πόρους
+#Δεν καλούμε το Destroy() σε geometry objects που προέρχονται από features (Segmentation fault στην Python ) π.χ. polyThesprotia, ptArgalasti, ptParamythia
+ 
+#Destroy geometries
+centroid_obj.Destroy()
+geom.Destroy()
+ 
+#Destroy features
+feature.Destroy()
+feature52.Destroy()
+featParamythia.Destroy()
+featArgalasti.Destroy()
+ 
+#Destroy datasources
+dataSource.Destroy()
+dataSource2.Destroy()
+ds.Destroy() # Κλείσιμο και αποθήκευση του datasource για να αποθηκευτεί
+ 
+print u'Δημιουργία εικόνας png με το Mapnik!'
+ 
+import mapnik
+ 
+#symbolizers
+symbolizer = mapnik.PolygonSymbolizer(mapnik.Color("#fdf9e5"))
+symbolizer1= mapnik.LineSymbolizer(mapnik.Color('black'),0.5)
+symbolizer2= mapnik.ShieldSymbolizer('greekname','DejaVu Sans Bold',12,mapnik.Color('#000000'),'icon.png','png',32,32)
+ 
+#
+rule = mapnik.Rule()
+rule.symbols.append(symbolizer)
+rule.symbols.append(symbolizer1)
+ 
+rule2 = mapnik.Rule()
+rule2.symbols.append(symbolizer2)
+ 
+#styles
+style = mapnik.Style()
+style.rules.append(rule)
+ 
+style2 = mapnik.Style()
+style2.rules.append(rule2)
+ 
+#layers
+layer = mapnik.Layer("nomoi")
+layer.datasource = mapnik.Shapefile(file="nomoi_okxe.shp")
+ 
+layer2= mapnik.Layer("oikismoi")
+layer2.datasource = mapnik.Shapefile(file="mypoints.shp",  encoding='ISO-8859-7')
+ 
+layer.styles.append("mapStyle")
+layer2.styles.append("mapStyle2")
+ 
+map = mapnik.Map(800, 400)
+map.background = mapnik.Color("#c5edff")
+ 
+map.append_style("mapStyle", style)
+map.append_style("mapStyle2", style2)
+ 
+map.layers.append(layer)
+map.layers.append(layer2)
+ 
+map.zoom_all()
+ 
+mapnik.render_to_file(map, "map.png", "png")
+ 
+print u'Η εκτέλεση του script ολοκληρώθηκε!'
+ 
+#Παραδείγματα:
+#//www.geographer.gr/gis/64-gefyria.html</code></pre>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -924,320 +612,15 @@
 </li>
 <!-- End Sidebar/Categories -->
 
-<!-- Sidebar/Tag Cloud -->
-<li class="list-group-item">
-  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-  <ul class="list-group list-inline tagcloud" id="tags">
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/api.html">API</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/big-data.html">big data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/blender.html">Blender</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/costs.html">Costs</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dem.html">dem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/discharges.html">discharges</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eu-soil-observatory.html">EU soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/europe.html">Europe</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/floods.html">floods</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/gis.html">GIS</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/github.html">github</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hg.html">Hg</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/off-site.html">Off-site</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phd.html">phd</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/policy.html">Policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/precipitation.html">precipitation</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
-    </li>
-    <li class="list-group-item tag-0">
-      <a href="https://geographer.gr/tag/python.html">python</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/r.html">R</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/raster.html">raster</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/redes.html">REDES</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/reservoir-sedimentation.html">Reservoir sedimentation</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/risk.html">Risk</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sar.html">SAR</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
-    </li>
-    <li class="list-group-item tag-1">
-      <a href="https://geographer.gr/tag/soil-erosion.html">soil erosion</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
-    </li>
-    <li class="list-group-item tag-2">
-      <a href="https://geographer.gr/tag/soil-policy.html">Soil policy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/sql.html">sql</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/stack.html">stack</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
-    </li>
-  </ul>
-</li>
-<!-- End Sidebar/Tag Cloud -->
-
 <!-- Sidebar/Links -->
 <li class="list-group-item">
   <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
   <ul class="list-group" id="links">
     <li class="list-group-item">
       <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geography.aegean.gr/" target="_blank">Τμήμα Γεωγραφία</a>
     </li>
     <li class="list-group-item">
       <a href="https://gislab.gr/" target="_blank">GISlab</a>
