@@ -13,13 +13,13 @@
 
         <meta name="author" content="Leonidas Liakos" />
         <meta name="keywords" content="postgis,pyqgis,python,qgis,sql" />
-        <meta name="description" content="Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo pyqgis είναι να “φορτώνουμε” vector layer που προέρχεται από ερώτημα sql στην postgis. Έτσι ο χρήστης μπορεί να συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το layer που επιθυμεί. Ωστόσο, στην σχετική τεκμηρίωση για το τρόπο που …" />
+        <meta name="description" content="Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo pyqgis είναι να &#34;φορτώνουμε&#34; vector layer που προέρχεται από ερώτημα sql στην postgis. Έτσι ο χρήστης μπορεί να συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το layer που επιθυμεί. Ωστόσο, στην σχετική τεκμηρίωση για το τρόπο που φορτώνουμε vector layers δεν αναφέρεται η σχετική δυνατότητα. Μετά από αρκετό ψάξιμο και δοκιμές κατέληξα σε μερικά tips για το πως γίνεται. Αναγκαίες προϋποθέσεις για το sql ερώτημα είναι: Να υπάρχει πεδίο γεωμετρίας μέσα σε αυτό να υπάρχει μοναδικό πεδίο τύπου integer ο κώδικας sql πρέπει να περικλείεται σε παρενθέσεις ώστε να είναι διακρίνεται ότι πρόκειται για sql ερώτημα και όχι για όνομα πίνακα. Τα υπόλοιπα συντάσσονται με το ίδιο τρόπο που &#34;φορτώνεται&#34; ένας πίνακας postgis: sql =&#34;(select the_geom, id, name from mytable)&#34; uri = QgsDataSourceURI() uri.setConnection(&#34;localhost&#34;,&#34;5432&#34;,&#34;mydb&#34;,&#34;postgres&#34;,&#34;xxxxx&#34;) uri.setDataSource(&#34;&#34;,sql,&#34;the_geom&#34;,&#34;&#34;,&#34;id&#34;) vlayer = QgsVectorLayer(uri.uri(),&#34;LayerName&#34;,&#34;postgres&#34;) QgsMapLayerRegistry.instance().addMapLayer(vlayer) Επίσης, κατόπιν δοκιμών, παρατήρησα ότι το sql …" />
 
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="PyQgis tips. QgsVectorLayer από postgis sql ερώτημα"/>
         <meta property="og:url" content="https://geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema/"/>
-        <meta property="og:description" content="Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo pyqgis είναι να “φορτώνουμε” vector layer που προέρχεται από ερώτημα sql στην postgis. Έτσι ο χρήστης μπορεί να συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το layer που επιθυμεί. Ωστόσο, στην σχετική τεκμηρίωση για το τρόπο που …"/>
+        <meta property="og:description" content="Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo pyqgis είναι να &#34;φορτώνουμε&#34; vector layer που προέρχεται από ερώτημα sql στην postgis. Έτσι ο χρήστης μπορεί να συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το layer που επιθυμεί. Ωστόσο, στην σχετική τεκμηρίωση για το τρόπο που φορτώνουμε vector layers δεν αναφέρεται η σχετική δυνατότητα. Μετά από αρκετό ψάξιμο και δοκιμές κατέληξα σε μερικά tips για το πως γίνεται. Αναγκαίες προϋποθέσεις για το sql ερώτημα είναι: Να υπάρχει πεδίο γεωμετρίας μέσα σε αυτό να υπάρχει μοναδικό πεδίο τύπου integer ο κώδικας sql πρέπει να περικλείεται σε παρενθέσεις ώστε να είναι διακρίνεται ότι πρόκειται για sql ερώτημα και όχι για όνομα πίνακα. Τα υπόλοιπα συντάσσονται με το ίδιο τρόπο που &#34;φορτώνεται&#34; ένας πίνακας postgis: sql =&#34;(select the_geom, id, name from mytable)&#34; uri = QgsDataSourceURI() uri.setConnection(&#34;localhost&#34;,&#34;5432&#34;,&#34;mydb&#34;,&#34;postgres&#34;,&#34;xxxxx&#34;) uri.setDataSource(&#34;&#34;,sql,&#34;the_geom&#34;,&#34;&#34;,&#34;id&#34;) vlayer = QgsVectorLayer(uri.uri(),&#34;LayerName&#34;,&#34;postgres&#34;) QgsMapLayerRegistry.instance().addMapLayer(vlayer) Επίσης, κατόπιν δοκιμών, παρατήρησα ότι το sql …"/>
         <meta property="article:published_time" content="2014-09-23" />
             <meta property="article:section" content="GIS" />
             <meta property="article:tag" content="postgis" />
@@ -137,7 +137,7 @@
     ❄
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema/" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema/&title=PyQgis%20tips.%20QgsVectorLayer%20%CE%B1%CF%80%CF%8C%20postgis%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1&summary=%CE%9C%CE%AF%CE%B1%20%CF%80%CE%BF%CE%BB%CF%8D%20%CF%87%CF%81%CE%AE%CF%83%CE%B9%CE%BC%CE%B7%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CF%80%CE%BF%CF%85%20%CE%BC%CE%B1%CF%82%20%CF%80%CF%81%CE%BF%CF%83%CF%86%CE%AD%CF%81%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%84o%20pyqgis%0A%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%BD%CE%B1%20%E2%80%9C%CF%86%CE%BF%CF%81%CF%84%CF%8E%CE%BD%CE%BF%CF%85%CE%BC%CE%B5%E2%80%9D%20vector%20layer%20%CF%80%CE%BF%CF%85%20%CF%80%CF%81%CE%BF%CE%AD%CF%81%CF%87%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1%20sql%20%CF%83%CF%84%CE%B7%CE%BD%0Apostgis.%20%CE%88%CF%84%CF%83%CE%B9%20%CE%BF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%CF%82%20%CE%BC%CF%80%CE%BF%CF%81%CE%B5%CE%AF%20%CE%BD%CE%B1%0A%CF%83%CF%85%CE%BD%CE%B4%CF%85%CE%AC%CF%83%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1%20%CF%80%CE%BF%CF%85%20%CE%B8%CE%AD%CE%BB%CE%B5%CE%B9%20%CE%BC%CE%B5%20%CE%B5%CE%BD%CF%84%CE%BF%CE%BB%CE%AD%CF%82%20join%20%CE%BA%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CF%86%CF%84%CE%B9%CE%AC%CE%BE%CE%B5%CE%B9%20%CF%84%CE%BF%0Alayer%20%CF%80%CE%BF%CF%85%20%CE%B5%CF%80%CE%B9%CE%B8%CF%85%CE%BC%CE%B5%CE%AF.%20%CE%A9%CF%83%CF%84%CF%8C%CF%83%CE%BF%2C%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AE%20%CF%84%CE%B5%CE%BA%CE%BC%CE%B7%CF%81%CE%AF%CF%89%CF%83%CE%B7%0A%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%84%CF%81%CF%8C%CF%80%CE%BF%20%CF%80%CE%BF%CF%85%20%E2%80%A6&source=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema/" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema/&title=PyQgis%20tips.%20QgsVectorLayer%20%CE%B1%CF%80%CF%8C%20postgis%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1&summary=%CE%9C%CE%AF%CE%B1%20%CF%80%CE%BF%CE%BB%CF%8D%20%CF%87%CF%81%CE%AE%CF%83%CE%B9%CE%BC%CE%B7%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CF%80%CE%BF%CF%85%20%CE%BC%CE%B1%CF%82%20%CF%80%CF%81%CE%BF%CF%83%CF%86%CE%AD%CF%81%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CF%84o%20pyqgis%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%BD%CE%B1%20%22%CF%86%CE%BF%CF%81%CF%84%CF%8E%CE%BD%CE%BF%CF%85%CE%BC%CE%B5%22%20vector%20layer%20%CF%80%CE%BF%CF%85%20%CF%80%CF%81%CE%BF%CE%AD%CF%81%CF%87%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B1%CF%80%CF%8C%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1%20sql%20%CF%83%CF%84%CE%B7%CE%BD%20postgis.%0A%CE%88%CF%84%CF%83%CE%B9%20%CE%BF%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%CF%82%20%CE%BC%CF%80%CE%BF%CF%81%CE%B5%CE%AF%20%CE%BD%CE%B1%20%CF%83%CF%85%CE%BD%CE%B4%CF%85%CE%AC%CF%83%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1%20%CF%80%CE%BF%CF%85%20%CE%B8%CE%AD%CE%BB%CE%B5%CE%B9%20%CE%BC%CE%B5%20%CE%B5%CE%BD%CF%84%CE%BF%CE%BB%CE%AD%CF%82%20join%20%CE%BA%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CF%86%CF%84%CE%B9%CE%AC%CE%BE%CE%B5%CE%B9%20%CF%84%CE%BF%20layer%20%CF%80%CE%BF%CF%85%20%CE%B5%CF%80%CE%B9%CE%B8%CF%85%CE%BC%CE%B5%CE%AF.%0A%CE%A9%CF%83%CF%84%CF%8C%CF%83%CE%BF%2C%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AE%20%CF%84%CE%B5%CE%BA%CE%BC%CE%B7%CF%81%CE%AF%CF%89%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%84%CF%81%CF%8C%CF%80%CE%BF%20%CF%80%CE%BF%CF%85%20%CF%86%CE%BF%CF%81%CF%84%CF%8E%CE%BD%CE%BF%CF%85%CE%BC%CE%B5%20vector%20layers%20%CE%B4%CE%B5%CE%BD%20%CE%B1%CE%BD%CE%B1%CF%86%CE%AD%CF%81%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B7%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1.%20%CE%9C%CE%B5%CF%84%CE%AC%20%CE%B1%CF%80%CF%8C%20%CE%B1%CF%81%CE%BA%CE%B5%CF%84%CF%8C%20%CF%88%CE%AC%CE%BE%CE%B9%CE%BC%CE%BF%20%CE%BA%CE%B1%CE%B9%20%CE%B4%CE%BF%CE%BA%CE%B9%CE%BC%CE%AD%CF%82%20%CE%BA%CE%B1%CF%84%CE%AD%CE%BB%CE%B7%CE%BE%CE%B1%20%CF%83%CE%B5%20%CE%BC%CE%B5%CF%81%CE%B9%CE%BA%CE%AC%20tips%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%80%CF%89%CF%82%20%CE%B3%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9.%20%CE%91%CE%BD%CE%B1%CE%B3%CE%BA%CE%B1%CE%AF%CE%B5%CF%82%20%CF%80%CF%81%CE%BF%CF%8B%CF%80%CE%BF%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%3A%0A%0A%CE%9D%CE%B1%20%CF%85%CF%80%CE%AC%CF%81%CF%87%CE%B5%CE%B9%20%CF%80%CE%B5%CE%B4%CE%AF%CE%BF%20%CE%B3%CE%B5%CF%89%CE%BC%CE%B5%CF%84%CF%81%CE%AF%CE%B1%CF%82%20%CE%BC%CE%AD%CF%83%CE%B1%20%CF%83%CE%B5%20%CE%B1%CF%85%CF%84%CF%8C%0A%CE%BD%CE%B1%20%CF%85%CF%80%CE%AC%CF%81%CF%87%CE%B5%CE%B9%20%CE%BC%CE%BF%CE%BD%CE%B1%CE%B4%CE%B9%CE%BA%CF%8C%20%CF%80%CE%B5%CE%B4%CE%AF%CE%BF%20%CF%84%CF%8D%CF%80%CE%BF%CF%85%20integer%0A%CE%BF%20%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%CF%82%20sql%20%CF%80%CF%81%CE%AD%CF%80%CE%B5%CE%B9%20%CE%BD%CE%B1%20%CF%80%CE%B5%CF%81%CE%B9%CE%BA%CE%BB%CE%B5%CE%AF%CE%B5%CF%84%CE%B1%CE%B9%20%CF%83%CE%B5%20%CF%80%CE%B1%CF%81%CE%B5%CE%BD%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82%20%CF%8E%CF%83%CF%84%CE%B5%20%CE%BD%CE%B1%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%B4%CE%B9%CE%B1%CE%BA%CF%81%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CF%8C%CF%84%CE%B9%20%CF%80%CF%81%CF%8C%CE%BA%CE%B5%CE%B9%CF%84%CE%B1%CE%B9%20%CE%B3%CE%B9%CE%B1%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CF%8C%CF%87%CE%B9%20%CE%B3%CE%B9%CE%B1%20%CF%8C%CE%BD%CE%BF%CE%BC%CE%B1%20%CF%80%CE%AF%CE%BD%CE%B1%CE%BA%CE%B1.%0A%0A%CE%A4%CE%B1%20%CF%85%CF%80%CF%8C%CE%BB%CE%BF%CE%B9%CF%80%CE%B1%20%CF%83%CF%85%CE%BD%CF%84%CE%AC%CF%83%CF%83%CE%BF%CE%BD%CF%84%CE%B1%CE%B9%20%CE%BC%CE%B5%20%CF%84%CE%BF%20%CE%AF%CE%B4%CE%B9%CE%BF%20%CF%84%CF%81%CF%8C%CF%80%CE%BF%20%CF%80%CE%BF%CF%85%20%22%CF%86%CE%BF%CF%81%CF%84%CF%8E%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%22%20%CE%AD%CE%BD%CE%B1%CF%82%20%CF%80%CE%AF%CE%BD%CE%B1%CE%BA%CE%B1%CF%82%20postgis%3A%0Asql%20%3D%22%28select%20the_geom%2C%20id%2C%20name%20from%20mytable%29%22%0Auri%20%3D%20QgsDataSourceURI%28%29%0Auri.setConnection%28%22localhost%22%2C%225432%22%2C%22mydb%22%2C%22postgres%22%2C%22xxxxx%22%29%0Auri.setDataSource%28%22%22%2Csql%2C%22the_geom%22%2C%22%22%2C%22id%22%29%0Avlayer%20%3D%20QgsVectorLayer%28uri.uri%28%29%2C%22LayerName%22%2C%22postgres%22%29%0AQgsMapLayerRegistry.instance%28%29.addMapLayer%28vlayer%29%0A%0A%CE%95%CF%80%CE%AF%CF%83%CE%B7%CF%82%2C%20%CE%BA%CE%B1%CF%84%CF%8C%CF%80%CE%B9%CE%BD%20%CE%B4%CE%BF%CE%BA%CE%B9%CE%BC%CF%8E%CE%BD%2C%20%CF%80%CE%B1%CF%81%CE%B1%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B1%20%CF%8C%CF%84%CE%B9%20%CF%84%CE%BF%20sql%20%E2%80%A6&source=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema/" title="Share on LinkedIn">LinkedIn</a>
     ❄
     <a href="https://news.ycombinator.com/submitlink?t=PyQgis%20tips.%20QgsVectorLayer%20%CE%B1%CF%80%CF%8C%20postgis%20sql%20%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1&u=https%3A//geographer.gr/pyqgis-tips-qgsvectorlayer-apo-postgis-sql-erotema/" title="Share on HackerNews">HackerNews</a>
     ❄
@@ -186,32 +186,25 @@
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/index.html">pyqgis</a>
-είναι να “φορτώνουμε” vector layer που προέρχεται από ερώτημα sql στην
-<a href="http://postgis.net/">postgis</a>. Έτσι ο χρήστης μπορεί να
-συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το
-layer που επιθυμεί. Ωστόσο, στην σχετική <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/loadlayer.html">τεκμηρίωση</a>
-για το τρόπο που φορτώνουμε vector layers δεν αναφέρεται η σχετική
-δυνατότητα. Μετά από αρκετό ψάξιμο και δοκιμές κατέληξα σε μερικά tips
-για το πως γίνεται. Αναγκαίες προϋποθέσεις για το sql ερώτημα είναι:</p>
+                <p>Μία πολύ χρήσιμη δυνατότητα που μας προσφέρεται από τo <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/index.html">pyqgis</a> είναι να "φορτώνουμε" vector layer που προέρχεται από ερώτημα sql στην <a href="http://postgis.net/">postgis</a>.
+Έτσι ο χρήστης μπορεί να συνδυάσει την πληροφορία που θέλει με εντολές join και να φτιάξει το layer που επιθυμεί.
+Ωστόσο, στην σχετική <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/loadlayer.html">τεκμηρίωση</a> για το τρόπο που φορτώνουμε vector layers δεν αναφέρεται η σχετική δυνατότητα. Μετά από αρκετό ψάξιμο και δοκιμές κατέληξα σε μερικά tips για το πως γίνεται. Αναγκαίες προϋποθέσεις για το sql ερώτημα είναι:</p>
 <ul>
 <li>Να υπάρχει πεδίο γεωμετρίας μέσα σε αυτό</li>
 <li>να υπάρχει μοναδικό πεδίο τύπου integer</li>
-<li>ο κώδικας sql πρέπει να περικλείεται σε παρενθέσεις ώστε να είναι
-διακρίνεται ότι πρόκειται για sql ερώτημα και όχι για όνομα πίνακα.</li>
+<li>ο κώδικας sql πρέπει να περικλείεται σε παρενθέσεις ώστε να είναι διακρίνεται ότι πρόκειται για sql ερώτημα και όχι για όνομα πίνακα.</li>
 </ul>
-<p>Τα υπόλοιπα συντάσσονται με το ίδιο τρόπο που “φορτώνεται” ένας
-πίνακας postgis:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a>sql <span class="op">=</span><span class="st">"(select the_geom, id, name from mytable)"</span></span>
-<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>uri <span class="op">=</span> QgsDataSourceURI()</span>
-<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>uri.setConnection(<span class="st">"localhost"</span>,<span class="st">"5432"</span>,<span class="st">"mydb"</span>,<span class="st">"postgres"</span>,<span class="st">"xxxxx"</span>)</span>
-<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>uri.setDataSource(<span class="st">""</span>,sql,<span class="st">"the_geom"</span>,<span class="st">""</span>,<span class="st">"id"</span>)</span>
-<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>vlayer <span class="op">=</span> QgsVectorLayer(uri.uri(),<span class="st">"LayerName"</span>,<span class="st">"postgres"</span>)</span>
-<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>QgsMapLayerRegistry.instance().addMapLayer(vlayer)</span></code></pre></div>
-<p>Επίσης, κατόπιν δοκιμών, παρατήρησα ότι το sql ερώτημα δεν πρέπει να
-τελειώνει με ερωτηματικό (;) αλλά ούτε πρέπει να οριστεί κάτι στο schema
-του QgsDataSourceURI (όπως φαίνεται και στην γραμμή 4, η πρώτη
-παράμετρος στο setDataSource είναι ““).</p>
+<p>Τα υπόλοιπα συντάσσονται με το ίδιο τρόπο που "φορτώνεται" ένας πίνακας postgis:</p>
+<div class="highlight"><pre><span></span><code><span class="n">sql</span> <span class="o">=</span><span class="s2">&quot;(select the_geom, id, name from mytable)&quot;</span>
+<span class="n">uri</span> <span class="o">=</span> <span class="n">QgsDataSourceURI</span><span class="p">()</span>
+<span class="n">uri</span><span class="o">.</span><span class="n">setConnection</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span><span class="s2">&quot;5432&quot;</span><span class="p">,</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span><span class="s2">&quot;xxxxx&quot;</span><span class="p">)</span>
+<span class="n">uri</span><span class="o">.</span><span class="n">setDataSource</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">sql</span><span class="p">,</span><span class="s2">&quot;the_geom&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+<span class="n">vlayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">uri</span><span class="o">.</span><span class="n">uri</span><span class="p">(),</span><span class="s2">&quot;LayerName&quot;</span><span class="p">,</span><span class="s2">&quot;postgres&quot;</span><span class="p">)</span>
+<span class="n">QgsMapLayerRegistry</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">vlayer</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Επίσης, κατόπιν δοκιμών, παρατήρησα ότι το sql ερώτημα δεν πρέπει να τελειώνει με ερωτηματικό (;) αλλά ούτε πρέπει να οριστεί κάτι στο schema του QgsDataSourceURI (όπως φαίνεται και στην γραμμή 4, η πρώτη παράμετρος στο setDataSource είναι ""). </p>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -278,6 +271,314 @@ layer που επιθυμεί. Ωστόσο, στην σχετική <a href="ht
   </ul>
 </li>
 <!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Tag Cloud -->
+<li class="list-group-item">
+  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+  <ul class="list-group list-inline tagcloud" id="tags">
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/api.html">API</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/big-data.html">big data</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/blender.html">Blender</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/costs.html">Costs</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dem.html">dem</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/discharges.html">discharges</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eu-soil-observatory.html">EU soil observatory</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/europe.html">Europe</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/floods.html">floods</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/gis.html">GIS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/github.html">github</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/hg.html">Hg</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/off-site.html">Off-site</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/phd.html">phd</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/policy.html">Policy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/precipitation.html">precipitation</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
+    </li>
+    <li class="list-group-item tag-0">
+      <a href="https://geographer.gr/tag/python.html">python</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/r.html">R</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/raster.html">raster</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/redes.html">REDES</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/reservoir-sedimentation.html">Reservoir sedimentation</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/risk.html">Risk</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sar.html">SAR</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/soil-erosion.html">soil erosion</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/soil-policy.html">Soil policy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sql.html">sql</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/stack.html">stack</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Tag Cloud -->
 
 <!-- Sidebar/Links -->
 <li class="list-group-item">

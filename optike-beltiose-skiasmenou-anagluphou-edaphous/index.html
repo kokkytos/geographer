@@ -13,13 +13,13 @@
 
         <meta name="author" content="Leonidas Liakos" />
         <meta name="keywords" content="dem,gdaldem,gdalwrap,GIMP,σκίαση εδάφους" />
-        <meta name="description" content="Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την οπτική βελτίωση μιας σκίασης αναγλύφου εδάφους. Το λογισμικό που απαιτείται είναι το gdaldem, gdalwrap και το GIMP. Τα κλασσικά προγράμματα ΣΓΠ αναπαριστούν την σκίαση αναγλύφου με τρόπο μονότονο, συχνά μη φυσικό και με περιττή πληροφορία για τον αναγνώστη. Στόχος είναι …" />
+        <meta name="description" content="Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την οπτική βελτίωση μιας σκίασης αναγλύφου εδάφους. Το λογισμικό που απαιτείται είναι το gdaldem, gdalwrap και το GIMP. Τα κλασσικά προγράμματα ΣΓΠ αναπαριστούν την σκίαση αναγλύφου με τρόπο μονότονο, συχνά μη φυσικό και με περιττή πληροφορία για τον αναγνώστη. Στόχος είναι να εφαρμόσουμε μια τεχνική που πρώτος εφάρμοσε ο Eduard Imhof, την αναπαράσταση του αναγλύφου με θέαση αφ&#39; ύψηλου (aerial perspective). Η συγκεκριμένη τεχνική του Imhof προσομοιάζει την πραγματική, αφ&#39; υψηλού οπτική ενός τοπίου όπου ο θεατής βλέπει τις κορυφές με περισσότερη λεπτομέρεια και έντονη αντίθεση και τις περιοχές χαμηλότερου υψομέτρου με λιγότερη λεπτομέρεια λόγω απόστασης και ομίχλης στο τοπίο. Η τεχνική που ακολουθεί απαιτεί: Ένα Ψηφιακό Μοντέλο Εδάφους (DEM) Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου (z exaggeration). Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου (z exaggeration) και πηγή φωτός σε γωνία 90 μοιρών. Τεχνικές θαμπώματος (blur) για την εξομάλυνση και την απαλοιφή της περιττής πληροφορίας του DEM. Οπτική ενίσχυση των ορεινών όγκων και μίξη του αποτελέσματος με την σκίαση. Παρακάτω φαίνεται η σύγκριση μεταξύ μίας τυπικής σκίασης αναγλύφου και της σκίασης που προκύπτει μετά την προτεινόμενη μέθοδο απεικόνισης και επεξεργασίας. ΠΕΡΙΓΡΑΦΗ ΤΗΣ ΜΕΘΟΔΟΥ Κατεβάζουμε από την ιστοσελίδα http://gdem.ersdac.jspacesystems.or.jp/search.jsp το απαραίτητο Dem προς επεξεργασία στην περίπτωσή μας το: ASTGTM2_N39E020.zip Ακολουθεί αποσυμπίεση του συμπιεσμένου αρχείου με: unzip -j ASTGTM2_N39E020.zip Μετατροπή του DEM στο ΕΓΣΑ&#39;87 με: gdalwarp -t_srs EPSG:2100 -s_srs EPSG:4326 ASTGTM2_N39E020_dem.tif …" />
 
         <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Οπτική βελτίωση σκιασμένου αναγλύφου εδάφους"/>
         <meta property="og:url" content="https://geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/"/>
-        <meta property="og:description" content="Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την οπτική βελτίωση μιας σκίασης αναγλύφου εδάφους. Το λογισμικό που απαιτείται είναι το gdaldem, gdalwrap και το GIMP. Τα κλασσικά προγράμματα ΣΓΠ αναπαριστούν την σκίαση αναγλύφου με τρόπο μονότονο, συχνά μη φυσικό και με περιττή πληροφορία για τον αναγνώστη. Στόχος είναι …"/>
+        <meta property="og:description" content="Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την οπτική βελτίωση μιας σκίασης αναγλύφου εδάφους. Το λογισμικό που απαιτείται είναι το gdaldem, gdalwrap και το GIMP. Τα κλασσικά προγράμματα ΣΓΠ αναπαριστούν την σκίαση αναγλύφου με τρόπο μονότονο, συχνά μη φυσικό και με περιττή πληροφορία για τον αναγνώστη. Στόχος είναι να εφαρμόσουμε μια τεχνική που πρώτος εφάρμοσε ο Eduard Imhof, την αναπαράσταση του αναγλύφου με θέαση αφ&#39; ύψηλου (aerial perspective). Η συγκεκριμένη τεχνική του Imhof προσομοιάζει την πραγματική, αφ&#39; υψηλού οπτική ενός τοπίου όπου ο θεατής βλέπει τις κορυφές με περισσότερη λεπτομέρεια και έντονη αντίθεση και τις περιοχές χαμηλότερου υψομέτρου με λιγότερη λεπτομέρεια λόγω απόστασης και ομίχλης στο τοπίο. Η τεχνική που ακολουθεί απαιτεί: Ένα Ψηφιακό Μοντέλο Εδάφους (DEM) Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου (z exaggeration). Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου (z exaggeration) και πηγή φωτός σε γωνία 90 μοιρών. Τεχνικές θαμπώματος (blur) για την εξομάλυνση και την απαλοιφή της περιττής πληροφορίας του DEM. Οπτική ενίσχυση των ορεινών όγκων και μίξη του αποτελέσματος με την σκίαση. Παρακάτω φαίνεται η σύγκριση μεταξύ μίας τυπικής σκίασης αναγλύφου και της σκίασης που προκύπτει μετά την προτεινόμενη μέθοδο απεικόνισης και επεξεργασίας. ΠΕΡΙΓΡΑΦΗ ΤΗΣ ΜΕΘΟΔΟΥ Κατεβάζουμε από την ιστοσελίδα http://gdem.ersdac.jspacesystems.or.jp/search.jsp το απαραίτητο Dem προς επεξεργασία στην περίπτωσή μας το: ASTGTM2_N39E020.zip Ακολουθεί αποσυμπίεση του συμπιεσμένου αρχείου με: unzip -j ASTGTM2_N39E020.zip Μετατροπή του DEM στο ΕΓΣΑ&#39;87 με: gdalwarp -t_srs EPSG:2100 -s_srs EPSG:4326 ASTGTM2_N39E020_dem.tif …"/>
         <meta property="article:published_time" content="2013-02-13" />
             <meta property="article:section" content="GIS" />
             <meta property="article:tag" content="dem" />
@@ -137,7 +137,7 @@
     ❄
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/&title=%CE%9F%CF%80%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B2%CE%B5%CE%BB%CF%84%CE%AF%CF%89%CF%83%CE%B7%20%CF%83%CE%BA%CE%B9%CE%B1%CF%83%CE%BC%CE%AD%CE%BD%CE%BF%CF%85%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BB%CF%8D%CF%86%CE%BF%CF%85%20%CE%B5%CE%B4%CE%AC%CF%86%CE%BF%CF%85%CF%82&summary=%CE%A0%CE%B1%CF%81%CE%B1%CE%BA%CE%AC%CF%84%CF%89%20%CF%80%CF%81%CE%BF%CF%84%CE%B5%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CE%BC%CE%B9%CE%B1%20%CE%BC%CE%B5%CE%B8%CE%BF%CE%B4%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1%20%CE%BC%CE%B5%20%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1%20%CE%95%CE%9B/%CE%9B%CE%91%CE%9A%2C%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%0A%CE%BF%CF%80%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B2%CE%B5%CE%BB%CF%84%CE%AF%CF%89%CF%83%CE%B7%20%CE%BC%CE%B9%CE%B1%CF%82%20%CF%83%CE%BA%CE%AF%CE%B1%CF%83%CE%B7%CF%82%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BB%CF%8D%CF%86%CE%BF%CF%85%20%CE%B5%CE%B4%CE%AC%CF%86%CE%BF%CF%85%CF%82.%0A%CE%A4%CE%BF%20%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CF%8C%20%CF%80%CE%BF%CF%85%20%CE%B1%CF%80%CE%B1%CE%B9%CF%84%CE%B5%CE%AF%CF%84%CE%B1%CE%B9%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CF%84%CE%BF%20gdaldem%2C%20gdalwrap%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%20GIMP.%0A%CE%A4%CE%B1%20%CE%BA%CE%BB%CE%B1%CF%83%CF%83%CE%B9%CE%BA%CE%AC%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%AC%CE%BC%CE%BC%CE%B1%CF%84%CE%B1%20%CE%A3%CE%93%CE%A0%20%CE%B1%CE%BD%CE%B1%CF%80%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%BF%CF%8D%CE%BD%20%CF%84%CE%B7%CE%BD%20%CF%83%CE%BA%CE%AF%CE%B1%CF%83%CE%B7%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BB%CF%8D%CF%86%CE%BF%CF%85%20%CE%BC%CE%B5%0A%CF%84%CF%81%CF%8C%CF%80%CE%BF%20%CE%BC%CE%BF%CE%BD%CF%8C%CF%84%CE%BF%CE%BD%CE%BF%2C%20%CF%83%CF%85%CF%87%CE%BD%CE%AC%20%CE%BC%CE%B7%20%CF%86%CF%85%CF%83%CE%B9%CE%BA%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%BC%CE%B5%20%CF%80%CE%B5%CF%81%CE%B9%CF%84%CF%84%CE%AE%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%CE%BD%0A%CE%B1%CE%BD%CE%B1%CE%B3%CE%BD%CF%8E%CF%83%CF%84%CE%B7.%0A%CE%A3%CF%84%CF%8C%CF%87%CE%BF%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%E2%80%A6&source=https%3A//geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/" title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/&title=%CE%9F%CF%80%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B2%CE%B5%CE%BB%CF%84%CE%AF%CF%89%CF%83%CE%B7%20%CF%83%CE%BA%CE%B9%CE%B1%CF%83%CE%BC%CE%AD%CE%BD%CE%BF%CF%85%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BB%CF%8D%CF%86%CE%BF%CF%85%20%CE%B5%CE%B4%CE%AC%CF%86%CE%BF%CF%85%CF%82&summary=%CE%A0%CE%B1%CF%81%CE%B1%CE%BA%CE%AC%CF%84%CF%89%20%CF%80%CF%81%CE%BF%CF%84%CE%B5%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CE%BC%CE%B9%CE%B1%20%CE%BC%CE%B5%CE%B8%CE%BF%CE%B4%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1%20%CE%BC%CE%B5%20%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1%20%CE%95%CE%9B/%CE%9B%CE%91%CE%9A%2C%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%BF%CF%80%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B2%CE%B5%CE%BB%CF%84%CE%AF%CF%89%CF%83%CE%B7%20%CE%BC%CE%B9%CE%B1%CF%82%20%CF%83%CE%BA%CE%AF%CE%B1%CF%83%CE%B7%CF%82%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BB%CF%8D%CF%86%CE%BF%CF%85%20%CE%B5%CE%B4%CE%AC%CF%86%CE%BF%CF%85%CF%82.%0A%CE%A4%CE%BF%20%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CE%BC%CE%B9%CE%BA%CF%8C%20%CF%80%CE%BF%CF%85%20%CE%B1%CF%80%CE%B1%CE%B9%CF%84%CE%B5%CE%AF%CF%84%CE%B1%CE%B9%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CF%84%CE%BF%20gdaldem%2C%20gdalwrap%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%20GIMP.%0A%CE%A4%CE%B1%20%CE%BA%CE%BB%CE%B1%CF%83%CF%83%CE%B9%CE%BA%CE%AC%20%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%AC%CE%BC%CE%BC%CE%B1%CF%84%CE%B1%20%CE%A3%CE%93%CE%A0%20%CE%B1%CE%BD%CE%B1%CF%80%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%BF%CF%8D%CE%BD%20%CF%84%CE%B7%CE%BD%20%CF%83%CE%BA%CE%AF%CE%B1%CF%83%CE%B7%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BB%CF%8D%CF%86%CE%BF%CF%85%20%CE%BC%CE%B5%20%CF%84%CF%81%CF%8C%CF%80%CE%BF%20%CE%BC%CE%BF%CE%BD%CF%8C%CF%84%CE%BF%CE%BD%CE%BF%2C%20%CF%83%CF%85%CF%87%CE%BD%CE%AC%20%CE%BC%CE%B7%20%CF%86%CF%85%CF%83%CE%B9%CE%BA%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%BC%CE%B5%20%CF%80%CE%B5%CF%81%CE%B9%CF%84%CF%84%CE%AE%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BD%CF%8E%CF%83%CF%84%CE%B7.%0A%CE%A3%CF%84%CF%8C%CF%87%CE%BF%CF%82%20%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%20%CE%BD%CE%B1%20%CE%B5%CF%86%CE%B1%CF%81%CE%BC%CF%8C%CF%83%CE%BF%CF%85%CE%BC%CE%B5%20%CE%BC%CE%B9%CE%B1%20%CF%84%CE%B5%CF%87%CE%BD%CE%B9%CE%BA%CE%AE%20%CF%80%CE%BF%CF%85%20%CF%80%CF%81%CF%8E%CF%84%CE%BF%CF%82%20%CE%B5%CF%86%CE%AC%CF%81%CE%BC%CE%BF%CF%83%CE%B5%20%CE%BF%20Eduard%20Imhof%2C%20%CF%84%CE%B7%CE%BD%20%CE%B1%CE%BD%CE%B1%CF%80%CE%B1%CF%81%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7%20%CF%84%CE%BF%CF%85%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BB%CF%8D%CF%86%CE%BF%CF%85%20%CE%BC%CE%B5%20%CE%B8%CE%AD%CE%B1%CF%83%CE%B7%20%CE%B1%CF%86%27%20%CF%8D%CF%88%CE%B7%CE%BB%CE%BF%CF%85%20%28aerial%20perspective%29.%20%CE%97%20%CF%83%CF%85%CE%B3%CE%BA%CE%B5%CE%BA%CF%81%CE%B9%CE%BC%CE%AD%CE%BD%CE%B7%20%CF%84%CE%B5%CF%87%CE%BD%CE%B9%CE%BA%CE%AE%20%CF%84%CE%BF%CF%85%20Imhof%20%CF%80%CF%81%CE%BF%CF%83%CE%BF%CE%BC%CE%BF%CE%B9%CE%AC%CE%B6%CE%B5%CE%B9%20%CF%84%CE%B7%CE%BD%20%CF%80%CF%81%CE%B1%CE%B3%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%AE%2C%20%CE%B1%CF%86%27%20%CF%85%CF%88%CE%B7%CE%BB%CE%BF%CF%8D%20%CE%BF%CF%80%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B5%CE%BD%CF%8C%CF%82%20%CF%84%CE%BF%CF%80%CE%AF%CE%BF%CF%85%20%CF%8C%CF%80%CE%BF%CF%85%20%CE%BF%20%CE%B8%CE%B5%CE%B1%CF%84%CE%AE%CF%82%20%CE%B2%CE%BB%CE%AD%CF%80%CE%B5%CE%B9%20%CF%84%CE%B9%CF%82%20%CE%BA%CE%BF%CF%81%CF%85%CF%86%CE%AD%CF%82%20%CE%BC%CE%B5%20%CF%80%CE%B5%CF%81%CE%B9%CF%83%CF%83%CF%8C%CF%84%CE%B5%CF%81%CE%B7%20%CE%BB%CE%B5%CF%80%CF%84%CE%BF%CE%BC%CE%AD%CF%81%CE%B5%CE%B9%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%AD%CE%BD%CF%84%CE%BF%CE%BD%CE%B7%20%CE%B1%CE%BD%CF%84%CE%AF%CE%B8%CE%B5%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%B9%CF%82%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AD%CF%82%20%CF%87%CE%B1%CE%BC%CE%B7%CE%BB%CF%8C%CF%84%CE%B5%CF%81%CE%BF%CF%85%20%CF%85%CF%88%CE%BF%CE%BC%CE%AD%CF%84%CF%81%CE%BF%CF%85%20%CE%BC%CE%B5%20%CE%BB%CE%B9%CE%B3%CF%8C%CF%84%CE%B5%CF%81%CE%B7%20%CE%BB%CE%B5%CF%80%CF%84%CE%BF%CE%BC%CE%AD%CF%81%CE%B5%CE%B9%CE%B1%20%CE%BB%CF%8C%CE%B3%CF%89%20%CE%B1%CF%80%CF%8C%CF%83%CF%84%CE%B1%CF%83%CE%B7%CF%82%20%CE%BA%CE%B1%CE%B9%20%CE%BF%CE%BC%CE%AF%CF%87%CE%BB%CE%B7%CF%82%20%CF%83%CF%84%CE%BF%20%CF%84%CE%BF%CF%80%CE%AF%CE%BF.%20%CE%97%20%CF%84%CE%B5%CF%87%CE%BD%CE%B9%CE%BA%CE%AE%20%CF%80%CE%BF%CF%85%20%CE%B1%CE%BA%CE%BF%CE%BB%CE%BF%CF%85%CE%B8%CE%B5%CE%AF%20%CE%B1%CF%80%CE%B1%CE%B9%CF%84%CE%B5%CE%AF%3A%0A%0A%0A%CE%88%CE%BD%CE%B1%20%CE%A8%CE%B7%CF%86%CE%B9%CE%B1%CE%BA%CF%8C%20%CE%9C%CE%BF%CE%BD%CF%84%CE%AD%CE%BB%CE%BF%20%CE%95%CE%B4%CE%AC%CF%86%CE%BF%CF%85%CF%82%20%28DEM%29%0A%0A%0A%CE%A3%CE%BA%CE%AF%CE%B1%CF%83%CE%B7%20%CF%84%CE%BF%CF%85%20%CE%B1%CE%BD%CF%89%CF%84%CE%AD%CF%81%CF%89%20DEM%20%CE%BC%CE%B5%20%CE%B4%CE%B9%CF%80%CE%BB%CE%AC%CF%83%CE%B9%CE%B1%20%CE%BA%CE%AC%CE%B8%CE%B5%CF%84%CE%B7%20%CF%85%CF%80%CE%B5%CF%81%CE%B2%CE%BF%CE%BB%CE%AE%20%CF%84%CE%BF%CF%85%20%CF%85%CF%88%CE%BF%CE%BC%CE%AD%CF%84%CF%81%CE%BF%CF%85%20%28z%20exaggeration%29.%0A%0A%0A%CE%A3%CE%BA%CE%AF%CE%B1%CF%83%CE%B7%20%CF%84%CE%BF%CF%85%20%CE%B1%CE%BD%CF%89%CF%84%CE%AD%CF%81%CF%89%20DEM%20%CE%BC%CE%B5%20%CE%B4%CE%B9%CF%80%CE%BB%CE%AC%CF%83%CE%B9%CE%B1%20%CE%BA%CE%AC%CE%B8%CE%B5%CF%84%CE%B7%20%CF%85%CF%80%CE%B5%CF%81%CE%B2%CE%BF%CE%BB%CE%AE%20%CF%84%CE%BF%CF%85%20%CF%85%CF%88%CE%BF%CE%BC%CE%AD%CF%84%CF%81%CE%BF%CF%85%20%28z%20exaggeration%29%20%CE%BA%CE%B1%CE%B9%20%CF%80%CE%B7%CE%B3%CE%AE%20%CF%86%CF%89%CF%84%CF%8C%CF%82%20%CF%83%CE%B5%20%CE%B3%CF%89%CE%BD%CE%AF%CE%B1%2090%20%CE%BC%CE%BF%CE%B9%CF%81%CF%8E%CE%BD.%0A%0A%0A%CE%A4%CE%B5%CF%87%CE%BD%CE%B9%CE%BA%CE%AD%CF%82%20%CE%B8%CE%B1%CE%BC%CF%80%CF%8E%CE%BC%CE%B1%CF%84%CE%BF%CF%82%20%28blur%29%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B5%CE%BE%CE%BF%CE%BC%CE%AC%CE%BB%CF%85%CE%BD%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%B7%CE%BD%20%CE%B1%CF%80%CE%B1%CE%BB%CE%BF%CE%B9%CF%86%CE%AE%20%CF%84%CE%B7%CF%82%20%CF%80%CE%B5%CF%81%CE%B9%CF%84%CF%84%CE%AE%CF%82%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1%CF%82%20%CF%84%CE%BF%CF%85%20DEM.%0A%0A%0A%CE%9F%CF%80%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B5%CE%BD%CE%AF%CF%83%CF%87%CF%85%CF%83%CE%B7%20%CF%84%CF%89%CE%BD%20%CE%BF%CF%81%CE%B5%CE%B9%CE%BD%CF%8E%CE%BD%20%CF%8C%CE%B3%CE%BA%CF%89%CE%BD%20%CE%BA%CE%B1%CE%B9%20%CE%BC%CE%AF%CE%BE%CE%B7%20%CF%84%CE%BF%CF%85%20%CE%B1%CF%80%CE%BF%CF%84%CE%B5%CE%BB%CE%AD%CF%83%CE%BC%CE%B1%CF%84%CE%BF%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CF%83%CE%BA%CE%AF%CE%B1%CF%83%CE%B7.%0A%0A%0A%CE%A0%CE%B1%CF%81%CE%B1%CE%BA%CE%AC%CF%84%CF%89%20%CF%86%CE%B1%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B7%20%CF%83%CF%8D%CE%B3%CE%BA%CF%81%CE%B9%CF%83%CE%B7%20%CE%BC%CE%B5%CF%84%CE%B1%CE%BE%CF%8D%20%CE%BC%CE%AF%CE%B1%CF%82%20%CF%84%CF%85%CF%80%CE%B9%CE%BA%CE%AE%CF%82%20%CF%83%CE%BA%CE%AF%CE%B1%CF%83%CE%B7%CF%82%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BB%CF%8D%CF%86%CE%BF%CF%85%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%B7%CF%82%20%CF%83%CE%BA%CE%AF%CE%B1%CF%83%CE%B7%CF%82%20%CF%80%CE%BF%CF%85%20%CF%80%CF%81%CE%BF%CE%BA%CF%8D%CF%80%CF%84%CE%B5%CE%B9%20%CE%BC%CE%B5%CF%84%CE%AC%20%CF%84%CE%B7%CE%BD%20%CF%80%CF%81%CE%BF%CF%84%CE%B5%CE%B9%CE%BD%CF%8C%CE%BC%CE%B5%CE%BD%CE%B7%20%CE%BC%CE%AD%CE%B8%CE%BF%CE%B4%CE%BF%20%CE%B1%CF%80%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CE%B9%CF%83%CE%B7%CF%82%20%CE%BA%CE%B1%CE%B9%20%CE%B5%CF%80%CE%B5%CE%BE%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82.%0A%20%0A%CE%A0%CE%95%CE%A1%CE%99%CE%93%CE%A1%CE%91%CE%A6%CE%97%20%CE%A4%CE%97%CE%A3%20%CE%9C%CE%95%CE%98%CE%9F%CE%94%CE%9F%CE%A5%0A%CE%9A%CE%B1%CF%84%CE%B5%CE%B2%CE%AC%CE%B6%CE%BF%CF%85%CE%BC%CE%B5%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%CE%BD%20%CE%B9%CF%83%CF%84%CE%BF%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1%20http%3A//gdem.ersdac.jspacesystems.or.jp/search.jsp%20%CF%84%CE%BF%20%CE%B1%CF%80%CE%B1%CF%81%CE%B1%CE%AF%CF%84%CE%B7%CF%84%CE%BF%20Dem%20%CF%80%CF%81%CE%BF%CF%82%20%CE%B5%CF%80%CE%B5%CE%BE%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%AF%CF%80%CF%84%CF%89%CF%83%CE%AE%20%CE%BC%CE%B1%CF%82%20%CF%84%CE%BF%3A%20ASTGTM2_N39E020.zip%0A%CE%91%CE%BA%CE%BF%CE%BB%CE%BF%CF%85%CE%B8%CE%B5%CE%AF%20%CE%B1%CF%80%CE%BF%CF%83%CF%85%CE%BC%CF%80%CE%AF%CE%B5%CF%83%CE%B7%20%CF%84%CE%BF%CF%85%20%CF%83%CF%85%CE%BC%CF%80%CE%B9%CE%B5%CF%83%CE%BC%CE%AD%CE%BD%CE%BF%CF%85%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%CF%85%20%CE%BC%CE%B5%3A%0Aunzip%20-j%20ASTGTM2_N39E020.zip%0A%0A%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CF%84%CE%BF%CF%85%20DEM%20%CF%83%CF%84%CE%BF%20%CE%95%CE%93%CE%A3%CE%91%2787%20%CE%BC%CE%B5%3A%0Agdalwarp%20-t_srs%20EPSG%3A2100%20-s_srs%20EPSG%3A4326%20ASTGTM2_N39E020_dem.tif%20%E2%80%A6&source=https%3A//geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/" title="Share on LinkedIn">LinkedIn</a>
     ❄
     <a href="https://news.ycombinator.com/submitlink?t=%CE%9F%CF%80%CF%84%CE%B9%CE%BA%CE%AE%20%CE%B2%CE%B5%CE%BB%CF%84%CE%AF%CF%89%CF%83%CE%B7%20%CF%83%CE%BA%CE%B9%CE%B1%CF%83%CE%BC%CE%AD%CE%BD%CE%BF%CF%85%20%CE%B1%CE%BD%CE%B1%CE%B3%CE%BB%CF%8D%CF%86%CE%BF%CF%85%20%CE%B5%CE%B4%CE%AC%CF%86%CE%BF%CF%85%CF%82&u=https%3A//geographer.gr/optike-beltiose-skiasmenou-anagluphou-edaphous/" title="Share on HackerNews">HackerNews</a>
     ❄
@@ -186,153 +186,121 @@
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την
-οπτική βελτίωση μιας σκίασης αναγλύφου εδάφους.</p>
+                <p>Παρακάτω προτείνεται μια μεθοδολογία με εργαλεία ΕΛ/ΛΑΚ, για την οπτική βελτίωση μιας σκίασης αναγλύφου εδάφους.</p>
 <p>Το λογισμικό που απαιτείται είναι το <a href="http://www.gdal.org/gdaldem.html">gdaldem</a>, <a href="http://www.gdal.org/gdalwarp.html">gdalwrap</a> και το <a href="https://www.gimp.org/">GIMP</a>.</p>
-<p>Τα κλασσικά προγράμματα ΣΓΠ αναπαριστούν την σκίαση αναγλύφου με
-τρόπο μονότονο, συχνά μη φυσικό και με περιττή πληροφορία για τον
-αναγνώστη.</p>
-<p>Στόχος είναι να εφαρμόσουμε μια τεχνική που πρώτος εφάρμοσε ο <a href="http://www.reliefshading.com/cartographers/imhof.html">Eduard
-Imhof</a>, την αναπαράσταση του αναγλύφου με θέαση αφ’ ύψηλου (aerial
-perspective). Η συγκεκριμένη τεχνική του Imhof προσομοιάζει την
-πραγματική, αφ’ υψηλού οπτική ενός τοπίου όπου ο θεατής βλέπει τις
-κορυφές με περισσότερη λεπτομέρεια και έντονη αντίθεση και τις περιοχές
-χαμηλότερου υψομέτρου με λιγότερη λεπτομέρεια λόγω απόστασης και ομίχλης
-στο τοπίο. Η τεχνική που ακολουθεί απαιτεί:</p>
-<ol type="1">
-<li><p>Ένα Ψηφιακό Μοντέλο Εδάφους (DEM)</p></li>
-<li><p>Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου
-(z exaggeration).</p></li>
-<li><p>Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου
-(z exaggeration) και πηγή φωτός σε γωνία 90 μοιρών.</p></li>
-<li><p>Τεχνικές θαμπώματος (blur) για την εξομάλυνση και την απαλοιφή
-της περιττής πληροφορίας του DEM.</p></li>
-<li><p>Οπτική ενίσχυση των ορεινών όγκων και μίξη του αποτελέσματος με
-την σκίαση.</p></li>
+<p>Τα κλασσικά προγράμματα ΣΓΠ αναπαριστούν την σκίαση αναγλύφου με τρόπο μονότονο, συχνά μη φυσικό και με περιττή πληροφορία για τον αναγνώστη.</p>
+<p>Στόχος είναι να εφαρμόσουμε μια τεχνική που πρώτος εφάρμοσε ο <a href="http://www.reliefshading.com/cartographers/imhof.html">Eduard Imhof</a>, την αναπαράσταση του αναγλύφου με θέαση αφ' ύψηλου (aerial perspective). Η συγκεκριμένη τεχνική του Imhof προσομοιάζει την πραγματική, αφ' υψηλού οπτική ενός τοπίου όπου ο θεατής βλέπει τις κορυφές με περισσότερη λεπτομέρεια και έντονη αντίθεση και τις περιοχές χαμηλότερου υψομέτρου με λιγότερη λεπτομέρεια λόγω απόστασης και ομίχλης στο τοπίο. Η τεχνική που ακολουθεί απαιτεί:</p>
+<ol>
+<li>
+<p>Ένα Ψηφιακό Μοντέλο Εδάφους (DEM)</p>
+</li>
+<li>
+<p>Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου (z exaggeration).</p>
+</li>
+<li>
+<p>Σκίαση του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου (z exaggeration) και πηγή φωτός σε γωνία 90 μοιρών.</p>
+</li>
+<li>
+<p>Τεχνικές θαμπώματος (blur) για την εξομάλυνση και την απαλοιφή της περιττής πληροφορίας του DEM.</p>
+</li>
+<li>
+<p>Οπτική ενίσχυση των ορεινών όγκων και μίξη του αποτελέσματος με την σκίαση.</p>
+</li>
 </ol>
-<p>Παρακάτω φαίνεται η σύγκριση μεταξύ μίας τυπικής σκίασης αναγλύφου
-και της σκίασης που προκύπτει μετά την προτεινόμενη μέθοδο απεικόνισης
-και επεξεργασίας.</p>
-<p><img src="https://geographer.gr/images/aster_ggrs.hillshade.z1.jpg" title="Τυπική σκίαση αναγλύφου" width="400"/>
-<img src="https://geographer.gr/images/dem_final.jpg" title="Σκίαση αναγλύφου κατόπιν επεξεργασίας" width="400"/></p>
-<h3 id="περιγραφη-τησ-μεθοδου">ΠΕΡΙΓΡΑΦΗ ΤΗΣ ΜΕΘΟΔΟΥ</h3>
-<p>Κατεβάζουμε από την ιστοσελίδα <a class="uri" href="http://gdem.ersdac.jspacesystems.or.jp/search.jsp">http://gdem.ersdac.jspacesystems.or.jp/search.jsp</a> το
-απαραίτητο Dem προς επεξεργασία στην περίπτωσή μας το:
-ASTGTM2_N39E020.zip</p>
+<p>Παρακάτω φαίνεται η σύγκριση μεταξύ μίας τυπικής σκίασης αναγλύφου και της σκίασης που προκύπτει μετά την προτεινόμενη μέθοδο απεικόνισης και επεξεργασίας.</p>
+<p><img src={static}images/aster_ggrs.hillshade.z1.jpg  title="Τυπική σκίαση αναγλύφου" width="400"> <img src={static}images/dem_final.jpg  width="400"  title="Σκίαση αναγλύφου κατόπιν επεξεργασίας"></p>
+<h3>ΠΕΡΙΓΡΑΦΗ ΤΗΣ ΜΕΘΟΔΟΥ</h3>
+<p>Κατεβάζουμε από την ιστοσελίδα <a href="http://gdem.ersdac.jspacesystems.or.jp/search.jsp">http://gdem.ersdac.jspacesystems.or.jp/search.jsp</a> το απαραίτητο Dem προς επεξεργασία στην περίπτωσή μας το: ASTGTM2_N39E020.zip</p>
 <p>Ακολουθεί αποσυμπίεση του συμπιεσμένου αρχείου με:</p>
-<pre><code>unzip -j ASTGTM2_N39E020.zip</code></pre>
-<p>Μετατροπή του DEM στο ΕΓΣΑ’87 με:</p>
-<pre><code>gdalwarp -t_srs EPSG:2100 -s_srs EPSG:4326 ASTGTM2_N39E020_dem.tif aster_GGRS.tif -r bilinear</code></pre>
-<p>Κρίσιμη επίδραση στην οπτική απόδοση της σκίασης του αναγλύφου έχει η
-παράμετρος της κάθετης υπερβολής (z exaggeration) του υψομέτρου, η οποία
-ορίζεται στο διπλάσιο.</p>
-<p>Υπολογισμός σκίασης του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του
-υψομέτρου:</p>
-<pre><code>gdaldem hillshade aster_GGRS.tif aster_GGRS.hillshade.z2.tif -z 2</code></pre>
-<p>Υπολογισμός σκίασης του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του
-υψομέτρου (z exaggeration) και με ύψος φωτεινής πηγής 90 μοίρες:</p>
-<pre><code>gdaldem hillshade aster_GGRS.tif aster_GGRS.x2.alt90.tif -z 2 -alt 90 -compute_edges</code></pre>
-<h3 id="επεξεργασια-στο-gimp">ΕΠΕΞΕΡΓΑΣΙΑ ΣΤΟ GIMP</h3>
-<ol type="1">
+<div class="highlight"><pre><span></span><code>unzip -j ASTGTM2_N39E020.zip
+</code></pre></div>
+
+
+<p>Μετατροπή του DEM στο ΕΓΣΑ'87 με:</p>
+<div class="highlight"><pre><span></span><code>gdalwarp -t_srs EPSG:2100 -s_srs EPSG:4326 ASTGTM2_N39E020_dem.tif aster_GGRS.tif -r bilinear
+</code></pre></div>
+
+
+<p>Κρίσιμη επίδραση στην οπτική απόδοση της σκίασης του αναγλύφου έχει η παράμετρος της κάθετης υπερβολής (z exaggeration) του υψομέτρου, η οποία ορίζεται στο διπλάσιο.</p>
+<p>Υπολογισμός σκίασης του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου:</p>
+<div class="highlight"><pre><span></span><code>gdaldem hillshade aster_GGRS.tif aster_GGRS.hillshade.z2.tif -z 2
+</code></pre></div>
+
+
+<p>Υπολογισμός σκίασης του ανωτέρω DEM με διπλάσια κάθετη υπερβολή του υψομέτρου (z exaggeration) και με ύψος φωτεινής πηγής 90 μοίρες:</p>
+<div class="highlight"><pre><span></span><code>gdaldem hillshade aster_GGRS.tif aster_GGRS.x2.alt90.tif -z 2 -alt 90 -compute_edges
+</code></pre></div>
+
+
+<h3>ΕΠΕΞΕΡΓΑΣΙΑ ΣΤΟ GIMP</h3>
+<ol>
 <li>Γενίκευση της σκίασης και τεχνικές θαμπώματος (blur)</li>
 </ol>
-<p>Ανοίγουμε στο GIMP το αρχείο aster_GGRS.hillshade.z2.tif με σκοπό
-αρχικά να μειώσουμε τον “θορυβο” και την περιττή πληροφορία, να
-γενικεύσουμε την επιφάνεια. Ένα κατάλληλο εργαλείο γι’ αυτή την
-επεξεργασία είναι το <a href="http://registry.gimp.org/node/24208">Simple surface blur/bilateral
-filter</a>, το οποίο απαιτεί ειδική εγκατάσταση στο GIMP.</p>
-<p>Επιλέγουμε <em>Filters-&gt;Blur-&gt;Simple Bilateral</em> και
-ορίζουμε τιμές:</p>
+<p>Ανοίγουμε στο GIMP το αρχείο aster_GGRS.hillshade.z2.tif με σκοπό αρχικά να μειώσουμε τον "θορυβο" και την περιττή πληροφορία, να γενικεύσουμε την επιφάνεια. Ένα κατάλληλο εργαλείο γι' αυτή την επεξεργασία είναι το <a href="http://registry.gimp.org/node/24208">Simple surface blur/bilateral filter</a>, το οποίο απαιτεί ειδική εγκατάσταση στο GIMP.</p>
+<p>Επιλέγουμε <em>Filters-&gt;Blur-&gt;Simple Bilateral</em> και ορίζουμε τιμές:</p>
 <p>Size:79</p>
 <p>Threshold:118</p>
-<p>Οι τιμές είναι ενδεικτικές και προκύπτουν μετά από δοκιμές, ανάλογα
-την επίδραση στο τελικό αποτέλεσμα.</p>
-<p>Επιλέγουμε <em>Filters-&gt;Blur-&gt;Gaussian Blur</em> και ορίζουμε
-τιμές στο Blur Radius:</p>
+<p>Οι τιμές είναι ενδεικτικές και προκύπτουν μετά από δοκιμές, ανάλογα την επίδραση στο τελικό αποτέλεσμα.</p>
+<p>Επιλέγουμε <em>Filters-&gt;Blur-&gt;Gaussian Blur</em> και ορίζουμε τιμές στο Blur Radius:</p>
 <p>Horizontal:3</p>
 <p>Vertical:3</p>
-<p><img src="https://geographer.gr/images/gaussian_blur.jpg"/></p>
-<p>Μπορούμε να συνεχίσουμε την αφαίρεση “θορύβου” με το φίλτρο Despeckle
-(Filters &gt; Enhance &gt; Despeckle) όπου δίνουμε τις παραμέτρους της
-παρακάτω εικόνας: <img src="https://geographer.gr/images/despeckle.jpg"/></p>
-<ol start="2" type="1">
+<p><img alt="" src="https://geographer.gr/images/gaussian_blur.jpg"></p>
+<p>Μπορούμε να συνεχίσουμε την αφαίρεση "θορύβου" με το φίλτρο Despeckle (Filters &gt; Enhance &gt; Despeckle) όπου δίνουμε τις παραμέτρους της παρακάτω εικόνας:
+<img alt="" src="https://geographer.gr/images/despeckle.jpg"></p>
+<ol>
 <li>Οπτική ενίσχυση του αναγλύφου με βάση το υψόμετρο:</li>
 </ol>
-<p>Μετατρέπουμε το Dem (aster_GGRS.tif) σε μορφή αναγνώσιμη για το GIMP
-(8-bit):</p>
-<pre><code>convert aster_GGRS.tif -evaluate multiply 26.54 -depth 8 new.tif</code></pre>
+<p>Μετατρέπουμε το Dem (aster_GGRS.tif) σε μορφή αναγνώσιμη για το GIMP (8-bit):</p>
+<div class="highlight"><pre><span></span><code>convert aster_GGRS.tif -evaluate multiply 26.54 -depth 8 new.tif
+</code></pre></div>
+
+
 <p>και το ανοίγουμε στο GIMP. Το επιλέγουμε και το αντιγράφουμε.</p>
-<p>Στην συνέχεια στο GIMP, στο αρχείο όπου επεξεργαζόμαστε το ανάγλυφο
-(aster_GGRS.hillshade.z2.tif), δημιουργούμε ένα αντίγραφο του layer και
-σε αυτό προσθέτουμε μία Layer Mask από το Layer-&gt;Mask-&gt;Add Layer
-Mask-&gt;Layers Alpha Channel. Στο mode ορίζουμε Multiply.</p>
-<p>Κάνουμε paste into το layer με το DEM (aster_GGRS.tif) πάνω στο
-Duplicated Layer και στην συνέχεια με δεξί κλίκ Anchor Layer.</p>
+<p>Στην συνέχεια στο GIMP, στο αρχείο όπου επεξεργαζόμαστε το ανάγλυφο (aster_GGRS.hillshade.z2.tif), δημιουργούμε ένα αντίγραφο του layer και σε αυτό προσθέτουμε μία Layer Mask από το  Layer-&gt;Mask-&gt;Add Layer Mask-&gt;Layers Alpha Channel. Στο mode ορίζουμε Multiply.</p>
+<p>Κάνουμε paste into το layer με το DEM (aster_GGRS.tif) πάνω στο Duplicated Layer και στην συνέχεια με δεξί κλίκ Anchor Layer.</p>
 <p>Τα layers στο GIMP πρέπει να είναι σε αυτή την μορφή:</p>
-<p><img src="https://geographer.gr/images/layers.jpg"/></p>
-<p>Πάνω στο Duplicated Layer κάνουμε με δεξί κλίκ Show Layer Mask και
-Edit Layer Mask. Βλέπουμε το layer δηλαδή το αρχείο DEM που
-χρησιμοποιειται για την διαφάνεια Alpha. Μπορούμε να τονίσουμε ακόμα
-περισσότερο τις κορυφές του αναγλύφου με τις εντολές Colors-&gt;Levels
-και Colors-&gt;Brightenest-Contrast και Colors-&gt;Auto-&gt;Stretch
-Contrast.</p>
-<p><img src="https://geographer.gr/images/alpha.jpg"/></p>
-<p>Έτσι επιτυγχάνουμε να τονίσουμε τους ορεινούς όγκους του αναγλύφου
-και την αίσθηση της οπτική θέασης αφ’ ύψηλου. Όπως φαίνεται στην
-παρακάτω εικόνα η εφαρμογή της μάσκας στην σκίαση αναγλύφου έχει σαν
-αποτέλεσμα να καθιστά ορατά μόνο συγκεκριμένα τμήματα.</p>
-<p><img src="https://geographer.gr/images/alpha.png"/></p>
-<p>Το επόμενο βήμα είναι να προσθέσουμε το αρχείο
-aster_GGRS.x2.alt90.tif στο αρχείο μας σαν layer (File-&gt;Open as
-Layer) και να το μεταφέρουμε στην κορυφή της σειράς των layers. <img src="https://geographer.gr/images/dem_alt90.jpg"/></p>
-<p>Τέλος του ορίζουμε μικρή τιμή διαφάνειας (π.χ. 20%), με δοκιμές
-φαίνεται ανάλογα το αποτέλεσμα της μίξης των layers. Το αρχείο
-αποθηκεύεται με την ονομασία final.tif <img src="https://geographer.gr/images/dem_final.jpg"/></p>
-<p>Μετά το πέρας της διαδικασίας το αρχείο δεν έχει πλέον καμία
-γεωαναφορά και για να την επαναφέρουμε μπορούμε να εκμεταλλευτούμε τα
-αντίστοιχα δεδομένα από τα αρχεία εισόδου που χρησιμοποιήθηκαν και
-περιέχουν γεωγραφική εξάρτηση και πληροφορία. Αρκεί ένα από αυτά τα
-αρχεία για να εξάγουμε την σχετική πληροφορία και να την προσαρτήσουμε
-στο αρχείο της σκίασης με την προυπόθεση όμως ότι αυτό δεν έχει υποστεί
-αλλαγές στο μέγεθός του.Έστω ότι το αρχείο που χρησιμοποιούμε είναι το
-αρχικό αρχείο ψηφιακού μοντέλου εδάφους στο ΕΓΣΑ’87, το αρχείο
-aster_GGRS.tif</p>
+<p><img alt="" src="https://geographer.gr/images/layers.jpg"></p>
+<p>Πάνω στο Duplicated Layer κάνουμε με δεξί κλίκ Show Layer Mask και Edit Layer Mask. Βλέπουμε το layer δηλαδή το αρχείο DEM που χρησιμοποιειται για την διαφάνεια Alpha. Μπορούμε να τονίσουμε ακόμα περισσότερο τις κορυφές του αναγλύφου με τις εντολές Colors-&gt;Levels και Colors-&gt;Brightenest-Contrast και Colors-&gt;Auto-&gt;Stretch Contrast.</p>
+<p><img alt="" src="https://geographer.gr/images/alpha.jpg"></p>
+<p>Έτσι επιτυγχάνουμε να τονίσουμε τους ορεινούς όγκους του αναγλύφου και την αίσθηση της οπτική θέασης αφ' ύψηλου. Όπως φαίνεται στην παρακάτω εικόνα η εφαρμογή της μάσκας στην σκίαση αναγλύφου έχει σαν αποτέλεσμα να καθιστά ορατά μόνο συγκεκριμένα τμήματα.</p>
+<p><img alt="" src="https://geographer.gr/images/alpha.png"></p>
+<p>Το επόμενο βήμα είναι να προσθέσουμε το αρχείο aster_GGRS.x2.alt90.tif στο αρχείο μας σαν layer (File-&gt;Open as Layer) και να το μεταφέρουμε στην κορυφή της σειράς των layers.
+<img alt="" src="https://geographer.gr/images/dem_alt90.jpg"></p>
+<p>Τέλος του ορίζουμε μικρή τιμή διαφάνειας (π.χ. 20%), με δοκιμές φαίνεται ανάλογα το αποτέλεσμα της μίξης των layers. Το αρχείο αποθηκεύεται με την ονομασία final.tif
+<img alt="" src="https://geographer.gr/images/dem_final.jpg"></p>
+<p>Μετά το πέρας της διαδικασίας το αρχείο δεν έχει πλέον καμία γεωαναφορά και για να την επαναφέρουμε μπορούμε να εκμεταλλευτούμε τα αντίστοιχα δεδομένα από τα αρχεία εισόδου που χρησιμοποιήθηκαν και περιέχουν γεωγραφική εξάρτηση και πληροφορία. Αρκεί ένα από αυτά τα αρχεία για να εξάγουμε την σχετική πληροφορία και να την προσαρτήσουμε στο αρχείο της σκίασης με την προυπόθεση όμως ότι αυτό δεν έχει υποστεί αλλαγές στο μέγεθός του.Έστω ότι το αρχείο που χρησιμοποιούμε είναι το αρχικό αρχείο ψηφιακού μοντέλου εδάφους στο ΕΓΣΑ'87, το αρχείο aster_GGRS.tif</p>
 <p>Οι εντολές που απαιτούνται είναι:</p>
-<pre><code>listgeo -tfw aster_GGRS.tif
+<div class="highlight"><pre><span></span><code>listgeo -tfw aster_GGRS.tif
 listgeo aster_GGRS.tif&amp;gt;projdef.txt
-geotifcp -e aster_GGRS.tfw -g projdef.txt final.tif final.GGRS.tif</code></pre>
-<p>Με την πρώτη εντολή εξάγουμε τo αρχείο tfw από το aster_GGRS.tif, Με
-την δεύτερη εντολή εξάγουμε τα μεταδεδομένα του αρχείου aster_GGRS.tif
-και τέλος Με την τρίτη εντολή επισυνάπτουμε το αρχείο tfw και τα
-μεταδεδομένα σε ένα νέο αρχείο σκίασης αναγλύφου. Το τελικό στάδιο είναι
-να συγχωνεύσουμε την σκίαση αναγλύφου με το ψηφιακό μοντέλου εδάφους σε
-φυσικά χρώματα. Γι’ αυτήν την διαδικασία απαιτείται μια παλέτα χρωμάτων
-κατηγοριοποιημένη σύμφωνα με κλάσεις του υψομέτρου. Για να φτιάξουμε την
-παλέτα απαιτείται να γνωρίζουμε το μέγιστο και το ελάχιστο υψόμετρο του
-αρχείου μας (μπορούμε να το αναζητήσουμε με: gdalinfo -mm
-aster_GGRS.tif) και ανάλογα το εύρος και το πλήθος των κλάσεων ορίζουμε
-τις τιμές ανά κλάση. Μία τέτοια παλέτα χρωμάτων φαίνεται παρακάτω:</p>
-<pre><code>0 216 242 254
-0.001 110 220 110
-900 240 250 160
-1300 230 220 170
-1900 220 220 220
-2500 250 250 250</code></pre>
-<p>Για την αναπαραγωγή του νέου έγχρωμου DEM δίνουμε την παρακάτω
-εντολή:</p>
-<pre><code>gdaldem color-relief -co compress=lzw aster_GGRS.tif dem_ramp2 aster_GGRS-color2.tif</code></pre>
+geotifcp -e aster_GGRS.tfw -g projdef.txt final.tif final.GGRS.tif
+</code></pre></div>
+
+
+<p>Με την πρώτη εντολή εξάγουμε τo αρχείο tfw από το  aster_GGRS.tif,
+Με την δεύτερη εντολή εξάγουμε τα μεταδεδομένα του αρχείου aster_GGRS.tif και τέλος
+Με την τρίτη εντολή επισυνάπτουμε το αρχείο tfw και τα μεταδεδομένα σε ένα νέο αρχείο σκίασης αναγλύφου.
+Το τελικό στάδιο είναι να συγχωνεύσουμε την σκίαση αναγλύφου με το ψηφιακό μοντέλου εδάφους σε φυσικά χρώματα. Γι' αυτήν την διαδικασία απαιτείται μια παλέτα χρωμάτων κατηγοριοποιημένη σύμφωνα με κλάσεις του υψομέτρου. Για να φτιάξουμε την παλέτα απαιτείται να γνωρίζουμε το μέγιστο και το ελάχιστο υψόμετρο του αρχείου μας (μπορούμε να το αναζητήσουμε με: gdalinfo -mm aster_GGRS.tif) και ανάλογα το εύρος και το πλήθος των κλάσεων ορίζουμε τις τιμές ανά κλάση. Μία τέτοια παλέτα χρωμάτων φαίνεται παρακάτω:</p>
+<div class="highlight"><pre><span></span><code><span class="mf">0</span> <span class="mf">216</span> <span class="mf">242</span> <span class="mf">254</span>
+<span class="mf">0.001</span> <span class="mf">110</span> <span class="mf">220</span> <span class="mf">110</span>
+<span class="mf">900</span> <span class="mf">240</span> <span class="mf">250</span> <span class="mf">160</span>
+<span class="mf">1300</span> <span class="mf">230</span> <span class="mf">220</span> <span class="mf">170</span>
+<span class="mf">1900</span> <span class="mf">220</span> <span class="mf">220</span> <span class="mf">220</span>
+<span class="mf">2500</span> <span class="mf">250</span> <span class="mf">250</span> <span class="mf">250</span>
+</code></pre></div>
+
+
+<p>Για την αναπαραγωγή του νέου έγχρωμου DEM δίνουμε την παρακάτω εντολή:</p>
+<div class="highlight"><pre><span></span><code>gdaldem color-relief -co compress=lzw aster_GGRS.tif dem_ramp2 aster_GGRS-color2.tif
+</code></pre></div>
+
+
 <p><a href="https://geographer.gr/extra/dem_ramp2">βλέπε αρχείο dem_ramp2</a></p>
-<p>Η τελική συγχώνευση μπορεί να ολοκληρωθεί με την συμβολή διάφορων
-λογισμικών όπως το QGIS, ή το Tilemill ή ακόμα και με μία εντολή στο
-τερματικό μέσω του nik2img.py όπως:</p>
-<p>nik2img.py mapnik.xml out.png -d 3273 4144 -e 153409.664 4320757.413
-243762.891 4435155.143</p>
-<p><a href="https://geographer.gr/extra/mapnik.xml">βλέπε αρχείο
-mapnik.xml</a></p>
-<p>όπου -d οι διαστάσεις της εικόνας σε εικονοστοιχεία και -e η έκταση
-του χάρτη σε μονάδες μέτρησης του ΕΓΣΑ’87 (μέτρα). Το τελικό απότέλεσμα
-είναι το παρακάτω:</p>
-<p><img src="https://geographer.gr/images/out.jpg"/></p>
+<p>Η τελική συγχώνευση μπορεί να ολοκληρωθεί με την συμβολή διάφορων λογισμικών όπως το QGIS, ή το Tilemill ή ακόμα και με μία εντολή στο τερματικό μέσω του nik2img.py όπως:</p>
+<p>nik2img.py mapnik.xml out.png -d 3273 4144 -e 153409.664 4320757.413 243762.891 4435155.143</p>
+<p><a href="https://geographer.gr/extra/mapnik.xml">βλέπε αρχείο mapnik.xml</a></p>
+<p>όπου -d οι διαστάσεις της εικόνας σε εικονοστοιχεία και -e η έκταση του χάρτη σε μονάδες μέτρησης του ΕΓΣΑ'87 (μέτρα).
+Το τελικό απότέλεσμα είναι το παρακάτω:</p>
+<p><img alt="" src="https://geographer.gr/images/out.jpg"></p>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -399,6 +367,314 @@ mapnik.xml</a></p>
   </ul>
 </li>
 <!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Tag Cloud -->
+<li class="list-group-item">
+  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+  <ul class="list-group list-inline tagcloud" id="tags">
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/api.html">API</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/big-data.html">big data</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/blender.html">Blender</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/costs.html">Costs</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dem.html">dem</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/discharges.html">discharges</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eu-soil-observatory.html">EU soil observatory</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/europe.html">Europe</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/floods.html">floods</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdaldem.html">gdaldem</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gimp.html">GIMP</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/gis.html">GIS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/github.html">github</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/hg.html">Hg</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/off-site.html">Off-site</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/phd.html">phd</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/policy.html">Policy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/precipitation.html">precipitation</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
+    </li>
+    <li class="list-group-item tag-0">
+      <a href="https://geographer.gr/tag/python.html">python</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/r.html">R</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/raster.html">raster</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/redes.html">REDES</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/reservoir-sedimentation.html">Reservoir sedimentation</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/risk.html">Risk</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sar.html">SAR</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/skiase-edaphous.html">σκίαση εδάφους</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/soil-erosion.html">soil erosion</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/soil-policy.html">Soil policy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/spgrass6.html">spgrass6</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sql.html">sql</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/stack.html">stack</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Tag Cloud -->
 
 <!-- Sidebar/Links -->
 <li class="list-group-item">
