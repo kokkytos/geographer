@@ -1,5 +1,5 @@
 ---
-Title: Towards the development of bias-corrected rainfall erosivity time series for Europe
+Title: Towards the development of bias corrected rainfall erosivity time series for Europe
 Date: 2025-07-28 13:50
 Category: Δημοσιεύσεις
 slug: towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe
