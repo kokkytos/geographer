@@ -5,8 +5,7 @@ Category: Δημοσιεύσεις
 slug: towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe
 
 Tags: rainfall erosivity
-
-summary: Rainfall erosivity maps for (near) real-time soil erosion predictions require the integration of (combinations of) reanalysis products and satellite-retrievals of rainfall, and the overcoming of potential bias related to their simplified spatial and temporal scale. Across Europe, we evaluate: 1) the European Meteorological Observations (EMO) dataset to simulate the localised characteristics of rainfall erosivity at the event scale (EI30), and 2) different implementations of quantile delta mapping (QDM) bias correction to improve the prediction skill. Between 1990 and 2014, evaluations were made at several spatial (location-specific, climatic zone and pan-European) and temporal (event, annual and long-term annual average) scales.
+summary: Rainfall erosivity maps for (near) real-time soil erosion predictions require the integration of (combinations of) reanalysis products and satellite-retrievals of rainfall, and the overcoming of potential bias related to their simplified spatial and temporal scale. Across Europe, we evaluate 1) the European Meteorological Observations (EMO) dataset to simulate the localised characteristics of rainfall erosivity at the event scale (EI30), and 2) different implementations of quantile delta mapping (QDM) bias correction to improve the prediction skill. Between 1990 and 2014, evaluations were made at several spatial (location-specific, climatic zone and pan-European) and temporal (event, annual and long-term annual average) scales.
 ---
 
 Matthews, F., Medved, A., Borrelli, P., Liakos, L., Verstraeten, G., Panagos, P., Bezak, N., 2025. Towards the development of bias-corrected rainfall erosivity time series for Europe. Journal of Hydrology 651, 132460. <https://doi.org/10.1016/j.jhydrol.2024.132460>
