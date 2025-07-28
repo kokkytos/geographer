@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Towards the development of bias corrected rainfall erosivity time series for Europe - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="rainfall erosivity" />
+        <meta name="description" content="Rainfall erosivity maps for (near) real-time soil erosion predictions require the integration of (combinations of) reanalysis products and satellite-retrievals of rainfall, and the overcoming of potential bias related to their simplified spatial and temporal scale. Across Europe, we evaluate 1) the European Meteorological Observations (EMO) dataset to simulate the localised characteristics of rainfall erosivity at the event scale (EI30), and 2) different implementations of quantile delta mapping (QDM) bias correction to improve the prediction skill. Between 1990 and 2014, evaluations were made at several spatial (location-specific, climatic zone and pan-European) and temporal (event, annual and long-term annual average) scales." />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Towards the development of bias corrected rainfall erosivity time series for Europe"/>
+        <meta property="og:url" content="https://geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/"/>
+        <meta property="og:description" content="Rainfall erosivity maps for (near) real-time soil erosion predictions require the integration of (combinations of) reanalysis products and satellite-retrievals of rainfall, and the overcoming of potential bias related to their simplified spatial and temporal scale. Across Europe, we evaluate 1) the European Meteorological Observations (EMO) dataset to simulate the localised characteristics of rainfall erosivity at the event scale (EI30), and 2) different implementations of quantile delta mapping (QDM) bias correction to improve the prediction skill. Between 1990 and 2014, evaluations were made at several spatial (location-specific, climatic zone and pan-European) and temporal (event, annual and long-term annual average) scales."/>
+        <meta property="article:published_time" content="2025-07-28" />
+            <meta property="article:section" content="Δημοσιεύσεις" />
+            <meta property="article:tag" content="rainfall erosivity" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/demosieuseis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer Δημοσιεύσεις ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBQR7NZ4PE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', G-JBQR7NZ4PE);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/about-me/">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                         <li><a href="https://geographer.gr/οι-χάρτες-μου/">
+                             Οι χάρτες μου
+                          </a></li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li >
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/demosieuseis.html" title="Δημοσιεύσεις">Δημοσιεύσεις</a></li>
+                <li class="active">Towards the development of bias corrected rainfall erosivity time series for Europe</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=Towards%20the%20development%20of%20bias%20corrected%20rainfall%20erosivity%20time%20series%20for%20Europe&url=https%3A//geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=Towards%20the%20development%20of%20bias%20corrected%20rainfall%20erosivity%20time%20series%20for%20Europe&url=https%3A//geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/&hashtags=rainfall-erosivity" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/&title=Towards%20the%20development%20of%20bias%20corrected%20rainfall%20erosivity%20time%20series%20for%20Europe&summary=Rainfall%20erosivity%20maps%20for%20%28near%29%20real-time%20soil%20erosion%20predictions%20require%20the%20integration%20of%20%28combinations%20of%29%20reanalysis%20products%20and%20satellite-retrievals%20of%20rainfall%2C%20and%20the%20overcoming%20of%20potential%20bias%20related%20to%20their%20simplified%20spatial%20and%20temporal%20scale.%20Across%20Europe%2C%20we%20evaluate%201%29%20the%20European%20Meteorological%20Observations%20%28EMO%29%20dataset%20to%20simulate%20the%20localised%20characteristics%20of%20rainfall%20erosivity%20at%20the%20event%20scale%20%28EI30%29%2C%20and%202%29%20different%20implementations%20of%20quantile%20delta%20mapping%20%28QDM%29%20bias%20correction%20to%20improve%20the%20prediction%20skill.%20Between%201990%20and%202014%2C%20evaluations%20were%20made%20at%20several%20spatial%20%28location-specific%2C%20climatic%20zone%20and%20pan-European%29%20and%20temporal%20%28event%2C%20annual%20and%20long-term%20annual%20average%29%20scales.&source=https%3A//geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=Towards%20the%20development%20of%20bias%20corrected%20rainfall%20erosivity%20time%20series%20for%20Europe&u=https%3A//geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=Towards%20the%20development%20of%20bias%20corrected%20rainfall%20erosivity%20time%20series%20for%20Europe&amp;body=https%3A//geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/&title=Towards%20the%20development%20of%20bias%20corrected%20rainfall%20erosivity%20time%20series%20for%20Europe" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/"
+                       rel="bookmark"
+                       title="Permalink to Towards the development of bias corrected rainfall erosivity time series for Europe">
+                        Towards the development of bias corrected rainfall erosivity time series for Europe
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2025-07-28T13:50:00+03:00"> Δευ 28 Ιουλίου 2025</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/rainfall-erosivity.html">rainfall erosivity</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Matthews, F., Medved, A., Borrelli, P., Liakos, L., Verstraeten, G.,
+Panagos, P., Bezak, N., 2025. Towards the development of bias-corrected
+rainfall erosivity time series for Europe. Journal of Hydrology 651,
+132460. <a class="uri" href="https://doi.org/10.1016/j.jhydrol.2024.132460">https://doi.org/10.1016/j.jhydrol.2024.132460</a></p>
+<p>Rainfall erosivity maps for (near) real-time soil erosion predictions
+require the integration of (combinations of) reanalysis products and
+satellite-retrievals of rainfall, and the overcoming of potential bias
+related to their simplified spatial and temporal scale. Across Europe,
+we evaluate: 1) the European Meteorological Observations (EMO) dataset
+to simulate the localised characteristics of rainfall erosivity at the
+event scale (EI30), and 2) different implementations of quantile delta
+mapping (QDM) bias correction to improve the prediction skill. Between
+1990 and 2014, evaluations were made at several spatial
+(location-specific, climatic zone and pan-European) and temporal (event,
+annual and long-term annual average) scales. The uncorrected EMO
+predictions demonstrated: 1) a slight overprediction of the number of
+EI30 events, 2) a reduced coefficient of variation in the EI30 (CV EMO =
+1.57, CV REDES = 2.5), and 3) a relatively low (R2 = 0.22, n = 139,306)
+location-specific predictive skill, with higher discrepancies in all
+cases in Southern Europe. Following QDM, the EI30 predictions
+significantly better represented the large-sample variability of EI30
+per climate region and improved the monthly correspondence. At specific
+locations, station-wise bias correction was the only implementation to
+improve the event (R2 = 0.24, n = 139,306), annual (R2 = 0.51, n =
+14,248) and average annual (R2 = 0.76, n = 1142) predictions. While bias
+correction can improve rainfall erosivity predictions, applications
+should consider possibly large error propagation into subsequent
+predictions, regional disparities in performance, and the potential to
+improve the large-sample statistical correspondence but degrade the
+location-specific time series prediction.</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2025-07-28-towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe';
+                        this.page.url = 'https://geographer.gr/towards-the-development-of-bias-corrected-rainfall-erosivity-time-series-for-europe/';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geography.aegean.gr/" target="_blank">Τμήμα Γεωγραφία</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2025 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>
