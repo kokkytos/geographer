@@ -107,10 +107,10 @@ PANDOC_EXTENSIONS = [
     ]
 
 
-THEME = "/home/leonidas/Documents/Documents/Diafora/pelican-themes/pelican-bootstrap3/"
+THEME = "/home/leonidas/PARA/2_Areas/Websites/pelican_resources/pelican-themes/pelican-bootstrap3/"
 
 
-PLUGIN_PATHS = ['/home/leonidas/Documents/Documents/Diafora/pelican-plugins', ]
+PLUGIN_PATHS = ['/home/leonidas/PARA/2_Areas/Websites/pelican_resources/pelican-plugins', ]
 PLUGINS = ['i18n_subsites','tag_cloud', 'share_post',]
 JINJA_ENVIRONMENT = {
     'extensions': ['jinja2.ext.i18n'],
