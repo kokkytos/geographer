@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>NMEA183toshp.py - Μετατροπή αρχείου ΝΜΕΑ183 σε shapefile - Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/">
+
+        <meta name="author" content="Leonidas Liakos" />
+        <meta name="keywords" content="gps,nmea183,ogr,python" />
+        <meta name="description" content="Tο εργαλείο NMEA183toshp.py έχει σαν σκοπό την μετατροπή καταγεγραμμένων συντεταγμένων από το πρότυπο ΝΜΕΑ183 σε αρχείο shapefile. Στον χρήστη δίνεται η δυνατότητα να εξάγει το αρχειο σε μορφή shapefile επιλέγοντας τον τύπο της γεωμετρίας (γραμμική ή σημειακή) καθώς και το γεωγραφικό σύστημα αναφοράς (WGS84 ή ΕΓΣΑ&#39;87). Το παρόν εργαλείο …" />
+
+        <meta property="og:site_name" content="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="NMEA183toshp.py - Μετατροπή αρχείου ΝΜΕΑ183 σε shapefile"/>
+        <meta property="og:url" content="https://geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/"/>
+        <meta property="og:description" content="Tο εργαλείο NMEA183toshp.py έχει σαν σκοπό την μετατροπή καταγεγραμμένων συντεταγμένων από το πρότυπο ΝΜΕΑ183 σε αρχείο shapefile. Στον χρήστη δίνεται η δυνατότητα να εξάγει το αρχειο σε μορφή shapefile επιλέγοντας τον τύπο της γεωμετρίας (γραμμική ή σημειακή) καθώς και το γεωγραφικό σύστημα αναφοράς (WGS84 ή ΕΓΣΑ&#39;87). Το παρόν εργαλείο …"/>
+        <meta property="article:published_time" content="2009-07-07" />
+            <meta property="article:section" content="GIS" />
+            <meta property="article:tag" content="gps" />
+            <meta property="article:tag" content="nmea183" />
+            <meta property="article:tag" content="ogr" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:author" content="Leonidas Liakos" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://geographer.gr/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://geographer.gr/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://geographer.gr/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://geographer.gr/theme/css/style.css" type="text/css"/>
+
+        <link href="https://geographer.gr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer ATOM Feed"/>
+
+        <link href="https://geographer.gr/feeds/gis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer GIS ATOM Feed"/>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBQR7NZ4PE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', G-JBQR7NZ4PE);
+    </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://geographer.gr/" class="navbar-brand">
+Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://geographer.gr/about-me/">
+                             About me
+                          </a></li>
+                         <li><a href="https://geographer.gr/pages/contact-greek.html">
+                             Επικοινωνία
+                          </a></li>
+                         <li><a href="https://geographer.gr/οι-χάρτες-μου/">
+                             Οι χάρτες μου
+                          </a></li>
+                        <li >
+                            <a href="https://geographer.gr/category/demosieuseis.html">Δημοσιεύσεις</a>
+                        </li>
+                        <li class="active">
+                            <a href="https://geographer.gr/category/gis.html">Gis</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://geographer.gr/../extra/header_left_bg.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+<!-- 		<div class="copy">
+			<h1>Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer</h1>
+				<p class="intro">This is my subtitle</p>
+		</div>
+ -->	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://geographer.gr" title="Λεωνίδας Λιάκος - Γεωγράφος. Leonidas Liakos - Geographer"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://geographer.gr/category/gis.html" title="GIS">GIS</a></li>
+                <li class="active">NMEA183toshp.py - Μετατροπή αρχείου ΝΜΕΑ183 σε shapefile</li>
+            </ol>
+
+
+<section>
+  <p id="post-share-links">
+    <b>Share on:</b>
+    <a href="https://sharetodiaspora.github.io/?title=NMEA183toshp.py%20-%20%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%CF%85%20%CE%9D%CE%9C%CE%95%CE%91183%20%CF%83%CE%B5%20shapefile&url=https%3A//geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/" title="Share on Diaspora">Diaspora*</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=NMEA183toshp.py%20-%20%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%CF%85%20%CE%9D%CE%9C%CE%95%CE%91183%20%CF%83%CE%B5%20shapefile&url=https%3A//geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/&hashtags=gps,nmea183,ogr,python" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/&title=NMEA183toshp.py%20-%20%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%CF%85%20%CE%9D%CE%9C%CE%95%CE%91183%20%CF%83%CE%B5%20shapefile&summary=T%CE%BF%20%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%BF%20NMEA183toshp.py%20%CE%AD%CF%87%CE%B5%CE%B9%20%CF%83%CE%B1%CE%BD%20%CF%83%CE%BA%CE%BF%CF%80%CF%8C%20%CF%84%CE%B7%CE%BD%20%CE%BC%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%BA%CE%B1%CF%84%CE%B1%CE%B3%CE%B5%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CF%83%CF%85%CE%BD%CF%84%CE%B5%CF%84%CE%B1%CE%B3%CE%BC%CE%AD%CE%BD%CF%89%CE%BD%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%BF%20%CF%80%CF%81%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%9D%CE%9C%CE%95%CE%91183%20%CF%83%CE%B5%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%20shapefile.%0A%CE%A3%CF%84%CE%BF%CE%BD%20%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%B7%20%CE%B4%CE%AF%CE%BD%CE%B5%CF%84%CE%B1%CE%B9%20%CE%B7%20%CE%B4%CF%85%CE%BD%CE%B1%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1%20%CE%BD%CE%B1%20%CE%B5%CE%BE%CE%AC%CE%B3%CE%B5%CE%B9%20%CF%84%CE%BF%20%CE%B1%CF%81%CF%87%CE%B5%CE%B9%CE%BF%20%CF%83%CE%B5%20%CE%BC%CE%BF%CF%81%CF%86%CE%AE%20shapefile%20%CE%B5%CF%80%CE%B9%CE%BB%CE%AD%CE%B3%CE%BF%CE%BD%CF%84%CE%B1%CF%82%20%CF%84%CE%BF%CE%BD%20%CF%84%CF%8D%CF%80%CE%BF%20%CF%84%CE%B7%CF%82%20%CE%B3%CE%B5%CF%89%CE%BC%CE%B5%CF%84%CF%81%CE%AF%CE%B1%CF%82%20%28%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B9%CE%BA%CE%AE%20%CE%AE%20%CF%83%CE%B7%CE%BC%CE%B5%CE%B9%CE%B1%CE%BA%CE%AE%29%20%CE%BA%CE%B1%CE%B8%CF%8E%CF%82%20%CE%BA%CE%B1%CE%B9%20%CF%84%CE%BF%20%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8C%20%CF%83%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1%20%CE%B1%CE%BD%CE%B1%CF%86%CE%BF%CF%81%CE%AC%CF%82%20%28WGS84%20%CE%AE%20%CE%95%CE%93%CE%A3%CE%91%2787%29.%0A%CE%A4%CE%BF%20%CF%80%CE%B1%CF%81%CF%8C%CE%BD%20%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%BF%20%E2%80%A6&source=https%3A//geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=NMEA183toshp.py%20-%20%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%CF%85%20%CE%9D%CE%9C%CE%95%CE%91183%20%CF%83%CE%B5%20shapefile&u=https%3A//geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/" title="Share on HackerNews">HackerNews</a>
+    ❄
+    <a href="mailto:?subject=NMEA183toshp.py%20-%20%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%CF%85%20%CE%9D%CE%9C%CE%95%CE%91183%20%CF%83%CE%B5%20shapefile&amp;body=https%3A//geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/" title="Share via Email">Email</a>
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/&title=NMEA183toshp.py%20-%20%CE%9C%CE%B5%CF%84%CE%B1%CF%84%CF%81%CE%BF%CF%80%CE%AE%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF%CF%85%20%CE%9D%CE%9C%CE%95%CE%91183%20%CF%83%CE%B5%20shapefile" title="Share via Reddit">Reddit</a>
+  </p>
+</section>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/"
+                       rel="bookmark"
+                       title="Permalink to NMEA183toshp.py - Μετατροπή αρχείου ΝΜΕΑ183 σε shapefile">
+                        NMEA183toshp.py - Μετατροπή αρχείου ΝΜΕΑ183 σε shapefile
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2009-07-07T00:10:00+03:00"> Τρι 07 Ιουλίου 2009</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="https://geographer.gr/category/gis.html">GIS</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://geographer.gr/tag/gps.html">gps</a>
+        /
+	<a href="https://geographer.gr/tag/nmea183.html">nmea183</a>
+        /
+	<a href="https://geographer.gr/tag/ogr.html">ogr</a>
+        /
+	<a href="https://geographer.gr/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><img alt="" src="https://geographer.gr/images/nmea.png"></p>
+<p>Tο εργαλείο NMEA183toshp.py έχει σαν σκοπό την μετατροπή καταγεγραμμένων συντεταγμένων από το πρότυπο <a href="https://en.wikipedia.org/wiki/NMEA_0183">ΝΜΕΑ183</a> σε αρχείο <a href="https://en.wikipedia.org/wiki/Shapefile#Spatial_representation">shapefile</a>.</p>
+<p>Στον χρήστη δίνεται η δυνατότητα να εξάγει το αρχειο σε μορφή shapefile επιλέγοντας τον τύπο της γεωμετρίας (γραμμική ή σημειακή) καθώς και το γεωγραφικό σύστημα αναφοράς (WGS84 ή ΕΓΣΑ'87).</p>
+<p>Το παρόν εργαλείο αποτελεί παραμετροποίηση και επέκταση από το arcgis script <a href="http://arcscripts.esri.com/details.asp?dbid=13990">gps2shp</a> του <a href="http://dstath.users.uth.gr/">Δημήτρη Σταθάκη</a>.</p>
+<p>Είναι γραμμένο με την γλώσσα Python και το γραφικό του περιβάλλον στηρίζεται στην πλατφόρμα pyQt4. Η περαιτέρω επεξεργασία για την μετατροπή των δεδομένων σε shapefile βασίζεται στην βιβλιοθήκη <a href="https://wiki.osgeo.org/wiki/OSGeo_Python_Library">osgeo για την python</a>. Το πρόγραμμα έχει δοκιμαστεί στο λειτουργικό σύστημα Ubuntu 9.04</p>
+<p>Download <a href="https://geographer.gr/extra/NMEA183toshp.py">NMEA183toshp.py</a></p>
+<p>Αφού κατεβάσετε το αρχείο πρέπει να το ορίσετε σαν εκτελέσιμο:</p>
+<div class="highlight"><pre><span></span><code> chmod +x NMEA183toshp.py
+</code></pre></div>
+
+<p>Στην συνέχεια με διπλό κλικ στο αρχείο NMEA183toshp.py θα εμφανιστεί το γραφικό περιβάλλον του προγράμματος.</p>
+<p><img alt="" src="https://geographer.gr/images/nmea2shp.jpg"></p>
+<p>Παρακάτω διατίθεται ο κώδικας του προγράμματος:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w">  </span><span class="nn">os</span><span class="o">,</span><span class="w">  </span><span class="nn">string</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">osgeo</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">ogr</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">osgeo</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">osr</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PyQt4</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">QtGui</span><span class="p">,</span><span class="w"> </span><span class="n">QtCore</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Ui_MainWindow</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">MainWindow</span><span class="p">):</span>
+<span class="n">MainWindow</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">)</span>
+<span class="n">MainWindow</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">centralwidget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">centralwidget</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;centralwidget&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QGroupBox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">centralwidget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">741</span><span class="p">,</span><span class="w"> </span><span class="mi">331</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;groupBox&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">textBrowser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QTextBrowser</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groupBox</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">textBrowser</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">701</span><span class="p">,</span><span class="w"> </span><span class="mi">251</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">textBrowser</span><span class="o">.</span><span class="n">setFrameShape</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QFrame</span><span class="o">.</span><span class="n">Box</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">textBrowser</span><span class="o">.</span><span class="n">setFrameShadow</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QFrame</span><span class="o">.</span><span class="n">Plain</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">textBrowser</span><span class="o">.</span><span class="n">setHorizontalScrollBarPolicy</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">ScrollBarAlwaysOff</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">textBrowser</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;textBrowser&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groupBox</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">701</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;widget&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QGridLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;gridLayout&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">lineEdit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QLineEdit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">lineEdit</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;lineEdit&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lineEdit</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;pushButton&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QGroupBox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">centralwidget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_2</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">360</span><span class="p">,</span><span class="w"> </span><span class="mi">741</span><span class="p">,</span><span class="w"> </span><span class="mi">161</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_2</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;groupBox_2&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">layoutWidget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groupBox_2</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">layoutWidget</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">701</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">layoutWidget</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;layoutWidget&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QGridLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layoutWidget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout_2</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;gridLayout_2&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layoutWidget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;label_2&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout_2</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">lineEdit_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QLineEdit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layoutWidget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">lineEdit_2</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;lineEdit_2&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout_2</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lineEdit_2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layoutWidget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton_2</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;pushButton_2&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">gridLayout_2</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pushButton_2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QGroupBox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groupBox_2</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_3</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">151</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_3</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;groupBox_3&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">radioButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QRadioButton</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groupBox_3</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">radioButton</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">141</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">radioButton</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;radioButton&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">radioButton</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">radioButton_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QRadioButton</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groupBox_3</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">radioButton_2</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">131</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">radioButton_2</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;radioButton_2&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QGroupBox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groupBox_2</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_4</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">190</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">211</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_4</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;groupBox_4&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QComboBox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groupBox_4</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;comboBox&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QString</span><span class="p">())</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QString</span><span class="p">())</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">centralwidget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton_3</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">310</span><span class="p">,</span><span class="w"> </span><span class="mi">540</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton_3</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;pushButton_3&quot;</span><span class="p">)</span>
+<span class="n">MainWindow</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">centralwidget</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">statusbar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QStatusBar</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">statusbar</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;statusbar&quot;</span><span class="p">)</span>
+<span class="n">MainWindow</span><span class="o">.</span><span class="n">setStatusBar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">statusbar</span><span class="p">)</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">retranslateUi</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+<span class="n">QtCore</span><span class="o">.</span><span class="n">QMetaObject</span><span class="o">.</span><span class="n">connectSlotsByName</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+
+<span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span><span class="p">,</span><span class="w"> </span><span class="n">QtCore</span><span class="o">.</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;clicked()&quot;</span><span class="p">),</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">showDialog</span><span class="p">)</span>
+<span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pushButton_2</span><span class="p">,</span><span class="w"> </span><span class="n">QtCore</span><span class="o">.</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;clicked()&quot;</span><span class="p">),</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">saveDialog</span><span class="p">)</span>
+<span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pushButton_3</span><span class="p">,</span><span class="w"> </span><span class="n">QtCore</span><span class="o">.</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;clicked()&quot;</span><span class="p">),</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">Convert</span><span class="p">)</span>
+<span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="p">,</span><span class="w"> </span><span class="n">QtCore</span><span class="o">.</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;currentIndexChanged(int)&quot;</span><span class="p">),</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">GetSRS</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">Convert</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">try</span><span class="p">:</span>
+<span class="c1"># path &amp;amp; name of the GPS log file</span>
+<span class="n">gpsFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">Openfilename</span><span class="o">.</span><span class="n">toLocal8Bit</span><span class="p">()</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">gpsFile</span>
+<span class="nb">print</span><span class="w"> </span><span class="nb">type</span><span class="p">(</span><span class="n">gpsFile</span><span class="p">)</span>
+
+<span class="c1"># output folder &amp;amp; SHAPEFILE name</span>
+<span class="n">outShapeFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">shp</span>
+<span class="n">drv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">GetDriverByName</span><span class="p">(</span><span class="s1">&#39;ESRI Shapefile&#39;</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">outShapeFile</span><span class="p">)):</span>
+
+<span class="n">drv</span><span class="o">.</span><span class="n">DeleteDataSource</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">outShapeFile</span><span class="p">))</span>
+<span class="nb">print</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;shapefile deleted&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">outShapeFile</span>
+<span class="nb">print</span><span class="w"> </span><span class="nb">type</span><span class="p">(</span><span class="n">outShapeFile</span><span class="p">)</span>
+<span class="n">t_srs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osr</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span>
+
+<span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;Greek Grid&#39;</span><span class="p">:</span>
+<span class="nb">print</span><span class="w"> </span><span class="s2">&quot;Greek Grid&quot;</span>
+<span class="n">t_srs</span><span class="o">.</span><span class="n">ImportFromProj4</span><span class="p">(</span><span class="s2">&quot;+proj=tmerc +lon_0=24 +k=.9996 +x_0=500000 +towgs84=-199.72,74.03,246.02+ellps=GRS80&quot;</span><span class="p">)</span>
+
+<span class="n">t_srs</span><span class="o">.</span><span class="n">SetFromUserInput</span><span class="p">(</span><span class="s1">&#39;EPSG:2100&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">#Greek Grid</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">t_srs</span><span class="o">.</span><span class="n">SetFromUserInput</span><span class="p">(</span><span class="s1">&#39;WGS84&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="w"> </span><span class="s2">&quot;WGS84&quot;</span>
+<span class="nb">print</span><span class="w"> </span><span class="nb">str</span><span class="p">(</span><span class="n">outShapeFile</span><span class="p">)</span>
+<span class="n">ds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">drv</span><span class="o">.</span><span class="n">CreateDataSource</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">outShapeFile</span><span class="p">))</span>
+<span class="k">if</span><span class="w">  </span><span class="bp">self</span><span class="o">.</span><span class="n">radioButton</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+<span class="n">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ds</span><span class="o">.</span><span class="n">CreateLayer</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">GetName</span><span class="p">(),</span><span class="w"> </span><span class="n">geom_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">wkbPoint</span><span class="p">,</span><span class="w"> </span><span class="n">srs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_srs</span><span class="p">)</span>
+<span class="n">layer</span><span class="o">.</span><span class="n">CreateField</span><span class="p">(</span><span class="n">ogr</span><span class="o">.</span><span class="n">FieldDefn</span><span class="p">(</span><span class="s1">&#39;TimeStamp&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">OFTInteger</span><span class="p">))</span>
+<span class="n">layer</span><span class="o">.</span><span class="n">CreateField</span><span class="p">(</span><span class="n">ogr</span><span class="o">.</span><span class="n">FieldDefn</span><span class="p">(</span><span class="s1">&#39;quality&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">OFTInteger</span><span class="p">))</span>
+<span class="n">layer</span><span class="o">.</span><span class="n">CreateField</span><span class="p">(</span><span class="n">ogr</span><span class="o">.</span><span class="n">FieldDefn</span><span class="p">(</span><span class="s1">&#39;NumbSats&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">OFTInteger</span><span class="p">))</span>
+<span class="n">layer</span><span class="o">.</span><span class="n">CreateField</span><span class="p">(</span><span class="n">ogr</span><span class="o">.</span><span class="n">FieldDefn</span><span class="p">(</span><span class="s1">&#39;HDOP&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">OFTReal</span><span class="p">))</span>
+<span class="n">layer</span><span class="o">.</span><span class="n">CreateField</span><span class="p">(</span><span class="n">ogr</span><span class="o">.</span><span class="n">FieldDefn</span><span class="p">(</span><span class="s1">&#39;Altitude&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">OFTReal</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;line shp is created&#39;</span><span class="p">)</span>
+<span class="n">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ds</span><span class="o">.</span><span class="n">CreateLayer</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">GetName</span><span class="p">(),</span><span class="w"> </span><span class="n">geom_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">wkbLineString</span><span class="p">,</span><span class="w"> </span><span class="n">srs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_srs</span><span class="p">)</span>
+<span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">Geometry</span><span class="p">(</span><span class="n">ogr</span><span class="o">.</span><span class="n">wkbLineString</span><span class="p">)</span>
+
+<span class="c1"># initialize variables.</span>
+<span class="n">numberOfLines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">numberOfSkippedLines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">gpsLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="n">coord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># open GPS log file to read.</span>
+<span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">gpsFile</span><span class="p">),</span><span class="w"> </span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">while</span><span class="w"> </span><span class="n">gpsLine</span><span class="o">.</span><span class="n">isalnum</span><span class="p">:</span>
+<span class="n">gpsLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">gpsLine</span><span class="p">:</span><span class="w"> </span><span class="k">break</span>
+<span class="n">numberOfLines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numberOfLines</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">linesp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gpsLine</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="n">linesp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;$GPGGA&#39;</span><span class="p">:</span>
+
+<span class="c1"># convert Latitude from DDMM.MMM (variable no of digits) to DD.DDD</span>
+<span class="n">latDDMM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linesp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">latLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">latDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span>
+
+<span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">latDDMM</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="n">latDDDD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">latDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="n">latLen</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">latDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">latDDDD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">latDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="n">latLen</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">latDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">latDDMM</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># convert Longitude from DDMM.MMM (variable no of digits) to DD.DDD</span>
+<span class="n">longDDMM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linesp</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">longLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">longDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span>
+
+<span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">longDDMM</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="n">longDDDD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">longDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="n">longLen</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">longDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">longDDDD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">longDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="n">longLen</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">longDDMM</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">longDDMM</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># Convert to negative for West and South coord.</span>
+<span class="k">if</span><span class="w"> </span><span class="n">linesp</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;S&quot;</span><span class="p">:</span>
+<span class="n">longDDDD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">longDDDD</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="n">linesp</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;W&quot;</span><span class="p">:</span>
+<span class="n">latDDDD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">latDDDD</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># a simple test to skip corrupted NMEA sentences.</span>
+<span class="k">if</span><span class="w"> </span><span class="n">latDDDD</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">90</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">latDDDD</span><span class="w"> </span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span><span class="w"> </span><span class="mi">90</span><span class="p">:</span>
+<span class="n">numberOfSkippedLines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numberOfSkippedLines</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="k">break</span>
+<span class="k">if</span><span class="w"> </span><span class="n">longDDDD</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">180</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">longDDDD</span><span class="w"> </span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span><span class="w"> </span><span class="mi">180</span><span class="p">:</span>
+<span class="n">numberOfSkippedLines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numberOfSkippedLines</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="k">break</span>
+
+<span class="k">if</span><span class="w">  </span><span class="bp">self</span><span class="o">.</span><span class="n">radioButton</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+
+<span class="nb">print</span><span class="w"> </span><span class="n">longDDDD</span><span class="p">,</span><span class="w"> </span><span class="n">latDDDD</span>
+<span class="n">geom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">Geometry</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="n">ogr</span><span class="o">.</span><span class="n">wkbPoint</span><span class="p">)</span>
+<span class="n">geom</span><span class="o">.</span><span class="n">AddPoint</span><span class="p">(</span><span class="n">longDDDD</span><span class="p">,</span><span class="n">latDDDD</span><span class="p">)</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">geom</span><span class="o">.</span><span class="n">GetX</span><span class="p">(),</span><span class="w"> </span><span class="n">geom</span><span class="o">.</span><span class="n">GetY</span><span class="p">()</span>
+
+<span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;Greek Grid&#39;</span><span class="p">:</span>
+<span class="n">sourceSR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osr</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span>
+<span class="n">sourceSR</span><span class="o">.</span><span class="n">SetFromUserInput</span><span class="p">(</span><span class="s1">&#39;WGS84&#39;</span><span class="p">)</span>
+<span class="n">targetSR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osr</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span>
+<span class="n">targetSR</span><span class="o">.</span><span class="n">ImportFromProj4</span><span class="p">(</span><span class="s2">&quot;+proj=tmerc +lon_0=24 +k=.9996 +x_0=500000 +towgs84=-199.72,74.03,246.02+ellps=GRS80&quot;</span><span class="p">)</span>
+
+<span class="n">coordTrans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osr</span><span class="o">.</span><span class="n">CoordinateTransformation</span><span class="p">(</span><span class="n">sourceSR</span><span class="p">,</span><span class="w"> </span><span class="n">targetSR</span><span class="p">)</span>
+<span class="n">geom</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">coordTrans</span><span class="p">)</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">geom</span><span class="o">.</span><span class="n">GetX</span><span class="p">(),</span><span class="w"> </span><span class="n">geom</span><span class="o">.</span><span class="n">GetY</span><span class="p">()</span>
+
+<span class="n">feat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">feature_def</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">GetLayerDefn</span><span class="p">())</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetGeometry</span><span class="p">(</span><span class="n">geom</span><span class="p">)</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetFID</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">numberOfLines</span><span class="p">))</span>
+
+<span class="c1">#change time stamp format to DDDHHMMSS. Looks better!</span>
+<span class="n">TStamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linesp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;TimeStamp&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="n">TStamp</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">string</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="n">TStamp</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="mi">6</span><span class="p">)))</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;quality&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">linesp</span><span class="p">[</span><span class="mi">6</span><span class="p">]))</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;NumbSats&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">float</span><span class="p">(</span><span class="n">linesp</span><span class="p">[</span><span class="mi">7</span><span class="p">]))</span>
+<span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">linesp</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;HDOP&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;HDOP&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">float</span><span class="p">(</span><span class="n">linesp</span><span class="p">[</span><span class="mi">8</span><span class="p">]))</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s1">&#39;Altitude&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">float</span><span class="p">(</span><span class="n">linesp</span><span class="p">[</span><span class="mi">9</span><span class="p">]))</span>
+<span class="n">layer</span><span class="o">.</span><span class="n">CreateFeature</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Add point in line &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">str</span><span class="p">(</span><span class="n">longDDDD</span><span class="w"> </span><span class="p">)</span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="nb">str</span><span class="p">(</span><span class="n">latDDDD</span><span class="p">))</span>
+<span class="n">line</span><span class="o">.</span><span class="n">AddPoint</span><span class="p">(</span><span class="n">longDDDD</span><span class="p">,</span><span class="n">latDDDD</span><span class="p">)</span>
+
+<span class="k">if</span><span class="w">  </span><span class="bp">self</span><span class="o">.</span><span class="n">radioButton</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+<span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">line</span><span class="o">.</span><span class="n">GetPointCount</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;line is writen&#39;</span><span class="p">)</span>
+<span class="n">feat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ogr</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">feature_def</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">GetLayerDefn</span><span class="p">())</span>
+<span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;Greek Grid&#39;</span><span class="p">:</span>
+<span class="n">sourceSR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osr</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span>
+<span class="n">sourceSR</span><span class="o">.</span><span class="n">SetFromUserInput</span><span class="p">(</span><span class="s1">&#39;WGS84&#39;</span><span class="p">)</span>
+<span class="n">targetSR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osr</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span>
+<span class="n">targetSR</span><span class="o">.</span><span class="n">ImportFromProj4</span><span class="p">(</span><span class="s2">&quot;+proj=tmerc +lon_0=24 +k=.9996 +x_0=500000 +towgs84=-199.72,74.03,246.02+ellps=GRS80&quot;</span><span class="p">)</span>
+<span class="n">coordTrans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osr</span><span class="o">.</span><span class="n">CoordinateTransformation</span><span class="p">(</span><span class="n">sourceSR</span><span class="p">,</span><span class="w"> </span><span class="n">targetSR</span><span class="p">)</span>
+<span class="n">line</span><span class="o">.</span><span class="n">Transform</span><span class="p">(</span><span class="n">coordTrans</span><span class="p">)</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetGeometry</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">feat</span><span class="o">.</span><span class="n">SetFID</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">layer</span><span class="o">.</span><span class="n">CreateFeature</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span>
+
+<span class="c1"># Clean up</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">Destroy</span><span class="p">()</span>
+<span class="n">Done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">question</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="sa">u</span><span class="s1">&#39;Ενημέρωση&#39;</span><span class="p">,</span><span class="w"> </span><span class="sa">u</span><span class="s1">&#39;Η μετατροπή ολοκληρώθηκε επιτυχώς&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Ok</span><span class="p">)</span>
+<span class="k">except</span><span class="w"> </span><span class="n">AttributeError</span><span class="p">:</span>
+<span class="nb">Error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="sa">u</span><span class="s1">&#39;Σφάλμα&#39;</span><span class="p">,</span><span class="w"> </span><span class="sa">u</span><span class="s1">&#39;Παρακαλώ ελέγξτε τις διαδρομές των αρχείων&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Ok</span><span class="p">)</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">GetSRS</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span>
+<span class="nb">print</span><span class="w">  </span><span class="n">item</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">saveDialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="n">home</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HOME&#39;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">Savefilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QFileDialog</span><span class="o">.</span><span class="n">getSaveFileName</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="sa">u</span><span class="s1">&#39;Αποθήκευση δεδομένων σε αρχείο shapefile&#39;</span><span class="p">,</span><span class="w">  </span><span class="n">home</span><span class="p">,</span><span class="w">  </span><span class="s2">&quot;Shapefile (*.shp)&quot;</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">Savefilename</span><span class="o">.</span><span class="n">toLocal8Bit</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">:</span>
+<span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">shp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">Savefilename</span><span class="o">.</span><span class="n">toLocal8Bit</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.shp&#39;</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">lineEdit_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shp</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">showDialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="n">home</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HOME&#39;</span><span class="p">)</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">Openfilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QFileDialog</span><span class="o">.</span><span class="n">getOpenFileName</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="sa">u</span><span class="s1">&#39;Επιλογή αρχειου NMEA183&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">home</span><span class="p">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">Openfilename</span><span class="o">.</span><span class="n">toLocal8Bit</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">:</span>
+<span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Openfilename</span><span class="o">.</span><span class="n">toLocal8Bit</span><span class="p">())</span>
+<span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">lineEdit</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Openfilename</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">textBrowser</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">retranslateUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">MainWindow</span><span class="p">):</span>
+<span class="n">MainWindow</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Μετατροπή αρχείου NMEA183 σε Shapefile&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Αρχείο NMEA183&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">textBrowser</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Δεδομένα του αρχείου Shapefile&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Αρχείο:&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">lineEdit</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Παρακαλώ επιλέξτε το αρχείο NMEA183&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Άνοιγμα&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_2</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Shapefile&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Αρχείο:&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">lineEdit_2</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Παρακαλώ, αποθηκεύστε την μετατροπή σε ένα νέο αρχείο Shapefile&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Αποθήκευση&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_3</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Τύπος αρχείου&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">radioButton</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Point&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">radioButton_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Line&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">groupBox_4</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Γεωγραφικό Σύστημα Αναφοράς&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">setItemText</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;WGS84&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">comboBox</span><span class="o">.</span><span class="n">setItemText</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Greek Grid&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Μετατροπή&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">,</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">UnicodeUTF8</span><span class="p">))</span>
+<span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+<span class="n">widget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtGui</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">()</span>
+<span class="n">mywidget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ui_MainWindow</span><span class="p">()</span>
+<span class="n">mywidget</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="w"> </span><span class="n">widget</span><span class="w"> </span><span class="p">)</span>
+<span class="n">widget</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+</code></pre></div>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2009-07-07-nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile';
+                        this.page.url = 'https://geographer.gr/nmea183toshppy-metatrope-arkheiou-nmea183-se-shapefile/';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/leonidasliakos"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+    <li class="list-group-item"><a href="https://twitter.com/leonidasliakos"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/kokkytos"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/demosieuseis.html"><i class="fa fa-folder-open fa-lg"></i>Δημοσιεύσεις</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographer.gr/category/gis.html"><i class="fa fa-folder-open fa-lg"></i>GIS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Tag Cloud -->
+<li class="list-group-item">
+  <a href="https://geographer.gr/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+  <ul class="list-group list-inline tagcloud" id="tags">
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/3d-printing.html">3d printing</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/agriculture.html">Agriculture</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/api.html">API</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/arkhaiologia.html">αρχαιολογία</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/aspace.html">aspace</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/big-data.html">big data</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/blender.html">Blender</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/catchments.html">catchments</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/climate-change.html">Climate change</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/costs.html">Costs</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/crop-production.html">Crop production</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/data-sharing.html">data sharing</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dataset.html">dataset</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/discharges.html">discharges</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/dmsp-ols.html">DMSP-OLS</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/dmspols.html">DMSP/OLS</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/egsa87.html">ΕΓΣΑ87</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/ellak.html">ΕΛ/ΛΑΚ</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/environmental-drivers.html">environmental drivers</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/erosivity.html">erosivity</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/esdac.html">ESDAC</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eu-soil-observatory.html">EU soil observatory</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eukaryotes.html">eukaryotes</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/europe.html">Europe</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/european-soil-observatory.html">European soil observatory</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/eusedcollab.html">EUSEDcollab</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/euso.html">EUSO</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/farm-to-fork.html">Farm to Fork</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/fertilizers.html">Fertilizers</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/floods.html">floods</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/food-security.html">Food security</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal.html">gdal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal_merge.html">gdal_merge</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdal_translate.html">gdal_translate</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gdalutils.html">gdalUtils</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/gdalwrap.html">gdalwrap</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gibs.html">GIBS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/gini-coefficient.html">Gini coefficient</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/gis.html">GIS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/github.html">github</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/greek-grid.html">Greek Grid</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/heavy-metal.html">Heavy metal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/hg.html">Hg</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/hydrology.html">Hydrology</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/kampule-lorenz.html">καμπύλη Lorenz</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/land-use-change.html">Land use change</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lawstat.html">lawstat</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lorenz-curve.html">Lorenz curve</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lucas.html">LUCAS</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lucas-survey.html">LUCAS survey</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/lunar-correction.html">Lunar Correction</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/maptools.html">maptools</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/mapwindow.html">Mapwindow</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/meshlab.html">Meshlab</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/metabarcoding.html">metabarcoding</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/night-time-lights.html">night time lights</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/ntl.html">NTL</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/nutrients.html">Nutrients</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/off-site.html">Off-site</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/ogr.html">ogr</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/open-data.html">Open data</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/packing-density.html">Packing density</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/phd.html">phd</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/phosphorus-budget.html">Phosphorus budget</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/phosphorus-removal.html">Phosphorus removal</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/plant-uptake.html">Plant uptake</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/policy.html">Policy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/postgis.html">postgis</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/precipitation.html">precipitation</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/pyqgis.html">pyqgis</a>
+    </li>
+    <li class="list-group-item tag-0">
+      <a href="https://geographer.gr/tag/python.html">python</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/qgis.html">qgis</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/r.html">R</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/r-factor.html">R-factor</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rainfall.html">rainfall</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rainfall-erosivity.html">Rainfall erosivity</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/raster.html">raster</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/redes.html">REDES</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/reservoir-sedimentation.html">Reservoir sedimentation</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rgdal.html">rgdal</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/risk.html">Risk</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/rpy.html">rpy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sar.html">SAR</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/seasonality.html">Seasonality</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sediment-transport.html">Sediment transport</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/sediments.html">sediments</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/shapefiles.html">shapefiles</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-biodiversity.html">soil biodiversity</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-compaction.html">Soil compaction</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-contamination.html">Soil contamination</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="https://geographer.gr/tag/soil-erosion.html">soil erosion</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-fauna.html">soil fauna</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/soil-health.html">Soil health</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/soil-physics.html">Soil physics</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="https://geographer.gr/tag/soil-policy.html">Soil policy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/sql.html">sql</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/stack.html">stack</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/texture.html">Texture</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/threshold-values.html">Threshold values</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="https://geographer.gr/tag/viirs.html">VIIRS</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Tag Cloud -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://esdac.jrc.ec.europa.eu/" target="_blank">European Soil Data Centre</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geography.aegean.gr/" target="_blank">Τμήμα Γεωγραφία</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://gislab.gr/" target="_blank">GISlab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://geographers.gr/" target="_blank">Ε.ΓΕΩ</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2025 Leonidas Liakos
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://geographer.gr/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://geographer.gr/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://geographer.gr/theme/js/respond.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    <script src="https://geographer.gr/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geographer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+
+</body>
+</html>
