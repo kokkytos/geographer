@@ -4,6 +4,7 @@ Date: 2013-09-22 10:20
 Category: GIS
 slug: χωρική-κεντρικότητα
 Tags: aspace , maptools , R , rgdal , rpy , shapefiles , spgrass6
+image: images/xorikos.mesos_.jpeg
 
 ---
 
@@ -13,8 +14,7 @@ Tags: aspace , maptools , R , rgdal , rpy , shapefiles , spgrass6
 
 Δίνεται από τον τύπο:
 
-$${x}=\frac{\sum\limits_{i=1}^n{x_i}}{n}, {y}=\frac{\sum\limits_{i=1}^n{y_i}}{n}$$
-
+$$x = \frac{\sum_{i=1}^{n} x_i}{n}, \qquad y = \frac{\sum_{i=1}^{n} y_i}{n}$$
 όπου,
 
 $x,y$ οι συντεταγμένες του χωρικού μέσου δηλαδή ο μέσος όρος των συντεταγμένων $x_i,y_i$  του πλήθους $N$ των σημείων της κατανομής.
@@ -22,7 +22,10 @@ $x,y$ οι συντεταγμένες του χωρικού μέσου δηλα�
 
 Δίνεται από τον τύπο:
 
-$${x}_w=\frac{\sum\limits_{i=1}^n{w_ix_i}}{n},{y}_w=\frac{\sum\limits_{i=1}^n{w_iy_i}}{n}$$
+$$
+x_w = \frac{\sum_{i=1}^{n} w_i x_i}{\sum_{i=1}^{n} w_i}, \qquad
+y_w = \frac{\sum_{i=1}^{n} w_i y_i}{\sum_{i=1}^{n} w_i}
+$$
 
 
 

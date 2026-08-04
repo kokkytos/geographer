@@ -5,6 +5,7 @@ Category: Δημοσιεύσεις
 slug: an-in-depth-statistical-analysis-of-the-rainstorms-erosivity-in-europe
 Tags: Rainfall erosivity, REDES, Lorenz curve, Gini coefficient, Seasonality, Threshold values, R-factor,Europe
 summary: Heavy rainstorms play a central role in the water-driving soil erosion processes. An in-depth knowledge about temporal and spatial erosivity of rainfall events is required to gain a better understanding of soil erosion processes and optimize soil protection measures efficiency. In this study, the spatiotemporal distribution of more than 300,000 erosive events measured at 1181 locations, part of the Rainfall Erosivity Database at European Scale (REDES) database, is studied to shed some new light on the rainfall erosivity in Europe. 
+image: images/1-s2.0-S0341816221004355-gr7.jpg
 ---
 
 Nejc Bezak^a^, Matjaž Mikoš^a^, Pasquale Borrellib^c^, Leonidas Liakos^d^, Panos Panagos^d^. 2021. “An In-Depth Statistical Analysis of the Rainstorms Erosivity in Europe.” CATENA 206 (November): 105577. <https://doi.org/10.1016/j.catena.2021.105577>.

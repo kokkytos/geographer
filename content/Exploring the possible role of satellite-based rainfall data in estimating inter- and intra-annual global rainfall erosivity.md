@@ -5,6 +5,7 @@ Category: Δημοσιεύσεις
 slug: exploring-the-possible-role-of-satellite-based-rainfall-data-in-estimating-inter-and-intra-annual-global-rainfall-erosivity
 Tags:   rainfall, erosivity
 summary: Despite recent developments in modeling global soil erosion by water, to date, no substantial progress has been made towards more dynamic inter- and intra-annual assessments. In this regard, the main challenge is still represented by the limited availability of high temporal resolution rainfall data needed to estimate rainfall erosivity. As the availability of high temporal resolution rainfall data will most likely not increase in future decades since the monitoring networks have been declining since the 1980s, the suitability of alternative approaches to estimate global rainfall erosivity using satellite-based rainfall data was explored in this study. For this purpose, we used the high spatial and temporal resolution global precipitation estimates obtained with the National Oceanic and Atmospheric Administration (NOAA) Climate Data Record (CDR) Climate Prediction Center MORPHing (CMORPH) technique.
+image: images/hess-26-1907-2022-f02-web-1536x471.png
 ---
 
 Bezak, N.^1^, Borrelli, P.^2,3^, Panagos, P.^4^, 2022. Exploring the possible role of satellite-based rainfall data in estimating inter- and intra-annual global rainfall erosivity. Hydrol. Earth Syst. Sci. 26, 1907–1924. <https://doi.org/10.5194/hess-26-1907-2022>

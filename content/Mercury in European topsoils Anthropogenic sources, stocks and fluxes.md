@@ -5,6 +5,7 @@ Category: Δημοσιεύσεις
 slug: mercury-in-european-topsoils-anthropogenic-sources-stocks-and-fluxes
 Tags:    Heavy metal, Hg, Sediment transport, Soil contamination, Soil erosion
 summary: Mercury (Hg) is one of the most dangerous pollutants worldwide. In the European Union (EU), we recently estimated the Hg distribution in topsoil using 21,591 samples and a series of geo-physical inputs. In this manuscript, we investigate the impact of mining activities, chrol-alkali industries and other diffuse pollution sources as primary anthropogenic sources of Hg hotspots in the EU.
+image: images/1-s2.0-S0013935121008501-gr8.jpg
 ---
 
 Panos Panagos^a^, Martin Jiskra^b^, Pasquale Borrelli^c^, Leonidas Liakos^a^, Cristiano Ballabio^a^. 2021. “Mercury in European Topsoils: Anthropogenic Sources, Stocks and Fluxes.” Environmental Research, June, 111556. <https://doi.org/10.1016/j.envres.2021.111556>.
