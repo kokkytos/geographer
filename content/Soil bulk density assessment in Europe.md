@@ -5,6 +5,7 @@ Category: Δημοσιεύσεις
 slug: soil-bulk-density-assessment-in-Europe
 Tags: Packing density, Soil physics, Texture, Soil health, LUCAS, Soil compaction
 summary: The topsoil Land Use and Cover Area frame Statistical survey (LUCAS) aims at collecting harmonised data about the state of soil health over the extent of European Union (EU). In the LUCAS 2018 survey, bulk density has been analysed for three depths, i.e., 0–10 cm = 6140 sites; 10–20 cm = 5684 sites and 20–30 cm =139 sites. The laboratory analysis and the assessment of the results conclude that the bulk density at 10–20 cm is 5–10% higher compared to 0–10 cm for all land uses except woodlands (20%).
+Image: images/1-s2.0-S0167880924000252-gr6.jpg
 ---
 
 Panagos, P.^a^, De Rosa, D.^a^, Liakos, L.^b^, Labouyrie, M.^a,c^, Borrelli, P.^d, e^, Ballabio, C., 2024 ^a^. Soil bulk density assessment in Europe. Agriculture, Ecosystems & Environment 364, 108907. <https://doi.org/10.1016/j.agee.2024.108907>.

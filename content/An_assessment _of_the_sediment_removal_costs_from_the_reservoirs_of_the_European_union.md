@@ -5,6 +5,7 @@ Category: Δημοσιεύσεις
 slug: assessment-sediment-removal-costs-reservoirs-european-union
 Tags:  Soil policy, EU soil observatory, Sediments, Costs, Off-site, Reservoir sedimentation
 summary: Soil erosion is both a major driver and consequence of land degradation with significant on-site and off-site costs which are critical to understand and quantify. One major cost of soil erosion originates from the sediments delivered to aquatic systems (e.g., rivers, lakes, and seas), which may generate a broad array of environmental and economic impacts. As part of the EU Soil Observatory (EUSO) working group on soil erosion, we provide a comprehensive assessment of the existing costs of sediment removal from European Union (EU) catchments due to water erosion.
+image: images/1-s2.0-S095965262304341X-gr2.jpg
 ---
 
 ![]({static}images/1-s2.0-S095965262304341X-ga1.jpg)

@@ -5,6 +5,7 @@ Category: Δημοσιεύσεις
 slug: soil-eukaryotic-diversity-composition-Europe
 Tags:  environmental drivers, eukaryotes, LUCAS survey, metabarcoding, soil biodiversity, soil fauna
 summary: Soil eukaryotes play a crucial role in maintaining ecosystem functions and services, yet the factors driving their diversity and distribution remain poorly understood. While many studies focus on some eukaryotic groups (mostly fungi), they are limited in their spatial scale. Here, we analyzed an unprecedented amount of observational data of soil eukaryomes at continental scale (787 sites across Europe) to gain further insights into the impact of a wide range of environmental conditions (climatic and edaphic) on their community composition and structure.  
+image: images/gcb16871-fig-0001-m.jpg
 ---
 
 Köninger, J., Ballabio, C., Panagos, P., Jones, A., Schmid, M.W., Orgiazzi, A., Briones, M.J.I., 2023. Ecosystem type drives soil eukaryotic diversity and composition in Europe. Global Change Biology gcb.16871. https://doi.org/10.1111/gcb.16871
